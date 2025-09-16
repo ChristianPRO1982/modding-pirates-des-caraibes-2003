@@ -9,7 +9,7 @@ bool wdmDisableRelease = true;
 
 void wdmEvent_EncounterCreate()
 {
-	/*float dltTime = GetEventData();
+	float dltTime = GetEventData();
 	float playerShipX = GetEventData();
 	float playerShipZ = GetEventData();
 	float playerShipAY = GetEventData();
@@ -36,7 +36,7 @@ void wdmEvent_EncounterCreate()
 	//Generate encounters
 	wdmStormGen(dltTime, playerShipX, playerShipZ, playerShipAY);
 	wdmShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);
-	wdmQuestShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);//PJ*/
+	wdmQuestShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);
 }
 
 void wdmEvent_InsideIsland()
