@@ -1,3 +1,11 @@
+PJ_TELEPORTATION_1 {Oula ! il y a un problème lors du passage... Les vêtements ne suivent pas correctement !}
+
+PJ_S1_no_treasure_here_1 {Il faut encore creuser...}
+PJ_S1_no_treasure_here_2 {Il n'y a pas de trésor ici...}
+PJ_S1_failed {Hé ! Mon gars, tu es aller trop loin ! Le trésor n'est pas par là.}
+PJ_S2_failed {Malheureusement, le temps a manqué pour aider nos tourtereaux.}
+PJ_M1_AllPorts {Mais ? Où est François l'Olonnais ? Peut être est-il retourner sur Quebradas Costillas...}
+
 QUEST_MESSAGE1 {Échec de la mission. Danielle est morte ! PARTIE TERMINÉE.}
 QUEST_MESSAGE2 {Le délai accordé pour la livraison est dépassé.}
 QUEST_MESSAGE3 {Tu es devenu trop vieux pour résister à la malédiction de l'or aztèque...}
@@ -35,8 +43,8 @@ Rumour_2 {J'ai entendu dire qu'un cimetière indigène avait été découvert dans la
 Rumour_3 {J'ai entendu dire que le gouverneur de Redmond avait fait jeter un marchand au cachot pour une malheureuse bagarre de taverne. On dit qu'il a ordonné l'arrestation afin de pouvoir confisquer les stocks de ce marchand.}
 Rumour_4 {J'ai entendu dire que le gouverneur de Redmond avait fait jeter un marchand au cachot pour une malheureuse bagarre de taverne. On dit qu'il a ordonné l'arrestation afin de pouvoir confisquer les stocks de ce marchand.}
 Rumour_5 {J'ai entendu dire que le gouverneur de Redmond avait fait jeter un marchand au cachot pour une malheureuse bagarre de taverne. On dit qu'il a ordonné l'arrestation afin de pouvoir confisquer les stocks de ce marchand.}
-Rumour_6 {J'ai entendu dire que le gouverneur de Redmond avait fait jeter un marchand au cachot pour une malheureuse bagarre de taverne. On dit qu'il a ordonné l'arrestation afin de pouvoir confisquer les stocks de ce marchand.}
-Rumour_7 {J'ai entendu dire que le gouverneur de Redmond avait fait jeter un marchand au cachot pour une malheureuse bagarre de taverne. On dit qu'il a ordonné l'arrestation afin de pouvoir confisquer les stocks de ce marchand.}
+Rumour_6 {Il y a des chasseurs de trésors dans les villes des caraïbes. Ils forment des groupes et ils sont prêts à donner une part de leur butin au capitaine qui les embarquera sur son navire pour aller chercher le trésor.}
+Rumour_7 {J'ai entendu des personnes qui faisait partir d'une guilde. La guilde des Suivez-moi-jeune-homme. C'est une guilde d'honneur qui cherche à aider des jeunes femmes et leur prétendant. On dit aussi qu'il y a des jeunes couples dans toutes les villes qui attendent désespérément de l'aide.}
 
 Falaise De Fleur {Falaise De Fleur}
 Isla Muelle {Isla Muelle}

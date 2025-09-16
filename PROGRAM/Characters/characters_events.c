@@ -168,7 +168,19 @@ void chrCharacterExitFromLocator()
 
 void chrCharacterKeys()
 {
+	/*float locx;//PJ : pour connaitre la position
+	float locy;
+	float locz;
+	GetCharacterPos(GetMainCharacter(), &locx, &locy, &locz);
+	Log_SetStringToLog("locx:"+locx+" / locy:"+locy+" / locz:"+locz);//*/
+	
 	string controlName = GetEventData();
+	
+	// ajout PJ
+	ref PChar = GetMainCharacter();
+	if(pchar.quest_S1_Unearthing == true && controlName == "BiFastCommand") QuestsCheck();
+	// fin ajout PJ
+	
 	if(controlName != "ChrAction") return;
 	//Skip if interface active
 	if(sti(InterfaceStates.Launched)==true) return;

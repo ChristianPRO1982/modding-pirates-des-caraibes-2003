@@ -44,12 +44,13 @@ void CreateCharacters()
 	ReloadProgressUpdate();
 
 	makeref(ch,Characters[0]);		//Blaze Devlin
+	LAi_SetImmortal(ch, true);//PJ CHEAT
 	//ch.perks.list.InstantBoarding = true;
-	ch.name 	= "Nathaniel";
-	ch.lastname = "Hawk";
+	ch.name 	= "Chris";//Nathaniel
+	ch.lastname = "Sparrow";//Hawk
 	ch.id		= "Blaze";
 	ch.nation	= ENGLAND;
-	ch.model	= "blaze";
+	ch.model	= "corsair1_1";
 	ch.activity_begin = "0";
 	ch.activity_end = "24";
 	ch.sex = "man";
@@ -85,8 +86,8 @@ void CreateCharacters()
 	ch.Ship.Name = "Victory";
 	//ch.Ship.Type = SHIP_FRIGATE_ENGLAND;
 	//ch.Ship.Type = SHIP_CORVETTE_ENGLAND;
-	ch.Ship.Type = SHIP_LUGGER_ENGLAND;
-	//ch.Ship.Type = SHIP_MANOWAR2_FRANCE;
+	// ch.Ship.Type = SHIP_LUGGER_ENGLAND;//START
+	ch.Ship.Type = SHIP_MANOWAR2_FRANCE;
 	ch.Ship.Stopped = true;
 	//ch.Ship.Cannons.Type = CANNON_TYPE_TEST;
 	ch.FaceId = 31;
@@ -115,6 +116,65 @@ void CreateCharacters()
 	stmp = BLADE_SABER;	Ch.items.(stmp) = 1;
 	stmp = CHEAP_SPYGLASS;	Ch.items.(stmp) = 1;*/
 
+	//PJ pour créer des quête
+	ch.quest.PNJ_Trop_Fort = true;
+	/*GiveItem2Character(ch, "blade1");
+	GiveItem2Character(ch, "blade2");
+	GiveItem2Character(ch, "blade3");
+	GiveItem2Character(ch, "blade4");
+	GiveItem2Character(ch, "blade5");
+	GiveItem2Character(ch, "blade6");
+	GiveItem2Character(ch, "blade7");
+	GiveItem2Character(ch, "blade8");
+	GiveItem2Character(ch, "blade9");
+	GiveItem2Character(ch, "blade10");
+	GiveItem2Character(ch, "blade11");
+	GiveItem2Character(ch, "blade12");
+	GiveItem2Character(ch, "blade13");
+	GiveItem2Character(ch, "blade14");
+	GiveItem2Character(ch, "blade15");
+	GiveItem2Character(ch, "blade16");
+	GiveItem2Character(ch, "blade17");
+	GiveItem2Character(ch, "blade18");
+	GiveItem2Character(ch, "blade19");
+	GiveItem2Character(ch, "blade20");
+	GiveItem2Character(ch, "blade21");
+	GiveItem2Character(ch, "blade22");
+	GiveItem2Character(ch, "blade23");
+	GiveItem2Character(ch, "pistol1");
+	GiveItem2Character(ch, "pistol2");
+	GiveItem2Character(ch, "pistol3");
+	GiveItem2Character(ch, "pistol4");
+	GiveItem2Character(ch, "pistol5");
+	GiveItem2Character(ch, "pistol6");//*/ 
+	
+	//PJ plus de PNJ dans les villes
+	ch.quest.PNJ_villes = true;
+	//QUESTS PJ
+	//S1 : chasseur de trésor
+	GenerateTreasureHunterQuests();
+	ch.quest_S1_Elizabeth_Goodale_TQC1_visible = true;
+	ch.quest_S1_Eustache_Busket_TQC1_visible = true;
+	ch.quest_S1_Bartolomeo_Portugues_TQC1_visible = true;
+	ch.quest_S1_Benito_Bonito_TQC1_visible = true;
+	ch.quest_S1_Hendrick_van_Hoven_TQC1_visible = true;
+	ch.quest_S1_Wimund_TQC1_visible = true;
+	ch.quest_S1_Samuel_Bellamy_TQC1_visible = true;
+	ch.quest_S1_Edward_Thatch_TQC1_visible = true;
+	//S2 : Les amoureux
+	ch.quest_S2_started = 0;
+	ch.quest_S2_Redmond_done = false;
+	ch.quest_S2_FalaiseDeFleur_done = false;
+	ch.quest_S2_Conceicao_done = false;
+	ch.quest_S2_IslaMuelle_done = false;
+	ch.quest_S2_Douwesen_done = false;
+	ch.quest_S2_Greenford_done = false;
+	ch.quest_S2_Oxbay_done = false;
+	//M1 : Le Pirate des Caraïbes
+	ch.quest_M1_step = 0;
+	ch.quest_M1_step = 9;//PJ a supprimer
+	
+	
 	// QUESTS BEGINNINGS
 
 	// Main story line
@@ -345,3 +405,151 @@ void SetAllFellows()
 		}
 	}
 }
+
+/*
+liste complète (normalement) des modèles de personnage
+admiral
+animists1
+animists2
+animistst2
+black_corsair
+blackman
+blaze
+bocman
+bocman1
+bocman3
+bocman4
+brodyaga
+capitan
+capitan1
+chameleon
+chelovek
+chelovek1
+corsair1
+corsair1_1
+corsair1_2
+corsair2
+corsair2_1
+corsair3
+corsar2
+danielle
+fatman
+fatman1
+fatman2
+fatman2_1
+fawn
+fisherman
+fisherman1
+huber_eng
+huber_fra
+huber_por
+huber_spa
+khaelroa1
+killer
+korsar
+korsar1
+lucas
+maltese
+man
+man1
+man1_1
+man1_2
+man2
+man3
+man3_1
+man4
+man5
+man5_1
+man6
+man6_1
+mask
+mask_2
+mask_3
+mask_4
+mongol
+monk
+monk2
+monkey
+mummy
+nobleman
+none
+offic_eng
+offic_fra
+offic_spa
+old_man1
+old_man2
+oldwoman
+pirat10
+pirat2
+pirat3
+pirat4
+pirat5
+pirat6
+pirat7
+pirat8
+pirat9
+priest
+priest_spa
+rabblack
+rabblack_1
+rabwhite
+rabwhite1
+researcher
+sailor1
+sailor2
+sailor3
+sailor4
+sailor5
+sailor6
+sat_monk
+searcher
+shkiper
+skel1
+skel2
+skel3
+skel4
+soldier_eng
+soldier_eng2
+soldier_eng3
+soldier_eng4
+Soldier_Eng5
+Soldier_eng6
+soldier_fra
+soldier_fra2
+soldier_fra3
+soldier_fra4
+soldier_fra5
+soldier_fra6
+soldier_hol
+soldier_hol2
+soldier_hol3
+soldier_hol4
+soldier_hol5
+soldier_hol6
+soldier_por
+soldier_por2
+soldier_por3
+soldier_por4
+soldier_por5
+soldier_por6
+soldier_spa
+soldier_spa2
+soldier_spa3
+soldier_spa4
+soldier_spa5
+soldier_spa6
+storeman
+storeman2
+towngirl1
+towngirl1_1
+towngirl2
+towngirl2_1
+towngirl3
+towngirl3_1
+towngirl4
+towngirl5
+towngirl6
+towngirl7
+will
+will_2
+*/
