@@ -1,0 +1,53 @@
+QUEST_MESSAGE1 {Échec de la mission. Danielle est morte ! PARTIE TERMINÉE.}
+QUEST_MESSAGE2 {Le délai accordé pour la livraison est dépassé.}
+QUEST_MESSAGE3 {Tu es devenu trop vieux pour résister à la malédiction de l'or aztèque...}
+QUEST_MESSAGE4 {Tu as trouvé un trésor en argent !}
+QUEST_MESSAGE5 {Nigel Blythe attaque la corvette de contrebandiers !}
+QUEST_MESSAGE6 {Nigel Blythe est parti !}
+QUEST_MESSAGE7 {Capitaine, nous sommes tombés sur le Black Pearl !}
+QUEST_MESSAGE8 {Beau travail, tu as tué ton professeur !}
+QUEST_MESSAGE9 {Te voilà livré à toi-même dans ce monde cruel !}
+QUEST_MESSAGE10 {Au pirate dont le cœur est sans pitié}
+QUEST_MESSAGE11 {nous accordons une récompense secrète !}
+QUEST_MESSAGE12 {Impossible, tu as trop d'officiers ! Renvoie un ou plusieurs officiers avant de réessayer !}
+
+Address_Form_Spa {Senor}
+Address_Form_Fra {Monsieur}
+Address_Form_Eng {Sir}
+Address_Form_Por {Senhor}
+Address_Form_Hol {Mijnheer}
+
+Swear_1 {Que le grand cric me croque !}
+Swear_2 {Enfer !}
+Swear_3 {Bon sang !}
+Swear_4 {Saleté !}
+Swear_5 {Par Neptune ! }
+Swear_6 {Nom d'un boulet !}
+Swear_7 {Par tous les diables ! }
+Swear_8 {Arrgh!!!}
+Swear_9 {Bonté divine !}
+Swear_10 {Diable !}
+
+TimeGreeting {Bonjour}
+
+Rumour_1 {Il ne s'est pas passé grand-chose récemment. Tout a été assez calme. Je me demande combien de temps ça va durer!}
+Rumour_2 {J'ai entendu dire qu'un cimetière indigène avait été découvert dans la mine d'Oxbay. On aurait trouvé beaucoup d'ossements, de la vaisselle, des épis et des assiettes de terre cuite, mais pas l'ombre d'une once d'or!}
+Rumour_3 {J'ai entendu dire que le gouverneur de Redmond avait fait jeter un marchand au cachot pour une malheureuse bagarre de taverne. On dit qu'il a ordonné l'arrestation afin de pouvoir confisquer les stocks de ce marchand.}
+Rumour_4 {J'ai entendu dire que le gouverneur de Redmond avait fait jeter un marchand au cachot pour une malheureuse bagarre de taverne. On dit qu'il a ordonné l'arrestation afin de pouvoir confisquer les stocks de ce marchand.}
+Rumour_5 {J'ai entendu dire que le gouverneur de Redmond avait fait jeter un marchand au cachot pour une malheureuse bagarre de taverne. On dit qu'il a ordonné l'arrestation afin de pouvoir confisquer les stocks de ce marchand.}
+Rumour_6 {J'ai entendu dire que le gouverneur de Redmond avait fait jeter un marchand au cachot pour une malheureuse bagarre de taverne. On dit qu'il a ordonné l'arrestation afin de pouvoir confisquer les stocks de ce marchand.}
+Rumour_7 {J'ai entendu dire que le gouverneur de Redmond avait fait jeter un marchand au cachot pour une malheureuse bagarre de taverne. On dit qu'il a ordonné l'arrestation afin de pouvoir confisquer les stocks de ce marchand.}
+
+Falaise De Fleur {Falaise De Fleur}
+Isla Muelle {Isla Muelle}
+Conceicao {Conceicao}
+Douwesen {Douwesen}
+Redmond {Redmond}
+Oxbay {Oxbay}
+Greenford {Greenford}
+
+OFFIC_TYPE_BOATSWAIN	 {Maître d'équipage}
+OFFIC_TYPE_CANNONEER {Canonnier}
+OFFIC_TYPE_QMASTER {Commissaire}
+OFFIC_TYPE_NAVIGATOR {Navigateur}
+OFFIC_TYPE_FIRSTMATE {Premier matelot}

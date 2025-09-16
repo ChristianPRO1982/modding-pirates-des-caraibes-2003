@@ -1,0 +1,823 @@
+#QUEST	Story_OxbayCaptured
+Informer le gouverneur de l'attaque française.
+#TEXT	1
+Des troupes françaises ont pris la colonie anglaise d'Oxbay. Les Français ont réussi car les défenses du fort étaient très faibles. J'ai eu beaucoup de chance de pouvoir m'échapper. Je devrais sans doute informer le gouverneur de la principale colonie anglaise, sir Robert Christopher Silehard, de cette attaque pour qu'il puisse prendre les mesures appropriées. Par chance, j'ai remarqué que quelqu'un d'autre avait réussi à échapper aux Français. J'ai vu un navire s'éloigner de la baie. Je me demande qui en est le capitaine.
+#QUEST	Story_1stTaskReceived
+Mener une reconnaissance à Oxbay, prise par l'ennemi.
+#TEXT	1
+Je n'aurais peut-être pas dû dire au gouverneur qu'Oxbay avait été attaquée. Quand il a appris la nouvelle, il a tout de suite entamé des préparatifs de guerre et a failli réquisitionné mon navire. J'ai été obligé de me joindre à l'armée du roi afin de ne pas perdre mon navire. La première mission que m'a confiée le gouverneur est de débarquer sur l'île d'Oxbay, non loin de la ville assiégée, de m'introduire dans la ville et d'apprendre tout ce que je pourrai sur les forces françaises et leurs plans.
+#TEXT	2
+À mon arrivée à Oxbay, j'ai réussi à parler avec le tavernier, un dénommé Everard Gordon. Il m'a dit que les habitants étaient prêts à apporter toute l'aide qu'ils pourraient pour libérer Oxbay. Les Français ont un comportement détestable et les habitants les haïssent. Le tavernier m'a également dit que les Français recrutaient des volontaires pour leurs équipages. C'est l'occasion rêvée d'introduire un espion parmi eux. Au cours de la conversation, l'idée m'est venue de sympathiser avec un officier français, de le faire boire puis de lui soutirer toutes les informations dont j'aurais besoin.
+#TEXT	4
+Tout a marché comme je l'espérais. Sous la menace et ivre, Massoni m'a dit que le navire l'Oiseau mouillait dans le port de Falaise de Fleur. C'est ce bâtiment qui est censé livrer des munitions aux forces françaises, mais il ne prendra la mer tant que lorsqu'ils auront trouvé un navire d'escorte. Dois-je en informer Silehard ou simplement naviguer jusqu'à Falaise de Fleur et me rendre compte de la situation par moi-même ?
+#TEXT	5
+Après avoir rendu compte de la situation à Silehard, celui-ci m'a donné de l'or et m'a dit de faire en sorte que l'Oiseau ne puisse pas rejoindre Oxbay. C'est plus facile à dire qu'à faire. En me rendant à Falaise de Fleur pour y évaluer la situation, je pourrai peut-être trouver un moyen de mener à bien cette mission.
+#TEXT	6
+Un matelot de l'Oiseau m'a dit que les autorités françaises avaient engagé un brig sous le commandement d'un certain Amiel Berangere pour escorter son navire jusqu'à Oxbay. Je crois que je devrais aller parler à cet homme. Le marin m'a conseillé de poser des questions sur Berangere aux clients de la taverne de Falaise de Fleur. Il en est un client régulier.
+#TEXT	7
+J'ai parlé au tavernier de Falaise de Fleur, un dénommé Antoine Lebretton. J'ai appris que Berangere louait une chambre à Lebretton et qu'il y était sûrement au moment où je lui parlais.
+#TEXT	8
+Amiel Berangere m'a chargé d'escorter l'Oiseau jusqu'à l'île d'Oxbay. Il m'a remis une lettre de recommandation. Je dois maintenant montrer cette lettre au capitaine du port de Falaise de Fleur. Il me présentera au capitaine du navire, Virgile Boon, et nous pourrons partir. Évidemment, mes plans sont tellement ingénieux que ce bâtiment n'arrivera jamais à Oxbay, hahaha !
+#TEXT	9
+Amiel Berangere s'est révélé être un personnage extrêmement difficile à manipuler. Eh bien, il a payé ce défaut de sa vie. J'ai pris une lettre de recommandation sur son cadavre. Je vais la montrer au capitaine du port de Falaise de Fleur. Ensuite, il faudra sans doute que je rencontre le capitaine du navire à escorter.
+#TEXT	10
+J'ai eu de la chance. Amiel Berangere va régler tous mes problèmes. Il a accepté de couler l'Oiseau et son pauvre capitaine. Il faut admettre que j'ai dû débourser une belle somme pour convaincre Amiel de choisir la voie de la flibuste, mais je peux maintenant retourner à Redmond et annoncer le bon déroulement de la mission.
+#TEXT	11
+J'ai montré la lettre de recommandation au capitaine du port et il m'a présenté à Virgile Boon. Nous sommes prêts à prendre la mer. J'espère que pendant la traversée, j'aurai l'occasion de monter à l'abordage du rafiot de Virgile et de le couler.
+#TEXT	12
+J'ai réussi ! J'ai accompli ma mission ! Les Français n'auront pas de munitions et je peux m'attendre à une belle récompense pour mes services.
+#TEXT	13
+Nous venons de quitter la ville et j'ai tué Massoni. J'ai eu le temps de fouiller son cadavre avant l'arrivée des soldats. Il semblerait que Massoni escortait un navire, l'Oiseau, vers la colonie française de Falaise de Fleur. Là, le trois-mâts devait faire le plein de marchandises et d'armements. Mais maintenant que Massoni n'est plus disponible pour les accompagner, ce navire ne mettra pas le cap sur Oxbay tant qu'ils n'auront pas trouvé un nouveau bâtiment d'escorte.
+#QUEST	Story_2ndTask
+Escorter un navire rempli de troupes jusqu'à Oxbay puis rencontrer un agent.
+#TEXT	1
+Ma deuxième mission est d'escorter le sloop 'Albion' jusqu'à Oxbay. Un régiment de soldats anglais a pour mission de harceler les Français. Un habitant de Greenford va m'indiquer un endroit où débarquer les soldats et les conduire vers une grotte découverte sur l'île. Quand j'en aurai fini avec cette mission, je devrai entrer discrètement dans la ville capturée d'Oxbay et y rencontrer un agent anglais. Le capitaine du sloop m'attend près de l'entrée du port.
+#TEXT	2
+J'ai parlé avec Ewan Glover, le capitaine du sloop 'Albion'. Il m'a dit qu'il était prêt à prendre la mer. Dès que je serai à bord de mon navire, il me rejoindra.
+#TEXT	3
+Que le gouverneur est naïf ! C'est l'occasion rêvée de devenir pirate. Malheureusement, j'ai peu de chances de remplir la mission confiée par Silehard. Il faudra que je trouve une histoire à propos d'une attaque par les Français... ou peut-être par des pirates... J'espère que personne ne se doutera de quoi que ce soit ; dans le cas contraire, on verra bien.
+#TEXT   4
+C'est vraiment regrettable. Nous avons eu des ennuis au cours du voyage. Malgré tous mes efforts, le sloop 'Albion' a sombré. Pauvre Ewan ! Il avait l'air vraiment sympathique. Diantre ! J'ai échoué dans la première partie de la mission confiée par le gouverneur.
+#TEXT   5
+Silehard a pris une sage décision quand il m'a engagé. Nous sommes arrivés dans le port de Greenford sans embarras et l'Albion est désormais sous la protection de Greenford. Je dois maintenant trouver l'habitant qui doit nous indiquer le chemin de la grotte.
+#TEXT   6
+C'est finalement cet habitant dénommé Wilfred qui m'a trouvé. Il m'a conseillé de faire débarquer les soldats de nuit sur une petite plage déserte pour que les Français ne se doutent de rien. La plage est située au nord-est du port de Greenford. Nous devons faire le tour de l'île par la mer et passer derrière le rocher que nous verrons sur la plage. Wilfred nous y attendra.
+#TEXT   7
+J'ai eu une petite surprise quand je suis arrivé à l'endroit où j'avais accepté de retrouver Wilfred. Une patrouille française est apparue sur la plage et j'ai dû les affronter. Heureusement, pas un seul Français n'a réussi à s'échapper pour donner l'alerte. Ensuite, Wilfred a conduit nos soldats jusqu'à la grotte, puis Ewan Glover et moi sommes retournés à Greenford où nous nous sommes quittés. Il est temps de passer à la deuxième partie de la mission.
+#TEXT   8
+Diantre !!! Juste au moment où nous approchions de notre destination, Dieu a voulu que nous perdions le sloop 'Albion'. Hélas, il me faut maintenant entrer discrètement dans Oxbay pour essayer d'y trouver Tobias.
+#TEXT   9
+J'ai rencontré Tobias dans la taverne d'Oxbay et il m'a dit qu'il avait réussi à soudoyer un capitaine de la petite escadre française. Malheureusement, pendant que nous parlions, plusieurs gardes français sont entrés précipitamment dans la taverne et j'ai dû les combattre pour éviter d'être pris.
+#TEXT   10
+Un dénommé Oweyn Mc Dorey, patron du chantier naval, nous a cachés des soldats français, après quoi Tobias m'a expliqué qu'il avait besoin de rencontrer le capitaine Rabel Yverneau le jour-même. Rabel est censé attendre Tobias à la taverne, mais Tobias veut le rencontrer ailleurs et je suis chargé de l'en aviser.
+#TEXT   11
+Je crois que nous allons être obligés de fuir cet endroit à bord du navire de Rabel. Je vais devoir revenir récupérer mon bateau dans le port de Greenford.
+#TEXT   12
+J'ai échappé à la petite escadre française et je suis retourné voir le gouverneur qui m'a donné l'or promis. Le gouverneur m'a demandé de participer à la libération d'Oxbay. Je ne peux pas dire que sa décision m'ait transporté de joie. Évidemment, je n'ai rien contre une petite bataille... mais pas au nom de la couronne britannique. Je serai informé de l'endroit où notre flotte prendra la mer. En attendant, j'ai quartier libre. Comme me l'a conseillé Son Excellence, je vais aller jeter un coup d'œil à la taverne, héhéhé !
+#QUEST	Meet_Danielle_on_Muelle
+Rencontrer Danielle sur Isla Muelle.
+#TEXT	1
+J'ai réussi le test d'Anacleto Rui Sa Pinto et celui-ci m'a proposé un marché. Le pirate va me donner le brig dont il s'est emparé et, en échange, j'ai promis de donner une leçon à son vieil ennemi Sidonio Ogarrio, qui vit maintenant dans la colonie d'Isla Muelle. Anacleto ne peut pas y aller lui-même car les Espagnols ont trop envie de le voir se balancer au bout d'une corde.
+#TEXT	2
+J'ai d'abord voyagé jusqu'à Oxbay pour y rencontrer Danielle, mais Aurentius m'a appris qu'elle était partie à ma recherche. Ah, les femmes ! Je me demande bien quel cap elle a suivi !
+#TEXT	3
+À ma grande surprise, quand je suis entré avec mon nouveau navire dans le port d'Isla Muelle, j'y ai vu mon ancien bateau. Mes hommes m'ont retrouvé à terre. Ils ont réussi à survivre à la tempête et ont rejoint le port le plus proche pour y réparer le navire.
+#TEXT	4
+Un autre hasard heureux s'est produit. J'ai rencontré Danielle à la taverne d'Isla Muelle et elle m'a dit qu'elle avait les tablettes d'argile sur lesquelles est inscrite la légende. Elle a perdu son navire et prévoit de voyager sur le mien pendant quelque temps. Elle a fait une copie de ces tablettes indigènes et nous avons décidé d'aller voir Aurentius. Je me souviens qu'il s'était vanté de connaître les langues locales, alors peut-être pourra-t-il traduire la légende du Temple du dieu Soleil.
+#TEXT	5
+Après avoir mouillé près du phare de Greenford, Danielle et moi avons escaladé le rocher jusqu'au sommet. En fait d'Aurentius, ce sont les soldats anglais qui nous attendaient près du phare. Le pauvre vieux s'est fait arrêter sur ordre de Silehard, le gouverneur britannique, pour avoir aidé des traîtres à la couronne, c'est-à-dire Danielle et moi. Il est détenu à la prison de Greenford.
+#QUEST	Capture_Greenford
+Libérer Clement Aurentius en prenant la colonie de Greenford.
+#TEXT	1
+Les soldats anglais voulaient nous voir rejoindre Aurentius en prison. Ils ont été déçus... mortellement déçus, j'en ai peur. Puisque nous avons peu de chances de rencontrer quelqu'un d'autre capable de lire ces textes indigènes dans cet archipel, nous avons décidé d'attaquer la colonie de Greenford. Pourquoi perdre de l'énergie en demi-mesures ? Avec ce plan audacieux, nous sommes sûrs de sortir le vieil homme de prison. Quand nous serons prêts à attaquer la colonie, je débarquerai près du phare. Danielle et une partie de l'équipage attaqueront la ville depuis l'intérieur des terres et je concentrerai mes efforts sur le fort. Par tous les diables, cela promet d'être une sacrée fête !
+#TEXT	2
+Les soldats anglais voulaient beaucoup nous voir rejoindre Aurentius en prison, mais mal leur en a pris. Et puisqu'on ne peut pas espérer trouver un autre homme capable de comprendre ces langues indigènes, nous avons décidé d'attaquer la colonie. Danielle combattra sur terre et je prendrai la mer.
+#QUEST	Repel_English_Attack
+Repousser la flottille anglaise attaquant Greenford.
+#TEXT	1
+Silehard n'a pas eu l'air d'apprécier notre attaque de sa colonie. Un marin m'a prévenu que le gouverneur avait rassemblé des troupes et que la flottille anglaise était en route pour Greenford. Nous nous attendons à une bataille terrible. Danielle prendra commandera du fort et j'affronterai l'ennemi à partir du gaillard d'arrière, comme d'habitude.
+#QUEST Sail_to_KhaelRoa
+Naviguer jusqu'à Khael Roa avec Danielle et Aurentius.
+#TEXT	1
+La flottille anglaise repose au fond du port de Greenford. Les poissons vont se régaler. Nous ne pourrons sûrement pas repousser une deuxième attaque. Ill vaut mieux emmener notre expert en langues indigènes et mettre le cap sur Khael Roa. Il pourra terminer sa traduction pendant le voyage.
+#QUEST Into_the_temple
+Se glisser dans le temple.
+#TEXT	1
+Par le diable des mers ! Le moins que l'on puisse dire, c'est que les rumeurs de trésor ont attiré la racaille ! Toute une flotte de pirates nous attendait au large de Khael Roa. Comment ces oiseaux de malheur ont-ils su que c'était nous venions ici ? Je ne comprends pas. Après la bataille, nous avons débarqué sur Khael Roa. Le temple est au cœur de l'île et Aurentius nous a avertis que nous risquions d'y trouver des pièges.
+#TEXT	2
+Par tous les diables ! Pour atteindre cette niche, nous devons d'abord nous frayer un chemin dans un labyrinthe. Danielle a décidé qu'il valait mieux se séparer et a filé sans attendre notre réponse. J'ai choisi le chemin central du le labyrinthe.
+#QUEST	Thomas_O'Reily_contraband
+Faire de la contrebande pour le compte de Thomas O'Reily.
+#TEXT	1
+Un dénommé Thomas O'Reily, commerçant de Redmond, m'a demandé de livrer des marchandises de contrebande à Falaise de Fleur. Je vais d'abord naviguer jusqu'à une petite baie, au nord de la ville, où les hommes de Thomas chargeront mon navire de bois de santal. Je devrai ensuite rejoindre Falaise de Fleur et livrer la cargaison à un dénommé Andre Juliao qui se trouvera à la taverne.
+#TEXT	2
+Quelque chose ne tourne pas rond ! Les hommes de Thomas ont essayé de me tuer. Ils ont dit qu'ils voulaient nous donner une leçon, à Thomas et à moi. Il n'y avait pas de cargaison dans la baie. Il faut absolument que je trouve Thomas et que je découvre ce qui ne va pas.
+#TEXT	3
+Thomas m'a expliqué que la cargaison avait été chargée sur un autre navire parti depuis peu. Je lui ai demandé qui m'avait attaqué et volé la cargaison. Il pense qu'il s'agit de la guilde des contrebandiers. Ils se sont vengés parce qu'il a arrêté de faire appel à leurs services. C'est une situation lamentable. Quoi qu'il en soit, il faut que j'intercepte le navire contenant la cargaison de Thomas, que je monte à l'abordage, que je m'empare de la cargaison et que je l'achemine à Falaise de Fleur.
+#TEXT	4
+J'ai livré la cargaison à Andre Juliao. Ce Portugais ne connaît rien aux bonnes manières et, en plus, j'ai l'impression qu'il se doute de quelque chose à propos des problèmes de Thomas avec la guilde des contrebandiers. Je vais mettre Thomas en garde contre Andre.
+#TEXT	5
+Thomas m'a remercié de l'avoir averti et m'a donné de l'argent.
+#TEXT	6
+Thomas m'a dit que ceux qui m'avaient attaqué et qui avaient volé la cargaison étaient des membres de la guilde des contrebandiers. Il m'a demandé d'intercepter leur navire et de récupérer la cargaison, mais j'ai dû refuser car je ne veux pas avoir d'ennuis avec des organisations telles que la guilde des contrebandiers.
+#QUEST	Hire_by_france_for_defeat_england_corvette
+Couler la corvette anglaise.
+#TEXT	1
+Le gouverneur de Falaise de Fleur, Joseph Claude Le Moigne, m'a confié la mission de couler la corvette anglaise qui bloque la colonie pendant que la flottille française est en mer.
+#TEXT	2
+J'ai refusé la mission de Le Moigne. 5 000 pièces d'or, ce insuffisant pour une telle prise de risque. Ce n'est pas rien d'affronter une corvette anglaise. Je crois bien que mon refus a vexé le gouverneur.
+#TEXT	3
+Le gouverneur a été satisfait de ma performance. Il m'a donné la récompense convenue et m'a de rester en contact avec lui. Il veut continuer de travailler avec moi.
+#QUEST	Blaze_out_from_silehard
+Attendre de nouveaux ordres de Silehard.
+#TEXT	1
+Silehard m'a ordonné de participer à la libération d'Oxbay. Je n'ai malheureusement pas le choix ; toutes les entrées de la ville sont bloquées. Tout ce qu'il me reste à faire, c'est attendre ses ordres à la taverne.
+#TEXT	2
+Diantre ! Les soldats anglais nous ont attaqués, Danielle et moi ! Comme de bien entendu, Danielle a disparu tout de suite après le combat. Je suppose qu'elle se cache quelque part pour que je ne la trouve pas. Pauvre petite ! Elle était au bord des larmes ; son maître d'équipage, Ralph, a été tué. C'est regrettable ; c'était un bon élément. Quoi qu'il en soit, il faut que je découvre ce qui se passe ici.
+#TEXT	3
+J'aurais mieux fait d'écouter Danielle et de quitter cette taverne. Dès le départ de Danielle, les soldats sont entrés dans la taverne et m'ont dit de déposer mes armes. Ils étaient quatre, alors ils avaient toutes les chances de leur côté. J'ai été obligé de me rendre. Que diable se passe-t-il ?
+#QUEST Blaze_in_prison
+Sortir de prison.
+#TEXT	1
+Les soldats m'ont mis en prison. Je ne sais pas où est mon arme et ils ont probablement négligé d'informer le gouverneur de ma présence ici. Que faire ?
+#TEXT	2
+Edgar Attwood, le geôlier, m'a laissé sortir de ma cellule à condition que je le prenne sur mon bateau comme canonnier.
+#TEXT	3
+Edgar Attwood, le geôlier, m'a dit qu'il était un excellent canonnier, mais qu'il avait été renvoyé parce qu'il buvait trop. Je lui ai proposé un poste de canonnier sur mon navire... mais seulement s'il me faisait sortir de cellule. Il s'est contenté de rire.
+#TEXT	4
+Je n'aime pas qu'on se moque de moi. Edgar m'a dit que j'allais bientôt marcher avec des béquilles si je continuais de l'interrompre pendant qu'il me racontait sa vie. J'en ai eu assez de ses menaces et je l'ai abattu.
+#TEXT	5
+Maintenant, il faut que je sorte de cette cage humide et froide qu'ils appellent une prison. Edgar a dit que plusieurs gardes surveillaient les lieux. Je vais devoir les tuer tous. C'est le seul moyen de recouvrer ma liberté.
+#TEXT	6
+Le gouverneur Silehard en personne est venu à la prison. Il a dit que mon emprisonnement était une grave erreur et m'a présenté toutes ses excuses. Puis il m'a invité à le suivre dans son bureau pour discuter de choses sérieuses.
+#QUEST Blaze_search_Rheims
+Trouver le traître dénommé Raoul Rheims.
+#TEXT	1
+Le gouverneur m'a confié une nouvelle mission. Il m'a demandé de trouver un certain Rheims qui est passé du côté français alors qu'il avait été chargé d'une importante mission pour le gouverneur. On sait que le navire de Rheims a fait halte sur l'île des pirates. Je vais m'y rendre. Si Rheims n'y est pas, j'aviserai. Dans tous les cas, je dois le retrouver et le ramener au gouverneur.
+#TEXT	2
+La tenancière de la taverne, Ines Diaz, m'a dit que Rheims était allé à Conceicao où il avait des affaires à traiter avec Camilo Machado, le chef des contrebandiers. D'après elle, la veille du départ de Rheims, quelqu'un a essayé de lui tirer dessus. Peut-être Silehard a-t-il envoyé quelqu'un d'autre pour tuer Rheims ?
+#TEXT	3
+La tenancière de la taverne, une dénommée Ines Diaz, a refusé de me parler. Je vais devoir trouver une autre source d'information.
+#TEXT	4
+J'ai découvert que Rheims était parti pour Conceicao où il compte rencontrer le chef des contrebandiers, Camilo Machado.
+#TEXT	5
+Un type que j'ai rencontré dans les rues de Quebradas Costillas m'a dit qu'il savait où se trouvait Rheims. Il m'a demandé 1 500 pièces d'or pour ce renseignement. J'ai refusé. Mais maintenant, j'ai comme l'impression que je n'ai pas le choix et que je vais devoir payer 1 500 pièces d'or à cette vermine de pirate, sinon je serai obligé de visiter toutes les îles de l'archipel pour trouver Rheims moi-même.
+#TEXT	6
+J'ai essayé de poser des questions au tavernier de Conceicao sur Rheims, mais le type a pris peur quand j'ai prononcé le nom du chef des contrebandiers.
+#TEXT	7
+La chance me sourit enfin ! Le messager de Machado m'attendait à l'entrée de la taverne. Malheureusement, ma conversation avec le chef des contrebandiers ne m'a pas fourni les renseignements que je cherchais. Rheims est parti à bord de son bateau il y a plusieurs jours et Machado a posté des gardes autour de sa maison. Je n'ai pas d'autre choix que de me glisser dans la maison de Rheims, même si c'est exactement ce que Machado m'a interdit. Il vaut mieux attendre la tombée de la nuit. Je vais louer une chambre à la taverne ; comme ça, j'aurai un endroit où attendre.
+#TEXT	8
+La nuit est tombée. C'est le moment de m'introduire discrètement dans la maison de Rheims. Les gardes ne devraient pas poser de gros problèmes. J'ai remarqué une petite fenêtre sur la maison. Je devrais pouvoir m'y faufiler. Si les choses tournent mal, je serai peut-être obligé de tuer les gardes pour pénétrer dans la maison.
+#TEXT	9
+J'ai trouvé une lettre dans la maison de Rheims. Il y demande à quelqu'un de l'attendre à un certain endroit pendant qu'il prépare une grande expédition. De quoi parle-t-il ? Quelques minutes avant que je n'entre dans la maison, deux bandits s'y sont introduits. J'ai dû me battre contre eux et les tuer. Ce qui me surprend, c'est qu'ils m'ont dit que j'étais la troisième personne à essayer d'entrer dans la maison de Rheims. Quoi qu'il en soit, j'ai perdu la piste de Rheims et je vais devoir retourner voir Silehard pour lui faire part de mon échec.
+#TEXT	10
+J'ai tué les gardes et j'ai réussi à entrer dans la maison. Nous allons voir ce que je vais pouvoir y trouver.
+#TEXT	11
+Le gouverneur Silehard n'a pas trop mal réagi à la nouvelle de mon échec. Je m'attandais à ce qu'il soit furieux. Il m'a même payé le restant de la somme prévue pour cette mission. Dame Fortune me sourit peut-être.
+#TEXT	12
+J'ai découvert que Rheims avait bien séjourné à Quebradas Costillas. Il a passé le plus clair de son temps à la taverne. Je devrais sûrement parler à la tavernière. Je suis sûr qu'elle aura quelque chose d'intéressant à me raconter.
+#TEXT	13
+Le pirate susceptible de me renseigner sur la destination de Rheims est mort. Je suppose qu'il ne me reste plus qu'à parcourir toutes les îles une par une pour le trouver. Je doute que Rheims se rende dans une colonie anglaise : c'est trop dangereux pour lui.
+#TEXT	14
+Rheims ne s'est pas rendu sur l'île de Douwesen ces derniers temps. Cela fait plusieurs mois qu'on ne l'y a pas vu. Ce qui est intéressant malgré tout, c'est qu'au cours de son séjour là-bas, il a payé tous ses achats avec des pièces d'or indiennes.
+#TEXT	15
+Je suis allé à Isla Muelle et j'ai appris que personne n'y avait vu Rheims.
+#TEXT	16
+Rheims ne s'est pas rendu à Falaise de Fleur. Ma seule consolation est que Rheims ne peut se trouver que dans un nombre limité d'endroits.
+#QUEST	blaze_to_Isenbrandt
+Remettre une lettre à un chef pirate.
+#TEXT	1
+Le gouverneur Silehard m'a chargé de remettre une lettre à un certain Izenbrandt Jurksen, chef d'une bande de pirates. Dans cette lettre, le gouverneur annonce qu'il récompensera quiconque trouve et tue Rheims. Après avoir accompli cette mission, je devrai retourner à Redmond pour une nouvelle mission.
+#TEXT	2
+On ne peut pas dire que l'accueil de Jurksen ait été chaleureux. Mais je lui ai remis la lettre. C'est intéressant : Jurksen a dit que le gouverneur avait plusieurs fois fait appel à ses services. Je vais maintenant remettre le cap sur Redmond et dire au gouverneur que j'ai accompli la mission qu'il m'avait confiée.
+#QUEST	blaze_to_incas_collection
+Rendre la collection d'art local au gouverneur Silehard.
+#TEXT	1
+Le gouverneur m'a dit que les pirates dirigés par Alistair Garcilaso avaient pris le navire qui devait livrer une collection d'objets indigènes à Redmond. Le repaire des pirates se trouve sur l'île de Douwesen. J'ai pour mission de trouver la collection et de l'acheminer à Redmond. C'est une tâche difficile, mais je serai bien payé. Je dois d'abord découvrir où se trouve exactement le repaire des pirates ; ensuite, j'aviserai.
+#TEXT	2
+Un vieux renard de tavernier m'a présenté un drôle de type qui dit savoir où se trouve le repaire des pirates. Il m'a proposé de m'expliquer comment y aller ou de m'y conduire. Je lui ai demandé de se contenter de m'expliquer comment y aller.
+#TEXT	3
+Un vieux renard de tavernier m'a présenté un drôle de type qui dit savoir où se trouve le repaire des pirates. Ce type m'a proposé de m'expliquer comment y aller ou de m'y conduire. Je lui ai demandé de m'y conduire.
+#TEXT	4
+Le pirate qui a accepté de me montrer le chemin qui mène au repaire m'a attaqué dans la jungle. Je lui ai vite réglé son compte. Mais je pense qu'il me sera maintenant nettement plus difficile de me glisser dans ce repaire.
+#TEXT	5
+Je le savais. Dès que la première sentinelle m'a aperçu, elle a donné l'alerte.
+#TEXT	6
+Ma mauvaise réputation m'a aidé à entrer dans le repaire des pirates sans avoir à me battre.
+#TEXT	7
+D'après la conversation que j'ai eue avec le chef des pirates, les statuettes seraient toutes sur le bateau pirate, sauf une, achetée par une fille. Mes hommes et moi pourrions essayer de nous glisser à bord maintenant, pendant que l'équipage est à terre, ou retourner sur mon navire, puis monter à l'abordage du vaisseau pirate - mais j'ai peur que ce soit plus difficile car les pirates seront à bord et se prépareront à prendre la mer.
+#TEXT	8
+Je suis discrètement monté à bord du navire des avec mes officiers. Les gardes étaient un peu plus nombreux que prévu, mais nous avons remporté la bataille. J'ai la collection et je vais la rapporter au gouverneur.
+#TEXT	9
+Je suis monté à l'abordage du navire pirate. Maintenant que j'ai la collection, je peux retourner voir le gouverneur.
+#TEXT	10
+Pendant l'affrontement, j'ai coulé le bateau pirate. Heureusement, il a sombré dans des eaux peu profondes et on devrait pouvoir sortir la cargaison de la cale.
+#TEXT	11
+Les membres de mon équipage ont passé toute la journée à récupérer les marchandises de la cale du navire pirate coulé. Ils ont réussi à récupérer l'ensemble de la collection. Le moment est venu d'aller retrouver le gouverneur.
+#TEXT	12
+Hum. J'ai l'impression que Silehard était furieux du fait de la disparition d'une seule idole de la collection : celle achetée par une inconnue. Mais je me trompe peut-être... Il ne m'en a pas spécifiquement fait le reproche.
+#TEXT	13
+Je viens d'acheter la collection aux pirates. J'ai malheureusement dû débourser une belle somme. Je vais maintenant faire mon rapport à Silehard.
+#TEXT	14
+Alistar Garsilaso, le chef des pirates de Douwesen, s'est révélé un misérable lâche. Je l'ai à peine menacé qu'il m'a tout de suite donné la collection.
+#TEXT	15
+Puisque je n'ai pas trouvé la collection chez Alistar, cela veut sans doute dire qu'elle est encore à bord. Je n'ai plus qu'à trouver le navire. Il doit sûrement être dans une baie toute proche.
+#TEXT	16
+Alistar a refusé de coopérer avec moi. J'espère seulement que la collection d'idoles est toujours à bord du navire des pirates. Je ne serais pas surpris que le bateau mouille dans la baie située à côté du repaire des pirates.
+#QUEST	move_prisoner_from_greenford
+Remettre un prisonnier au gouverneur.
+#TEXT	1
+Le gouverneur m'a chargé de lui amener le prisonnier de la prison de Greenford, sur Oxbay.
+#TEXT	2
+Quand j'ai expliqué que je voulais voir le prisonnier, le commandant m'a dit qu'il s'était évadé quelques heures plus tôt. On le recherche, mais il n'a pas encore été repris.
+#TEXT	3
+À mon arrivée à Redmond, j'ai dit au gouverneur que le prisonnier s'était évadé. Silehard n'a pas été content du tout d'entendre cette nouvelle.
+#QUEST resque_researcher
+#TEXT	1
+En sortant de la prison de Greenford, j'ai remarqué un groupe de brigands qui essayaient de brûler un vieil homme. Une femme est venue vers moi et m'a demandé de l'aider à sauver le vieil homme, car les soldats refusaient d'intervenir.
+#TEXT	2
+En sortant de la prison de Greenford, j'ai remarqué un groupe de brigands qui essayaient de brûler un vieil homme. Une femme est venue vers moi et m'a demandé de l'aider à sauver le vieil homme, car les soldats refusaient d'intervenir. Je ne suis pas assez fou pour me battre contre toute un groupe pour secourir un vieux fou.
+#TEXT	3
+Quel manque de chance ! Dès que cette femme au grand cœur m'a quitté, ce parasite a commencé à me tourmenter. Je lui ai dit de me laisser tranquille et j'ai voulu partir, mais ce chien m'a frappé.
+#TEXT	4
+J'ai obligé la foule à se disperser.
+#TEXT	5
+Les gens se laissent si facilement manipuler. Il ne m'a fallu que quelques pièces pour les convaincre d'aller boire un verre à la taverne plutôt que de brûler le vieux.
+#TEXT	6
+En parlant avec les soldats, je me suis rendu compte qu'ils n'avaient aucune intention d'aider le pauvre vieux. J'ai trouvé une solution. J'ai décidé de distribuer quelques pièces et, comme par magie, la foule s'est dispersée.
+#TEXT	7
+En parlant avec les soldats, je me suis rendu compte qu'ils n'avaient aucune intention d'aider le pauvre vieux. Mais j'ai réussi à les faire changer d'avis en les persuadant qu'un tel comportement les discréditait.
+#TEXT	8
+Le vieil homme que j'ai sauvé est un drôle de type. Il se prétend 'chercheur'. Je suppose qu'il fait partie de ces 'philosophes naturels' - complètement fou, sans doute. Quand il a découvert que j'étais capitaine, il a tout de suite eu l'idée de faire une expérience sur mon navire. J'ai accepté de le raccompagner chez lui pour détourner son attention de ces idées tordues.
+#QUEST	again_find_rheims
+Continuer de chercher Rheims.
+#TEXT	1
+Quelle surprise ! J'ai rencontré Danielle avec un dénommé Vincent chez le chercheur. Il se trouve qu'elle cherche Rheims, elle aussi, et que ce Vincent l'a aidée à le localiser. Danielle ne voit aucune objection à ce que je me joigne à Vincent et elle pour rechercher Rheims. Nous avons décidé de nous retrouver à la maison du chercheur dans deux jours. Je dois maintenant aller voir Silehard pour l'informer de l'évasion du prisonnier. Je veux aussi lui annoncer que j'ai enfin retrouvé la trace de Rheims. Danielle a elle aussi quelques affaires à régler de son côté.
+#TEXT	2
+J'ai dit au gouverneur que je savais où se cachait Rheims. Il en a été ravi et m'a ordonné de le trouver et de le ramener à Redmond. Maintenant, il ne me reste plus qu'à trouver ce pauvre bougre avec l'aide de Danielle et de Vincent.
+#TEXT	3
+J'ai regagné Oxbay où j'ai retrouvé Danielle. Elle m'a dit que Vincent avait appris que Rheims se trouvait sur l'île de Douwesen. Nous nous y rendons actuellement.
+#TEXT	4
+Dès notre arrivée à Douwesen, Danielle et moi sommes allés à la taverne où Vincent nous attendait. Il nous a désigné Rheims, assis dans la taverne, et s'en est allé. Nous avons parlé avec Rheims et il nous a invités chez lui, hors de la ville.
+#TEXT	5
+Dès que nous sommes sortis de la ville, des bandits nous ont attaqués. Danielle et Rheims ont couru vers la maison de ce dernier pendant que je restais pour combattre nos attaquants. J'ai réglé notre différend et je dois maintenant me rendre dans la jungle. Quand je verrai la première fourche sur la route, je devrai continuer tout droit et prendre à gauche à la seconde.
+#TEXT	6
+Qu'est-ce que... ? Rheims et Vincent sont morts et Danielle est en plein crise d'hystérie !
+#TEXT	7
+J'ai mal ! Cette folle m'a enfoncé sa dague dans le ventre pendant que j'essayais de comprendre ce qui s'était passé. Rheims a été mortellement touché, et d'après sa conversation avec Danielle, il semble que Silehard soit le commanditaire du meurtre de Rheims. Pour couronner le tout, il a ordonné sa mort parce que Rheims avait découvert des trésors. Vincent était un tueur au service de Silehard. Diable ! Quand je pense que j'ai servi un tel gredin ! Il faut que je retrouve Danielle et que je parvienne à la convaincre que je n'y suis pour rien.
+#QUEST	search_danielle
+Retrouver Danielle.
+#TEXT	1
+Rheims a dit que la légende qui l'avait aidé à trouver les trésors se trouvait dans la bibliothèque de l'église d'Isla Muelle. Si je veux retrouver Danielle et découvrir ce qui se passe, il faut que j'aille là-bas.
+#TEXT	2
+Le prêtre espagnol, Padre Domingues, a refusé de me laisser entrer dans la bibliothèque. Mais il me laissera y accéder si je réussis à retrouver pour son compte des documents dérobés par un certain Ferro Cerezo. Cerezo est actuellement à Conceicao.
+#TEXT	3
+Il semblerait que les papiers volés contiennent des informations compromettant le Padre Domingues.
+#TEXT	4
+J'ai réussi à convaincre Ferro que les papiers qui incriminaient Domingues m'étaient plus utiles qu'à lui. Je peux maintenant regagner Isla Muelle.
+#TEXT	5
+J'ai réussi à acheter les papiers du prêtre et je peux maintenant remettre le cap sur la colonie espagnole.
+#TEXT	6
+Ferro a refusé de me donner les papiers ; il ne m'a pas laissé d'autre choix que de les lui arracher. D'après ce que j'ai compris, son navire mouille dans le port. Il me suffit de le capturer.
+#TEXT	7
+Je suis monté à l'abordage du navire de Cerezo sans difficultés particulières. Je peux maintenant retourner voir Domingues.
+#TEXT	8
+Le navire de Ferro est indigne de ce nom : ce n'est qu'une vieille coque. J'ai tiré deux salves et il a coulé. Les papiers ont été emportés par les vagues, ce qui devrait satisfaire Domingues.
+#TEXT	9
+Je suis allé à la bibliothèque et n'ai pas tardé à trouver le livre que je cherchais. Il était sur la table. Malheureusement, quelqu'un a en déchiré plusieurs pages et je crois que ce quelqu'un est Danielle. Tout ce que je sais, c'est que des tablettes d'argile aux inscriptions étranges ont été trouvées dans les mines d'Oxbay. Je pense que les détails originaux de la légende ont été gravés sur ces tablettes. Je suis sûr que Danielle est déjà à Oxbay. Il n'y a pas une minute à perdre.
+#TEXT	10
+À ma sortie de la ville, je me suis retrouvé encerclé par des types étranges. Je ne sais pas ce qu'ils me voulaient. Ils m'ont attaqué et j'ai été obligé de les tuer.
+#TEXT	11
+À ma sortie de la ville, je me suis retrouvé encerclé par des types étranges. D'après ce que j'ai compris, ils m'ont assommé et vendu comme esclave. Je me demande où sont mes compagnons...
+#TEXT	12
+Un certain Leborio Drago m'a confirmé que j'avais été vendu comme esclave pour travailler dans les mines. Heureusement, mes compagnons se sont échappés. Comment vais-je me sortir de là ?
+#TEXT	13
+J'ai parlé à un soldat et je lui ai expliqué que je travaillais pour Silehard. Ça l'a impressionné et il a appelé un officier. L'officier était un type bien qui m'a libéré. En plus, il m'a dit que si je voulais trouver ces tablettes d'argile, je pouvais parler à Leborio Drago. Il a été désigné pour surveiller le type chargé d'étudier les tablettes.
+#TEXT	14
+J'ai parlé à un soldat et je lui ai expliqué que je travaillais pour Silehard. Ça l'a impressionné et il a appelé un officier. L'officier m'a demandé de l'argent en échange de ma liberté, mais je n'avais pas assez pour le satisfaire.
+#TEXT	15
+Leborio Drago a découvert que j'étais capitaine et m'a proposé de m'enfuir avec lui. Évidemment, j'ai accepté. Notre plan consiste à rejoindre le phare où mon navire nous attendra. Leborio a trouvé un moyen de faire passer une lettre de ma main à mon équipage.
+#TEXT	16
+Nous sommes libres !!! En discutant avec Leborio, j'ai appris que Danielle s'était rendue aux mines, puis qu'elle était partie pour Isla Muelle afin de trouver une personne qui aurait étudié les tablettes.
+#TEXT	17
+Leborio m'a proposé un marché. Je le sors de ce lieu infâme et il me dit tout ce qu'il sait sur les tablettes d'argile.
+#TEXT	18
+J'ai fait un peu pression sur Leborio et il m'a dit tout ce qu'il savait. Danielle serait déjà passée par ici, mais elle repartie pour Isla Muelle afin d'y trouver la personne qui a fait une copie des tablettes.
+#TEXT	19
+Eh bien, j'ai décidé de libérer Leborio, même si ça m'a coûté très cher. Leborio ne le sait pas encore, mais j'ai l'intention de le lui dire. J'imagine déjà sa joie.
+#TEXT	20
+Ils veulent 1 000 pièces d'or pour Leborio. Il ne les vaut pas.
+#TEXT	21
+Je suis maintenant à Isla Muelle. J'ai parlé au tavernier, mais je n'ai pas pu en tirer grand-chose. J'ai néanmoins appris que Danielle était toujours quelque part dans cette colonie.
+#TEXT	22
+En sortant de la taverne, j'ai aperçu Danielle. Je l'ai suivie. J'ai perdu sa trace quelque temps, puis je l'ai retrouvée, allongée par terre avec un gredin penché sur elle, la dague à la main, essayant de la tuer. Grâce à Dieu, je suis arrivé à temps !
+#TEXT	23
+J'ai parlé avec Danielle et tout est rentré dans l'ordre. Nous avons décidé de joindre nos forces, de trouver les trésors et de nous venger de la traîtrise de Silehard.
+#QUEST	Revenge_for_Silehard
+Obtenir des renseignements du gouverneur.
+#TEXT	1
+Danielle a proposé d'utiliser une baie cachée derrière les récifs pour accéder à Redmond. Elle a dit qu'elle savait comment s'y rendre en passant par la grande crevasse située entre les rochers.
+#TEXT	2
+Nous avons décidé de nous glisser de nuit dans la maison de Silehard.
+#TEXT	3
+Cette ordure de Silehard a filé, ce qui signifie que nous n'avons pas pu lui tirer les vers du nez. Que faire, sinon regagner nos navires ?
+#TEXT	4
+Nous avons décidé de nous séparer. Danielle va mettre le cap sur Isla Muelle pour trouver l'original de la légende pendant que je naviguerai vers Greenford pour tâcher d'obtenir des soldats des informations sur l'idole qui devait se trouver chez le navigateur du défunt Rheims.
+#TEXT	5
+Je suis arrivé à Greenford et j'ai parlé avec un soldat. J'ai appris qu'un capitaine avait l'idole. Je le trouverai en prison.
+#TEXT	6
+En discutant avec le tavernier, j'ai appris qu'un capitaine avait l'idole. Je le trouverai en prison.
+#TEXT	7
+Silehard a une longueur d'avance sur moi. L'idole se trouve à bord d'un navire et le capitaine de la garde a ordre d'arrêter quiconque s'y intéresserait. Il faut que je me hâte d'aller au port pour essayer de rattraper le navire anglais sur lequel se trouve l'idole.
+#TEXT	8
+Quelle bataille mémorable ! Ce n'est pas une mince affaire que de prendre une frégate anglaise protégée par un fort ! Je suis ravi de cette victoire... et de ma récompense : l'idole.
+#QUEST Where_are_i
+Retourner à Oxbay.
+#TEXT	1
+Une terrible tempête s'est déchaînée dès que j'ai pris la mer. J'ai lutté pendant plusieurs heures pour sauver mon navire avant d'être précipité par-dessus bord. J'ai repris connaissance sur Douwesen, mais aucune trace de mon navire et de mon équipage.
+#TEXT	2
+Le tavernier de Douwesen m'a dit que mon navire n'était pas arrivé au port. Les ennuis sont là. Je n'ai ni argent ni navire, mais je dois trouver le moyen de me rendre à Oxbay pour retrouver Danielle. Je devrais peut-être me faire embaucher sur un navire. Le tavernier a parlé de pirates vivant dans la jungle et qui embauchaient des marins pour travailler sur leurs navires.
+#TEXT	3
+En allant au repaire des pirates, j'ai appris qu'un certain Anacleto Rui Sa Pinto se trouvait à la taverne pour embaucher des marins pour son équipage.
+#TEXT	4
+Anacleto a déclaré qu'il occupait lui-même le poste de capitaine, mais qu'il pouvait m'embaucher comme simple matelot. Mais un peu plus tard, Anacleto m'a proposé d'affronter un type gigantesque pour prouver que j'étais digne d'être capitaine de son navire.
+#TEXT	5
+J'ai tué la brute - mais le perfide Anacleto a manqué à sa parole et refuse de me prendre à bord de son navire.
+#TEXT	6
+J'ai été obligé de tuer cette ordure d'Anacleto et de m'emparer de son navire. J'ai le choix entre mettre le cap sur Oxbay pour y rejoindre Danielle ou tenter de retrouver mon navire et mon équipage. Si mes hommes sont vivants, ils se trouvent probablement sur l'une des îles voisines.
+#TEXT	7
+J'ai eu de la chance. Un certain Wilfred Bythesea s'est présenté comme un ami de longue date (eh bien... peut-être que je me souviens de lui... ou peut-être que non) et m'a proposé de me donner son navire en échange d'un service. Inutile de préciser que j'ai accepté ! J'ai le choix entre mettre le cap sur Oxbay pour y rejoindre Danielle ou essayer de retrouver mon navire et mon équipage. Si mes hommes sont vivants, ils se trouvent probablement sur l'une des îles voisines.
+#TEXT	8
+Anacleto a accepté de m'emmener à Oxbay, mais je devrai le payer en arrivant là-bas. J'espère que Danielle est déjà à Oxbay.
+#TEXT	9
+Cette ordure m'a trompé ! Nous arrivions à Oxbay quand il m'a annoncé qu'il avait l'intention de me vendre pour travailler dans les mines ! Heureusement que j'ai réussi à convaincre l'équipage de prendre mon parti. Le navire est désormais à moi.
+#TEXT	10
+Ce scélérat m'a trompé ! Nous arrivions à Oxbay quand il m'a annoncé qu'il avait l'intention de me vendre pour travailler dans les mines ! J'ai dû sauter par-dessus bord. Heureusement, je n'étais pas loin du rivage.
+#TEXT	11
+En arrivant à Oxbay, j'ai découvert que Danielle n'était pas encore là. Je crains qu'elle ait eu des ennuis, alors je vais partir à sa recherche pour tenter de l'aider. Je me souviens qu'elle avait l'intention d'aller jusqu'à la colonie espagnole.
+#TEXT	12
+En arrivant à Oxbay, j'ai découvert que Danielle n'était pas encore là. Je crains qu'elle ait eu des ennuis, alors je vais partir à sa recherche pour tenter de l'aider. Je me souviens qu'elle avait l'intention d'aller jusqu'à la colonie espagnole. Étant donné que j'ai perdu mon navire et que le 'yacht' du chercheur s'est révélé n'être qu'un tas de..., je risque d'avoir du mal à la trouver.
+#QUEST Kill_Ogario
+Tuer Sidonio Ogarrio.
+#TEXT	1
+Wilfred Bythesea m'a chargé de tuer un dénommé Sidonio Ogarrio qui habite à Isla Muelle.
+#QUEST	Church_help
+Aider l'Église.
+#TEXT	1
+Le père Bernard est à la tête du clergé de Redmond. Il m'a demandé de trouver des preuves établissant la culpabilité ou l'innocence du prêtre Jerald. Il habite la ville de Greenford et les gens disent qu'il vit dans le péché et s'est détourné de Dieu.
+#TEXT	2
+Simon Hanpool est le tavernier de Greenford. J'ai discuté avec lui ; il ne savait pas que de telles rumeurs circulaient à propos du père Jerald. Selon lui, le père Jerald est un bon prêtre qui s'acquitte de ses devoirs sans faillir.
+#TEXT	3
+L'assistant du père Jerald m'a donné des preuves de la culpabilité du prêtre. Je le soupçonne de vouloir tout simplement prendre la place de Jerald. Je dois parler de lui au père Bernard. Il pourra peut-être le nommer à la direction du Temple. Ce poste est toujours vacant.
+#TEXT	4
+Le père Jerald clame son innocence. Et je le trouve très convaincant. Je crois que quelque chose ne tourne pas rond ici.
+#TEXT	5
+J'ai proposé au prêtre d'acheter les lettres et il a tout de suite accepté. Cela ne prouve-t-il pas sa culpabilité ?
+#TEXT	6
+J'ai proposé au prêtre d'acheter les lettres et il a tout de suite accepté. Je ne sais pas s'il est coupable ou non ; je vais donc pouvoir dire ce que je veux au père Bernard.
+#TEXT	7
+La serveuse a confirmé avoir reçu plusieurs lettres d'amour du père Jerald.
+#TEXT	8
+Le tavernier reste persuadé de l'innocence du père Jerald. Il affirme que les lettres ont été écrites par une autre personne du nom de Yedam Kinne. C'est un Batave qui vit sur l'île. Il peut imiter l'écriture de n'importe qui. Le tavernier dit avoir vu Kinne et l'assistant du prêtre ensemble, il y a plusieurs jours.
+#TEXT	9
+Yedam Kinne affirme ne pas connaître l'existence de ces lettres.
+#TEXT	10
+Yedam Kinne a reconnu avoir écrit les lettres. Cela signifie que le père Jerald est innocent et que son assistant est à l'origine de toute cette affaire.
+#TEXT	11
+J'ai été obligé de tuer cette tête de mule de Batave. Malheureusement, il n'y a plus moyen de savoir s'il a écrit ou non ces lettres. Le tavernier a peut-être obtenu des renseignements de la serveuse.
+#TEXT	12
+Le tavernier m'a dit que la fille qui avait accusé le père Jerald de harcèlement travaillait en fait pour l'assistant de Jerald. Ceci signifie que le père Jerald ne lui a écrit aucune lettre.
+#TEXT	13
+Je suis retourné à Redmond et j'ai réussi à convaincre le père Bernard de l'innocence du père Jerald.
+#TEXT	14
+Je suis retourné à Redmond et j'ai dit au père Bernard que le père Jerald était coupable.
+#QUEST	Hitman
+La dure vie d'assassin.
+#TEXT	1
+Ambroz Bricenos m'a engagé pour tuer Mateus Santos. Santos habite à Isla Muelle, dans la maison qui se trouve à droite du chantier naval.
+#TEXT	2
+Je n'ai pas réussi à tuerc Santos. Mais lui ne m'a pas tué non plus ; en réalité, il m'a proposé un travail. J'ai accepté et ma cible est maintenant Ambroz Bricenos. Bricenos m'attend sur le rivage de Conceicao, près du repaire des contrebandiers.
+#TEXT	3
+Ambroz Bricenos est mort. Je dois retourner voir Santos pour ma récompense.
+#TEXT	4
+J'ai décidé de ne pas tuer Santos. Il est clair que je ne suis pas fait pour la vie d'assassin.
+#TEXT	5
+Santos ne m'a pas déçu : j'ai été payé pour le meurtre de Bricenos. Et je dois dire que c'est une somme rondelette. J'ai donc décidé de continuer de travailler pour Santos. Ma prochaine cible : le commerçant Geffrey Bampfylde. Il habite à Greenford, à gauche de la taverne, de l'autre côté de la rue.
+#TEXT	6
+Ce commerçant était vraiment très moche ! J'ai rendu service à la société en me débarrassant de lui. Maintenant, il me reste à aller voir Santos pour toucher mon argent.
+#TEXT	7
+J'ai décidé de ne pas tuer Bampfylde, même si sa mort serait peut-être synonyme d'un monde meilleur. Mais ma décision est prise. Il est clair que je ne suis pas fait pour la vie d'assassin.
+#TEXT	8
+Oui ! Santos m'a payé, et bien ! Ce Bampfylde a vraiment dû pousser les gens à bout pour que l'on soit prêt à débourser autant pour se débarrasser de lui. J'ai décidé de faire un autre travail pour Santos. Il m'a demandé de tuer un contrebandier du nom de Bertillon. On le voit souvent dans le port de Quebradas Costillas.
+#TEXT	9
+Si l'insolence n'est pas rare chez les contrebandiers, Bertillon dépasse vraiment les limites. En tout cas, cette particularité ne lui aura pas sauvé la vie. Santos devrait être pleinement satisfait.
+#TEXT	10
+J'ai décidé de ne pas tuer Bertillon. Malgré son insolence, j'ai de l'admiration pour lui. Peut-être en ai-je déjà assez de la vie d'assassin.
+#TEXT	11
+Cette activité me va comme un gant. C'est facile et ça paie bien. Ma prochaine cible, Amerigo Vieira, est l'ennemi personnel de Santos et la meilleure lame de cet archipel. Quel combat cela va être !
+#TEXT	12
+Vieira était un sacré combattant ; j'ai eu beaucoup de mal à le tuer. Avant de mourir, il a dit quelque chose d'intéressant. J'ignore s'il disait vrai, mais je ferais bien d'être sur mes gardes avec Santos.
+#TEXT	13
+J'ai décidé de ne pas tuer Vieira. Il m'a dit que lui aussi avait travaillé pour Santos pendant quelque temps. Selon lui, Santos essaie de l'éliminer car il a peur de sa maîtrise de l'épée. Je ne serais pas étonné que cette histoire soit vraie et je n'ai plus envie de revoir Santos.
+#TEXT	14
+J'ai décidé de ne pas tuer Vieira. Il m'a dit que lui aussi avait travaillé pour Santos pendant quelque temps. Selon lui, Santos essaie de l'éliminer car il a peur de sa maîtrise de l'épée. Je ne serais pas étonné que cette histoire soit vraie et je n'ai plus envie de revoir Santos. En plus, compte tenu de la situation assez désespérée de Vieira, je n'ai eu aucun mal à le convaincre de travailler pour moi. Avoir la meilleure lame de l'archipel parmi mes officiers ne peut pas me faire de tort.
+#TEXT	15
+La récompense offerte pour la mort du meilleur combattant de cet archipel en valait la chandelle. Maintenant, Santos m'a confié une mission vraiment importante : tuer un livreur venu ici d'Europe. C'est un vieil Italien que je devrais trouver à Conceicao.
+#TEXT	16
+J'ai trouvé cet homme, Vito Leone. Il a essayé de me convaincre que Santos allait essayer de se débarrasser de moi, mais je ne suis pas assez idiot pour le croire. Je fais bien mon travail et il n'a aucune raison de me trahir. À ce propos, il ne faut pas que j'oublie de voir Santos pour mon paiement.
+#TEXT	17
+Vito Leone, le 'livreur' que Santos veut absolument voir mort, semble être un homme important. Je ne veux pas me mêler des affaires d'une guilde de tueurs, alors je préfère me retirer de la profession. Laissons-les résoudre leurs affaires comme ils l'entendent.
+#TEXT	18
+Vito Leone, le 'livreur' que Santos veut absolument voir mort, semble être un homme important. Et Santos s'avère être un imposteur impudent qui tue tous ceux qui représentent une menace pour lui. Étant moi-même devenu une menace, j'ai décidé d'aider Leone à se débarrasser de Santos. Il me suffit d'aller au premier de la taverne d'Isla Muelle et de lui trancher la gorge. Leone m'a assuré que Santos y serait avec ses gardes du corps.
+#TEXT	19
+Ça y est. Santos est mort, Leone m'a payé et ma vie n'est plus en danger. Ma carrière d'assassin s'arrête là... et je dois dire que j'en suis plutôt content. Verser le sang contre de l'argent n'a rien de très honorable.
+#TEXT	20
+J'ai décidé de ne pas tuer Santos. Il est clair que je ne suis pas fait pour la vie d'assassin.
+#TEXT	21
+Un mois s'est écoulé depuis que Santos m'a chargé de cette mission et je n'ai toujours pas trouvé la victime. Je suppose qu'on ne me confiera plus de missions... mais je ne regrette rien. Cette profession ne procure pas assez de sensations fortes et d'aventures pour un loup de mer exalté comme moi.
+#QUEST	Lucas
+Trouver le fils disparu de l'amiral espagnol.
+#TEXT	1
+L'amiral Da Saldanha m'a chargé de trouver son fils disparu, Lucas, contre une récompense de 10 000 pièces d'or. Il m'a dit qu'il avait perdu la trace de Lucas sur Redmond.
+#TEXT	2
+L'aubergiste Charles Windem m'a dit que Lucas avait effectivement séjourné sur Redmond, mais qu'il avait récemment fait voile vers une autre destination. Windem m'a aussi raconté que Lucas entretenait une relation avec la fille du gouverneur Silehard, Arabella. Elle sait peut-être où est allé Lucas. Windem m'a dit qu'elle se promenait souvent dans la jungle, près de la ville.
+#TEXT	3
+Eh bien, je dois admettre que le garçon a du goût. Arabella m'a dit que Lucas était allé voir son père. Je dois retourner voir l'amiral : le gosse est peut-être déjà là.
+#TEXT	4
+Il s'avère qu'un bandit a enlevé Lucas alors qu'il était en route vers Redmond et qu'il le retient prisonnier contre une rançon. Dommage que ce garçon se soit mis dans un tel pétrin ; toute cette affaire commence à sentir mauvais. J'ai refusé d'aider l'amiral à libérer son fils ; je préfère me passer de quelques milliers de pièces, mais rester en vie.
+#TEXT	5
+Il s'avère qu'un bandit a enlevé Lucas alors qu'il était en route vers Redmond et qu'il le retient prisonnier contre une rançon. J'ai accepté d'aider l'amiral à retrouver son fils et je dois maintenant apporter 20 000 pièces d'or aux ravisseurs contre la liberté de Lucas. Ils m'attendront à la taverne de Falaise de Fleur.
+#TEXT	6
+Les chiens ! Ces ordures ont tué le gamin avant que j'aie pu faire quoi que ce soit ! Qu'est-ce qui m'a pris de vouloir faire du zèle ?! Si je m'étais contenté de leur donner la rançon, Lucas serait encore en vie... Que vais-je dire à l'amiral ?
+#TEXT	7
+J'ai donné la rançon aux ravisseurs et j'ai récupéré Lucas en vie et bien portant. Je dois me hâter de le ramener à son père.
+#TEXT	8
+Je n'ai pas donné la rançon aux ravisseurs. Au lieu de ça, je les ai éventrés comme des chiens. Maintenant, je n'ai plus qu'à ramener Lucas à son père.
+#TEXT	9
+Le père de Lucas m'a généreusement remercié d'avoir sauvé son fils : 10 000 pièces tintent dans mes poches.
+#TEXT	10
+Le père de Lucas m'a généreusement remercié d'avoir sauvé son fils : la moitié de la rançon que je n'ai pas donnée m'appartient désormais. Et ce n'est pas une petite somme : 20 000 pièces d'or ! Les bonnes actions sont parfois très rentables.
+#TEXT	11
+J'ai informé le gouverneur de la mort de son fils et je lui ai rendu la rançon. Il était tellement abattu par le deuil que je n'ai pas pu supporter de rester là, à le regarder.
+#TEXT	12
+Évidemment, l'amiral a été très abattu par la nouvelle de la mort de son fils, mais j'ai quand même reçu ma récompense, même si j'ai été obligé de rendre la rançon. Oh, quoi qu'on en dise,  dix mille pièces d'or, ce n'est pas rien !
+#TEXT	13
+Le pauvre vieil homme a été accablé par la triste nouvelle de la mort de son fils. Tellement accablé, en fait, qu'il ne m'a pas posé de questions quand je lui ai menti en lui disant avoir donné la rançon aux ravisseurs. Cette affaire a été très lucrative, presque sans effort. Je n'ai eu qu'à trancher une ou deux gorges. Si seulement je pouvais toujours être aussi chanceux !
+#TEXT	14
+Je n'ai pas pu remettre la rançon en temps voulu et les ravisseurs ont tué Lucas. Je crois qu'il vaut mieux que j'évite l'île espagnole pendant quelque temps. Ils ne poseront pas de questions... Ils se contenteront de me pendre.
+#QUEST larrouse
+Le pirate français dans la taverne.
+#TEXT	1
+Dans la taverne d'Isla Muelle, j'ai rencontré un corsaire qui a refusé de me parler. Je pourrai peut-être lui parler plus tard.
+#TEXT	2
+Il m'a fait une proposition que je ne peux décemment pas refuser : deux livres d'or. Mais Clair ne m'a pas donné tous les détails.
+#TEXT	3
+Nous sommes dans la mine, mais le convoi est déjà parti. Quelle déception ! Nous allons essayer de l'intercepter entre Greenford et Oxbay.
+#TEXT	4
+Nous sommes dans la mine, mais le convoi est déjà parti. Quelle déception ! Cette aventure ne m'intéresse plus.
+#TEXT	5
+Chien de traître ! Ce gredin de Français m'a attaqué quand il s'est rendu compte que je n'avais plus l'intention de rattraper le convoi avec lui.
+#TEXT	6
+En tuant Larousse, j'ai résolu tous mes problèmes : j'ai mis la main sur son navire. D'un autre côté, il a fallu que je tue son ancien équipage. Mais c'est tant pis pour eux, pas pour moi.
+#TEXT	7
+Ce ne serait peut-être pas une mauvaise idée de poursuivre ce convoi. On a une chance de réussir.
+#TEXT	8
+On a réussi ! Nous avons trouvé le convoi. Il ne nous reste plus qu'à prendre l'or...
+#TEXT	9
+Quelle malchance ! Pendant que nous nous préparions au combat, le convoi est passé trop près des portes de la ville. Nous devons maintenant nous battre contre la garnison et nous n'avons aucune chance de mettre notre plan en œuvre. Quel dommage !
+#TEXT	10
+Nous avons l'or ! Tout ce qu'il nous reste à faire est de le charger à bord de nos navires. Le plan le plus simple est d'avancer un navire dans la baie pendant que les autres se tiennent prêts à charger l'or.
+#TEXT	11
+Quand nous avons atteint la baie, nous avons rencontré une forte opposition : des soldats anglais. Le combat a été difficile, nous avons perdu la quasi-totalité de nos hommes, mais nous avons remporté la bataille et nous sommes libres de partir les cales pleines d'or.
+#TEXT	12
+Larousse et moi ne sommes pas parvenus à partager cet or, alors je l'ai tué.
+#TEXT	13
+Notre petite aventure est terminée. Nous avons partagé notre butin et Clair m'a proposé de faire route avec moi désormais. On ne peut pas dire que je l'apprécie beaucoup, alors j'ai refusé son offre. Si je change d'avis, je le trouverai à la taverne d'Isla Muelle.
+#TEXT	14
+Notre petite aventure est terminée. Nous avons partagé notre butin, puis, quand Clair m'a proposé de faire désormais route avec moi, j'ai accepté son offre.
+#QUEST mendes
+Escorter le navire de Vigila Mendes.
+#TEXT	1
+Vigila Mendes m'a embauché pour protéger son navire jusqu'à Falaise de Fleur et, au retour, vers Isla Muelle.
+#TEXT	2
+Nous sommes arrivés dans la colonie française et Vigila a vendu sa cargaison.
+#TEXT	3
+De retour à Isla Muelle, Vigila m'a donné ma paie. Il m'a proposé de travailler sur son navire et de remplacer son ancien navigateur, Zaid Murro, qui a pris sa retraite.
+#TEXT	4
+Mauvaise nouvelle ! Vigila Mendes a été tué. Quelle triste journée !
+#QUEST	murro
+Problèmes de Zaid Murro.
+#TEXT	1
+L'ancien navigateur du 'Juno', le navire de Vigila Mendes, s'est établi en tant que fermier. Il m'a raconté que des gens installés dans la jungle lui volaient ses biens. Je peux peut-être aider Zaid.
+#TEXT	2
+Dans la jungle, hors de la ville, j'ai rencontré les bandits dont m'avait parlé Zaid. Ils ont essayé de me tuer.
+#TEXT	3
+Ces bandits n'étaient pas seuls. En m'enfonçant plus profondément dans la jungle, j'ai rencontré les autres membres de cette bande de hors-la-loi !
+#TEXT	4
+Zaid ne devrait plus avoir de problèmes avec ces bandits.
+#QUEST	daughter
+Sauver la fille de Toff.
+#TEXT	1
+Toff Oremans m'a dit que sa fille avait été enlevée par des Espagnols au service des Pays-Bas. Je pense que je devrais régler ce problème et aider cette fille à rentrer chez elle.
+#TEXT	2
+Le gouverneur m'a ordonné d'enquêter sur cette affaire. Si mon enquête porte ses fruits, il me donnera de l'argent.
+#TEXT	3
+Cet Espagnol a été très grossier avec moi, alors je les ai tués, son officier et lui. La fille est sauvée.
+#TEXT	4
+Cet Espagnol a été très grossier avec moi. Mais quand ses hommes se sont rendu compte que j'étais là sur ordre du gouverneur, ils ont tué leur capitaine et sont partis.
+#TEXT	5
+Le gouverneur m'a accordé une récompense... rien de conséquent, bien sûr.
+#TEXT	6
+J'ai le sabre de Nicolas Sharp ! Toff Oremans, le père de la fille que j'ai sauvée, me l'a donné, et quelque chose me dit que cette arme a vraiment appartenu au pirate légendaire.
+#QUEST	gambled_girl
+Une fille gagnée aux cartes.
+#TEXT	1
+Dans une taverne, j'ai rencontré un homme qui m'a proposé de jouer aux cartes. J'ai été stupéfait de découvrir qu'il avait l'intention de miser une fille.
+#TEXT	2
+J'ai gagné, ce qui veut dire que la fille est à moi.
+#TEXT	3
+Comme l'offre de ce type était injurieuse, je l'ai tué.
+#TEXT	4
+La fille est vraiment magnifique. Elle se prétend noble. À en juger par son nom, elle est Française. Son histoire paraît tenir debout, mais ça ne m'empêchera pas de la vendre si l'envie m'en prend.
+#TEXT	5
+J'ai rencontré un crétin qui m'a offert de l'argent en échange de la fille, mais son offre était trop faible. Le gouverneur français m'en offrira peut-être plus.
+#TEXT	6
+La fille m'a dit qu'elle descendait d'une famille de la grande noblesse française et qu'elle était venue ici pour retrouver son amant, un marin de Falaise de Fleur. Tout se passait très bien jusqu'à ce que son chemin croise celui d'une bande de pirates.
+#TEXT	7
+J'ai trouvé juste d'aider Virginie à trouver son bien-aimé.
+#TEXT	8
+C'est une histoire romantique, mais j'estime que maintenant qu'elle est libre, Virginie peut prendre son destin en main sans mon aide.
+#TEXT	9
+Quelle ironie ! Nous sommes allés à Falaise de Fleur et nous avons trouvé l'homme que cherchait Virginie, mais c'est une véritable ordure. Il lui a manqué de respect et l'a plantée là, le cœur brisé.
+#TEXT	10
+Virginie a dit qu'elle allait repartir chez elle, mais tient à me remercier de mon aide en me présentant au gouverneur français.
+#TEXT	11
+Je ne crois pas que ce soit une très bonne idée car les Français sont nos ennemis, mais Virginie m'a assuré qu'elle me protègerait.
+#TEXT	12
+La parole d'une aristocrate est une belle garantie, mais je ne fais pas confiance aux autorités françaises ; j'ai donc refusé l'aide de Virginie.
+#TEXT	13
+Elle avait raison. Certes, le gouverneur n'était pas particulièrement heureux de me voir, mais il m'a quand même attribué une récompense et est allé jusqu'à pardonner les crimes que j'ai commis contre les autorités françaises.
+#TEXT	14
+Les Français m'ont généreusement récompensé pour leur avoir ramené Virginie.
+#TEXT	15
+L'affaire était très risquée, mais tout est rentré dans l'ordre. Le gouverneur m'a donné 7 000 pièces d'or pour la fille.
+#TEXT	16
+Dans la taverne, un homme étrange est venu vers moi et m'a acheté la fille.
+#QUEST animists
+Événements étranges dans l'archipel.
+#TEXT	1
+À Douwesen, j'ai découvert que plusieurs enfants avaient été enlevés la nuit précédente. Les mères de ces enfants ont essayé de rencontrer le gouverneur pour lui demander de l'aide, mais il n'a voulu recevoir personne. Peut-être pourrai-je lui parler.
+#TEXT	2
+Le gouverneur de Douwesen m'a demandé d'enquêter et de retrouver ceux qui ont enlevé les enfants. J'ai refusé. Je ne veux pas être mêlé à cette étrange affaire.
+#TEXT	3
+Le gouverneur de Douwesen m'a demandé d'enquêter sur cette affaire d'enfants disparus et m'a promis une belle récompense si je réussissais. Tout ce que je sais, c'est que le capitaine d'un navire marchand a vu, dans la matinée, une mystérieuse frégate s'éloigner de l'île. Le capitaine est en ce moment à la taverne et je compte commencer mon enquête en allant lui parler.
+#TEXT	4
+J'ai parlé au capitaine du navire marchand et j'ai découvert qu'une frégate noire avait quitté la colonie et mis le cap sur Greenford. Ce sont peut-être les pirates qui vivaient dans la jungle qui ont enlevé les enfants.
+#TEXT	5
+Les pirates de Douwesen m'ont appris qu'ils avaient eux-mêmes eu des problèmes avec cette frégate noire : elle a coulé l'un de leurs navires. À présent, je suis sûr que les enfants sont sur cette frégate noire. Les pirates ont entendu des pleurs d'enfants qui venaient de la frégate.
+#TEXT	6
+J'ai eu la chance de parler avec le navigateur du bateau attaqué par la frégate noire. Il m'a dit que le nom de la frégate était 'Mefisto' et qu'elle avait mis le cap sur Quebradas Costillas après avoir abandonné l'idée de pourchasser son navire.
+#TEXT	7
+Hélas, la chance m'a quitté. Tout ce que j'ai découvert en me rendant dans le repaire des pirates, c'est que la frégate noire était bien passée par là et que les membres de son équipage avaient même tué quelqu'un qui se trouvait sur le rivage.
+#TEXT	8
+Le père Bernard m'a chargé de remettre une lettre au padre Domingues. À première vue, cette mission avait l'air très simple. Mais un messager a déjà été tué en ville par des individus en soutane noire. Je ne serais pas surpris que les hommes de cette mystérieuse frégate noire soient mêlés à cette affaire.
+#TEXT	9
+J'ai rejoint le rivage d'Isla Muelle, comme me l'avait dit le père Bernard. J'ai été surpris d'y voir des hommes qui m'y attendaient.
+#TEXT	10
+Des individus étranges m'ont proposé 1 000 pièces d'or pour les laisser lire la lettre. Ils m'ont dit qu'ils me rendraient la lettre après l'avoir lue. Face à mon refus, ils ont sorti leurs armes... J'ai ensuite trouvé d'étranges médaillons sur leurs cadavres.
+#TEXT	11
+Des individus étranges m'ont proposé 1 000 pièces d'or pour les laisser lire la lettre. Ils m'ont dit qu'ils me rendraient la lettre après l'avoir lue. Ils m'ont rendu la lettre avec le cachet intact, mais j'ai l'impression que ce n'est pas le cachet d'origine.
+#TEXT	12
+Le padre Domingues pense que la lettre a été ouverte puis refermée avec un autre cachet. Je lui ai dit la vérité. Grâce à Dieu, tout s'est bien terminé.
+#TEXT	13
+Le padre Domingues pense que la lettre a été ouverte puis refermée avec un autre cachet. J'ai protesté de mon innocence. Il a parlé de la rédemption de Dieu, ou de quelque chose du genre. Ça n'a pas d'importance. De toute façon, je n'aime pas les curés.
+#TEXT	14
+Après avoir remis la lettre au padre Domingues, j'ai reçu une autre mission. Je dois retrouver un navire, le 'Montanez', près d'Oxbay et le conduire jusqu'à Isla Muelle.
+#TEXT	15
+Oh, diable ! Quand je suis arrivé à Oxbay, le 'Montanez' avait déjà été coulé par des navires inconnus. J'ai dû retourner voir le padre Domingues les mains vides.
+#TEXT	16
+Je suis revenu juste à temps ! Quand je suis arrivé à Oxbay, le 'Montanez' était près de sombrer sous l'attaque de trois navires ne portant aucun signe d'identification. Je me suis occupé d'eux.
+#TEXT	17
+Chose étrange, le 'Montanez' s'est brièvement arrêté à Oxbay. En parlant avec son capitaine, j'ai appris qu'il avait un passager à débarquer ici. Je crois qu'il est temps de mettre le cap sur Isla Muelle.
+#TEXT	18
+Comme je m'y attendais, le prêtre n'est pas très content de la perte de son navire. Mais il n'en a pas rejeté la responsabilité sur moi.
+#TEXT	19
+Le 'Montanez' mouille au large d'Isla Muelle. Le padre Domingues a l'air très content. On dirait que quelque chose d'une grande valeur se trouve à bord de son navire.
+#TEXT	20
+Ma prochaine mission consiste à remettre une lettre au père Bernard, à Redmond, et d'être particulièrement vigilant car personne ne doit lire cette lettre.
+#TEXT	21
+Ils m'attendaient près de la sortie de l'église. Ils ressemblaient exactement à ces individus étranges vus sur le rivage d'Isla Muelle. Ils ne s'attendaient pas vraiment à ce que je leur remette la lettre et ont sorti leurs armes.
+#TEXT	22
+La lettre a été remise à son destinataire et j'ai reçu une récompense bien méritée. Je sais maintenant qui essaie de m'arrêter. C'est le père Gareth. Qui l'aurait cru ? Il m'a attaqué dans l'église.
+#TEXT	23
+Ma prochaine mission est de trouver le repaire des animistes. L'Église me donnera une grosse récompense, mais plus important encore, ces animistes ont enlevé des enfants sur Douwesen et je les soupçonne d'être également responsables de la disparition du padre Domingues juste après mon départ d'Isla Muelle. Je crois que je vais commencer mon enquête sur Isla Muelle. J'y trouverai peut-être quelqu'un qui saura quelque chose sur la disparition du padre Domingues.
+#TEXT	24
+Je connais maintenant l'identité du passager du 'Montanez'. C'est un chevalier de Malte, Jaoquin de Masse, venu ici pour nous aider à vaincre un groupe d'animistes. Il a l'allure d'un guerrier d'expérience.
+#TEXT	25
+En parlant avec l'aubergiste, j'ai appris qu'un 'professeur' qui a tout l'air d'un animiste est arrivé ici. Ce 'professeur' a une grande influence sur les jeunes de la région et, en particulier, sur un certain Jordano, le fils du forgeron. Coïncidence : le père de Jordano est mort dans des circonstances très étranges. Je devrais avoir une petite conversation avec ce Jordano.
+#TEXT	26
+Je n'ai eu aucune difficulté à trouver Jordano. Je devrais même dire que c'est lui qui m'a trouvé. En tout cas, je sais que ce 'professeur' a quitté Isla Muelle pour Greenford, sur l'île d'Oxbay.
+#TEXT	27
+Je sais que l'homme que je recherche est à la prison de Greenford.
+#TEXT	28
+Le commandant de la prison de Greenford n'a pas voulu me laisser voir le prisonnier. Je n'ai d'autre choix que d'aller à Redmond pour demander au père Bernard de me donner une lettre m'autorisant à voir le prisonnier.
+#TEXT	29
+Retourner à Redmond réclamera trop de temps. J'ai essayé un autre plan. J'ai menacé le gringalet pour qu'il me laisse voir le prisonnier. Mais je ne serais pas surpris que cet incident dégrade mes relations avec l'Angleterre.
+#TEXT	30
+J'ai trouvé un autre moyen de voir le prisonnier : il m'a suffi de payer 5 000 pièces d'or pour faire disparaître tous les obstacles.
+#TEXT	31
+À force d'insister, j'ai convaincu le capitaine de me laisser entrer.
+#TEXT	32
+Le seul moyen de trouver le repaire des animistes était de libérer le prisonnier et c'est ce que j'ai fait. Nous devons maintenant nous rendre à Isla Muelle et résoudre le mystère. J'espère que ça ne prendra pas trop de temps...
+#TEXT	33
+Le père Bernard a accepté de me donner une lettre ordonnant la libération du prisonnier de Greenford, mais ma requête a eu l'air de l'amuser.
+#TEXT	34
+J'ai décidé d'interroger le prisonnier dans la cellule, mais il est mort. Avant de rendre l'âme, il a parlé de la colonie espagnole. Le repaire des animistes se trouve peut-être par là ? Peut-être sur la petite île, au Nord ?
+#TEXT	35
+Le 'professeur' m'a pris pour un animiste et m'a dit où se trouvait le repaire. Sa mort a été rapide. Il ne me reste plus qu'à mettre le cap sur la petite île proche d'Isla Muelle et à tuer tous les animistes.
+#TEXT	36
+Tous les animistes sont morts, y compris leur maître. Ça n'a pas été un adversaire facile. Je dois maintenant ramener les enfants à Douwesen et annoncer la réussite de la mission au père Bernard.
+#TEXT	37
+Avec le démantèlement du groupee d'animistes, mes problèmes sont résolus. Le 'Mefisto', la frégate aux voiles noires, m'attendait dans la baie.
+#QUEST	artois
+Artois Voysey.
+#TEXT	1
+À Quebradas Costillas, j'ai vu deux hommes se battre dans la rue. Quand j'ai demandé à l'un d'eux ce qui se passait, il m'a attaqué. Je crois qu'il était fou.
+#TEXT	2
+L'homme que j'ai sauvé s'appelle Artois Voysey, et à en juger par ce qu'il dit, c'est un bon navigateur. Je l'ai incorporé à mon équipage.
+#TEXT	3
+L'homme que j'ai sauvé s'appelle Artois Voysey, et à en juger par ce qu'il dit, c'est un bon navigateur. Quand j'ai refusé son offre d'intégrer mon équipage, il m'a dit qu'il m'attendrait à Quebras Costillas au cas où je changerais d'avis.
+#TEXT	4
+Il m'a semblé avoir vu Artois dans le port de Conceicao. Il avait l'air de se diriger vers la ville de Conceicao. Intéressant. Je me demande ce qu'il mijote.
+#TEXT	5
+J'ai appris qu'Artois était ici, à la taverne. Il parlait avec un Espagnol. Puis trois autres personnes sont entrées dans la taverne. Elles ont défié Artois et l'homme blessé avec qui il discutait. L'homme blessé est à l'étage en ce moment. Il sait peut-être où est parti Artois.
+#TEXT	6
+Oh, diable ! La première chose que j'ai vue quand je suis monté à l'étage, c'est un couteau planté dans la poitrine de l'homme. Je suis arrivé trop tard... Il était déjà mort.
+#TEXT	7
+Compte tenu de ma chance habituelle, il n'est pas étonnant que j'aie vu arriver des soldats qui m'ont accusé du meurtre du pauvre homme. J'ai dû les tuer car je dois partir à la recherche d'Artois sans tarder. J'aurai sûrement du mal à quitter la ville. Je ferais peut-être mieux de me diriger vers le port. Je ne suis pas sûr qu'Artois soit dans les parages, mais je doute qu'il fasse de vieux os.
+#TEXT	8
+J'ai décidé de suivre les soldats. J'espère que je serai vite innocenté.
+#TEXT	9
+Cette affaire est réglée, Dieu merci. Ils ont trouvé des témoins qui ont vu le meurtrier. On m'a libéré et je peux maintenant quitter l'île ou essayer de retrouver Artois. Je le soupçonne d'être quelque part dans les parages.
+#TEXT	10
+Dans la jungle aux abords de la ville, j'ai vu des individus étranges qui se tenaient autour du cadavre de Voysey.
+#TEXT	11
+Après avoir tué tous les bandits, j'ai découvert qu'Artois n'était pas mort. Je lui ai demandé pourquoi il avait été enlevé. C'est là qu'il m'a parlé d'un navire dont les cales regorgeaient d'argent ! Ce navire a coulé près de Douwesen. Il n'est pas accessible par la mer, mais il y a un chemin à travers la cascade. Cette affaire promet d'être fructueuse.
+#TEXT	12
+Artois ne m'a pas révélé ce que cherchaient les bandits. Je crois pouvoir le deviner : ils cherchaient un secret.
+#TEXT	13
+Mes relations tendues avec les autorités portugaises n'ont rien arrangé, mais Artois a trouvé un moyen de régler le problème grâce à ses contacts : les Portugais semblent avoir miraculeusement oublié mes frasques passées.
+#TEXT	14
+Bonté divine ! Dans le port suivant, quelqu'un a tiré sur Artois. L'agresseur a réussi à s'échapper. Il ne me reste plus qu'à rendre visite à mon ami blessé.
+#TEXT	15
+Débourser 2 000 pièces d'or pour soigner Artois et attendre deux semaines qu'il se rétablisse ? Hors de question ! Ce ne sont pas mes affaires. Qu'il se débrouille tout seul !
+#TEXT	16
+Il faut que je débourse 2 000 pièces d'or pour soigner Artois, puis que j'attende deux semaines qu'il se rétablisse. J'aurai au moins sauvé mon camarade.
+#TEXT	17
+Une fois rétabli, Artois m'a raconté son histoire. Il sait où trouver une épave dont les cales regorgent d'argent. Le navire a coulé près de Douwesen. On ne peut pas y accéder par la mer, mais un chemin traversant la cascade mène au rivage où il s'est échoué. En échange de son histoire, Artois m'a demandé de faire don d'un peu d'or à l'Église. Eh bien, je pense que même après ce don, il devrait me rester une bonne part du trésor.
+#TEXT	18
+Artois disait vrai. Je pense pouvoir empocher 50 000 pièces d'or pour cet argent.
+#TEXT	19
+J'ai tenu parole et j'ai fait don de 4 000 pièces d'or à l'église de Redmond.
+#TEXT	20
+Je ne suis pas assez idiot pour jeter l'or par les fenêtres en le donnant à l'Église. Artois n'est pas content, mais quelle importance ?
+#QUEST trade_fra
+Livrer la cargaison à Falaise de Fleur.
+#TEXT	1
+J'ai un mois pour livrer une cargaison à Falaise de Fleur, à un commerçant dénommé Antoine Lebretton.
+#QUEST trade_red
+Livrer la cargaison à Redmond.
+#TEXT	1
+J'ai un mois pour livrer une cargaison à Redmond, à un commerçant dénommé Thomas O'Reily.
+#QUEST trade_ox
+Livrer la cargaison à Oxbay.
+#TEXT	1
+J'ai un mois pour livrer une cargaison à Oxbay, à un commerçant dénommé Alan Milds.
+#QUEST trade_green
+Livrer la cargaison à Greenford, sur Oxbay.
+#TEXT	1
+J'ai un mois pour livrer une cargaison sur l'île d'Oxbay, dans la ville de Greenford, à un commerçant dénommé John Filbert.
+#QUEST trade_spa
+Livrer la cargaison à Isla Muelle.
+#TEXT	1
+J'ai un mois pour livrer une cargaison à Isla Muelle, à un commerçant dénommé Emiliano Rionda.
+#QUEST trade_hol
+Livrer la cargaison à Douwesen.
+#TEXT	1
+J'ai un mois pour livrer une cargaison à Douwesen, à un commerçant dénommé Gheerlof Darlang.
+#QUEST trade_por
+Livrer la cargaison à Conceicao.
+#TEXT	1
+J'ai un mois pour livrer une cargaison à Conceicao, à un commerçant dénommé Martinho Guterres.
+#QUEST convoy_fra
+Escorter un navire marchand jusqu'à Falaise de Fleur.
+#TEXT	1
+Je dois escorter un navire marchand jusqu'à Falaise de Fleur.
+#QUEST convoy_red
+Escorter un navire marchand jusqu'à Redmond.
+#TEXT	1
+Je dois escorter un navire marchand jusqu'à Redmond.
+#QUEST convoy_ox
+Escorter un navire marchand jusqu'à Oxbay.
+#TEXT	1
+Je dois escorter un navire marchand jusqu'à Oxbay.
+#QUEST convoy_spa
+Escorter un navire marchand jusqu'à Isla Muelle.
+#TEXT	1
+Je dois escorter un navire marchand jusqu'à Isla Muelle.
+#QUEST convoy_hol
+Escorter un navire marchand jusqu'à Douwesen.
+#TEXT	1
+Je dois escorter un navire marchand jusqu'à Douwesen.
+#QUEST convoy_por
+Escorter unnavire marchand jusqu'à Conceicao.
+#TEXT	1
+Je dois escorter un navire marchand jusqu'à Conceicao.
+#QUEST	convoy_smg
+Je dois escorter un navire marchand jusqu'à Conceicao.
+#TEXT	1
+Je dois escorter un navire marchand jusqu'à Leviathan Rock, le rocher du Léviathan, une baie retirée de Conceicao.
+#QUEST nigel
+Nigel Blythe.
+#TEXT	1
+À Quebradas Costillas, j'ai vu deux hommes se battre dans la rue. J'ai pour principe de ne jamais me mêler de ce genre de chose, mais il s'est passé un événement étrange. Une fois que l'un d'eux a été tué, l'autre m'a raconté une histoire curieuse sur la manière dont il avait perdu son navire.
+#TEXT	2
+Je crois qu'une fine lame comme lui compléterait très bien mon équipage. Je l'ai nommé officier.
+#TEXT	3
+Cet homme m'a offert ses services comme officier, mais j'ai des doutes sur lui. Je lui ai dit que mon équipage était au complet.
+#TEXT	4
+Quand je suis arrivé à Oxbay, j'ai découvert que Nigel avait quitté mon navire. Il est peut-être en ville.
+#TEXT	5
+Les tours que m'a joués ce type m'ont forcé à m'en séparer.
+#TEXT	6
+L'homme n'a pas perdu de temps. Il a décroché un contrat pour livrer une cargaison de chocolat. Malheureusement, le contrat ne me convenait pas et je l'ai refusé.
+#TEXT	7
+L'homme n'a pas perdu de temps. Il a décroché un contrat pour livrer une cargaison de chocolat. Je dois livrer ce chocolat à Isla Muelle, au magasin d'Emiliano Rionda.
+#TEXT	8
+La cargaison de chocolat m'était complètement sortie de la tête. Même si je vais jusque chez Emiliano, j'ai peur que la livraison n'arrive pas en temps voulu.
+#TEXT	9
+J'ai livré la cargaison d'Emiliano Rionda. Ce contrat n'a pas été très rentable.
+#TEXT	10
+Quand je suis arrivé à Conceicao, j'ai découvert que Nigel était déjà parti. Je le soupçonne de manigancer encore quelque chose.
+#TEXT	11
+Je le savais ! Ce scélérat a accepté 10 000 pièces d'or pour tuer Mean Harry avant un mois. C'est une proposition très risquée... mais je crois pouvoir le faire.
+#TEXT	12
+Je le savais ! Ce scélérat a accepté 10 000 pièces d'or pour tuer Mean Harry avant un mois. Mais quand j'ai découvert que celui-ci avait au moins une corvette sinon une frégate, j'ai refusé le contrat.
+#TEXT	13
+Un mois s'est écoulé et je n'ai toujours pas trouvé Harry. Mais ça ne va pas m'empêcher de dormir. Et je n'ai aucune intention de rendre l'or.
+#TEXT	14
+Je n'ai pas eu de difficultés à m'occuper de Mean Harry. Il faut maintenant que j'aille chercher une récompense. J'ai entendu dire que le gouverneur de l'île me la donnerait.
+#TEXT	15
+Quel scandale ! Pourquoi devrais-je payer des impôts ? Mille sabords ! Le problème est que le gouverneur a un argument de taille : sa flotte. Mais des impôts... 4 000 pièces d'or ? Argh !
+#TEXT	16
+J'avais à peine nommé Nigel capitaine de l'un de mes navires qu'il a attaqué un bateau près de Douwesen ! Et un navire de contrebandiers par-dessus le marché ! Bon sang !
+#TEXT	17
+Un navire de contrebandiers a coulé Nigel. Pas étonnant. Mais peu importe Nigel... C'est la perte de mon navire qui m'ennuie.
+#TEXT	18
+J'ai aidé Nigel à vaincre un contrebandier. Je devrais demander à Nigel ce qui se passe...
+#TEXT	19
+Les amis des contrebandiers nous attendaient. Je n'ai pas écouté un mot de ce qu'ils ont raconté... Je me suis contenté de les tuer.
+#TEXT	20
+Les amis des contrebandiers nous attendaient. Ils ont tué Nigel et je me suis enfui pendant qu'ils étaient occupés à donner des coups de pied à son cadavre. On ne peut pas les en blâmer : c'était une sacrée ordure.
+#TEXT	21
+Ce chien de Nigel ! Il a volé mon navire ! Diable ! Tard dans la nuit, il a mis les voiles. Il est peut-être sur Isla Muelle... l'île, près d'ici.
+#TEXT	22
+Le scélérat est sur Isla Muelle ! On l'a vu à la taverne !
+#TEXT	23
+Le tavernier m'a dit que Nigel était passé par là et qu'il avait parlé avec un dénommé Caminero qui vit dans une maison adossée à la taverne.
+#TEXT	24
+Caminero a dit que Nigel allait rejoindre son ancien équipage à Quebradas Costillas. Intéressant... Qu'est-ce qu'il manigance ?
+#TEXT	25
+J'ai rencontré un marin du navire de Nigel à la taverne de Douwesen. Il m'a dit que le gredin avait quitté l'île, mais il ne sait pas où il est parti. Peut-être que Clauss, le maître d'équipage de Nigel, le sait. Il travaille au chantier naval de Douwesen pour éponger ses dettes.
+#TEXT	26
+Le meilleur moyen de résoudre ce problème passe par un peu d'or. Je viens de payer Clauss, le maître d'équipage de Nigel, pour une petite conversation confidentielle.
+#TEXT	27
+Clauss m'a dit que Nigel avait quitté l'île pour rejoindre son ancien équipage à Douwesen. Le passage jusqu'à son navire coulé est sous une cascade, sur Douwesen.
+#TEXT	28
+Je suis revenu juste à temps. Nigel était stupéfait de me voir. Je l'ai tué et j'ai pris tout l'argent que contenait le navire.
+#QUEST chest
+Livrer un coffre fermé.
+#TEXT	1
+Oweyn MacDorey, le propriétaire du chantier naval d'Oxbay, m'a demandé de livrer un coffre fermé à Redmond. Je n'ai pas hésité à rendre ce service à l'homme qui venait d'empêcher notre arrestation, à Tobias et à moi.
+#TEXT	2
+Quand je suis entré dans la taverne, des inconnus se sont approchés de moi et m'ont réclamé le coffre d'Oweyn.
+#TEXT	3
+J'ai donné le coffre aux inconnus. Ils m'ont dit qu'Oweyn avait dû vouloir me piéger, si c'était lui qui m'avait demandé de livrer ce coffre à Redmond. Je vais demander à Oweyn ce qu'ils ont voulu dire par là.
+#TEXT	4
+J'ai essayé de me débarrasser des inconnus, mais ils ont sorti leurs armes. Mais par tous les diables, je n'ai même pas été capable de les égratigner !
+#TEXT	5
+Oweyn n'est pas aussi idiot qu'il en a l'air. Il connaît déjà cette légende sur les squelettes de pirates et les pièces maudites. Il voulait que je porte ces pièces maudites à son ennemi, à Redmond. Je dois reconnaître que c'était une plaisanterie plutôt drôle... mais les pirates ont tout gâché. Apparemment, le type au courant de cette affaire vit sur Falaise de Fleur.
+#TEXT	6
+Henry Peat m'en a dit long sur le 'Black Pearl', le navire maudit. Il ne me reste plus qu'à découvrir d'autres détails sur ce navire... et le moyen de le couler.
+#QUEST	Tutorial_SpyGlass
+Acheter une nouvelle longue-vue.
+#TEXT	1
+Ma longue-vue a connu des jours meilleurs, elle aussi. Je pourrais peut-être la remplacer.
+#TEXT	2
+C'est fait !
+#QUEST	Tutorial_Store
+Vendre du chocolat et du cuir au commerçant du coin.
+#TEXT	1
+Je devrais vendre les marchandises apportées à Oxbay à un commerçant. Cela me permettrait de réparer et d'engager des membres d'équipage.
+#TEXT	2
+C'est fait !
+#QUEST	Tutorial_Shipyard
+Réparer les dégâts causés par la tempête
+#TEXT	1
+La coque et le gréement ont été endommagés. Je dois faire les réparations au chantier naval avant de quitter l'île.
+#TEXT	2
+C'est fait !
+#QUEST	Tutorial_Tavern
+Recruter des membres d'équipage à la taverne pour combler les pertes
+#TEXT	1
+Quelques hommes ont malheureusement été perdus en mer. Il faut que je trouve un endroit où recruter des hommes d'équipage avant de prendre la mer.
+#TEXT	2
+C'est fait !
+#QUEST	Tutorial_AppearedOnOxbay
+Arrivée à Oxbay
+#TEXT	1
+Après avoir survécu à une tempête effroyable, je suis enfin arrivé à Oxbay. Heureusement, la cargaison est intacte.
+
+
+
+
