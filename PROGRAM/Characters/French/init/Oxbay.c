@@ -4,7 +4,7 @@ int CreateOxbayCharacters(int n)
 	ref ch;
 //Location: Oxbay Pier (an entrance to the town from the pier)
 
-	makeref(ch,Characters[n]);		//Áàğòîëîìüş Ïàğäíåğ - Ìåñòíûé êàïèòàí êàáîòàæíîãî ïëàâàíèÿ
+	makeref(ch,Characters[n]);		//˜˜˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜ - ˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜
 	ch.name 	= "Bartholomew";
 	ch.lastname 	= "Pardner";
 	ch.id		= "Bartholomew Pardner";
@@ -36,7 +36,7 @@ int CreateOxbayCharacters(int n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			//Îëèâåğ Áëàêñòåğ - ìåñòíûé ğûáàê è ïåğåâîç÷èê
+	makeref(ch,Characters[n]);			//˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜ - ˜˜˜˜˜˜˜ ˜˜˜˜˜ ˜ ˜˜˜˜˜˜˜˜˜˜
 	ch.name 	= "Olyver";
 	ch.lastname 	= "Blaxter";
 	ch.id		= "Olyver Blaxter";
@@ -67,7 +67,7 @@ int CreateOxbayCharacters(int n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			//Soldier íà âõîäå â ãîğîä
+	makeref(ch,Characters[n]);			//Soldier ˜˜ ˜˜˜˜˜ ˜ ˜˜˜˜˜
 	ch.name 	= "Soldat";
 	ch.lastname 	= " ";
 	ch.id		= "Ox_soldier_1";
@@ -103,7 +103,7 @@ int CreateOxbayCharacters(int n)
 	ch.greeting = "Gr_Oxbay Soldier";
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			//Soldier íà âõîäå â ãîğîä
+	makeref(ch,Characters[n]);			//Soldier ˜˜ ˜˜˜˜˜ ˜ ˜˜˜˜˜
 	ch.name 	= "Soldat";
 	ch.lastname 	= " ";
 	ch.id		= "Ox_soldier_2";
@@ -211,7 +211,7 @@ int CreateOxbayCharacters(int n)
 	ch.greeting = "Gr_Patrol";
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			//Áåàòğèñ İïïëãåéò
+	makeref(ch,Characters[n]);			//˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜
 	ch.name 	= "Beatrice";
 	ch.lastname 	= "Applegate";
 	ch.id		= "Beatrice Applegate";
@@ -242,7 +242,7 @@ int CreateOxbayCharacters(int n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			//Áğåííàí İïïëãåéò
+	makeref(ch,Characters[n]);			//˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜
 	ch.name 	= "Brennan";
 	ch.lastname 	= "Applegate";
 	ch.id		= "Brennan Applegate";
@@ -491,7 +491,7 @@ int CreateOxbayCharacters(int n)
 	ch.greeting = "Gr_Patrol";
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			//Ìîçåñ Áëèíìàí
+	makeref(ch,Characters[n]);			//˜˜˜˜˜ ˜˜˜˜˜˜˜
 	ch.name 	= "Moses";
 	ch.lastname 	= "Blinman";
 	ch.id		= "Moses Blinman";
@@ -522,7 +522,7 @@ int CreateOxbayCharacters(int n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			// İä Ïîñòëü - òîğãîâåö â ïàëàòêå
+	makeref(ch,Characters[n]);			// ˜˜ ˜˜˜˜˜˜ - ˜˜˜˜˜˜˜˜ ˜ ˜˜˜˜˜˜˜
 	ch.name 	= "Ed";
 	ch.lastname 	= "Postle";
 	ch.id		= "Ed Postle";
@@ -553,7 +553,7 @@ int CreateOxbayCharacters(int n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			//Ëàâèíèÿ Îóëò
+	makeref(ch,Characters[n]);			//˜˜˜˜˜˜˜ ˜˜˜˜
 	ch.name 	= "Lavinia";
 	ch.lastname 	= "Ault";
 	ch.id		= "Lavinia Ault";
@@ -584,7 +584,7 @@ int CreateOxbayCharacters(int n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			//Ôëıíí Âèêåğñ
+	makeref(ch,Characters[n]);			//˜˜˜˜˜ ˜˜˜˜˜˜
 	ch.name 	= "Flann";
 	ch.lastname 	= "Vickers";
 	ch.id		= "Flann Vickers";
@@ -616,7 +616,7 @@ int CreateOxbayCharacters(int n)
 
 	n = n + 1;
 
-	makeref(ch,Characters[n]);		//Ïèòåğ Äıøâóä
+	makeref(ch,Characters[n]);		//˜˜˜˜˜ ˜˜˜˜˜˜
 	ch.name 	= "Peter";
 	ch.lastname 	= "Dashwood";
 	ch.id		= "Peter Dashwood";
@@ -648,7 +648,7 @@ int CreateOxbayCharacters(int n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			//Ôëîğà Äåáíè
+	makeref(ch,Characters[n]);			//˜˜˜˜˜ ˜˜˜˜˜
 	ch.name 	= "Flora";
 	ch.lastname 	= "Debney";
 	ch.id		= "Flora Debney";
@@ -717,7 +717,7 @@ int CreateOxbayCharacters(int n)
 
 //Location: Oxbay Tavern
 
-	makeref(ch,Characters[n]);			// İâåğàğä Ãîğäîí
+	makeref(ch,Characters[n]);			// ˜˜˜˜˜˜˜ ˜˜˜˜˜˜
 	ch.name 	= "Everard";
 	ch.lastname 	= "Gordon";
 	ch.id		= "Everard Gordon";
@@ -782,7 +782,7 @@ int CreateOxbayCharacters(int n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			// Ğàëüô Ìàòåğ
+	makeref(ch,Characters[n]);			// ˜˜˜˜˜ ˜˜˜˜˜
 	ch.name 	= "Raulf";
 	ch.lastname 	= "Mather";
 	ch.id		= "Raulf Mather";
@@ -878,7 +878,7 @@ int CreateOxbayCharacters(int n)
 
 //Location: Oxbay Store (Where the church stands)
 
-	makeref(ch,Characters[n]);			//Àëàí Ìàéëäñ
+	makeref(ch,Characters[n]);			//˜˜˜˜ ˜˜˜˜˜˜
 	ch.name 	= "Alan";
 	ch.lastname 	= "Milds";
 	ch.id		= "Alan Milds";
@@ -912,7 +912,7 @@ int CreateOxbayCharacters(int n)
 
 //Location: Oxbay Shipyard (Where the church stands)
 
-	makeref(ch,Characters[n]);			//Îóıí Ìàê Äîğè
+	makeref(ch,Characters[n]);			//˜˜˜˜ ˜˜˜ ˜˜˜˜
 	ch.name 	= "Oweyn";
 	ch.lastname 	= "McDorey";
 	ch.id		= "Oweyn McDorey";
@@ -2171,7 +2171,7 @@ int CreateOxbayCharacters(int n)
 
 	//Greenford prison
 
-	makeref(ch,Characters[n]);		//Êîììåíäàíò òşğüìû íà Ãğèíôîğäå
+	makeref(ch,Characters[n]);		//˜˜˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜ ˜˜ ˜˜˜˜˜˜˜˜˜
 	ch.name 	= "Ronald";
 	ch.lastname 	= "Blacklock";
 	ch.id		= "Greenford Prison Commendant";
@@ -2740,7 +2740,7 @@ int CreateOxbayCharacters(int n)
 	n = n + 1;
 
 	makeref(ch,Characters[n]);			//Father Jerald
-	ch.name 	= "Père";
+	ch.name 	= "P˜re";
 	ch.lastname 	= "Jerald";
 	ch.id		= "Father Jerald";
 	ch.model	= "monk";
