@@ -13712,6 +13712,31 @@ void QuestComplete(string sQuestName)
 				case 19: pchar.quest_S1_quest_19_completed = true; break;
 				case 20: pchar.quest_S1_quest_20_completed = true; break;
 			}
+			//DEBUG TEST
+			// pour déboguer la fin rapidement
+			// toutes les quetes sont faites
+			/*
+			pchar.quest_S1_quest_1_completed = true;
+			pchar.quest_S1_quest_2_completed = true;
+			pchar.quest_S1_quest_3_completed = true;
+			pchar.quest_S1_quest_4_completed = true;
+			pchar.quest_S1_quest_5_completed = true;
+			pchar.quest_S1_quest_6_completed = true;
+			pchar.quest_S1_quest_7_completed = true;
+			pchar.quest_S1_quest_8_completed = true;
+			pchar.quest_S1_quest_9_completed = true;
+			pchar.quest_S1_quest_10_completed = true;
+			pchar.quest_S1_quest_11_completed = true;
+			pchar.quest_S1_quest_12_completed = true;
+			pchar.quest_S1_quest_13_completed = true;
+			pchar.quest_S1_quest_14_completed = true;
+			pchar.quest_S1_quest_15_completed = true;
+			pchar.quest_S1_quest_16_completed = true;
+			pchar.quest_S1_quest_17_completed = true;
+			pchar.quest_S1_quest_18_completed = true;
+			pchar.quest_S1_quest_19_completed = true;
+			pchar.quest_S1_quest_20_completed = true;
+			//fin du DEBUG TEST*/
 			n = 0;
 			bool questCompleted;
 			int numQuest;
@@ -13735,8 +13760,8 @@ void QuestComplete(string sQuestName)
 			if (pchar.quest_S1_quest_18_completed == true) n++;
 			if (pchar.quest_S1_quest_19_completed == true) n++;
 			if (pchar.quest_S1_quest_20_completed == true) n++;
-			Log_SetStringToLog("PJ n:"+n);
-			Log_SetStringToLog("PJ quest_S1_nbQuests:"+pchar.quest_S1_nbQuests);
+			// Log_SetStringToLog("PJ DEBUG TEST (quests_reaction.c) : n:"+n);
+			// Log_SetStringToLog("PJ DEBUG TEST (quests_reaction.c) : quest_S1_nbQuests:"+pchar.quest_S1_nbQuests);
 			if (makeint(n) == makeint(pchar.quest_S1_nbQuests)) {
 				pchar.quest_S1_allQuestsCompleted = true;
 				pchar.quest_S1_quest_1_completed = false;

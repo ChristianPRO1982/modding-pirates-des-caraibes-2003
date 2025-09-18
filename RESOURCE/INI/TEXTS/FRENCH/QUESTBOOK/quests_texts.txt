@@ -898,7 +898,7 @@ Cette dernière chasse au trésor se trouve dans la maison étrange de l'île des pi
 #TEXT	39
 Pas besoin de fouiller toute l'île, le trésor se trouve dans la maison...
 #TEXT	40
-Te voilà avec un beau trésor ! Tu peux de nouveaux faire les autres chasses au trésor !!!
+Te voilà avec un beau trésor ! C'est malheureusement la fin des chasses aux trésors !!!
 #TEXT	41
 La carte du trésor indique l'île d'Oxbay, un lieu nommé le "phare".
 #TEXT	42

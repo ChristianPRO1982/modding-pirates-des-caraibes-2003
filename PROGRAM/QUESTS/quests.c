@@ -60,14 +60,26 @@ void QuestsCheck_forLocEnter()
 	PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", "none");
 	PlaceCharacter(characterFromID("Youyi TQC 1"), "goto", "none");
 	if (pchar.quest_S1_step == 0) {
-		if (rand(4) == 0 && pchar.location == "Redmond_town_01" && pchar.quest_S1_Elizabeth_Goodale_TQC1_visible == true) PlaceCharacter(characterFromID("Elizabeth Goodale TQC 1"), "goto", homelocation);
-		if (rand(4) == 0 && pchar.location == "Falaise_de_fleur_port_02" && pchar.quest_S1_Eustache_Busket_TQC1_visible == true) PlaceCharacter(characterFromID("Eustache Busket TQC 1"), "goto", homelocation);
-		if (rand(4) == 0 && pchar.location == "Conceicao_town" && pchar.quest_S1_Bartolomeo_Portugues_TQC1_visible == true) PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 1"), "goto", homelocation);
-		if (rand(4) == 0 && pchar.location == "Muelle_town_02" && pchar.quest_S1_Benito_Bonito_TQC1_visible == true) PlaceCharacter(characterFromID("Benito Bonito TQC 1"), "goto", homelocation);
-		if (rand(4) == 0 && pchar.location == "Douwesen_town" && pchar.quest_S1_Hendrick_van_Hoven_TQC1_visible == true) PlaceCharacter(characterFromID("Hendrick van Hoven TQC 1"), "goto", homelocation);
-		if (rand(4) == 0 && pchar.location == "Greenford_town" && pchar.quest_S1_Wimund_TQC1_visible == true) PlaceCharacter(characterFromID("Wimund TQC 1"), "goto", homelocation);
-		if (rand(4) == 0 && pchar.location == "Oxbay_town" && pchar.quest_S1_Samuel_Bellamy_TQC1_visible == true) PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", homelocation);
-		if (rand(4) == 0 && pchar.location == "QC_town" && pchar.quest_S1_Edward_Thatch_TQC1_visible == true) PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", homelocation);
+		if (1 == 1) {
+			if (rand(3) == 0 && pchar.location == "Redmond_town_01" && pchar.quest_S1_Elizabeth_Goodale_TQC1_visible == true) PlaceCharacter(characterFromID("Elizabeth Goodale TQC 1"), "goto", homelocation);
+			if (rand(3) == 0 && pchar.location == "Falaise_de_fleur_port_02" && pchar.quest_S1_Eustache_Busket_TQC1_visible == true) PlaceCharacter(characterFromID("Eustache Busket TQC 1"), "goto", homelocation);
+			if (rand(3) == 0 && pchar.location == "Conceicao_town" && pchar.quest_S1_Bartolomeo_Portugues_TQC1_visible == true) PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 1"), "goto", homelocation);
+			if (rand(3) == 0 && pchar.location == "Muelle_town_02" && pchar.quest_S1_Benito_Bonito_TQC1_visible == true) PlaceCharacter(characterFromID("Benito Bonito TQC 1"), "goto", homelocation);
+			if (rand(3) == 0 && pchar.location == "Douwesen_town" && pchar.quest_S1_Hendrick_van_Hoven_TQC1_visible == true) PlaceCharacter(characterFromID("Hendrick van Hoven TQC 1"), "goto", homelocation);
+			if (rand(3) == 0 && pchar.location == "Greenford_town" && pchar.quest_S1_Wimund_TQC1_visible == true) PlaceCharacter(characterFromID("Wimund TQC 1"), "goto", homelocation);
+			if (rand(3) == 0 && pchar.location == "Oxbay_town" && pchar.quest_S1_Samuel_Bellamy_TQC1_visible == true) PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", homelocation);
+			if (rand(3) == 0 && pchar.location == "QC_town" && pchar.quest_S1_Edward_Thatch_TQC1_visible == true) PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", homelocation);
+		} else {
+			// Log_SetStringToLog("PJ DEBUG TEST (quests.c) : pour faire apparaitre les chasseurs de trésor tout le temps");
+			if (rand(1) == 0 && pchar.location == "Redmond_town_01" && pchar.quest_S1_Elizabeth_Goodale_TQC1_visible == true) PlaceCharacter(characterFromID("Elizabeth Goodale TQC 1"), "goto", homelocation);
+			if (rand(1) == 0 && pchar.location == "Falaise_de_fleur_port_02" && pchar.quest_S1_Eustache_Busket_TQC1_visible == true) PlaceCharacter(characterFromID("Eustache Busket TQC 1"), "goto", homelocation);
+			if (rand(1) == 0 && pchar.location == "Conceicao_town" && pchar.quest_S1_Bartolomeo_Portugues_TQC1_visible == true) PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 1"), "goto", homelocation);
+			if (rand(1) == 0 && pchar.location == "Muelle_town_02" && pchar.quest_S1_Benito_Bonito_TQC1_visible == true) PlaceCharacter(characterFromID("Benito Bonito TQC 1"), "goto", homelocation);
+			if (rand(1) == 0 && pchar.location == "Douwesen_town" && pchar.quest_S1_Hendrick_van_Hoven_TQC1_visible == true) PlaceCharacter(characterFromID("Hendrick van Hoven TQC 1"), "goto", homelocation);
+			if (rand(1) == 0 && pchar.location == "Greenford_town" && pchar.quest_S1_Wimund_TQC1_visible == true) PlaceCharacter(characterFromID("Wimund TQC 1"), "goto", homelocation);
+			if (rand(1) == 0 && pchar.location == "Oxbay_town" && pchar.quest_S1_Samuel_Bellamy_TQC1_visible == true) PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", homelocation);
+			if (rand(1) == 0 && pchar.location == "QC_town" && pchar.quest_S1_Edward_Thatch_TQC1_visible == true) PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", homelocation);
+		}
 		if (pchar.location == "QC_town" && pchar.quest_S1_allQuestsCompleted == true) PlaceCharacter(characterFromID("Youyi TQC 1"), "goto", homelocation);
 	}
 	if(pchar.quest_S1_Unearthing == true) pchar.quest_S1_failed = true;
