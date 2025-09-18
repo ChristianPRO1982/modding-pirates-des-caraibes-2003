@@ -148,6 +148,20 @@ void CreateCharacters()
 	GiveItem2Character(ch, "pistol5");
 	GiveItem2Character(ch, "pistol6");//*/ 
 
+	//PJ plus de PNJ dans les villes
+	ch.quest.PNJ_villes = true;
+	//QUESTS PJ
+	//S1 : chasseur de trésor
+	GenerateTreasureHunterQuests();
+	ch.quest_S1_Elizabeth_Goodale_TQC1_visible = true;
+	ch.quest_S1_Eustache_Busket_TQC1_visible = true;
+	ch.quest_S1_Bartolomeo_Portugues_TQC1_visible = true;
+	ch.quest_S1_Benito_Bonito_TQC1_visible = true;
+	ch.quest_S1_Hendrick_van_Hoven_TQC1_visible = true;
+	ch.quest_S1_Wimund_TQC1_visible = true;
+	ch.quest_S1_Samuel_Bellamy_TQC1_visible = true;
+	ch.quest_S1_Edward_Thatch_TQC1_visible = true;
+
 	// QUESTS BEGINNINGS
 
 	// Main story line

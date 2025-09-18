@@ -1,3 +1,11 @@
+PJ_TELEPORTATION_1 {Oula ! il y a un problème lors du passage... Les vêtements ne suivent pas correctement !}
+
+PJ_S1_no_treasure_here_1 {Il faut encore creuser...}
+PJ_S1_no_treasure_here_2 {Il n'y a pas de trésor ici...}
+PJ_S1_failed {Hé ! Mon gars, tu es aller trop loin ! Le trésor n'est pas par là.}
+PJ_S2_failed {Malheureusement, le temps a manqué pour aider nos tourtereaux.}
+PJ_M1_AllPorts {Mais ? Où est François l'Olonnais ? Peut être est-il retourner sur Quebradas Costillas...}
+
 QUEST_MESSAGE1 {Échec de la mission. Danielle est morte ! PARTIE TERMINÉE.}
 QUEST_MESSAGE2 {Le délai accordé pour la livraison est dépassé.}
 QUEST_MESSAGE3 {Tu es devenu trop vieux pour résister à la malédiction de l'or aztèque...}

@@ -497,6 +497,919 @@ void PlaceCharacter(aref ch, string group, string location)
 	ChangeCharacterAddressGroup(ch, location, group, homelocator);
 }
 
+// ajout PJ
+void GenerateTreasureHunterQuests()
+{
+	ref PChar = GetMainCharacter();
+	int n = 0;
+	
+	pchar.quest_S1_treasure_hunter_1_win_condition_step1_island = "Conceicao"; n++;
+	pchar.quest_S1_treasure_hunter_2_win_condition_step1_island = "Conceicao"; n++;
+	pchar.quest_S1_treasure_hunter_3_win_condition_step1_island = "Douwesen"; n++;
+	pchar.quest_S1_treasure_hunter_4_win_condition_step1_island = "Douwesen"; n++;
+	pchar.quest_S1_treasure_hunter_5_win_condition_step1_island = "Falaise de Fleur"; n++;
+	pchar.quest_S1_treasure_hunter_6_win_condition_step1_island = "Falaise de Fleur"; n++;
+	pchar.quest_S1_treasure_hunter_7_win_condition_step1_island = "Isla Muelle"; n++;
+	pchar.quest_S1_treasure_hunter_8_win_condition_step1_island = "Isla Muelle"; n++;
+	pchar.quest_S1_treasure_hunter_9_win_condition_step1_island = "Quebradas Costillas"; n++;
+	pchar.quest_S1_treasure_hunter_10_win_condition_step1_island = "Quebradas Costillas"; n++;
+	pchar.quest_S1_treasure_hunter_11_win_condition_step1_island = "Redmond"; n++;
+	pchar.quest_S1_treasure_hunter_12_win_condition_step1_island = "Redmond"; n++;
+	pchar.quest_S1_treasure_hunter_13_win_condition_step1_island = "Oxbay"; n++;
+	pchar.quest_S1_treasure_hunter_14_win_condition_step1_island = "Oxbay"; n++;
+	pchar.quest_S1_treasure_hunter_15_win_condition_step1_island = "Oxbay"; n++;
+	pchar.quest_S1_treasure_hunter_16_win_condition_step1_island = "Oxbay"; n++;
+	pchar.quest_S1_treasure_hunter_17_win_condition_step1_island = "Oxbay"; n++;
+	pchar.quest_S1_treasure_hunter_18_win_condition_step1_island = "Oxbay"; n++;
+	pchar.quest_S1_treasure_hunter_19_win_condition_step1_island = "Redmond"; n++;
+	pchar.quest_S1_treasure_hunter_20_win_condition_step1_island = "Isla Muelle"; n++;
+	
+	//initialisation des variables
+	pchar.quest_S1_nbQuests = n;
+	pchar.quest_S1_numQuests = 0;
+	pchar.quest_S1_quest_1_completed = false;
+	pchar.quest_S1_quest_2_completed = false;
+	pchar.quest_S1_quest_3_completed = false;
+	pchar.quest_S1_quest_4_completed = false;
+	pchar.quest_S1_quest_5_completed = false;
+	pchar.quest_S1_quest_6_completed = false;
+	pchar.quest_S1_quest_7_completed = false;
+	pchar.quest_S1_quest_8_completed = false;
+	pchar.quest_S1_quest_9_completed = false;
+	pchar.quest_S1_quest_10_completed = false;
+	pchar.quest_S1_quest_11_completed = false;
+	pchar.quest_S1_quest_12_completed = false;
+	pchar.quest_S1_quest_13_completed = false;
+	pchar.quest_S1_quest_14_completed = false;
+	pchar.quest_S1_quest_15_completed = false;
+	pchar.quest_S1_quest_16_completed = false;
+	pchar.quest_S1_quest_17_completed = false;
+	pchar.quest_S1_quest_18_completed = false;
+	pchar.quest_S1_quest_19_completed = false;
+	pchar.quest_S1_quest_20_completed = false;
+	pchar.quest_S1_allQuestsCompleted = false;
+	pchar.quest_S1_step = 0;
+	pchar.quest_S1_Unearthing = false;
+	pchar.quest_S1_failed = false;
+	pchar.quest_S1_gain_gold_jewelry = 0;
+	pchar.quest_S1_gain_gold_jewelry_text = "";
+	pchar.quest_S1_gain_gold = 0;
+	pchar.quest_S1_gain_jewelry1 = 0;
+	pchar.quest_S1_gain_jewelry2 = 0;
+	pchar.quest_S1_gain_jewelry3 = 0;
+	pchar.quest_S1_gain_jewelry4 = 0;
+	pchar.quest_S1_gain_jewelry5 = 0;
+	pchar.quest_S1_gain_jewelry6 = 0;
+	pchar.quest_S1_gain_jewelry7 = 0;
+	pchar.quest_S1_gain_jewelry8 = 0;
+	pchar.quest_S1_gain_jewelry9 = 0;
+	pchar.quest_S1_gain_jewelry10 = 0;
+	pchar.quest_S1_gain_jewelry11 = 0;
+	pchar.quest_S1_gain_jewelry12 = 0;
+	pchar.quest_S1_gain_jewelry13 = 0;
+	pchar.quest_S1_gain_jewelry14 = 0;
+	pchar.quest_S1_gain_jewelry15 = 0;
+	pchar.quest_S1_gain_jewelry16 = 0;
+	pchar.quest_S1_no_treasure_here_text = 1;
+}
+
+void TreasureHunterNextStep()
+{
+	ref PChar = GetMainCharacter();
+	
+	switch (makeint(pchar.quest_S1_numQuests)) {
+		case 1://quete n°1 - Conceicao
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 4);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Conceicao_shore_02";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 5);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "Smugglers_Lair_exit";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "Conceicao_jungle_01";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://CONTINUE STEP
+					pchar.quest.quest_S1_step4.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step4.win_condition.l1.location = "Conceicao_town_exit";
+					pchar.quest.quest_S1_step4.win_condition = "quest_S1_step4";
+				break;
+				case 5://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = -61;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = -54;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -6;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 0;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -105;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -95;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 2://quete n°2 - Conceicao
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 6);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Conceicao_shore_01";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://FINAL STEP
+					AddQuestRecord("PJ_S1", 7);
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 1.4;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 5;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = 1;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 3;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 34;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 36;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 3://quete n°3 - Douwesen
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 8);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Douwesen_shore_01";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 9);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "Douwesen_jungle_01";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "Douwesen_jungle_02";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://CONTINUE STEP
+					pchar.quest.quest_S1_step4.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step4.win_condition.l1.location = "Rheims_house";
+					pchar.quest.quest_S1_step4.win_condition = "quest_S1_step4";
+				break;
+				case 5://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 11;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 19;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 2;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 4;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 4://quete n°4 - Douwesen
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 10);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Douwesen_shore_02";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 11);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "Douwesen_jungle_03";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "Douwesen_town_exit";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 35;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 41;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -2;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 1;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 74;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 80;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 5://quete n°5 - Fleur de Falaise
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 12);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Falaise_de_Fleur_shore";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://FINAL STEP
+					AddQuestRecord("PJ_S1", 13);
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 100;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 126;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 17;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 55;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 6://quete n°6 - Fleur de Falaise
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 14);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Falaise_de_Fleur_shore";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 15);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "Falaise_de_Fleur_Jungle";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 11;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -2;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 2;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -1;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 2;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 7://quete n°7 - Isla Muelle
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 16);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "muelle_shore";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 17);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "muelle_passage";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 23;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 27;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = 0;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 20;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -17;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -7;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 8://quete n°8 - Isla Muelle
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 18);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "muelle_shore";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 19);
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 16;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 23;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = 0;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 20;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -52;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -45;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 9://quete n°9 - Quebradas Costillas
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 20);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "QC_port";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 21);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "QC_town_exit";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 13;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 15;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 20;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 28;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 10://quete n°10 - Quebradas Costillas
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 22);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "QC_port";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 23);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "QC_town_exit";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "QC_pirate_house";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 17;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 19;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -7;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 11://quete n°11 - Redmond
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 24);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Redmond_Shore_01";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://FINAL STEP
+					AddQuestRecord("PJ_S1", 25);
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = -12;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = -7;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = 3;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 5;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -23;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -18;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 12://quete n°12 - Redmond
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 26);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Redmond_Shore_02";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 27);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "Redmond_jungle_01";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = -60;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = -54;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -3;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = -1;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -107;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -98;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 13://quete n°13 - Oxbay
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 28);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Oxbay_shore_02";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 29);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "oxbay_jungle_03";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "greenford_town_exit";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 8;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 14;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 3;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 6;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 14://quete n°14 - Oxbay
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 30);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Oxbay_shore_02";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 31);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "oxbay_jungle_03";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "oxbay_jungle_02";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://CONTINUE STEP
+					pchar.quest.quest_S1_step4.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step4.win_condition.l1.location = "oxbay_town_exit";
+					pchar.quest.quest_S1_step4.win_condition = "quest_S1_step4";
+				break;
+				case 5://CONTINUE STEP
+					pchar.quest.quest_S1_step5.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step5.win_condition.l1.location = "oxbay_jungle_01";
+					pchar.quest.quest_S1_step5.win_condition = "quest_S1_step5";
+				break;
+				case 6://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 16;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 1;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 4;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 15://quete n°15 - Oxbay
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 32);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Oxbay_shore_01";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 33);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "oxbay_jungle_01";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "oxbay_town_exit";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://CONTINUE STEP
+					pchar.quest.quest_S1_step4.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step4.win_condition.l1.location = "oxbay_jungle_02";
+					pchar.quest.quest_S1_step4.win_condition = "quest_S1_step4";
+				break;
+				case 5://CONTINUE STEP
+					pchar.quest.quest_S1_step5.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step5.win_condition.l1.location = "oxbay_cave_exit";
+					pchar.quest.quest_S1_step5.win_condition = "quest_S1_step5";
+				break;
+				case 6://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 1;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 6;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 4;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 6;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 16://quete n°16 - Oxbay
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 34);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Oxbay_shore_01";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 35);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "oxbay_jungle_01";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "oxbay_town_exit";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://CONTINUE STEP
+					pchar.quest.quest_S1_step4.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step4.win_condition.l1.location = "oxbay_jungle_02";
+					pchar.quest.quest_S1_step4.win_condition = "quest_S1_step4";
+				break;
+				case 5://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = -8;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 1;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -14;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -3;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 17://quete n°17 - Oxbay
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 36);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Oxbay_lighthouse";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://FINAL STEP
+					AddQuestRecord("PJ_S1", 37);
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 24;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 27;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = 0;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 30;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -31;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -25;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 18://quete n°18 - Oxbay
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 41);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Oxbay_lighthouse";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 42);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "Oxbay_canyon";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 57;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 61;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 25;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 30;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 19://quete n°19 - Redmond
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 43);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Redmond_Shore_02";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 44);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "Redmond_jungle_01";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "Redmond_town_exit_2";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = -21;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = -15;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -20;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -55;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -51;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 20://quete n°20 - Isla Muelle
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 45);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "muelle_shore";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 46);
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = -3;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 0;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = 0;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 20;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 16;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 19;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+	}
+}
+
+void GenerateTreasureHunterQuest(string startIsland, int alternativeQuestNumber)
+{
+	ref PChar = GetMainCharacter();
+	int n;
+	
+	//generation des gains
+	if (rand(makeint(pchar.skill.Sneak)) < 3) {
+		// OR
+		pchar.quest_S1_gain_gold = 1000 + (75 * makeint(pchar.rank)) + (5 * makeint(pchar.rank) * rand(makeint(pchar.skill.sneak)));
+	} else {
+		// JEWELRY <=> JOAILLERIE (prix a Redmond en debut de partie)
+		// jewelry1 : saphir = 615
+		// jewelry2 : diamant = 1538
+		// jewelry3 : rubis = 769
+		// jewelry4 : emeraude = 1153
+		// jewelry5 : pepite d'or = 1538
+		// jewelry6 : bague en argent et saphir = 769
+		// jewelry7 : bague en or et emeraude = 961
+		// jewelry8 : bague en bronze = 384
+		// jewelry9 : croix en bronze = 307
+		// jewelry10 : bague en or et saphir = 1538
+		// jewelry11 : grosse perle = 769
+		// jewelry12 : petite perle = 384
+		// jewelry13 : broche en argent = 1538
+		// jewelry14 : broche en or = 769
+		// jewelry15 : pendetif emeraude = 769
+		// jewelry16 : collier en pierres precieuses = 384
+		for(n = 1; n <= 10 + rand(makeint(pchar.rank)); n++) {
+			if (makeint(pchar.skill.sneak) <= 3) {
+				switch(rand(24)+1) {
+					case 1: pchar.quest_S1_gain_jewelry1 = makeint(pchar.quest_S1_gain_jewelry1) + 1; break;
+					case 2: pchar.quest_S1_gain_jewelry2 = makeint(pchar.quest_S1_gain_jewelry2) + 1; break;
+					case 3: pchar.quest_S1_gain_jewelry3 = makeint(pchar.quest_S1_gain_jewelry3) + 1; break;
+					case 4: pchar.quest_S1_gain_jewelry4 = makeint(pchar.quest_S1_gain_jewelry4) + 1; break;
+					case 5: pchar.quest_S1_gain_jewelry5 = makeint(pchar.quest_S1_gain_jewelry5) + 1; break;
+					case 6: pchar.quest_S1_gain_jewelry6 = makeint(pchar.quest_S1_gain_jewelry6) + 1; break;
+					case 7: pchar.quest_S1_gain_jewelry7 = makeint(pchar.quest_S1_gain_jewelry7) + 1; break;
+					case 8: pchar.quest_S1_gain_jewelry8 = makeint(pchar.quest_S1_gain_jewelry8) + 1; break;
+					case 9: pchar.quest_S1_gain_jewelry9 = makeint(pchar.quest_S1_gain_jewelry9) + 1; break;
+					case 10: pchar.quest_S1_gain_jewelry8 = makeint(pchar.quest_S1_gain_jewelry8) + 1; break;
+					case 11: pchar.quest_S1_gain_jewelry9 = makeint(pchar.quest_S1_gain_jewelry9) + 1; break;
+					case 12: pchar.quest_S1_gain_jewelry10 = makeint(pchar.quest_S1_gain_jewelry10) + 1; break;
+					case 13: pchar.quest_S1_gain_jewelry11 = makeint(pchar.quest_S1_gain_jewelry11) + 1; break;
+					case 14: pchar.quest_S1_gain_jewelry12 = makeint(pchar.quest_S1_gain_jewelry12) + 1; break;
+					case 15: pchar.quest_S1_gain_jewelry12 = makeint(pchar.quest_S1_gain_jewelry12) + 1; break;
+					case 16: pchar.quest_S1_gain_jewelry13 = makeint(pchar.quest_S1_gain_jewelry13) + 1; break;
+					case 17: pchar.quest_S1_gain_jewelry14 = makeint(pchar.quest_S1_gain_jewelry14) + 1; break;
+					case 18: pchar.quest_S1_gain_jewelry15 = makeint(pchar.quest_S1_gain_jewelry15) + 1; break;
+					case 19: pchar.quest_S1_gain_jewelry16 = makeint(pchar.quest_S1_gain_jewelry16) + 1; break;
+					case 20: pchar.quest_S1_gain_jewelry16 = makeint(pchar.quest_S1_gain_jewelry16) + 1; break;
+					case 21: break;
+					case 22: break;
+					case 23: break;
+					case 24: break;
+					case 25: break;
+				}
+			}
+			if (makeint(pchar.skill.sneak) > 3 && makeint(pchar.skill.sneak) <= 6) {
+				switch(rand(21)+1) {
+					case 1: pchar.quest_S1_gain_jewelry1 = makeint(pchar.quest_S1_gain_jewelry1) + 1; break;
+					case 2: pchar.quest_S1_gain_jewelry1 = makeint(pchar.quest_S1_gain_jewelry1) + 1; break;
+					case 3: pchar.quest_S1_gain_jewelry2 = makeint(pchar.quest_S1_gain_jewelry2) + 1; break;
+					case 4: pchar.quest_S1_gain_jewelry3 = makeint(pchar.quest_S1_gain_jewelry3) + 1; break;
+					case 5: pchar.quest_S1_gain_jewelry3 = makeint(pchar.quest_S1_gain_jewelry3) + 1; break;
+					case 6: pchar.quest_S1_gain_jewelry4 = makeint(pchar.quest_S1_gain_jewelry4) + 1; break;
+					case 7: pchar.quest_S1_gain_jewelry5 = makeint(pchar.quest_S1_gain_jewelry5) + 1; break;
+					case 8: pchar.quest_S1_gain_jewelry6 = makeint(pchar.quest_S1_gain_jewelry6) + 1; break;
+					case 9: pchar.quest_S1_gain_jewelry6 = makeint(pchar.quest_S1_gain_jewelry6) + 1; break;
+					case 10: pchar.quest_S1_gain_jewelry7 = makeint(pchar.quest_S1_gain_jewelry7) + 1; break;
+					case 11: pchar.quest_S1_gain_jewelry10 = makeint(pchar.quest_S1_gain_jewelry10) + 1; break;
+					case 12: pchar.quest_S1_gain_jewelry11 = makeint(pchar.quest_S1_gain_jewelry11) + 1; break;
+					case 13: pchar.quest_S1_gain_jewelry11 = makeint(pchar.quest_S1_gain_jewelry11) + 1; break;
+					case 14: pchar.quest_S1_gain_jewelry13 = makeint(pchar.quest_S1_gain_jewelry13) + 1; break;
+					case 15: pchar.quest_S1_gain_jewelry14 = makeint(pchar.quest_S1_gain_jewelry14) + 1; break;
+					case 16: pchar.quest_S1_gain_jewelry15 = makeint(pchar.quest_S1_gain_jewelry15) + 1; break;
+					case 17: pchar.quest_S1_gain_jewelry14 = makeint(pchar.quest_S1_gain_jewelry14) + 1; break;
+					case 18: pchar.quest_S1_gain_jewelry15 = makeint(pchar.quest_S1_gain_jewelry15) + 1; break;
+					case 19: break;
+					case 20: break;
+					case 21: break;
+					case 22: break;
+				}
+			}
+			if (makeint(pchar.skill.sneak) > 6 && makeint(pchar.skill.sneak) <= 9) {
+				switch(rand(10)+1) {
+					case 1: pchar.quest_S1_gain_jewelry2 = makeint(pchar.quest_S1_gain_jewelry2) + 1; break;
+					case 2: pchar.quest_S1_gain_jewelry4 = makeint(pchar.quest_S1_gain_jewelry4) + 1; break;
+					case 3: pchar.quest_S1_gain_jewelry4 = makeint(pchar.quest_S1_gain_jewelry4) + 1; break;
+					case 4: pchar.quest_S1_gain_jewelry5 = makeint(pchar.quest_S1_gain_jewelry5) + 1; break;
+					case 5: pchar.quest_S1_gain_jewelry7 = makeint(pchar.quest_S1_gain_jewelry7) + 1; break;
+					case 6: pchar.quest_S1_gain_jewelry7 = makeint(pchar.quest_S1_gain_jewelry7) + 1; break;
+					case 7: pchar.quest_S1_gain_jewelry10 = makeint(pchar.quest_S1_gain_jewelry10) + 1; break;
+					case 8: pchar.quest_S1_gain_jewelry13 = makeint(pchar.quest_S1_gain_jewelry13) + 1; break;
+					case 9: break;
+					case 10: break;
+					case 11: break;
+				}
+			}
+			if (makeint(pchar.skill.sneak) == 10) {
+				switch(rand(5)+1) {
+					case 1: pchar.quest_S1_gain_jewelry2 = makeint(pchar.quest_S1_gain_jewelry2) + 1; break;
+					case 2: pchar.quest_S1_gain_jewelry5 = makeint(pchar.quest_S1_gain_jewelry5) + 1; break;
+					case 3: pchar.quest_S1_gain_jewelry10 = makeint(pchar.quest_S1_gain_jewelry10) + 1; break;
+					case 4: pchar.quest_S1_gain_jewelry13 = makeint(pchar.quest_S1_gain_jewelry13) + 1; break;
+					case 5: break;
+					case 6: break;
+				}
+			}
+		}
+	}
+	
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_gold);
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry1) * 615;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry2) * 1538;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry3) * 769;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry4) * 1153;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry5) * 1538;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry6) * 769;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry7) * 961;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry8) * 384;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry9) * 307;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry10) * 1538;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry11) * 769;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry12) * 384;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry13) * 1538;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry14) * 769;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry15) * 769;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry16) * 384;
+	
+	if (makeint(pchar.quest_S1_gain_gold) > 0) pchar.quest_S1_gain_gold_jewelry_text = "pieces d'or uniquement.";
+	if (makeint(pchar.quest_S1_gain_jewelry1) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry1 + " saphirs.";
+	if (makeint(pchar.quest_S1_gain_jewelry2) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry2 + " diamant.";
+	if (makeint(pchar.quest_S1_gain_jewelry3) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry3 + " rubis.";
+	if (makeint(pchar.quest_S1_gain_jewelry4) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry4 + " emeraudes.";
+	if (makeint(pchar.quest_S1_gain_jewelry5) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry5 + " pepites d'or.";
+	if (makeint(pchar.quest_S1_gain_jewelry6) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry6 + " bagues en argent et saphirs.";
+	if (makeint(pchar.quest_S1_gain_jewelry7) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry7 + " bagues en or et emeraude.";
+	if (makeint(pchar.quest_S1_gain_jewelry8) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry8 + " bagues en bronze.";
+	if (makeint(pchar.quest_S1_gain_jewelry9) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry9 + " croix en bronze.";
+	if (makeint(pchar.quest_S1_gain_jewelry10) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry10 + " bagues en or et saphirs.";
+	if (makeint(pchar.quest_S1_gain_jewelry11) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry11 + " grosses perles.";
+	if (makeint(pchar.quest_S1_gain_jewelry12) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry12 + " petites perles.";
+	if (makeint(pchar.quest_S1_gain_jewelry13) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry13 + " broches en argent.";
+	if (makeint(pchar.quest_S1_gain_jewelry14) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry14 + " broches en or.";
+	if (makeint(pchar.quest_S1_gain_jewelry15) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry15 + " pendetifs en emeraude.";
+	if (makeint(pchar.quest_S1_gain_jewelry16) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry16 + " colliers en pierres precieuses.";
+	
+	pchar.quest_S1_numQuests = makeint(rand(makeint(pchar.quest_S1_nbQuests) - 1)) + 1;
+	switch (makeint(pchar.quest_S1_numQuests)) {
+		case 1:  if (pchar.quest_S1_treasure_hunter_1_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 2:  if (pchar.quest_S1_treasure_hunter_2_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 3:  if (pchar.quest_S1_treasure_hunter_3_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 4:  if (pchar.quest_S1_treasure_hunter_4_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 5:  if (pchar.quest_S1_treasure_hunter_5_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 6:  if (pchar.quest_S1_treasure_hunter_6_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 7:  if (pchar.quest_S1_treasure_hunter_7_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 8:  if (pchar.quest_S1_treasure_hunter_8_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 9:  if (pchar.quest_S1_treasure_hunter_9_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 10: if (pchar.quest_S1_treasure_hunter_10_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 11: if (pchar.quest_S1_treasure_hunter_11_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 12: if (pchar.quest_S1_treasure_hunter_12_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 13: if (pchar.quest_S1_treasure_hunter_13_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 14: if (pchar.quest_S1_treasure_hunter_14_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 15: if (pchar.quest_S1_treasure_hunter_15_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 16: if (pchar.quest_S1_treasure_hunter_16_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 17: if (pchar.quest_S1_treasure_hunter_17_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 18: if (pchar.quest_S1_treasure_hunter_18_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 19: if (pchar.quest_S1_treasure_hunter_19_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 20: if (pchar.quest_S1_treasure_hunter_20_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+	}
+	
+	switch (makeint(pchar.quest_S1_numQuests)) {
+		case 1:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_1_win_condition_step1_island; break;
+		case 2:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_2_win_condition_step1_island; break;
+		case 3:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_3_win_condition_step1_island; break;
+		case 4:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_4_win_condition_step1_island; break;
+		case 5:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_5_win_condition_step1_island; break;
+		case 6:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_6_win_condition_step1_island; break;
+		case 7:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_7_win_condition_step1_island; break;
+		case 8:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_8_win_condition_step1_island; break;
+		case 9:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_9_win_condition_step1_island; break;
+		case 10: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_10_win_condition_step1_island; break;
+		case 11: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_11_win_condition_step1_island; break;
+		case 12: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_12_win_condition_step1_island; break;
+		case 13: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_13_win_condition_step1_island; break;
+		case 14: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_14_win_condition_step1_island; break;
+		case 15: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_15_win_condition_step1_island; break;
+		case 16: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_16_win_condition_step1_island; break;
+		case 17: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_17_win_condition_step1_island; break;
+		case 18: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_18_win_condition_step1_island; break;
+		case 19: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_19_win_condition_step1_island; break;
+		case 20: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_20_win_condition_step1_island; break;
+	}
+}
+void M1_EndQuest()
+{
+	ref PChar;
+	PChar = GetMainCharacter();
+	
+	//relations avec les pays
+	SetNationRelation2MainCharacter(ENGLAND,RELATION_ENEMY);
+	SetNationRelation2MainCharacter(FRANCE,RELATION_ENEMY);
+	SetNationRelation2MainCharacter(SPAIN,RELATION_ENEMY);
+	SetNationRelation2MainCharacter(PORTUGAL,RELATION_ENEMY);
+	SetNationRelation2MainCharacter(HOLLAND,RELATION_ENEMY);
+	SetNationRelation2MainCharacter(PIRATE,RELATION_FRIEND);
+	
+	switch (makeint(Pchar.quest_M1_step)) {
+		case 3: AddQuestRecord("PJ_M1", 9);  break;
+		case 4: AddQuestRecord("PJ_M1", 10); break;
+		case 5: AddQuestRecord("PJ_M1", 11); break;
+		case 6: AddQuestRecord("PJ_M1", 12); break;
+		case 7: AddQuestRecord("PJ_M1", 13); break;
+		case 8: AddQuestRecord("PJ_M1", 14); break;
+		case 9: AddQuestRecord("PJ_M1", 15); break;
+	}
+	
+	//fin de la quete
+	if (makeint(Pchar.quest_M1_step) == 9) {
+		Log_SetStringToLog(GlobalStringConvert("PJ_M1_AllPorts"));
+		
+		//relations avec les pays
+		SetNationRelation2MainCharacter(ENGLAND,pchar.quest_M1_NationRelation_ENGLAND);
+		SetNationRelation2MainCharacter(FRANCE,pchar.quest_M1_NationRelation_FRANCE);
+		SetNationRelation2MainCharacter(SPAIN,pchar.quest_M1_NationRelation_SPAIN);
+		SetNationRelation2MainCharacter(PORTUGAL,pchar.quest_M1_NationRelation_PORTUGAL);
+		SetNationRelation2MainCharacter(HOLLAND,pchar.quest_M1_NationRelation_HOLLAND);
+		SetNationRelation2MainCharacter(PIRATE,RELATION_ENEMY);
+		
+		PlaceCharacter(characterFromID("Francois_l_Olonnais"), "none", "none");
+		RemovePassenger(pchar, Characters[GetCharacterIndex("Francois_l_Olonnais")]);
+		
+		pchar.quest.quest_M1_QCBoats.win_condition.l1 = "location";
+		pchar.quest.quest_M1_QCBoats.win_condition.l1.location = "QuebradasCostillas";
+		pchar.quest.quest_M1_QCBoats.win_condition = "quest_M1_QCBoats";
+	}
+}
+// fin ajout PJ
+
 void QuestComplete(string sQuestName)
 {
 	ref PChar, sld;
@@ -508,6 +1421,8 @@ void QuestComplete(string sQuestName)
 	int iColony;
 	int iTradeGoods, iQuantityGoods, iTradeNation;
 	string homelocation, homegroup, homelocator, tavernfriend;
+	ref rCrew_leader, rCrew1, rCrew2, rCrew3;// ajout PJ Quest S1
+	string sCrew_leader, sCrew1, sCrew2, sCrew3;// ajout PJ Quest S1
 
 	//Log_SetStringToLog("Quest " + sQuestName + " completed");
 	//trace("=============================================== QUEST " + sQuestName + " CHECKED");
@@ -12493,6 +13408,452 @@ void QuestComplete(string sQuestName)
 
 		case "PJ_QR_teleportation_3":
 			Log_SetStringToLog(GlobalStringConvert("PJ_TELEPORTATION_1"));
+		break;
+
+		case "quest_S1_agreeded":
+			DeleteQuestHeader("PJ_S1"); SetQuestHeader("PJ_S1");
+			pchar.quest_S1_step = 1;
+			TreasureHunterNextStep();
+		break;
+		
+		case "quest_S1_step1":
+			pchar.quest_S1_step = makeint(pchar.quest_S1_step) + 1;
+			TreasureHunterNextStep();
+		break;
+		
+		case "quest_S1_step2":
+			Log_SetStringToLog("C'est le bon chemin, continu !");
+			pchar.quest_S1_step = makeint(pchar.quest_S1_step) + 1;
+			TreasureHunterNextStep();
+		break;
+		
+		case "quest_S1_step3":
+			Log_SetStringToLog("C'est le bon chemin, continu !");
+			pchar.quest_S1_step = makeint(pchar.quest_S1_step) + 1;
+			TreasureHunterNextStep();
+		break;
+		
+		case "quest_S1_step4":
+			Log_SetStringToLog("C'est le bon chemin, continu !");
+			pchar.quest_S1_step = makeint(pchar.quest_S1_step) + 1;
+			TreasureHunterNextStep();
+		break;
+		
+		case "quest_S1_step5":
+			Log_SetStringToLog("C'est le bon chemin, continu !");
+			pchar.quest_S1_step = makeint(pchar.quest_S1_step) + 1;
+			TreasureHunterNextStep();
+		break;
+		
+		case "quest_S1_completed_1":
+			switch (pchar.quest_S1_startIsland) {
+				case "Redmond":            rCrew_leader = characterFromID("Elizabeth Goodale TQC 2");    sCrew_leader = "Elizabeth Goodale TQC 2"; break;
+				case "FleurDeFalaise":     rCrew_leader = characterFromID("Eustache Busket TQC 2");      sCrew_leader = "Eustache Busket TQC" 2; break;
+				case "Conceicao":          rCrew_leader = characterFromID("Bartolomeo Portugues TQC 2"); sCrew_leader = "Bartolomeo Portugues TQC 2"; break;
+				case "IslaMuelle":         rCrew_leader = characterFromID("Benito Bonito TQC 2");        sCrew_leader = "Benito Bonito TQC 2"; break;
+				case "Douwesen":           rCrew_leader = characterFromID("Hendrick van Hoven TQC 2");   sCrew_leader = "Hendrick van Hoven TQC 2"; break;
+				case "Oxbay_Greenford":    rCrew_leader = characterFromID("Wimund TQC 2");               sCrew_leader = "Wimund TQC 2"; break;
+				case "Oxbay_Oxbay":        rCrew_leader = characterFromID("Samuel Bellamy TQC 2");       sCrew_leader = "Samuel Bellamy TQC 2"; break;
+				case "QuebradasCostillas": rCrew_leader = characterFromID("Edward Thatch TQC 2");        sCrew_leader = "Edward Thatch TQC 2"; break;
+			}
+			
+			if (pchar.quest_S1_allQuestsCompleted == true) {
+				DoQuestCheckDelay("quest_S1_lastQuest_3", 0);
+			} else {
+				if (pchar.quest_S1_failed == true) {
+					ChangeCharacterReputation(pchar, -1);
+					AddQuestRecord("PJ_S1", "2");
+					Log_SetStringToLog(GlobalStringConvert("PJ_S1_failed"));
+					DoQuestCheckDelay("quest_S1_closed", 1.0);
+				} else {
+					AddQuestRecord("PJ_S1", "1");
+					homelocation = pchar.location;
+					
+					PlaceCharacter(rCrew_leader, "goto", homelocation);
+					LAi_SetActorType(rCrew_leader);
+					LAi_SetActorType(pchar);
+					LAi_ActorFollow(pchar, rCrew_leader, "", 2.0);
+					LAi_ActorFollow(rCrew_leader, pchar, "quest_S1_completed_2", 2.0);
+				}
+			}
+		break;
+		
+		case "quest_S1_completed_2":
+			AddPartyExp(pchar, makeint(pchar.rank) * 1000);
+			LAi_type_actor_Reset(pchar);
+			
+			switch (pchar.quest_S1_startIsland) {
+				case "Redmond":            rCrew_leader = characterFromID("Elizabeth Goodale TQC 2");    sCrew_leader = "Elizabeth Goodale TQC 2"; break;
+				case "FleurDeFalaise":     rCrew_leader = characterFromID("Eustache Busket TQC 2");      sCrew_leader = "Eustache Busket TQC 2"; break;
+				case "Conceicao":          rCrew_leader = characterFromID("Bartolomeo Portugues TQC 2"); sCrew_leader = "Bartolomeo Portugues TQC 2"; break;
+				case "IslaMuelle":         rCrew_leader = characterFromID("Benito Bonito TQC 2");        sCrew_leader = "Benito Bonito TQC 2"; break;
+				case "Douwesen":           rCrew_leader = characterFromID("Hendrick van Hoven TQC 2");   sCrew_leader = "Hendrick van Hoven TQC 2"; break;
+				case "Oxbay_Greenford":    rCrew_leader = characterFromID("Wimund TQC 2");               sCrew_leader = "Wimund TQC 2"; break;
+				case "Oxbay_Oxbay":        rCrew_leader = characterFromID("Samuel Bellamy TQC 2");       sCrew_leader = "Samuel Bellamy TQC 2"; break;
+				case "QuebradasCostillas": rCrew_leader = characterFromID("Edward Thatch TQC 2");        sCrew_leader = "Edward Thatch TQC 2"; break;
+			}
+			
+			LAi_ActorWaitDialog(pchar, rCrew_leader);
+			LAi_ActorDialog(rCrew_leader, pchar, "pchar_back_to_player", 2.0, 1.0);
+			characters[GetCharacterIndex(sCrew_leader)].dialog.currentnode = "complete_quest";
+		break;
+		
+		case "quest_S1_fight":
+			homelocation = pchar.location;
+			
+			switch (pchar.quest_S1_startIsland) {
+				case "Redmond":
+					pchar.quest_S1_Elizabeth_Goodale_TQC1_visible = false;
+					PlaceCharacter(characterFromID("Elizabeth Goodale TQC 1"), "goto", "none");
+					rCrew_leader = characterFromID("Elizabeth Goodale TQC 2");
+					sCrew_leader = "Elizabeth Goodale TQC 2";
+					rCrew1 = characterFromID("TQC for fight 1 1");
+					sCrew1 = "TQC for fight 1 1";
+					rCrew2 = characterFromID("TQC for fight 1 2");
+					sCrew2 = "TQC for fight 1 2";
+					rCrew3 = characterFromID("TQC for fight 1 3");
+					sCrew3 = "TQC for fight 1 3";
+				break;
+				case "FleurDeFalaise":
+					pchar.quest_S1_Eustache_Busket_TQC1_visible = false;
+					PlaceCharacter(characterFromID("Eustache Busket TQC 1"), "goto", "none");
+					rCrew_leader = characterFromID("Eustache Busket TQC 2");
+					sCrew_leader = "Eustache Busket TQC 2";
+					rCrew1 = characterFromID("TQC for fight 2 1");
+					sCrew1 = "TQC for fight 2 1";
+					rCrew2 = characterFromID("TQC for fight 2 2");
+					sCrew2 = "TQC for fight 2 2";
+					rCrew3 = characterFromID("TQC for fight 2 3");
+					sCrew3 = "TQC for fight 2 3";
+				break;
+				case "Conceicao":
+					pchar.quest_S1_Bartolomeo_Portugues_TQC1_visible = false;
+					PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 1"), "goto", "none");
+					rCrew_leader = characterFromID("Bartolomeo Portugues TQC 2");
+					sCrew_leader = "Bartolomeo Portugues TQC 2";
+					rCrew1 = characterFromID("TQC for fight 3 1");
+					sCrew1 = "TQC for fight 3 1";
+					rCrew2 = characterFromID("TQC for fight 3 2");
+					sCrew2 = "TQC for fight 3 2";
+					rCrew3 = characterFromID("TQC for fight 3 3");
+					sCrew3 = "TQC for fight 3 3";
+				break;
+				case "IslaMuelle":
+					pchar.quest_S1_Benito_Bonito_TQC1_visible = false;
+					PlaceCharacter(characterFromID("Benito Bonito TQC 1"), "goto", "none");
+					rCrew_leader = characterFromID("Benito Bonito TQC 2");
+					sCrew_leader = "Benito Bonito TQC 2";
+					rCrew1 = characterFromID("TQC for fight 4 1");
+					sCrew1 = "TQC for fight 4 1";
+					rCrew2 = characterFromID("TQC for fight 4 2");
+					sCrew2 = "TQC for fight 4 2";
+					rCrew3 = characterFromID("TQC for fight 4 3");
+					sCrew3 = "TQC for fight 4 3";
+				break;
+				case "Douwesen":
+					pchar.quest_S1_Hendrick_van_Hoven_TQC1_visible = false;
+					PlaceCharacter(characterFromID("Hendrick van Hoven TQC 1"), "goto", "none");
+					rCrew_leader = characterFromID("Hendrick van Hoven TQC 2");
+					sCrew_leader = "Hendrick van Hoven TQC 2";
+					rCrew1 = characterFromID("TQC for fight 5 1");
+					sCrew1 = "TQC for fight 5 1";
+					rCrew2 = characterFromID("TQC for fight 5 2");
+					sCrew2 = "TQC for fight 5 2";
+					rCrew3 = characterFromID("TQC for fight 5 3");
+					sCrew3 = "TQC for fight 5 3";
+				break;
+				case "Oxbay_Greenford":
+					pchar.quest_S1_Wimund_TQC1_visible = false;
+					PlaceCharacter(characterFromID("Wimund TQC 1"), "goto", "none");
+					rCrew_leader = characterFromID("Wimund TQC 2");
+					sCrew_leader = "Wimund TQC 2";
+					rCrew1 = characterFromID("TQC for fight 6 1");
+					sCrew1 = "TQC for fight 6 1";
+					rCrew2 = characterFromID("TQC for fight 6 2");
+					sCrew2 = "TQC for fight 6 2";
+					rCrew3 = characterFromID("TQC for fight 6 3");
+					sCrew3 = "TQC for fight 6 3";
+				break;
+				case "Oxbay_Oxbay":
+					pchar.quest_S1_Samuel_Bellamy_TQC1_visible = false;
+					PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", "none");
+					rCrew_leader = characterFromID("Samuel Bellamy TQC 2");
+					sCrew_leader = "Samuel Bellamy TQC 2";
+					rCrew1 = characterFromID("TQC for fight 7 1");
+					sCrew1 = "TQC for fight 7 1";
+					rCrew2 = characterFromID("TQC for fight 7 2");
+					sCrew2 = "TQC for fight 7 2";
+					rCrew3 = characterFromID("TQC for fight 7 3");
+					sCrew3 = "TQC for fight 7 3";
+				break;
+				case "QuebradasCostillas":
+					pchar.quest_S1_Edward_Thatch_TQC1_visible = false;
+					PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", "none");
+					rCrew_leader = characterFromID("Edward Thatch TQC 2");
+					sCrew_leader = "Edward Thatch TQC 2";
+					rCrew1 = characterFromID("TQC for fight 8 1");
+					sCrew1 = "TQC for fight 8 1";
+					rCrew2 = characterFromID("TQC for fight 8 2");
+					sCrew2 = "TQC for fight 8 2";
+					rCrew3 = characterFromID("TQC for fight 8 3");
+					sCrew3 = "TQC for fight 8 3";
+				break;
+			}
+			
+			LAi_group_MoveCharacter(rCrew_leader, "S1_FIGHT");
+			Pchar.quest.quest_S1_fight_won.win_condition.l1 = "NPC_Death";
+			Pchar.quest.quest_S1_fight_won.win_condition.l1.character = sCrew_leader;
+			
+			PlaceCharacter(rCrew1, "goto", homelocation);
+			PlaceCharacter(rCrew2, "goto", homelocation);
+			PlaceCharacter(rCrew3, "goto", homelocation);
+			LAi_RemoveCheckMinHP(rCrew1);
+			LAi_RemoveCheckMinHP(rCrew2);
+			LAi_RemoveCheckMinHP(rCrew3);
+			LAi_group_MoveCharacter(rCrew1, "S1_FIGHT");
+			LAi_group_MoveCharacter(rCrew2, "S1_FIGHT");
+			LAi_group_MoveCharacter(rCrew3, "S1_FIGHT");
+			
+			Pchar.quest.quest_S1_fight_won.win_condition.l2 = "NPC_Death";
+			Pchar.quest.quest_S1_fight_won.win_condition.l2.character = sCrew1;
+			Pchar.quest.quest_S1_fight_won.win_condition.l3 = "NPC_Death";
+			Pchar.quest.quest_S1_fight_won.win_condition.l3.character = sCrew2;
+			Pchar.quest.quest_S1_fight_won.win_condition.l4 = "NPC_Death";
+			Pchar.quest.quest_S1_fight_won.win_condition.l4.character = sCrew3;
+			Pchar.quest.quest_S1_fight_won.win_condition = "quest_S1_fight_won";
+			
+			LAi_group_FightGroups("S1_FIGHT", LAI_GROUP_PLAYER, true);
+		break;
+		
+		case "quest_S1_fight_won":
+			int n;
+			
+			ChangeCharacterReputation(pchar, -5);
+			AddPartyExp(pchar, 50000);
+			
+			AddMoneyToCharacter(pchar, makeint(pchar.quest_S1_gain_gold) * 20);
+			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry1) * 20; n++) {GiveItem2Character(Pchar, "jewelry1");}
+			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry2) * 20; n++) {GiveItem2Character(Pchar, "jewelry2");}
+			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry3) * 20; n++) {GiveItem2Character(Pchar, "jewelry3");}
+			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry4) * 20; n++) {GiveItem2Character(Pchar, "jewelry4");}
+			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry5) * 20; n++) {GiveItem2Character(Pchar, "jewelry5");}
+			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry6) * 20; n++) {GiveItem2Character(Pchar, "jewelry6");}
+			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry7) * 20; n++) {GiveItem2Character(Pchar, "jewelry7");}
+			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry8) * 20; n++) {GiveItem2Character(Pchar, "jewelry8");}
+			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry9) * 20; n++) {GiveItem2Character(Pchar, "jewelry9");}
+			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry10) * 20; n++) {GiveItem2Character(Pchar, "jewelry10");}
+			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry11) * 20; n++) {GiveItem2Character(Pchar, "jewelry11");}
+			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry12) * 20; n++) {GiveItem2Character(Pchar, "jewelry12");}
+			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry13) * 20; n++) {GiveItem2Character(Pchar, "jewelry13");}
+			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry14) * 20; n++) {GiveItem2Character(Pchar, "jewelry14");}
+			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry15) * 20; n++) {GiveItem2Character(Pchar, "jewelry15");}
+			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry16) * 20; n++) {GiveItem2Character(Pchar, "jewelry16");}
+			
+			AddQuestRecord("PJ_S1", "3");
+			
+			DoQuestCheckDelay("quest_S1_closed", 1.0);
+		break;
+		
+		case "quest_S1_closed":
+			CloseQuestHeader("PJ_S1");
+			
+			switch (pchar.quest_S1_startIsland) {
+				case "Redmond":            rCrew_leader = characterFromID("Elizabeth Goodale TQC 2"); break;
+				case "FleurDeFalaise":     rCrew_leader = characterFromID("Eustache Busket TQC 2"); break;
+				case "Conceicao":          rCrew_leader = characterFromID("Bartolomeo Portugues TQC 2"); break;
+				case "IslaMuelle":         rCrew_leader = characterFromID("Benito Bonito TQC 2"); break;
+				case "Douwesen":           rCrew_leader = characterFromID("Hendrick van Hoven TQC 2"); break;
+				case "Oxbay_Greenford":    rCrew_leader = characterFromID("Wimund TQC 2"); break;
+				case "Oxbay_Oxbay":        rCrew_leader = characterFromID("Samuel Bellamy TQC 2") break;;
+				case "QuebradasCostillas": rCrew_leader = characterFromID("Edward Thatch TQC 2"); break;
+			}
+			
+			LAi_ActorGoToLocation(rCrew_leader, "reload", homelocator, "none", "", "", "", 10.0);
+			
+			pchar.quest.quest_S1_step1.over = "yes";
+			pchar.quest.quest_S1_step1 = "completed";
+			pchar.quest.quest_S1_step2.over = "yes";
+			pchar.quest.quest_S1_step2 = "completed";
+			pchar.quest.quest_S1_step3.over = "yes";
+			pchar.quest.quest_S1_step3 = "completed";
+			pchar.quest.quest_S1_step4.over = "yes";
+			pchar.quest.quest_S1_step4 = "completed";
+			pchar.quest.quest_S1_step5.over = "yes";
+			pchar.quest.quest_S1_step5 = "completed";
+			pchar.quest.quest_S1_completed_1.over = "yes";
+			pchar.quest.quest_S1_completed_1 = "completed";
+			pchar.quest.quest_S1_completed_2.over = "yes";
+			pchar.quest.quest_S1_completed_2 = "completed";
+			pchar.quest.quest_S1_fight.over = "yes";
+			pchar.quest.quest_S1_fight = "completed";
+			pchar.quest.quest_S1_fight_won.over = "yes";
+			pchar.quest.quest_S1_fight_won = "completed";
+			
+			//realisation de toutes les quetes
+			switch (makeint(pchar.quest_S1_numQuests)) {
+				case 1: pchar.quest_S1_quest_1_completed = true; break;
+				case 2: pchar.quest_S1_quest_2_completed = true; break;
+				case 3: pchar.quest_S1_quest_3_completed = true; break;
+				case 4: pchar.quest_S1_quest_4_completed = true; break;
+				case 5: pchar.quest_S1_quest_5_completed = true; break;
+				case 6: pchar.quest_S1_quest_6_completed = true; break;
+				case 7: pchar.quest_S1_quest_7_completed = true; break;
+				case 8: pchar.quest_S1_quest_8_completed = true; break;
+				case 9: pchar.quest_S1_quest_9_completed = true; break;
+				case 10: pchar.quest_S1_quest_10_completed = true; break;
+				case 11: pchar.quest_S1_quest_11_completed = true; break;
+				case 12: pchar.quest_S1_quest_12_completed = true; break;
+				case 13: pchar.quest_S1_quest_13_completed = true; break;
+				case 14: pchar.quest_S1_quest_14_completed = true; break;
+				case 15: pchar.quest_S1_quest_15_completed = true; break;
+				case 16: pchar.quest_S1_quest_16_completed = true; break;
+				case 17: pchar.quest_S1_quest_17_completed = true; break;
+				case 18: pchar.quest_S1_quest_18_completed = true; break;
+				case 19: pchar.quest_S1_quest_19_completed = true; break;
+				case 20: pchar.quest_S1_quest_20_completed = true; break;
+			}
+			n = 0;
+			bool questCompleted;
+			int numQuest;
+			if (pchar.quest_S1_quest_1_completed == true) n++;
+			if (pchar.quest_S1_quest_2_completed == true) n++;
+			if (pchar.quest_S1_quest_3_completed == true) n++;
+			if (pchar.quest_S1_quest_4_completed == true) n++;
+			if (pchar.quest_S1_quest_5_completed == true) n++;
+			if (pchar.quest_S1_quest_6_completed == true) n++;
+			if (pchar.quest_S1_quest_7_completed == true) n++;
+			if (pchar.quest_S1_quest_8_completed == true) n++;
+			if (pchar.quest_S1_quest_9_completed == true) n++;
+			if (pchar.quest_S1_quest_10_completed == true) n++;
+			if (pchar.quest_S1_quest_11_completed == true) n++;
+			if (pchar.quest_S1_quest_12_completed == true) n++;
+			if (pchar.quest_S1_quest_13_completed == true) n++;
+			if (pchar.quest_S1_quest_14_completed == true) n++;
+			if (pchar.quest_S1_quest_15_completed == true) n++;
+			if (pchar.quest_S1_quest_16_completed == true) n++;
+			if (pchar.quest_S1_quest_17_completed == true) n++;
+			if (pchar.quest_S1_quest_18_completed == true) n++;
+			if (pchar.quest_S1_quest_19_completed == true) n++;
+			if (pchar.quest_S1_quest_20_completed == true) n++;
+			Log_SetStringToLog("PJ n:"+n);
+			Log_SetStringToLog("PJ quest_S1_nbQuests:"+pchar.quest_S1_nbQuests);
+			if (makeint(n) == makeint(pchar.quest_S1_nbQuests)) {
+				pchar.quest_S1_allQuestsCompleted = true;
+				pchar.quest_S1_quest_1_completed = false;
+				pchar.quest_S1_quest_2_completed = false;
+				pchar.quest_S1_quest_3_completed = false;
+				pchar.quest_S1_quest_4_completed = false;
+				pchar.quest_S1_quest_5_completed = false;
+				pchar.quest_S1_quest_6_completed = false;
+				pchar.quest_S1_quest_7_completed = false;
+				pchar.quest_S1_quest_8_completed = false;
+				pchar.quest_S1_quest_9_completed = false;
+				pchar.quest_S1_quest_10_completed = false;
+				pchar.quest_S1_quest_11_completed = false;
+				pchar.quest_S1_quest_12_completed = false;
+				pchar.quest_S1_quest_13_completed = false;
+				pchar.quest_S1_quest_14_completed = false;
+				pchar.quest_S1_quest_15_completed = false;
+				pchar.quest_S1_quest_16_completed = false;
+				pchar.quest_S1_quest_17_completed = false;
+				pchar.quest_S1_quest_18_completed = false;
+				pchar.quest_S1_quest_19_completed = false;
+				pchar.quest_S1_quest_20_completed = false;
+			}
+			
+			// initialisation des variables
+			pchar.quest_S1_numQuests = 0;
+			pchar.quest_S1_step = 0;
+			pchar.quest_S1_Unearthing = false;
+			pchar.quest_S1_failed = false;
+			pchar.quest_S1_gain_gold_jewelry = 0;
+			pchar.quest_S1_gain_gold_jewelry_text = "";
+			pchar.quest_S1_gain_gold = 0;
+			pchar.quest_S1_gain_jewelry1 = 0;
+			pchar.quest_S1_gain_jewelry2 = 0;
+			pchar.quest_S1_gain_jewelry3 = 0;
+			pchar.quest_S1_gain_jewelry4 = 0;
+			pchar.quest_S1_gain_jewelry5 = 0;
+			pchar.quest_S1_gain_jewelry6 = 0;
+			pchar.quest_S1_gain_jewelry7 = 0;
+			pchar.quest_S1_gain_jewelry8 = 0;
+			pchar.quest_S1_gain_jewelry9 = 0;
+			pchar.quest_S1_gain_jewelry10 = 0;
+			pchar.quest_S1_gain_jewelry11 = 0;
+			pchar.quest_S1_gain_jewelry12 = 0;
+			pchar.quest_S1_gain_jewelry13 = 0;
+			pchar.quest_S1_gain_jewelry14 = 0;
+			pchar.quest_S1_gain_jewelry15 = 0;
+			pchar.quest_S1_gain_jewelry16 = 0;
+		break;
+		
+		case "quest_S1_lastQuest_1":
+			DeleteQuestHeader("PJ_S1"); SetQuestHeader("PJ_S1"); AddQuestRecord("PJ_S1", 38);
+			pchar.quest.quest_S1_lastQuest_2.win_condition.l1 = "location";
+			pchar.quest.quest_S1_lastQuest_2.win_condition.l1.location = "QC_pirate_house_inside";
+			pchar.quest.quest_S1_lastQuest_2.win_condition = "quest_S1_lastQuest_2";
+		break;
+		
+		case "quest_S1_lastQuest_2":
+			pchar.quest_S1_Unearthing = true;
+			AddQuestRecord("PJ_S1", 39);
+			pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+			pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = -13;
+			pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = -9;
+			pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = 1;
+			pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+			pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 7;
+			pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 11;
+			pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+		break;
+		
+		case "quest_S1_lastQuest_3":
+			AddQuestRecord("PJ_S1", 40);
+			
+			pchar.quest_S1_Unearthing = false;
+			
+			homelocation = pchar.location;
+			
+			PlaceCharacter(characterFromID("Youyi TQC 2"), "goto", homelocation);
+			LAi_SetActorType(characterFromID("Youyi TQC 2"));
+			LAi_SetActorType(pchar);
+			LAi_ActorFollow(pchar, characterFromID("Youyi TQC 2"), "", 2.0);
+			LAi_ActorFollow(characterFromID("Youyi TQC 2"), pchar, "quest_S1_lastQuest_4", 2.0);
+		break;
+		
+		case "quest_S1_lastQuest_4":
+			LAi_type_actor_Reset(pchar);
+			LAi_ActorWaitDialog(pchar, characterFromID("Youyi TQC 2"));
+			LAi_ActorDialog(characterFromID("Youyi TQC 2"), pchar, "pchar_back_to_player", 2.0, 1.0);
+			characters[GetCharacterIndex("Youyi TQC 2")].dialog.currentnode = "complete_quest";
+		break;
+		
+		case "quest_S1_lastQuest_closed":
+			CloseQuestHeader("PJ_S1");
+			
+			//gain
+			for(n = 1; n <= 17; n++) {GiveItem2Character(Pchar, "jewelry1");}//saphir = 615
+			for(n = 1; n <= 7; n++) {GiveItem2Character(Pchar, "jewelry2");}//diamant = 1538
+			for(n = 1; n <= 14; n++) {GiveItem2Character(Pchar, "jewelry3");}//rubis = 769
+			for(n = 1; n <= 9; n++) {GiveItem2Character(Pchar, "jewelry4");}//emeraude = 1153
+			for(n = 1; n <= 7; n++) {GiveItem2Character(Pchar, "jewelry5");}//pepite d'or = 1538
+			for(n = 1; n <= 14; n++) {GiveItem2Character(Pchar, "jewelry11");}//grosse perle = 769
+			for(n = 1; n <= 27; n++) {GiveItem2Character(Pchar, "jewelry12");}//petite perle = 384
+			
+			LAi_ActorGoToLocation(characterFromID("Youyi TQC 2"), "reload", homelocator, "none", "", "", "", 10.0);
+			
+			pchar.quest.quest_S1_lastQuest_1.over = "yes";
+			pchar.quest.quest_S1_lastQuest_1 = "completed";
+			pchar.quest.quest_S1_lastQuest_2.over = "yes";
+			pchar.quest.quest_S1_lastQuest_2 = "completed";
+			pchar.quest.quest_S1_lastQuest_3.over = "yes";
+			pchar.quest.quest_S1_lastQuest_3 = "completed";
+			pchar.quest.quest_S1_lastQuest_4.over = "yes";
+			pchar.quest.quest_S1_lastQuest_4 = "completed";
+			pchar.quest.quest_S1_completed_1.over = "yes";
+			pchar.quest.quest_S1_completed_1 = "completed";
+			
+			pchar.quest_S1_allQuestsCompleted = false;
 		break;
 		// fin ajout PJ
 	}

@@ -152,6 +152,35 @@ bool ProcessCondition(aref condition)
 		}
 		return bTmp;
 	break;
+
+	// ajout PJ
+	case "locator_PJ":
+		ref PChar = GetMainCharacter();
+		float locx;
+		float locy;
+		float locz;
+		GetCharacterPos(GetMainCharacter(), &locx, &locy, &locz);
+		
+		// PlayStereoSound("Ambient\INCA TEMPLE\teleporter.wav");//PJ a supprimer WAV
+		
+		if (locx > makeint(pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx) && locx < makeint(pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx) && locy > makeint(pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy) && locy < makeint(pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy) && locz > makeint(pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz) && locz < makeint(pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz)) {
+			return true;
+		} else {
+			if (pchar.quest_S1_failed == true) {
+				return true;
+			} else {
+				if (pchar.quest_S1_no_treasure_here_text == 1) {
+					pchar.quest_S1_no_treasure_here_text = 2;
+					Log_SetStringToLog(GlobalStringConvert("PJ_S1_no_treasure_here_1"));
+				} else {
+					pchar.quest_S1_no_treasure_here_text = 1;
+					Log_SetStringToLog(GlobalStringConvert("PJ_S1_no_treasure_here_2"));
+				}
+				return false;
+			}
+		}
+	break;
+	// fin ajout PJ
 	
 	case "location":
 		if(refCharacter.location==condition.location) return !CharacterIsDead(refCharacter);
