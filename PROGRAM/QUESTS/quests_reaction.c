@@ -13880,6 +13880,89 @@ void QuestComplete(string sQuestName)
 			
 			pchar.quest_S1_allQuestsCompleted = false;
 		break;
+
+		case "quest_S2_agreeded":
+			DeleteQuestHeader("PJ_S2"); SetQuestHeader("PJ_S2");
+			switch (pchar.location) {
+				case "Redmond_town_04": pchar.quest_S2_started = 1; AddQuestRecord("PJ_S2", 8); AddQuestRecord("PJ_S2", 1); break
+				case "Falaise_De_Fleur_location_02": pchar.quest_S2_started = 2; AddQuestRecord("PJ_S2", 9); AddQuestRecord("PJ_S2", 2); break
+				case "Conceicao_town": pchar.quest_S2_started = 3; AddQuestRecord("PJ_S2", 10); AddQuestRecord("PJ_S2", 3); break
+				case "Muelle_town_02": pchar.quest_S2_started = 4; AddQuestRecord("PJ_S2", 11); AddQuestRecord("PJ_S2", 4); break
+				case "Douwesen_town": pchar.quest_S2_started = 5; AddQuestRecord("PJ_S2", 12); AddQuestRecord("PJ_S2", 5); break
+				case "Greenford_town": pchar.quest_S2_started = 6; AddQuestRecord("PJ_S2", 13); AddQuestRecord("PJ_S2", 6); break
+				case "Oxbay_town": pchar.quest_S2_started = 7; AddQuestRecord("PJ_S2", 14); AddQuestRecord("PJ_S2", 7); break
+			}
+			pchar.quest.quest_S2_timeOut.win_condition.l1 = "Timer";
+			pchar.quest.quest_S2_timeOut.win_condition.l1.date.day = GetAddingDataDay(0, 0, 7);
+			pchar.quest.quest_S2_timeOut.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 7);
+			pchar.quest.quest_S2_timeOut.win_condition.l1.date.year = GetAddingDataYear(0, 0, 7);
+			pchar.quest.quest_S2_timeOut.win_condition = "quest_S2_timeOut";
+		break;
+		
+		case "quest_S2_timeOut":
+			Log_SetStringToLog(GlobalStringConvert("PJ_S2_failed"));
+			AddQuestRecord("PJ_S2", 16);
+			DoQuestCheckDelay("quest_S2_closed_2", 1.0);
+		break;
+		
+		case "quest_S2_closed_1":
+			AddQuestRecord("PJ_S2", 15);
+			
+			ChangeCharacterReputation(pchar, 7);
+			AddPartyExp(pchar, 1000 * makeint(pchar.rank));
+			
+			DoQuestCheckDelay("quest_S2_closed_2", 1.0);
+		break;
+		
+		case "quest_S2_closed_2":
+			pchar.quest_S2_started = 0;
+			
+			switch (pchar.location) {
+				case "Redmond_town_03": pchar.quest_S2_Redmond_done = true; break
+				case "Falaise_De_Fleur_location_03": pchar.quest_S2_FalaiseDeFleur_done = true; break
+				case "Conceicao_town": pchar.quest_S2_Conceicao_done = true; break
+				case "Muelle_town_04": pchar.quest_S2_IslaMuelle_done = true; break
+				case "Douwesen_town": pchar.quest_S2_Douwesen_done = true; break
+				case "Greenford_town": pchar.quest_S2_Greenford_done = true; break
+				case "Oxbay_town": pchar.quest_S2_Oxbay_done = true; break
+			}
+			
+			pchar.quest.quest_S2_timeOut.over = "yes";
+			pchar.quest.quest_S2_timeOut = "completed";
+			
+			//conditions de vistoire finale
+			if (pchar.quest_S2_Redmond_done == true
+					&& pchar.quest_S2_FalaiseDeFleur_done == true
+					&& pchar.quest_S2_Conceicao_done == true
+					&& pchar.quest_S2_IslaMuelle_done == true
+					&& pchar.quest_S2_Douwesen_done == true
+					&& pchar.quest_S2_Greenford_done == true
+					&& pchar.quest_S2_Oxbay_done == true) {
+				
+				homelocation = pchar.location;
+				PlaceCharacter(characterFromID("Fabiola Rochefort"), "goto", homelocation);
+				LAi_SetActorType(characterFromID("Fabiola Rochefort"));
+				LAi_SetActorType(pchar);
+				LAi_ActorFollow(pchar, characterFromID("Fabiola Rochefort"), "", 2.0);
+				LAi_ActorFollow(characterFromID("Fabiola Rochefort"), pchar, "quest_S2_lastQuest", 2.0);
+			}
+			
+			CloseQuestHeader("PJ_S2");
+		break;
+		
+		case "quest_S2_lastQuest":
+			LAi_type_actor_Reset(pchar);
+			LAi_ActorWaitDialog(pchar, characterFromID("Fabiola Rochefort"));
+			LAi_ActorDialog(characterFromID("Fabiola Rochefort"), pchar, "pchar_back_to_player", 2.0, 1.0);
+			characters[GetCharacterIndex("Fabiola Rochefort")].dialog.currentnode = "First time";
+		break;
+		
+		case "quest_S2_lastQuest_closed":
+			DeleteQuestHeader("PJ_S2"); SetQuestHeader("PJ_S2"); AddQuestRecord("PJ_S2", 17); CloseQuestHeader("PJ_S2");
+			
+			pchar.quest.quest_S2_lastQuest.over = "yes";
+			pchar.quest.quest_S2_lastQuest = "completed";
+		break;
 		// fin ajout PJ
 	}
 }

@@ -1549,7 +1549,7 @@ int CreateTempQuestCharacters(int n)
 	ch.name = "Llewellyn";
 	ch.lastname = "Brooker";
 	ch.id = "Llewellyn Brooker";
-	ch.model = "huber_eng";
+	ch.model = "blaze"; //huber_eng
 	ch.sound_type = "male_citizen";
 	ch.sex = "man";
 	ch.location = "none";
@@ -1919,7 +1919,7 @@ int CreateTempQuestCharacters(int n)
 	ch.name 	= "Astrid";
 	ch.lastname 	= "Weather";
 	ch.id		= "Astrid Weather";
-	ch.model	= "skel1";
+	ch.model	= "towngirl2";
 	ch.sex = "woman";
 	ch.sound_type = "female_citizen";
 	ch.location = "none";

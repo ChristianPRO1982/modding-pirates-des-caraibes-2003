@@ -926,7 +926,7 @@ Je me suis engagé à aider Ghijsbrecht Van Der Hagen à demander la main de Tjaatj
 #TEXT	6
 Je me suis engagé à aider Rawlin Feaver à demander la main de Astrid Weather. Je doit être un peu fleur bleue ! En tout cas je n'ai qu'une semaine pour trouver le cadeau idéale pour la demande en fiançailles.
 #TEXT	7
-Je me suis engagé à aider Rys Scorer à demander la main de Joan Bull. Je doit être un peu fleur bleue ! En tout cas je n'ai qu'une semaine pour trouver le cadeau idéale pour la demande en fiançailles.
+Je me suis engagé à aider Rys Scorer à demander la main de Valeria Pride. Je doit être un peu fleur bleue ! En tout cas je n'ai qu'une semaine pour trouver le cadeau idéale pour la demande en fiançailles.
 #TEXT	8
 Ce n'est pas n'importe quel cadeau qu'elle souhaite mais une bague en or sertie d'émeraudes.
 #TEXT	9

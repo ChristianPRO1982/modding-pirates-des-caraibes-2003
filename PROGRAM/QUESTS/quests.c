@@ -70,53 +70,64 @@ void QuestsCheck_forLocEnter()
 			if (rand(3) == 0 && pchar.location == "Oxbay_town" && pchar.quest_S1_Samuel_Bellamy_TQC1_visible == true) PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", homelocation);
 			if (rand(3) == 0 && pchar.location == "QC_town" && pchar.quest_S1_Edward_Thatch_TQC1_visible == true) PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", homelocation);
 		} else {
-			// Log_SetStringToLog("PJ DEBUG TEST (quests.c) : pour faire apparaitre les chasseurs de trésor tout le temps");
-			if (rand(1) == 0 && pchar.location == "Redmond_town_01" && pchar.quest_S1_Elizabeth_Goodale_TQC1_visible == true) PlaceCharacter(characterFromID("Elizabeth Goodale TQC 1"), "goto", homelocation);
-			if (rand(1) == 0 && pchar.location == "Falaise_de_fleur_port_02" && pchar.quest_S1_Eustache_Busket_TQC1_visible == true) PlaceCharacter(characterFromID("Eustache Busket TQC 1"), "goto", homelocation);
-			if (rand(1) == 0 && pchar.location == "Conceicao_town" && pchar.quest_S1_Bartolomeo_Portugues_TQC1_visible == true) PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 1"), "goto", homelocation);
-			if (rand(1) == 0 && pchar.location == "Muelle_town_02" && pchar.quest_S1_Benito_Bonito_TQC1_visible == true) PlaceCharacter(characterFromID("Benito Bonito TQC 1"), "goto", homelocation);
-			if (rand(1) == 0 && pchar.location == "Douwesen_town" && pchar.quest_S1_Hendrick_van_Hoven_TQC1_visible == true) PlaceCharacter(characterFromID("Hendrick van Hoven TQC 1"), "goto", homelocation);
-			if (rand(1) == 0 && pchar.location == "Greenford_town" && pchar.quest_S1_Wimund_TQC1_visible == true) PlaceCharacter(characterFromID("Wimund TQC 1"), "goto", homelocation);
-			if (rand(1) == 0 && pchar.location == "Oxbay_town" && pchar.quest_S1_Samuel_Bellamy_TQC1_visible == true) PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", homelocation);
-			if (rand(1) == 0 && pchar.location == "QC_town" && pchar.quest_S1_Edward_Thatch_TQC1_visible == true) PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", homelocation);
+			Log_SetStringToLog("PJ DEBUG TEST (quests.c) : pour faire apparaitre les chasseurs de trésor tout le temps");
+			if (pchar.location == "Redmond_town_01" && pchar.quest_S1_Elizabeth_Goodale_TQC1_visible == true) PlaceCharacter(characterFromID("Elizabeth Goodale TQC 1"), "goto", homelocation);
+			if (pchar.location == "Falaise_de_fleur_port_02" && pchar.quest_S1_Eustache_Busket_TQC1_visible == true) PlaceCharacter(characterFromID("Eustache Busket TQC 1"), "goto", homelocation);
+			if (pchar.location == "Conceicao_town" && pchar.quest_S1_Bartolomeo_Portugues_TQC1_visible == true) PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 1"), "goto", homelocation);
+			if (pchar.location == "Muelle_town_02" && pchar.quest_S1_Benito_Bonito_TQC1_visible == true) PlaceCharacter(characterFromID("Benito Bonito TQC 1"), "goto", homelocation);
+			if (pchar.location == "Douwesen_town" && pchar.quest_S1_Hendrick_van_Hoven_TQC1_visible == true) PlaceCharacter(characterFromID("Hendrick van Hoven TQC 1"), "goto", homelocation);
+			if (pchar.location == "Greenford_town" && pchar.quest_S1_Wimund_TQC1_visible == true) PlaceCharacter(characterFromID("Wimund TQC 1"), "goto", homelocation);
+			if (pchar.location == "Oxbay_town" && pchar.quest_S1_Samuel_Bellamy_TQC1_visible == true) PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", homelocation);
+			if (pchar.location == "QC_town" && pchar.quest_S1_Edward_Thatch_TQC1_visible == true) PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", homelocation);
 		}
 		if (pchar.location == "QC_town" && pchar.quest_S1_allQuestsCompleted == true) PlaceCharacter(characterFromID("Youyi TQC 1"), "goto", homelocation);
 	}
 	if(pchar.quest_S1_Unearthing == true) pchar.quest_S1_failed = true;
 	
 	//quest S2
-	// PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", "none");
-	// PlaceCharacter(characterFromID("Magdalen Spooner"), "goto", "none");
-	// PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", "none");
-	// PlaceCharacter(characterFromID("Donatienne de La Fayette"), "goto", "none");
-	// PlaceCharacter(characterFromID("Florencio Baiano"), "goto", "none");
-	// PlaceCharacter(characterFromID("Violamte Pinto"), "goto", "none");
-	// PlaceCharacter(characterFromID("Cricorium Taffarel"), "goto", "none");
-	// PlaceCharacter(characterFromID("Alejandrina	Acosto"), "goto", "none");
-	// PlaceCharacter(characterFromID("Ghijsbrecht Van Der Hagen"), "goto", "none");
-	// PlaceCharacter(characterFromID("Tjaatje Meilink-Roelofsz"), "goto", "none");
-	// PlaceCharacter(characterFromID("Rawlin Feaver"), "goto", "none");
-	// PlaceCharacter(characterFromID("Astrid Weather"), "goto", "none");
-	// PlaceCharacter(characterFromID("Rys Scorer"), "goto", "none");
-	// PlaceCharacter(characterFromID("Valeria Pride"), "goto", "none");
-	// PlaceCharacter(characterFromID("Fabiola Rochefort"), "goto", "none");
-	// if (pchar.quest_S2_started == 0) {
-	// 	if (rand(7) == 0 && pchar.location == "Redmond_town_04" && pchar.quest_S2_Redmond_done == false) PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", homelocation);
-	// 	if (rand(7) == 0 && pchar.location == "Falaise_De_Fleur_location_02" && pchar.quest_S2_FalaiseDeFleur_done == false) PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", homelocation);
-	// 	if (rand(7) == 0 && pchar.location == "Conceicao_town" && pchar.quest_S2_Conceicao_done == false) PlaceCharacter(characterFromID("Florencio Baiano"), "goto", homelocation);
-	// 	if (rand(7) == 0 && pchar.location == "Muelle_town_02" && pchar.quest_S2_IslaMuelle_done == false) PlaceCharacter(characterFromID("Cricorium Taffarel"), "goto", homelocation);
-	// 	if (rand(7) == 0 && pchar.location == "Douwesen_town" && pchar.quest_S2_Douwesen_done == false) PlaceCharacter(characterFromID("Ghijsbrecht Van Der Hagen"), "goto", homelocation);
-	// 	if (rand(7) == 0 && pchar.location == "Greenford_town" && pchar.quest_S2_Greenford_done == false) PlaceCharacter(characterFromID("Rawlin Feaver"), "goto", homelocation);
-	// 	if (rand(7) == 0 && pchar.location == "Oxbay_town" && pchar.quest_S2_Oxbay_done == false) PlaceCharacter(characterFromID("Rys Scorer"), "goto", homelocation);
-	// } else {
-	// 	if (pchar.quest_S2_started == 1 && pchar.location == "Redmond_town_03") PlaceCharacter(characterFromID("Magdalen Spooner"), "goto", homelocation);
-	// 	if (pchar.quest_S2_started == 2 && pchar.location == "Falaise_De_Fleur_location_03") PlaceCharacter(characterFromID("Donatienne de La Fayette"), "goto", homelocation);
-	// 	if (pchar.quest_S2_started == 3 && pchar.location == "Conceicao_town") PlaceCharacter(characterFromID("Violamte Pinto"), "goto", homelocation);
-	// 	if (pchar.quest_S2_started == 4 && pchar.location == "Muelle_town_04") PlaceCharacter(characterFromID("Alejandrina	Acosto"), "goto", homelocation);
-	// 	if (pchar.quest_S2_started == 5 && pchar.location == "Douwesen_town") PlaceCharacter(characterFromID("Tjaatje Meilink-Roelofsz"), "goto", homelocation);
-	// 	if (pchar.quest_S2_started == 6 && pchar.location == "Greenford_town") PlaceCharacter(characterFromID("Astrid Weather"), "goto", homelocation);
-	// 	if (pchar.quest_S2_started == 7 && pchar.location == "Oxbay_town") PlaceCharacter(characterFromID("Valeria Pride"), "goto", homelocation);
-	// }
+	PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", "none");
+	PlaceCharacter(characterFromID("Magdalen Spooner"), "goto", "none");
+	PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", "none");
+	PlaceCharacter(characterFromID("Donatienne de La Fayette"), "goto", "none");
+	PlaceCharacter(characterFromID("Florencio Baiano"), "goto", "none");
+	PlaceCharacter(characterFromID("Violamte Pinto"), "goto", "none");
+	PlaceCharacter(characterFromID("Cricorium Taffarel"), "goto", "none");
+	PlaceCharacter(characterFromID("Alejandrina	Acosto"), "goto", "none");
+	PlaceCharacter(characterFromID("Ghijsbrecht Van Der Hagen"), "goto", "none");
+	PlaceCharacter(characterFromID("Tjaatje Meilink-Roelofsz"), "goto", "none");
+	PlaceCharacter(characterFromID("Rawlin Feaver"), "goto", "none");
+	PlaceCharacter(characterFromID("Astrid Weather"), "goto", "none");
+	PlaceCharacter(characterFromID("Rys Scorer"), "goto", "none");
+	PlaceCharacter(characterFromID("Valeria Pride"), "goto", "none");
+	PlaceCharacter(characterFromID("Fabiola Rochefort"), "goto", "none");
+	if (pchar.quest_S2_started == 0) {
+		if (1 == 1) {
+			if (rand(7) == 0 && pchar.location == "Redmond_town_04" && pchar.quest_S2_Redmond_done == false) PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", homelocation);
+			if (rand(7) == 0 && pchar.location == "Falaise_De_Fleur_location_02" && pchar.quest_S2_FalaiseDeFleur_done == false) PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", homelocation);
+			if (rand(7) == 0 && pchar.location == "Conceicao_town" && pchar.quest_S2_Conceicao_done == false) PlaceCharacter(characterFromID("Florencio Baiano"), "goto", homelocation);
+			if (rand(7) == 0 && pchar.location == "Muelle_town_02" && pchar.quest_S2_IslaMuelle_done == false) PlaceCharacter(characterFromID("Cricorium Taffarel"), "goto", homelocation);
+			if (rand(7) == 0 && pchar.location == "Douwesen_town" && pchar.quest_S2_Douwesen_done == false) PlaceCharacter(characterFromID("Ghijsbrecht Van Der Hagen"), "goto", homelocation);
+			if (rand(7) == 0 && pchar.location == "Greenford_town" && pchar.quest_S2_Greenford_done == false) PlaceCharacter(characterFromID("Rawlin Feaver"), "goto", homelocation);
+			if (rand(7) == 0 && pchar.location == "Oxbay_town" && pchar.quest_S2_Oxbay_done == false) PlaceCharacter(characterFromID("Rys Scorer"), "goto", homelocation);
+		} else {
+			Log_SetStringToLog("PJ DEBUG TEST (quests.c) : pour faire apparaitre les amoureux tout le temps");
+			if (pchar.location == "Redmond_town_04" && pchar.quest_S2_Redmond_done == false) PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", homelocation);
+			if (pchar.location == "Falaise_De_Fleur_location_02" && pchar.quest_S2_FalaiseDeFleur_done == false) PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", homelocation);
+			if (pchar.location == "Conceicao_town" && pchar.quest_S2_Conceicao_done == false) PlaceCharacter(characterFromID("Florencio Baiano"), "goto", homelocation);
+			if (pchar.location == "Muelle_town_02" && pchar.quest_S2_IslaMuelle_done == false) PlaceCharacter(characterFromID("Cricorium Taffarel"), "goto", homelocation);
+			if (pchar.location == "Douwesen_town" && pchar.quest_S2_Douwesen_done == false) PlaceCharacter(characterFromID("Ghijsbrecht Van Der Hagen"), "goto", homelocation);
+			if (pchar.location == "Greenford_town" && pchar.quest_S2_Greenford_done == false) PlaceCharacter(characterFromID("Rawlin Feaver"), "goto", homelocation);
+			if (pchar.location == "Oxbay_town" && (pchar.quest_S2_Oxbay_done == false)) PlaceCharacter(characterFromID("Rys Scorer"), "goto", homelocation);
+		}
+	} else {
+		if (pchar.quest_S2_started == 1 && pchar.location == "Redmond_town_03") PlaceCharacter(characterFromID("Magdalen Spooner"), "goto", homelocation);
+		if (pchar.quest_S2_started == 2 && pchar.location == "Falaise_De_Fleur_location_03") PlaceCharacter(characterFromID("Donatienne de La Fayette"), "goto", homelocation);
+		if (pchar.quest_S2_started == 3 && pchar.location == "Conceicao_town") PlaceCharacter(characterFromID("Violamte Pinto"), "goto", homelocation);
+		if (pchar.quest_S2_started == 4 && pchar.location == "Muelle_town_04") PlaceCharacter(characterFromID("Alejandrina	Acosto"), "goto", homelocation);
+		if (pchar.quest_S2_started == 5 && pchar.location == "Douwesen_town") PlaceCharacter(characterFromID("Tjaatje Meilink-Roelofsz"), "goto", homelocation);
+		if (pchar.quest_S2_started == 6 && pchar.location == "Greenford_town") PlaceCharacter(characterFromID("Astrid Weather"), "goto", homelocation);
+		if (pchar.quest_S2_started == 7 && pchar.location == "Oxbay_town") PlaceCharacter(characterFromID("Valeria Pride"), "goto", homelocation);
+	}
 	
 	//quest M1
 	// if (makeint(pchar.quest_M1_step) == 1 && pchar.location == "QC_pirate_house_inside") PlaceCharacter(characterFromID("Francois_l_Olonnais"), "goto", homelocation);//PJ a supprimer A MODIFIER
