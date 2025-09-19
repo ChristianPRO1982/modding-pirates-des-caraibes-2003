@@ -163,7 +163,6 @@ void OfficersReaction(string alignment)
 	}
 }
 
-
 void GiveItemToTrader(aref ch)
 {
 	int irand;
@@ -578,7 +577,7 @@ void TreasureHunterNextStep()
 	ref PChar = GetMainCharacter();
 	
 	switch (makeint(pchar.quest_S1_numQuests)) {
-		case 1://quete n∞1 - Conceicao
+		case 1://quete nù1 - Conceicao
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 4);
@@ -615,7 +614,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 2://quete n∞2 - Conceicao
+		case 2://quete nù2 - Conceicao
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 6);
@@ -637,7 +636,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 3://quete n∞3 - Douwesen
+		case 3://quete nù3 - Douwesen
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 8);
@@ -674,7 +673,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 4://quete n∞4 - Douwesen
+		case 4://quete nù4 - Douwesen
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 10);
@@ -706,7 +705,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 5://quete n∞5 - Fleur de Falaise
+		case 5://quete nù5 - Fleur de Falaise
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 12);
@@ -728,7 +727,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 6://quete n∞6 - Fleur de Falaise
+		case 6://quete nù6 - Fleur de Falaise
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 14);
@@ -755,7 +754,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 7://quete n∞7 - Isla Muelle
+		case 7://quete nù7 - Isla Muelle
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 16);
@@ -782,7 +781,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 8://quete n∞8 - Isla Muelle
+		case 8://quete nù8 - Isla Muelle
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 18);
@@ -804,7 +803,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 9://quete n∞9 - Quebradas Costillas
+		case 9://quete nù9 - Quebradas Costillas
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 20);
@@ -831,7 +830,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 10://quete n∞10 - Quebradas Costillas
+		case 10://quete nù10 - Quebradas Costillas
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 22);
@@ -863,7 +862,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 11://quete n∞11 - Redmond
+		case 11://quete nù11 - Redmond
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 24);
@@ -885,7 +884,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 12://quete n∞12 - Redmond
+		case 12://quete nù12 - Redmond
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 26);
@@ -912,7 +911,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 13://quete n∞13 - Oxbay
+		case 13://quete nù13 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 28);
@@ -944,7 +943,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 14://quete n∞14 - Oxbay
+		case 14://quete nù14 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 30);
@@ -986,7 +985,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 15://quete n∞15 - Oxbay
+		case 15://quete nù15 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 32);
@@ -1028,7 +1027,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 16://quete n∞16 - Oxbay
+		case 16://quete nù16 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 34);
@@ -1065,7 +1064,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 17://quete n∞17 - Oxbay
+		case 17://quete nù17 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 36);
@@ -1087,7 +1086,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 18://quete n∞18 - Oxbay
+		case 18://quete nù18 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 41);
@@ -1114,7 +1113,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 19://quete n∞19 - Redmond
+		case 19://quete nù19 - Redmond
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 43);
@@ -1146,7 +1145,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 20://quete n∞20 - Isla Muelle
+		case 20://quete nù20 - Isla Muelle
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 45);
@@ -1178,7 +1177,7 @@ void GenerateTreasureHunterQuest(string startIsland, int alternativeQuestNumber)
 	
 	//generation des gains
 	if (rand(makeint(pchar.skill.Sneak)) < 3) {
-		// OR
+		// de l'or
 		pchar.quest_S1_gain_gold = 1000 + (75 * makeint(pchar.rank)) + (5 * makeint(pchar.rank) * rand(makeint(pchar.skill.sneak)));
 	} else {
 		// JEWELRY <=> JOAILLERIE (prix a Redmond en debut de partie)
@@ -1421,8 +1420,8 @@ void QuestComplete(string sQuestName)
 	int iColony;
 	int iTradeGoods, iQuantityGoods, iTradeNation;
 	string homelocation, homegroup, homelocator, tavernfriend;
-	ref rCrew_leader, rCrew1, rCrew2, rCrew3;// ajout PJ Quest S1
-	string sCrew_leader, sCrew1, sCrew2, sCrew3;// ajout PJ Quest S1
+	ref rCrew_leader, rCrew1, rCrew2, rCrew3;// ajout PJ
+	string sCrew_leader, sCrew1, sCrew2, sCrew3;// ajout PJ
 
 	//Log_SetStringToLog("Quest " + sQuestName + " completed");
 	//trace("=============================================== QUEST " + sQuestName + " CHECKED");
@@ -3548,7 +3547,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_GreenfordAssaultStarted":
-			Pchar.quest.Story_CaptureGreenfordFort.win_condition.l1 = "FORT_destroy";
+			Pchar.quest.Story_CaptureGreenfordFort.win_condition.l1 = "FORT_destroy";//PJ
 			Pchar.quest.Story_CaptureGreenfordFort.win_condition.l1.character = "Greenford Commander";
 			Pchar.quest.Story_CaptureGreenfordFort.win_condition = "Story_CaptureGreenfordFort";
 			
@@ -4318,7 +4317,9 @@ void QuestComplete(string sQuestName)
 			//LaunchMainMenu();
 			Characters[GetCharacterIndex("researcher")].Dialog.CurrentNode = "First time";
 			Characters[GetCharacterIndex("danielle")].Dialog.CurrentNode = "First time";
+
 			pchar.quest_M1_step = 0;
+			pchar.quest_M2_step = 0;
 		break;
 
 		case "remove_officers_from_blaze_in_redmond_complete":
@@ -12918,7 +12919,7 @@ void QuestComplete(string sQuestName)
 			}
 		break;
 	
-		case "prepare_for_convoy_quest":
+		case "prepare_for_convoy_quest"://PJ
 			iPassenger = rand(3);
 			switch (iPassenger)
 			{
@@ -13065,7 +13066,7 @@ void QuestComplete(string sQuestName)
 				case "Oxbay_port": DeleteQuestHeader("convoy_ox"); SetQuestHeader("convoy_ox"); AddQuestRecord("convoy_ox", "1"); sDest = "Oxbay_port"; break;
 				case "Conceicao_shore_02": DeleteQuestHeader("convoy_smg"); SetQuestHeader("convoy_smg"); AddQuestRecord("convoy_smg", "1"); sDest = "Conceicao_shore_02"; break;
 			}
-			pchar.quest.generate_convoy_quest_completed.win_condition.l1 = "Location";
+			pchar.quest.generate_convoy_quest_completed.win_condition.l1 = "Location";//PJ
 			pchar.quest.generate_convoy_quest_completed.win_condition.l1.location = sDest;
 			pchar.quest.generate_convoy_quest_completed.win_condition = "generate_convoy_quest_completed";
 		break;
@@ -13375,7 +13376,7 @@ void QuestComplete(string sQuestName)
 			LAi_NoRebirthDisable(characterFromID("Greenford Prison Commendant"));
 			LAi_SetHp(characterFromID("Greenford Prison Commendant"), 80.0, 80.0);
 		break;
-
+		
 		// ajout PJ
 		case "PJ_QR_teleportation_1":
 			LAi_Fade("PJ_QR_teleportation_2", "");
@@ -13405,12 +13406,12 @@ void QuestComplete(string sQuestName)
 				case 14: pchar.model	= "will"; break;
 				case 15: pchar.model	= "blackman"; break;
 			}
-		break;
+		break
 
 		case "PJ_QR_teleportation_3":
 			Log_SetStringToLog(GlobalStringConvert("PJ_TELEPORTATION_1"));
-		break;
-
+		break
+		
 		case "quest_S1_agreeded":
 			DeleteQuestHeader("PJ_S1"); SetQuestHeader("PJ_S1");
 			pchar.quest_S1_step = 1;
@@ -13713,31 +13714,6 @@ void QuestComplete(string sQuestName)
 				case 19: pchar.quest_S1_quest_19_completed = true; break;
 				case 20: pchar.quest_S1_quest_20_completed = true; break;
 			}
-			//DEBUG TEST
-			// pour dÈboguer la fin rapidement
-			// toutes les quetes sont faites
-			/*
-			pchar.quest_S1_quest_1_completed = true;
-			pchar.quest_S1_quest_2_completed = true;
-			pchar.quest_S1_quest_3_completed = true;
-			pchar.quest_S1_quest_4_completed = true;
-			pchar.quest_S1_quest_5_completed = true;
-			pchar.quest_S1_quest_6_completed = true;
-			pchar.quest_S1_quest_7_completed = true;
-			pchar.quest_S1_quest_8_completed = true;
-			pchar.quest_S1_quest_9_completed = true;
-			pchar.quest_S1_quest_10_completed = true;
-			pchar.quest_S1_quest_11_completed = true;
-			pchar.quest_S1_quest_12_completed = true;
-			pchar.quest_S1_quest_13_completed = true;
-			pchar.quest_S1_quest_14_completed = true;
-			pchar.quest_S1_quest_15_completed = true;
-			pchar.quest_S1_quest_16_completed = true;
-			pchar.quest_S1_quest_17_completed = true;
-			pchar.quest_S1_quest_18_completed = true;
-			pchar.quest_S1_quest_19_completed = true;
-			pchar.quest_S1_quest_20_completed = true;
-			//fin du DEBUG TEST*/
 			n = 0;
 			bool questCompleted;
 			int numQuest;
@@ -13761,8 +13737,8 @@ void QuestComplete(string sQuestName)
 			if (pchar.quest_S1_quest_18_completed == true) n++;
 			if (pchar.quest_S1_quest_19_completed == true) n++;
 			if (pchar.quest_S1_quest_20_completed == true) n++;
-			// Log_SetStringToLog("PJ DEBUG TEST (quests_reaction.c) : n:"+n);
-			// Log_SetStringToLog("PJ DEBUG TEST (quests_reaction.c) : quest_S1_nbQuests:"+pchar.quest_S1_nbQuests);
+			Log_SetStringToLog("PJ n:"+n);
+			Log_SetStringToLog("PJ quest_S1_nbQuests:"+pchar.quest_S1_nbQuests);
 			if (makeint(n) == makeint(pchar.quest_S1_nbQuests)) {
 				pchar.quest_S1_allQuestsCompleted = true;
 				pchar.quest_S1_quest_1_completed = false;
@@ -13881,12 +13857,12 @@ void QuestComplete(string sQuestName)
 			
 			pchar.quest_S1_allQuestsCompleted = false;
 		break;
-
+		
 		case "quest_S2_agreeded":
 			DeleteQuestHeader("PJ_S2"); SetQuestHeader("PJ_S2");
 			switch (pchar.location) {
 				case "Redmond_town_04": pchar.quest_S2_started = 1; AddQuestRecord("PJ_S2", 8); AddQuestRecord("PJ_S2", 1); break
-				case "Falaise_De_Fleur_location_02": pchar.quest_S2_started = 2; AddQuestRecord("PJ_S2", 9); AddQuestRecord("PJ_S2", 2); break
+				case "Falaise_De_Fleur_location_02": pchar.quest_S2_started = 2; AddQuestRecord("PJ_S2", 8); AddQuestRecord("PJ_S2", 2); break
 				case "Conceicao_town": pchar.quest_S2_started = 3; AddQuestRecord("PJ_S2", 10); AddQuestRecord("PJ_S2", 3); break
 				case "Muelle_town_02": pchar.quest_S2_started = 4; AddQuestRecord("PJ_S2", 11); AddQuestRecord("PJ_S2", 4); break
 				case "Douwesen_town": pchar.quest_S2_started = 5; AddQuestRecord("PJ_S2", 12); AddQuestRecord("PJ_S2", 5); break
@@ -13902,12 +13878,12 @@ void QuestComplete(string sQuestName)
 		
 		case "quest_S2_timeOut":
 			Log_SetStringToLog(GlobalStringConvert("PJ_S2_failed"));
-			AddQuestRecord("PJ_S2", 16);
+			AddQuestRecord("PJ_S2", 18);
 			DoQuestCheckDelay("quest_S2_closed_2", 1.0);
 		break;
 		
 		case "quest_S2_closed_1":
-			AddQuestRecord("PJ_S2", 15);
+			AddQuestRecord("PJ_S2", 17);
 			
 			ChangeCharacterReputation(pchar, 7);
 			AddPartyExp(pchar, 1000 * makeint(pchar.rank));
@@ -13964,7 +13940,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.quest_S2_lastQuest.over = "yes";
 			pchar.quest.quest_S2_lastQuest = "completed";
 		break;
-
+		
 		case "quest_M1_agreeded":
 			DeleteQuestHeader("PJ_M1"); SetQuestHeader("PJ_M1"); AddQuestRecord("PJ_M1", 1);
 			
@@ -14027,7 +14003,7 @@ void QuestComplete(string sQuestName)
 			// LAi_SetImmortal(characterFromID("Douwesen Commander"), false);//PJ a supprimer ?
 			// LAi_SetImmortal(characterFromID("Greenford Commander"), false);//PJ a supprimer ?
 			
-			//Desactivation de la capacite de dechargement sur líile
+			//Desactivation de la capacite de dechargement sur lùile
 			Island_SetReloadEnableGlobal("Redmond", false);
 			Island_SetReloadEnableGlobal("FalaiseDeFleur", false);
 			Island_SetReloadEnableGlobal("Conceicao", false);
@@ -14341,7 +14317,7 @@ void QuestComplete(string sQuestName)
 		case "quest_M1_GotoRedmondPrison":
 			AddQuestRecord("PJ_M1", 16);
 			
-			//reactivation de la capacite de dechargement sur líile
+			//reactivation de la capacite de dechargement sur lùile
 			Island_SetReloadEnableGlobal("Redmond", true);
 			Island_SetReloadEnableGlobal("FalaiseDeFleur", true);
 			Island_SetReloadEnableGlobal("Conceicao", true);

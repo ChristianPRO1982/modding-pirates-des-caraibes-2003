@@ -102,13 +102,13 @@ void QuestsCheck_forLocEnter()
 	PlaceCharacter(characterFromID("Fabiola Rochefort"), "goto", "none");
 	if (pchar.quest_S2_started == 0) {
 		if (1 == 1) {
-			if (rand(7) == 0 && pchar.location == "Redmond_town_04" && pchar.quest_S2_Redmond_done == false) PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", homelocation);
-			if (rand(7) == 0 && pchar.location == "Falaise_De_Fleur_location_02" && pchar.quest_S2_FalaiseDeFleur_done == false) PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", homelocation);
-			if (rand(7) == 0 && pchar.location == "Conceicao_town" && pchar.quest_S2_Conceicao_done == false) PlaceCharacter(characterFromID("Florencio Baiano"), "goto", homelocation);
-			if (rand(7) == 0 && pchar.location == "Muelle_town_02" && pchar.quest_S2_IslaMuelle_done == false) PlaceCharacter(characterFromID("Cricorium Taffarel"), "goto", homelocation);
-			if (rand(7) == 0 && pchar.location == "Douwesen_town" && pchar.quest_S2_Douwesen_done == false) PlaceCharacter(characterFromID("Ghijsbrecht Van Der Hagen"), "goto", homelocation);
-			if (rand(7) == 0 && pchar.location == "Greenford_town" && pchar.quest_S2_Greenford_done == false) PlaceCharacter(characterFromID("Rawlin Feaver"), "goto", homelocation);
-			if (rand(7) == 0 && pchar.location == "Oxbay_town" && pchar.quest_S2_Oxbay_done == false) PlaceCharacter(characterFromID("Rys Scorer"), "goto", homelocation);
+			if (rand(5) == 0 && pchar.location == "Redmond_town_04" && pchar.quest_S2_Redmond_done == false) PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", homelocation);
+			if (rand(5) == 0 && pchar.location == "Falaise_De_Fleur_location_02" && pchar.quest_S2_FalaiseDeFleur_done == false) PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", homelocation);
+			if (rand(5) == 0 && pchar.location == "Conceicao_town" && pchar.quest_S2_Conceicao_done == false) PlaceCharacter(characterFromID("Florencio Baiano"), "goto", homelocation);
+			if (rand(5) == 0 && pchar.location == "Muelle_town_02" && pchar.quest_S2_IslaMuelle_done == false) PlaceCharacter(characterFromID("Cricorium Taffarel"), "goto", homelocation);
+			if (rand(5) == 0 && pchar.location == "Douwesen_town" && pchar.quest_S2_Douwesen_done == false) PlaceCharacter(characterFromID("Ghijsbrecht Van Der Hagen"), "goto", homelocation);
+			if (rand(5) == 0 && pchar.location == "Greenford_town" && pchar.quest_S2_Greenford_done == false) PlaceCharacter(characterFromID("Rawlin Feaver"), "goto", homelocation);
+			if (rand(5) == 0 && pchar.location == "Oxbay_town" && pchar.quest_S2_Oxbay_done == false) PlaceCharacter(characterFromID("Rys Scorer"), "goto", homelocation);
 		} else {
 			Log_SetStringToLog("PJ DEBUG TEST (quests.c) : pour faire apparaitre les amoureux tout le temps");
 			if (pchar.location == "Redmond_town_04" && pchar.quest_S2_Redmond_done == false) PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", homelocation);
@@ -132,6 +132,10 @@ void QuestsCheck_forLocEnter()
 	//quest M1
 	if (makeint(pchar.quest_M1_step) == 0 && pchar.location == "QC_pirate_house_inside") PlaceCharacter(characterFromID("Francois_l_Olonnais"), "goto", homelocation);
 	if (makeint(pchar.quest_M1_step) == 9 && pchar.location == "QC_pirate_house_inside") PlaceCharacter(characterFromID("Chui A-poo"), "goto", homelocation);
+
+	//quest M2
+	PlaceCharacter(characterFromID("Christopher Myngs"), "goto", homelocation); // à supprimer
+	if (makeint(pchar.quest_M2_step) == 0 && pchar.location == "Redmond_prison") PlaceCharacter(characterFromID("Christopher Myngs"), "goto", homelocation);
 	
 	// POUR CREER DES QUETES
 	// SetNationRelation2MainCharacter(PIRATE, RELATION_FRIEND);

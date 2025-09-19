@@ -3237,6 +3237,44 @@ int CreateTempQuestCharacters(int n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Gyles Dubois";
 	n = n + 1;
+
+	//§§§§§§§§§§§§§§§§
+	//§§§ QUEST M2 §§§
+	//§§§§§§§§§§§§§§§§
+	makeref(ch,Characters[n]);
+	ch.name 	= "Christopher";
+	ch.lastname 	= "Myngs";
+	ch.id		= "Christopher Myngs";
+	ch.model = "Offic_eng";
+	ch.sex = "man";
+	ch.sound_type = "soldier";
+	LAi_NoRebirthEnable(ch);
+	ch.nation = ENGLAND;
+	GiveItem2Character(ch, BLADE_LONG);
+	ch.equip.blade = BLADE_LONG;
+	ch.location	= "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "PJ Quest M2 Christopher Myngs_dialog.c";
+	ch.rank 	= 1;
+	ch.reputation = "1";
+	ch.experience = "0";
+	ch.skill.Leadership = "8";
+	ch.skill.Fencing = "10";
+	ch.skill.Sailing = "9";
+	ch.skill.Accuracy = "8";
+	ch.skill.Cannons = "9";
+	ch.skill.Grappling = "3";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "8";
+	ch.money = "10";
+	LAi_SetMerchantType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	ch.greeting = "Gr_Redmond Soldier";
+	n = n + 1;
 	// fin ajout PJ
 
 	makeref(ch,Characters[n]);			// Ethilrede Claar - пират, который продал в рабство одного из наших офицеров () Leborio Drago

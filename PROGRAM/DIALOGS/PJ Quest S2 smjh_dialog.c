@@ -14,7 +14,7 @@ void ProcessDialogEvent()
 	makeref(d, Dialog);
 	makearef(Diag, NPChar.Dialog);
 	
-	// smjh = Suivez-Moi-Jeune-Homme (c'est un mot de la langue franÃ§aise ! )
+	// smjh = Suivez-Moi-Jeune-Homme (c'est un mot de la langue française ! )
 	string amantFirstName, amantLastName, smjhFirstName, smjhLastName, smjhJewelry, smjhJewelryID;
 	switch (pchar.location) {
 		case "Redmond_town_03": amantFirstName = "Llewellyn"; amantLastName = "Brooker"; smjhFirstName = "Magdalen"; smjhLastName = "Spooner"; smjhJewelry = "une bague en or sertie d'emeraudes."; smjhJewelryID = "jewelry7"; break;

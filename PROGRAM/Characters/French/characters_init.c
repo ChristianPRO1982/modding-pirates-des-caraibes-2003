@@ -70,7 +70,7 @@ void CreateCharacters()
 	ch.rank 	= 1;
 	ch.reputation = "50";
 	ch.experience = 0;//CalculateExperienceFromRank(sti(ch.rank));
-	ch.skill.Leadership = "1";
+	ch.skill.Leadership = "1"; // commandement
 	ch.skill.Fencing = "1";
 	ch.skill.Sailing = "1";
 	ch.skill.Accuracy = "1";
@@ -79,9 +79,9 @@ void CreateCharacters()
 	ch.skill.Repair = "1";
 	ch.skill.Defence = "1";
 	ch.skill.Commerce = "1";
-	ch.skill.Sneak = "1";
-	ch.skill.freeskill = 2;
-	ch.perks.freepoints = 1;
+	ch.skill.Sneak = "1"; // chance
+	ch.skill.freeskill = 2; // les commpétences ci-dessus
+	ch.perks.freepoints = 1; // les compétences particulières avec les actions rapides
 	ch.money = "1000";
 	ch.Ship.Name = "Victory";
 	//ch.Ship.Type = SHIP_FRIGATE_ENGLAND;
@@ -117,7 +117,7 @@ void CreateCharacters()
 	stmp = CHEAP_SPYGLASS;	Ch.items.(stmp) = 1;*/
 
 	//PJ pour créer des quête
-	ch.quest.PNJ_Trop_Fort = true;
+	ch.quest.PNJ_Trop_Fort = true;/*
 	// GiveItem2Character(ch, "blade1");
 	// GiveItem2Character(ch, "blade2");
 	// GiveItem2Character(ch, "blade3");
@@ -203,6 +203,8 @@ void CreateCharacters()
 	ch.quest_S2_Oxbay_done = false;
 	//M1 : Le Pirate des Caraïbes
 	ch.quest_M1_step = -1;
+	//M2 : A la poursuite de Carmen San Diego
+	ch.quest_M2_step = 0;
 
 	// QUESTS BEGINNINGS
 
