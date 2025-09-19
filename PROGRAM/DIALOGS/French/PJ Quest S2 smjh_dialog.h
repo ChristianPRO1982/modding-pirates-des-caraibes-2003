@@ -1,0 +1,22 @@
+string DLG_TEXT[19] = {
+"Bonjour monsieur. Qui êtes-vous ?",
+"Bonjour à vous demoiselle, je suis ",
+", capitaine du '",
+"', il est fière mon navire, il est beau mon bateau, c'est un fameux trois...",
+"Pfff ! Je connais la chanson. Je me présente, je m'appelle ",
+"Salutations !",
+"Que puis-je pour vous ?",
+"Je viens de la part de ",
+"Oh ! ..... [elle rougie]. Il est tellement... Je ne serais vous dire combien. Seulement, il doit me prouver qu'il puisse vraiment se passer de ses parents. Ils sont puissants mais c'est pas avec eux que je veux me marier !",
+"C'est que les temps sont durs en ce moment. Ne pouvez-vous pas vous contenter d'une demande un genoux à terre ?",
+"COMMENT ? Je ne suis pas une vulguère fille du peuple !",
+"Ne... ne vous inquiétez pas, tout ira pour le mieux.",
+"Voici le présent qu'il vous offre pour faire sa demande.",
+"Oh, ",
+" !!! C'est si magnifique. Comment a-t-il fait pour trouver ce bijoux ?",
+"(bin on dira que c'est lui qu'il lui a acheté ! grrr...) C'est un homme plein de ressources. Je vous souhaites une très belle vie.",
+"Au revoir capitaine ",
+"Au revoir miss ",
+"Merci capitaine pour tout ce que vous avez fait pour nous.",
+
+};

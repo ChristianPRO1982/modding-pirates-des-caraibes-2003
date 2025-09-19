@@ -42,6 +42,108 @@ void QuestsInit()
 
 void QuestsCheck_forLocEnter()
 {
+	// ajout PJ
+	ref pchar = GetMainCharacter();
+	string homelocation;
+	
+	// personnages
+	homelocation = pchar.location;
+	
+	//quest S1
+	PlaceCharacter(characterFromID("Elizabeth Goodale TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Eustache Busket TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Benito Bonito TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Hendrick van Hoven TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Wimund TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Youyi TQC 1"), "goto", "none");
+	if (pchar.quest_S1_step == 0) {
+		if (1 == 1) {
+			if (rand(3) == 0 && pchar.location == "Redmond_town_01" && pchar.quest_S1_Elizabeth_Goodale_TQC1_visible == true) PlaceCharacter(characterFromID("Elizabeth Goodale TQC 1"), "goto", homelocation);
+			if (rand(3) == 0 && pchar.location == "Falaise_de_fleur_port_02" && pchar.quest_S1_Eustache_Busket_TQC1_visible == true) PlaceCharacter(characterFromID("Eustache Busket TQC 1"), "goto", homelocation);
+			if (rand(3) == 0 && pchar.location == "Conceicao_town" && pchar.quest_S1_Bartolomeo_Portugues_TQC1_visible == true) PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 1"), "goto", homelocation);
+			if (rand(3) == 0 && pchar.location == "Muelle_town_02" && pchar.quest_S1_Benito_Bonito_TQC1_visible == true) PlaceCharacter(characterFromID("Benito Bonito TQC 1"), "goto", homelocation);
+			if (rand(3) == 0 && pchar.location == "Douwesen_town" && pchar.quest_S1_Hendrick_van_Hoven_TQC1_visible == true) PlaceCharacter(characterFromID("Hendrick van Hoven TQC 1"), "goto", homelocation);
+			if (rand(3) == 0 && pchar.location == "Greenford_town" && pchar.quest_S1_Wimund_TQC1_visible == true) PlaceCharacter(characterFromID("Wimund TQC 1"), "goto", homelocation);
+			if (rand(3) == 0 && pchar.location == "Oxbay_town" && pchar.quest_S1_Samuel_Bellamy_TQC1_visible == true) PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", homelocation);
+			if (rand(3) == 0 && pchar.location == "QC_town" && pchar.quest_S1_Edward_Thatch_TQC1_visible == true) PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", homelocation);
+		} else {
+			Log_SetStringToLog("PJ DEBUG TEST (quests.c) : pour faire apparaitre les chasseurs de trйsor tout le temps");
+			if (pchar.location == "Redmond_town_01" && pchar.quest_S1_Elizabeth_Goodale_TQC1_visible == true) PlaceCharacter(characterFromID("Elizabeth Goodale TQC 1"), "goto", homelocation);
+			if (pchar.location == "Falaise_de_fleur_port_02" && pchar.quest_S1_Eustache_Busket_TQC1_visible == true) PlaceCharacter(characterFromID("Eustache Busket TQC 1"), "goto", homelocation);
+			if (pchar.location == "Conceicao_town" && pchar.quest_S1_Bartolomeo_Portugues_TQC1_visible == true) PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 1"), "goto", homelocation);
+			if (pchar.location == "Muelle_town_02" && pchar.quest_S1_Benito_Bonito_TQC1_visible == true) PlaceCharacter(characterFromID("Benito Bonito TQC 1"), "goto", homelocation);
+			if (pchar.location == "Douwesen_town" && pchar.quest_S1_Hendrick_van_Hoven_TQC1_visible == true) PlaceCharacter(characterFromID("Hendrick van Hoven TQC 1"), "goto", homelocation);
+			if (pchar.location == "Greenford_town" && pchar.quest_S1_Wimund_TQC1_visible == true) PlaceCharacter(characterFromID("Wimund TQC 1"), "goto", homelocation);
+			if (pchar.location == "Oxbay_town" && pchar.quest_S1_Samuel_Bellamy_TQC1_visible == true) PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", homelocation);
+			if (pchar.location == "QC_town" && pchar.quest_S1_Edward_Thatch_TQC1_visible == true) PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", homelocation);
+		}
+		if (pchar.location == "QC_town" && pchar.quest_S1_allQuestsCompleted == true) PlaceCharacter(characterFromID("Youyi TQC 1"), "goto", homelocation);
+	}
+	if(pchar.quest_S1_Unearthing == true) pchar.quest_S1_failed = true;
+	
+	//quest S2
+	PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", "none");
+	PlaceCharacter(characterFromID("Magdalen Spooner"), "goto", "none");
+	PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", "none");
+	PlaceCharacter(characterFromID("Donatienne de La Fayette"), "goto", "none");
+	PlaceCharacter(characterFromID("Florencio Baiano"), "goto", "none");
+	PlaceCharacter(characterFromID("Violamte Pinto"), "goto", "none");
+	PlaceCharacter(characterFromID("Cricorium Taffarel"), "goto", "none");
+	PlaceCharacter(characterFromID("Alejandrina	Acosto"), "goto", "none");
+	PlaceCharacter(characterFromID("Ghijsbrecht Van Der Hagen"), "goto", "none");
+	PlaceCharacter(characterFromID("Tjaatje Meilink-Roelofsz"), "goto", "none");
+	PlaceCharacter(characterFromID("Rawlin Feaver"), "goto", "none");
+	PlaceCharacter(characterFromID("Astrid Weather"), "goto", "none");
+	PlaceCharacter(characterFromID("Rys Scorer"), "goto", "none");
+	PlaceCharacter(characterFromID("Valeria Pride"), "goto", "none");
+	PlaceCharacter(characterFromID("Fabiola Rochefort"), "goto", "none");
+	if (pchar.quest_S2_started == 0) {
+		if (1 == 1) {
+			if (rand(7) == 0 && pchar.location == "Redmond_town_04" && pchar.quest_S2_Redmond_done == false) PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", homelocation);
+			if (rand(7) == 0 && pchar.location == "Falaise_De_Fleur_location_02" && pchar.quest_S2_FalaiseDeFleur_done == false) PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", homelocation);
+			if (rand(7) == 0 && pchar.location == "Conceicao_town" && pchar.quest_S2_Conceicao_done == false) PlaceCharacter(characterFromID("Florencio Baiano"), "goto", homelocation);
+			if (rand(7) == 0 && pchar.location == "Muelle_town_02" && pchar.quest_S2_IslaMuelle_done == false) PlaceCharacter(characterFromID("Cricorium Taffarel"), "goto", homelocation);
+			if (rand(7) == 0 && pchar.location == "Douwesen_town" && pchar.quest_S2_Douwesen_done == false) PlaceCharacter(characterFromID("Ghijsbrecht Van Der Hagen"), "goto", homelocation);
+			if (rand(7) == 0 && pchar.location == "Greenford_town" && pchar.quest_S2_Greenford_done == false) PlaceCharacter(characterFromID("Rawlin Feaver"), "goto", homelocation);
+			if (rand(7) == 0 && pchar.location == "Oxbay_town" && pchar.quest_S2_Oxbay_done == false) PlaceCharacter(characterFromID("Rys Scorer"), "goto", homelocation);
+		} else {
+			Log_SetStringToLog("PJ DEBUG TEST (quests.c) : pour faire apparaitre les amoureux tout le temps");
+			if (pchar.location == "Redmond_town_04" && pchar.quest_S2_Redmond_done == false) PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", homelocation);
+			if (pchar.location == "Falaise_De_Fleur_location_02" && pchar.quest_S2_FalaiseDeFleur_done == false) PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", homelocation);
+			if (pchar.location == "Conceicao_town" && pchar.quest_S2_Conceicao_done == false) PlaceCharacter(characterFromID("Florencio Baiano"), "goto", homelocation);
+			if (pchar.location == "Muelle_town_02" && pchar.quest_S2_IslaMuelle_done == false) PlaceCharacter(characterFromID("Cricorium Taffarel"), "goto", homelocation);
+			if (pchar.location == "Douwesen_town" && pchar.quest_S2_Douwesen_done == false) PlaceCharacter(characterFromID("Ghijsbrecht Van Der Hagen"), "goto", homelocation);
+			if (pchar.location == "Greenford_town" && pchar.quest_S2_Greenford_done == false) PlaceCharacter(characterFromID("Rawlin Feaver"), "goto", homelocation);
+			if (pchar.location == "Oxbay_town" && (pchar.quest_S2_Oxbay_done == false)) PlaceCharacter(characterFromID("Rys Scorer"), "goto", homelocation);
+		}
+	} else {
+		if (pchar.quest_S2_started == 1 && pchar.location == "Redmond_town_03") PlaceCharacter(characterFromID("Magdalen Spooner"), "goto", homelocation);
+		if (pchar.quest_S2_started == 2 && pchar.location == "Falaise_De_Fleur_location_03") PlaceCharacter(characterFromID("Donatienne de La Fayette"), "goto", homelocation);
+		if (pchar.quest_S2_started == 3 && pchar.location == "Conceicao_town") PlaceCharacter(characterFromID("Violamte Pinto"), "goto", homelocation);
+		if (pchar.quest_S2_started == 4 && pchar.location == "Muelle_town_04") PlaceCharacter(characterFromID("Alejandrina	Acosto"), "goto", homelocation);
+		if (pchar.quest_S2_started == 5 && pchar.location == "Douwesen_town") PlaceCharacter(characterFromID("Tjaatje Meilink-Roelofsz"), "goto", homelocation);
+		if (pchar.quest_S2_started == 6 && pchar.location == "Greenford_town") PlaceCharacter(characterFromID("Astrid Weather"), "goto", homelocation);
+		if (pchar.quest_S2_started == 7 && pchar.location == "Oxbay_town") PlaceCharacter(characterFromID("Valeria Pride"), "goto", homelocation);
+	}
+	
+	//quest M1
+	if (makeint(pchar.quest_M1_step) == 0 && pchar.location == "QC_pirate_house_inside") PlaceCharacter(characterFromID("Francois_l_Olonnais"), "goto", homelocation);
+	if (makeint(pchar.quest_M1_step) == 9 && pchar.location == "QC_pirate_house_inside") PlaceCharacter(characterFromID("Chui A-poo"), "goto", homelocation);
+	
+	// POUR CREER DES QUETES
+	// SetNationRelation2MainCharacter(PIRATE, RELATION_FRIEND);
+	// SetNationRelation2MainCharacter(FRANCE, RELATION_FRIEND);
+	//PJ connaitre a chaque reload des informations (ex : position = pchar.location)
+	// Log_SetStringToLog("PJ 1:"+pchar.location);
+	// Log_SetStringToLog("PJ 2:"+pchar.location.locator);
+	// Log_SetStringToLog("PJ 3:"+pchar.location.locator_group);//location.group
+	// Log_SetStringToLog("PJ blade:"+pchar.equip.blade);
+	// Log_SetStringToLog("PJ gun:"+pchar.equip.gun);
+	// fin ajout PJ
+
 	QC_DoUnloadLocation();
 	QuestsCheck();
 }
@@ -176,10 +278,10 @@ void DeleteQuestHeader(string idQuest)
 }
 
 //**********************************************************************************
-// Утилиты для работы с квестами
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 //==================================================================================
 
-// проверить флаг состояния квеста
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 //-----------------------------------------
 bool CheckQuestAttribute(string attributeName, string attributeValue)
 {
@@ -189,7 +291,7 @@ bool CheckQuestAttribute(string attributeName, string attributeValue)
 	return false;
 }
 
-// удалить флаг состояния квеста
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 //------------------------------------------
 void DeleteQuestAttribute(string attributeName)
 {
@@ -233,7 +335,7 @@ bool GetNearLocator(string groupName, ref float_dist, ref findedLocator, float m
 	return bYesFind;
 }
 
-// установить персонажа в ближайший локатор группы goto (но не ближе минимальной дистанции)
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ goto (пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
 //--------------------------------------------------------------------------------------------
 bool SetCharacterToNearLocatorFromMe(string characterID, float minDistance)
 {
@@ -250,7 +352,7 @@ bool SetCharacterToNearLocatorFromMe(string characterID, float minDistance)
 	return true;
 }
 
-// получить ссылку на персонаж через его ID-шник
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ ID-пїЅпїЅпїЅпїЅ
 //------------------------------------------------------
 ref CharacterFromID(string characterID)
 {
@@ -267,7 +369,7 @@ void WaitDatePostEventControl()
 	QuestsCheck();
 }
 
-// пропустить некоторое время с фэйдом экрана
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 //----------------------------------------------------
 void WaitDate(string postName,int year, int month, int day, int hour, int minute)
 {
@@ -280,7 +382,7 @@ void WaitDate(string postName,int year, int month, int day, int hour, int minute
 	WaitDatePostEventControl();
 }
 
-// установить камеру на просмотр корабля персонажа и вызвать квест через заданное число секунд
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 //---------------------------------------------------------------------------------------------
 bool SetCameraToShipView(string characterName, string questCheckName, float viewTimeInSec)
 {
@@ -319,7 +421,7 @@ void QuestCameraRestore()
 	}
 }
 
-// Закрыть все выходы на море в районе расположения своего корабля
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 //-----------------------------------------------------------------
 bool QuestCloseSeaExit()
 {
@@ -343,7 +445,7 @@ bool QuestCloseSeaExit()
 	return true;
 }
 
-// Открыть все выходы на море в районе расположения своего корабля
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 //-----------------------------------------------------------------
 bool QuestOpenSeaExit()
 {
@@ -364,7 +466,7 @@ bool QuestOpenSeaExit()
 	return true;
 }
 
-// найти локатор в локации по имени
+// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 //-----------------------------------
 bool FindLocator(string locationName, string locatorName, ref locatorRef, bool fromRealLoadedLocators)
 {
@@ -413,7 +515,7 @@ bool FindLocator(string locationName, string locatorName, ref locatorRef, bool f
 	return false;
 }
 
-// проверить попадает ли координата в заданный локатор в текущей локации
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 bool CheckCurLocator(string group,string locator,float x,float y,float z)
 {
 	int locIdx = FindLoadedLocation();
@@ -428,7 +530,7 @@ bool CheckCurLocator(string group,string locator,float x,float y,float z)
 	else return false;
 }
 
-// заменить один локатор на новый адрес перегрузкии
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 //---------------------------------------------------
 bool ChangeReloadData(string locationName,string locatorName, string toLocationName,string toLocatorName)
 {
@@ -449,7 +551,7 @@ bool ChangeReloadData(string locationName,string locatorName, string toLocationN
 	return true;
 }
 
-// вернуть локатору старый адрес перегрузки
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 bool ChangeBackReloadData(string locationName,string locatorName)
 {
 	aref locRef;
@@ -462,7 +564,7 @@ bool ChangeBackReloadData(string locationName,string locatorName)
 	return true;
 }
 
-// вызвать проверку квеста через заданное число секунд
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 //------------------------------------------------------
 void DoQuestCheckDelay(string questCheckName, float delayInSecond)
 {
@@ -512,7 +614,7 @@ void ExitActAnimation()
 	}
 }
 
-// Временно сохранить все данные о нашем корабле в памяти
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 //--------------------------------------------------------
 bool ShipTempRemove(ref _refCharacter)
 {
@@ -526,7 +628,7 @@ bool ShipTempRemove(ref _refCharacter)
 	return true;
 }
 
-// Восстановить данные о нашем старом корабле из памяти
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 //------------------------------------------------------
 bool RestoreTempRemovedShip(ref _refCharacter)
 {
@@ -541,7 +643,7 @@ bool RestoreTempRemovedShip(ref _refCharacter)
 	return true;
 }
 
-// Обменять двух персонажей кораблями
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 //------------------------------------
 void ExchangeCharacterShip(ref oneCharacter, ref twoCharacter)
 {
@@ -563,7 +665,7 @@ void QuestProcessDialogExit()
 	DeleteAttribute(two_aref,"act.disableDialog");
 }
 
-// Задать квест, выполняемый после выхода из диалога
+// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 //---------------------------------------------------
 void AddDialogExitQuest(string questName)
 {
@@ -591,7 +693,7 @@ void QuestDialogExitProcedure()
 	string attrName;
 	ref mc = GetMainCharacter();
 
-	// может быть выполним какую нибудь задачу
+	// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	ExecuteAfterDialogTask(otherCh);
 	ExecuteAfterDialogTask(mc);
 
@@ -628,7 +730,7 @@ void DoDeleteFakeLocation()
 	}
 }
 
-// Перегрузить главного персонажа в другую локацию и по завершению вызвать квест
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 //-------------------------------------------------------------------------------
 bool DoQuestReloadToLocation(string idLocation, string idGroup, string idLocator, string questName)
 {
@@ -649,7 +751,7 @@ bool DoQuestReloadToLocation(string idLocation, string idGroup, string idLocator
 	return DoReloadCharacterToLocation(idLocation,idGroup,idLocator);
 }
 
-// Перегрузить главного персонажа в другую локацию
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 //-------------------------------------------------------------------------------
 bool DoReloadCharacterToLocation(string idLocation, string idGroup, string idLocator)
 {
@@ -683,7 +785,7 @@ bool DoReloadCharacterToLocation(string idLocation, string idGroup, string idLoc
 	return TeleportCharacterFromCurLocationToLocation("fakeReload",idGroup,idLocator);
 }
 
-// Перегрузить главного персонажа в другую локацию из карты мира
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 //-------------------------------------------------------------------------------
 bool DoReloadFromWorldMapToLocation(string idLocation, string idGroup, string idLocator)
 {
@@ -704,7 +806,7 @@ void ReloadFromWMtoL_complete()
 	DeleteAttribute(pchar,"tmpWDMtoLand");
 }
 
-// Перегрузить главного персонажа в другую локацию из моря
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
 //-------------------------------------------------------------------------------
 bool DoReloadFromSeaToLocation(string idLocation, string idGroup, string idLocator)
 {
@@ -731,7 +833,7 @@ void EndReloadToLocation()
 	ReloadFromWMtoL_complete();
 }
 
-// Удалить квест из списка проверяемых квестов
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 //---------------------------------------------
 void DeleteQuestCheck(string sQuestName)
 {
@@ -740,7 +842,7 @@ void DeleteQuestCheck(string sQuestName)
 	if( CheckAttribute(mc,"quest."+sQuestName+".win_condition") )	mc.quest.(sQuestName).over = "yes";
 }
 
-// Получить полное имя персонажа
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 //----------------------------------
 string GetCharacterFullName(string idCharacter)
 {
@@ -754,7 +856,7 @@ string GetCharacterFullName(string idCharacter)
 	return retStr;
 }
 
-// Сохранить состояние о пассажирах во временной переменной и временно удалить их всех
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
 //-------------------------------------------------------------------------------------
 bool StorePassengers(string idCharacter)
 {
@@ -766,7 +868,7 @@ bool StorePassengers(string idCharacter)
 	string sTmp;
 	aref arTmp;
 	int i,idx;
-	// сохраним офицеров
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	makearef(arTmp,refCh.Fellows.Old.Officers);
 	for(i=1; i<4; i++)
 	{
@@ -775,7 +877,7 @@ bool StorePassengers(string idCharacter)
 		sTmp = "id"+i;
 		arTmp.(sTmp) = idx;
 	}
-	// сохраним пассажиров
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	makearef(arTmp,refCh.Fellows.Old.Passengers);
 	for(i=0; GetPassengersQuantity(refCh)>0; i++)
 	{
@@ -789,7 +891,7 @@ bool StorePassengers(string idCharacter)
 	return true;
 }
 
-// Восстановить запомненных ранее пассажиров и по возможности офицеров
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 //----------------------------------------------------------------------
 bool RestorePassengers(string idCharacter)
 {
@@ -800,7 +902,7 @@ bool RestorePassengers(string idCharacter)
 
 	int i,idx;
 	aref arTmp,arCur;
-	// Восстановление пассажиров
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	makearef(arTmp,refCh.Fellows.Old.Passengers);
 	for(i=0; i<GetAttributesNum(arTmp); i++)
 	{
@@ -808,7 +910,7 @@ bool RestorePassengers(string idCharacter)
 		idx = sti(GetAttributeValue(arCur));
 		AddPassenger(refCh,GetCharacter(idx),false);
 	}
-	// Восстановление офицеров
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	makearef(arTmp,refCh.Fellows.Old.Officers);
 	for(i=0; i<GetAttributesNum(arTmp); i++)
 	{
@@ -818,12 +920,12 @@ bool RestorePassengers(string idCharacter)
 		SetOfficersIndex(refCh,-1,idx);
 	}
 
-	// удаление временного хранилища пассажиров
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	DeleteAttribute(refCh,"Fellows.Old");
 	return true;
 }
 
-// Смотрим на какого нибудь персонажа
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 //--------------------------------------
 bool StartLookAfterCharacter(string idCharacter)
 {
@@ -842,14 +944,14 @@ void LookAfterCharacterProc()
 	PostEvent("evntLookAfterCharacter",100,"l",idxCh);
 }
 
-// Прекратили смотреть на персонаж
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 //-----------------------------------
 void EndLookAfterCharacter()
 {
 	DelEventHandler("evntLookAfterCharacter","LookAfterCharacterProc");
 }
 
-// восстановить персонаж (на случай, если он был до этого убит)
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ)
 bool ReanimateCharacter(string characterID)
 {
 	int idx = GetCharacterIndex(characterID);
@@ -864,7 +966,7 @@ bool ReanimateCharacter(string characterID)
 }
 
 //extern void SetRandomNameToCharacter(ref chref);
-// установить случайное имя для персонажа
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 bool SetCharacterRandomName(string characterID)
 {
 	int idx = GetCharacterIndex(characterID);
@@ -878,7 +980,7 @@ bool SetCharacterRandomName(string characterID)
 }
 
 
-// обработка события об уничтожении форта
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 void QuestFortDestroyed()
 {
 	int idx = GetEventData();
@@ -897,7 +999,7 @@ void QuestGroupDeath()
 	mc.GroupDeath.(groupName) = "1";
 }
 
-// подготовиться к выгрузке в море по квесту
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 object questToSeaLoginer;
 void QuestToSeaLogin_PrepareLoc(string islandID, string locGroup, string locName, bool sailUP)
 {
@@ -939,7 +1041,7 @@ void QuestToSeaLogin_Prepare(float x, float z, string islandID)
 	questToSeaLoginer.PlayerGroup.z = z;
 	questToSeaLoginer.Island = islandID;
 }
-// подготовить персонажа для выгрузки в море по квесту
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 void QuestToSeaLogin_Add(string groupName)
 {
 	aref arql,ar;
@@ -962,7 +1064,7 @@ void QuestToSeaLogin_Add(string groupName)
 		}
 	}
 }
-// запустить квестовую выгрузку в море
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ
 void QuestToSeaLogin_Launch()
 {
 	SetEventHandler("FaderEvent_EndFade", "QuestToSeaLoginFade", 0);
@@ -982,7 +1084,7 @@ void QuestToSeaLoginFade()
 	SeaLogin(&questToSeaLoginer);
 }
 
-// Получить следующего персонажа одной группы
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 int	GetCharacterFromFantom(ref chref)
 {
 	/*int tmpi = FindLoadedLocation();
@@ -1007,7 +1109,7 @@ int	GetCharacterFromFantom(ref chref)
 	return -1;
 }
 
-// убрать из локации всех персов указанного типа
+// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 void RemoveCharactersFromLocation(string idLocation, string modelName, string type)
 {
 	for(int i=0; i<MAX_CHARACTERS; i++)
@@ -1056,10 +1158,10 @@ void procEvntQuestComplete()
 }
 
 ///////////////////////////////////
-///  Это старая фигня - за использование буду бить морду... сильно
+///  пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ - пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ... пїЅпїЅпїЅпїЅпїЅпїЅ
 ///////////////////////////////////
 
-// Проиграть анимацию и по ее завершению вызвать квест
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 //------------------------------------------------------------
 void ActAnimation(ref chref, string action, string questName)
 {
@@ -1067,7 +1169,7 @@ void ActAnimation(ref chref, string action, string questName)
 //	actAction(chref, action, "ExitActAnimation");
 }
 
-// Всем воюющим персам убрать оружие, солдатам вернуться на свои позиции.
+// пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 void BreakAllAttack()
 {
 //	actAllarm = 0.0;

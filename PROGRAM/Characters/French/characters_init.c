@@ -44,12 +44,13 @@ void CreateCharacters()
 	ReloadProgressUpdate();
 
 	makeref(ch,Characters[0]);		//Blaze Devlin
+	LAi_SetImmortal(ch, true);//PJ CHEAT
 	//ch.perks.list.InstantBoarding = true;
-	ch.name 	= "Nathaniel";
-	ch.lastname = "Hawk";
+	ch.name 	= "Chris";//Nathaniel
+	ch.lastname = "Sparrow";//Hawk
 	ch.id		= "Blaze";
 	ch.nation	= ENGLAND;
-	ch.model	= "blaze";
+	ch.model	= "corsair1_1";//blaze
 	ch.activity_begin = "0";
 	ch.activity_end = "24";
 	ch.sex = "man";
@@ -114,6 +115,94 @@ void CreateCharacters()
 	stmp = POTION;	Ch.items.(stmp) = 2;
 	stmp = BLADE_SABER;	Ch.items.(stmp) = 1;
 	stmp = CHEAP_SPYGLASS;	Ch.items.(stmp) = 1;*/
+
+	//PJ pour créer des quête
+	ch.quest.PNJ_Trop_Fort = true;
+	// GiveItem2Character(ch, "blade1");
+	// GiveItem2Character(ch, "blade2");
+	// GiveItem2Character(ch, "blade3");
+	// GiveItem2Character(ch, "blade4");
+	// GiveItem2Character(ch, "blade5");
+	// GiveItem2Character(ch, "blade6");
+	// GiveItem2Character(ch, "blade7");
+	// GiveItem2Character(ch, "blade8");
+	// GiveItem2Character(ch, "blade9");
+	// GiveItem2Character(ch, "blade10");
+	// GiveItem2Character(ch, "blade11");
+	// GiveItem2Character(ch, "blade12");
+	// GiveItem2Character(ch, "blade13");
+	// GiveItem2Character(ch, "blade14");
+	// GiveItem2Character(ch, "blade15");
+	// GiveItem2Character(ch, "blade16");
+	// GiveItem2Character(ch, "blade17");
+	// GiveItem2Character(ch, "blade18");
+	// GiveItem2Character(ch, "blade19");
+	// GiveItem2Character(ch, "blade20");
+	// GiveItem2Character(ch, "blade21");
+	// GiveItem2Character(ch, "blade22");
+	GiveItem2Character(ch, "blade23");
+	// GiveItem2Character(ch, "pistol1");
+	// GiveItem2Character(ch, "pistol2");
+	GiveItem2Character(ch, "pistol3");
+	// GiveItem2Character(ch, "pistol4");
+	// GiveItem2Character(ch, "pistol5");
+	// GiveItem2Character(ch, "pistol6");//*/
+
+	//DEBUG MODE pour la quête des amoureux
+	// jewelry6 : bague en argent et saphir = 769
+	// jewelry7 : bague en or et emeraude = 961
+	// jewelry10 : bague en or et saphir = 1538
+	// jewelry13 : broche en argent = 1538
+	// jewelry14 : broche en or = 769
+	// jewelry15 : pendetif emeraude = 769
+	// jewelry16 : collier en pierres precieuses = 384
+	/*GiveItem2Character(ch, "jewelry6");
+	GiveItem2Character(ch, "jewelry6");
+	GiveItem2Character(ch, "jewelry6");
+	GiveItem2Character(ch, "jewelry7");
+	GiveItem2Character(ch, "jewelry7");
+	GiveItem2Character(ch, "jewelry7");
+	GiveItem2Character(ch, "jewelry10");
+	GiveItem2Character(ch, "jewelry10");
+	GiveItem2Character(ch, "jewelry10");
+	GiveItem2Character(ch, "jewelry13");
+	GiveItem2Character(ch, "jewelry13");
+	GiveItem2Character(ch, "jewelry13");
+	GiveItem2Character(ch, "jewelry14");
+	GiveItem2Character(ch, "jewelry14");
+	GiveItem2Character(ch, "jewelry14");
+	GiveItem2Character(ch, "jewelry15");
+	GiveItem2Character(ch, "jewelry15");
+	GiveItem2Character(ch, "jewelry15");
+	GiveItem2Character(ch, "jewelry16");
+	GiveItem2Character(ch, "jewelry16");
+	GiveItem2Character(ch, "jewelry16");
+	//*/
+
+	//PJ plus de PNJ dans les villes
+	ch.quest.PNJ_villes = true;
+	//QUESTS PJ
+	//S1 : chasseur de trésor
+	GenerateTreasureHunterQuests();
+	ch.quest_S1_Elizabeth_Goodale_TQC1_visible = true;
+	ch.quest_S1_Eustache_Busket_TQC1_visible = true;
+	ch.quest_S1_Bartolomeo_Portugues_TQC1_visible = true;
+	ch.quest_S1_Benito_Bonito_TQC1_visible = true;
+	ch.quest_S1_Hendrick_van_Hoven_TQC1_visible = true;
+	ch.quest_S1_Wimund_TQC1_visible = true;
+	ch.quest_S1_Samuel_Bellamy_TQC1_visible = true;
+	ch.quest_S1_Edward_Thatch_TQC1_visible = true;
+	//S2 : Les amoureux
+	ch.quest_S2_started = 0;
+	ch.quest_S2_Redmond_done = false;
+	ch.quest_S2_FalaiseDeFleur_done = false;
+	ch.quest_S2_Conceicao_done = false;
+	ch.quest_S2_IslaMuelle_done = false;
+	ch.quest_S2_Douwesen_done = false;
+	ch.quest_S2_Greenford_done = false;
+	ch.quest_S2_Oxbay_done = false;
+	//M1 : Le Pirate des Caraïbes
+	ch.quest_M1_step = -1;
 
 	// QUESTS BEGINNINGS
 

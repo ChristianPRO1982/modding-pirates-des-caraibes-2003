@@ -9,6 +9,9 @@ bool wdmDisableRelease = true;
 
 void wdmEvent_EncounterCreate()
 {
+	// ajout PJ
+	// pour bloquer les rencontres et tempêtes : MODE DEBUG TEST
+	/*
 	float dltTime = GetEventData();
 	float playerShipX = GetEventData();
 	float playerShipZ = GetEventData();
@@ -36,7 +39,7 @@ void wdmEvent_EncounterCreate()
 	//Generate encounters
 	wdmStormGen(dltTime, playerShipX, playerShipZ, playerShipAY);
 	wdmShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);
-	wdmQuestShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);
+	wdmQuestShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);//fin ajout PJ*/
 }
 
 void wdmEvent_InsideIsland()
