@@ -201,6 +201,8 @@ void CreateCharacters()
 	ch.quest_S2_Douwesen_done = false;
 	ch.quest_S2_Greenford_done = false;
 	ch.quest_S2_Oxbay_done = false;
+	//M1 : Le Pirate des Caraïbes
+	ch.quest_M1_step = -1;
 
 	// QUESTS BEGINNINGS
 

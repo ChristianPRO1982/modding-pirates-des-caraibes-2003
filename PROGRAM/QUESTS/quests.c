@@ -130,8 +130,8 @@ void QuestsCheck_forLocEnter()
 	}
 	
 	//quest M1
-	// if (makeint(pchar.quest_M1_step) == 1 && pchar.location == "QC_pirate_house_inside") PlaceCharacter(characterFromID("Francois_l_Olonnais"), "goto", homelocation);//PJ a supprimer A MODIFIER
-	// if (makeint(pchar.quest_M1_step) == 9 && pchar.location == "QC_pirate_house_inside") PlaceCharacter(characterFromID("Chui A-poo"), "goto", homelocation);
+	if (makeint(pchar.quest_M1_step) == 0 && pchar.location == "QC_pirate_house_inside") PlaceCharacter(characterFromID("Francois_l_Olonnais"), "goto", homelocation);
+	if (makeint(pchar.quest_M1_step) == 9 && pchar.location == "QC_pirate_house_inside") PlaceCharacter(characterFromID("Chui A-poo"), "goto", homelocation);
 	
 	// POUR CREER DES QUETES
 	// SetNationRelation2MainCharacter(PIRATE, RELATION_FRIEND);

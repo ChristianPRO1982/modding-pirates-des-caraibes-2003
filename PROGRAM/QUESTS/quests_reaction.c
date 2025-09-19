@@ -4318,6 +4318,7 @@ void QuestComplete(string sQuestName)
 			//LaunchMainMenu();
 			Characters[GetCharacterIndex("researcher")].Dialog.CurrentNode = "First time";
 			Characters[GetCharacterIndex("danielle")].Dialog.CurrentNode = "First time";
+			pchar.quest_M1_step = 0;
 		break;
 
 		case "remove_officers_from_blaze_in_redmond_complete":
@@ -13963,6 +13964,419 @@ void QuestComplete(string sQuestName)
 			pchar.quest.quest_S2_lastQuest.over = "yes";
 			pchar.quest.quest_S2_lastQuest = "completed";
 		break;
+
+		case "quest_M1_agreeded":
+			DeleteQuestHeader("PJ_M1"); SetQuestHeader("PJ_M1"); AddQuestRecord("PJ_M1", 1);
+			
+			pchar.quest.quest_M1_RedmondBoats.win_condition.l1 = "location";
+			pchar.quest.quest_M1_RedmondBoats.win_condition.l1.location = "Redmond";
+			pchar.quest.quest_M1_RedmondBoats.win_condition = "quest_M1_RedmondBoats";
+			
+			pchar.quest.quest_M1_FdFBoats.win_condition.l1 = "location";
+			pchar.quest.quest_M1_FdFBoats.win_condition.l1.location = "Falaise_de_Fleur";
+			pchar.quest.quest_M1_FdFBoats.win_condition = "quest_M1_FdFBoats";
+			
+			pchar.quest.quest_M1_ConceicaoBoats.win_condition.l1 = "location";
+			pchar.quest.quest_M1_ConceicaoBoats.win_condition.l1.location = "Conceicao";
+			pchar.quest.quest_M1_ConceicaoBoats.win_condition = "quest_M1_ConceicaoBoats";
+			
+			pchar.quest.quest_M1_IslaMuelleBoats.win_condition.l1 = "location";
+			pchar.quest.quest_M1_IslaMuelleBoats.win_condition.l1.location = "IslaMuelle";
+			pchar.quest.quest_M1_IslaMuelleBoats.win_condition = "quest_M1_IslaMuelleBoats";
+			
+			pchar.quest.quest_M1_DouwesenBoats.win_condition.l1 = "location";
+			pchar.quest.quest_M1_DouwesenBoats.win_condition.l1.location = "Douwesen";
+			pchar.quest.quest_M1_DouwesenBoats.win_condition = "quest_M1_DouwesenBoats";
+			
+			pchar.quest.quest_M1_OxbayBoats.win_condition.l1 = "location";
+			pchar.quest.quest_M1_OxbayBoats.win_condition.l1.location = "Oxbay";
+			pchar.quest.quest_M1_OxbayBoats.win_condition = "quest_M1_OxbayBoats";
+			
+			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Francois_l_Olonnais"));
+			
+			Pchar.quest_M1_step = 2;
+			
+			Pchar.quest.quest_M1_CaptureRedmondFort.win_condition.l1 = "FORT_destroy";
+			Pchar.quest.quest_M1_CaptureRedmondFort.win_condition.l1.character = "Redmond Commander";
+			Pchar.quest.quest_M1_CaptureRedmondFort.win_condition = "quest_M1_CaptureRedmondFort";
+			
+			Pchar.quest.quest_M1_CaptureFalaiseDeFleurFort.win_condition.l1 = "FORT_destroy";
+			Pchar.quest.quest_M1_CaptureFalaiseDeFleurFort.win_condition.l1.character = "FalaiseDeFleur Commander";
+			Pchar.quest.quest_M1_CaptureFalaiseDeFleurFort.win_condition = "quest_M1_CaptureFalaiseDeFleurFort";
+			
+			Pchar.quest.quest_M1_CaptureConceicaoFort.win_condition.l1 = "FORT_destroy";
+			Pchar.quest.quest_M1_CaptureConceicaoFort.win_condition.l1.character = "Conceicao Commander";
+			Pchar.quest.quest_M1_CaptureConceicaoFort.win_condition = "quest_M1_CaptureConceicaoFort";
+			
+			Pchar.quest.quest_M1_CaptureIslaMuelleFort.win_condition.l1 = "FORT_destroy";
+			Pchar.quest.quest_M1_CaptureIslaMuelleFort.win_condition.l1.character = "IslaMuelle Commander";
+			Pchar.quest.quest_M1_CaptureIslaMuelleFort.win_condition = "quest_M1_CaptureIslaMuelleFort";
+			
+			Pchar.quest.quest_M1_CaptureDouwesenFort.win_condition.l1 = "FORT_destroy";
+			Pchar.quest.quest_M1_CaptureDouwesenFort.win_condition.l1.character = "Douwesen Commander";
+			Pchar.quest.quest_M1_CaptureDouwesenFort.win_condition = "quest_M1_CaptureDouwesenFort";
+			
+			Pchar.quest.quest_M1_CaptureGreenfordFort.win_condition.l1 = "FORT_destroy";
+			Pchar.quest.quest_M1_CaptureGreenfordFort.win_condition.l1.character = "Greenford Commander";
+			Pchar.quest.quest_M1_CaptureGreenfordFort.win_condition = "quest_M1_CaptureGreenfordFort";
+			
+			Pchar.quest.quest_M1_CaptureOxbayFort.win_condition.l1 = "FORT_destroy";
+			Pchar.quest.quest_M1_CaptureOxbayFort.win_condition.l1.character = "Oxbay Commander";
+			Pchar.quest.quest_M1_CaptureOxbayFort.win_condition = "quest_M1_CaptureOxbayFort";
+			
+			// LAi_SetImmortal(characterFromID("Douwesen Commander"), false);//PJ a supprimer ?
+			// LAi_SetImmortal(characterFromID("Greenford Commander"), false);//PJ a supprimer ?
+			
+			//Desactivation de la capacite de dechargement sur l’ile
+			Island_SetReloadEnableGlobal("Redmond", false);
+			Island_SetReloadEnableGlobal("FalaiseDeFleur", false);
+			Island_SetReloadEnableGlobal("Conceicao", false);
+			Island_SetReloadEnableGlobal("IslaMuelle", false);
+			Island_SetReloadEnableGlobal("Douwesen", false);
+			Island_SetReloadEnableGlobal("Oxbay", false);
+			
+			//relations avec les pays
+			pchar.quest_M1_NationRelation_ENGLAND  = GetNationRelation2MainCharacter(ENGLAND);
+			pchar.quest_M1_NationRelation_FRANCE   = GetNationRelation2MainCharacter(FRANCE);
+			pchar.quest_M1_NationRelation_SPAIN    = GetNationRelation2MainCharacter(SPAIN);
+			pchar.quest_M1_NationRelation_PORTUGAL = GetNationRelation2MainCharacter(PORTUGAL);
+			pchar.quest_M1_NationRelation_HOLLAND  = GetNationRelation2MainCharacter(HOLLAND);
+			
+			SetNationRelation2MainCharacter(ENGLAND,RELATION_ENEMY);
+			SetNationRelation2MainCharacter(FRANCE,RELATION_ENEMY);
+			SetNationRelation2MainCharacter(SPAIN,RELATION_ENEMY);
+			SetNationRelation2MainCharacter(PORTUGAL,RELATION_ENEMY);
+			SetNationRelation2MainCharacter(HOLLAND,RELATION_ENEMY);
+			SetNationRelation2MainCharacter(PIRATE,RELATION_FRIEND);
+			
+			
+			Pchar.quest.quest_M1_FightingInRedmondPort.win_condition.l1 = "location";
+			Pchar.quest.quest_M1_FightingInRedmondPort.win_condition.l1.location = "Redmond_port";
+			Pchar.quest.quest_M1_FightingInRedmondPort.win_condition = "quest_M1_FightingInRedmondPort";
+			
+			Pchar.quest.quest_M1_FightingInFalaiseDeFleurPort.win_condition.l1 = "location";
+			Pchar.quest.quest_M1_FightingInFalaiseDeFleurPort.win_condition.l1.location = "FalaiseDeFleur_port";
+			Pchar.quest.quest_M1_FightingInFalaiseDeFleurPort.win_condition = "quest_M1_FightingInFalaiseDeFleurPort";
+			
+			Pchar.quest.quest_M1_FightingInConceicaoPort.win_condition.l1 = "location";
+			Pchar.quest.quest_M1_FightingInConceicaoPort.win_condition.l1.location = "Conceicao_port";
+			Pchar.quest.quest_M1_FightingInConceicaoPort.win_condition = "quest_M1_FightingInConceicaoPort";
+			
+			Pchar.quest.quest_M1_FightingInIslaMuellePort.win_condition.l1 = "location";
+			Pchar.quest.quest_M1_FightingInIslaMuellePort.win_condition.l1.location = "IslaMuelle_port";
+			Pchar.quest.quest_M1_FightingInIslaMuellePort.win_condition = "quest_M1_FightingInIslaMuellePort";
+			
+			Pchar.quest.quest_M1_FightingInDouwesenPort.win_condition.l1 = "location";
+			Pchar.quest.quest_M1_FightingInDouwesenPort.win_condition.l1.location = "Douwesen_port";
+			Pchar.quest.quest_M1_FightingInDouwesenPort.win_condition = "quest_M1_FightingInDouwesenPort";
+			
+			Pchar.quest.quest_M1_FightingInGreenfordPort.win_condition.l1 = "location";
+			Pchar.quest.quest_M1_FightingInGreenfordPort.win_condition.l1.location = "Greenford_port";
+			Pchar.quest.quest_M1_FightingInGreenfordPort.win_condition = "quest_M1_FightingInGreenfordPort";
+			
+			Pchar.quest.quest_M1_FightingInOxbayPort.win_condition.l1 = "location";
+			Pchar.quest.quest_M1_FightingInOxbayPort.win_condition.l1.location = "Oxbay_port";
+			Pchar.quest.quest_M1_FightingInOxbayPort.win_condition = "quest_M1_FightingInOxbayPort";
+		break;
+
+		case "quest_M1_RedmondBoats":
+			Group_CreateGroup("M1_Redmond");
+			Group_AddCharacter("M1_Redmond", "Captain Redmond 1");
+			Group_SetGroupCommander("M1_Redmond", "Captain Redmond 1");
+			Group_AddCharacter("M1_Redmond", "Captain Redmond 2");
+			Group_AddCharacter("M1_Redmond", "Captain Redmond 3");
+			Group_SetPursuitGroup("M1_Redmond", PLAYER_GROUP);
+			Group_SetTaskAttack("M1_Redmond", PLAYER_GROUP);
+			Group_SetAddress("M1_Redmond", Characters[GetMainCharacterIndex()].location, "", "");
+			Group_LockTask("M1_Redmond");
+		break;
+
+		case "quest_M1_FdFBoats":
+			Group_CreateGroup("M1_FalaiseDeFleur");
+			Group_AddCharacter("M1_FalaiseDeFleur", "Captain FalaiseDeFleur 1");
+			Group_SetGroupCommander("M1_FalaiseDeFleur", "Captain FalaiseDeFleur 1");
+			Group_AddCharacter("M1_FalaiseDeFleur", "Captain FalaiseDeFleur 2");
+			Group_AddCharacter("M1_FalaiseDeFleur", "Captain FalaiseDeFleur 3");
+			Group_SetPursuitGroup("M1_FalaiseDeFleur", PLAYER_GROUP);
+			Group_SetTaskAttack("M1_FalaiseDeFleur", PLAYER_GROUP);
+			Group_SetAddress("M1_FalaiseDeFleur", Characters[GetMainCharacterIndex()].location, "", "");
+			Group_LockTask("M1_FalaiseDeFleur");
+		break;
+
+		case "quest_M1_ConceicaoBoats":
+			Group_CreateGroup("M1_Conceicao");
+			Group_AddCharacter("M1_Conceicao", "Captain Conceicao 1");
+			Group_SetGroupCommander("M1_Conceicao", "Captain Conceicao 1");
+			Group_AddCharacter("M1_Conceicao", "Captain Conceicao 2");
+			Group_AddCharacter("M1_Conceicao", "Captain Conceicao 3");
+			Group_SetPursuitGroup("M1_Conceicao", PLAYER_GROUP);
+			Group_SetTaskAttack("M1_Conceicao", PLAYER_GROUP);
+			Group_SetAddress("M1_Conceicao", Characters[GetMainCharacterIndex()].location, "", "");
+			Group_LockTask("M1_Conceicao");
+		break;
+
+		case "quest_M1_IslaMuelleBoats":
+			Group_CreateGroup("M1_IslaMuelle");
+			Group_AddCharacter("M1_IslaMuelle", "Captain IslaMuelle 1");
+			Group_SetGroupCommander("M1_IslaMuelle", "Captain IslaMuelle 1");
+			Group_AddCharacter("M1_IslaMuelle", "Captain IslaMuelle 2");
+			Group_AddCharacter("M1_IslaMuelle", "Captain IslaMuelle 3");
+			Group_SetPursuitGroup("M1_IslaMuelle", PLAYER_GROUP);
+			Group_SetTaskAttack("M1_IslaMuelle", PLAYER_GROUP);
+			Group_SetAddress("M1_IslaMuelle", Characters[GetMainCharacterIndex()].location, "", "");
+			Group_LockTask("M1_IslaMuelle");
+		break;
+
+		case "quest_M1_DouwesenBoats":
+			Group_CreateGroup("M1_Douwesen");
+			Group_AddCharacter("M1_Douwesen", "Captain Douwesen 1");
+			Group_SetGroupCommander("M1_Douwesen", "Captain Douwesen 1");
+			Group_AddCharacter("M1_Douwesen", "Captain Douwesen 2");
+			Group_AddCharacter("M1_Douwesen", "Captain Douwesen 3");
+			Group_SetPursuitGroup("M1_Douwesen", PLAYER_GROUP);
+			Group_SetTaskAttack("M1_Douwesen", PLAYER_GROUP);
+			Group_SetAddress("M1_Douwesen", Characters[GetMainCharacterIndex()].location, "", "");
+			Group_LockTask("M1_Douwesen");
+		break;
+
+		case "quest_M1_OxbayBoats":
+			Group_CreateGroup("M1_Oxbay");
+			Group_AddCharacter("M1_Oxbay", "Captain Oxbay 1");
+			Group_SetGroupCommander("M1_Oxbay", "Captain Oxbay 1");
+			Group_AddCharacter("M1_Oxbay", "Captain Oxbay 2");
+			Group_AddCharacter("M1_Oxbay", "Captain Oxbay 3");
+			Group_SetPursuitGroup("M1_Oxbay", PLAYER_GROUP);
+			Group_SetTaskAttack("M1_Oxbay", PLAYER_GROUP);
+			Group_SetAddress("M1_Oxbay", Characters[GetMainCharacterIndex()].location, "", "");
+			Group_LockTask("M1_Oxbay");
+		break;
+
+		case "quest_M1_CaptureRedmondFort":
+			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Francois_l_Olonnais"));
+		break;
+
+		case "quest_M1_FightingInRedmondPort":
+			AddQuestRecord("PJ_M1", 2);
+			Pchar.quest_M1_step++;
+			M1_EndQuest();
+			
+			if (makeint(Pchar.quest_M1_step) < 9) {
+				LAi_SetActorType(characterFromID("Francois_l_Olonnais"));
+				LAi_SetActorType(pchar);
+				LAi_ActorFollow(pchar, characterFromID("Francois_l_Olonnais"), "", 2.0);
+				LAi_ActorFollow(characterFromID("Francois_l_Olonnais"), pchar, "quest_M1_FightingInRedmondPort_continue", 2.0);
+			}
+		break;
+		
+		case "quest_M1_FightingInRedmondPort_continue":
+			LAi_type_actor_Reset(pchar);
+			LAi_ActorWaitDialog(pchar, characterFromID("Francois_l_Olonnais"));
+			LAi_ActorDialog(characterFromID("Francois_l_Olonnais"), pchar, "pchar_back_to_player", 2.0, 1.0);
+			characters[GetCharacterIndex("Francois_l_Olonnais")].dialog.currentnode = "FightingInRedmondFort_won";
+		break;
+
+		case "quest_M1_CaptureFalaiseDeFleurFort":
+			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Francois_l_Olonnais"));
+		break;
+
+		case "quest_M1_FightingInFalaiseDeFleurPort":
+			AddQuestRecord("PJ_M1", 3);
+			Pchar.quest_M1_step++;
+			M1_EndQuest();
+			
+			if (makeint(Pchar.quest_M1_step) < 9) {
+				LAi_SetActorType(characterFromID("Francois_l_Olonnais"));
+				LAi_SetActorType(pchar);
+				LAi_ActorFollow(pchar, characterFromID("Francois_l_Olonnais"), "", 2.0);
+				LAi_ActorFollow(characterFromID("Francois_l_Olonnais"), pchar, "quest_M1_FightingInFalaiseDeFleurPort_continue", 2.0);
+			}
+		break;
+		
+		case "quest_M1_FightingInFalaiseDeFleurPort_continue":
+			LAi_type_actor_Reset(pchar);
+			LAi_ActorWaitDialog(pchar, characterFromID("Francois_l_Olonnais"));
+			LAi_ActorDialog(characterFromID("Francois_l_Olonnais"), pchar, "pchar_back_to_player", 2.0, 1.0);
+			characters[GetCharacterIndex("Francois_l_Olonnais")].dialog.currentnode = "FightingInFalaiseDeFleurFort_won";
+		break;
+
+		case "quest_M1_CaptureConceicaoFort":
+			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Francois_l_Olonnais"));
+		break;
+
+		case "quest_M1_FightingInConceicaoPort":
+			AddQuestRecord("PJ_M1", 4);
+			Pchar.quest_M1_step++;
+			M1_EndQuest();
+			
+			if (makeint(Pchar.quest_M1_step) < 9) {
+				LAi_SetActorType(characterFromID("Francois_l_Olonnais"));
+				LAi_SetActorType(pchar);
+				LAi_ActorFollow(pchar, characterFromID("Francois_l_Olonnais"), "", 2.0);
+				LAi_ActorFollow(characterFromID("Francois_l_Olonnais"), pchar, "quest_M1_FightingInConceicaoPort_continue", 2.0);
+			}
+		break;
+		
+		case "quest_M1_FightingInConceicaoPort_continue":
+			LAi_type_actor_Reset(pchar);
+			LAi_ActorWaitDialog(pchar, characterFromID("Francois_l_Olonnais"));
+			LAi_ActorDialog(characterFromID("Francois_l_Olonnais"), pchar, "pchar_back_to_player", 2.0, 1.0);
+			characters[GetCharacterIndex("Francois_l_Olonnais")].dialog.currentnode = "FightingInConceicaoFort_won";
+		break;
+
+		case "quest_M1_CaptureIslaMuelleFort":
+			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Francois_l_Olonnais"));
+		break;
+
+		case "quest_M1_FightingInIslaMuellePort":
+			AddQuestRecord("PJ_M1", 5);
+			Pchar.quest_M1_step++;
+			M1_EndQuest();
+			
+			if (makeint(Pchar.quest_M1_step) < 9) {
+				LAi_SetActorType(characterFromID("Francois_l_Olonnais"));
+				LAi_SetActorType(pchar);
+				LAi_ActorFollow(pchar, characterFromID("Francois_l_Olonnais"), "", 2.0);
+				LAi_ActorFollow(characterFromID("Francois_l_Olonnais"), pchar, "quest_M1_FightingInIslaMuellePort_continue", 2.0);
+			}
+		break;
+		
+		case "quest_M1_FightingInIslaMuellePort_continue":
+			LAi_type_actor_Reset(pchar);
+			LAi_ActorWaitDialog(pchar, characterFromID("Francois_l_Olonnais"));
+			LAi_ActorDialog(characterFromID("Francois_l_Olonnais"), pchar, "pchar_back_to_player", 2.0, 1.0);
+			characters[GetCharacterIndex("Francois_l_Olonnais")].dialog.currentnode = "FightingInIslaMuelleFort_won";
+		break;
+
+		case "quest_M1_CaptureDouwesenFort":
+			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Francois_l_Olonnais"));
+		break;
+
+		case "quest_M1_FightingInDouwesenPort":
+			AddQuestRecord("PJ_M1", 6);
+			Pchar.quest_M1_step++;
+			Pchar.quest_M1_step = 9;//PJ a supprimer
+			M1_EndQuest();
+			
+			if (makeint(Pchar.quest_M1_step) < 9) {
+				LAi_SetActorType(characterFromID("Francois_l_Olonnais"));
+				LAi_SetActorType(pchar);
+				LAi_ActorFollow(pchar, characterFromID("Francois_l_Olonnais"), "", 2.0);
+				LAi_ActorFollow(characterFromID("Francois_l_Olonnais"), pchar, "quest_M1_FightingInDouwesenPort_continue", 2.0);
+			}
+		break;
+		
+		case "quest_M1_FightingInDouwesenPort_continue":
+			LAi_type_actor_Reset(pchar);
+			LAi_ActorWaitDialog(pchar, characterFromID("Francois_l_Olonnais"));
+			LAi_ActorDialog(characterFromID("Francois_l_Olonnais"), pchar, "pchar_back_to_player", 2.0, 1.0);
+			characters[GetCharacterIndex("Francois_l_Olonnais")].dialog.currentnode = "FightingInDouwesenFort_won";
+		break;
+
+		case "quest_M1_CaptureGreenfordFort":
+			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Francois_l_Olonnais"));
+		break;
+
+		case "quest_M1_FightingInGreenfordPort":
+			AddQuestRecord("PJ_M1", 7);
+			Pchar.quest_M1_step++;
+			M1_EndQuest();
+			
+			if (makeint(Pchar.quest_M1_step) < 9) {
+				LAi_SetActorType(characterFromID("Francois_l_Olonnais"));
+				LAi_SetActorType(pchar);
+				LAi_ActorFollow(pchar, characterFromID("Francois_l_Olonnais"), "", 2.0);
+				LAi_ActorFollow(characterFromID("Francois_l_Olonnais"), pchar, "quest_M1_FightingInGreenfordPort_continue", 2.0);
+			}
+		break;
+		
+		case "quest_M1_FightingInGreenfordPort_continue":
+			LAi_type_actor_Reset(pchar);
+			LAi_ActorWaitDialog(pchar, characterFromID("Francois_l_Olonnais"));
+			LAi_ActorDialog(characterFromID("Francois_l_Olonnais"), pchar, "pchar_back_to_player", 2.0, 1.0);
+			characters[GetCharacterIndex("Francois_l_Olonnais")].dialog.currentnode = "FightingInGreenfordFort_won";
+		break;
+
+		case "quest_M1_CaptureOxbayFort":
+			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Francois_l_Olonnais"));
+		break;
+
+		case "quest_M1_FightingInOxbayPort":
+			AddQuestRecord("PJ_M1", 8);
+			Pchar.quest_M1_step++;
+			M1_EndQuest();
+			
+			if (makeint(Pchar.quest_M1_step) < 9) {
+				LAi_SetActorType(characterFromID("Francois_l_Olonnais"));
+				LAi_SetActorType(pchar);
+				LAi_ActorFollow(pchar, characterFromID("Francois_l_Olonnais"), "", 2.0);
+				LAi_ActorFollow(characterFromID("Francois_l_Olonnais"), pchar, "quest_M1_FightingInOxbayPort_continue", 2.0);
+			}
+		break;
+		
+		case "quest_M1_FightingInOxbayPort_continue":
+			LAi_type_actor_Reset(pchar);
+			LAi_ActorWaitDialog(pchar, characterFromID("Francois_l_Olonnais"));
+			LAi_ActorDialog(characterFromID("Francois_l_Olonnais"), pchar, "pchar_back_to_player", 2.0, 1.0);
+			characters[GetCharacterIndex("Francois_l_Olonnais")].dialog.currentnode = "FightingInOxbayFort_won";
+		break;
+		
+		case "quest_M1_QCBoats":
+			Group_CreateGroup("M1_QC");
+			Group_AddCharacter("M1_QC", "Captain QC 1");
+			Group_SetGroupCommander("M1_QC", "Captain QC 1");
+			Group_AddCharacter("M1_QC", "Captain QC 2");
+			Group_AddCharacter("M1_QC", "Captain QC 3");
+			Group_AddCharacter("M1_QC", "Captain QC 4");
+			Group_AddCharacter("M1_QC", "Captain QC 5");
+			Group_AddCharacter("M1_QC", "Captain QC 6");
+			Group_AddCharacter("M1_QC", "Captain QC 7");
+			Group_AddCharacter("M1_QC", "Captain QC 8");
+			Group_AddCharacter("M1_QC", "Captain QC 9");
+			Group_SetPursuitGroup("M1_QC", PLAYER_GROUP);
+			Group_SetTaskAttack("M1_QC", PLAYER_GROUP);
+			Group_SetAddress("M1_QC", Characters[GetMainCharacterIndex()].location, "", "");
+			Group_LockTask("M1_QC");
+		break;
+		
+		case "quest_M1_GotoRedmondPrison":
+			AddQuestRecord("PJ_M1", 16);
+			
+			//reactivation de la capacite de dechargement sur l’ile
+			Island_SetReloadEnableGlobal("Redmond", true);
+			Island_SetReloadEnableGlobal("FalaiseDeFleur", true);
+			Island_SetReloadEnableGlobal("Conceicao", true);
+			Island_SetReloadEnableGlobal("IslaMuelle", true);
+			Island_SetReloadEnableGlobal("Douwesen", true);
+			Island_SetReloadEnableGlobal("Oxbay", true);
+			
+			LAi_Fade("quest_M1_RedmondPrison", "");
+		break;
+		
+		case "quest_M1_RedmondPrison":
+			Log_SetStringToLog("Prison de Redmond.");
+			ChangeCharacterAddress(characterFromID("Francois_l_Olonnais"), "Fake_Greenford_prison", "goto9");
+			DoQuestReloadToLocation("Fake_Greenford_prison", "goto", "goto18", "quest_M1_RedmondPrisonDialog");
+		break
+
+		case "quest_M1_RedmondPrisonDialog":
+			characters[GetCharacterIndex("Francois_l_Olonnais")].dialog.currentnode = "FightingInOxbayFort_won";
+		break
+
+		case "quest_M1_END_1":
+			LAi_Fade("quest_M1_END_2", "");
+		break
+
+		case "quest_M1_END_2":
+			DoQuestReloadToLocation("QC_pirate_house_inside", "goto", "goto1", "quest_M1_END_3");
+		break
+
+		case "quest_M1_END_3":
+			Log_SetStringToLog("Chui A-poo a disparu mais il a laisse une lettre.");
+			for(n = 1; n <= 200; n++) {GiveItem2Character(Pchar, "jewelry2");}//diamant = 1538
+			for(n = 1; n <= 150; n++) {GiveItem2Character(Pchar, "jewelry5");}//pepite d'or = 1538
+			AddQuestRecord("PJ_M1", 17);
+			CloseQuestHeader("PJ_M1");
+		break
 		// fin ajout PJ
 	}
 }
