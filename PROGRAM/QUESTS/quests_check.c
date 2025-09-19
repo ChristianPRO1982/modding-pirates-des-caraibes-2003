@@ -396,6 +396,18 @@ void QuestsCheck()
 			n--;
 		}
 	}
+
+	// ajout PJ
+	int pj_day = GetDataDay();    // jour in-game
+	int pj_month = GetDataMonth();  // mois in-game
+	// ANNIVERSAIRES !
+	if (pj_month == 4 && pj_day == 17) Log_SetStringToLog("Bon anniversaire Christian !");
+	if (pj_month == 2 && pj_day == 28) Log_SetStringToLog("Bon anniversaire Solène !");
+	if (pj_month == 10 && pj_day == 17) Log_SetStringToLog("Bon anniversaire Armance !");
+	if (pj_month == 4 && pj_day == 28) Log_SetStringToLog("Bon anniversaire Abigaëlle !");
+	if (pj_month == 7 && pj_day == 3) Log_SetStringToLog("Bon anniversaire Aloïse !");
+	// fin ajout PJ
+
 	bQuestCheckProcess = false;
 }
 
