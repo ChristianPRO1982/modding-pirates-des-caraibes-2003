@@ -35,16 +35,41 @@ void ProcessDialogEvent()
 			dialog.snd1 = "Voice\ARSI\ARSI001";
 			dialog.snd2 = "Voice\ARSI\ARSI001";
 			dialog.snd3 = "Voice\ARSI\ARSI001";
-			d.Text = DLG_TEXT[0];
-			Link.l1 = DLG_TEXT[1];
-			Link.l1.go = "Continue_01";
+			d.Text = DLG_TEXT[0] + PChar.name + " " + PChar.lastname + DLG_TEXT[1] + PChar.ship.name + DLG_TEXT[2];
+			Link.l1 = DLG_TEXT[3];
+			Link.l1.go = "Start";
+		break;
+
+		case "Start":
+			dialog.snd = "Voice\ARSI\ARSI001";
+			d.Text = DLG_TEXT[4];
+			Link.l1 = DLG_TEXT[5];
+			Link.l1.go = "exit";
+			Link.l2 = DLG_TEXT[6];
+			Link.l2.go = "Continue_01";
 		break;
 
 		case "Continue_01":
-			Pchar.quest_M1_step++;
 			dialog.snd = "Voice\ARSI\ARSI001";
-			d.Text = DLG_TEXT[2];
-			Link.l1 = DLG_TEXT[3];
+			d.Text = DLG_TEXT[7];
+			Link.l1 = DLG_TEXT[8];
+			Link.l1.go = "agreeded";
+			Link.l2 = DLG_TEXT[9];
+			Link.l2.go = "exit";
+		break;
+
+		case "agreeded":
+			Diag.TempNode = "Waiting";
+			dialog.snd = "Voice\ARSI\ARSI001";
+			d.Text = DLG_TEXT[10] + DLG_TEXT[11];
+			Link.l1 = DLG_TEXT[12];
+			Link.l1.go = "exit";
+		break;
+
+		case "Waiting":
+			dialog.snd = "Voice\ARSI\ARSI001";
+			d.Text = DLG_TEXT[13];
+			Link.l1 = DLG_TEXT[14];
 			Link.l1.go = "exit";
 		break;
 
@@ -52,7 +77,6 @@ void ProcessDialogEvent()
 
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
-			AddDialogExitQuest("quest_M1_GotoRedmondPrison");
 			DialogExit();
 		break;
 		

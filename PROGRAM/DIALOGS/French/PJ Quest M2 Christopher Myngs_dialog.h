@@ -1,7 +1,18 @@
-string DLG_TEXT[4] = {
-"PJ !!! coucou !!! Salutations Capitaine ! Je suis Chui A-poo, second de François l'Olonnais.",
-"Salutations à toi Chui A-poo. Où est François ?",
-"Comme il l'avait promis, il s'est rendu aux armés qui le cherchaient. Tu devrais le retrouver près de la prison de Redmond.",
-"Merci à toi Chui A-poo. Adieu.",
+string DLG_TEXT[15] = {
+"Capitaine Christopher Myngs, au service du gouverneur Silehard de Redmond. Je suis chargé de la garde de ses biens les plus précieux, destinés à être présentés lors de sa prochaine traversée vers l'Angleterre. Le gouverneur m'a confié cette responsabilité en personne : ce n'est pas pour les foules ni les marchés… mais pour un cercle choisi d'hommes de savoir et de pouvoir. Je vous connais ",
+" capitaine du '",
+"' et j'aurais besoin de votre aide.",
+"Ah vraiment ? Comment puis-je vous aider, Capitaine ?",
+"Une affaire délicate me préoccupe, et je crois que vous pourriez y apporter une solution. Consentiriez-vous à m'entendre ?",
+"Je n'ai pas de temps à perdre.",
+"Je vous écoute.",
+"Il y a peu, un vol a été commis dans la réserve du gouverneur. La serrure fut crochetée avec adresse, et le bien du gouverneur a disparu. Une pièce unique… certains la disent d'origine inca. Nos soupçons ne suffisent pas, mais nous savons qu'un navire doit appareiller vers l'Europe. Dans quatre jours, sans résultat, il sera trop tard. Alors je vous le demande : défendrez-vous l'honneur du gouverneur en retrouvant le coupable ?",
+"Comptez sur moi. Le voleur ne m'échappera pas.",
+"C'est une affaire trop périlleuse pour moi.",
+"Parfait. Tu as ",
+" jours pour retrouver le précieux du gouverneur. Ne me déçois pas.",
+"Je suis de retour dans peu de temps, avec le trésor de Silehard.",
+"Des nouvelles, capitaine ?",
+"Pas encore, mais je ne désespère pas.",
 
 };
