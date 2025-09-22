@@ -55,20 +55,20 @@ void CreateCharacters()
 	ch.activity_end = "24";
 	ch.sex = "man";
 	ch.luck = 4;
-	/*ch.spyglass.itemID = COMMON_SPYGLASS;
+	/*ch.spyglass.itemID = COMMON_SPYGLASS; // c'est quoi ?
 	ch.gun.itemID = GUN_COMMON;
 	ch.gun = "gun";
 	ch.blade = "saber";
 	ch.blade.itemID = BLADE_SABER;
 	ch.blade.time = 0.1;
 	ch.blade.colorstart = argb(128, 22, 46, 190);
-	ch.blade.colorend = argb(0, 20, 60, 100);*/
+	ch.blade.colorend = argb(0, 20, 60, 100);//*/
 	ch.location	= "";
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "blaze_dialog.c";
 	ch.rank 	= 1;
-	ch.reputation = "50";
+	ch.reputation = "70";
 	ch.experience = 0;//CalculateExperienceFromRank(sti(ch.rank));
 	ch.skill.Leadership = "1"; // commandement
 	ch.skill.Fencing = "1";
@@ -205,6 +205,8 @@ void CreateCharacters()
 	ch.quest_M1_step = -1;
 	//M2 : A la poursuite de Carmen San Diego
 	ch.quest_M2_step = 0;
+	ch.quest_M2_quest_init = false;
+	ch.quest_M2_quest_start = false;
 
 	// QUESTS BEGINNINGS
 

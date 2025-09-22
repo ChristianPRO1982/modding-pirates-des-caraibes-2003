@@ -42,6 +42,7 @@ void ProcessDialogEvent()
 
 		case "Start":
 			dialog.snd = "Voice\ARSI\ARSI001";
+			quest_M2_init_quest();
 			if (PChar.Reputation >= 65)
 			{
 				d.Text = DLG_TEXT[4];
@@ -70,7 +71,8 @@ void ProcessDialogEvent()
 		case "agreeded":
 			Diag.TempNode = "Waiting";
 			dialog.snd = "Voice\ARSI\ARSI001";
-			d.Text = DLG_TEXT[10] + DLG_TEXT[11];
+			quest_M2_start_quest();
+			d.Text = DLG_TEXT[10] + quest_M2_howlong() + DLG_TEXT[11];
 			Link.l1 = DLG_TEXT[12];
 			Link.l1.go = "exit";
 		break;

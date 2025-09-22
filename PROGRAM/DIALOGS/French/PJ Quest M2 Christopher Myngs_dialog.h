@@ -10,7 +10,7 @@ string DLG_TEXT[17] = {
 "Comptez sur moi. Le voleur ne m'échappera pas.",
 "C'est une affaire trop périlleuse pour moi.",
 "Parfait. Tu as ",
-" jours pour retrouver le précieux du gouverneur. Ne me déçois pas.",
+" jours pour retrouver le précieux du gouverneur. Ne me déçois pas. Je te met à disposition Sir Henry Huncks pour t'aider à faire les papiers d'arrestation. Ces documents sont officiels et obligatoires pour toute arrestation. Tu peux compter sur lui.",
 "Je suis de retour dans peu de temps, avec le trésor de Silehard.",
 "Des nouvelles, capitaine ?",
 "Pas encore, mais je ne désespère pas.",

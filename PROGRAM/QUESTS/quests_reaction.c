@@ -577,7 +577,7 @@ void TreasureHunterNextStep()
 	ref PChar = GetMainCharacter();
 	
 	switch (makeint(pchar.quest_S1_numQuests)) {
-		case 1://quete nù1 - Conceicao
+		case 1://quÍte n∞1 - Conceicao
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 4);
@@ -614,7 +614,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 2://quete nù2 - Conceicao
+		case 2://quÍte n∞2 - Conceicao
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 6);
@@ -636,7 +636,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 3://quete nù3 - Douwesen
+		case 3://quÍte n∞3 - Douwesen
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 8);
@@ -673,7 +673,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 4://quete nù4 - Douwesen
+		case 4://quÍte n∞4 - Douwesen
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 10);
@@ -705,7 +705,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 5://quete nù5 - Fleur de Falaise
+		case 5://quÍte n∞5 - Fleur de Falaise
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 12);
@@ -727,7 +727,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 6://quete nù6 - Fleur de Falaise
+		case 6://quÍte n∞6 - Fleur de Falaise
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 14);
@@ -754,7 +754,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 7://quete nù7 - Isla Muelle
+		case 7://quÍte n∞7 - Isla Muelle
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 16);
@@ -781,7 +781,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 8://quete nù8 - Isla Muelle
+		case 8://quÍte n∞8 - Isla Muelle
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 18);
@@ -803,7 +803,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 9://quete nù9 - Quebradas Costillas
+		case 9://quÍte n∞9 - Quebradas Costillas
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 20);
@@ -830,7 +830,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 10://quete nù10 - Quebradas Costillas
+		case 10://quÍte n∞10 - Quebradas Costillas
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 22);
@@ -862,7 +862,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 11://quete nù11 - Redmond
+		case 11://quÍte n∞11 - Redmond
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 24);
@@ -884,7 +884,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 12://quete nù12 - Redmond
+		case 12://quÍte n∞12 - Redmond
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 26);
@@ -911,7 +911,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 13://quete nù13 - Oxbay
+		case 13://quÍte n∞13 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 28);
@@ -943,7 +943,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 14://quete nù14 - Oxbay
+		case 14://quÍte n∞14 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 30);
@@ -985,7 +985,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 15://quete nù15 - Oxbay
+		case 15://quÍte n∞15 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 32);
@@ -1027,7 +1027,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 16://quete nù16 - Oxbay
+		case 16://quÍte n∞16 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 34);
@@ -1064,7 +1064,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 17://quete nù17 - Oxbay
+		case 17://quÍte n∞17 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 36);
@@ -1086,7 +1086,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 18://quete nù18 - Oxbay
+		case 18://quÍte n∞18 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 41);
@@ -1113,7 +1113,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 19://quete nù19 - Redmond
+		case 19://quÍte n∞19 - Redmond
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 43);
@@ -1145,7 +1145,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 20://quete nù20 - Isla Muelle
+		case 20://quÍte n∞20 - Isla Muelle
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 45);
@@ -1364,6 +1364,7 @@ void GenerateTreasureHunterQuest(string startIsland, int alternativeQuestNumber)
 		case 20: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_20_win_condition_step1_island; break;
 	}
 }
+
 void M1_EndQuest()
 {
 	ref PChar;
@@ -1406,6 +1407,214 @@ void M1_EndQuest()
 		pchar.quest.quest_M1_QCBoats.win_condition.l1.location = "QuebradasCostillas";
 		pchar.quest.quest_M1_QCBoats.win_condition = "quest_M1_QCBoats";
 	}
+}
+
+// Retourne la distance entre deux ports en jours.
+// Valeur par dÈfaut = moyenne approx. des distances (6 jours).
+// liste de choix pour from et to :
+// Conceicao / Fleur de Falaise / Redmond / Isla Muelle / Douwesen / Oxbay / Greenford / Quebradas Costillas
+int PJ_portDistance(string from, string to)
+{
+	int defaultDays = 5; // valeur par dÈfaut (environ la moyenne des distances autour de 6 jours)
+	int days = defaultDays;
+
+	switch (from)
+	{
+		case "Conceicao":
+			switch (to) {
+				case "Falaise de Fleur": days = 6; break;
+				case "Fleur de Falaise": days = 6; break;
+				case "Redmond": days = 8; break;
+				case "Isla Muelle": days = 4; break;
+				case "Douwesen": days = 8; break;
+				case "Oxbay": days = 11; break;
+				case "Greenford": days = 11; break;
+				case "Quebradas Costillas": days = 13; break;
+				default: days = defaultDays; break;
+			}
+		break;
+
+		case "Falaise de Fleur":
+		case "Fleur de Falaise":
+			switch (to) {
+				case "Conceicao": days = 6; break;
+				case "Redmond": days = 5; break;
+				case "Isla Muelle": days = 5; break;
+				case "Douwesen": days = 6; break;
+				case "Oxbay": days = 6; break;
+				case "Greenford": days = 6; break;
+				case "Quebradas Costillas": days = 7; break;
+				default: days = defaultDays; break;
+			}
+		break;
+
+		case "Redmond":
+			switch (to) {
+				case "Conceicao": days = 8; break;
+				case "Falaise de Fleur":
+				case "Fleur de Falaise": days = 5; break;
+				case "Isla Muelle": days = 9; break;
+				case "Douwesen": days = 5; break;
+				case "Oxbay": days = 3; break;
+				case "Greenford": days = 3; break;
+				case "Quebradas Costillas": days = 6; break;
+				default: days = defaultDays; break;
+			}
+		break;
+
+		case "Isla Muelle":
+			switch (to) {
+				case "Conceicao": days = 4; break;
+				case "Falaise de Fleur":
+				case "Fleur de Falaise": days = 5; break;
+				case "Redmond": days = 9; break;
+				case "Douwesen": days = 4; break;
+				case "Oxbay": days = 7; break;
+				case "Greenford": days = 7; break;
+				case "Quebradas Costillas": days = 7; break;
+				default: days = defaultDays; break;
+			}
+		break;
+
+		case "Douwesen":
+			switch (to) {
+				case "Conceicao": days = 8; break;
+				case "Falaise de Fleur":
+				case "Fleur de Falaise": days = 6; break;
+				case "Redmond": days = 5; break;
+				case "Isla Muelle": days = 4; break;
+				case "Oxbay": days = 3; break;
+				case "Greenford": days = 3; break;
+				case "Quebradas Costillas": days = 4; break;
+				default: days = defaultDays; break;
+			}
+		break;
+
+		case "Oxbay":
+			switch (to) {
+				case "Conceicao": days = 11; break;
+				case "Falaise de Fleur":
+				case "Fleur de Falaise": days = 6; break;
+				case "Redmond": days = 3; break;
+				case "Isla Muelle": days = 7; break;
+				case "Douwesen": days = 3; break;
+				case "Greenford": days = 0; break; // mÍme Óle
+				case "Quebradas Costillas": days = 4; break;
+				default: days = defaultDays; break;
+			}
+		break;
+
+		case "Greenford":
+			switch (to) {
+				case "Conceicao": days = 11; break;
+				case "Falaise de Fleur":
+				case "Fleur de Falaise": days = 6; break;
+				case "Redmond": days = 3; break;
+				case "Isla Muelle": days = 7; break;
+				case "Douwesen": days = 3; break;
+				case "Oxbay": days = 0; break; // mÍme Óle
+				case "Quebradas Costillas": days = 3; break;
+				default: days = defaultDays; break;
+			}
+		break;
+
+		case "Quebradas Costillas":
+			switch (to) {
+				case "Conceicao": days = 13; break;
+				case "Falaise de Fleur":
+				case "Fleur de Falaise": days = 7; break;
+				case "Redmond": days = 6; break;
+				case "Isla Muelle": days = 7; break;
+				case "Douwesen": days = 4; break;
+				case "Oxbay": days = 4; break;
+				case "Greenford": days = 3; break;
+				default: days = defaultDays; break;
+			}
+		break;
+
+		default:
+			days = defaultDays;
+		break;
+	}
+	
+	return days;
+}
+
+void quest_M2_init_quest()
+{
+	ref PChar = GetMainCharacter();
+
+	if (PChar.quest.M2_quest_init == false)
+	{
+		PChar.quest.M2_quest_init = true;
+		PChar.quest_M2_step = makeint(PChar.quest_M2_step) + 1;
+
+		string portName[9];
+		portName[1] = "Conceicao";
+		portName[2] = "Fleur de Falaise";
+		portName[3] = "Redmond";
+		portName[4] = "Isla Muelle";
+		portName[5] = "Douwesen";
+		portName[6] = "Oxbay";
+		portName[7] = "Greenford";
+		portName[8] = "Quebradas Costillas";
+		int n;
+		int port = 0;
+		int lastPort = 0;
+		int lastLastPort = 0;
+		for (n = 1; n <= 2 + makeint(PChar.quest_M2_step); n++) {
+			port = rand(8) + 1;
+			if (n == 1 && port == 3) port++;
+			if (port == 6 && lastPort == 7) port++;
+			if (port == 7 && lastPort == 6) port = 1;
+			if (port == lastPort || port == lastLastPort) port++;
+			if (port > 8) port = 1;
+			if (port == lastPort || port == lastLastPort) port++;
+			if (port > 8) port = 1;
+			switch (n) {
+				case 1:  PChar.quest.quest_M2_island1 =  portName[port]; break;
+				case 2:  PChar.quest.quest_M2_island2 =  portName[port]; break;
+				case 3:  PChar.quest.quest_M2_island3 =  portName[port]; break;
+				case 4:  PChar.quest.quest_M2_island4 =  portName[port]; break;
+				case 5:  PChar.quest.quest_M2_island5 =  portName[port]; break;
+				case 6:  PChar.quest.quest_M2_island6 =  portName[port]; break;
+				case 7:  PChar.quest.quest_M2_island7 =  portName[port]; break;
+				case 8:  PChar.quest.quest_M2_island8 =  portName[port]; break;
+				case 9:  PChar.quest.quest_M2_island9 =  portName[port]; break;
+				case 10: PChar.quest.quest_M2_island10 = portName[port]; break;
+			}
+
+			lastLastPort = lastPort;
+			lastPort = port;
+		}
+	}
+}
+
+int quest_M2_howlong() {
+	ref PChar = GetMainCharacter();
+	int days = 0;
+	int n;
+	for (n = 1; n <= 2 + makeint(PChar.quest_M2_step); n++) {
+		switch (n) {
+			case 1:  days = days + PJ_portDistance("Redmond", PChar.quest.quest_M2_island1); break;
+			case 2:  days = days + PJ_portDistance(PChar.quest.quest_M2_island1, PChar.quest.quest_M2_island2); break;
+			case 3:  days = days + PJ_portDistance(PChar.quest.quest_M2_island2, PChar.quest.quest_M2_island3); break;
+			case 4:  days = days + PJ_portDistance(PChar.quest.quest_M2_island3, PChar.quest.quest_M2_island4); break;
+			case 5:  days = days + PJ_portDistance(PChar.quest.quest_M2_island4, PChar.quest.quest_M2_island5); break;
+			case 6:  days = days + PJ_portDistance(PChar.quest.quest_M2_island5, PChar.quest.quest_M2_island6); break;
+			case 7:  days = days + PJ_portDistance(PChar.quest.quest_M2_island6, PChar.quest.quest_M2_island7); break;
+			case 8:  days = days + PJ_portDistance(PChar.quest.quest_M2_island7, PChar.quest.quest_M2_island8); break;
+			case 9:  days = days + PJ_portDistance(PChar.quest.quest_M2_island8, PChar.quest.quest_M2_island9); break;
+			case 10: days = days + PJ_portDistance(PChar.quest.quest_M2_island9, PChar.quest.quest_M2_island10); break;
+		}
+	}
+	return days;
+}
+
+void quest_M2_start_quest() {
+	ref PChar = GetMainCharacter();
+	PChar.quest_M2_quest_start = true;
+	DeleteQuestHeader("PJ_S1"); SetQuestHeader("PJ_S1");
 }
 // fin ajout PJ
 

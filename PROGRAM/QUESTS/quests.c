@@ -134,19 +134,20 @@ void QuestsCheck_forLocEnter()
 	if (makeint(pchar.quest_M1_step) == 9 && pchar.location == "QC_pirate_house_inside") PlaceCharacter(characterFromID("Chui A-poo"), "goto", homelocation);
 
 	//quest M2
-	PlaceCharacter(characterFromID("Christopher Myngs"), "goto", homelocation); // à supprimer
-	if (makeint(pchar.quest_M2_step) == 0 && pchar.location == "Redmond_prison") PlaceCharacter(characterFromID("Christopher Myngs"), "goto", homelocation);
+	if (PChar.quest_M2_quest_start == false) PlaceCharacter(characterFromID("Christopher Myngs"), "goto", homelocation); // à supprimer
+	if (PChar.quest_M2_quest_start == true) PlaceCharacter(characterFromID("Sir Henry Huncks"), "goto", homelocation); // à supprimer
+	if (makeint(pchar.quest_M2_step) >= 0 && pchar.location == "Redmond_prison" && PChar.quest_M2_quest_start == false) PlaceCharacter(characterFromID("Christopher Myngs"), "goto", homelocation);
 	
 	// POUR CREER DES QUETES
-	SetNationRelation2MainCharacter(PIRATE, RELATION_FRIEND);
-	SetNationRelation2MainCharacter(FRANCE, RELATION_FRIEND);
+	// SetNationRelation2MainCharacter(PIRATE, RELATION_FRIEND);
+	// SetNationRelation2MainCharacter(FRANCE, RELATION_FRIEND);
 	//PJ connaitre a chaque reload des informations (ex : position = pchar.location)
 	// Log_SetStringToLog("PJ 1:"+pchar.location);
 	// Log_SetStringToLog("PJ 2:"+pchar.location.locator);
 	// Log_SetStringToLog("PJ 3:"+pchar.location.locator_group);//location.group
 	// Log_SetStringToLog("PJ blade:"+pchar.equip.blade);
 	// Log_SetStringToLog("PJ gun:"+pchar.equip.gun);
-	Log_SetStringToLog("Reputation:"+pchar.Reputation);
+	// Log_SetStringToLog("Reputation:"+pchar.Reputation);
 	// fin ajout PJ
 
 	QC_DoUnloadLocation();

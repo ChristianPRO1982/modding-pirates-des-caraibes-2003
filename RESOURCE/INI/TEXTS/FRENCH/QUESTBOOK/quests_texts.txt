@@ -983,3 +983,7 @@ C'est fait ! Tous les forts des caraïbes sont tombés sous mes canons. Je suis LE
 François l'Olonnais s'est rendu aux armés qui le cherchaient depuis tant d'années. Il se trouve à la prison de Redmond.
 #TEXT	17
 Cette fois, c'est terminé. François l'Olonnais s'est rendu aux armés qui le cherchait. Son procès fut bref, pour ne pas dire qu'il n'y en a pas eu ! Je suis partie avant que l'on ne le pende, je n'avais pas le cœur à voir ce spectacle. Avant de le voir partir, François m'a adresser un regard qui restera graver dans ma mémoire : c'était comme s'il m'adoubait comme le nouveau 'PIRATE DES CARAIBES'. C'est un honneur pour moi ; adieu François..... Cependant, ses dernières paroles me laisse croire qu'il y a autre chose. En tout cas, le trésor de François est fabuleux : 200 diamants et 150 pépites d'or. Je suis très riche.
+#QUEST	PJ_M2
+A la poursuite de Carmen San Diego
+#TEXT	1
+Par tous les diables et les sept mers ! Un trésor de ce vieux Silehard a été dérobé sous son nez, comme un tonneau de rhum volé par un moussaillon aviné ! Mille sabords, il faut que je mette la main sur le gredin ou la gredine qui a osé commettre ce larcin. Le capitaine Christopher Myngs m'a chargé de cette affaire. Le capitaine est sous les ordres directs de Silehard. Pour des anglais, ils ne sont pas procéduriers, c'est étonnant. Il m'a collé ce Sir Henry Huncks pour faire la paperasse administrative sinon je n'aurai pas le droit de faire d'arrestation !
