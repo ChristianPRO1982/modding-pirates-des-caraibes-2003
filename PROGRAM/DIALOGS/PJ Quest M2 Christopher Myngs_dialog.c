@@ -42,11 +42,20 @@ void ProcessDialogEvent()
 
 		case "Start":
 			dialog.snd = "Voice\ARSI\ARSI001";
-			d.Text = DLG_TEXT[4];
-			Link.l1 = DLG_TEXT[5];
-			Link.l1.go = "exit";
-			Link.l2 = DLG_TEXT[6];
-			Link.l2.go = "Continue_01";
+			if (PChar.Reputation >= 65)
+			{
+				d.Text = DLG_TEXT[4];
+				Link.l1 = DLG_TEXT[5];
+				Link.l1.go = "exit";
+				Link.l2 = DLG_TEXT[6];
+				Link.l2.go = "Continue_01";
+			}
+			else
+			{
+				d.Text = DLG_TEXT[15];
+				Link.l1 = DLG_TEXT[16];
+				Link.l1.go = "exit";
+			}
 		break;
 
 		case "Continue_01":

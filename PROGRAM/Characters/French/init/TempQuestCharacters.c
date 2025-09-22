@@ -42,8 +42,8 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
 	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 8.0, 16.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 	
@@ -78,7 +78,6 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
 	LAi_SetCitizenType(ch);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
@@ -224,8 +223,8 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
 	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 8.0, 16.0);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -259,9 +258,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_SetCitizenType(ch);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -406,8 +403,8 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
 	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 8.0, 16.0);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -441,9 +438,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_SetCitizenType(ch);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -588,8 +583,8 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
 	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 8.0, 16.0);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -623,9 +618,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_SetCitizenType(ch);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -770,8 +763,8 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
 	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 8.0, 16.0);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -805,9 +798,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_SetCitizenType(ch);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -952,8 +943,8 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
 	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 8.0, 16.0);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -987,9 +978,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_SetCitizenType(ch);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -1134,8 +1123,8 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
 	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 8.0, 16.0);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
@@ -1170,9 +1159,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_SetCitizenType(ch);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -1317,8 +1304,8 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
 	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 10.0, 20.0);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -1352,9 +1339,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
-	LAi_SetHP(ch, 80.0, 80.0);
+	LAi_SetCitizenType(ch);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -1534,7 +1519,6 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "1";
 	ch.money = "10";
-	LAi_SetGuardianType(ch);
 	LAi_SetCitizenType(ch);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
@@ -1573,8 +1557,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "10";
 	LAi_SetCitizenType(ch);
-	LAi_SetGuardianType(ch);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetLoginTime(ch, 10.0, 18.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	n = n + 1;
 	
@@ -1606,6 +1589,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "10";
 	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 10.0, 18.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 	
@@ -1641,8 +1625,7 @@ int CreateTempQuestCharacters(int n)
 	ch.money = "10";
 	ch.quest.meeting = "0";
 	LAi_SetCitizenType(ch);
-	LAi_SetGuardianType(ch);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetLoginTime(ch, 10.0, 18.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	n = n + 1;
 	
@@ -1675,6 +1658,7 @@ int CreateTempQuestCharacters(int n)
 	ch.money = "10";
 	ch.quest.meeting = "0";
 	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 10.0, 18.0);
 	LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
 	n = n + 1;
 	
@@ -1709,8 +1693,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "1";
 	LAi_SetCitizenType(ch);
-	LAi_SetGuardianType(ch);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetLoginTime(ch, 10.0, 18.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	n = n + 1;
 	
@@ -1742,6 +1725,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "1";
 	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 10.0, 18.0);
 	LAi_group_MoveCharacter(ch, "CONCEICAO_CITIZENS");
 	n = n + 1;
 	
@@ -1776,8 +1760,7 @@ int CreateTempQuestCharacters(int n)
 	ch.money = "10";
 	ch.quest.meeting = "0";
 	LAi_SetCitizenType(ch);
-	LAi_SetGuardianType(ch);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetLoginTime(ch, 10.0, 18.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	n = n + 1;
 	
@@ -1809,6 +1792,7 @@ int CreateTempQuestCharacters(int n)
 	ch.money = "10";
 	ch.quest.meeting = "0";
 	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 10.0, 18.0);
 	LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
 	n = n + 1;
 	
@@ -1843,8 +1827,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "1";
 	LAi_SetCitizenType(ch);
-	LAi_SetGuardianType(ch);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetLoginTime(ch, 10.0, 18.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	n = n + 1;
 	
@@ -1876,6 +1859,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "1";
 	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 10.0, 18.0);
 	LAi_group_MoveCharacter(ch, "DOUWESEN_CITIZENS");
 	n = n + 1;
 	
@@ -1910,8 +1894,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "10";
 	LAi_SetCitizenType(ch);
-	LAi_SetGuardianType(ch);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetLoginTime(ch, 10.0, 18.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	n = n + 1;
 	
@@ -1943,6 +1926,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "10";
 	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 10.0, 18.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 	
@@ -1977,8 +1961,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "10";
 	LAi_SetCitizenType(ch);
-	LAi_SetGuardianType(ch);
-	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetLoginTime(ch, 10.0, 18.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	n = n + 1;
 	
@@ -2010,6 +1993,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "10";
 	LAi_SetCitizenType(ch);
+	LAi_SetLoginTime(ch, 10.0, 18.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 	
@@ -2083,8 +2067,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "10";
 	ch.skill.Sneak = "10";
 	ch.money = "0";
-	LAi_SetGuardianType(ch);
-	LAi_SetCitizenType(ch);
+	LAi_SetActorType(ch);
 	LAi_group_MoveCharacter(ch, "QC_CITIZENS");
 	n = n + 1;
 	
@@ -2125,7 +2108,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Oxbay Soldier";
@@ -2166,7 +2149,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Oxbay Soldier";
@@ -2207,7 +2190,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Oxbay Soldier";
@@ -2249,7 +2232,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_falaise de fleur soldier";
@@ -2290,7 +2273,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_falaise de fleur soldier";
@@ -2331,7 +2314,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_falaise de fleur soldier";
@@ -2373,7 +2356,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Oxbay Soldier";
@@ -2414,7 +2397,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Oxbay Soldier";
@@ -2455,7 +2438,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Oxbay Soldier";
@@ -2497,7 +2480,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Mergildo Hurtado";
@@ -2538,7 +2521,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Mergildo Hurtado";
@@ -2579,7 +2562,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Mergildo Hurtado";
@@ -2621,7 +2604,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Douwesen Soldier";
@@ -2662,7 +2645,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Douwesen Soldier";
@@ -2703,7 +2686,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Douwesen Soldier";
@@ -2745,7 +2728,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Oxbay Soldier";
@@ -2786,7 +2769,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Oxbay Soldier";
@@ -2827,7 +2810,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Oxbay Soldier";
@@ -2869,7 +2852,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetActorType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Gyles Dubois";
@@ -2910,7 +2893,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetActorType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Gyles Dubois";
@@ -2951,7 +2934,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetActorType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Gyles Dubois";
@@ -2992,7 +2975,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetActorType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Gyles Dubois";
@@ -3033,7 +3016,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetActorType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Gyles Dubois";
@@ -3074,7 +3057,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetActorType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Gyles Dubois";
@@ -3115,7 +3098,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetActorType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Gyles Dubois";
@@ -3156,7 +3139,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetActorType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Gyles Dubois";
@@ -3197,7 +3180,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetActorType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Gyles Dubois";
@@ -3232,7 +3215,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetActorType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Gyles Dubois";
@@ -3253,8 +3236,8 @@ int CreateTempQuestCharacters(int n)
 	GiveItem2Character(ch, BLADE_LONG);
 	ch.equip.blade = BLADE_LONG;
 	ch.location	= "none";
-	ch.location.group = "";
-	ch.location.locator = "";
+	ch.location.group = "none";
+	ch.location.locator = "none";
 	ch.Dialog.Filename = "PJ Quest M2 Christopher Myngs_dialog.c";
 	ch.rank 	= 1;
 	ch.reputation = "1";
@@ -3270,7 +3253,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Redmond Soldier";
@@ -3307,7 +3290,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Commerce = "1";
 	ch.skill.Sneak = "8";
 	ch.money = "10";
-	LAi_SetMerchantType(ch);
+	LAi_SetGuardianType(ch);
 	LAi_SetLoginTime(ch, 0.0, 24.0);
 	LAi_SetHP(ch, 80.0, 80.0);
 	ch.greeting = "Gr_Redmond Soldier";

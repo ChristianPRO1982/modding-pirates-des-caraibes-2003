@@ -1,4 +1,4 @@
-string DLG_TEXT[15] = {
+string DLG_TEXT[17] = {
 "Capitaine Christopher Myngs, au service du gouverneur Silehard de Redmond. Je suis chargé de la garde de ses biens les plus précieux, destinés à être présentés lors de sa prochaine traversée vers l'Angleterre. Le gouverneur m'a confié cette responsabilité en personne : ce n'est pas pour les foules ni les marchés… mais pour un cercle choisi d'hommes de savoir et de pouvoir. Je vous connais ",
 " capitaine du '",
 "' et j'aurais besoin de votre aide.",
@@ -14,5 +14,7 @@ string DLG_TEXT[15] = {
 "Je suis de retour dans peu de temps, avec le trésor de Silehard.",
 "Des nouvelles, capitaine ?",
 "Pas encore, mais je ne désespère pas.",
+"Je connais ta réputation, tu n'est qu'un misérable pirate ! Dégage avant que je ne te fasse jeter en prison !",
+"Sans façon, je tiens à mon confort sur mon navire. Au revoir",
 
 };
