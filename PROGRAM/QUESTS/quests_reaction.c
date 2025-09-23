@@ -1550,7 +1550,7 @@ void quest_M2_init_quest()
 	{
 		int n;
 		PChar.quest.M2_quest_init = true;
-		PChar.quest.warrant = false;
+		PChar.quest.quest_M2.warrant = "";
 
 		///// choix aléatoire des ports à visiter ///////
 		string portsName[9];
@@ -1812,7 +1812,8 @@ string quest_M2_robbers_list() {
 
 void quest_M2_create_warrant() {
 	ref PChar = GetMainCharacter();
-	PChar.quest.warrant = true;
+	PChar.quest.quest_M2.warrant = quest_M2_robbers_list();
+	log_setstringtoLog("Mandat d'arrêt créé pour : " + PChar.quest.quest_M2.warrant);
 	AddQuestRecord("PJ_M2_quest", 2);
 }
 // fin ajout PJ
