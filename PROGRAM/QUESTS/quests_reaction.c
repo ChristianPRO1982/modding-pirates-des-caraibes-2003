@@ -1550,6 +1550,7 @@ void quest_M2_init_quest()
 	{
 		int n;
 		PChar.quest.M2_quest_init = true;
+		PChar.quest.warrant = false;
 
 		///// choix aléatoire des ports à visiter ///////
 		string portsName[9];
@@ -1651,6 +1652,23 @@ void quest_M2_start_quest() {
 	DeleteQuestHeader("PJ_M2_quest"); SetQuestHeader("PJ_M2_quest"); AddQuestRecord("PJ_M2_quest", 1);
 	DeleteQuestHeader("PJ_M2_intrigue"); SetQuestHeader("PJ_M2_intrigue"); AddQuestRecord("PJ_M2_intrigue", 1);
 	SetOfficersIndex(Pchar, -1, GetCharacterIndex("Sir Henry Huncks"));
+}
+
+string quest_M2_clues_list() {
+	return "... à faire ...";
+}
+
+string quest_M2_robbers_list() {
+	return "... to do ...";
+}
+
+int quest_M2_robbers_count() {
+	return 2;
+}
+
+void quest_M2_create_warrant() {
+	ref PChar = GetMainCharacter();
+	PChar.quest.warrant = true;
 }
 // fin ajout PJ
 
