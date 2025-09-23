@@ -67,18 +67,18 @@ void CreateCharacters()
 	ch.location.group = "";
 	ch.location.locator = "";
 	ch.Dialog.Filename = "blaze_dialog.c";
-	ch.rank 	= 1;
-	ch.reputation = "70";
+	ch.rank 	= 10; // init = 1
+	ch.reputation = "70"; // init = neutral = 50
 	ch.experience = 0;//CalculateExperienceFromRank(sti(ch.rank));
 	ch.skill.Leadership = "1"; // commandement
-	ch.skill.Fencing = "1";
-	ch.skill.Sailing = "1";
-	ch.skill.Accuracy = "1";
-	ch.skill.Cannons = "1";
-	ch.skill.Grappling = "1";
-	ch.skill.Repair = "1";
-	ch.skill.Defence = "1";
-	ch.skill.Commerce = "1";
+	ch.skill.Fencing = "1"; // combat de mêlée : escrime
+	ch.skill.Sailing = "1"; // navigation
+	ch.skill.Accuracy = "1"; // précision des canons
+	ch.skill.Cannons = "1"; // canons : temps de rechargement
+	ch.skill.Grappling = "1"; // abordage
+	ch.skill.Repair = "1"; // réparation
+	ch.skill.Defence = "1"; // défense du bateau : perdre moins d'équipage
+	ch.skill.Commerce = "1"; // commerce
 	ch.skill.Sneak = "1"; // chance
 	ch.skill.freeskill = 2; // les commpétences ci-dessus
 	ch.perks.freepoints = 1; // les compétences particulières avec les actions rapides
@@ -205,8 +205,7 @@ void CreateCharacters()
 	ch.quest_M1_step = -1;
 	//M2 : A la poursuite de Carmen San Diego
 	ch.quest_M2_step = 0;
-	ch.quest_M2_quest_init = false;
-	ch.quest_M2_quest_start = false;
+	ch.quest_M2_quest_init = false; // pour éviter d'initialiser les quêtes plusieurs fois
 
 	// QUESTS BEGINNINGS
 

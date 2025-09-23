@@ -43,7 +43,7 @@ void ProcessDialogEvent()
 		case "Start":
 			dialog.snd = "Voice\ARSI\ARSI001";
 			quest_M2_init_quest();
-			if (PChar.Reputation >= 65)
+			if (PChar.Reputation >= 65 && PChar.rank >= 5)
 			{
 				d.Text = DLG_TEXT[4];
 				Link.l1 = DLG_TEXT[5];

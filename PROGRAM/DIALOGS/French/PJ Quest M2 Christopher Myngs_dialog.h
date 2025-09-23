@@ -6,7 +6,7 @@ string DLG_TEXT[17] = {
 "Une affaire délicate me préoccupe, et je crois que vous pourriez y apporter une solution. Consentiriez-vous à m'entendre ?",
 "Je n'ai pas de temps à perdre.",
 "Je vous écoute.",
-"Il y a peu, un vol a été commis dans la réserve du gouverneur. La serrure fut crochetée avec adresse, et le bien du gouverneur a disparu. Une pièce unique… certains la disent d'origine inca. Nos soupçons ne suffisent pas, mais nous savons qu'un navire doit appareiller vers l'Europe. Dans quatre jours, sans résultat, il sera trop tard. Alors je vous le demande : défendrez-vous l'honneur du gouverneur en retrouvant le coupable ?",
+"Il y a peu, un vol a été commis dans la réserve du gouverneur par un des voleurs de Carmen San Diego qui a signé son audieux acte. La serrure fut crochetée avec adresse, et le bien du gouverneur a disparu. Une pièce unique… certains la disent d'origine inca. Nos soupçons ne suffisent pas, mais nous savons qu'un navire doit appareiller vers l'Europe. Dans quatre jours, sans résultat, il sera trop tard. Alors je vous le demande : défendrez-vous l'honneur du gouverneur en retrouvant le coupable ?",
 "Comptez sur moi. Le voleur ne m'échappera pas.",
 "C'est une affaire trop périlleuse pour moi.",
 "Parfait. Tu as ",
@@ -14,7 +14,7 @@ string DLG_TEXT[17] = {
 "Je suis de retour dans peu de temps, avec le trésor de Silehard.",
 "Des nouvelles, capitaine ?",
 "Pas encore, mais je ne désespère pas.",
-"Je connais ta réputation, tu n'est qu'un misérable pirate ! Dégage avant que je ne te fasse jeter en prison !",
+"Je connais ta réputation et ton rang, tu n'est qu'un misérable pirate ! Dégage avant que je ne te fasse jeter en prison !",
 "Sans façon, je tiens à mon confort sur mon navire. Au revoir",
 
 };

@@ -134,9 +134,8 @@ void QuestsCheck_forLocEnter()
 	if (makeint(pchar.quest_M1_step) == 9 && pchar.location == "QC_pirate_house_inside") PlaceCharacter(characterFromID("Chui A-poo"), "goto", homelocation);
 
 	//quest M2
-	if (PChar.quest_M2_quest_start == false) PlaceCharacter(characterFromID("Christopher Myngs"), "goto", homelocation); // à supprimer
-	if (PChar.quest_M2_quest_start == true) PlaceCharacter(characterFromID("Sir Henry Huncks"), "goto", homelocation); // à supprimer
-	if (makeint(pchar.quest_M2_step) >= 0 && pchar.location == "Redmond_prison" && PChar.quest_M2_quest_start == false) PlaceCharacter(characterFromID("Christopher Myngs"), "goto", homelocation);
+	if (PChar.quest_M2_step == 0) PlaceCharacter(characterFromID("Christopher Myngs"), "goto", homelocation); // à supprimer
+	if (makeint(pchar.quest_M2_step) >= 0 && pchar.location == "Redmond_prison") PlaceCharacter(characterFromID("Christopher Myngs"), "goto", homelocation);
 	
 	// POUR CREER DES QUETES
 	// SetNationRelation2MainCharacter(PIRATE, RELATION_FRIEND);
