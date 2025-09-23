@@ -987,25 +987,25 @@ Cette fois, c'est terminé. François l'Olonnais s'est rendu aux armés qui le cher
 A la poursuite de Carmen San Diego - au voleur !
 #TEXT	1
 Un trésor de ce vieux Silehard a été dérobé sous son nez, comme un tonneau de rhum volé par un moussaillon aviné ! Il faut que je mette la main sur le gredin ou la gredine qui a commis ce larcin. Le capitaine Christopher Myngs m'a chargé de cette affaire. Il m'a collé ce Sir Henry Huncks pour faire la paperasse administrative sinon je n'aurai pas le droit de faire d'arrestation ! Maudit soit les anglais et leur mandat d'arrêt !
-# TEXT  2
-Sir Henry Huncks a compilé les indices. Un mandat d’arrêt est prêt… ces maudits papiers sentent plus l’encre que la poudre.
-# TEXT  3
+#TEXT	2
+Sir Henry Huncks a compilé les indices. Un mandat d'arrêt est prêt... ces maudits papiers sentent plus l'encre que la poudre.
+#TEXT	3
 Les habitants du port confirment que je suis sur la bonne piste.
-# TEXT  4
+#TEXT	4
 Le mandat a porté ses fruits. Le suspect est sous ma garde.
-# TEXT  5
-Le prisonnier a été remis au capitaine Myngs. L’affaire est close… du moins jusqu’au prochain larcin.
-# TEXT  6
-Ce n’était pas le bon. Le gouverneur est furieux et ma réputation s’en ressent.
-# TEXT  7
+#TEXT	5
+Le prisonnier a été remis au capitaine Myngs. L'affaire est close... du moins jusqu'au prochain larcin.
+#TEXT	6
+Ce n'était pas le bon. Le gouverneur est furieux et ma réputation s'en ressent.
+#TEXT	7
 Trop tard. Le navire est parti, le voleur a échappé à la justice.
 #QUEST	PJ_M2_intrigue
 A la poursuite de Carmen San Diego - intrigue chez le gouverneur
 #TEXT	1
-On m'a confié de pourchasser les acolytes de Carmen San Diego. Le capitaine Christopher Myngs m’a chargé de cette affaire. Il agit sous les ordres directs du gouverneur Silehard et non sous le responsable de la garnison ; pour des Anglais, ils ne sont pas procéduriers, c’est étonnant !
+On m'a confié de pourchasser les acolytes de Carmen San Diego. Le capitaine Christopher Myngs m'a chargé de cette affaire. Il agit sous les ordres directs du gouverneur Silehard et non sous le responsable de la garnison ; pour des Anglais, ils ne sont pas procéduriers, c'est étonnant !
 #TEXT	2
-Encore un trésor dérobé. J’ai bien l’impression qu’il se trame quelque chose derrière tous ces vols... chaque prise semble choisie pour provoquer Silehard plus que pour enrichir Carmen...
+Encore un trésor dérobé. J'ai bien l'impression qu'il se trame quelque chose derrière tous ces vols... chaque prise semble choisie pour provoquer Silehard plus que pour enrichir Carmen...
 #TEXT	3
-Une lettre a été trouvée : Carmen se rit ouvertement de Silehard et de sa confrérie qu’elle appelle « les fils de l’ombre ». Elle raille leurs ambitions, affirmant que leurs bouleversements ne sont que des mirages. Elle écrit que l’or inca restera aux Incas, et qu’aucune société secrète ne pourra changer cet ordre. Sa plume pique plus fort que les épées, et chaque mot semble vouloir ridiculiser le gouverneur.
+Une lettre a été trouvée : Carmen se rit ouvertement de Silehard et de sa confrérie qu'elle appelle « les fils de l'ombre ». Elle raille leurs ambitions, affirmant que leurs bouleversements ne sont que des mirages. Elle écrit que l'or inca restera aux Incas, et qu'aucune société secrète ne pourra changer cet ordre. Sa plume pique plus fort que les épées, et chaque mot semble vouloir ridiculiser le gouverneur.
 #TEXT	4
-Carmen a été capturée. Le gouverneur Silehard exulte, parlant trop vite de la « grande cause » qui se déploiera dans les Caraïbes. Puis, réalisant son excès, il s’est brusquement repris. Pour prix de mes services, il m’a remis une importante somme d’or. Mais cette générosité cache mal une inquiétude : les desseins de Silehard demeurent obscurs, et sa joie ressemble à une façade. Quelque chose se trame derrière ces murs. Carmen m'a mis en garde pendant son arrestation que les « les Fils de l’Ombre d'Inti » est une puissante secte.
+Carmen a été capturée. Le gouverneur Silehard exulte, parlant trop vite de la « grande cause » qui se déploiera dans les Caraïbes. Puis, réalisant son excès, il s'est brusquement repris. Pour prix de mes services, il m'a remis une importante somme d'or. Mais cette générosité cache mal une inquiétude : les desseins de Silehard demeurent obscurs, et sa joie ressemble à une façade. Quelque chose se trame derrière ces murs. Carmen m'a mis en garde pendant son arrestation que les « les Fils de l'Ombre d'Inti » est une puissante secte.

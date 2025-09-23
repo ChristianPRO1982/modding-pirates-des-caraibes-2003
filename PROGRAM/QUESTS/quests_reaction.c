@@ -1575,16 +1575,16 @@ void quest_M2_init_quest()
 			if (port == lastPort || port == lastLastPort) port++;
 			if (port > 8) port = 1;
 			switch (n) {
-				case 1:  PChar.quest.quest_M2_island1 =  portsName[port]; break;
-				case 2:  PChar.quest.quest_M2_island2 =  portsName[port]; break;
-				case 3:  PChar.quest.quest_M2_island3 =  portsName[port]; break;
-				case 4:  PChar.quest.quest_M2_island4 =  portsName[port]; break;
-				case 5:  PChar.quest.quest_M2_island5 =  portsName[port]; break;
-				case 6:  PChar.quest.quest_M2_island6 =  portsName[port]; break;
-				case 7:  PChar.quest.quest_M2_island7 =  portsName[port]; break;
-				case 8:  PChar.quest.quest_M2_island8 =  portsName[port]; break;
-				case 9:  PChar.quest.quest_M2_island9 =  portsName[port]; break;
-				case 10: PChar.quest.quest_M2_island10 = portsName[port]; break;
+				case 1:  PChar.quest.quest_M2.island1 =  portsName[port]; break;
+				case 2:  PChar.quest.quest_M2.island2 =  portsName[port]; break;
+				case 3:  PChar.quest.quest_M2.island3 =  portsName[port]; break;
+				case 4:  PChar.quest.quest_M2.island4 =  portsName[port]; break;
+				case 5:  PChar.quest.quest_M2.island5 =  portsName[port]; break;
+				case 6:  PChar.quest.quest_M2.island6 =  portsName[port]; break;
+				case 7:  PChar.quest.quest_M2.island7 =  portsName[port]; break;
+				case 8:  PChar.quest.quest_M2.island8 =  portsName[port]; break;
+				case 9:  PChar.quest.quest_M2.island9 =  portsName[port]; break;
+				case 10: PChar.quest.quest_M2.island10 = portsName[port]; break;
 			}
 
 			lastLastPort = lastPort;
@@ -1592,36 +1592,57 @@ void quest_M2_init_quest()
 		}
 
 		///// liste des voleurs/voleuses pseudoaléatoires /////
+		// 1 : Diego Morales
+		// 2 : Isabelle Duval
+		// 3 : Thomas Redfield
+		// 4 : Maria de la Vega
+		// 5 : Étienne Laroque
+		// 6 : Catherine Blackwood
+		// 7 : Rodrigo Jiménez
+		// 8 : Carmen San Diego
 		n = rand(25);
 		switch (n){
-			case 0: PChar.quest.robbers_1 = "Catherine Blackwood"; PChar.quest.robbers_2 = "Étienne Laroque"; PChar.quest.robbers_3 = "Maria de la Vega"; PChar.quest.robbers_4 = "Diego Morales"; PChar.quest.robbers_5 = "Thomas Redfield"; PChar.quest.robbers_6 = "Rodrigo Jiménez"; PChar.quest.robbers_7 = "Isabelle Duval"; break;
-			case 1: PChar.quest.robbers_1 = "Isabelle Duval"; PChar.quest.robbers_2 = "Diego Morales"; PChar.quest.robbers_3 = "Rodrigo Jiménez"; PChar.quest.robbers_4 = "Thomas Redfield"; PChar.quest.robbers_5 = "Maria de la Vega"; PChar.quest.robbers_6 = "Étienne Laroque"; PChar.quest.robbers_7 = "Catherine Blackwood"; break;
-			case 2: PChar.quest.robbers_1 = "Rodrigo Jiménez"; PChar.quest.robbers_2 = "Catherine Blackwood"; PChar.quest.robbers_3 = "Diego Morales"; PChar.quest.robbers_4 = "Isabelle Duval"; PChar.quest.robbers_5 = "Thomas Redfield"; PChar.quest.robbers_6 = "Étienne Laroque"; PChar.quest.robbers_7 = "Maria de la Vega"; break;
-			case 3: PChar.quest.robbers_1 = "Thomas Redfield"; PChar.quest.robbers_2 = "Isabelle Duval"; PChar.quest.robbers_3 = "Catherine Blackwood"; PChar.quest.robbers_4 = "Rodrigo Jiménez"; PChar.quest.robbers_5 = "Diego Morales"; PChar.quest.robbers_6 = "Maria de la Vega"; PChar.quest.robbers_7 = "Étienne Laroque"; break;
-			case 4: PChar.quest.robbers_1 = "Rodrigo Jiménez"; PChar.quest.robbers_2 = "Diego Morales"; PChar.quest.robbers_3 = "Catherine Blackwood"; PChar.quest.robbers_4 = "Isabelle Duval"; PChar.quest.robbers_5 = "Maria de la Vega"; PChar.quest.robbers_6 = "Étienne Laroque"; PChar.quest.robbers_7 = "Thomas Redfield"; break;
-			case 5: PChar.quest.robbers_1 = "Diego Morales"; PChar.quest.robbers_2 = "Rodrigo Jiménez"; PChar.quest.robbers_3 = "Étienne Laroque"; PChar.quest.robbers_4 = "Catherine Blackwood"; PChar.quest.robbers_5 = "Maria de la Vega"; PChar.quest.robbers_6 = "Thomas Redfield"; PChar.quest.robbers_7 = "Isabelle Duval"; break;
-			case 6: PChar.quest.robbers_1 = "Rodrigo Jiménez"; PChar.quest.robbers_2 = "Étienne Laroque"; PChar.quest.robbers_3 = "Maria de la Vega"; PChar.quest.robbers_4 = "Diego Morales"; PChar.quest.robbers_5 = "Isabelle Duval"; PChar.quest.robbers_6 = "Catherine Blackwood"; PChar.quest.robbers_7 = "Thomas Redfield"; break;
-			case 7: PChar.quest.robbers_1 = "Isabelle Duval"; PChar.quest.robbers_2 = "Maria de la Vega"; PChar.quest.robbers_3 = "Diego Morales"; PChar.quest.robbers_4 = "Catherine Blackwood"; PChar.quest.robbers_5 = "Thomas Redfield"; PChar.quest.robbers_6 = "Étienne Laroque"; PChar.quest.robbers_7 = "Rodrigo Jiménez"; break;
-			case 8: PChar.quest.robbers_1 = "Diego Morales"; PChar.quest.robbers_2 = "Isabelle Duval"; PChar.quest.robbers_3 = "Étienne Laroque"; PChar.quest.robbers_4 = "Rodrigo Jiménez"; PChar.quest.robbers_5 = "Thomas Redfield"; PChar.quest.robbers_6 = "Maria de la Vega"; PChar.quest.robbers_7 = "Catherine Blackwood"; break;
-			case 9: PChar.quest.robbers_1 = "Catherine Blackwood"; PChar.quest.robbers_2 = "Maria de la Vega"; PChar.quest.robbers_3 = "Isabelle Duval"; PChar.quest.robbers_4 = "Diego Morales"; PChar.quest.robbers_5 = "Thomas Redfield"; PChar.quest.robbers_6 = "Étienne Laroque"; PChar.quest.robbers_7 = "Rodrigo Jiménez"; break;
-			case 10: PChar.quest.robbers_1 = "Isabelle Duval"; PChar.quest.robbers_2 = "Étienne Laroque"; PChar.quest.robbers_3 = "Maria de la Vega"; PChar.quest.robbers_4 = "Rodrigo Jiménez"; PChar.quest.robbers_5 = "Diego Morales"; PChar.quest.robbers_6 = "Catherine Blackwood"; PChar.quest.robbers_7 = "Thomas Redfield"; break;
-			case 11: PChar.quest.robbers_1 = "Catherine Blackwood"; PChar.quest.robbers_2 = "Maria de la Vega"; PChar.quest.robbers_3 = "Étienne Laroque"; PChar.quest.robbers_4 = "Thomas Redfield"; PChar.quest.robbers_5 = "Diego Morales"; PChar.quest.robbers_6 = "Isabelle Duval"; PChar.quest.robbers_7 = "Rodrigo Jiménez"; break;
-			case 12: PChar.quest.robbers_1 = "Diego Morales"; PChar.quest.robbers_2 = "Thomas Redfield"; PChar.quest.robbers_3 = "Isabelle Duval"; PChar.quest.robbers_4 = "Étienne Laroque"; PChar.quest.robbers_5 = "Maria de la Vega"; PChar.quest.robbers_6 = "Catherine Blackwood"; PChar.quest.robbers_7 = "Rodrigo Jiménez"; break;
-			case 13: PChar.quest.robbers_1 = "Isabelle Duval"; PChar.quest.robbers_2 = "Rodrigo Jiménez"; PChar.quest.robbers_3 = "Maria de la Vega"; PChar.quest.robbers_4 = "Thomas Redfield"; PChar.quest.robbers_5 = "Diego Morales"; PChar.quest.robbers_6 = "Étienne Laroque"; PChar.quest.robbers_7 = "Catherine Blackwood"; break;
-			case 14: PChar.quest.robbers_1 = "Thomas Redfield"; PChar.quest.robbers_2 = "Maria de la Vega"; PChar.quest.robbers_3 = "Isabelle Duval"; PChar.quest.robbers_4 = "Diego Morales"; PChar.quest.robbers_5 = "Catherine Blackwood"; PChar.quest.robbers_6 = "Rodrigo Jiménez"; PChar.quest.robbers_7 = "Étienne Laroque"; break;
-			case 15: PChar.quest.robbers_1 = "Diego Morales"; PChar.quest.robbers_2 = "Isabelle Duval"; PChar.quest.robbers_3 = "Thomas Redfield"; PChar.quest.robbers_4 = "Étienne Laroque"; PChar.quest.robbers_5 = "Rodrigo Jiménez"; PChar.quest.robbers_6 = "Catherine Blackwood"; PChar.quest.robbers_7 = "Maria de la Vega"; break;
-			case 16: PChar.quest.robbers_1 = "Étienne Laroque"; PChar.quest.robbers_2 = "Isabelle Duval"; PChar.quest.robbers_3 = "Diego Morales"; PChar.quest.robbers_4 = "Rodrigo Jiménez"; PChar.quest.robbers_5 = "Maria de la Vega"; PChar.quest.robbers_6 = "Thomas Redfield"; PChar.quest.robbers_7 = "Catherine Blackwood"; break;
-			case 17: PChar.quest.robbers_1 = "Catherine Blackwood"; PChar.quest.robbers_2 = "Diego Morales"; PChar.quest.robbers_3 = "Rodrigo Jiménez"; PChar.quest.robbers_4 = "Étienne Laroque"; PChar.quest.robbers_5 = "Isabelle Duval"; PChar.quest.robbers_6 = "Thomas Redfield"; PChar.quest.robbers_7 = "Maria de la Vega"; break;
-			case 18: PChar.quest.robbers_1 = "Thomas Redfield"; PChar.quest.robbers_2 = "Rodrigo Jiménez"; PChar.quest.robbers_3 = "Diego Morales"; PChar.quest.robbers_4 = "Isabelle Duval"; PChar.quest.robbers_5 = "Catherine Blackwood"; PChar.quest.robbers_6 = "Maria de la Vega"; PChar.quest.robbers_7 = "Étienne Laroque"; break;
-			case 19: PChar.quest.robbers_1 = "Catherine Blackwood"; PChar.quest.robbers_2 = "Rodrigo Jiménez"; PChar.quest.robbers_3 = "Maria de la Vega"; PChar.quest.robbers_4 = "Étienne Laroque"; PChar.quest.robbers_5 = "Diego Morales"; PChar.quest.robbers_6 = "Thomas Redfield"; PChar.quest.robbers_7 = "Isabelle Duval"; break;
-			case 20: PChar.quest.robbers_1 = "Catherine Blackwood"; PChar.quest.robbers_2 = "Isabelle Duval"; PChar.quest.robbers_3 = "Thomas Redfield"; PChar.quest.robbers_4 = "Rodrigo Jiménez"; PChar.quest.robbers_5 = "Étienne Laroque"; PChar.quest.robbers_6 = "Diego Morales"; PChar.quest.robbers_7 = "Maria de la Vega"; break;
-			case 21: PChar.quest.robbers_1 = "Maria de la Vega"; PChar.quest.robbers_2 = "Thomas Redfield"; PChar.quest.robbers_3 = "Catherine Blackwood"; PChar.quest.robbers_4 = "Étienne Laroque"; PChar.quest.robbers_5 = "Diego Morales"; PChar.quest.robbers_6 = "Isabelle Duval"; PChar.quest.robbers_7 = "Rodrigo Jiménez"; break;
-			case 22: PChar.quest.robbers_1 = "Thomas Redfield"; PChar.quest.robbers_2 = "Étienne Laroque"; PChar.quest.robbers_3 = "Maria de la Vega"; PChar.quest.robbers_4 = "Isabelle Duval"; PChar.quest.robbers_5 = "Diego Morales"; PChar.quest.robbers_6 = "Catherine Blackwood"; PChar.quest.robbers_7 = "Rodrigo Jiménez"; break;
-			case 23: PChar.quest.robbers_1 = "Étienne Laroque"; PChar.quest.robbers_2 = "Isabelle Duval"; PChar.quest.robbers_3 = "Thomas Redfield"; PChar.quest.robbers_4 = "Maria de la Vega"; PChar.quest.robbers_5 = "Rodrigo Jiménez"; PChar.quest.robbers_6 = "Diego Morales"; PChar.quest.robbers_7 = "Catherine Blackwood"; break;
-			case 24: PChar.quest.robbers_1 = "Isabelle Duval"; PChar.quest.robbers_2 = "Catherine Blackwood"; PChar.quest.robbers_3 = "Étienne Laroque"; PChar.quest.robbers_4 = "Maria de la Vega"; PChar.quest.robbers_5 = "Diego Morales"; PChar.quest.robbers_6 = "Rodrigo Jiménez"; PChar.quest.robbers_7 = "Thomas Redfield"; break;
-			case 25: PChar.quest.robbers_1 = "Maria de la Vega"; PChar.quest.robbers_2 = "Catherine Blackwood"; PChar.quest.robbers_3 = "Rodrigo Jiménez"; PChar.quest.robbers_4 = "Thomas Redfield"; PChar.quest.robbers_5 = "Diego Morales"; PChar.quest.robbers_6 = "Étienne Laroque"; PChar.quest.robbers_7 = "Isabelle Duval"; break;
+			case 0: PChar.quest.quest_M2.robbers_1 = 6; PChar.quest.quest_M2.robbers_2 = 5; PChar.quest.quest_M2.robbers_3 = 4; PChar.quest.quest_M2.robbers_4 = 1; PChar.quest.quest_M2.robbers_5 = 3; PChar.quest.quest_M2.robbers_6 = 7; PChar.quest.quest_M2.robbers_7 = 2; break;
+			case 1: PChar.quest.quest_M2.robbers_1 = 2; PChar.quest.quest_M2.robbers_2 = 1; PChar.quest.quest_M2.robbers_3 = 7; PChar.quest.quest_M2.robbers_4 = 3; PChar.quest.quest_M2.robbers_5 = 4; PChar.quest.quest_M2.robbers_6 = 5; PChar.quest.quest_M2.robbers_7 = 6; break;
+			case 2: PChar.quest.quest_M2.robbers_1 = 7; PChar.quest.quest_M2.robbers_2 = 6; PChar.quest.quest_M2.robbers_3 = 1; PChar.quest.quest_M2.robbers_4 = 2; PChar.quest.quest_M2.robbers_5 = 3; PChar.quest.quest_M2.robbers_6 = 5; PChar.quest.quest_M2.robbers_7 = 4; break;
+			case 3: PChar.quest.quest_M2.robbers_1 = 3; PChar.quest.quest_M2.robbers_2 = 2; PChar.quest.quest_M2.robbers_3 = 6; PChar.quest.quest_M2.robbers_4 = 7; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 4; PChar.quest.quest_M2.robbers_7 = 5; break;
+			case 4: PChar.quest.quest_M2.robbers_1 = 7; PChar.quest.quest_M2.robbers_2 = 1; PChar.quest.quest_M2.robbers_3 = 6; PChar.quest.quest_M2.robbers_4 = 2; PChar.quest.quest_M2.robbers_5 = 4; PChar.quest.quest_M2.robbers_6 = 5; PChar.quest.quest_M2.robbers_7 = 3; break;
+			case 5: PChar.quest.quest_M2.robbers_1 = 1; PChar.quest.quest_M2.robbers_2 = 7; PChar.quest.quest_M2.robbers_3 = 5; PChar.quest.quest_M2.robbers_4 = 6; PChar.quest.quest_M2.robbers_5 = 4; PChar.quest.quest_M2.robbers_6 = 3; PChar.quest.quest_M2.robbers_7 = 2; break;
+			case 6: PChar.quest.quest_M2.robbers_1 = 7; PChar.quest.quest_M2.robbers_2 = 5; PChar.quest.quest_M2.robbers_3 = 4; PChar.quest.quest_M2.robbers_4 = 1; PChar.quest.quest_M2.robbers_5 = 2; PChar.quest.quest_M2.robbers_6 = 6; PChar.quest.quest_M2.robbers_7 = 3; break;
+			case 7: PChar.quest.quest_M2.robbers_1 = 2; PChar.quest.quest_M2.robbers_2 = 4; PChar.quest.quest_M2.robbers_3 = 1; PChar.quest.quest_M2.robbers_4 = 6; PChar.quest.quest_M2.robbers_5 = 3; PChar.quest.quest_M2.robbers_6 = 5; PChar.quest.quest_M2.robbers_7 = 7; break;
+			case 8: PChar.quest.quest_M2.robbers_1 = 1; PChar.quest.quest_M2.robbers_2 = 2; PChar.quest.quest_M2.robbers_3 = 5; PChar.quest.quest_M2.robbers_4 = 7; PChar.quest.quest_M2.robbers_5 = 3; PChar.quest.quest_M2.robbers_6 = 4; PChar.quest.quest_M2.robbers_7 = 6; break;
+			case 9: PChar.quest.quest_M2.robbers_1 = 6; PChar.quest.quest_M2.robbers_2 = 4; PChar.quest.quest_M2.robbers_3 = 2; PChar.quest.quest_M2.robbers_4 = 1; PChar.quest.quest_M2.robbers_5 = 3; PChar.quest.quest_M2.robbers_6 = 5; PChar.quest.quest_M2.robbers_7 = 7; break;
+			case 10: PChar.quest.quest_M2.robbers_1 = 2; PChar.quest.quest_M2.robbers_2 = 5; PChar.quest.quest_M2.robbers_3 = 4; PChar.quest.quest_M2.robbers_4 = 7; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 6; PChar.quest.quest_M2.robbers_7 = 3; break;
+			case 11: PChar.quest.quest_M2.robbers_1 = 6; PChar.quest.quest_M2.robbers_2 = 4; PChar.quest.quest_M2.robbers_3 = 5; PChar.quest.quest_M2.robbers_4 = 3; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 2; PChar.quest.quest_M2.robbers_7 = 7; break;
+			case 12: PChar.quest.quest_M2.robbers_1 = 1; PChar.quest.quest_M2.robbers_2 = 3; PChar.quest.quest_M2.robbers_3 = 2; PChar.quest.quest_M2.robbers_4 = 5; PChar.quest.quest_M2.robbers_5 = 4; PChar.quest.quest_M2.robbers_6 = 6; PChar.quest.quest_M2.robbers_7 = 7; break;
+			case 13: PChar.quest.quest_M2.robbers_1 = 2; PChar.quest.quest_M2.robbers_2 = 7; PChar.quest.quest_M2.robbers_3 = 4; PChar.quest.quest_M2.robbers_4 = 3; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 5; PChar.quest.quest_M2.robbers_7 = 6; break;
+			case 14: PChar.quest.quest_M2.robbers_1 = 3; PChar.quest.quest_M2.robbers_2 = 4; PChar.quest.quest_M2.robbers_3 = 2; PChar.quest.quest_M2.robbers_4 = 1; PChar.quest.quest_M2.robbers_5 = 6; PChar.quest.quest_M2.robbers_6 = 7; PChar.quest.quest_M2.robbers_7 = 5; break;
+			case 15: PChar.quest.quest_M2.robbers_1 = 1; PChar.quest.quest_M2.robbers_2 = 2; PChar.quest.quest_M2.robbers_3 = 3; PChar.quest.quest_M2.robbers_4 = 5; PChar.quest.quest_M2.robbers_5 = 7; PChar.quest.quest_M2.robbers_6 = 6; PChar.quest.quest_M2.robbers_7 = 4; break;
+			case 16: PChar.quest.quest_M2.robbers_1 = 5; PChar.quest.quest_M2.robbers_2 = 2; PChar.quest.quest_M2.robbers_3 = 1; PChar.quest.quest_M2.robbers_4 = 7; PChar.quest.quest_M2.robbers_5 = 4; PChar.quest.quest_M2.robbers_6 = 3; PChar.quest.quest_M2.robbers_7 = 6; break;
+			case 17: PChar.quest.quest_M2.robbers_1 = 6; PChar.quest.quest_M2.robbers_2 = 1; PChar.quest.quest_M2.robbers_3 = 7; PChar.quest.quest_M2.robbers_4 = 5; PChar.quest.quest_M2.robbers_5 = 2; PChar.quest.quest_M2.robbers_6 = 3; PChar.quest.quest_M2.robbers_7 = 4; break;
+			case 18: PChar.quest.quest_M2.robbers_1 = 3; PChar.quest.quest_M2.robbers_2 = 7; PChar.quest.quest_M2.robbers_3 = 1; PChar.quest.quest_M2.robbers_4 = 2; PChar.quest.quest_M2.robbers_5 = 6; PChar.quest.quest_M2.robbers_6 = 4; PChar.quest.quest_M2.robbers_7 = 5; break;
+			case 19: PChar.quest.quest_M2.robbers_1 = 6; PChar.quest.quest_M2.robbers_2 = 7; PChar.quest.quest_M2.robbers_3 = 4; PChar.quest.quest_M2.robbers_4 = 5; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 3; PChar.quest.quest_M2.robbers_7 = 2; break;
+			case 20: PChar.quest.quest_M2.robbers_1 = 6; PChar.quest.quest_M2.robbers_2 = 2; PChar.quest.quest_M2.robbers_3 = 3; PChar.quest.quest_M2.robbers_4 = 7; PChar.quest.quest_M2.robbers_5 = 5; PChar.quest.quest_M2.robbers_6 = 1; PChar.quest.quest_M2.robbers_7 = 4; break;
+			case 21: PChar.quest.quest_M2.robbers_1 = 4; PChar.quest.quest_M2.robbers_2 = 3; PChar.quest.quest_M2.robbers_3 = 6; PChar.quest.quest_M2.robbers_4 = 5; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 2; PChar.quest.quest_M2.robbers_7 = 7; break;
+			case 22: PChar.quest.quest_M2.robbers_1 = 3; PChar.quest.quest_M2.robbers_2 = 5; PChar.quest.quest_M2.robbers_3 = 4; PChar.quest.quest_M2.robbers_4 = 2; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 6; PChar.quest.quest_M2.robbers_7 = 7; break;
+			case 23: PChar.quest.quest_M2.robbers_1 = 5; PChar.quest.quest_M2.robbers_2 = 2; PChar.quest.quest_M2.robbers_3 = 3; PChar.quest.quest_M2.robbers_4 = 4; PChar.quest.quest_M2.robbers_5 = 7; PChar.quest.quest_M2.robbers_6 = 1; PChar.quest.quest_M2.robbers_7 = 6; break;
+			case 24: PChar.quest.quest_M2.robbers_1 = 2; PChar.quest.quest_M2.robbers_2 = 6; PChar.quest.quest_M2.robbers_3 = 5; PChar.quest.quest_M2.robbers_4 = 4; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 7; PChar.quest.quest_M2.robbers_7 = 3; break;
+			case 25: PChar.quest.quest_M2.robbers_1 = 4; PChar.quest.quest_M2.robbers_2 = 6; PChar.quest.quest_M2.robbers_3 = 7; PChar.quest.quest_M2.robbers_4 = 3; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 5; PChar.quest.quest_M2.robbers_7 = 2; break;
 		}
-		PChar.quest.robbers_8 = "Carmen San Diego";
+		PChar.quest.quest_M2.robbers_8 = 8;
+
+		// initialisation des indices
+		PChar.quest.quest_M2.clue.gender = "";
+		PChar.quest.quest_M2.clue.hair = "";
+		PChar.quest.quest_M2.clue.eyes = "";
+		PChar.quest.quest_M2.clue.style = "";
+		PChar.quest.quest_M2.clue.accessory = "";
+		PChar.quest.quest_M2.clue.passion = "";
+		PChar.quest.quest_M2.clue.skill = "";
+		PChar.quest.quest_M2.clue.mark = "";
+		PChar.quest.quest_M2.clue.language = "";
+		PChar.quest.quest_M2.clue.home_port = "";
+		PChar.quest.quest_M2.clue.nb_suspects = 8;
 	}
 }
 
@@ -1631,16 +1652,16 @@ int quest_M2_howlong() {
 	int n;
 	for (n = 1; n <= 2 + makeint(PChar.quest_M2_step); n++) {
 		switch (n) {
-			case 1:  days = days + PJ_portDistance("Redmond", PChar.quest.quest_M2_island1); break;
-			case 2:  days = days + PJ_portDistance(PChar.quest.quest_M2_island1, PChar.quest.quest_M2_island2); break;
-			case 3:  days = days + PJ_portDistance(PChar.quest.quest_M2_island2, PChar.quest.quest_M2_island3); break;
-			case 4:  days = days + PJ_portDistance(PChar.quest.quest_M2_island3, PChar.quest.quest_M2_island4); break;
-			case 5:  days = days + PJ_portDistance(PChar.quest.quest_M2_island4, PChar.quest.quest_M2_island5); break;
-			case 6:  days = days + PJ_portDistance(PChar.quest.quest_M2_island5, PChar.quest.quest_M2_island6); break;
-			case 7:  days = days + PJ_portDistance(PChar.quest.quest_M2_island6, PChar.quest.quest_M2_island7); break;
-			case 8:  days = days + PJ_portDistance(PChar.quest.quest_M2_island7, PChar.quest.quest_M2_island8); break;
-			case 9:  days = days + PJ_portDistance(PChar.quest.quest_M2_island8, PChar.quest.quest_M2_island9); break;
-			case 10: days = days + PJ_portDistance(PChar.quest.quest_M2_island9, PChar.quest.quest_M2_island10); break;
+			case 1:  days = days + PJ_portDistance("Redmond", PChar.quest.quest_M2.island1); break;
+			case 2:  days = days + PJ_portDistance(PChar.quest.quest_M2.island1, PChar.quest.quest_M2.island2); break;
+			case 3:  days = days + PJ_portDistance(PChar.quest.quest_M2.island2, PChar.quest.quest_M2.island3); break;
+			case 4:  days = days + PJ_portDistance(PChar.quest.quest_M2.island3, PChar.quest.quest_M2.island4); break;
+			case 5:  days = days + PJ_portDistance(PChar.quest.quest_M2.island4, PChar.quest.quest_M2.island5); break;
+			case 6:  days = days + PJ_portDistance(PChar.quest.quest_M2.island5, PChar.quest.quest_M2.island6); break;
+			case 7:  days = days + PJ_portDistance(PChar.quest.quest_M2.island6, PChar.quest.quest_M2.island7); break;
+			case 8:  days = days + PJ_portDistance(PChar.quest.quest_M2.island7, PChar.quest.quest_M2.island8); break;
+			case 9:  days = days + PJ_portDistance(PChar.quest.quest_M2.island8, PChar.quest.quest_M2.island9); break;
+			case 10: days = days + PJ_portDistance(PChar.quest.quest_M2.island9, PChar.quest.quest_M2.island10); break;
 		}
 	}
 	return days;
@@ -1654,21 +1675,145 @@ void quest_M2_start_quest() {
 	SetOfficersIndex(Pchar, -1, GetCharacterIndex("Sir Henry Huncks"));
 }
 
-string quest_M2_clues_list() {
-	return "... à faire ...";
+string quest_M2_clues_list_get() {
+	string clues = "";
+	string separator = "";
+	ref PChar = GetMainCharacter();
+
+	if (PChar.quest.quest_M2.clue.gender != "") {clues = clues + separator + PChar.quest.quest_M2.clue.gender; separator = ", ";}
+	if (PChar.quest.quest_M2.clue.hair != "")   {clues = clues + separator + "cheveux " + PChar.quest.quest_M2.clue.hair;   separator = ", ";}
+	if (PChar.quest.quest_M2.clue.eyes != "")   {clues = clues + separator + "yeux " + PChar.quest.quest_M2.clue.eyes;   separator = ", ";}
+	if (PChar.quest.quest_M2.clue.style != "")  {clues = clues + separator + "style " + PChar.quest.quest_M2.clue.style;  separator = ", ";}
+	if (PChar.quest.quest_M2.clue.accessory != "") {clues = clues + separator + "accessoire " + PChar.quest.quest_M2.clue.accessory; separator = ", ";}
+	if (PChar.quest.quest_M2.clue.passion != "") {clues = clues + separator + "passion " + PChar.quest.quest_M2.clue.passion; separator = ", ";}
+	if (PChar.quest.quest_M2.clue.skill != "")   {clues = clues + separator + "compétence " + PChar.quest.quest_M2.clue.skill;   separator = ", ";}
+	if (PChar.quest.quest_M2.clue.mark != "")    {clues = clues + separator + "marque " + PChar.quest.quest_M2.clue.mark;    separator = ", ";}
+	if (PChar.quest.quest_M2.clue.language != "") {clues = clues + separator + "langue " + PChar.quest.quest_M2.clue.language; separator = ", ";}
+	if (PChar.quest.quest_M2.clue.home_port != "")    {clues = clues + separator + "origine " + PChar.quest.quest_M2.clue.home_port;    separator = ", ";}
+
+	if (clues == "") clues = "Aucun indice pour le moment.";
+
+	return clues;
+}
+
+void quest_M2_clues_list_update(string category, string value) {
+	ref PChar = GetMainCharacter();
+	string k = "quest.quest_M2.clue." + category;
+	PChar.(k) = value;
 }
 
 string quest_M2_robbers_list() {
-	return "... to do ...";
-}
+	ref PChar = GetMainCharacter();
 
-int quest_M2_robbers_count() {
-	return 2;
+	// 1 : Diego Morales
+	PChar.quest.quest_M2.robber1.name = "Diego Morales";
+	PChar.quest.quest_M2.robber1.gender = "homme"; PChar.quest.quest_M2.robber1.hair = "noir";
+	PChar.quest.quest_M2.robber1.eyes = "marron"; PChar.quest.quest_M2.robber1.style = "simple";
+	PChar.quest.quest_M2.robber1.accessory = "compas marin"; PChar.quest.quest_M2.robber1.passion = "antiquités";
+	PChar.quest.quest_M2.robber1.skill = "escalade"; PChar.quest.quest_M2.robber1.mark = "cicatrice";
+	PChar.quest.quest_M2.robber1.language = "espagnol"; PChar.quest.quest_M2.robber1.home_port = "Séville";
+
+	// 2 : Isabelle Duval
+	PChar.quest.quest_M2.robber2.name = "Isabelle Duval";
+	PChar.quest.quest_M2.robber2.gender = "femme"; PChar.quest.quest_M2.robber2.hair = "roux";
+	PChar.quest.quest_M2.robber2.eyes = "vert"; PChar.quest.quest_M2.robber2.style = "élégant";
+	PChar.quest.quest_M2.robber2.accessory = "compas marin"; PChar.quest.quest_M2.robber2.passion = "poésie";
+	PChar.quest.quest_M2.robber2.skill = "discours"; PChar.quest.quest_M2.robber2.mark = "tatouage";
+	PChar.quest.quest_M2.robber2.language = "français"; PChar.quest.quest_M2.robber2.home_port = "La Rochelle";
+
+	// 3 : Thomas Redfield
+	PChar.quest.quest_M2.robber3.name = "Thomas Redfield";
+	PChar.quest.quest_M2.robber3.gender = "homme"; PChar.quest.quest_M2.robber3.hair = "blond";
+	PChar.quest.quest_M2.robber3.eyes = "bleu"; PChar.quest.quest_M2.robber3.style = "voyant";
+	PChar.quest.quest_M2.robber3.accessory = "bague"; PChar.quest.quest_M2.robber3.passion = "animaux";
+	PChar.quest.quest_M2.robber3.skill = "déguisement"; PChar.quest.quest_M2.robber3.mark = "Boite légèrement";
+	PChar.quest.quest_M2.robber3.language = "anglais"; PChar.quest.quest_M2.robber6.home_port = "Plymouth";
+	
+	// 4 : Maria de la Vega
+	PChar.quest.quest_M2.robber4.name = "Maria de la Vega";
+	PChar.quest.quest_M2.robber4.gender = "femme"; PChar.quest.quest_M2.robber4.hair = "noir";
+	PChar.quest.quest_M2.robber4.eyes = "bleu"; PChar.quest.quest_M2.robber4.style = "élégant";
+	PChar.quest.quest_M2.robber4.accessory = "compas marin"; PChar.quest.quest_M2.robber4.passion = "animaux";
+	PChar.quest.quest_M2.robber4.skill = "discours"; PChar.quest.quest_M2.robber4.mark = "Boite légèrement";
+	PChar.quest.quest_M2.robber4.language = "espagnol"; PChar.quest.quest_M2.robber1.home_port = "Séville";
+
+	// 5 : Étienne Laroque
+	PChar.quest.quest_M2.robber5.name = "Étienne Laroque";
+	PChar.quest.quest_M2.robber5.gender = "homme"; PChar.quest.quest_M2.robber5.hair = "roux";
+	PChar.quest.quest_M2.robber5.eyes = "marron"; PChar.quest.quest_M2.robber5.style = "simple";
+	PChar.quest.quest_M2.robber5.accessory = "longue-vue"; PChar.quest.quest_M2.robber5.passion = "antiquités";
+	PChar.quest.quest_M2.robber5.skill = "escalade"; PChar.quest.quest_M2.robber5.mark = "tatouage";
+	PChar.quest.quest_M2.robber5.language = "français"; PChar.quest.quest_M2.robber2.home_port = "La Rochelle";
+
+	// 6 : Catherine Blackwood
+	PChar.quest.quest_M2.robber6.name = "Catherine Blackwood";
+	PChar.quest.quest_M2.robber6.gender = "femme"; PChar.quest.quest_M2.robber6.hair = "blond";
+	PChar.quest.quest_M2.robber6.eyes = "vert"; PChar.quest.quest_M2.robber6.style = "voyant";
+	PChar.quest.quest_M2.robber6.accessory = "Bague sertie"; PChar.quest.quest_M2.robber6.passion = "poésie";
+	PChar.quest.quest_M2.robber6.skill = "déguisement"; PChar.quest.quest_M2.robber6.mark = "cicatrice";
+	PChar.quest.quest_M2.robber6.language = "anglais"; PChar.quest.quest_M2.robber6.home_port = "Plymouth";
+
+	// 7 : Rodrigo Jiménez
+	PChar.quest.quest_M2.robber7.name = "Rodrigo Jiménez";
+	PChar.quest.quest_M2.robber7.gender = "homme"; PChar.quest.quest_M2.robber7.hair = "noir";
+	PChar.quest.quest_M2.robber7.eyes = "vert"; PChar.quest.quest_M2.robber7.style = "élégant";
+	PChar.quest.quest_M2.robber7.accessory = "longue-vue"; PChar.quest.quest_M2.robber7.passion = "antiquités";
+	PChar.quest.quest_M2.robber7.skill = "escalade"; PChar.quest.quest_M2.robber7.mark = "tatouage";
+	PChar.quest.quest_M2.robber7.language = "espagnol"; PChar.quest.quest_M2.robber7.home_port = "Séville";
+
+	// 8 : Carmen San Diego
+	PChar.quest.quest_M2.robber8.name = "Carmen Sandiego";
+	PChar.quest.quest_M2.robber8.gender = "femme"; PChar.quest.quest_M2.robber8.hair = "noir";
+	PChar.quest.quest_M2.robber8.eyes = "marron"; PChar.quest.quest_M2.robber8.style = "Élégant noir ténébreux, signature rouge écarlate";
+	PChar.quest.quest_M2.robber8.accessory = "bague"; PChar.quest.quest_M2.robber8.passion = "poésie";
+	PChar.quest.quest_M2.robber8.skill = "discours"; PChar.quest.quest_M2.robber8.mark = "cicatrice";
+	PChar.quest.quest_M2.robber8.language = "polyglotte"; PChar.quest.quest_M2.robber1.home_port = "Madrid";
+
+	int n;
+	bool suspect;
+	string suspects_list = "";
+	PChar.quest.quest_M2.clue.nb_suspects = 0;
+	
+	for (n = 1; n <= 8; n++) {
+		suspect = true;
+		string k = "quest.quest_M2.robber" + n + ".gender";
+		if (PChar.(k) != PChar.quest.quest_M2.clue.gender && PChar.quest.quest_M2.clue.gender != "") suspect = false;
+		k = "quest.quest_M2.robber" + n + ".hair";
+		if (PChar.(k) != PChar.quest.quest_M2.clue.hair && PChar.quest.quest_M2.clue.hair != "") suspect = false;
+		k = "quest.quest_M2.robber" + n + ".eyes";
+		if (PChar.(k) != PChar.quest.quest_M2.clue.eyes && PChar.quest.quest_M2.clue.eyes != "") suspect = false;
+		k = "quest.quest_M2.robber" + n + ".style";
+		if (PChar.(k) != PChar.quest.quest_M2.clue.style && PChar.quest.quest_M2.clue.style != "") suspect = false;
+		k = "quest.quest_M2.robber" + n + ".accessory";
+		if (PChar.(k) != PChar.quest.quest_M2.clue.accessory && PChar.quest.quest_M2.clue.accessory != "") suspect = false;
+		k = "quest.quest_M2.robber" + n + ".passion";
+		if (PChar.(k) != PChar.quest.quest_M2.clue.passion && PChar.quest.quest_M2.clue.passion != "") suspect = false;
+		k = "quest.quest_M2.robber" + n + ".skill";
+		if (PChar.(k) != PChar.quest.quest_M2.clue.skill && PChar.quest.quest_M2.clue.skill != "") suspect = false;
+		k = "quest.quest_M2.robber" + n + ".mark";
+		if (PChar.(k) != PChar.quest.quest_M2.clue.mark && PChar.quest.quest_M2.clue.mark != "") suspect = false;
+		k = "quest.quest_M2.robber" + n + ".language";
+		if (PChar.(k) != PChar.quest.quest_M2.clue.language && PChar.quest.quest_M2.clue.language != "") suspect = false;
+		k = "quest.quest_M2.robber" + n + ".home_port";
+		if (PChar.(k) != PChar.quest.quest_M2.clue.home_port && PChar.quest.quest_M2.clue.home_port != "") suspect = false;
+
+		if (suspect) {
+			k = "quest.quest_M2.robber" + n + ".name";
+			if (suspects_list != "") suspects_list = suspects_list + ", ";
+			suspects_list = suspects_list + PChar.(k);
+			PChar.quest.quest_M2.clue.nb_suspects = makeint(PChar.quest.quest_M2.clue.nb_suspects) + 1;
+		}
+	}
+
+	if (suspects_list == "") suspects_list = "Aucun suspect ne correspond aux indices.";
+
+	return suspects_list;
 }
 
 void quest_M2_create_warrant() {
 	ref PChar = GetMainCharacter();
 	PChar.quest.warrant = true;
+	AddQuestRecord("PJ_M2_quest", 2);
 }
 // fin ajout PJ
 
