@@ -43,7 +43,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "10";
 	LAi_SetCitizenType(ch);
-	LAi_SetLoginTime(ch, 8.0, 16.0);
+	LAi_SetLoginTime(ch, 7.0, 14.0);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 	
@@ -224,7 +224,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "10";
 	LAi_SetCitizenType(ch);
-	LAi_SetLoginTime(ch, 8.0, 16.0);
+	LAi_SetLoginTime(ch, 4.0, 14.0);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -404,7 +404,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "10";
 	LAi_SetCitizenType(ch);
-	LAi_SetLoginTime(ch, 8.0, 16.0);
+	LAi_SetLoginTime(ch, 4.0, 14.0);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -584,7 +584,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "10";
 	LAi_SetCitizenType(ch);
-	LAi_SetLoginTime(ch, 8.0, 16.0);
+	LAi_SetLoginTime(ch, 4.0, 14.0);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -764,7 +764,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "10";
 	LAi_SetCitizenType(ch);
-	LAi_SetLoginTime(ch, 8.0, 16.0);
+	LAi_SetLoginTime(ch, 4.0, 14.0);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -944,7 +944,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "10";
 	LAi_SetCitizenType(ch);
-	LAi_SetLoginTime(ch, 8.0, 16.0);
+	LAi_SetLoginTime(ch, 4.0, 14.0);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	
@@ -1124,7 +1124,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "10";
 	LAi_SetCitizenType(ch);
-	LAi_SetLoginTime(ch, 8.0, 16.0);
+	LAi_SetLoginTime(ch, 4.0, 14.0);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
@@ -1305,7 +1305,7 @@ int CreateTempQuestCharacters(int n)
 	ch.skill.Sneak = "1";
 	ch.money = "10";
 	LAi_SetCitizenType(ch);
-	LAi_SetLoginTime(ch, 10.0, 20.0);
+	LAi_SetLoginTime(ch, 12.0, 24.0);
 	ch.greeting = "Gr_Malcolm Hatcher";
 	n = n + 1;
 	

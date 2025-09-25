@@ -14146,8 +14146,8 @@ void QuestComplete(string sQuestName)
 			if (pchar.quest_S1_quest_18_completed == true) n++;
 			if (pchar.quest_S1_quest_19_completed == true) n++;
 			if (pchar.quest_S1_quest_20_completed == true) n++;
-			Log_SetStringToLog("PJ n:"+n);
-			Log_SetStringToLog("PJ quest_S1_nbQuests:"+pchar.quest_S1_nbQuests);
+			// Log_SetStringToLog("PJ n:"+n);
+			// Log_SetStringToLog("PJ quest_S1_nbQuests:"+pchar.quest_S1_nbQuests);
 			if (makeint(n) == makeint(pchar.quest_S1_nbQuests)) {
 				pchar.quest_S1_allQuestsCompleted = true;
 				pchar.quest_S1_quest_1_completed = false;

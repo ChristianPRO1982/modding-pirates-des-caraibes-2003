@@ -56,12 +56,34 @@ void ProcessDialogEvent()
 		break;
 
 		case "advice":
-			n = rand(2);
-		
 			dialog.snd = "Voice\ARSI\ARSI001";
-			d.Text = DLG_TEXT[0];
-			Link.l1 = DLG_TEXT[0];
-			Link.l1.go = "exit";
+			d.Text = DLG_TEXT[180];
+			Link.l1 = DLG_TEXT[181];
+			Link.l1.go = "advice_01";
+			Link.l2 = DLG_TEXT[182];
+			Link.l2.go = "advice_02";
+			Link.l3 = DLG_TEXT[187];
+			Link.l3.go = "exit";
+			Link.l4 = DLG_TEXT[188];
+			Link.l4.go = "exit";
+		break;
+
+		case "advice_01":
+			n = rand(6);
+
+			dialog.snd = "Voice\ARSI\ARSI001";
+			d.Text = DLG_TEXT[197] + DLG_TEXT[(198 + n)];
+			Link.l1 = DLG_TEXT[205];
+			Link.l1.go = "continue_01";
+		break;
+
+		case "advice_02":
+			n = rand(6);
+
+			dialog.snd = "Voice\ARSI\ARSI001";
+			d.Text = DLG_TEXT[206] + DLG_TEXT[(207 + n)];
+			Link.l1 = DLG_TEXT[214];
+			Link.l1.go = "continue_01";
 		break;
 
 		case "memory_01":
@@ -84,8 +106,10 @@ void ProcessDialogEvent()
 			dialog.snd = "Voice\ARSI\ARSI001";
 			d.Text = DLG_TEXT[(64 + 6*Diag.conte_de_malcolm)];
 			Link.l1 = DLG_TEXT[(65 + 6*Diag.conte_de_malcolm)];
-			Link.l1.go = "exit";
+			Link.l1.go = "Continue_01";
 		break;
+		// pchar.quest_S1_allQuestsCompleted
+		// pchar.quest.quest_S2_lastQuest = "completed
 
 
 

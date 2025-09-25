@@ -56,13 +56,13 @@ void QuestsCheck_forLocEnter()
 	// SetNationRelation2MainCharacter(PIRATE, RELATION_FRIEND);
 	// SetNationRelation2MainCharacter(FRANCE, RELATION_FRIEND);
 	//PJ connaitre a chaque reload des informations (ex : position = pchar.location)
+	Log_SetStringToLog("PJ Heure actuelle : " + environment.time);
 	Log_SetStringToLog("PJ 1:"+pchar.location);
-	Log_SetStringToLog("Heure actuelle : " + environment.time);
 	// Log_SetStringToLog("PJ 2:"+pchar.location.locator);
 	// Log_SetStringToLog("PJ 3:"+pchar.location.locator_group);//location.group
 	// Log_SetStringToLog("PJ blade:"+pchar.equip.blade);
 	// Log_SetStringToLog("PJ gun:"+pchar.equip.gun);
-	// Log_SetStringToLog("Reputation:"+pchar.Reputation);
+	// Log_SetStringToLog("PJ Reputation:"+pchar.Reputation);
 	
 	//quest S1
 	PlaceCharacter(characterFromID("Elizabeth Goodale TQC 1"), "goto", "none");
@@ -117,10 +117,10 @@ void QuestsCheck_forLocEnter()
 	PlaceCharacter(characterFromID("Fabiola Rochefort"), "goto", "none");
 	if (pchar.quest_S2_started == 0) {
 		if (1 == 1) {
-			if (rand(5) == 0 && pchar.location == "Redmond_town_04" && pchar.quest_S2_Redmond_done == false) PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", homelocation);
-			if (rand(5) == 0 && pchar.location == "Falaise_De_Fleur_location_02" && pchar.quest_S2_FalaiseDeFleur_done == false) PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", homelocation);
+			if (rand(5) <= 10 && pchar.location == "Redmond_town_04" && pchar.quest_S2_Redmond_done == false) PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", homelocation);
+			if (rand(5) <= 10 && pchar.location == "Falaise_De_Fleur_location_02" && pchar.quest_S2_FalaiseDeFleur_done == false) PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", homelocation);
 			if (rand(5) == 0 && pchar.location == "Conceicao_town" && pchar.quest_S2_Conceicao_done == false) PlaceCharacter(characterFromID("Florencio Baiano"), "goto", homelocation);
-			if (rand(5) == 0 && pchar.location == "Muelle_town_02" && pchar.quest_S2_IslaMuelle_done == false) PlaceCharacter(characterFromID("Cricorium Taffarel"), "goto", homelocation);
+			if (rand(5) <= 10 && pchar.location == "Muelle_town_02" && pchar.quest_S2_IslaMuelle_done == false) PlaceCharacter(characterFromID("Cricorium Taffarel"), "goto", homelocation);
 			if (rand(5) == 0 && pchar.location == "Douwesen_town" && pchar.quest_S2_Douwesen_done == false) PlaceCharacter(characterFromID("Ghijsbrecht Van Der Hagen"), "goto", homelocation);
 			if (rand(5) == 0 && pchar.location == "Greenford_town" && pchar.quest_S2_Greenford_done == false) PlaceCharacter(characterFromID("Rawlin Feaver"), "goto", homelocation);
 			if (rand(5) == 0 && pchar.location == "Oxbay_town" && pchar.quest_S2_Oxbay_done == false) PlaceCharacter(characterFromID("Rys Scorer"), "goto", homelocation);
