@@ -513,6 +513,45 @@ int CreateDouwesenCharacters(int n)
 	n = n + 1;
 
 	// ajout PJ
+	//§§§§§§§§§§§§§§§§§
+	//§§§ QUESTS PJ §§§
+	//§§§§§§§§§§§§§§§§§
+	// le personnage de Malcolm Hatcher est repris pour donner des informations au
+	// personnage principal sur les nouvelles quêtes (modding : ajout PJ)
+	makeref(ch,Characters[n]);
+	ch.name 	= "Malcolm";
+	ch.lastname 	= "Hatcher";
+	ch.id		= "PJ D Malcolm Hatcher";
+	ch.model = "bocman3";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	GiveItem2Character(ch, "blade20");
+	ch.equip.blade = "blade20";
+	ch.location	= "Douwesen_port";
+	ch.location.group = "goto";
+	ch.location.locator = "goto16";
+	ch.Dialog.Filename = "Malcolm Hatcher_dialog.c";
+	ch.greeting = "Gr_Malcolm Hatcher";
+	ch.rank 	= 7;
+	ch.reputation = "30";
+	ch.experience = "0";
+	ch.skill.Leadership = "0";
+	ch.skill.Fencing = "10";
+	ch.skill.Sailing = "6";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "4";
+	ch.skill.Repair = "5";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "2";
+	ch.skill.Sneak = "1";
+	ch.money = "500";
+	ch.quest.meeting = "0";
+	LAi_SetWarriorTypeNoGroup(ch);
+	LAi_SetLoginTime(ch, 16.0, 20.0);
+	LAi_SetHP(ch, 400.0, 400.0);
+	n = n + 1;
+	
 	if (pchar.quest.PNJ_Trop_Fort == true) {
 		makeref(ch,Characters[n]);
 		ch.name 	= "Stargate";
