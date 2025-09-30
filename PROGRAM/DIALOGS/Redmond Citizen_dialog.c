@@ -55,14 +55,14 @@ void ProcessDialogEvent()
 				d.Text = RandPhrase(DLG_TEXT[16] + PChar.name + DLG_TEXT[17], DLG_TEXT[18] + TimeGreeting() + DLG_TEXT[19], DLG_TEXT[20] + address_form.eng + " " + Pchar.name + DLG_TEXT[21], &Dialog, dialog.snd1, dialog.snd2, dialog.snd3);
 				
 				// ajout PJ
-				if (quest_M2_right_track() == "Redmond")
+				if (quest_M2_right_track())
 				{
 					Link.l1 = DLG_TEXT[145];
 					Link.l1.go = "PJ_M2_01";
 				}
 				// fin ajout PJ
 				
-				if (quest_M2_right_track() != "Redmond") {
+				if (quest_M2_right_track() == false) {
 					if(Rand(1)==0)
 					{
 						Link.l1 = LinkRandPhrase(DLG_TEXT[22], DLG_TEXT[23], DLG_TEXT[24]);
@@ -97,14 +97,14 @@ void ProcessDialogEvent()
 				d.Text = RandPhrase(DLG_TEXT[35], DLG_TEXT[36] + address_form.eng + " " + PChar.name + DLG_TEXT[37], DLG_TEXT[38], &Dialog, dialog.snd1, dialog.snd2, dialog.snd3);
 
 				// ajout PJ
-				if (quest_M2_right_track() == "Redmond")
+				if (quest_M2_right_track())
 				{
 					Link.l1 = DLG_TEXT[145];
 					Link.l1.go = "PJ_M2_01";
 				}
 				// fin ajout PJ
 
-				if (quest_M2_right_track() != "Redmond") {
+				if (quest_M2_right_track() == false) {
 					if(Rand(1)==0)
 					{
 						Link.l1 = LinkRandPhrase(DLG_TEXT[39], DLG_TEXT[40], DLG_TEXT[41]);
@@ -141,7 +141,7 @@ void ProcessDialogEvent()
 					Link.l1 = DLG_TEXT[147];
 					Link.l1.go = "exit";
 				}
-				if (chance >= 0 && PChar.quest_M2_last_citizen != NPChar.id) {
+				if (chance >= 12 && PChar.quest_M2_last_citizen != NPChar.id) {
 					d.Text = quest_M2_PNJ_clue();
 					Link.l1 = DLG_TEXT[193];
 					Link.l1.go = "PJ_M2_02";
@@ -158,7 +158,7 @@ void ProcessDialogEvent()
 		case "PJ_M2_02":
 				chance = makeint(PChar.skill.Sneak) + Rand(20 - makeint(PChar.skill.Sneak));
 
-				if (chance < 12) {
+				if (chance < 18) {
 					d.Text = DLG_TEXT[194];
 				}
 				else {

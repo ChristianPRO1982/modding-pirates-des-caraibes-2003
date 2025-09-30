@@ -1677,24 +1677,58 @@ void quest_M2_start_quest() {
 	SetOfficersIndex(Pchar, -1, GetCharacterIndex("Sir Henry Huncks"));
 }
 
-string quest_M2_right_track() {
-	// renvoi le nom de l'île dont les PNJ peuvent donner des indices
+bool quest_M2_right_track() {
+	// renvoi vrai si le PJ est sur la bonne île
 	// Conceicao / Fleur de Falaise / Redmond / Isla Muelle / Douwesen / Oxbay / Greenford / Quebradas Costillas
 	ref PChar = GetMainCharacter();
-	switch (makeint(PChar.quest_M2_step)) {
-		case 1: return "Redmond"; break;
-		case 2: return PChar.quest.quest_M2.island1; break;
-		case 3: return PChar.quest.quest_M2.island2; break;
-		case 4: return PChar.quest.quest_M2.island3; break;
-		case 5: return PChar.quest.quest_M2.island4; break;
-		case 6: return PChar.quest.quest_M2.island5; break;
-		case 7: return PChar.quest.quest_M2.island6; break;
-		case 8: return PChar.quest.quest_M2.island7; break;
-		case 9: return PChar.quest.quest_M2.island8; break;
-		case 10: return PChar.quest.quest_M2.island9; break;
-		case 11: return PChar.quest.quest_M2.island10; break;
-		default: return ""; break;
+	string rightIsland;
+	string thisIsland;
+
+	switch (PChar.location) {
+		case "REDMOND_PORT": thisIsland = "Redmond"; break;
+		case "Redmond_Rown_01": thisIsland = "Redmond"; break;
+		case "Redmond_town_03": thisIsland = "Redmond"; break;
+		case "Redmond_town_04": thisIsland = "Redmond"; break;
+		case "Falaise_de_fleur_port_01": thisIsland = "Fleur de Falaise"; break;
+		case "Falaise_de_fleur_port_02": thisIsland = "Fleur de Falaise"; break;
+		case "Falaise_de_fleur_location_02": thisIsland = "Fleur de Falaise"; break;
+		case "Falaise_de_fleur_location_03": thisIsland = "Fleur de Falaise"; break;
+		case "Falaise_de_fleur_location_04": thisIsland = "Fleur de Falaise"; break;
+		case "Falaise_de_fleur_location_05": thisIsland = "Fleur de Falaise"; break;
+		case "Oxbay_port": thisIsland = "Oxbay"; break;
+		case "Oxbay_town": thisIsland = "Oxbay"; break;
+		case "Conceicao_port": thisIsland = "Conceicao"; break;
+		case "Conceicao_town": thisIsland = "Conceicao"; break;
+		case "Smugglers_Lair": thisIsland = "Conceicao"; break;
+		case "Douwesen_port": thisIsland = "Douwesen"; break;
+		case "Douwesen_town": thisIsland = "Douwesen"; break;
+		case "Muelle_port": thisIsland = "Isla Muelle"; break;
+		case "Muelle_town_01": thisIsland = "Isla Muelle"; break;
+		case "Muelle_town_02": thisIsland = "Isla Muelle"; break;
+		case "Muelle_town_03": thisIsland = "Isla Muelle"; break;
+		case "Muelle_town_04": thisIsland = "Isla Muelle"; break;
+		case "Greenford_port": thisIsland = "Greenford"; break;
+		case "Greenford_town": thisIsland = "Greenford"; break;
+		case "QC_town": thisIsland = "Quebradas Costillas"; break;
 	}
+
+	switch (makeint(PChar.quest_M2_step)) {
+		case 1: rightIsland = "Redmond"; break;
+		case 2: rightIsland = PChar.quest.quest_M2.island1; break;
+		case 3: rightIsland = PChar.quest.quest_M2.island2; break;
+		case 4: rightIsland = PChar.quest.quest_M2.island3; break;
+		case 5: rightIsland = PChar.quest.quest_M2.island4; break;
+		case 6: rightIsland = PChar.quest.quest_M2.island5; break;
+		case 7: rightIsland = PChar.quest.quest_M2.island6; break;
+		case 8: rightIsland = PChar.quest.quest_M2.island7; break;
+		case 9: rightIsland = PChar.quest.quest_M2.island8; break;
+		case 10: rightIsland = PChar.quest.quest_M2.island9; break;
+		case 11: rightIsland = PChar.quest.quest_M2.island10; break;
+		default: rightIsland = ""; break;
+	}
+
+	if (rightIsland == thisIsland) return true;
+	return false;
 }
 
 string quest_M2_robberId() {
