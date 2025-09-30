@@ -1643,6 +1643,8 @@ void quest_M2_init_quest()
 		PChar.quest.quest_M2.clue.language = "";
 		PChar.quest.quest_M2.clue.home_port = "";
 		PChar.quest.quest_M2.clue.nb_suspects = 8;
+
+		quest_M2_robbers_list();
 	}
 }
 
@@ -1673,6 +1675,168 @@ void quest_M2_start_quest() {
 	DeleteQuestHeader("PJ_M2_quest"); SetQuestHeader("PJ_M2_quest"); AddQuestRecord("PJ_M2_quest", 1);
 	DeleteQuestHeader("PJ_M2_intrigue"); SetQuestHeader("PJ_M2_intrigue"); AddQuestRecord("PJ_M2_intrigue", 1);
 	SetOfficersIndex(Pchar, -1, GetCharacterIndex("Sir Henry Huncks"));
+}
+
+string quest_M2_right_track() {
+	// renvoi le nom de l'île dont les PNJ peuvent donner des indices
+	// Conceicao / Fleur de Falaise / Redmond / Isla Muelle / Douwesen / Oxbay / Greenford / Quebradas Costillas
+	ref PChar = GetMainCharacter();
+	switch (makeint(PChar.quest_M2_step)) {
+		case 1: return "Redmond"; break;
+		case 2: return PChar.quest.quest_M2.island1; break;
+		case 3: return PChar.quest.quest_M2.island2; break;
+		case 4: return PChar.quest.quest_M2.island3; break;
+		case 5: return PChar.quest.quest_M2.island4; break;
+		case 6: return PChar.quest.quest_M2.island5; break;
+		case 7: return PChar.quest.quest_M2.island6; break;
+		case 8: return PChar.quest.quest_M2.island7; break;
+		case 9: return PChar.quest.quest_M2.island8; break;
+		case 10: return PChar.quest.quest_M2.island9; break;
+		case 11: return PChar.quest.quest_M2.island10; break;
+		default: return ""; break;
+	}
+}
+
+string quest_M2_robberId() {
+	ref PChar = GetMainCharacter();
+
+	switch (makeint(PChar.quest_M2_step)) {
+		case 1: return PChar.quest.quest_M2.robbers_1; break;
+		case 2: return PChar.quest.quest_M2.robbers_2; break;
+		case 3: return PChar.quest.quest_M2.robbers_3; break;
+		case 4: return PChar.quest.quest_M2.robbers_4; break;
+		case 5: return PChar.quest.quest_M2.robbers_5; break;
+		case 6: return PChar.quest.quest_M2.robbers_6; break;
+		case 7: return PChar.quest.quest_M2.robbers_7; break;
+		case 8: return PChar.quest.quest_M2.robbers_8; break;
+	}
+}
+
+string quest_M2_robber_gender_pronoun() {
+	ref PChar = GetMainCharacter();
+	int robber_id = quest_M2_robberId();
+
+	string k = "quest.quest_M2.robber" + robber_id + ".gender";
+	if (PChar.(k) == "homme") return "Il";
+	if (PChar.(k) == "femme") return "Elle";
+}
+
+string quest_M2_PNJ_clue() {
+	ref PChar = GetMainCharacter();
+	int robber_id = quest_M2_robberId();
+	int category = Rand(8);
+	int n;
+	string pronoun = quest_M2_robber_gender_pronoun();
+	
+	switch (3)
+	{
+		case 0:
+			string k = "quest.quest_M2.robber" + robber_id + ".hair";
+			if (PChar.(k) == "noir") return pronoun + " avait les cheveux noir d'encre.";
+			if (PChar.(k) == "roux") return pronoun + " avait les cheveux roux flamboyants.";
+			if (PChar.(k) == "blond") return pronoun + " avait les cheveux blonds comme paille au soleil.";
+			break;
+		case 1:
+			k = "quest.quest_M2.robber" + robber_id + ".eyes";
+			if (PChar.(k) == "marron") return pronoun + " avait les yeux marron sombres.";
+			if (PChar.(k) == "vert") return pronoun + " avait les yeux verts d'émeraude.";
+			if (PChar.(k) == "bleu") return pronoun + " avait les yeux bleus d'océan.";
+			break;
+		case 2:
+			if (robber_id == 8) {
+				return pronoun + " portait un beau manteau rouge.";
+			} else {
+				k = "quest.quest_M2.robber" + robber_id + ".style";
+				if (PChar.(k) == "simple") return pronoun + " portait un habit simple de marin.";
+				if (PChar.(k) == "élégant") return pronoun + " portait une tenue élégante.";
+				if (PChar.(k) == "voyant") return pronoun + " portait des vêtements très colorés.";
+			}
+			break;
+		case 3:
+			k = "quest.quest_M2.robber" + robber_id + ".accessory";
+			if (PChar.(k) == "compas marin") return pronoun + " gardait un compas marin à portée.";
+			if (PChar.(k) == "bague") return pronoun + " portait une bague brillante au doigt.";
+			if (PChar.(k) == "longue-vue") return pronoun + " portait une longue-vue à la ceinture.";
+			break;
+		case 4:
+			k = "quest.quest_M2.robber" + robber_id + ".passion";
+			if (PChar.(k) == "antiquités") return pronoun + " parlait avec ardeur d'antiquités oubliées.";
+			if (PChar.(k) == "poésie") return pronoun + " récitait des vers de poésie.";
+			if (PChar.(k) == "animaux") return pronoun + " se passionnait pour les animaux.";
+			break;
+		case 5:
+			k = "quest.quest_M2.robber" + robber_id + ".skill";
+			if (PChar.(k) == "escalade") return pronoun + " grimpait aux cordages comme un singe.";
+			if (PChar.(k) == "déguisement") return pronoun + " excellait dans l'art du déguisement.";
+			if (PChar.(k) == "discours") return pronoun + " maîtrisait le discours pour charmer l'assemblée.";
+			break;
+		case 6:
+			k = "quest.quest_M2.robber" + robber_id + ".mark";
+			if (PChar.(k) == "cicatrice") return pronoun + " portait une cicatrice au visage.";
+			if (PChar.(k) == "tatouage") return pronoun + " montrait un tatouage sur la peau.";
+			if (PChar.(k) == "Boite légèrement") return pronoun + " boitait légèrement.";
+			break;
+		case 7:
+			if (robber_id == 8) {
+				n = Rand(2);
+				switch (n) {
+					case 0: return pronoun + " parlait en espagnol."; break;
+					case 1: return pronoun + " parlait en français."; break;
+					case 2: return pronoun + " parlait en anglais."; break;
+				}
+			} else {
+				k = "quest.quest_M2.robber" + robber_id + ".language";
+				if (PChar.(k) == "espagnol") return pronoun + " parlait en espagnol.";
+				if (PChar.(k) == "français") return pronoun + " parlait en français.";
+				if (PChar.(k) == "anglais") return pronoun + " parlait en anglais.";
+			}
+			break;
+		case 8:
+			if (robber_id == 8) {
+				n = Rand(2);
+				switch (n) {
+					case 0: return pronoun + " venait de Séville."; break;
+					case 1: return pronoun + " venait de La Rochelle."; break;
+					case 2: return pronoun + " venait de Plymouth."; break;
+				}
+			} else {
+				k = "quest.quest_M2.robber" + robber_id + ".home_port";
+				if (PChar.(k) == "Séville") return pronoun + " venait de Séville.";
+				if (PChar.(k) == "La Rochelle") return pronoun + " venait de La Rochelle.";
+				if (PChar.(k) == "Plymouth") return pronoun + " venait de Plymouth.";
+			}
+			break;
+	}
+}
+
+string quest_M2_next_port() {
+	ref PChar = GetMainCharacter();
+	switch (makeint(PChar.quest_M2_step)) {
+		case 1: return PChar.quest.quest_M2.island1; break;
+		case 2: return PChar.quest.quest_M2.island2; break;
+		case 3: return PChar.quest.quest_M2.island3; break;
+		case 4: return PChar.quest.quest_M2.island4; break;
+		case 5: return PChar.quest.quest_M2.island5; break;
+		case 6: return PChar.quest.quest_M2.island6; break;
+		case 7: return PChar.quest.quest_M2.island7; break;
+		case 8: return PChar.quest.quest_M2.island8; break;
+		case 9: return PChar.quest.quest_M2.island9; break;
+		case 10: return PChar.quest.quest_M2.island10; break;
+	}
+}
+
+int quest_M2_next_port_answer() {
+	switch (quest_M2_next_port())
+	{
+		case "Redmond": return 0; break;
+		case "Greenford": return -1; break;
+		case "Oxbay": return -2; break;
+		case "Fleur de Falaise": return 1; break;
+		case "Conceicao": return 2; break;
+		case "Douwesen": return 3; break;
+		case "Isla Muelle": return 4; break;
+		case "Quebradas Costillas": return 5; break;
+	}
 }
 
 string quest_M2_clues_list_get() {
@@ -2011,107 +2175,118 @@ void QuestComplete(string sQuestName)
 			pchar.quest.becomes_oldman.win_condition.l1 = "Timer";
 			pchar.quest.becomes_oldman.win_condition.l1.date.day = 1;
 			pchar.quest.becomes_oldman.win_condition.l1.date.month = 1;
-			pchar.quest.becomes_oldman.win_condition.l1.date.year = 1650;
+			pchar.quest.becomes_oldman.win_condition.l1.date.year = 1660;
 			pchar.quest.becomes_oldman.win_condition = "becomes_oldman";
 		break;
 		
 		//      -    
 		case "Story_leavingOxbay":
-			SetNationRelation2MainCharacter(FRANCE, RELATION_ENEMY);
-			Locations[FindLocation("Oxbay_town_exit")].locators_radius.goto.citizen08 = 12.0;
-			//    .
-			//setCharacterShipLocation(characterFromID("Clair Larrouse"), "Muelle_port");
-			//     
-			PChar.Quest.Story_OxbayCaptured = "1";
-			//   
-			Characters[GetCharacterIndex("Oxbay Commander")].nation = FRANCE;
-			Characters[GetCharacterIndex("Oxbay Commander")].model = "Soldier_fra";
-			LAi_SetImmortal(characterFromID("Oxbay Commander"), true);
-			//      
-			// 
-			ChangeCharacterAddress(characterFromID("Ox_Soldier_1"), "None", "");
-			ChangeCharacterAddress(characterFromID("Ox_Soldier_2"), "None", "");
-			ChangeCharacterAddress(characterFromID("Ox_Soldier_3"), "None", "");
-			ChangeCharacterAddress(characterFromID("Ox_Soldier_4"), "None", "");
-			ChangeCharacterAddress(characterFromID("Ox_Soldier_5"), "None", "");
-			ChangeCharacterAddress(characterFromID("Ox_Soldier_6"), "None", "");
-			ChangeCharacterAddress(characterFromID("Ox_Soldier_7"), "None", "");
-			ChangeCharacterAddress(characterFromID("Ox_Soldier_8"), "None", "");
-			ChangeCharacterAddress(characterFromID("Ox_Patrol_1"), "None", "");
-			ChangeCharacterAddress(characterFromID("Ox_Patrol_2"), "None", "");
-			ChangeCharacterAddress(characterFromID("Ox_Patrol_3"), "None", "");
-			ChangeCharacterAddress(characterFromID("Ox_Patrol_4"), "None", "");
-			// 
-			ChangeCharacterAddress(characterFromID("Fra_occupant_01"), "Oxbay_town", "goto3");
-			ChangeCharacterAddress(characterFromID("Fra_occupant_02"), "Oxbay_town", "goto4");
-			ChangeCharacterAddress(characterFromID("Fra_occupant_03"), "Oxbay_town", "goto1");
-			ChangeCharacterAddress(characterFromID("Fra_occupant_04"), "Oxbay_town", "goto2");
-			ChangeCharacterAddress(characterFromID("Fra_occupant_05"), "Oxbay_port", "goto20");
-			ChangeCharacterAddress(characterFromID("Fra_occupant_06"), "Oxbay_port", "goto21");
-			ChangeCharacterAddress(characterFromID("Fra_occupant_07"), "Oxbay_town_exit", "citizen09");
-			ChangeCharacterAddress(characterFromID("Fra_occupant_08"), "Oxbay_town_exit", "citizen010");
-			ChangeCharacterAddress(characterFromID("Occ_Patrol_1"), "Oxbay_port", "goto18");
-			ChangeCharacterAddress(characterFromID("Occ_Patrol_2"), "Oxbay_port", "goto12");
-			ChangeCharacterAddress(characterFromID("Occ_Patrol_3"), "Oxbay_town", "goto31");
-			ChangeCharacterAddress(characterFromID("Occ_Patrol_4"), "Oxbay_town", "goto20");
+			// ajout PJ
+				if (1 == 1) // mettre 1==1 pour activer le code
+				{
+					log_setstringtoLog("PJ DEV BEGINNING!");
+				}
+				else
+				{
+			// fin ajout PJ
+					SetNationRelation2MainCharacter(FRANCE, RELATION_ENEMY);
+					Locations[FindLocation("Oxbay_town_exit")].locators_radius.goto.citizen08 = 12.0;
+					//    .
+					//setCharacterShipLocation(characterFromID("Clair Larrouse"), "Muelle_port");
+					//     
+					PChar.Quest.Story_OxbayCaptured = "1";
+					//   
+					Characters[GetCharacterIndex("Oxbay Commander")].nation = FRANCE;
+					Characters[GetCharacterIndex("Oxbay Commander")].model = "Soldier_fra";
+					LAi_SetImmortal(characterFromID("Oxbay Commander"), true);
+					//      
+					// 
+					ChangeCharacterAddress(characterFromID("Ox_Soldier_1"), "None", "");
+					ChangeCharacterAddress(characterFromID("Ox_Soldier_2"), "None", "");
+					ChangeCharacterAddress(characterFromID("Ox_Soldier_3"), "None", "");
+					ChangeCharacterAddress(characterFromID("Ox_Soldier_4"), "None", "");
+					ChangeCharacterAddress(characterFromID("Ox_Soldier_5"), "None", "");
+					ChangeCharacterAddress(characterFromID("Ox_Soldier_6"), "None", "");
+					ChangeCharacterAddress(characterFromID("Ox_Soldier_7"), "None", "");
+					ChangeCharacterAddress(characterFromID("Ox_Soldier_8"), "None", "");
+					ChangeCharacterAddress(characterFromID("Ox_Patrol_1"), "None", "");
+					ChangeCharacterAddress(characterFromID("Ox_Patrol_2"), "None", "");
+					ChangeCharacterAddress(characterFromID("Ox_Patrol_3"), "None", "");
+					ChangeCharacterAddress(characterFromID("Ox_Patrol_4"), "None", "");
+					// 
+					ChangeCharacterAddress(characterFromID("Fra_occupant_01"), "Oxbay_town", "goto3");
+					ChangeCharacterAddress(characterFromID("Fra_occupant_02"), "Oxbay_town", "goto4");
+					ChangeCharacterAddress(characterFromID("Fra_occupant_03"), "Oxbay_town", "goto1");
+					ChangeCharacterAddress(characterFromID("Fra_occupant_04"), "Oxbay_town", "goto2");
+					ChangeCharacterAddress(characterFromID("Fra_occupant_05"), "Oxbay_port", "goto20");
+					ChangeCharacterAddress(characterFromID("Fra_occupant_06"), "Oxbay_port", "goto21");
+					ChangeCharacterAddress(characterFromID("Fra_occupant_07"), "Oxbay_town_exit", "citizen09");
+					ChangeCharacterAddress(characterFromID("Fra_occupant_08"), "Oxbay_town_exit", "citizen010");
+					ChangeCharacterAddress(characterFromID("Occ_Patrol_1"), "Oxbay_port", "goto18");
+					ChangeCharacterAddress(characterFromID("Occ_Patrol_2"), "Oxbay_port", "goto12");
+					ChangeCharacterAddress(characterFromID("Occ_Patrol_3"), "Oxbay_town", "goto31");
+					ChangeCharacterAddress(characterFromID("Occ_Patrol_4"), "Oxbay_town", "goto20");
+					
+					//      
+					SetCrewQuantity(characterFromID("Remy Gatien"), 650);
+					SetCrewQuantity(characterFromID("Yves Giner"), 400);
+					SetCrewQuantity(characterFromID("Begon Monchaty"), 400);
+					
+					Character_SetAbordageEnable(characterFromID("Remy Gatien"), false);
+					Character_SetAbordageEnable(characterFromID("Yves Giner"), false);
+					Character_SetAbordageEnable(characterFromID("Begon Monchaty"), false);
+					
+					Group_CreateGroup("Story_French_Squadron");
+					Group_AddCharacter("Story_French_Squadron", "Remy Gatien");
+					Group_AddCharacter("Story_French_Squadron", "Yves Giner");
+					Group_AddCharacter("Story_French_Squadron", "Begon Monchaty");
+					Group_SetGroupCommander("Story_French_Squadron", "Remy Gatien");
+					Group_SetAddress("Story_French_Squadron", "Oxbay", "Quest_Ships","Quest_Ship_7");
+					
+					//            
+					Pchar.quest.Story_FraSoldiers_attack_in_jungles.win_condition.l1 = "location";
+					Pchar.quest.Story_FraSoldiers_attack_in_jungles.win_condition.l1.location = "Oxbay_town_exit";
+					Pchar.quest.Story_FraSoldiers_attack_in_jungles.win_condition = "Story_FraSoldiers_attack_in_jungles";
+					locations[FindLocation("Oxbay_town_exit")].disableencounters = 1;
 			
-			//      
-			SetCrewQuantity(characterFromID("Remy Gatien"), 650);
-			SetCrewQuantity(characterFromID("Yves Giner"), 400);
-			SetCrewQuantity(characterFromID("Begon Monchaty"), 400);
-			
-			Character_SetAbordageEnable(characterFromID("Remy Gatien"), false);
-			Character_SetAbordageEnable(characterFromID("Yves Giner"), false);
-			Character_SetAbordageEnable(characterFromID("Begon Monchaty"), false);
-			
-			Group_CreateGroup("Story_French_Squadron");
-			Group_AddCharacter("Story_French_Squadron", "Remy Gatien");
-			Group_AddCharacter("Story_French_Squadron", "Yves Giner");
-			Group_AddCharacter("Story_French_Squadron", "Begon Monchaty");
-			Group_SetGroupCommander("Story_French_Squadron", "Remy Gatien");
-			Group_SetAddress("Story_French_Squadron", "Oxbay", "Quest_Ships","Quest_Ship_7");
-			
-			//            
-			Pchar.quest.Story_FraSoldiers_attack_in_jungles.win_condition.l1 = "location";
-			Pchar.quest.Story_FraSoldiers_attack_in_jungles.win_condition.l1.location = "Oxbay_town_exit";
-			Pchar.quest.Story_FraSoldiers_attack_in_jungles.win_condition = "Story_FraSoldiers_attack_in_jungles";
-			locations[FindLocation("Oxbay_town_exit")].disableencounters = 1;
-	
-			//    
-			ChangeCharacterAddress(characterFromID("Raoul Rheims"), "Redmond_residence", "goto1");
-		
-			//           
-			Pchar.quest.Story_First_Meeting_with_Rheims.win_condition.l1 = "location";
-			Pchar.quest.Story_First_Meeting_with_Rheims.win_condition.l1.location = "redmond_residence";
-			Pchar.quest.Story_First_Meeting_with_Rheims.win_condition = "Story_First_Meeting_with_Rheims";
+					//    
+					ChangeCharacterAddress(characterFromID("Raoul Rheims"), "Redmond_residence", "goto1");
+				
+					//           
+					Pchar.quest.Story_First_Meeting_with_Rheims.win_condition.l1 = "location";
+					Pchar.quest.Story_First_Meeting_with_Rheims.win_condition.l1.location = "redmond_residence";
+					Pchar.quest.Story_First_Meeting_with_Rheims.win_condition = "Story_First_Meeting_with_Rheims";
 
-			//     
-			pchar.quest.first_time_to_redmond_townhall.win_condition.l1 = "locator";
-			pchar.quest.first_time_to_redmond_townhall.win_condition.l1.location = "Redmond_town_01";
-			pchar.quest.first_time_to_redmond_townhall.win_condition.l1.locator_group = "goto";
-			pchar.quest.first_time_to_redmond_townhall.win_condition.l1.locator = "goto10";
-			pchar.quest.first_time_to_redmond_townhall.win_condition = "first_time_to_redmond_townhall_complete";
+					//     
+					pchar.quest.first_time_to_redmond_townhall.win_condition.l1 = "locator";
+					pchar.quest.first_time_to_redmond_townhall.win_condition.l1.location = "Redmond_town_01";
+					pchar.quest.first_time_to_redmond_townhall.win_condition.l1.locator_group = "goto";
+					pchar.quest.first_time_to_redmond_townhall.win_condition.l1.locator = "goto10";
+					pchar.quest.first_time_to_redmond_townhall.win_condition = "first_time_to_redmond_townhall_complete";
 
-			Locations[FindLocation("Redmond_town_01")].locators_radius.goto.goto10 = 2.0;
+					Locations[FindLocation("Redmond_town_01")].locators_radius.goto.goto10 = 2.0;
 
-			DeleteQuestHeader("Tutorial_SpyGlass");
-			DeleteQuestHeader("Tutorial_Store");
-			DeleteQuestHeader("Tutorial_Shipyard");
-			DeleteQuestHeader("Tutorial_Tavern");
+					DeleteQuestHeader("Tutorial_SpyGlass");
+					DeleteQuestHeader("Tutorial_Store");
+					DeleteQuestHeader("Tutorial_Shipyard");
+					DeleteQuestHeader("Tutorial_Tavern");
 
-			Pchar.quest.Tut_SellGoods.over = "yes";
-			Pchar.quest.Tut_RepairShip.over = "yes";
-			Pchar.quest.Tut_HireCrew.over = "yes";
-			Pchar.quest.Tut_BuySpyGlass.over = "yes";
-			DeleteAttribute(Pchar, "quest.tutorial.Spyglass");
-			
-			//   
-			SetQuestHeader("Story_OxbayCaptured");
-			AddQuestRecord("Story_OxbayCaptured", "1");
-			PostVideoAndQuest("Invasion",500,"Story_MapLoadAfterleavingOxbay");
-			bSkipSeaLogin = true;
-			Locations[FindLocation("Oxbay_town")].reload.l2.disable = false;
-			Locations[FindLocation("Oxbay_town")].reload.l55.disable = false;
+					Pchar.quest.Tut_SellGoods.over = "yes";
+					Pchar.quest.Tut_RepairShip.over = "yes";
+					Pchar.quest.Tut_HireCrew.over = "yes";
+					Pchar.quest.Tut_BuySpyGlass.over = "yes";
+					DeleteAttribute(Pchar, "quest.tutorial.Spyglass");
+					
+					//   
+					SetQuestHeader("Story_OxbayCaptured");
+					AddQuestRecord("Story_OxbayCaptured", "1");
+					PostVideoAndQuest("Invasion",500,"Story_MapLoadAfterleavingOxbay");
+					bSkipSeaLogin = true;
+					Locations[FindLocation("Oxbay_town")].reload.l2.disable = false;
+					Locations[FindLocation("Oxbay_town")].reload.l55.disable = false;
+			// ajout PJ
+				}
+			// fin ajout PJ
 		break;
 
 		case "Story_MapLoadAfterleavingOxbay":

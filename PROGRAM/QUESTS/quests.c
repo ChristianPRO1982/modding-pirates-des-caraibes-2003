@@ -53,11 +53,11 @@ void QuestsCheck_forLocEnter()
 	// Malcolm apparaitra dans les ports entre 16h et 20h
 
 	// POUR CREER DES QUETES
-	// SetNationRelation2MainCharacter(PIRATE, RELATION_FRIEND);
-	// SetNationRelation2MainCharacter(FRANCE, RELATION_FRIEND);
+	SetNationRelation2MainCharacter(PIRATE, RELATION_FRIEND);
+	SetNationRelation2MainCharacter(FRANCE, RELATION_FRIEND);
 	//PJ connaitre a chaque reload des informations (ex : position = pchar.location)
-	Log_SetStringToLog("PJ Heure actuelle : " + environment.time);
-	Log_SetStringToLog("PJ 1:"+pchar.location);
+	// Log_SetStringToLog("PJ Heure actuelle : " + environment.time);
+	// Log_SetStringToLog("PJ 1:"+pchar.location);
 	// Log_SetStringToLog("PJ 2:"+pchar.location.locator);
 	// Log_SetStringToLog("PJ 3:"+pchar.location.locator_group);//location.group
 	// Log_SetStringToLog("PJ blade:"+pchar.equip.blade);
@@ -149,7 +149,7 @@ void QuestsCheck_forLocEnter()
 	if (makeint(pchar.quest_M1_step) == 9 && pchar.location == "QC_pirate_house_inside") PlaceCharacter(characterFromID("Chui A-poo"), "goto", homelocation);
 
 	//quest M2
-	if (PChar.quest_M2_step == 0) PlaceCharacter(characterFromID("Christopher Myngs"), "goto", homelocation); // à supprimer
+	log_SetStringToLog("PJ DEBUG TEST (quests.c) : pchar.quest_M2_step = " + pchar.quest_M2_step);
 	if (makeint(pchar.quest_M2_step) >= 0 && pchar.location == "Redmond_prison") PlaceCharacter(characterFromID("Christopher Myngs"), "goto", homelocation);
 	
 	// fin ajout PJ
