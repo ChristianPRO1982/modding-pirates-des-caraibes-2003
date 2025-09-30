@@ -89,6 +89,8 @@ void ProcessDialogEvent()
 			Link.l3.go = "hair_blond";
 			Link.l4 = DLG_TEXT[54]; // unsure
 			Link.l4.go = "exit";
+			Link.l5 = DLG_TEXT[66]; // forget it
+			Link.l5.go = "hair_forget";
 		break;
 
 		case "hair_black":
@@ -112,6 +114,13 @@ void ProcessDialogEvent()
 			Link.l1.go = "Continue_02";
 		break;
 
+		case "hair_forget":
+			quest_M2_clues_list_update("hair", "");
+			dialog.snd = "Voice\ARSI\ARSI001";
+			d.Text = DLG_TEXT[65];
+			Link.l1.go = "Continue_02";
+		break;
+
 		case "eyes":
 			dialog.snd = "Voice\ARSI\ARSI001";
 			d.Text = DLG_TEXT[22];
@@ -123,6 +132,8 @@ void ProcessDialogEvent()
 			Link.l3.go = "eyes_blue";
 			Link.l4 = DLG_TEXT[54]; // unsure
 			Link.l4.go = "exit";
+			Link.l5 = DLG_TEXT[66]; // forget it
+			Link.l5.go = "eyes_forget";
 		break;
 
 		case "eyes_brown":
@@ -146,6 +157,13 @@ void ProcessDialogEvent()
 			Link.l1.go = "Continue_02";
 		break;
 
+		case "eyes_forget":
+			quest_M2_clues_list_update("eyes", "");
+			dialog.snd = "Voice\ARSI\ARSI001";
+			d.Text = DLG_TEXT[65];
+			Link.l1.go = "Continue_02";
+		break;
+
 		case "style":
 			dialog.snd = "Voice\ARSI\ARSI001";
 			d.Text = DLG_TEXT[26];
@@ -157,6 +175,8 @@ void ProcessDialogEvent()
 			Link.l3.go = "style_flashy";
 			Link.l4 = DLG_TEXT[54]; // unsure
 			Link.l4.go = "exit";
+			Link.l5 = DLG_TEXT[66]; // forget it
+			Link.l5.go = "style_forget";
 		break;
 
 		case "style_simple":
@@ -180,6 +200,13 @@ void ProcessDialogEvent()
 			Link.l1.go = "Continue_02";
 		break;
 
+		case "style_forget":
+			quest_M2_clues_list_update("style", "");
+			dialog.snd = "Voice\ARSI\ARSI001";
+			d.Text = DLG_TEXT[65];
+			Link.l1.go = "Continue_02";
+		break;
+
 		case "accessory":
 			dialog.snd = "Voice\ARSI\ARSI001";
 			d.Text = DLG_TEXT[30];
@@ -191,6 +218,8 @@ void ProcessDialogEvent()
 			Link.l3.go = "accessory_spyglass";
 			Link.l4 = DLG_TEXT[54]; // unsure
 			Link.l4.go = "exit";
+			Link.l5 = DLG_TEXT[66]; // forget it
+			Link.l5.go = "accessory_forget";
 		break;
 
 		case "accessory_compass":
@@ -212,7 +241,13 @@ void ProcessDialogEvent()
 			dialog.snd = "Voice\ARSI\ARSI001";
 			d.Text = DLG_TEXT[65];
 			Link.l1.go = "Continue_02";
+		break;
 
+		case "accessory_forget":
+			quest_M2_clues_list_update("accessory", "");
+			dialog.snd = "Voice\ARSI\ARSI001";
+			d.Text = DLG_TEXT[65];
+			Link.l1.go = "Continue_02";
 		break;
 
 		case "passion":
@@ -226,6 +261,8 @@ void ProcessDialogEvent()
 			Link.l3.go = "passion_seagulls";
 			Link.l4 = DLG_TEXT[54]; // unsure
 			Link.l4.go = "exit";
+			Link.l5 = DLG_TEXT[66]; // forget it
+			Link.l5.go = "passion_forget";
 		break;
 
 		case "passion_antiques":
@@ -249,6 +286,13 @@ void ProcessDialogEvent()
 			Link.l1.go = "Continue_02";
 		break;
 
+		case "passion_forget":
+			quest_M2_clues_list_update("passion", "");
+			dialog.snd = "Voice\ARSI\ARSI001";
+			d.Text = DLG_TEXT[65];
+			Link.l1.go = "Continue_02";
+		break;
+
 		case "skill":
 			dialog.snd = "Voice\ARSI\ARSI001";
 			d.Text = DLG_TEXT[38];
@@ -260,6 +304,8 @@ void ProcessDialogEvent()
 			Link.l3.go = "skill_disguise";
 			Link.l4 = DLG_TEXT[54]; // unsure
 			Link.l4.go = "exit";
+			Link.l5 = DLG_TEXT[66]; // forget it
+			Link.l5.go = "skill_forget";
 		break;
 
 		case "skill_climbing":
@@ -283,6 +329,13 @@ void ProcessDialogEvent()
 			Link.l1.go = "Continue_02";
 		break;
 
+		case "skill_forget":
+			quest_M2_clues_list_update("skill", "");
+			dialog.snd = "Voice\ARSI\ARSI001";
+			d.Text = DLG_TEXT[65];
+			Link.l1.go = "Continue_02";
+		break;
+
 		case "mark":
 			dialog.snd = "Voice\ARSI\ARSI001";
 			d.Text = DLG_TEXT[42];
@@ -294,6 +347,8 @@ void ProcessDialogEvent()
 			Link.l3.go = "mark_limp";
 			Link.l4 = DLG_TEXT[54]; // unsure
 			Link.l4.go = "exit";
+			Link.l5 = DLG_TEXT[66]; // forget it
+			Link.l5.go = "mark_forget";
 		break;
 
 		case "mark_scar":
@@ -317,6 +372,13 @@ void ProcessDialogEvent()
 			Link.l1.go = "Continue_02";
 		break;
 
+		case "mark_forget":
+			quest_M2_clues_list_update("mark", "");
+			dialog.snd = "Voice\ARSI\ARSI001";
+			d.Text = DLG_TEXT[65];
+			Link.l1.go = "Continue_02";
+		break;
+
 		case "language":
 			dialog.snd = "Voice\ARSI\ARSI001";
 			d.Text = DLG_TEXT[46];
@@ -328,6 +390,8 @@ void ProcessDialogEvent()
 			Link.l3.go = "language_english";
 			Link.l4 = DLG_TEXT[54]; // unsure
 			Link.l4.go = "exit";
+			Link.l5 = DLG_TEXT[66]; // forget it
+			Link.l5.go = "language_forget";
 		break;
 
 		case "language_spanish":
@@ -351,6 +415,13 @@ void ProcessDialogEvent()
 			Link.l1.go = "Continue_02";
 		break;
 
+		case "language_forget":
+			quest_M2_clues_list_update("language", "");
+			dialog.snd = "Voice\ARSI\ARSI001";
+			d.Text = DLG_TEXT[65];
+			Link.l1.go = "Continue_02";
+		break;
+
 		case "home_port":
 			dialog.snd = "Voice\ARSI\ARSI001";
 			d.Text = DLG_TEXT[50];
@@ -362,6 +433,8 @@ void ProcessDialogEvent()
 			Link.l3.go = "port_plymouth";
 			Link.l4 = DLG_TEXT[54]; // unsure
 			Link.l4.go = "exit";
+			Link.l5 = DLG_TEXT[66]; // forget it
+			Link.l5.go = "home_port_forget";
 		break;
 
 		case "port_seville":
@@ -380,6 +453,13 @@ void ProcessDialogEvent()
 
 		case "port_plymouth":
 			quest_M2_clues_list_update("home_port", "Plymouth");
+			dialog.snd = "Voice\ARSI\ARSI001";
+			d.Text = DLG_TEXT[65];
+			Link.l1.go = "Continue_02";
+		break;
+
+		case "home_port_forget":
+			quest_M2_clues_list_update("home_port", "");
 			dialog.snd = "Voice\ARSI\ARSI001";
 			d.Text = DLG_TEXT[65];
 			Link.l1.go = "Continue_02";

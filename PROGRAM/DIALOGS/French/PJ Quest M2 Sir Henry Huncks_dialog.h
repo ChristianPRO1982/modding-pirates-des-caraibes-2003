@@ -65,5 +65,6 @@ string DLG_TEXT[67] = {
 "Il ne reste qu'un nom possible. Je rédige aussitôt le mandat d'arrêt à son encontre.",
 "Très bien. Avec ce mandat, le pirate ne m'échappera pas.",
 "Noté.",
+"Effaces ce que j'ai dit à propos de ça."
 
 };

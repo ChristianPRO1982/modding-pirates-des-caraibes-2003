@@ -1889,7 +1889,7 @@ string quest_M2_clues_list_get() {
 	if (PChar.quest.quest_M2.clue.language != "") {clues = clues + separator + "langue " + PChar.quest.quest_M2.clue.language; separator = ", ";}
 	if (PChar.quest.quest_M2.clue.home_port != "")    {clues = clues + separator + "origine " + PChar.quest.quest_M2.clue.home_port;    separator = ", ";}
 
-	if (clues == "") clues = "Aucun indice pour le moment.";
+	if (clues == "") clues = "Aucun indice pour le moment";
 
 	return clues;
 }
