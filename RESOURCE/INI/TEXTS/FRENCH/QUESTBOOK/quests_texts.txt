@@ -997,8 +997,10 @@ Le mandat a porté ses fruits. Le suspect est sous ma garde.
 Le prisonnier a été remis au capitaine Myngs. L'affaire est close... du moins jusqu'au prochain larcin.
 #TEXT	6
 Ce n'était pas le bon. Le gouverneur est furieux et ma réputation s'en ressent.
-#TEXT	7
-Trop tard. Le navire est parti, le voleur a échappé à la justice.
+#TEXT   7
+J’ai voulu agir trop vite... sans mandat d’arrêt, impossible de mettre qui que ce soit aux fers. Ces paperasses anglaises me pèsent plus que les chaînes d’un galérien. Silehard va être furieux d'entendre ça ! Je vais passer pour...
+#TEXT	8
+Trop tard. Le navire est parti, le voleur a échappé à la justice. Silehard est hors de lui !!! Je crains pour ma réputation...
 #QUEST	PJ_M2_intrigue
 A la poursuite de Carmen San Diego - intrigue chez le gouverneur
 #TEXT	1

@@ -1546,8 +1546,7 @@ void quest_M2_init_quest()
 {
 	ref PChar = GetMainCharacter();
 
-	if (PChar.quest.M2_quest_init == false)
-	{
+	if (PChar.quest.M2_quest_init == false) {
 		int n;
 		PChar.quest.M2_quest_init = true;
 		PChar.quest.quest_M2.warrant = "";
@@ -1590,6 +1589,8 @@ void quest_M2_init_quest()
 			lastLastPort = lastPort;
 			lastPort = port;
 		}
+		PChar.quest_M2_num_port = 1; // numéro du port visité : permet de savoir si le joueur est à sur la piste ou à la fin de la quête
+		quest_M2_ports_win_conditions_init();
 
 		///// liste des voleurs/voleuses pseudoaléatoires /////
 		// 1 : Diego Morales
@@ -1645,7 +1646,55 @@ void quest_M2_init_quest()
 		PChar.quest.quest_M2.clue.nb_suspects = 8;
 
 		quest_M2_robbers_list();
+
+		pchar.quest.quest_M2_timeOut.win_condition.l1 = "Timer";
+		pchar.quest.quest_M2_timeOut.win_condition.l1.date.day = GetAddingDataDay(0, 0, quest_M2_howlong());
+		pchar.quest.quest_M2_timeOut.win_condition.l1.date.month = GetAddingDataMonth(0, 0, quest_M2_howlong());
+		pchar.quest.quest_M2_timeOut.win_condition.l1.date.year = GetAddingDataYear(0, 0, quest_M2_howlong());
+		pchar.quest.quest_M2_timeOut.win_condition = "quest_M2_timeOut";
 	}
+}
+
+void quest_M2_ports_win_conditions_init()
+{
+	ref PChar = GetMainCharacter();
+	int nb_ports = 2 + makeint(PChar.quest_M2_step);
+	string next_port;
+	string win_condition;
+
+	if (makeint(PChar.quest_M2_num_port) >= nb_ports) {
+		// le prochain port est le dernier
+		win_condition = "quest_M2_last_port";
+	} else {
+		// le joueur est sur les traces du voleur
+		win_condition = "quest_M2_on_track";
+	}
+
+	switch (makeint(PChar.quest_M2_num_port)) {
+		case 1: next_port = PChar.quest.quest_M2.island1; break;
+		case 2: next_port = PChar.quest.quest_M2.island2; break;
+		case 3: next_port = PChar.quest.quest_M2.island3; break;
+		case 4: next_port = PChar.quest.quest_M2.island4; break;
+		case 5: next_port = PChar.quest.quest_M2.island5; break;
+		case 6: next_port = PChar.quest.quest_M2.island6; break;
+		case 7: next_port = PChar.quest.quest_M2.island7; break;
+		case 8: next_port = PChar.quest.quest_M2.island8; break;
+		case 9: next_port = PChar.quest.quest_M2.island9; break;
+		case 10: next_port = PChar.quest.quest_M2.island10; break;
+	}
+
+	PChar.quest.quest_M2.win_condition.l1 = "location";
+	switch (next_port) {
+		case "Conceicao":  PChar.quest.quest_M2.win_condition.l1.location = "Conceicao_port"; break;
+		case "Fleur de Falaise":  PChar.quest.quest_M2.win_condition.l1.location = "Falaise_de_fleur_port_01"; break;
+		case "Redmond":  PChar.quest.quest_M2.win_condition.l1.location = "Redmond_port"; break;
+		case "Isla Muelle":  PChar.quest.quest_M2.win_condition.l1.location = "Muelle_port"; break;
+		case "Douwesen":  PChar.quest.quest_M2.win_condition.l1.location = "Douwesen_port"; break;
+		case "Oxbay":  PChar.quest.quest_M2.win_condition.l1.location = "Oxbay_port"; break;
+		case "Greenford":  PChar.quest.quest_M2.win_condition.l1.location = "Greenford_port"; break;
+		case "Quebradas Costillas":  PChar.quest.quest_M2.win_condition.l1.location = "QC_port"; break;
+	}
+	PChar.quest.quest_M2.win_condition = win_condition;
 }
 
 int quest_M2_howlong() {
@@ -1671,9 +1720,19 @@ int quest_M2_howlong() {
 
 void quest_M2_start_quest() {
 	ref PChar = GetMainCharacter();
-	PChar.quest_M2_step = 1;
+	PChar.quest_M2_step = makeint(PChar.quest_M2_step) + 1;
+	switch (makeint(PChar.quest_M2_step)) {
+		case 1:
+			DeleteQuestHeader("PJ_M2_intrigue"); SetQuestHeader("PJ_M2_intrigue"); AddQuestRecord("PJ_M2_intrigue", 1);
+			break;
+		case 2:
+			AddQuestRecord("PJ_M2_intrigue", 2);
+			break;
+		case 5:
+			AddQuestRecord("PJ_M2_intrigue", 3);
+			break;
+	}
 	DeleteQuestHeader("PJ_M2_quest"); SetQuestHeader("PJ_M2_quest"); AddQuestRecord("PJ_M2_quest", 1);
-	DeleteQuestHeader("PJ_M2_intrigue"); SetQuestHeader("PJ_M2_intrigue"); AddQuestRecord("PJ_M2_intrigue", 1);
 	SetOfficersIndex(Pchar, -1, GetCharacterIndex("Sir Henry Huncks"));
 }
 
@@ -14971,6 +15030,29 @@ void QuestComplete(string sQuestName)
 			AddQuestRecord("PJ_M1", 17);
 			CloseQuestHeader("PJ_M1");
 		break
+
+		case "quest_M2_on_track":
+			Log_SetStringToLog("Il reste " + quest_M2_howlong());
+			AddPArtyExp(pchar, 1500);
+			AddQuestRecord("PJ_M2_quest", 3);
+			pchar.quest_M2_num_port = makeint(pchar.quest_M2_num_port) + 1;
+			quest_M2_ports_win_conditions_init();
+		break;
+
+		case "quest_M2_timeOut":
+			Log_SetStringToLog(GlobalStringConvert("PJ_M2_timeOut"));
+			AddQuestRecord("PJ_M2_quest", 8);
+			DoQuestCheckDelay("quest_M2_failed", 1.0);
+		break;
+
+		case "quest_M2_failed":
+			ChangeCharacterReputation(pchar, -10);
+			// AddMoneyToCharacter(PChar, -4000);
+			CloseQuestHeader("PJ_M2_quest");
+			pchar.quest.quest_M2_on_track.over = "yes";
+			pchar.quest.quest_M2_on_track = "completed";
+			pchar.quest_M2_num_port = 0;
+		break;
 		// fin ajout PJ
 	}
 }
