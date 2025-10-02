@@ -990,17 +990,33 @@ Un trésor de ce vieux Silehard a été dérobé sous son nez, comme un tonneau de rh
 #TEXT	2
 Sir Henry Huncks a compilé les indices. Un mandat d'arrêt est prêt... ces maudits papiers sentent plus l'encre que la poudre.
 #TEXT	3
-Les habitants du port confirment que je suis sur la bonne piste.
+Les habitants du port de Conceicao confirment que je suis sur la bonne piste.
 #TEXT	4
-Le mandat a porté ses fruits. Le suspect est sous ma garde.
+Les habitants du port de Falaise de Fleur confirment que je suis sur la bonne piste.
 #TEXT	5
-Le prisonnier a été remis au capitaine Myngs. L'affaire est close... du moins jusqu'au prochain larcin.
+Les habitants du port de Redmond confirment que je suis sur la bonne piste.
 #TEXT	6
-Ce n'était pas le bon. Le gouverneur est furieux et ma réputation s'en ressent.
-#TEXT   7
-J’ai voulu agir trop vite... sans mandat d’arrêt, impossible de mettre qui que ce soit aux fers. Ces paperasses anglaises me pèsent plus que les chaînes d’un galérien. Silehard va être furieux d'entendre ça ! Je vais passer pour...
+Les habitants du port d'Isla Muelle confirment que je suis sur la bonne piste.
+#TEXT	7
+Les habitants du port de Douwesen confirment que je suis sur la bonne piste.
 #TEXT	8
+Les habitants du port d'Oxbay confirment que je suis sur la bonne piste.
+#TEXT	9
+Les habitants du port de Greenford confirment que je suis sur la bonne piste.
+#TEXT	10
+Les habitants du port de Quebradas Costillas confirment que je suis sur la bonne piste.
+#TEXT	11
+Le mandat a porté ses fruits. Le suspect est sous ma garde.
+#TEXT   12
+Le prisonnier a été remis au capitaine Myngs. L'affaire est close... du moins jusqu'au prochain larcin.
+#TEXT	13
+Ce n'était pas le bon. Le gouverneur est furieux et ma réputation s'en ressent.
+#TEXT   14
+J’ai voulu agir trop vite... sans mandat d’arrêt, impossible de mettre qui que ce soit aux fers. Ces paperasses anglaises me pèsent plus que les chaînes d’un galérien. Silehard va être furieux d'entendre ça ! Je vais passer pour...
+#TEXT	15
 Trop tard. Le navire est parti, le voleur a échappé à la justice. Silehard est hors de lui !!! Je crains pour ma réputation...
+#TEXT	16
+On m'a rapporté que le sustpect traine en ville en ce moment. Je suis tout prêt !
 #QUEST	PJ_M2_intrigue
 A la poursuite de Carmen San Diego - intrigue chez le gouverneur
 #TEXT	1

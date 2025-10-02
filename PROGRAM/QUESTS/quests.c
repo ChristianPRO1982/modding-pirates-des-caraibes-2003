@@ -100,6 +100,10 @@ void QuestsCheck_forLocEnter()
 	if(pchar.quest_S1_Unearthing == true) pchar.quest_S1_failed = true;
 	
 	//quest S2
+	PlaceCharacter(characterFromID("Robber woman elegant"), "goto", homelocation);
+	PlaceCharacter(characterFromID("Robber woman pratical"), "goto", homelocation);
+	PlaceCharacter(characterFromID("Robber woman flashy"), "goto", homelocation);
+	PlaceCharacter(characterFromID("Carmen San Diego"), "goto", homelocation);
 	PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", "none");
 	PlaceCharacter(characterFromID("Magdalen Spooner"), "goto", "none");
 	PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", "none");

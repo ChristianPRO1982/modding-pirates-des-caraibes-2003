@@ -6,7 +6,7 @@ PJ_S1_failed {Hé ! Mon gars, tu es aller trop loin ! Le trésor n'est pas par là.
 PJ_S2_failed {Malheureusement, le temps a manqué pour aider nos tourtereaux.}
 PJ_M1_AllPorts {Mais ? Où est François l'Olonnais ? Peut être est-il retourner sur Quebradas Costillas...}
 PJ_M2_onTrack {Les gens du port m'ont dit qu'ils ont vu le suspect ces derniers temps. Je suis sur la bonne piste.}
-PJ_M2_lastTrack {Les gens du port m'ont informé que le suspect rode dans les parages.}
+PJ_M2_lastPort {Les gens du port m'ont informé que le suspect rode dans les parages.}
 PJ_M2_timeOut {Trop tard, le suspect s'est enfuit !}
 
 QUEST_MESSAGE1 {Échec de la mission. Danielle est morte ! PARTIE TERMINÉE.}

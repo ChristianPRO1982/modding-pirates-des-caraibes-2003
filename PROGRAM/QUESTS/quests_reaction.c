@@ -1561,10 +1561,21 @@ void quest_M2_init_quest()
 		portsName[6] = "Oxbay";
 		portsName[7] = "Greenford";
 		portsName[8] = "Quebradas Costillas";
+		PChar.quest_M2_island1 = "INIT";
+		PChar.quest_M2_island2 = "INIT";
+		PChar.quest_M2_island3 = "INIT";
+		PChar.quest_M2_island4 = "INIT";
+		PChar.quest_M2_island5 = "INIT";
+		PChar.quest_M2_island6 = "INIT";
+		PChar.quest_M2_island7 = "INIT";
+		PChar.quest_M2_island8 = "INIT";
+		PChar.quest_M2_island9 = "INIT";
+		PChar.quest_M2_island10 = "INIT";
 		int port = 0;
 		int lastPort = 0;
 		int lastLastPort = 0;
-		for (n = 1; n <= 2 + makeint(PChar.quest_M2_step); n++) {
+		
+		for (n = 1; n <= 3 + makeint(PChar.quest_M2_step); n++) {
 			port = rand(8) + 1;
 			if (n == 1 && port == 3) port++;
 			if (port == 6 && lastPort == 7) port++;
@@ -1574,16 +1585,16 @@ void quest_M2_init_quest()
 			if (port == lastPort || port == lastLastPort) port++;
 			if (port > 8) port = 1;
 			switch (n) {
-				case 1:  PChar.quest.quest_M2.island1 =  portsName[port]; break;
-				case 2:  PChar.quest.quest_M2.island2 =  portsName[port]; break;
-				case 3:  PChar.quest.quest_M2.island3 =  portsName[port]; break;
-				case 4:  PChar.quest.quest_M2.island4 =  portsName[port]; break;
-				case 5:  PChar.quest.quest_M2.island5 =  portsName[port]; break;
-				case 6:  PChar.quest.quest_M2.island6 =  portsName[port]; break;
-				case 7:  PChar.quest.quest_M2.island7 =  portsName[port]; break;
-				case 8:  PChar.quest.quest_M2.island8 =  portsName[port]; break;
-				case 9:  PChar.quest.quest_M2.island9 =  portsName[port]; break;
-				case 10: PChar.quest.quest_M2.island10 = portsName[port]; break;
+				case 1:  PChar.quest_M2_island1 =  portsName[port]; break;
+				case 2:  PChar.quest_M2_island2 =  portsName[port]; break;
+				case 3:  PChar.quest_M2_island3 =  portsName[port]; break;
+				case 4:  PChar.quest_M2_island4 =  portsName[port]; break;
+				case 5:  PChar.quest_M2_island5 =  portsName[port]; break;
+				case 6:  PChar.quest_M2_island6 =  portsName[port]; break;
+				case 7:  PChar.quest_M2_island7 =  portsName[port]; break;
+				case 8:  PChar.quest_M2_island8 =  portsName[port]; break;
+				case 9:  PChar.quest_M2_island9 =  portsName[port]; break;
+				case 10: PChar.quest_M2_island10 = portsName[port]; break;
 			}
 
 			lastLastPort = lastPort;
@@ -1659,32 +1670,35 @@ void quest_M2_ports_win_conditions_init()
 {
 	ref PChar = GetMainCharacter();
 	int nb_ports = 2 + makeint(PChar.quest_M2_step);
-	string next_port;
 	string win_condition;
 
 	if (makeint(PChar.quest_M2_num_port) >= nb_ports) {
 		// le prochain port est le dernier
-		win_condition = "quest_M2_last_port";
+		Log_SetStringToLog("PJ Last port");
+		win_condition = "quest_M2_lastPort";
 	} else {
 		// le joueur est sur les traces du voleur
-		win_condition = "quest_M2_on_track";
+		win_condition = "quest_M2_onTrack";
 	}
 
 	switch (makeint(PChar.quest_M2_num_port)) {
-		case 1: next_port = PChar.quest.quest_M2.island1; break;
-		case 2: next_port = PChar.quest.quest_M2.island2; break;
-		case 3: next_port = PChar.quest.quest_M2.island3; break;
-		case 4: next_port = PChar.quest.quest_M2.island4; break;
-		case 5: next_port = PChar.quest.quest_M2.island5; break;
-		case 6: next_port = PChar.quest.quest_M2.island6; break;
-		case 7: next_port = PChar.quest.quest_M2.island7; break;
-		case 8: next_port = PChar.quest.quest_M2.island8; break;
-		case 9: next_port = PChar.quest.quest_M2.island9; break;
-		case 10: next_port = PChar.quest.quest_M2.island10; break;
+		case 1: PChar.quest_M2_next_port = PChar.quest_M2_island1; break;
+		case 2: PChar.quest_M2_next_port = PChar.quest_M2_island2; break;
+		case 3: PChar.quest_M2_next_port = PChar.quest_M2_island3; break;
+		case 4: PChar.quest_M2_next_port = PChar.quest_M2_island4; break;
+		case 5: PChar.quest_M2_next_port = PChar.quest_M2_island5; break;
+		case 6: PChar.quest_M2_next_port = PChar.quest_M2_island6; break;
+		case 7: PChar.quest_M2_next_port = PChar.quest_M2_island7; break;
+		case 8: PChar.quest_M2_next_port = PChar.quest_M2_island8; break;
+		case 9: PChar.quest_M2_next_port = PChar.quest_M2_island9; break;
+		case 10: PChar.quest_M2_next_port = PChar.quest_M2_island10; break;
 	}
 
 	PChar.quest.quest_M2.win_condition.l1 = "location";
-	switch (next_port) {
+	Log_SetStringToLog("PJ island1: " + PChar.quest_M2_island1);
+	Log_SetStringToLog("PJ island2: " + PChar.quest_M2_island2);
+	Log_SetStringToLog("PJ island3: " + PChar.quest_M2_island3);
+	switch (PChar.quest_M2_next_port) {
 		case "Conceicao":  PChar.quest.quest_M2.win_condition.l1.location = "Conceicao_port"; break;
 		case "Fleur de Falaise":  PChar.quest.quest_M2.win_condition.l1.location = "Falaise_de_fleur_port_01"; break;
 		case "Redmond":  PChar.quest.quest_M2.win_condition.l1.location = "Redmond_port"; break;
@@ -1697,22 +1711,36 @@ void quest_M2_ports_win_conditions_init()
 	PChar.quest.quest_M2.win_condition = win_condition;
 }
 
+void quest_M2_robber_win_conditions_init() {
+	ref PChar = GetMainCharacter();
+	switch (PChar.quest_M2_next_port) {
+		case "Conceicao":			PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", "none"); break;
+		case "Fleur de Falaise":	PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", "none"); break;
+		case "Redmond":				PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", "none"); break;
+		case "Isla Muelle":			PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", "none"); break;
+		case "Douwesen":			PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", "none"); break;
+		case "Oxbay":				PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", "none"); break;
+		case "Greenford":			PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", "none"); break;
+		case "Quebradas Costillas":	PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", "none"); break;
+	}
+}
+
 int quest_M2_howlong() {
 	ref PChar = GetMainCharacter();
 	int days = 0;
 	int n;
 	for (n = 1; n <= 2 + makeint(PChar.quest_M2_step); n++) {
 		switch (n) {
-			case 1:  days = days + PJ_portDistance("Redmond", PChar.quest.quest_M2.island1); break;
-			case 2:  days = days + PJ_portDistance(PChar.quest.quest_M2.island1, PChar.quest.quest_M2.island2); break;
-			case 3:  days = days + PJ_portDistance(PChar.quest.quest_M2.island2, PChar.quest.quest_M2.island3); break;
-			case 4:  days = days + PJ_portDistance(PChar.quest.quest_M2.island3, PChar.quest.quest_M2.island4); break;
-			case 5:  days = days + PJ_portDistance(PChar.quest.quest_M2.island4, PChar.quest.quest_M2.island5); break;
-			case 6:  days = days + PJ_portDistance(PChar.quest.quest_M2.island5, PChar.quest.quest_M2.island6); break;
-			case 7:  days = days + PJ_portDistance(PChar.quest.quest_M2.island6, PChar.quest.quest_M2.island7); break;
-			case 8:  days = days + PJ_portDistance(PChar.quest.quest_M2.island7, PChar.quest.quest_M2.island8); break;
-			case 9:  days = days + PJ_portDistance(PChar.quest.quest_M2.island8, PChar.quest.quest_M2.island9); break;
-			case 10: days = days + PJ_portDistance(PChar.quest.quest_M2.island9, PChar.quest.quest_M2.island10); break;
+			case 1:  days = days + PJ_portDistance("Redmond", PChar.quest_M2_island1); break;
+			case 2:  days = days + PJ_portDistance(PChar.quest_M2_island1, PChar.quest_M2_island2); break;
+			case 3:  days = days + PJ_portDistance(PChar.quest_M2_island2, PChar.quest_M2_island3); break;
+			case 4:  days = days + PJ_portDistance(PChar.quest_M2_island3, PChar.quest_M2_island4); break;
+			case 5:  days = days + PJ_portDistance(PChar.quest_M2_island4, PChar.quest_M2_island5); break;
+			case 6:  days = days + PJ_portDistance(PChar.quest_M2_island5, PChar.quest_M2_island6); break;
+			case 7:  days = days + PJ_portDistance(PChar.quest_M2_island6, PChar.quest_M2_island7); break;
+			case 8:  days = days + PJ_portDistance(PChar.quest_M2_island7, PChar.quest_M2_island8); break;
+			case 9:  days = days + PJ_portDistance(PChar.quest_M2_island8, PChar.quest_M2_island9); break;
+			case 10: days = days + PJ_portDistance(PChar.quest_M2_island9, PChar.quest_M2_island10); break;
 		}
 	}
 	return days;
@@ -1773,16 +1801,16 @@ bool quest_M2_right_track() {
 
 	switch (makeint(PChar.quest_M2_step)) {
 		case 1: rightIsland = "Redmond"; break;
-		case 2: rightIsland = PChar.quest.quest_M2.island1; break;
-		case 3: rightIsland = PChar.quest.quest_M2.island2; break;
-		case 4: rightIsland = PChar.quest.quest_M2.island3; break;
-		case 5: rightIsland = PChar.quest.quest_M2.island4; break;
-		case 6: rightIsland = PChar.quest.quest_M2.island5; break;
-		case 7: rightIsland = PChar.quest.quest_M2.island6; break;
-		case 8: rightIsland = PChar.quest.quest_M2.island7; break;
-		case 9: rightIsland = PChar.quest.quest_M2.island8; break;
-		case 10: rightIsland = PChar.quest.quest_M2.island9; break;
-		case 11: rightIsland = PChar.quest.quest_M2.island10; break;
+		case 2: rightIsland = PChar.quest_M2_island1; break;
+		case 3: rightIsland = PChar.quest_M2_island2; break;
+		case 4: rightIsland = PChar.quest_M2_island3; break;
+		case 5: rightIsland = PChar.quest_M2_island4; break;
+		case 6: rightIsland = PChar.quest_M2_island5; break;
+		case 7: rightIsland = PChar.quest_M2_island6; break;
+		case 8: rightIsland = PChar.quest_M2_island7; break;
+		case 9: rightIsland = PChar.quest_M2_island8; break;
+		case 10: rightIsland = PChar.quest_M2_island9; break;
+		case 11: rightIsland = PChar.quest_M2_island10; break;
 		default: rightIsland = ""; break;
 	}
 
@@ -1905,16 +1933,16 @@ string quest_M2_PNJ_clue() {
 string quest_M2_next_port() {
 	ref PChar = GetMainCharacter();
 	switch (makeint(PChar.quest_M2_step)) {
-		case 1: return PChar.quest.quest_M2.island1; break;
-		case 2: return PChar.quest.quest_M2.island2; break;
-		case 3: return PChar.quest.quest_M2.island3; break;
-		case 4: return PChar.quest.quest_M2.island4; break;
-		case 5: return PChar.quest.quest_M2.island5; break;
-		case 6: return PChar.quest.quest_M2.island6; break;
-		case 7: return PChar.quest.quest_M2.island7; break;
-		case 8: return PChar.quest.quest_M2.island8; break;
-		case 9: return PChar.quest.quest_M2.island9; break;
-		case 10: return PChar.quest.quest_M2.island10; break;
+		case 1: return PChar.quest_M2_island1; break;
+		case 2: return PChar.quest_M2_island2; break;
+		case 3: return PChar.quest_M2_island3; break;
+		case 4: return PChar.quest_M2_island4; break;
+		case 5: return PChar.quest_M2_island5; break;
+		case 6: return PChar.quest_M2_island6; break;
+		case 7: return PChar.quest_M2_island7; break;
+		case 8: return PChar.quest_M2_island8; break;
+		case 9: return PChar.quest_M2_island9; break;
+		case 10: return PChar.quest_M2_island10; break;
 	}
 }
 
@@ -15031,26 +15059,67 @@ void QuestComplete(string sQuestName)
 			CloseQuestHeader("PJ_M1");
 		break
 
-		case "quest_M2_on_track":
-			Log_SetStringToLog("Il reste " + quest_M2_howlong());
-			AddPArtyExp(pchar, 1500);
-			AddQuestRecord("PJ_M2_quest", 3);
+		case "quest_M2_onTrack":
+			Log_SetStringToLog(GlobalStringConvert("PJ_M2_onTrack"));
+			DoQuestCheckDelay("quest_M2_nextPort", 1.0);
+		break;
+
+		case "quest_M2_nextPort":
+			Log_SetStringToLog("case quest_M2_nextPort");
+			switch(PChar.quest_M2_next_port) {
+				case "Conceicao":			AddQuestRecord("PJ_M2_quest", 3);	break;
+				case "Fleur de Falaise":	AddQuestRecord("PJ_M2_quest", 4);	break;
+				case "Redmond":				AddQuestRecord("PJ_M2_quest", 5);	break;
+				case "Isla Muelle":			AddQuestRecord("PJ_M2_quest", 6);	break;
+				case "Douwesen":			AddQuestRecord("PJ_M2_quest", 7);	break;
+				case "Oxbay":				AddQuestRecord("PJ_M2_quest", 8);	break;
+				case "Greenford":			AddQuestRecord("PJ_M2_quest", 9);	break;
+				case "Quebradas Costillas":	AddQuestRecord("PJ_M2_quest", 10);	break;
+			}
+			AddPArtyExp(pchar, 100 * pchar.quest_M2_num_port * pchar.quest_M2_step);
 			pchar.quest_M2_num_port = makeint(pchar.quest_M2_num_port) + 1;
 			quest_M2_ports_win_conditions_init();
+		break;
+		
+		case "quest_M2_lastPort":
+			Log_SetStringToLog(GlobalStringConvert("PJ_M2_lastPort"));
+			AddQuestRecord("PJ_M2_quest", 16);
+			quest_M2_robber_win_conditions_init();
 		break;
 
 		case "quest_M2_timeOut":
 			Log_SetStringToLog(GlobalStringConvert("PJ_M2_timeOut"));
-			AddQuestRecord("PJ_M2_quest", 8);
+			AddQuestRecord("PJ_M2_quest", 15);
 			DoQuestCheckDelay("quest_M2_failed", 1.0);
 		break;
 
 		case "quest_M2_failed":
 			ChangeCharacterReputation(pchar, -10);
-			// AddMoneyToCharacter(PChar, -4000);
+			DoQuestCheckDelay("quest_M2_END", 1.0);
+		break;
+
+		case "quest_M2_END":
 			CloseQuestHeader("PJ_M2_quest");
-			pchar.quest.quest_M2_on_track.over = "yes";
-			pchar.quest.quest_M2_on_track = "completed";
+			pchar.quest.quest_M2_onTrack_port_01.over = "yes";
+			pchar.quest.quest_M2_onTrack_port_01 = "completed";
+			pchar.quest.quest_M2_onTrack_port_02.over = "yes";
+			pchar.quest.quest_M2_onTrack_port_02 = "completed";
+			pchar.quest.quest_M2_onTrack_port_03.over = "yes";
+			pchar.quest.quest_M2_onTrack_port_03 = "completed";
+			pchar.quest.quest_M2_onTrack_port_04.over = "yes";
+			pchar.quest.quest_M2_onTrack_port_04 = "completed";
+			pchar.quest.quest_M2_onTrack_port_05.over = "yes";
+			pchar.quest.quest_M2_onTrack_port_05 = "completed";
+			pchar.quest.quest_M2_onTrack_port_06.over = "yes";
+			pchar.quest.quest_M2_onTrack_port_06 = "completed";
+			pchar.quest.quest_M2_onTrack_port_07.over = "yes";
+			pchar.quest.quest_M2_onTrack_port_07 = "completed";
+			pchar.quest.quest_M2_onTrack_port_08.over = "yes";
+			pchar.quest.quest_M2_onTrack_port_08 = "completed";
+			pchar.quest.quest_M2_onTrack_port_09.over = "yes";
+			pchar.quest.quest_M2_onTrack_port_09 = "completed";
+			pchar.quest.quest_M2_onTrack_port_10.over = "yes";
+			pchar.quest.quest_M2_onTrack_port_10 = "completed";
 			pchar.quest_M2_num_port = 0;
 		break;
 		// fin ajout PJ

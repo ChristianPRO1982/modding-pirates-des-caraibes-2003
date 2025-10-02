@@ -137,13 +137,13 @@ void CreateCharacters()
 	// GiveItem2Character(ch, "blade17");
 	// GiveItem2Character(ch, "blade18");
 	// GiveItem2Character(ch, "blade19");
-	// GiveItem2Character(ch, "blade20");
+	GiveItem2Character(ch, "blade20");
 	// GiveItem2Character(ch, "blade21");
-	// GiveItem2Character(ch, "blade22");
-	GiveItem2Character(ch, "blade23");
+	GiveItem2Character(ch, "blade22");
+	// GiveItem2Character(ch, "blade23");
 	// GiveItem2Character(ch, "pistol1");
 	// GiveItem2Character(ch, "pistol2");
-	GiveItem2Character(ch, "pistol3");
+	// GiveItem2Character(ch, "pistol3");
 	// GiveItem2Character(ch, "pistol4");
 	// GiveItem2Character(ch, "pistol5");
 	// GiveItem2Character(ch, "pistol6");//*/
