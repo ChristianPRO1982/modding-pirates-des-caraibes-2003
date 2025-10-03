@@ -50,13 +50,17 @@ void ProcessDialogEvent()
 
 			// ajout PJ
 			d.Text = DLG_TEXT[0];
-			if (quest_M2_right_track()) {
+			if (quest_M2_right_track() && PChar.quest_M2_lastPort != "1") {
 				Link.l1 = DLG_TEXT[3];
 				Link.l1.go = "PJ_M2_01";
 				Link.l2 = DLG_TEXT[1];
 				Link.l2.go = "Items";
 				Link.l3 = DLG_TEXT[2];
 				Link.l3.go = "exit";
+			}
+			if (PChar.quest_M2_lastPort == "1") {
+				Link.l1 = DLG_TEXT[3];
+				Link.l1.go = "PJ_M2_03";
 			} else {
 				Link.l1 = DLG_TEXT[1];
 				Link.l1.go = "Items";
@@ -111,6 +115,12 @@ void ProcessDialogEvent()
 				}
 			}
 
+			Link.l1 = DLG_TEXT[5];
+			Link.l1.go = "exit";
+		break;
+
+		case "PJ_M2_03":
+			d.Text = quest_M2_final_clue();
 			Link.l1 = DLG_TEXT[5];
 			Link.l1.go = "exit";
 		break;

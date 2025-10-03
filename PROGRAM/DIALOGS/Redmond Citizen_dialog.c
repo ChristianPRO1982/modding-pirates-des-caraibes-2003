@@ -134,6 +134,11 @@ void ProcessDialogEvent()
 
 		// ajout PJ
 		case "PJ_M2_01":
+			if (PChar.quest_M2_lastPort == "1") {
+				d.Text = quest_M2_final_clue();
+				Link.l1 = DLG_TEXT[147];
+				Link.l1.go = "exit";
+			} else {
 				chance = makeint(PChar.skill.Sneak) + Rand(20 - makeint(PChar.skill.Sneak));
 				
 				if (chance < 12 && PChar.quest_M2_last_citizen != NPChar.id) {
@@ -153,6 +158,7 @@ void ProcessDialogEvent()
 				}
 
 				PChar.quest_M2_last_citizen = NPChar.id; // pour ne pas questionner deux fois de suite le même citoyen (NPChar.id)
+			}
 		break;
 		
 		case "PJ_M2_02":

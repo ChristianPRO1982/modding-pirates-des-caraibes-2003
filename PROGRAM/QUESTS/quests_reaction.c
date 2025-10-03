@@ -497,6 +497,39 @@ void PlaceCharacter(aref ch, string group, string location)
 }
 
 // ajout PJ
+string thisTown() {
+	// Redmond, Fleur de Falaise, Oxbay, Conceicao, Douwesen, Isla Muelle, Greenford, Quebradas Costillas
+	ref PChar = GetMainCharacter();
+
+	switch (PChar.location) {
+		case "REDMOND_PORT":					return "Redmond"; break;
+		case "Redmond_Rown_01":					return "Redmond"; break;
+		case "Redmond_town_03":					return "Redmond"; break;
+		case "Redmond_town_04":					return "Redmond"; break;
+		case "Falaise_de_fleur_port_01":		return "Fleur de Falaise"; break;
+		case "Falaise_de_fleur_port_02":		return "Fleur de Falaise"; break;
+		case "Falaise_de_fleur_location_02":	return "Fleur de Falaise"; break;
+		case "Falaise_de_fleur_location_03":	return "Fleur de Falaise"; break;
+		case "Falaise_de_fleur_location_04":	return "Fleur de Falaise"; break;
+		case "Falaise_de_fleur_location_05":	return "Fleur de Falaise"; break;
+		case "Oxbay_port":						return "Oxbay"; break;
+		case "Oxbay_town":						return "Oxbay"; break;
+		case "Conceicao_port":					return "Conceicao"; break;
+		case "Conceicao_town":					return "Conceicao"; break;
+		case "Smugglers_Lair":					return "Conceicao"; break;
+		case "Douwesen_port":					return "Douwesen"; break;
+		case "Douwesen_town":					return "Douwesen"; break;
+		case "Muelle_port":						return "Isla Muelle"; break;
+		case "Muelle_town_01":					return "Isla Muelle"; break;
+		case "Muelle_town_02":					return "Isla Muelle"; break;
+		case "Muelle_town_03":					return "Isla Muelle"; break;
+		case "Muelle_town_04":					return "Isla Muelle"; break;
+		case "Greenford_port":					return "Greenford"; break;
+		case "Greenford_town":					return "Greenford"; break;
+		case "QC_town":							return "Quebradas Costillas"; break;
+	}
+}
+
 void GenerateTreasureHunterQuests()
 {
 	ref PChar = GetMainCharacter();
@@ -1550,6 +1583,7 @@ void quest_M2_init_quest()
 		int n;
 		PChar.quest.M2_quest_init = true;
 		PChar.quest.quest_M2.warrant = "";
+		PChar.quest_M2_lastPort = false;
 
 		///// choix aléatoire des ports à visiter ///////
 		string portsName[9];
@@ -1585,16 +1619,16 @@ void quest_M2_init_quest()
 			if (port == lastPort || port == lastLastPort) port++;
 			if (port > 8) port = 1;
 			switch (n) {
-				case 1:  PChar.quest_M2_island1 =  portsName[port]; break;
-				case 2:  PChar.quest_M2_island2 =  portsName[port]; break;
-				case 3:  PChar.quest_M2_island3 =  portsName[port]; break;
-				case 4:  PChar.quest_M2_island4 =  portsName[port]; break;
-				case 5:  PChar.quest_M2_island5 =  portsName[port]; break;
-				case 6:  PChar.quest_M2_island6 =  portsName[port]; break;
-				case 7:  PChar.quest_M2_island7 =  portsName[port]; break;
-				case 8:  PChar.quest_M2_island8 =  portsName[port]; break;
-				case 9:  PChar.quest_M2_island9 =  portsName[port]; break;
-				case 10: PChar.quest_M2_island10 = portsName[port]; break;
+				case 1: PChar.quest_M2_island1 =  portsName[port]; break;
+				case 2: PChar.quest_M2_island2 =  portsName[port]; break;
+				case 3: PChar.quest_M2_island3 =  portsName[port]; break;
+				case 4: PChar.quest_M2_island4 =  portsName[port]; break;
+				case 5: PChar.quest_M2_island5 =  portsName[port]; break;
+				case 10: PChar.quest_M2_island6 =  portsName[port]; break; // Cas de Carmen > la recherche est plus longue
+				// case 7:  PChar.quest_M2_island7 =  portsName[port]; break; // mis en commentaire car trop long
+				// case 8:  PChar.quest_M2_island8 =  portsName[port]; break; // idem
+				// case 9:  PChar.quest_M2_island9 =  portsName[port]; break; // idem
+				// case 10: PChar.quest_M2_island10 = portsName[port]; break; // idem
 			}
 
 			lastLastPort = lastPort;
@@ -1614,32 +1648,32 @@ void quest_M2_init_quest()
 		// 8 : Carmen San Diego
 		n = rand(25);
 		switch (n){
-			case 0: PChar.quest.quest_M2.robbers_1 = 6; PChar.quest.quest_M2.robbers_2 = 5; PChar.quest.quest_M2.robbers_3 = 4; PChar.quest.quest_M2.robbers_4 = 1; PChar.quest.quest_M2.robbers_5 = 3; PChar.quest.quest_M2.robbers_6 = 7; PChar.quest.quest_M2.robbers_7 = 2; break;
-			case 1: PChar.quest.quest_M2.robbers_1 = 2; PChar.quest.quest_M2.robbers_2 = 1; PChar.quest.quest_M2.robbers_3 = 7; PChar.quest.quest_M2.robbers_4 = 3; PChar.quest.quest_M2.robbers_5 = 4; PChar.quest.quest_M2.robbers_6 = 5; PChar.quest.quest_M2.robbers_7 = 6; break;
-			case 2: PChar.quest.quest_M2.robbers_1 = 7; PChar.quest.quest_M2.robbers_2 = 6; PChar.quest.quest_M2.robbers_3 = 1; PChar.quest.quest_M2.robbers_4 = 2; PChar.quest.quest_M2.robbers_5 = 3; PChar.quest.quest_M2.robbers_6 = 5; PChar.quest.quest_M2.robbers_7 = 4; break;
-			case 3: PChar.quest.quest_M2.robbers_1 = 3; PChar.quest.quest_M2.robbers_2 = 2; PChar.quest.quest_M2.robbers_3 = 6; PChar.quest.quest_M2.robbers_4 = 7; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 4; PChar.quest.quest_M2.robbers_7 = 5; break;
-			case 4: PChar.quest.quest_M2.robbers_1 = 7; PChar.quest.quest_M2.robbers_2 = 1; PChar.quest.quest_M2.robbers_3 = 6; PChar.quest.quest_M2.robbers_4 = 2; PChar.quest.quest_M2.robbers_5 = 4; PChar.quest.quest_M2.robbers_6 = 5; PChar.quest.quest_M2.robbers_7 = 3; break;
-			case 5: PChar.quest.quest_M2.robbers_1 = 1; PChar.quest.quest_M2.robbers_2 = 7; PChar.quest.quest_M2.robbers_3 = 5; PChar.quest.quest_M2.robbers_4 = 6; PChar.quest.quest_M2.robbers_5 = 4; PChar.quest.quest_M2.robbers_6 = 3; PChar.quest.quest_M2.robbers_7 = 2; break;
-			case 6: PChar.quest.quest_M2.robbers_1 = 7; PChar.quest.quest_M2.robbers_2 = 5; PChar.quest.quest_M2.robbers_3 = 4; PChar.quest.quest_M2.robbers_4 = 1; PChar.quest.quest_M2.robbers_5 = 2; PChar.quest.quest_M2.robbers_6 = 6; PChar.quest.quest_M2.robbers_7 = 3; break;
-			case 7: PChar.quest.quest_M2.robbers_1 = 2; PChar.quest.quest_M2.robbers_2 = 4; PChar.quest.quest_M2.robbers_3 = 1; PChar.quest.quest_M2.robbers_4 = 6; PChar.quest.quest_M2.robbers_5 = 3; PChar.quest.quest_M2.robbers_6 = 5; PChar.quest.quest_M2.robbers_7 = 7; break;
-			case 8: PChar.quest.quest_M2.robbers_1 = 1; PChar.quest.quest_M2.robbers_2 = 2; PChar.quest.quest_M2.robbers_3 = 5; PChar.quest.quest_M2.robbers_4 = 7; PChar.quest.quest_M2.robbers_5 = 3; PChar.quest.quest_M2.robbers_6 = 4; PChar.quest.quest_M2.robbers_7 = 6; break;
-			case 9: PChar.quest.quest_M2.robbers_1 = 6; PChar.quest.quest_M2.robbers_2 = 4; PChar.quest.quest_M2.robbers_3 = 2; PChar.quest.quest_M2.robbers_4 = 1; PChar.quest.quest_M2.robbers_5 = 3; PChar.quest.quest_M2.robbers_6 = 5; PChar.quest.quest_M2.robbers_7 = 7; break;
-			case 10: PChar.quest.quest_M2.robbers_1 = 2; PChar.quest.quest_M2.robbers_2 = 5; PChar.quest.quest_M2.robbers_3 = 4; PChar.quest.quest_M2.robbers_4 = 7; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 6; PChar.quest.quest_M2.robbers_7 = 3; break;
-			case 11: PChar.quest.quest_M2.robbers_1 = 6; PChar.quest.quest_M2.robbers_2 = 4; PChar.quest.quest_M2.robbers_3 = 5; PChar.quest.quest_M2.robbers_4 = 3; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 2; PChar.quest.quest_M2.robbers_7 = 7; break;
-			case 12: PChar.quest.quest_M2.robbers_1 = 1; PChar.quest.quest_M2.robbers_2 = 3; PChar.quest.quest_M2.robbers_3 = 2; PChar.quest.quest_M2.robbers_4 = 5; PChar.quest.quest_M2.robbers_5 = 4; PChar.quest.quest_M2.robbers_6 = 6; PChar.quest.quest_M2.robbers_7 = 7; break;
-			case 13: PChar.quest.quest_M2.robbers_1 = 2; PChar.quest.quest_M2.robbers_2 = 7; PChar.quest.quest_M2.robbers_3 = 4; PChar.quest.quest_M2.robbers_4 = 3; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 5; PChar.quest.quest_M2.robbers_7 = 6; break;
-			case 14: PChar.quest.quest_M2.robbers_1 = 3; PChar.quest.quest_M2.robbers_2 = 4; PChar.quest.quest_M2.robbers_3 = 2; PChar.quest.quest_M2.robbers_4 = 1; PChar.quest.quest_M2.robbers_5 = 6; PChar.quest.quest_M2.robbers_6 = 7; PChar.quest.quest_M2.robbers_7 = 5; break;
-			case 15: PChar.quest.quest_M2.robbers_1 = 1; PChar.quest.quest_M2.robbers_2 = 2; PChar.quest.quest_M2.robbers_3 = 3; PChar.quest.quest_M2.robbers_4 = 5; PChar.quest.quest_M2.robbers_5 = 7; PChar.quest.quest_M2.robbers_6 = 6; PChar.quest.quest_M2.robbers_7 = 4; break;
-			case 16: PChar.quest.quest_M2.robbers_1 = 5; PChar.quest.quest_M2.robbers_2 = 2; PChar.quest.quest_M2.robbers_3 = 1; PChar.quest.quest_M2.robbers_4 = 7; PChar.quest.quest_M2.robbers_5 = 4; PChar.quest.quest_M2.robbers_6 = 3; PChar.quest.quest_M2.robbers_7 = 6; break;
-			case 17: PChar.quest.quest_M2.robbers_1 = 6; PChar.quest.quest_M2.robbers_2 = 1; PChar.quest.quest_M2.robbers_3 = 7; PChar.quest.quest_M2.robbers_4 = 5; PChar.quest.quest_M2.robbers_5 = 2; PChar.quest.quest_M2.robbers_6 = 3; PChar.quest.quest_M2.robbers_7 = 4; break;
-			case 18: PChar.quest.quest_M2.robbers_1 = 3; PChar.quest.quest_M2.robbers_2 = 7; PChar.quest.quest_M2.robbers_3 = 1; PChar.quest.quest_M2.robbers_4 = 2; PChar.quest.quest_M2.robbers_5 = 6; PChar.quest.quest_M2.robbers_6 = 4; PChar.quest.quest_M2.robbers_7 = 5; break;
-			case 19: PChar.quest.quest_M2.robbers_1 = 6; PChar.quest.quest_M2.robbers_2 = 7; PChar.quest.quest_M2.robbers_3 = 4; PChar.quest.quest_M2.robbers_4 = 5; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 3; PChar.quest.quest_M2.robbers_7 = 2; break;
-			case 20: PChar.quest.quest_M2.robbers_1 = 6; PChar.quest.quest_M2.robbers_2 = 2; PChar.quest.quest_M2.robbers_3 = 3; PChar.quest.quest_M2.robbers_4 = 7; PChar.quest.quest_M2.robbers_5 = 5; PChar.quest.quest_M2.robbers_6 = 1; PChar.quest.quest_M2.robbers_7 = 4; break;
-			case 21: PChar.quest.quest_M2.robbers_1 = 4; PChar.quest.quest_M2.robbers_2 = 3; PChar.quest.quest_M2.robbers_3 = 6; PChar.quest.quest_M2.robbers_4 = 5; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 2; PChar.quest.quest_M2.robbers_7 = 7; break;
-			case 22: PChar.quest.quest_M2.robbers_1 = 3; PChar.quest.quest_M2.robbers_2 = 5; PChar.quest.quest_M2.robbers_3 = 4; PChar.quest.quest_M2.robbers_4 = 2; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 6; PChar.quest.quest_M2.robbers_7 = 7; break;
-			case 23: PChar.quest.quest_M2.robbers_1 = 5; PChar.quest.quest_M2.robbers_2 = 2; PChar.quest.quest_M2.robbers_3 = 3; PChar.quest.quest_M2.robbers_4 = 4; PChar.quest.quest_M2.robbers_5 = 7; PChar.quest.quest_M2.robbers_6 = 1; PChar.quest.quest_M2.robbers_7 = 6; break;
-			case 24: PChar.quest.quest_M2.robbers_1 = 2; PChar.quest.quest_M2.robbers_2 = 6; PChar.quest.quest_M2.robbers_3 = 5; PChar.quest.quest_M2.robbers_4 = 4; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 7; PChar.quest.quest_M2.robbers_7 = 3; break;
-			case 25: PChar.quest.quest_M2.robbers_1 = 4; PChar.quest.quest_M2.robbers_2 = 6; PChar.quest.quest_M2.robbers_3 = 7; PChar.quest.quest_M2.robbers_4 = 3; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 5; PChar.quest.quest_M2.robbers_7 = 2; break;
+			case 0: PChar.quest.quest_M2.robbers_1 = 18; PChar.quest.quest_M2.robbers_2 = 12; PChar.quest.quest_M2.robbers_3 = 17; PChar.quest.quest_M2.robbers_4 = 5; PChar.quest.quest_M2.robbers_5 = 6; PChar.quest.quest_M2.robbers_6 = 8; PChar.quest.quest_M2.robbers_7 = 11; break;
+			case 1: PChar.quest.quest_M2.robbers_1 = 19; PChar.quest.quest_M2.robbers_2 = 15; PChar.quest.quest_M2.robbers_3 = 16; PChar.quest.quest_M2.robbers_4 = 7; PChar.quest.quest_M2.robbers_5 = 8; PChar.quest.quest_M2.robbers_6 = 14; PChar.quest.quest_M2.robbers_7 = 12; break;
+			case 2: PChar.quest.quest_M2.robbers_1 = 3; PChar.quest.quest_M2.robbers_2 = 17; PChar.quest.quest_M2.robbers_3 = 5; PChar.quest.quest_M2.robbers_4 = 6; PChar.quest.quest_M2.robbers_5 = 16; PChar.quest.quest_M2.robbers_6 = 11; PChar.quest.quest_M2.robbers_7 = 15; break;
+			case 3: PChar.quest.quest_M2.robbers_1 = 6; PChar.quest.quest_M2.robbers_2 = 13; PChar.quest.quest_M2.robbers_3 = 16; PChar.quest.quest_M2.robbers_4 = 11; PChar.quest.quest_M2.robbers_5 = 4; PChar.quest.quest_M2.robbers_6 = 17; PChar.quest.quest_M2.robbers_7 = 12; break;
+			case 4: PChar.quest.quest_M2.robbers_1 = 5; PChar.quest.quest_M2.robbers_2 = 16; PChar.quest.quest_M2.robbers_3 = 7; PChar.quest.quest_M2.robbers_4 = 3; PChar.quest.quest_M2.robbers_5 = 8; PChar.quest.quest_M2.robbers_6 = 4; PChar.quest.quest_M2.robbers_7 = 15; break;
+			case 5: PChar.quest.quest_M2.robbers_1 = 4; PChar.quest.quest_M2.robbers_2 = 19; PChar.quest.quest_M2.robbers_3 = 10; PChar.quest.quest_M2.robbers_4 = 20; PChar.quest.quest_M2.robbers_5 = 2; PChar.quest.quest_M2.robbers_6 = 12; PChar.quest.quest_M2.robbers_7 = 9; break;
+			case 6: PChar.quest.quest_M2.robbers_1 = 15; PChar.quest.quest_M2.robbers_2 = 3; PChar.quest.quest_M2.robbers_3 = 16; PChar.quest.quest_M2.robbers_4 = 14; PChar.quest.quest_M2.robbers_5 = 6; PChar.quest.quest_M2.robbers_6 = 13; PChar.quest.quest_M2.robbers_7 = 20; break;
+			case 7: PChar.quest.quest_M2.robbers_1 = 14; PChar.quest.quest_M2.robbers_2 = 18; PChar.quest.quest_M2.robbers_3 = 10; PChar.quest.quest_M2.robbers_4 = 4; PChar.quest.quest_M2.robbers_5 = 3; PChar.quest.quest_M2.robbers_6 = 20; PChar.quest.quest_M2.robbers_7 = 19; break;
+			case 8: PChar.quest.quest_M2.robbers_1 = 18; PChar.quest.quest_M2.robbers_2 = 12; PChar.quest.quest_M2.robbers_3 = 14; PChar.quest.quest_M2.robbers_4 = 16; PChar.quest.quest_M2.robbers_5 = 5; PChar.quest.quest_M2.robbers_6 = 4; PChar.quest.quest_M2.robbers_7 = 3; break;
+			case 9: PChar.quest.quest_M2.robbers_1 = 1; PChar.quest.quest_M2.robbers_2 = 19; PChar.quest.quest_M2.robbers_3 = 11; PChar.quest.quest_M2.robbers_4 = 18; PChar.quest.quest_M2.robbers_5 = 9; PChar.quest.quest_M2.robbers_6 = 13; PChar.quest.quest_M2.robbers_7 = 10; break;
+			case 10: PChar.quest.quest_M2.robbers_1 = 19; PChar.quest.quest_M2.robbers_2 = 11; PChar.quest.quest_M2.robbers_3 = 15; PChar.quest.quest_M2.robbers_4 = 16; PChar.quest.quest_M2.robbers_5 = 12; PChar.quest.quest_M2.robbers_6 = 18; PChar.quest.quest_M2.robbers_7 = 17; break;
+			case 11: PChar.quest.quest_M2.robbers_1 = 12; PChar.quest.quest_M2.robbers_2 = 1; PChar.quest.quest_M2.robbers_3 = 4; PChar.quest.quest_M2.robbers_4 = 3; PChar.quest.quest_M2.robbers_5 = 8; PChar.quest.quest_M2.robbers_6 = 9; PChar.quest.quest_M2.robbers_7 = 2; break;
+			case 12: PChar.quest.quest_M2.robbers_1 = 17; PChar.quest.quest_M2.robbers_2 = 14; PChar.quest.quest_M2.robbers_3 = 5; PChar.quest.quest_M2.robbers_4 = 6; PChar.quest.quest_M2.robbers_5 = 15; PChar.quest.quest_M2.robbers_6 = 11; PChar.quest.quest_M2.robbers_7 = 13; break;
+			case 13: PChar.quest.quest_M2.robbers_1 = 16; PChar.quest.quest_M2.robbers_2 = 5; PChar.quest.quest_M2.robbers_3 = 14; PChar.quest.quest_M2.robbers_4 = 7; PChar.quest.quest_M2.robbers_5 = 4; PChar.quest.quest_M2.robbers_6 = 3; PChar.quest.quest_M2.robbers_7 = 15; break;
+			case 14: PChar.quest.quest_M2.robbers_1 = 8; PChar.quest.quest_M2.robbers_2 = 15; PChar.quest.quest_M2.robbers_3 = 6; PChar.quest.quest_M2.robbers_4 = 17; PChar.quest.quest_M2.robbers_5 = 10; PChar.quest.quest_M2.robbers_6 = 12; PChar.quest.quest_M2.robbers_7 = 11; break;
+			case 15: PChar.quest.quest_M2.robbers_1 = 7; PChar.quest.quest_M2.robbers_2 = 13; PChar.quest.quest_M2.robbers_3 = 3; PChar.quest.quest_M2.robbers_4 = 5; PChar.quest.quest_M2.robbers_5 = 16; PChar.quest.quest_M2.robbers_6 = 11; PChar.quest.quest_M2.robbers_7 = 15; break;
+			case 16: PChar.quest.quest_M2.robbers_1 = 11; PChar.quest.quest_M2.robbers_2 = 4; PChar.quest.quest_M2.robbers_3 = 18; PChar.quest.quest_M2.robbers_4 = 19; PChar.quest.quest_M2.robbers_5 = 1; PChar.quest.quest_M2.robbers_6 = 12; PChar.quest.quest_M2.robbers_7 = 9; break;
+			case 17: PChar.quest.quest_M2.robbers_1 = 2; PChar.quest.quest_M2.robbers_2 = 17; PChar.quest.quest_M2.robbers_3 = 15; PChar.quest.quest_M2.robbers_4 = 14; PChar.quest.quest_M2.robbers_5 = 6; PChar.quest.quest_M2.robbers_6 = 13; PChar.quest.quest_M2.robbers_7 = 20; break;
+			case 18: PChar.quest.quest_M2.robbers_1 = 13; PChar.quest.quest_M2.robbers_2 = 18; PChar.quest.quest_M2.robbers_3 = 10; PChar.quest.quest_M2.robbers_4 = 4; PChar.quest.quest_M2.robbers_5 = 3; PChar.quest.quest_M2.robbers_6 = 20; PChar.quest.quest_M2.robbers_7 = 19; break;
+			case 19: PChar.quest.quest_M2.robbers_1 = 18; PChar.quest.quest_M2.robbers_2 = 12; PChar.quest.quest_M2.robbers_3 = 14; PChar.quest.quest_M2.robbers_4 = 16; PChar.quest.quest_M2.robbers_5 = 5; PChar.quest.quest_M2.robbers_6 = 4; PChar.quest.quest_M2.robbers_7 = 3; break;
+			case 20: PChar.quest.quest_M2.robbers_1 = 1; PChar.quest.quest_M2.robbers_2 = 19; PChar.quest.quest_M2.robbers_3 = 11; PChar.quest.quest_M2.robbers_4 = 18; PChar.quest.quest_M2.robbers_5 = 9; PChar.quest.quest_M2.robbers_6 = 13; PChar.quest.quest_M2.robbers_7 = 10; break;
+			case 21: PChar.quest.quest_M2.robbers_1 = 2; PChar.quest.quest_M2.robbers_2 = 11; PChar.quest.quest_M2.robbers_3 = 15; PChar.quest.quest_M2.robbers_4 = 16; PChar.quest.quest_M2.robbers_5 = 12; PChar.quest.quest_M2.robbers_6 = 18; PChar.quest.quest_M2.robbers_7 = 17; break;
+			case 22: PChar.quest.quest_M2.robbers_1 = 12; PChar.quest.quest_M2.robbers_2 = 1; PChar.quest.quest_M2.robbers_3 = 4; PChar.quest.quest_M2.robbers_4 = 3; PChar.quest.quest_M2.robbers_5 = 8; PChar.quest.quest_M2.robbers_6 = 9; PChar.quest.quest_M2.robbers_7 = 2; break;
+			case 23: PChar.quest.quest_M2.robbers_1 = 17; PChar.quest.quest_M2.robbers_2 = 14; PChar.quest.quest_M2.robbers_3 = 5; PChar.quest.quest_M2.robbers_4 = 6; PChar.quest.quest_M2.robbers_5 = 15; PChar.quest.quest_M2.robbers_6 = 11; PChar.quest.quest_M2.robbers_7 = 13; break;
+			case 24: PChar.quest.quest_M2.robbers_1 = 16; PChar.quest.quest_M2.robbers_2 = 5; PChar.quest.quest_M2.robbers_3 = 14; PChar.quest.quest_M2.robbers_4 = 7; PChar.quest.quest_M2.robbers_5 = 4; PChar.quest.quest_M2.robbers_6 = 3; PChar.quest.quest_M2.robbers_7 = 15; break;
+			case 25: PChar.quest.quest_M2.robbers_1 = 8; PChar.quest.quest_M2.robbers_2 = 15; PChar.quest.quest_M2.robbers_3 = 6; PChar.quest.quest_M2.robbers_4 = 17; PChar.quest.quest_M2.robbers_5 = 10; PChar.quest.quest_M2.robbers_6 = 12; PChar.quest.quest_M2.robbers_7 = 11; break;
 		}
 		PChar.quest.quest_M2.robbers_8 = 8;
 
@@ -1713,6 +1747,10 @@ void quest_M2_ports_win_conditions_init()
 
 void quest_M2_robber_win_conditions_init() {
 	ref PChar = GetMainCharacter();
+	PChar.quest_M2_lastPort = true;
+
+
+
 	switch (PChar.quest_M2_next_port) {
 		case "Conceicao":			PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", "none"); break;
 		case "Fleur de Falaise":	PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", "none"); break;
@@ -1769,37 +1807,9 @@ bool quest_M2_right_track() {
 	// Conceicao / Fleur de Falaise / Redmond / Isla Muelle / Douwesen / Oxbay / Greenford / Quebradas Costillas
 	ref PChar = GetMainCharacter();
 	string rightIsland;
-	string thisIsland;
+	string thisIsland = thisTown();	// Redmond, Fleur de Falaise, Oxbay, Conceicao, Douwesen, Isla Muelle, Greenford, Quebradas Costillas
 
-	switch (PChar.location) {
-		case "REDMOND_PORT": thisIsland = "Redmond"; break;
-		case "Redmond_Rown_01": thisIsland = "Redmond"; break;
-		case "Redmond_town_03": thisIsland = "Redmond"; break;
-		case "Redmond_town_04": thisIsland = "Redmond"; break;
-		case "Falaise_de_fleur_port_01": thisIsland = "Fleur de Falaise"; break;
-		case "Falaise_de_fleur_port_02": thisIsland = "Fleur de Falaise"; break;
-		case "Falaise_de_fleur_location_02": thisIsland = "Fleur de Falaise"; break;
-		case "Falaise_de_fleur_location_03": thisIsland = "Fleur de Falaise"; break;
-		case "Falaise_de_fleur_location_04": thisIsland = "Fleur de Falaise"; break;
-		case "Falaise_de_fleur_location_05": thisIsland = "Fleur de Falaise"; break;
-		case "Oxbay_port": thisIsland = "Oxbay"; break;
-		case "Oxbay_town": thisIsland = "Oxbay"; break;
-		case "Conceicao_port": thisIsland = "Conceicao"; break;
-		case "Conceicao_town": thisIsland = "Conceicao"; break;
-		case "Smugglers_Lair": thisIsland = "Conceicao"; break;
-		case "Douwesen_port": thisIsland = "Douwesen"; break;
-		case "Douwesen_town": thisIsland = "Douwesen"; break;
-		case "Muelle_port": thisIsland = "Isla Muelle"; break;
-		case "Muelle_town_01": thisIsland = "Isla Muelle"; break;
-		case "Muelle_town_02": thisIsland = "Isla Muelle"; break;
-		case "Muelle_town_03": thisIsland = "Isla Muelle"; break;
-		case "Muelle_town_04": thisIsland = "Isla Muelle"; break;
-		case "Greenford_port": thisIsland = "Greenford"; break;
-		case "Greenford_town": thisIsland = "Greenford"; break;
-		case "QC_town": thisIsland = "Quebradas Costillas"; break;
-	}
-
-	switch (makeint(PChar.quest_M2_step)) {
+	switch (makeint(PChar.quest_M2_num_port)) {
 		case 1: rightIsland = "Redmond"; break;
 		case 2: rightIsland = PChar.quest_M2_island1; break;
 		case 3: rightIsland = PChar.quest_M2_island2; break;
@@ -1927,6 +1937,22 @@ string quest_M2_PNJ_clue() {
 				if (PChar.(k) == "Plymouth") return pronoun + " venait de Plymouth.";
 			}
 			break;
+	}
+}
+
+string quest_M2_final_clue() {
+	ref PChar = GetMainCharacter();
+	string thisIsland = thisTown();	// Redmond, Fleur de Falaise, Oxbay, Conceicao, Douwesen, Isla Muelle, Greenford, Quebradas Costillas
+	
+	switch (thisIsland) {
+		case "Redmond": return "Je l'ai vu entrer dans une maison près de la prison en haut de l'escalier."; break;
+		case "Fleur de Falaise": return "Je l'ai vu entrer dans une maison en bas de la ville près de la porte menant au chantier où l'on construit un bateau."; break;
+		case "Oxbay": return "Je l'ai vu sur le port."; break;
+		case "Conceicao": return "Je l'ai vu entrer dans une maison proche de la maison de l'usurier."; break;
+		case "Douwesen": return "Je l'ai vu entrer dans une maison en face de la maison du gouverneur."; break;
+		case "Isla Muelle": return "Je l'ai vu entrer dans une maison près de la porte menant vers la jungle."; break;
+		case "Greenford": return "Je l'ai vu entrer dans une maison face à l'église."; break;
+		case "Quebradas Costillas": return "Je l'ai vu entrer dans une maison près de la porte du fortin."; break;
 	}
 }
 

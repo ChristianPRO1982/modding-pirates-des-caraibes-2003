@@ -6,7 +6,8 @@ void ProcessDialogEvent()
 	aref Link, Diag;
 	string NPC_Meeting, TempInfoCharacterID_1, TempInfoCharacterID_2;
 	int DonationSize;
-	
+	int chance;
+		
 	DeleteAttribute(&Dialog,"Links");
 
 	makeref(NPChar,CharacterRef);
@@ -45,16 +46,24 @@ void ProcessDialogEvent()
 				dialog.snd2 = "";
 				dialog.snd3 = "";
 				d.Text = RandPhrase(DLG_TEXT[13] + PChar.name + DLG_TEXT[14], DLG_TEXT[15] + PChar.name + DLG_TEXT[16] + TimeGreeting() + DLG_TEXT[17], DLG_TEXT[18] + address_form.spa + " " + Pchar.name + DLG_TEXT[19], &Dialog, dialog.snd1, dialog.snd2, dialog.snd3);
-				if(Rand(1)==0)
+				// ajout PJ
+				if (quest_M2_right_track())
 				{
-					Link.l1 = LinkRandPhrase(pcharrepphrase(DLG_TEXT[20], DLG_TEXT[21]), pcharrepphrase(DLG_TEXT[22], DLG_TEXT[23]), pcharrepphrase(DLG_TEXT[24], DLG_TEXT[25]));
-					Link.l1.go = "rumours";
+					Link.l1 = DLG_TEXT[133];
+					Link.l1.go = "PJ_M2_01";
+				} else {
+					if(Rand(1)==0)
+					{
+						Link.l1 = LinkRandPhrase(pcharrepphrase(DLG_TEXT[20], DLG_TEXT[21]), pcharrepphrase(DLG_TEXT[22], DLG_TEXT[23]), pcharrepphrase(DLG_TEXT[24], DLG_TEXT[25]));
+						Link.l1.go = "rumours";
+					}
+					else
+					{
+						Link.l1 = LinkRandPhrase(pcharrepphrase(DLG_TEXT[26], DLG_TEXT[27]), pcharrepphrase(DLG_TEXT[28], DLG_TEXT[29]), pcharrepphrase(DLG_TEXT[30], DLG_TEXT[31]));
+						Link.l1.go = "town";
+					}
 				}
-				else
-				{
-					Link.l1 = LinkRandPhrase(pcharrepphrase(DLG_TEXT[26], DLG_TEXT[27]), pcharrepphrase(DLG_TEXT[28], DLG_TEXT[29]), pcharrepphrase(DLG_TEXT[30], DLG_TEXT[31]));
-					Link.l1.go = "town";
-				}
+				// fin ajout PJ
 				if(Rand(1)==0)	
 				{
 					Link.l2 = LinkRandPhrase(pcharrepphrase(DLG_TEXT[32], DLG_TEXT[33]), pcharrepphrase(DLG_TEXT[34], DLG_TEXT[35]), pcharrepphrase(DLG_TEXT[36], DLG_TEXT[37]));
@@ -76,21 +85,85 @@ void ProcessDialogEvent()
 				dialog.snd2 = "";
 				dialog.snd3 = "";
 				d.Text = RandPhrase(DLG_TEXT[40] + address_form.spa + DLG_TEXT[41], DLG_TEXT[42], DLG_TEXT[43], &Dialog, dialog.snd1, dialog.snd2, dialog.snd3);
-				if(Rand(1)==0)
+				// ajout PJ
+				if (quest_M2_right_track())
 				{
-					Link.l1 = LinkRandPhrase(DLG_TEXT[44], DLG_TEXT[45], DLG_TEXT[46]);
-					Link.l1.go = "rumours";
+					Link.l1 = DLG_TEXT[133];
+					Link.l1.go = "PJ_M2_01";
+				} else {
+					if(Rand(1)==0)
+					{
+						Link.l1 = LinkRandPhrase(DLG_TEXT[44], DLG_TEXT[45], DLG_TEXT[46]);
+						Link.l1.go = "rumours";
+					}
+					else
+					{
+						Link.l1 = LinkRandPhrase(DLG_TEXT[47], DLG_TEXT[48], DLG_TEXT[49]);
+						Link.l1.go = "town";
+					}
 				}
-				else
-				{
-					Link.l1 = LinkRandPhrase(DLG_TEXT[47], DLG_TEXT[48], DLG_TEXT[49]);
-					Link.l1.go = "town";
-				}
+				// fin ajout PJ
 				Link.l2 = LinkRandPhrase(DLG_TEXT[50], DLG_TEXT[51], DLG_TEXT[52]);
 				Link.l2.go = "info";
 				Link.l3 = DLG_TEXT[53];
 				Link.l3.go = "exit";
 		break;
+
+		// ajout PJ
+		case "PJ_M2_01":
+			if (PChar.quest_M2_lastPort == "1") {
+				d.Text = quest_M2_final_clue();
+				Link.l1 = DLG_TEXT[135];
+				Link.l1.go = "exit";
+			} else {
+				chance = makeint(PChar.skill.Sneak) + Rand(20 - makeint(PChar.skill.Sneak));
+				
+				if (chance < 12 && PChar.quest_M2_last_citizen != NPChar.id) {
+					d.Text = DLG_TEXT[134];
+					Link.l1 = DLG_TEXT[135];
+					Link.l1.go = "exit";
+				}
+				if (chance >= 12 && PChar.quest_M2_last_citizen != NPChar.id) {
+					d.Text = quest_M2_PNJ_clue();
+					Link.l1 = DLG_TEXT[181];
+					Link.l1.go = "PJ_M2_02";
+				}
+				if (PChar.quest_M2_last_citizen == NPChar.id) {
+					d.Text = DLG_TEXT[183];
+					Link.l1 = DLG_TEXT[135];
+					Link.l1.go = "exit";
+				}
+
+				PChar.quest_M2_last_citizen = NPChar.id; // pour ne pas questionner deux fois de suite le même citoyen (NPChar.id)
+			}
+		break;
+		
+		case "PJ_M2_02":
+				chance = makeint(PChar.skill.Sneak) + Rand(20 - makeint(PChar.skill.Sneak));
+
+				if (chance < 18) {
+					d.Text = DLG_TEXT[182];
+				}
+				else {
+					int next_port = quest_M2_next_port_answer();
+					if (next_port > 0) {
+						d.Text = quest_M2_robber_gender_pronoun() + DLG_TEXT[136 + next_port * 6 + Rand(5)];
+					}
+					if (next_port == 0) {
+						d.Text = quest_M2_robber_gender_pronoun() +  DLG_TEXT[136 + Rand(5)] + " " + quest_M2_robber_gender_pronoun() + DLG_TEXT[172 + Rand(2)];
+					}
+					if (next_port == -1) {
+						d.Text = quest_M2_robber_gender_pronoun() +  DLG_TEXT[136 + Rand(5)] + " " + quest_M2_robber_gender_pronoun() + DLG_TEXT[175 + Rand(2)];
+					}
+					if (next_port == -2) {
+						d.Text = quest_M2_robber_gender_pronoun() +  DLG_TEXT[136 + Rand(5)] + " " + quest_M2_robber_gender_pronoun() + DLG_TEXT[178 + Rand(2)];
+					}
+				}
+
+				Link.l1 = DLG_TEXT[135];
+				Link.l1.go = "exit";
+		break;
+		// fin ajout PJ
 
 		case "rumours":
 				d.Text = SelectRumour();
@@ -105,16 +178,24 @@ void ProcessDialogEvent()
 				dialog.snd2 = "";
 				dialog.snd3 = "";
 				d.Text = RandPhrase(DLG_TEXT[56] + PChar.name + DLG_TEXT[57], DLG_TEXT[58] + address_form.spa + " " + PChar.name + DLG_TEXT[59], DLG_TEXT[60] + address_form.spa + DLG_TEXT[61], &Dialog, dialog.snd1, dialog.snd2, dialog.snd3);
-				if(Rand(1)==0)
+				// ajout PJ
+				if (quest_M2_right_track())
 				{
-					Link.l1 = LinkRandPhrase(DLG_TEXT[62], DLG_TEXT[63], DLG_TEXT[64]);
-					Link.l1.go = "rumours";
+					Link.l1 = DLG_TEXT[133];
+					Link.l1.go = "PJ_M2_01";
+				} else {
+					if(Rand(1)==0)
+					{
+						Link.l1 = LinkRandPhrase(DLG_TEXT[62], DLG_TEXT[63], DLG_TEXT[64]);
+						Link.l1.go = "rumours";
+					}
+					else
+					{
+						Link.l1 = LinkRandPhrase(DLG_TEXT[65], DLG_TEXT[66], DLG_TEXT[67]);
+						Link.l1.go = "town";
+					}
 				}
-				else
-				{
-					Link.l1 = LinkRandPhrase(DLG_TEXT[65], DLG_TEXT[66], DLG_TEXT[67]);
-					Link.l1.go = "town";
-				}
+				// fin ajout PJ
 				Link.l2 = LinkRandPhrase(DLG_TEXT[68], DLG_TEXT[69], DLG_TEXT[70]);
 				Link.l2.go = "info";
 				Link.l3 = DLG_TEXT[71];

@@ -1016,7 +1016,7 @@ J’ai voulu agir trop vite... sans mandat d’arrêt, impossible de mettre qui que c
 #TEXT	15
 Trop tard. Le navire est parti, le voleur a échappé à la justice. Silehard est hors de lui !!! Je crains pour ma réputation...
 #TEXT	16
-On m'a rapporté que le sustpect traine en ville en ce moment. Je suis tout prêt !
+On m'a rapporté que le suspect traine en ville en ce moment. Je suis tout prêt !
 #QUEST	PJ_M2_intrigue
 A la poursuite de Carmen San Diego - intrigue chez le gouverneur
 #TEXT	1
