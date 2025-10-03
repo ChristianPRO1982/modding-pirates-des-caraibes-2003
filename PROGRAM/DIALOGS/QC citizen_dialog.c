@@ -72,24 +72,25 @@ void ProcessDialogEvent()
 		case "PJ_M2_01":
 			PChar.money = makeint(PChar.money) - 5;
 			if (PChar.quest_M2_lastPort == "1") {
-				d.Text = quest_M2_final_clue();
+				dialog.text = quest_M2_final_clue();
 				Link.l1 = DLG_TEXT[14];
 				Link.l1.go = "exit";
+			}
 			} else {
 				chance = makeint(PChar.skill.Sneak) + Rand(20 - makeint(PChar.skill.Sneak));
 				
 				if (chance < 2 && PChar.quest_M2_last_citizen != NPChar.id) {
-					d.Text = DLG_TEXT[13];
+					dialog.text = DLG_TEXT[13];
 					Link.l1 = DLG_TEXT[14];
 					Link.l1.go = "exit";
 				}
 				if (chance >= 2 && PChar.quest_M2_last_citizen != NPChar.id) {
-					d.Text = quest_M2_PNJ_clue();
+					dialog.text = quest_M2_PNJ_clue();
 					Link.l1 = DLG_TEXT[60];
 					Link.l1.go = "PJ_M2_02";
 				}
 				if (PChar.quest_M2_last_citizen == NPChar.id) {
-					d.Text = DLG_TEXT[62];
+					dialog.text = DLG_TEXT[62];
 					Link.l1 = DLG_TEXT[14];
 					Link.l1.go = "exit";
 				}
@@ -102,21 +103,21 @@ void ProcessDialogEvent()
 				chance = makeint(PChar.skill.Sneak) + Rand(20 - makeint(PChar.skill.Sneak));
 
 				if (chance < 2) {
-					d.Text = DLG_TEXT[61];
+					dialog.text = DLG_TEXT[61];
 				}
 				else {
 					int next_port = quest_M2_next_port_answer();
 					if (next_port > 0) {
-						d.Text = quest_M2_robber_gender_pronoun() + DLG_TEXT[15 + next_port * 6 + Rand(5)];
+						dialog.text = quest_M2_robber_gender_pronoun() + DLG_TEXT[15 + next_port * 6 + Rand(5)];
 					}
 					if (next_port == 0) {
-						d.Text = quest_M2_robber_gender_pronoun() +  DLG_TEXT[15 + Rand(5)] + " " + quest_M2_robber_gender_pronoun() + DLG_TEXT[51 + Rand(2)];
+						dialog.text = quest_M2_robber_gender_pronoun() +  DLG_TEXT[15 + Rand(5)] + " " + quest_M2_robber_gender_pronoun() + DLG_TEXT[51 + Rand(2)];
 					}
 					if (next_port == -1) {
-						d.Text = quest_M2_robber_gender_pronoun() +  DLG_TEXT[15 + Rand(5)] + " " + quest_M2_robber_gender_pronoun() + DLG_TEXT[54 + Rand(2)];
+						dialog.text = quest_M2_robber_gender_pronoun() +  DLG_TEXT[15 + Rand(5)] + " " + quest_M2_robber_gender_pronoun() + DLG_TEXT[54 + Rand(2)];
 					}
 					if (next_port == -2) {
-						d.Text = quest_M2_robber_gender_pronoun() +  DLG_TEXT[15 + Rand(5)] + " " + quest_M2_robber_gender_pronoun() + DLG_TEXT[57 + Rand(2)];
+						dialog.text = quest_M2_robber_gender_pronoun() +  DLG_TEXT[15 + Rand(5)] + " " + quest_M2_robber_gender_pronoun() + DLG_TEXT[57 + Rand(2)];
 					}
 				}
 

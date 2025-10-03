@@ -207,6 +207,7 @@ void CreateCharacters()
 	ch.quest_M2_step = 0;
 	ch.quest_M2_quest_init = false; // pour éviter d'initialiser les quêtes plusieurs fois
 	ch.quest_M2_last_citizen = ""; // pour ne pas questionner deux fois de suite le même citoyen (NPChar.id)
+	ch.quest_M2_lastPort = "0";
 
 	// QUESTS BEGINNINGS
 

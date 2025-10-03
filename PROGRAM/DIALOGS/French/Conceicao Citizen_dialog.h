@@ -1,4 +1,4 @@
-string DLG_TEXT[227] = {
+string DLG_TEXT[225] = {
 ", ",
 ". Mon nom est ",
 ". Puis-je savoir le tien?",
