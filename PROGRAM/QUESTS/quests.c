@@ -100,10 +100,6 @@ void QuestsCheck_forLocEnter()
 	if(pchar.quest_S1_Unearthing == true) pchar.quest_S1_failed = true;
 	
 	//quest S2
-	PlaceCharacter(characterFromID("Robber woman elegant"), "goto", homelocation);
-	PlaceCharacter(characterFromID("Robber woman pratical"), "goto", homelocation);
-	PlaceCharacter(characterFromID("Robber woman flashy"), "goto", homelocation);
-	PlaceCharacter(characterFromID("Carmen San Diego"), "goto", homelocation);
 	PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", "none");
 	PlaceCharacter(characterFromID("Magdalen Spooner"), "goto", "none");
 	PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", "none");
@@ -153,7 +149,14 @@ void QuestsCheck_forLocEnter()
 	if (makeint(pchar.quest_M1_step) == 9 && pchar.location == "QC_pirate_house_inside") PlaceCharacter(characterFromID("Chui A-poo"), "goto", homelocation);
 
 	//quest M2
-	log_SetStringToLog("PJ DEBUG TEST (quests.c) : pchar.quest_M2_step = " + pchar.quest_M2_step);
+	log_SetStringToLog("PJ DEBUG TEST (quests.c) : pchar.quest_M2_step = " + pchar.quest_M2_step); // à supprimer
+	PlaceCharacter(characterFromID("Robber man elegant"), "goto", "none");
+	PlaceCharacter(characterFromID("Robber man simple"), "goto", "none");
+	PlaceCharacter(characterFromID("Robber man rags"), "goto", "none");
+	PlaceCharacter(characterFromID("Robber woman elegant"), "goto", "none");
+	PlaceCharacter(characterFromID("Robber woman simple"), "goto", "none");
+	PlaceCharacter(characterFromID("Robber woman rags"), "goto", "none");
+	PlaceCharacter(characterFromID("Carmen San Diego"), "goto", "none");
 	if (makeint(pchar.quest_M2_step) >= 0 && pchar.location == "Redmond_prison") PlaceCharacter(characterFromID("Christopher Myngs"), "goto", homelocation);
 	
 	// fin ajout PJ

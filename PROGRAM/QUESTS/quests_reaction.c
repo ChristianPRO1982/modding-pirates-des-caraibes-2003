@@ -1868,9 +1868,9 @@ string quest_M2_PNJ_clue() {
 				return pronoun + " portait un beau manteau rouge.";
 			} else {
 				k = "quest.quest_M2.robber" + robber_id + ".style";
-				if (PChar.(k) == "simple") return pronoun + " portait un habit simple de marin.";
+				if (PChar.(k) == "simple") return pronoun + " portait des vêtements pratiques.";
 				if (PChar.(k) == "élégant") return pronoun + " portait une tenue élégante.";
-				if (PChar.(k) == "voyant") return pronoun + " portait des vêtements très colorés.";
+				if (PChar.(k) == "haillons") return pronoun + " portait des haillons. Mais je pense que c'était pour se fondre dans la foule.";
 			}
 			break;
 		case 3:
@@ -2009,18 +2009,18 @@ string quest_M2_robbers_list() {
 	// 3 : Thomas Redfield
 	PChar.quest.quest_M2.robber3.name = "Thomas Redfield";
 	PChar.quest.quest_M2.robber3.gender = "homme"; PChar.quest.quest_M2.robber3.hair = "blond";
-	PChar.quest.quest_M2.robber3.eyes = "bleu"; PChar.quest.quest_M2.robber3.style = "voyant";
+	PChar.quest.quest_M2.robber3.eyes = "bleu"; PChar.quest.quest_M2.robber3.style = "haillons";
 	PChar.quest.quest_M2.robber3.accessory = "bague"; PChar.quest.quest_M2.robber3.passion = "animaux";
 	PChar.quest.quest_M2.robber3.skill = "déguisement"; PChar.quest.quest_M2.robber3.mark = "Boite légèrement";
-	PChar.quest.quest_M2.robber3.language = "anglais"; PChar.quest.quest_M2.robber6.home_port = "Plymouth";
-	
+	PChar.quest.quest_M2.robber3.language = "anglais"; PChar.quest.quest_M2.robber3.home_port = "Plymouth";
+
 	// 4 : Maria de la Vega
 	PChar.quest.quest_M2.robber4.name = "Maria de la Vega";
 	PChar.quest.quest_M2.robber4.gender = "femme"; PChar.quest.quest_M2.robber4.hair = "noir";
 	PChar.quest.quest_M2.robber4.eyes = "bleu"; PChar.quest.quest_M2.robber4.style = "élégant";
-	PChar.quest.quest_M2.robber4.accessory = "compas marin"; PChar.quest.quest_M2.robber4.passion = "animaux";
-	PChar.quest.quest_M2.robber4.skill = "discours"; PChar.quest.quest_M2.robber4.mark = "Boite légèrement";
-	PChar.quest.quest_M2.robber4.language = "espagnol"; PChar.quest.quest_M2.robber1.home_port = "Séville";
+	PChar.quest.quest_M2.robber4.accessory = "longue-vue"; PChar.quest.quest_M2.robber4.passion = "animaux";
+	PChar.quest.quest_M2.robber4.skill = "discours"; PChar.quest.quest_M2.robber4.mark = "tatouage";
+	PChar.quest.quest_M2.robber4.language = "espagnol"; PChar.quest.quest_M2.robber4.home_port = "Séville";
 
 	// 5 : Étienne Laroque
 	PChar.quest.quest_M2.robber5.name = "Étienne Laroque";
@@ -2028,13 +2028,13 @@ string quest_M2_robbers_list() {
 	PChar.quest.quest_M2.robber5.eyes = "marron"; PChar.quest.quest_M2.robber5.style = "simple";
 	PChar.quest.quest_M2.robber5.accessory = "longue-vue"; PChar.quest.quest_M2.robber5.passion = "antiquités";
 	PChar.quest.quest_M2.robber5.skill = "escalade"; PChar.quest.quest_M2.robber5.mark = "tatouage";
-	PChar.quest.quest_M2.robber5.language = "français"; PChar.quest.quest_M2.robber2.home_port = "La Rochelle";
+	PChar.quest.quest_M2.robber5.language = "français"; PChar.quest.quest_M2.robber5.home_port = "La Rochelle";
 
 	// 6 : Catherine Blackwood
 	PChar.quest.quest_M2.robber6.name = "Catherine Blackwood";
 	PChar.quest.quest_M2.robber6.gender = "femme"; PChar.quest.quest_M2.robber6.hair = "blond";
-	PChar.quest.quest_M2.robber6.eyes = "vert"; PChar.quest.quest_M2.robber6.style = "voyant";
-	PChar.quest.quest_M2.robber6.accessory = "Bague sertie"; PChar.quest.quest_M2.robber6.passion = "poésie";
+	PChar.quest.quest_M2.robber6.eyes = "vert"; PChar.quest.quest_M2.robber6.style = "haillons";
+	PChar.quest.quest_M2.robber6.accessory = "bague"; PChar.quest.quest_M2.robber6.passion = "poésie";
 	PChar.quest.quest_M2.robber6.skill = "déguisement"; PChar.quest.quest_M2.robber6.mark = "cicatrice";
 	PChar.quest.quest_M2.robber6.language = "anglais"; PChar.quest.quest_M2.robber6.home_port = "Plymouth";
 
@@ -2046,7 +2046,111 @@ string quest_M2_robbers_list() {
 	PChar.quest.quest_M2.robber7.skill = "escalade"; PChar.quest.quest_M2.robber7.mark = "tatouage";
 	PChar.quest.quest_M2.robber7.language = "espagnol"; PChar.quest.quest_M2.robber7.home_port = "Séville";
 
-	// 8 : Carmen San Diego
+	// 8 : Claire Moreau
+	PChar.quest.quest_M2.robber8.name = "Claire Moreau";
+	PChar.quest.quest_M2.robber8.gender = "femme"; PChar.quest.quest_M2.robber8.hair = "roux";
+	PChar.quest.quest_M2.robber8.eyes = "bleu"; PChar.quest.quest_M2.robber8.style = "simple";
+	PChar.quest.quest_M2.robber8.accessory = "bague"; PChar.quest.quest_M2.robber8.passion = "poésie";
+	PChar.quest.quest_M2.robber8.skill = "discours"; PChar.quest.quest_M2.robber8.mark = "cicatrice";
+	PChar.quest.quest_M2.robber8.language = "français"; PChar.quest.quest_M2.robber8.home_port = "La Rochelle";
+
+	// 9 : Edward Pike
+	PChar.quest.quest_M2.robber9.name = "Edward Pike";
+	PChar.quest.quest_M2.robber9.gender = "homme"; PChar.quest.quest_M2.robber9.hair = "blond";
+	PChar.quest.quest_M2.robber9.eyes = "marron"; PChar.quest.quest_M2.robber9.style = "élégant";
+	PChar.quest.quest_M2.robber9.accessory = "compas marin"; PChar.quest.quest_M2.robber9.passion = "animaux";
+	PChar.quest.quest_M2.robber9.skill = "escalade"; PChar.quest.quest_M2.robber9.mark = "Boite légèrement";
+	PChar.quest.quest_M2.robber9.language = "anglais"; PChar.quest.quest_M2.robber9.home_port = "Plymouth";
+
+	// 10 : Inés Valverde
+	PChar.quest.quest_M2.robber10.name = "Inés Valverde";
+	PChar.quest.quest_M2.robber10.gender = "femme"; PChar.quest.quest_M2.robber10.hair = "noir";
+	PChar.quest.quest_M2.robber10.eyes = "marron"; PChar.quest.quest_M2.robber10.style = "haillons";
+	PChar.quest.quest_M2.robber10.accessory = "bague"; PChar.quest.quest_M2.robber10.passion = "antiquités";
+	PChar.quest.quest_M2.robber10.skill = "discours"; PChar.quest.quest_M2.robber10.mark = "Boite légèrement";
+	PChar.quest.quest_M2.robber10.language = "espagnol"; PChar.quest.quest_M2.robber10.home_port = "Séville";
+
+	// 11 : Lucien Garreau
+	PChar.quest.quest_M2.robber11.name = "Lucien Garreau";
+	PChar.quest.quest_M2.robber11.gender = "homme"; PChar.quest.quest_M2.robber11.hair = "noir";
+	PChar.quest.quest_M2.robber11.eyes = "bleu"; PChar.quest.quest_M2.robber11.style = "élégant";
+	PChar.quest.quest_M2.robber11.accessory = "bague"; PChar.quest.quest_M2.robber11.passion = "poésie";
+	PChar.quest.quest_M2.robber11.skill = "déguisement"; PChar.quest.quest_M2.robber11.mark = "tatouage";
+	PChar.quest.quest_M2.robber11.language = "français"; PChar.quest.quest_M2.robber11.home_port = "La Rochelle";
+
+	// 12 : Grace Hargreaves
+	PChar.quest.quest_M2.robber12.name = "Grace Hargreaves";
+	PChar.quest.quest_M2.robber12.gender = "femme"; PChar.quest.quest_M2.robber12.hair = "blond";
+	PChar.quest.quest_M2.robber12.eyes = "bleu"; PChar.quest.quest_M2.robber12.style = "simple";
+	PChar.quest.quest_M2.robber12.accessory = "longue-vue"; PChar.quest.quest_M2.robber12.passion = "animaux";
+	PChar.quest.quest_M2.robber12.skill = "escalade"; PChar.quest.quest_M2.robber12.mark = "tatouage";
+	PChar.quest.quest_M2.robber12.language = "anglais"; PChar.quest.quest_M2.robber12.home_port = "Plymouth";
+
+	// 13 : Alonso Cortés
+	PChar.quest.quest_M2.robber13.name = "Alonso Cortés";
+	PChar.quest.quest_M2.robber13.gender = "homme"; PChar.quest.quest_M2.robber13.hair = "roux";
+	PChar.quest.quest_M2.robber13.eyes = "vert"; PChar.quest.quest_M2.robber13.style = "haillons";
+	PChar.quest.quest_M2.robber13.accessory = "compas marin"; PChar.quest.quest_M2.robber13.passion = "poésie";
+	PChar.quest.quest_M2.robber13.skill = "déguisement"; PChar.quest.quest_M2.robber13.mark = "cicatrice";
+	PChar.quest.quest_M2.robber13.language = "espagnol"; PChar.quest.quest_M2.robber13.home_port = "Séville";
+
+	// 14 : Madeleine Fournier
+	PChar.quest.quest_M2.robber14.name = "Madeleine Fournier";
+	PChar.quest.quest_M2.robber14.gender = "femme"; PChar.quest.quest_M2.robber14.hair = "noir";
+	PChar.quest.quest_M2.robber14.eyes = "vert"; PChar.quest.quest_M2.robber14.style = "haillons";
+	PChar.quest.quest_M2.robber14.accessory = "bague"; PChar.quest.quest_M2.robber14.passion = "antiquités";
+	PChar.quest.quest_M2.robber14.skill = "escalade"; PChar.quest.quest_M2.robber14.mark = "Boite légèrement";
+	PChar.quest.quest_M2.robber14.language = "français"; PChar.quest.quest_M2.robber14.home_port = "La Rochelle";
+
+	// 15 : Nathaniel Crowe
+	PChar.quest.quest_M2.robber15.name = "Nathaniel Crowe";
+	PChar.quest.quest_M2.robber15.gender = "homme"; PChar.quest.quest_M2.robber15.hair = "noir";
+	PChar.quest.quest_M2.robber15.eyes = "marron"; PChar.quest.quest_M2.robber15.style = "élégant";
+	PChar.quest.quest_M2.robber15.accessory = "bague"; PChar.quest.quest_M2.robber15.passion = "poésie";
+	PChar.quest.quest_M2.robber15.skill = "discours"; PChar.quest.quest_M2.robber15.mark = "cicatrice";
+	PChar.quest.quest_M2.robber15.language = "anglais"; PChar.quest.quest_M2.robber15.home_port = "Plymouth";
+
+	// 16 : Sofía Herrera
+	PChar.quest.quest_M2.robber16.name = "Sofía Herrera";
+	PChar.quest.quest_M2.robber16.gender = "femme"; PChar.quest.quest_M2.robber16.hair = "roux";
+	PChar.quest.quest_M2.robber16.eyes = "marron"; PChar.quest.quest_M2.robber16.style = "élégant";
+	PChar.quest.quest_M2.robber16.accessory = "longue-vue"; PChar.quest.quest_M2.robber16.passion = "animaux";
+	PChar.quest.quest_M2.robber16.skill = "déguisement"; PChar.quest.quest_M2.robber16.mark = "tatouage";
+	PChar.quest.quest_M2.robber16.language = "espagnol"; PChar.quest.quest_M2.robber16.home_port = "Séville";
+
+	// 17 : Armand Bellec
+	PChar.quest.quest_M2.robber17.name = "Armand Bellec";
+	PChar.quest.quest_M2.robber17.gender = "homme"; PChar.quest.quest_M2.robber17.hair = "blond";
+	PChar.quest.quest_M2.robber17.eyes = "vert"; PChar.quest.quest_M2.robber17.style = "simple";
+	PChar.quest.quest_M2.robber17.accessory = "compas marin"; PChar.quest.quest_M2.robber17.passion = "poésie";
+	PChar.quest.quest_M2.robber17.skill = "discours"; PChar.quest.quest_M2.robber17.mark = "cicatrice";
+	PChar.quest.quest_M2.robber17.language = "français"; PChar.quest.quest_M2.robber17.home_port = "La Rochelle";
+
+	// 18 : Eleanor Shaw
+	PChar.quest.quest_M2.robber18.name = "Eleanor Shaw";
+	PChar.quest.quest_M2.robber18.gender = "femme"; PChar.quest.quest_M2.robber18.hair = "noir";
+	PChar.quest.quest_M2.robber18.eyes = "bleu"; PChar.quest.quest_M2.robber18.style = "haillons";
+	PChar.quest.quest_M2.robber18.accessory = "bague"; PChar.quest.quest_M2.robber18.passion = "antiquités";
+	PChar.quest.quest_M2.robber18.skill = "escalade"; PChar.quest.quest_M2.robber18.mark = "tatouage";
+	PChar.quest.quest_M2.robber18.language = "anglais"; PChar.quest.quest_M2.robber18.home_port = "Plymouth";
+
+	// 19 : Javier Montalbán
+	PChar.quest.quest_M2.robber19.name = "Javier Montalbán";
+	PChar.quest.quest_M2.robber19.gender = "homme"; PChar.quest.quest_M2.robber19.hair = "roux";
+	PChar.quest.quest_M2.robber19.eyes = "bleu"; PChar.quest.quest_M2.robber19.style = "élégant";
+	PChar.quest.quest_M2.robber19.accessory = "bague"; PChar.quest.quest_M2.robber19.passion = "animaux";
+	PChar.quest.quest_M2.robber19.skill = "discours"; PChar.quest.quest_M2.robber19.mark = "Boite légèrement";
+	PChar.quest.quest_M2.robber19.language = "espagnol"; PChar.quest.quest_M2.robber19.home_port = "Séville";
+
+	// 20 : Hélène Marchand
+	PChar.quest.quest_M2.robber20.name = "Hélène Marchand";
+	PChar.quest.quest_M2.robber20.gender = "femme"; PChar.quest.quest_M2.robber20.hair = "blond";
+	PChar.quest.quest_M2.robber20.eyes = "vert"; PChar.quest.quest_M2.robber20.style = "élégant";
+	PChar.quest.quest_M2.robber20.accessory = "compas marin"; PChar.quest.quest_M2.robber20.passion = "poésie";
+	PChar.quest.quest_M2.robber20.skill = "escalade"; PChar.quest.quest_M2.robber20.mark = "cicatrice";
+	PChar.quest.quest_M2.robber20.language = "français"; PChar.quest.quest_M2.robber20.home_port = "La Rochelle";
+
+	// 21 : Carmen San Diego
 	PChar.quest.quest_M2.robber8.name = "Carmen Sandiego";
 	PChar.quest.quest_M2.robber8.gender = "femme"; PChar.quest.quest_M2.robber8.hair = "noir";
 	PChar.quest.quest_M2.robber8.eyes = "marron"; PChar.quest.quest_M2.robber8.style = "Élégant noir ténébreux, signature rouge écarlate";

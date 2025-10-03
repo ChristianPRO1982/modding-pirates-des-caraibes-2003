@@ -194,7 +194,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "style_flashy":
-			quest_M2_clues_list_update("style", "voyant");
+			quest_M2_clues_list_update("style", "haillons");
 			dialog.snd = "Voice\ARSI\ARSI001";
 			d.Text = DLG_TEXT[65];
 			Link.l1.go = "Continue_02";
