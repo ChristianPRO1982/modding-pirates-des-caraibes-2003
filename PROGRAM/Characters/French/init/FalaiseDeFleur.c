@@ -2,8 +2,6 @@
 int CreateFalaiseDeFleurCharacters(int n)
 {
 	ref ch;
-	ref PChar;
-	PChar = GetMainCharacter();
 
 	makeref(ch,Characters[n]);			//Antoine Lebretton (тавернщик) озвучка готова.
 	ch.name 	= "Antoine";
@@ -287,76 +285,7 @@ int CreateFalaiseDeFleurCharacters(int n)
 	///////////////////////////////////////////////////////////////////////////////////////////////
 	// FALAISE DE FLEUR PORT 1
 	///////////////////////////////////////////////////////////////////////////////////////////////
-	
-	// ajout PJ
-	// plus de PNJ en ville/port/faubourg
-	if (pchar.quest.PNJ_villes == true) {
-		makeref(ch,Characters[n]);
-		ch.name 	= "Frere Joachim";
-		ch.lastname 	= "";
-		ch.id		= "Frere Joachim";
-		ch.model = "Monk";
-		ch.sex = "man";
-		ch.sound_type = "male_citizen";
-		ch.location	= "Falaise_de_fleur_port_01";
-		ch.location.group = "goto";
-		ch.location.locator = "goto10";
-		ch.Dialog.Filename = "Falaise De Fleur citizen_dialog.c";
-		ch.greeting = "Gr_falaise de fleur citizen";
-		ch.nation = FRANCE;
-		ch.rank 	= 1;
-		ch.reputation = "40";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		ch.quest.meeting = "0";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
-		n = n + 1;
-		
-		makeref(ch,Characters[n]);
-		ch.name 	= "Constance";
-		ch.lastname 	= "Godin";
-		ch.id		= "Constance Godin";
-		ch.model = "towngirl1";
-		ch.sex = "woman";
-		ch.sound_type = "female_citizen";
-		ch.location	= "Falaise_de_fleur_port_01";
-		ch.location.group = "goto";
-		ch.location.locator = "goto8";
-		ch.Dialog.Filename = "Falaise De Fleur citizen_dialog.c";
-		ch.greeting = "Gr_Woman_French citizen";
-		ch.nation = FRANCE;
-		ch.rank 	= 1;
-		ch.reputation = "40";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		ch.quest.meeting = "0";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
-		n = n + 1;
-	}
-	// fin ajout PJ
-	
+
 	makeref(ch,Characters[n]);		//Milon Blacque (сумасшедший старик на пристани) озвучка готова
 	ch.name 	= "Milon";
 	ch.lastname 	= "Blacque";
@@ -565,76 +494,7 @@ int CreateFalaiseDeFleurCharacters(int n)
 	///////////////////////////////////////////////////////////////////////////////////////////////
 	// FALAISE DE FLEUR PORT 2
 	///////////////////////////////////////////////////////////////////////////////////////////////
-	
-	// ajout PJ
-	// plus de PNJ en ville/port/faubourg
-	if (pchar.quest.PNJ_villes == true) {
-		makeref(ch,Characters[n]);
-		ch.name 	= "Frere Pierre";
-		ch.lastname 	= "";
-		ch.id		= "Frere Pierre";
-		ch.model = "monk2";
-		ch.sex = "man";
-		ch.sound_type = "male_citizen";
-		ch.location	= "Falaise_de_fleur_port_02";
-		ch.location.group = "goto";
-		ch.location.locator = "carpenter";
-		ch.Dialog.Filename = "Falaise De Fleur citizen_dialog.c";
-		ch.greeting = "Gr_falaise de fleur citizen";
-		ch.nation = FRANCE;
-		ch.rank 	= 1;
-		ch.reputation = "40";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		ch.quest.meeting = "0";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
-		n = n + 1;
 
-		makeref(ch,Characters[n]);
-		ch.name 	= "Hortense";
-		ch.lastname 	= "Hamoncourt";
-		ch.id		= "Hortense Hamoncourt";
-		ch.model = "towngirl1";
-		ch.sex = "woman";
-		ch.sound_type = "female_citizen";
-		ch.location	= "Falaise_de_fleur_port_02";
-		ch.location.group = "goto";
-		ch.location.locator = "carpenter";
-		ch.Dialog.Filename = "Falaise De Fleur citizen_dialog.c";
-		ch.greeting = "Gr_Woman_French citizen";
-		ch.nation = FRANCE;
-		ch.rank 	= 1;
-		ch.reputation = "40";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		ch.quest.meeting = "0";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
-		n = n + 1;
-	}
-	// fin ajout PJ
-	
 	makeref(ch,Characters[n]);			// Landri Chevit
 	ch.name 	= "Landri";
 	ch.lastname 	= "Chevit";
@@ -771,76 +631,7 @@ int CreateFalaiseDeFleurCharacters(int n)
 	///////////////////////////////////////////////////////////////////////////////////////////////
 	// FALAISE DE FLEUR LOCATION 02
 	///////////////////////////////////////////////////////////////////////////////////////////////
-	
-	// ajout PJ
-	// plus de PNJ en ville/port/faubourg
-	if (pchar.quest.PNJ_villes == true) {
-		makeref(ch,Characters[n]);
-		ch.name 	= "Pepin";
-		ch.lastname 	= "De La Brosse";
-		ch.id		= "Pepin De La Brosse";
-		ch.model = "old_man2";
-		ch.sex = "man";
-		ch.sound_type = "male_citizen";
-		ch.location	= "Falaise_de_fleur_location_02";
-		ch.location.group = "goto";
-		ch.location.locator = "citizen03";
-		ch.Dialog.Filename = "Falaise De Fleur citizen_dialog.c";
-		ch.greeting = "Gr_falaise de fleur citizen";
-		ch.nation = FRANCE;
-		ch.rank 	= 1;
-		ch.reputation = "40";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		ch.quest.meeting = "0";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
-		n = n + 1;
 
-		makeref(ch,Characters[n]);
-		ch.name 	= "Bonassias";
-		ch.lastname 	= "Giradou";
-		ch.id		= "Bonassias Giradou";
-		ch.model = "towngirl2";
-		ch.sex = "woman";
-		ch.sound_type = "female_citizen";
-		ch.location	= "Falaise_de_fleur_location_02";
-		ch.location.group = "goto";
-		ch.location.locator = "citizen07";
-		ch.Dialog.Filename = "Falaise De Fleur citizen_dialog.c";
-		ch.greeting = "Gr_Woman_French citizen";
-		ch.nation = FRANCE;
-		ch.rank 	= 1;
-		ch.reputation = "40";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		ch.quest.meeting = "0";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
-		n = n + 1;
-	}
-	// fin ajout PJ
-	
 	makeref(ch,Characters[n]);			// Emile Capelle
 	ch.name 	= "Emile";
 	ch.lastname 	= "Capelle";
@@ -877,41 +668,6 @@ int CreateFalaiseDeFleurCharacters(int n)
 	LAi_SetCitizenType(ch);
 	LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
 	n = n + 1;
-	
-	// ajout PJ
-	if (pchar.quest.PNJ_Trop_Fort == true) {
-		ch.name 	= "Stargate";
-		ch.lastname 	= "Falaise de Fleur";
-		ch.id		= "Stargate Falaise de Fleur";
-		ch.model = "will";
-		ch.sex = "man";
-		ch.sound_type = "pirate";
-		ch.location	= "Falaise_de_fleur_location_02";
-		ch.location.group = "goto";
-		ch.location.locator = "citizen03";
-		ch.Dialog.Filename = "PJ PNJ voyage.c";
-		ch.greeting = "Gr_falaise de fleur citizen";
-		ch.nation = FRANCE;
-		ch.rank 	= 1;
-		ch.reputation = "40";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		ch.quest.meeting = "0";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
-		n = n + 1;
-	}
-	// fin ajout PJ
 
 	makeref(ch,Characters[n]);			// Doolin Soleuze
 	ch.name 	= "Doolin";
@@ -1122,140 +878,7 @@ int CreateFalaiseDeFleurCharacters(int n)
 	///////////////////////////////////////////////////////////////////////////////////////////////
 	// FALAISE DE FLEUR LOCATION 03
 	///////////////////////////////////////////////////////////////////////////////////////////////
-	
-	// ajout PJ
-	// plus de PNJ en ville/port/faubourg
-	if (pchar.quest.PNJ_villes == true) {
-		makeref(ch,Characters[n]);
-		ch.name 	= "Helgot";
-		ch.lastname 	= "Courtois";
-		ch.id		= "Helgot Courtois";
-		ch.model = "admiral";
-		ch.sex = "man";
-		ch.sound_type = "male_citizen";
-		ch.location	= "Falaise_de_fleur_location_03";
-		ch.location.group = "goto";
-		ch.location.locator = "Sitizen01";
-		ch.Dialog.Filename = "Falaise De Fleur citizen_dialog.c";
-		ch.greeting = "Gr_falaise de fleur citizen";
-		ch.nation = FRANCE;
-		ch.rank 	= 1;
-		ch.reputation = "40";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		ch.quest.meeting = "0";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
-		n = n + 1;
 
-		makeref(ch,Characters[n]);
-		ch.name 	= "Raoul";
-		ch.lastname 	= "Regnault";
-		ch.id		= "Raoul Regnault";
-		ch.model = "Nobleman";
-		ch.sex = "man";
-		ch.sound_type = "male_citizen";
-		ch.location	= "Falaise_de_fleur_location_03";
-		ch.location.group = "goto";
-		ch.location.locator = "Sitizen02";
-		ch.Dialog.Filename = "Falaise De Fleur citizen_dialog.c";
-		ch.greeting = "Gr_falaise de fleur citizen";
-		ch.nation = FRANCE;
-		ch.rank 	= 1;
-		ch.reputation = "40";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		ch.quest.meeting = "0";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
-		n = n + 1;
-
-		makeref(ch,Characters[n]);
-		ch.name 	= "Pere Guy Gilbert";
-		ch.lastname 	= "";
-		ch.id		= "Pere Guy Gilbert";
-		ch.model = "priest_spa";
-		ch.sex = "man";
-		ch.sound_type = "male_citizen";
-		ch.location	= "Falaise_de_fleur_location_03";
-		ch.location.group = "goto";
-		ch.location.locator = "Sitizen03";
-		ch.Dialog.Filename = "Falaise De Fleur citizen_dialog.c";
-		ch.greeting = "Gr_falaise de fleur citizen";
-		ch.nation = FRANCE;
-		ch.rank 	= 1;
-		ch.reputation = "40";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		ch.quest.meeting = "0";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
-		n = n + 1;
-
-		makeref(ch,Characters[n]);
-		ch.name 	= "Ermengarda";
-		ch.lastname 	= "Baille";
-		ch.id		= "Ermengarda Baille";
-		ch.model = "towngirl5";
-		ch.sex = "woman";
-		ch.sound_type = "female_citizen";
-		ch.location	= "Falaise_de_fleur_location_03";
-		ch.location.group = "goto";
-		ch.location.locator = "Sitizen07";
-		ch.Dialog.Filename = "Falaise De Fleur citizen_dialog.c";
-		ch.greeting = "Gr_Woman_French citizen";
-		ch.nation = FRANCE;
-		ch.rank 	= 1;
-		ch.reputation = "40";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		ch.quest.meeting = "0";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
-		n = n + 1;
-	}
-	// fin ajout PJ
-	
 	makeref(ch,Characters[n]);			//Patric Cardone (ТОРГОВЕЦ НА ЛОТКЕ) озвучка готова.
 	ch.name 	= "Patric";
 	ch.lastname 	= "Cardone";
@@ -1560,76 +1183,7 @@ int CreateFalaiseDeFleurCharacters(int n)
 	///////////////////////////////////////////////////////////////////////////////////////////////
 	// FALAISE DE FLEUR LOCATION 04
 	///////////////////////////////////////////////////////////////////////////////////////////////
-	
-	// ajout PJ
-	// plus de PNJ en ville/port/faubourg
-	if (pchar.quest.PNJ_villes == true) {
-		makeref(ch,Characters[n]);
-		ch.name 	= "Pere Emeric";
-		ch.lastname 	= "";
-		ch.id		= "Pere Emeric";
-		ch.model = "priest";
-		ch.sex = "man";
-		ch.sound_type = "male_citizen";
-		ch.location	= "Falaise_de_fleur_location_03";
-		ch.location.group = "goto";
-		ch.location.locator = "Sitizen04";
-		ch.Dialog.Filename = "Falaise De Fleur citizen_dialog.c";
-		ch.greeting = "Gr_falaise de fleur citizen";
-		ch.nation = FRANCE;
-		ch.rank 	= 1;
-		ch.reputation = "40";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		ch.quest.meeting = "0";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
-		n = n + 1;
 
-		makeref(ch,Characters[n]);
-		ch.name 	= "Amedee";
-		ch.lastname 	= "Lucre";
-		ch.id		= "Amedee Lucre";
-		ch.model = "towngirl7";
-		ch.sex = "woman";
-		ch.sound_type = "female_citizen";
-		ch.location	= "Falaise_de_fleur_location_04";
-		ch.location.group = "goto";
-		ch.location.locator = "citizen05";
-		ch.Dialog.Filename = "Falaise De Fleur citizen_dialog.c";
-		ch.greeting = "Gr_Woman_French citizen";
-		ch.nation = FRANCE;
-		ch.rank 	= 1;
-		ch.reputation = "40";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		ch.quest.meeting = "0";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
-		n = n + 1;
-	}
-	// fin ajout PJ
-	
 	makeref(ch,Characters[n]);			//Rachel Blacque (приемная дочь милона) озвучка готова
 	ch.name 	= "Rachel";
 	ch.lastname 	= "Blacque";
@@ -1732,76 +1286,7 @@ int CreateFalaiseDeFleurCharacters(int n)
 	///////////////////////////////////////////////////////////////////////////////////////////////
 	// FALAISE DE FLEUR LOCATION 05
 	///////////////////////////////////////////////////////////////////////////////////////////////
-	
-	// ajout PJ
-	// plus de PNJ en ville/port/faubourg
-	if (pchar.quest.PNJ_villes == true) {
-		makeref(ch,Characters[n]);
-		ch.name 	= "Cesar";
-		ch.lastname 	= "Naveau";
-		ch.id		= "Cesar Naveau";
-		ch.model = "Nobleman";
-		ch.sex = "man";
-		ch.sound_type = "male_citizen";
-		ch.location	= "Falaise_de_fleur_location_05";
-		ch.location.group = "goto";
-		ch.location.locator = "citizen03";
-		ch.Dialog.Filename = "Falaise De Fleur citizen_dialog.c";
-		ch.greeting = "Gr_falaise de fleur citizen";
-		ch.nation = FRANCE;
-		ch.rank 	= 1;
-		ch.reputation = "40";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		ch.quest.meeting = "0";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
-		n = n + 1;
 
-		makeref(ch,Characters[n]);
-		ch.name 	= "Algaia";
-		ch.lastname 	= "Clouzot";
-		ch.id		= "Algaia Clouzot";
-		ch.model = "towngirl3";
-		ch.sex = "woman";
-		ch.sound_type = "female_citizen";
-		ch.location	= "Falaise_de_fleur_location_05";
-		ch.location.group = "goto";
-		ch.location.locator = "citizen06";
-		ch.Dialog.Filename = "Falaise De Fleur citizen_dialog.c";
-		ch.greeting = "Gr_Woman_French citizen";
-		ch.nation = FRANCE;
-		ch.rank 	= 1;
-		ch.reputation = "40";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		ch.quest.meeting = "0";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
-		n = n + 1;
-	}
-	// fin ajout PJ
-	
 	makeref(ch,Characters[n]);			// Amadeo Theriot
 	ch.name 	= "Amadeo";
 	ch.lastname 	= "Theriot";

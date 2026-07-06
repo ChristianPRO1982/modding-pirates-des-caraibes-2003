@@ -1,0 +1,20 @@
+String DLG_TEXT[17] = {
+"Capitaine! C'est toi! Je n'en crois pas mes yeux!",
+"Eh oui.",
+"Je ne pensais pas te revoir vivant, ",
+"! Mais regarde-toi! Non seulement, tu es en vie, mais on dirait que tu viens de passer un mois à Londres!",
+"Messieurs...",
+"... C'est un vrai miracle que tu aies survécu! Dieu est avec toi, capitaine, ça c'est sûr!",
+"Oh, ce n'est pas si sûr!",
+"Le diable des mers, alors! On dit qu'il apprécie les marins courageux et qu'il les protège des catastrophes!",
+"Encore une histoire à dormir debout!",
+"Non, capitaine! Jovannie Speckled du brig 'Ardent' m'a dit qu'il avait vu le diable des mers de ses propres yeux!",
+"Il a vu le diable? Après combien de bouteilles de rhum?",
+"Il a juré qu'il n'avait pas bu une seule goutte, capitaine...",
+"Attendez-moi ici, messieurs!",
+"D'accord. S'il se passe quelque chose, reviens vite ici et nous couvrirons ta fuite!",
+"Je compte sur toi. Mais ne te montre pas trop tôt.",
+"On l'emmène à bord, capitaine. C'est une bonne chose que tout se soit si bien terminé.",
+"Vraiment? Vas-y. Vas-y, mon ami. Je te suivrai bientôt.",
+
+};

@@ -1,0 +1,23 @@
+string DLG_TEXT[20] = {
+"Qui es-tu et que fais-tu ici?! Parle ou je demande à ",
+"Bucho",
+" de te jeter dehors! ",
+"Je suis là pour toi. Tu es prêt à mourir?",
+"Assassin! Mais qui... Miles, ce chien cupide. Je parie que c'est lui! Ou bien Jonson!",
+"Tu t'es fait tellement d'ennemis que tu ne sais même plus qui accuser?",
+"J'irais danser sur leurs tombes! Je le jure! Tu es toujours là? Tu ne tiens donc pas à la vie? Tu ne sais pas qui je suis?",
+"Ce que je sais, c'est que tu as la langue bien pendue et que tu es un raseur. Et en plus, tu n'es pas très beau.",
+"Comment oses-tu?! ",
+"Bucho",
+", jette-moi cet homme dehors!",
+"Bucho",
+" ne te sera plus d'une très grande aide quand je l'aurais transpercé. À ce moment-là, on se retrouvera enfin face-à-face.",
+"Je t'en prie, pitié! Je te donnerai tout ce que tu voudras, mais ne me tue pas!",
+"Tu as perdu toute ta superbe d'un seul coup? Ça a été rapide. Je vais tâcher de faire vite, moi aussi.",
+"Tout? À part de l'argent, je ne vois pas ce qui pourrait m'intéresser. Donne-moi tout ce que tu as.",
+"File. Allez! Avant que je ne change d'avis.",
+"C'est tout ce que j'ai : 5 000 pièces d'or. Prends tout et laisse-moi tranquille!",
+"Bien. Disparais, fripouille, et prie pour ne jamais me retrouver sur ton chemin.",
+"Parfait. Mais maintenant, je n'ai hélas plus besoin de toi. Prépare-toi à mourir!",
+
+};

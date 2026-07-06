@@ -2,8 +2,6 @@
 int CreateIslaMuelleCharacters(int n)
 {
 	ref ch;
-	ref PChar;
-	PChar = GetMainCharacter();
 
 	makeref(ch,Characters[n]);			// Sylvie Bondies  француженка на исла муэле.
 	ch.name 	= "Sylvie";
@@ -803,41 +801,6 @@ int CreateIslaMuelleCharacters(int n)
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
 	ch.greeting = "Gr_Patrol";
 	n = n + 1;
-	
-	// ajout PJ
-	if (pchar.quest.PNJ_Trop_Fort == true) {
-		makeref(ch,Characters[n]);
-		ch.name 	= "Stargate";
-		ch.lastname 	= "Isla Muelle";
-		ch.id		= "Stargate Isla Muelle";
-		ch.model = "will";
-		ch.sex = "man";
-		ch.sound_type = "male_citizen";
-		ch.location	= "Muelle_town_01";
-		ch.location.group = "goto";
-		ch.location.locator = "goto33";
-		ch.Dialog.Filename = "PJ PNJ voyage.c";
-		ch.greeting = "Gr_isla muelle citizen";
-		ch.rank 	= 1;
-		ch.reputation = "None";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		ch.quest.meeting = "0";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "SPAIN_CITIZENS");
-		n = n + 1;
-	}
-	// fin ajout PJ
 
 	makeref(ch,Characters[n]);			// Nunno Gats.
 	ch.name 	= "Nunno";
