@@ -45,11 +45,11 @@ void CreateCharacters()
 
 	makeref(ch,Characters[0]);		//Blaze Devlin
 	//ch.perks.list.InstantBoarding = true;
-	ch.name 	= "Nathaniel";
-	ch.lastname = "Hawk";
+	ch.name 	= "Chris";//Nathaniel
+	ch.lastname = "Sparrow";//Hawk
 	ch.id		= "Blaze";
 	ch.nation	= ENGLAND;
-	ch.model	= "blaze";
+	ch.model	= "corsair1_1";//blaze
 	ch.activity_begin = "0";
 	ch.activity_end = "24";
 	ch.sex = "man";
@@ -114,6 +114,39 @@ void CreateCharacters()
 	stmp = POTION;	Ch.items.(stmp) = 2;
 	stmp = BLADE_SABER;	Ch.items.(stmp) = 1;
 	stmp = CHEAP_SPYGLASS;	Ch.items.(stmp) = 1;*/
+
+
+	//PJ pour créer des quête
+	ch.quest.PNJ_Trop_Fort = true;
+	// GiveItem2Character(ch, "blade1");
+	// GiveItem2Character(ch, "blade2");
+	// GiveItem2Character(ch, "blade3");
+	// GiveItem2Character(ch, "blade4");
+	// GiveItem2Character(ch, "blade5");
+	// GiveItem2Character(ch, "blade6");
+	// GiveItem2Character(ch, "blade7");
+	// GiveItem2Character(ch, "blade8");
+	// GiveItem2Character(ch, "blade9");
+	// GiveItem2Character(ch, "blade10");
+	// GiveItem2Character(ch, "blade11");
+	// GiveItem2Character(ch, "blade12");
+	// GiveItem2Character(ch, "blade13");
+	// GiveItem2Character(ch, "blade14");
+	// GiveItem2Character(ch, "blade15");
+	// GiveItem2Character(ch, "blade16");
+	// GiveItem2Character(ch, "blade17");
+	// GiveItem2Character(ch, "blade18");
+	// GiveItem2Character(ch, "blade19");
+	// GiveItem2Character(ch, "blade20");
+	// GiveItem2Character(ch, "blade21");
+	// GiveItem2Character(ch, "blade22");
+	// GiveItem2Character(ch, "blade23");
+	// GiveItem2Character(ch, "pistol1");
+	// GiveItem2Character(ch, "pistol2");
+	// GiveItem2Character(ch, "pistol3");
+	// GiveItem2Character(ch, "pistol4");
+	// GiveItem2Character(ch, "pistol5");
+	// GiveItem2Character(ch, "pistol6");
 
 	// QUESTS BEGINNINGS
 

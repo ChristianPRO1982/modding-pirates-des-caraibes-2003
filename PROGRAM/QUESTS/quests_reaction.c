@@ -12459,5 +12459,21 @@ void QuestComplete(string sQuestName)
 			LAi_NoRebirthDisable(characterFromID("Greenford Prison Commendant"));
 			LAi_SetHp(characterFromID("Greenford Prison Commendant"), 80.0, 80.0);
 		break;
+
+		// ajout PJ
+		case "PJ_QR_teleportation_1":
+			LAi_Fade("PJ_QR_teleportation_2", "");
+		break;
+
+		case "PJ_QR_teleportation_2":
+			DoQuestReloadToLocation(pchar.quest.PJ_teleportation, pchar.quest.PJ_teleportation.goto1, pchar.quest.PJ_teleportation.goto2, "PJ_QR_teleportation_3");
+			SetCharacterShipLocation(Pchar, pchar.quest.PJ_teleportation.port);
+			pchar.quest.PJ_teleportation = "";
+		break;
+
+		case "PJ_QR_teleportation_3":
+			Log_SetStringToLog(GlobalStringConvert("PJ_TELEPORTATION_1"));
+		break;
+		// fin ajout PJ
 	}
 }

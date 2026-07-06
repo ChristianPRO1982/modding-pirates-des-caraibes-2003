@@ -1,3 +1,5 @@
+PJ_TELEPORTATION_1 {Mmmh ! Plus rapide que McFly}
+
 QUEST_MESSAGE1 {Échec de la mission. Danielle est morte ! PARTIE TERMINÉE.}
 QUEST_MESSAGE2 {Le délai accordé pour la livraison est dépassé.}
 QUEST_MESSAGE3 {Tu es devenu trop vieux pour résister à la malédiction de l'or aztèque...}
