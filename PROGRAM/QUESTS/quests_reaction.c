@@ -12474,6 +12474,12 @@ void QuestComplete(string sQuestName)
 		case "PJ_QR_teleportation_3":
 			Log_SetStringToLog(GlobalStringConvert("PJ_TELEPORTATION_1"));
 		break;
+
+		case "PJ_end_MQ":
+			Log_SetStringToLog(GlobalStringConvert("PJ_END_MQ_1"));
+			DoQuestReloadToLocation("redmond_residence", "goto", "goto3", "blaze_from_prison_to_residence_complete");
+			Log_SetStringToLog(GlobalStringConvert("PJ_END_MQ_2"));
+		break;
 		// fin ajout PJ
 	}
 }

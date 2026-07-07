@@ -1262,6 +1262,36 @@ int CreateRedmondCharacters(int n)
 		LAi_SetCitizenType(ch);
 		LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
 		n = n + 1;
+		
+		makeref(ch,Characters[n]);
+		ch.name 	= "Drop";
+		ch.lastname 	= "Main Quest";
+		ch.id		= "Drop Main Quest";
+		ch.model	= "killer";
+		ch.sound_type = "pirate";
+		ch.sex = "man";
+		ch.location	= "Redmond_town_01";
+		ch.location.group = "goto";
+		ch.location.locator = "cityzen10";
+		ch.Dialog.Filename = "PJ MQ.c";
+		ch.greeting = "Gr_Redmond Citizen";
+		ch.rank 	= 1;
+		ch.reputation = "None";
+		ch.experience = "0";
+		ch.skill.Leadership = "1";
+		ch.skill.Fencing = "1";
+		ch.skill.Sailing = "1";
+		ch.skill.Accuracy = "1";
+		ch.skill.Cannons = "1";
+		ch.skill.Grappling = "1";
+		ch.skill.Repair = "1";
+		ch.skill.Defence = "1";
+		ch.skill.Commerce = "1";
+		ch.skill.Sneak = "1";
+		ch.money = "10";
+		LAi_SetCitizenType(ch);
+		LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
+		n = n + 1;
 	}
 	// fin ajout PJ
 
