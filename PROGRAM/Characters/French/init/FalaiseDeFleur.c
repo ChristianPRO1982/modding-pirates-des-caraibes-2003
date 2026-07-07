@@ -2,6 +2,8 @@
 int CreateFalaiseDeFleurCharacters(int n)
 {
 	ref ch;
+	ref PChar;
+	PChar = GetMainCharacter();
 
 	makeref(ch,Characters[n]);			//Antoine Lebretton (тавернщик) озвучка готова.
 	ch.name 	= "Antoine";

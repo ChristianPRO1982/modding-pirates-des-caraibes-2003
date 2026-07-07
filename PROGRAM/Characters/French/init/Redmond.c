@@ -2,6 +2,9 @@
 int CreateRedmondCharacters(int n)
 {
 	ref ch;
+	ref PChar;
+	PChar = GetMainCharacter();
+	
 //Location: Redmond Pier (an entrance to the town from the pier)
 
 	makeref(ch,Characters[n]);		//Laurence Wellman - port administrator

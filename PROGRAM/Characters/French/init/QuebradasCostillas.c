@@ -1,6 +1,8 @@
 int CreateQuebradasCostillasCharacters(int n)
 {
 	ref ch;
+	ref PChar;
+	PChar = GetMainCharacter();
 
 // QC_port:
 

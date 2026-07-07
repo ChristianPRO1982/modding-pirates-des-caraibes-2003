@@ -1,6 +1,8 @@
 int CreateDouwesenCharacters(int n)
 {
 	ref ch;
+	ref PChar;
+	PChar = GetMainCharacter();
 
 	makeref(ch,Characters[n]);		// Reynard Grueneveldt -- √”¡≈–Õ¿“Œ–
 	ch.name 	= "Reynard";

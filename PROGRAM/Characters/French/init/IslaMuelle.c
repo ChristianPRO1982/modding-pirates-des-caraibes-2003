@@ -2,6 +2,8 @@
 int CreateIslaMuelleCharacters(int n)
 {
 	ref ch;
+	ref PChar;
+	PChar = GetMainCharacter();
 
 	makeref(ch,Characters[n]);			// Sylvie Bondies  француженка на исла муэле.
 	ch.name 	= "Sylvie";

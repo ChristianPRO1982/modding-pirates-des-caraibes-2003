@@ -1965,6 +1965,41 @@ int CreateOxbayCharacters(int n)
 	ch.greeting = "Gr_Greenford Soldier";
 	n = n + 1;
 
+	// ajout PJ
+	if (pchar.quest.PNJ_Trop_Fort == true) {
+		makeref(ch,Characters[n]);
+		ch.name 	= "Stargate";
+		ch.lastname = "Greenford";
+		ch.id		= "Stargate Greenford";
+		ch.model	= "will";
+		ch.sound_type = "pirate";
+		ch.sex = "man";
+		ch.location	= "Greenford_town";
+		ch.location.group = "goto";
+		ch.location.locator = "goto5";
+		ch.Dialog.Filename = "PJ PNJ voyage.c";
+		ch.greeting = "Gr_Greenford Citizen";
+		ch.rank 	= 1;
+		ch.nation = ENGLAND;
+		ch.reputation = "None";
+		ch.experience = "0";
+		ch.skill.Leadership = "1";
+		ch.skill.Fencing = "1";
+		ch.skill.Sailing = "1";
+		ch.skill.Accuracy = "1";
+		ch.skill.Cannons = "1";
+		ch.skill.Grappling = "1";
+		ch.skill.Repair = "1";
+		ch.skill.Defence = "1";
+		ch.skill.Commerce = "1";
+		ch.skill.Sneak = "1";
+		ch.money = "1";
+		LAi_SetCitizenType(ch);
+		LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+		n = n + 1;
+	}
+	// fin ajout PJ
+
 	makeref(ch,Characters[n]);			// Bernard Gosling -- korsar
 	ch.name 	= "Bernard";
 	ch.lastname = "Gosling";

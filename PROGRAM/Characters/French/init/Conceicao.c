@@ -2,6 +2,8 @@
 int CreateConceicaoCharacters(int n)
 {
 	ref ch;
+	ref PChar;
+	PChar = GetMainCharacter();
 
 	makeref(ch,Characters[n]);			// Jacinto Arcibaldo Barreto (townhall)
 	ch.name 	= "Jacinto";
