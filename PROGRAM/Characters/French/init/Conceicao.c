@@ -387,6 +387,41 @@ int CreateConceicaoCharacters(int n)
 	LAi_SetCitizenType(ch);
 	LAi_group_MoveCharacter(ch, "CONCEICAO_CITIZENS");
 	n = n + 1;
+	
+	// ajout PJ
+	if (pchar.quest.PNJ_Trop_Fort == true) {
+		makeref(ch,Characters[n]);
+		ch.name 	= "Stargate";
+		ch.lastname = "Conceicao";
+		ch.id		= "Stargate Conceicao";
+		ch.model	= "will";
+		ch.sex = "man";
+		ch.sound_type = "pirate";
+		ch.location	= "Conceicao_town";
+		ch.location.group = "goto";
+		ch.location.locator = "goto1";
+		ch.Dialog.Filename = "PJ PNJ voyage.c";
+		ch.greeting = "Gr_Conceicao Citizen";
+		ch.nation = PORTUGAL;
+		ch.rank 	= 1;
+		ch.reputation = "None";
+		ch.experience = "0";
+		ch.skill.Leadership = "1";
+		ch.skill.Fencing = "1";
+		ch.skill.Sailing = "1";
+		ch.skill.Accuracy = "1";
+		ch.skill.Cannons = "1";
+		ch.skill.Grappling = "1";
+		ch.skill.Repair = "1";
+		ch.skill.Defence = "1";
+		ch.skill.Commerce = "1";
+		ch.skill.Sneak = "10";
+		ch.money = "1";
+		LAi_SetCitizenType(ch);
+		LAi_group_MoveCharacter(ch, "CONCEICAO_SOLDIERS");
+		n = n + 1;
+	}
+	// fin ajout PJ
 
     makeref(ch,Characters[n]);		//Paolo Milazar -- man5
 	ch.name 	= "Paolo";

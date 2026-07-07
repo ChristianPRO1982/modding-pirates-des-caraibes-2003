@@ -510,6 +510,41 @@ int CreateDouwesenCharacters(int n)
 	LAi_group_MoveCharacter(ch, "DOUWESEN_CITIZENS");
 	n = n + 1;
 
+	// ajout PJ
+	if (pchar.quest.PNJ_Trop_Fort == true) {
+		makeref(ch,Characters[n]);
+		ch.name 	= "Stargate";
+		ch.lastname 	= "Douwesen";
+		ch.id		= "Stargate Douwesen";
+		ch.model	= "will";
+		ch.sex = "man";
+		ch.sound_type = "pirate";
+		ch.location	= "Douwesen_town";
+		ch.location.group = "goto";
+		ch.location.locator = "goto8";
+		ch.Dialog.Filename = "PJ PNJ voyage.c";
+		ch.greeting = "Gr_Douwesen Citizen";
+		ch.nation = HOLLAND;
+		ch.rank 	= 1;
+		ch.reputation = "None";
+		ch.experience = "0";
+		ch.skill.Leadership = "1";
+		ch.skill.Fencing = "1";
+		ch.skill.Sailing = "1";
+		ch.skill.Accuracy = "1";
+		ch.skill.Cannons = "1";
+		ch.skill.Grappling = "1";
+		ch.skill.Repair = "1";
+		ch.skill.Defence = "1";
+		ch.skill.Commerce = "1";
+		ch.skill.Sneak = "1";
+		ch.money = "1";
+		LAi_SetCitizenType(ch);
+		LAi_group_MoveCharacter(ch, "DOUWESEN_SOLDIERS");
+		n = n + 1;
+	}
+	// fin ajout PJ
+
 	makeref(ch,Characters[n]);		// Mattheus Doull -- man2
 	ch.name 	= "Mattheus";
 	ch.lastname = "Doull";

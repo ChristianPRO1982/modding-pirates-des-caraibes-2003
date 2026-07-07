@@ -114,6 +114,45 @@ int CreateQuebradasCostillasCharacters(int n)
 
 // QC_town:
 
+	// ajout PJ
+	if (pchar.quest.PNJ_Trop_Fort == true) {
+		makeref(ch,Characters[n]);
+		ch.name 	= "Stargate";
+		ch.lastname = "Quebradas Costillas";
+		ch.id		= "Stargate Quebradas Costillas";
+		ch.model	= "will";
+		ch.sex = "man";
+		ch.sound_type = "pirate";
+		ch.location	= "QC_town";
+		ch.location.group = "goto";
+		ch.location.locator = "goto5";
+		ch.Dialog.Filename = "PJ PNJ voyage.c";
+		ch.nation = PIRATE;
+		GiveItem2Character(ch, BLADE_SABER);
+		ch.equip.blade = BLADE_SABER;
+		ch.rank 	= 1;
+		ch.reputation = "None";
+		ch.experience = "0";
+		ch.skill.Leadership = "1";
+		ch.skill.Fencing = "1";
+		ch.skill.Sailing = "1";
+		ch.skill.Accuracy = "1";
+		ch.skill.Cannons = "1";
+		ch.skill.Grappling = "1";
+		ch.skill.Repair = "1";
+		ch.skill.Defence = "1";
+		ch.skill.Commerce = "1";
+		ch.skill.Sneak = "1";
+		ch.money = "1";
+		LAi_SetWarriorType(ch);
+		LAi_warrior_DialogEnable(ch, true);
+		LAi_SetHP(ch, 80.0, 80.0);
+		LAi_group_MoveCharacter(ch, "QC_SOLDIERS");
+		ch.greeting = "Gr_QC Citizen";
+		n = n + 1;
+	}
+	// fin ajout PJ
+
 	makeref(ch,Characters[n]);		// Natan Bueno -- Corsair1
 	ch.name 	= "Natan";
 	ch.lastname = "Bueno";

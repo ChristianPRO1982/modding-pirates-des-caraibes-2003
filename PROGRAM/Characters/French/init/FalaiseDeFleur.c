@@ -669,6 +669,41 @@ int CreateFalaiseDeFleurCharacters(int n)
 	LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
 	n = n + 1;
 
+	// ajout PJ
+	if (pchar.quest.PNJ_Trop_Fort == true) {
+		ch.name 	= "Stargate";
+		ch.lastname 	= "Falaise de Fleur";
+		ch.id		= "Stargate Falaise de Fleur";
+		ch.model = "will";
+		ch.sex = "man";
+		ch.sound_type = "pirate";
+		ch.location	= "Falaise_de_fleur_location_02";
+		ch.location.group = "goto";
+		ch.location.locator = "citizen03";
+		ch.Dialog.Filename = "PJ PNJ voyage.c";
+		ch.greeting = "Gr_falaise de fleur citizen";
+		ch.nation = FRANCE;
+		ch.rank 	= 1;
+		ch.reputation = "40";
+		ch.experience = "0";
+		ch.skill.Leadership = "1";
+		ch.skill.Fencing = "1";
+		ch.skill.Sailing = "1";
+		ch.skill.Accuracy = "1";
+		ch.skill.Cannons = "1";
+		ch.skill.Grappling = "1";
+		ch.skill.Repair = "1";
+		ch.skill.Defence = "1";
+		ch.skill.Commerce = "1";
+		ch.skill.Sneak = "1";
+		ch.money = "10";
+		ch.quest.meeting = "0";
+		LAi_SetCitizenType(ch);
+		LAi_group_MoveCharacter(ch, "FRANCE_SOLDIERS");
+		n = n + 1;
+	}
+	// fin ajout PJ
+
 	makeref(ch,Characters[n]);			// Doolin Soleuze
 	ch.name 	= "Doolin";
 	ch.lastname 	= "Soleuze";
