@@ -5,6 +5,7 @@
 #include "quests\quests_scenes.c"
 #include "quests\both_reaction.c"
 #include "quests\quests_reaction.c"
+#include "quests\quests_reaction_s1.c"
 
 #event_handler("LocationWaitNihgtEnd","WaitDatePostEventControl");
 #event_handler("evntQuestCameraRestore","QuestCameraRestore");
@@ -44,108 +45,19 @@ void QuestsCheck_forLocEnter()
 {
 	// ajout PJ
 	ref pchar = GetMainCharacter();
-	string homelocation;
-	
-	// personnages
-	homelocation = pchar.location;
-	
-	//quest S1
-	PlaceCharacter(characterFromID("Elizabeth Goodale TQC 1"), "goto", "none");
-	PlaceCharacter(characterFromID("Eustache Busket TQC 1"), "goto", "none");
-	PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 1"), "goto", "none");
-	PlaceCharacter(characterFromID("Benito Bonito TQC 1"), "goto", "none");
-	PlaceCharacter(characterFromID("Hendrick van Hoven TQC 1"), "goto", "none");
-	PlaceCharacter(characterFromID("Wimund TQC 1"), "goto", "none");
-	PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", "none");
-	PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", "none");
-	PlaceCharacter(characterFromID("Youyi TQC 1"), "goto", "none");
-	if (pchar.quest_S1_step == 0) {
-		if (1 == 1) {
-			if (rand(3) == 0 && pchar.location == "Redmond_town_01" && pchar.quest_S1_Elizabeth_Goodale_TQC1_visible == true) PlaceCharacter(characterFromID("Elizabeth Goodale TQC 1"), "goto", homelocation);
-			if (rand(3) == 0 && pchar.location == "Falaise_de_fleur_port_02" && pchar.quest_S1_Eustache_Busket_TQC1_visible == true) PlaceCharacter(characterFromID("Eustache Busket TQC 1"), "goto", homelocation);
-			if (rand(3) == 0 && pchar.location == "Conceicao_town" && pchar.quest_S1_Bartolomeo_Portugues_TQC1_visible == true) PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 1"), "goto", homelocation);
-			if (rand(3) == 0 && pchar.location == "Muelle_town_02" && pchar.quest_S1_Benito_Bonito_TQC1_visible == true) PlaceCharacter(characterFromID("Benito Bonito TQC 1"), "goto", homelocation);
-			if (rand(3) == 0 && pchar.location == "Douwesen_town" && pchar.quest_S1_Hendrick_van_Hoven_TQC1_visible == true) PlaceCharacter(characterFromID("Hendrick van Hoven TQC 1"), "goto", homelocation);
-			if (rand(3) == 0 && pchar.location == "Greenford_town" && pchar.quest_S1_Wimund_TQC1_visible == true) PlaceCharacter(characterFromID("Wimund TQC 1"), "goto", homelocation);
-			if (rand(3) == 0 && pchar.location == "Oxbay_town" && pchar.quest_S1_Samuel_Bellamy_TQC1_visible == true) PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", homelocation);
-			if (rand(3) == 0 && pchar.location == "QC_town" && pchar.quest_S1_Edward_Thatch_TQC1_visible == true) PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", homelocation);
-		} else {
-			Log_SetStringToLog("PJ DEBUG TEST (quests.c) : pour faire apparaitre les chasseurs de tr�sor tout le temps");
-			if (pchar.location == "Redmond_town_01" && pchar.quest_S1_Elizabeth_Goodale_TQC1_visible == true) PlaceCharacter(characterFromID("Elizabeth Goodale TQC 1"), "goto", homelocation);
-			if (pchar.location == "Falaise_de_fleur_port_02" && pchar.quest_S1_Eustache_Busket_TQC1_visible == true) PlaceCharacter(characterFromID("Eustache Busket TQC 1"), "goto", homelocation);
-			if (pchar.location == "Conceicao_town" && pchar.quest_S1_Bartolomeo_Portugues_TQC1_visible == true) PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 1"), "goto", homelocation);
-			if (pchar.location == "Muelle_town_02" && pchar.quest_S1_Benito_Bonito_TQC1_visible == true) PlaceCharacter(characterFromID("Benito Bonito TQC 1"), "goto", homelocation);
-			if (pchar.location == "Douwesen_town" && pchar.quest_S1_Hendrick_van_Hoven_TQC1_visible == true) PlaceCharacter(characterFromID("Hendrick van Hoven TQC 1"), "goto", homelocation);
-			if (pchar.location == "Greenford_town" && pchar.quest_S1_Wimund_TQC1_visible == true) PlaceCharacter(characterFromID("Wimund TQC 1"), "goto", homelocation);
-			if (pchar.location == "Oxbay_town" && pchar.quest_S1_Samuel_Bellamy_TQC1_visible == true) PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", homelocation);
-			if (pchar.location == "QC_town" && pchar.quest_S1_Edward_Thatch_TQC1_visible == true) PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", homelocation);
-		}
-		if (pchar.location == "QC_town" && pchar.quest_S1_allQuestsCompleted == true) PlaceCharacter(characterFromID("Youyi TQC 1"), "goto", homelocation);
-	}
-	if(pchar.quest_S1_Unearthing == true) pchar.quest_S1_failed = true;
-	
-	//quest S2
-	PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", "none");
-	PlaceCharacter(characterFromID("Magdalen Spooner"), "goto", "none");
-	PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", "none");
-	PlaceCharacter(characterFromID("Donatienne de La Fayette"), "goto", "none");
-	PlaceCharacter(characterFromID("Florencio Baiano"), "goto", "none");
-	PlaceCharacter(characterFromID("Violamte Pinto"), "goto", "none");
-	PlaceCharacter(characterFromID("Cricorium Taffarel"), "goto", "none");
-	PlaceCharacter(characterFromID("Alejandrina	Acosto"), "goto", "none");
-	PlaceCharacter(characterFromID("Ghijsbrecht Van Der Hagen"), "goto", "none");
-	PlaceCharacter(characterFromID("Tjaatje Meilink-Roelofsz"), "goto", "none");
-	PlaceCharacter(characterFromID("Rawlin Feaver"), "goto", "none");
-	PlaceCharacter(characterFromID("Astrid Weather"), "goto", "none");
-	PlaceCharacter(characterFromID("Rys Scorer"), "goto", "none");
-	PlaceCharacter(characterFromID("Valeria Pride"), "goto", "none");
-	PlaceCharacter(characterFromID("Fabiola Rochefort"), "goto", "none");
-	if (pchar.quest_S2_started == 0) {
-		if (1 == 1) {
-			if (rand(7) == 0 && pchar.location == "Redmond_town_04" && pchar.quest_S2_Redmond_done == false) PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", homelocation);
-			if (rand(7) == 0 && pchar.location == "Falaise_De_Fleur_location_02" && pchar.quest_S2_FalaiseDeFleur_done == false) PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", homelocation);
-			if (rand(7) == 0 && pchar.location == "Conceicao_town" && pchar.quest_S2_Conceicao_done == false) PlaceCharacter(characterFromID("Florencio Baiano"), "goto", homelocation);
-			if (rand(7) == 0 && pchar.location == "Muelle_town_02" && pchar.quest_S2_IslaMuelle_done == false) PlaceCharacter(characterFromID("Cricorium Taffarel"), "goto", homelocation);
-			if (rand(7) == 0 && pchar.location == "Douwesen_town" && pchar.quest_S2_Douwesen_done == false) PlaceCharacter(characterFromID("Ghijsbrecht Van Der Hagen"), "goto", homelocation);
-			if (rand(7) == 0 && pchar.location == "Greenford_town" && pchar.quest_S2_Greenford_done == false) PlaceCharacter(characterFromID("Rawlin Feaver"), "goto", homelocation);
-			if (rand(7) == 0 && pchar.location == "Oxbay_town" && pchar.quest_S2_Oxbay_done == false) PlaceCharacter(characterFromID("Rys Scorer"), "goto", homelocation);
-		} else {
-			Log_SetStringToLog("PJ DEBUG TEST (quests.c) : pour faire apparaitre les amoureux tout le temps");
-			if (pchar.location == "Redmond_town_04" && pchar.quest_S2_Redmond_done == false) PlaceCharacter(characterFromID("Llewellyn Brooker"), "goto", homelocation);
-			if (pchar.location == "Falaise_De_Fleur_location_02" && pchar.quest_S2_FalaiseDeFleur_done == false) PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", homelocation);
-			if (pchar.location == "Conceicao_town" && pchar.quest_S2_Conceicao_done == false) PlaceCharacter(characterFromID("Florencio Baiano"), "goto", homelocation);
-			if (pchar.location == "Muelle_town_02" && pchar.quest_S2_IslaMuelle_done == false) PlaceCharacter(characterFromID("Cricorium Taffarel"), "goto", homelocation);
-			if (pchar.location == "Douwesen_town" && pchar.quest_S2_Douwesen_done == false) PlaceCharacter(characterFromID("Ghijsbrecht Van Der Hagen"), "goto", homelocation);
-			if (pchar.location == "Greenford_town" && pchar.quest_S2_Greenford_done == false) PlaceCharacter(characterFromID("Rawlin Feaver"), "goto", homelocation);
-			if (pchar.location == "Oxbay_town" && (pchar.quest_S2_Oxbay_done == false)) PlaceCharacter(characterFromID("Rys Scorer"), "goto", homelocation);
-		}
-	} else {
-		if (pchar.quest_S2_started == 1 && pchar.location == "Redmond_town_03") PlaceCharacter(characterFromID("Magdalen Spooner"), "goto", homelocation);
-		if (pchar.quest_S2_started == 2 && pchar.location == "Falaise_De_Fleur_location_03") PlaceCharacter(characterFromID("Donatienne de La Fayette"), "goto", homelocation);
-		if (pchar.quest_S2_started == 3 && pchar.location == "Conceicao_town") PlaceCharacter(characterFromID("Violamte Pinto"), "goto", homelocation);
-		if (pchar.quest_S2_started == 4 && pchar.location == "Muelle_town_04") PlaceCharacter(characterFromID("Alejandrina	Acosto"), "goto", homelocation);
-		if (pchar.quest_S2_started == 5 && pchar.location == "Douwesen_town") PlaceCharacter(characterFromID("Tjaatje Meilink-Roelofsz"), "goto", homelocation);
-		if (pchar.quest_S2_started == 6 && pchar.location == "Greenford_town") PlaceCharacter(characterFromID("Astrid Weather"), "goto", homelocation);
-		if (pchar.quest_S2_started == 7 && pchar.location == "Oxbay_town") PlaceCharacter(characterFromID("Valeria Pride"), "goto", homelocation);
-	}
-	
-	//quest M1
-	if (makeint(pchar.quest_M1_step) == 0 && pchar.location == "QC_pirate_house_inside") PlaceCharacter(characterFromID("Francois_l_Olonnais"), "goto", homelocation);
-	if (makeint(pchar.quest_M1_step) == 9 && pchar.location == "QC_pirate_house_inside") PlaceCharacter(characterFromID("Chui A-poo"), "goto", homelocation);
-	
 	// POUR CREER DES QUETES
-	// SetNationRelation2MainCharacter(PIRATE, RELATION_FRIEND);
-	// SetNationRelation2MainCharacter(FRANCE, RELATION_FRIEND);
+	SetNationRelation2MainCharacter(PIRATE, RELATION_FRIEND);
 	//PJ connaitre a chaque reload des informations (ex : position = pchar.location)
-	// Log_SetStringToLog("PJ 1:"+pchar.location);
-	// Log_SetStringToLog("PJ 2:"+pchar.location.locator);
-	// Log_SetStringToLog("PJ 3:"+pchar.location.locator_group);//location.group
+	Log_SetStringToLog("PJ 1:"+pchar.location);
+	Log_SetStringToLog("PJ 2:"+pchar.location.locator);
+	Log_SetStringToLog("PJ 3:"+pchar.location.locator_group);//location.group
 	// Log_SetStringToLog("PJ blade:"+pchar.equip.blade);
 	// Log_SetStringToLog("PJ gun:"+pchar.equip.gun);
 	// fin ajout PJ
 
 	QC_DoUnloadLocation();
 	QuestsCheck();
+	S1_ProcessLocationEnter();
 }
 
 void CharacterDeadProcess()
@@ -278,10 +190,10 @@ void DeleteQuestHeader(string idQuest)
 }
 
 //**********************************************************************************
-// ������� ��� ������ � ��������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //==================================================================================
 
-// ��������� ���� ��������� ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //-----------------------------------------
 bool CheckQuestAttribute(string attributeName, string attributeValue)
 {
@@ -291,7 +203,7 @@ bool CheckQuestAttribute(string attributeName, string attributeValue)
 	return false;
 }
 
-// ������� ���� ��������� ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //------------------------------------------
 void DeleteQuestAttribute(string attributeName)
 {
@@ -335,7 +247,7 @@ bool GetNearLocator(string groupName, ref float_dist, ref findedLocator, float m
 	return bYesFind;
 }
 
-// ���������� ��������� � ��������� ������� ������ goto (�� �� ����� ����������� ���������)
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ goto (ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 //--------------------------------------------------------------------------------------------
 bool SetCharacterToNearLocatorFromMe(string characterID, float minDistance)
 {
@@ -352,7 +264,7 @@ bool SetCharacterToNearLocatorFromMe(string characterID, float minDistance)
 	return true;
 }
 
-// �������� ������ �� �������� ����� ��� ID-����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ID-ï¿½ï¿½ï¿½ï¿½
 //------------------------------------------------------
 ref CharacterFromID(string characterID)
 {
@@ -369,7 +281,7 @@ void WaitDatePostEventControl()
 	QuestsCheck();
 }
 
-// ���������� ��������� ����� � ������ ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //----------------------------------------------------
 void WaitDate(string postName,int year, int month, int day, int hour, int minute)
 {
@@ -382,7 +294,7 @@ void WaitDate(string postName,int year, int month, int day, int hour, int minute
 	WaitDatePostEventControl();
 }
 
-// ���������� ������ �� �������� ������� ��������� � ������� ����� ����� �������� ����� ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //---------------------------------------------------------------------------------------------
 bool SetCameraToShipView(string characterName, string questCheckName, float viewTimeInSec)
 {
@@ -421,7 +333,7 @@ void QuestCameraRestore()
 	}
 }
 
-// ������� ��� ������ �� ���� � ������ ������������ ������ �������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //-----------------------------------------------------------------
 bool QuestCloseSeaExit()
 {
@@ -445,7 +357,7 @@ bool QuestCloseSeaExit()
 	return true;
 }
 
-// ������� ��� ������ �� ���� � ������ ������������ ������ �������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //-----------------------------------------------------------------
 bool QuestOpenSeaExit()
 {
@@ -466,7 +378,7 @@ bool QuestOpenSeaExit()
 	return true;
 }
 
-// ����� ������� � ������� �� �����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 //-----------------------------------
 bool FindLocator(string locationName, string locatorName, ref locatorRef, bool fromRealLoadedLocators)
 {
@@ -515,7 +427,7 @@ bool FindLocator(string locationName, string locatorName, ref locatorRef, bool f
 	return false;
 }
 
-// ��������� �������� �� ���������� � �������� ������� � ������� �������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 bool CheckCurLocator(string group,string locator,float x,float y,float z)
 {
 	int locIdx = FindLoadedLocation();
@@ -530,7 +442,7 @@ bool CheckCurLocator(string group,string locator,float x,float y,float z)
 	else return false;
 }
 
-// �������� ���� ������� �� ����� ����� �����������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //---------------------------------------------------
 bool ChangeReloadData(string locationName,string locatorName, string toLocationName,string toLocatorName)
 {
@@ -551,7 +463,7 @@ bool ChangeReloadData(string locationName,string locatorName, string toLocationN
 	return true;
 }
 
-// ������� �������� ������ ����� ����������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 bool ChangeBackReloadData(string locationName,string locatorName)
 {
 	aref locRef;
@@ -564,7 +476,7 @@ bool ChangeBackReloadData(string locationName,string locatorName)
 	return true;
 }
 
-// ������� �������� ������ ����� �������� ����� ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //------------------------------------------------------
 void DoQuestCheckDelay(string questCheckName, float delayInSecond)
 {
@@ -614,7 +526,7 @@ void ExitActAnimation()
 	}
 }
 
-// �������� ��������� ��� ������ � ����� ������� � ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //--------------------------------------------------------
 bool ShipTempRemove(ref _refCharacter)
 {
@@ -628,7 +540,7 @@ bool ShipTempRemove(ref _refCharacter)
 	return true;
 }
 
-// ������������ ������ � ����� ������ ������� �� ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //------------------------------------------------------
 bool RestoreTempRemovedShip(ref _refCharacter)
 {
@@ -643,7 +555,7 @@ bool RestoreTempRemovedShip(ref _refCharacter)
 	return true;
 }
 
-// �������� ���� ���������� ���������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //------------------------------------
 void ExchangeCharacterShip(ref oneCharacter, ref twoCharacter)
 {
@@ -665,7 +577,7 @@ void QuestProcessDialogExit()
 	DeleteAttribute(two_aref,"act.disableDialog");
 }
 
-// ������ �����, ����������� ����� ������ �� �������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //---------------------------------------------------
 void AddDialogExitQuest(string questName)
 {
@@ -693,7 +605,7 @@ void QuestDialogExitProcedure()
 	string attrName;
 	ref mc = GetMainCharacter();
 
-	// ����� ���� �������� ����� ������ ������
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	ExecuteAfterDialogTask(otherCh);
 	ExecuteAfterDialogTask(mc);
 
@@ -730,7 +642,7 @@ void DoDeleteFakeLocation()
 	}
 }
 
-// ����������� �������� ��������� � ������ ������� � �� ���������� ������� �����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 //-------------------------------------------------------------------------------
 bool DoQuestReloadToLocation(string idLocation, string idGroup, string idLocator, string questName)
 {
@@ -751,7 +663,7 @@ bool DoQuestReloadToLocation(string idLocation, string idGroup, string idLocator
 	return DoReloadCharacterToLocation(idLocation,idGroup,idLocator);
 }
 
-// ����������� �������� ��������� � ������ �������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //-------------------------------------------------------------------------------
 bool DoReloadCharacterToLocation(string idLocation, string idGroup, string idLocator)
 {
@@ -785,7 +697,7 @@ bool DoReloadCharacterToLocation(string idLocation, string idGroup, string idLoc
 	return TeleportCharacterFromCurLocationToLocation("fakeReload",idGroup,idLocator);
 }
 
-// ����������� �������� ��������� � ������ ������� �� ����� ����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 //-------------------------------------------------------------------------------
 bool DoReloadFromWorldMapToLocation(string idLocation, string idGroup, string idLocator)
 {
@@ -806,7 +718,7 @@ void ReloadFromWMtoL_complete()
 	DeleteAttribute(pchar,"tmpWDMtoLand");
 }
 
-// ����������� �������� ��������� � ������ ������� �� ����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 //-------------------------------------------------------------------------------
 bool DoReloadFromSeaToLocation(string idLocation, string idGroup, string idLocator)
 {
@@ -833,7 +745,7 @@ void EndReloadToLocation()
 	ReloadFromWMtoL_complete();
 }
 
-// ������� ����� �� ������ ����������� �������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //---------------------------------------------
 void DeleteQuestCheck(string sQuestName)
 {
@@ -842,7 +754,7 @@ void DeleteQuestCheck(string sQuestName)
 	if( CheckAttribute(mc,"quest."+sQuestName+".win_condition") )	mc.quest.(sQuestName).over = "yes";
 }
 
-// �������� ������ ��� ���������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //----------------------------------
 string GetCharacterFullName(string idCharacter)
 {
@@ -856,7 +768,7 @@ string GetCharacterFullName(string idCharacter)
 	return retStr;
 }
 
-// ��������� ��������� � ���������� �� ��������� ���������� � �������� ������� �� ����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 //-------------------------------------------------------------------------------------
 bool StorePassengers(string idCharacter)
 {
@@ -868,7 +780,7 @@ bool StorePassengers(string idCharacter)
 	string sTmp;
 	aref arTmp;
 	int i,idx;
-	// �������� ��������
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	makearef(arTmp,refCh.Fellows.Old.Officers);
 	for(i=1; i<4; i++)
 	{
@@ -877,7 +789,7 @@ bool StorePassengers(string idCharacter)
 		sTmp = "id"+i;
 		arTmp.(sTmp) = idx;
 	}
-	// �������� ����������
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	makearef(arTmp,refCh.Fellows.Old.Passengers);
 	for(i=0; GetPassengersQuantity(refCh)>0; i++)
 	{
@@ -891,7 +803,7 @@ bool StorePassengers(string idCharacter)
 	return true;
 }
 
-// ������������ ����������� ����� ���������� � �� ����������� ��������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //----------------------------------------------------------------------
 bool RestorePassengers(string idCharacter)
 {
@@ -902,7 +814,7 @@ bool RestorePassengers(string idCharacter)
 
 	int i,idx;
 	aref arTmp,arCur;
-	// �������������� ����������
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	makearef(arTmp,refCh.Fellows.Old.Passengers);
 	for(i=0; i<GetAttributesNum(arTmp); i++)
 	{
@@ -910,7 +822,7 @@ bool RestorePassengers(string idCharacter)
 		idx = sti(GetAttributeValue(arCur));
 		AddPassenger(refCh,GetCharacter(idx),false);
 	}
-	// �������������� ��������
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	makearef(arTmp,refCh.Fellows.Old.Officers);
 	for(i=0; i<GetAttributesNum(arTmp); i++)
 	{
@@ -920,12 +832,12 @@ bool RestorePassengers(string idCharacter)
 		SetOfficersIndex(refCh,-1,idx);
 	}
 
-	// �������� ���������� ��������� ����������
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	DeleteAttribute(refCh,"Fellows.Old");
 	return true;
 }
 
-// ������� �� ������ ������ ���������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //--------------------------------------
 bool StartLookAfterCharacter(string idCharacter)
 {
@@ -944,14 +856,14 @@ void LookAfterCharacterProc()
 	PostEvent("evntLookAfterCharacter",100,"l",idxCh);
 }
 
-// ���������� �������� �� ��������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //-----------------------------------
 void EndLookAfterCharacter()
 {
 	DelEventHandler("evntLookAfterCharacter","LookAfterCharacterProc");
 }
 
-// ������������ �������� (�� ������, ���� �� ��� �� ����� ����)
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
 bool ReanimateCharacter(string characterID)
 {
 	int idx = GetCharacterIndex(characterID);
@@ -966,7 +878,7 @@ bool ReanimateCharacter(string characterID)
 }
 
 //extern void SetRandomNameToCharacter(ref chref);
-// ���������� ��������� ��� ��� ���������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 bool SetCharacterRandomName(string characterID)
 {
 	int idx = GetCharacterIndex(characterID);
@@ -980,7 +892,7 @@ bool SetCharacterRandomName(string characterID)
 }
 
 
-// ��������� ������� �� ����������� �����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 void QuestFortDestroyed()
 {
 	int idx = GetEventData();
@@ -999,7 +911,7 @@ void QuestGroupDeath()
 	mc.GroupDeath.(groupName) = "1";
 }
 
-// ������������� � �������� � ���� �� ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 object questToSeaLoginer;
 void QuestToSeaLogin_PrepareLoc(string islandID, string locGroup, string locName, bool sailUP)
 {
@@ -1041,7 +953,7 @@ void QuestToSeaLogin_Prepare(float x, float z, string islandID)
 	questToSeaLoginer.PlayerGroup.z = z;
 	questToSeaLoginer.Island = islandID;
 }
-// ����������� ��������� ��� �������� � ���� �� ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 void QuestToSeaLogin_Add(string groupName)
 {
 	aref arql,ar;
@@ -1064,7 +976,7 @@ void QuestToSeaLogin_Add(string groupName)
 		}
 	}
 }
-// ��������� ��������� �������� � ����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½
 void QuestToSeaLogin_Launch()
 {
 	SetEventHandler("FaderEvent_EndFade", "QuestToSeaLoginFade", 0);
@@ -1084,7 +996,7 @@ void QuestToSeaLoginFade()
 	SeaLogin(&questToSeaLoginer);
 }
 
-// �������� ���������� ��������� ����� ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 int	GetCharacterFromFantom(ref chref)
 {
 	/*int tmpi = FindLoadedLocation();
@@ -1109,7 +1021,7 @@ int	GetCharacterFromFantom(ref chref)
 	return -1;
 }
 
-// ������ �� ������� ���� ������ ���������� ����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 void RemoveCharactersFromLocation(string idLocation, string modelName, string type)
 {
 	for(int i=0; i<MAX_CHARACTERS; i++)
@@ -1158,10 +1070,10 @@ void procEvntQuestComplete()
 }
 
 ///////////////////////////////////
-///  ��� ������ ����� - �� ������������� ���� ���� �����... ������
+///  ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½... ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ///////////////////////////////////
 
-// ��������� �������� � �� �� ���������� ������� �����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 //------------------------------------------------------------
 void ActAnimation(ref chref, string action, string questName)
 {
@@ -1169,7 +1081,7 @@ void ActAnimation(ref chref, string action, string questName)
 //	actAction(chref, action, "ExitActAnimation");
 }
 
-// ���� ������� ������ ������ ������, �������� ��������� �� ���� �������.
+// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 void BreakAllAttack()
 {
 //	actAllarm = 0.0;

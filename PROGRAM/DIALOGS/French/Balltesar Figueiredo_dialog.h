@@ -1,0 +1,20 @@
+string DLG_TEXT[17] = {       
+"Toi! Dehors!",
+"...",
+"Tiens, tiens, mais qui voilà! Et si tu payais un verre au meilleur navigateur de ce minable archipel? Enfin! Il y a pire!",
+"Désolé. Je ne crois pas t'avoir déjà rencontré.",
+"Encore mieux! On en profitera pour fêter notre nouvelle amitié!",
+"Je préfèrerais que tu me donnes des renseignements, pour le moment. Je me demandais si ton navire avait croisé une frégate noire.",
+"Je répondrai à tes questions jusqu'au changement de saison... à condition d'avoir un godet de rhum devant moi.",
+"Voilà ton rhum. Voyons s'il te délie la langue.",
+"Et si je te donnais plutôt une bonne gifle? Qu'en penses-tu?",
+"Ahhh. C'est du bon rhum!",
+"Tu n'as pas répondu à ma question.",
+"Une question? Ah, oui, la frégate noire. Je l'ai vue aussi clairement que je te vois. Si notre cale n'avait pas été vide, je ne serais sûrement pas là à discuter avec toi. Heureusement pour mes camarades et moi, cette frégate devait être chargée et on a pu la distancer\nElle portait un nom étrange, je me souviens. Un nom que je n'avais jamais entendu :  Mefisto.",
+"Alors, la frégate vous a pris en chasse? Et quelle direction a-t-elle suivie pris quand il est devenu évident qu'elle rattraperait pas ton vaisseau?",
+"Qui sait? Le sud, je crois. Mais il n'y a que Quebradas Costillas dans cette direction.",
+"Merci. Savoure ton rhum.",
+"Oui. Ça peut marcher aussi. On va peut-être oublier le rhum.",
+"Tu n'as pas répondu à ma question.",
+
+};

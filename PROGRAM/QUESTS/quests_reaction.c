@@ -578,7 +578,7 @@ void TreasureHunterNextStep()
 	ref PChar = GetMainCharacter();
 	
 	switch (makeint(pchar.quest_S1_numQuests)) {
-		case 1://quete n°1 - Conceicao
+		case 1://quete nÂ°1 - Conceicao
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 4);
@@ -615,7 +615,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 2://quete n°2 - Conceicao
+		case 2://quete nÂ°2 - Conceicao
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 6);
@@ -637,7 +637,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 3://quete n°3 - Douwesen
+		case 3://quete nÂ°3 - Douwesen
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 8);
@@ -674,7 +674,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 4://quete n°4 - Douwesen
+		case 4://quete nÂ°4 - Douwesen
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 10);
@@ -706,7 +706,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 5://quete n°5 - Fleur de Falaise
+		case 5://quete nÂ°5 - Fleur de Falaise
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 12);
@@ -728,7 +728,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 6://quete n°6 - Fleur de Falaise
+		case 6://quete nÂ°6 - Fleur de Falaise
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 14);
@@ -755,7 +755,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 7://quete n°7 - Isla Muelle
+		case 7://quete nÂ°7 - Isla Muelle
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 16);
@@ -782,7 +782,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 8://quete n°8 - Isla Muelle
+		case 8://quete nÂ°8 - Isla Muelle
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 18);
@@ -804,7 +804,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 9://quete n°9 - Quebradas Costillas
+		case 9://quete nÂ°9 - Quebradas Costillas
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 20);
@@ -831,7 +831,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 10://quete n°10 - Quebradas Costillas
+		case 10://quete nÂ°10 - Quebradas Costillas
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 22);
@@ -863,7 +863,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 11://quete n°11 - Redmond
+		case 11://quete nÂ°11 - Redmond
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 24);
@@ -885,7 +885,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 12://quete n°12 - Redmond
+		case 12://quete nÂ°12 - Redmond
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 26);
@@ -912,7 +912,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 13://quete n°13 - Oxbay
+		case 13://quete nÂ°13 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 28);
@@ -944,7 +944,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 14://quete n°14 - Oxbay
+		case 14://quete nÂ°14 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 30);
@@ -986,7 +986,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 15://quete n°15 - Oxbay
+		case 15://quete nÂ°15 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 32);
@@ -1028,7 +1028,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 16://quete n°16 - Oxbay
+		case 16://quete nÂ°16 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 34);
@@ -1065,7 +1065,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 17://quete n°17 - Oxbay
+		case 17://quete nÂ°17 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 36);
@@ -1087,7 +1087,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 18://quete n°18 - Oxbay
+		case 18://quete nÂ°18 - Oxbay
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 41);
@@ -1114,7 +1114,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 19://quete n°19 - Redmond
+		case 19://quete nÂ°19 - Redmond
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 43);
@@ -1146,7 +1146,7 @@ void TreasureHunterNextStep()
 				break;
 			}
 		break;
-		case 20://quete n°20 - Isla Muelle
+		case 20://quete nÂ°20 - Isla Muelle
 			switch (makeint(pchar.quest_S1_step)) {
 				case 1://FIRST STEP
 					AddQuestRecord("PJ_S1", 45);
@@ -1427,6 +1427,8 @@ void QuestComplete(string sQuestName)
 	//Log_SetStringToLog("Quest " + sQuestName + " completed");
 	//trace("=============================================== QUEST " + sQuestName + " CHECKED");
 
+
+	if (QuestComplete_S1(sQuestName)) return;
 	switch(sQuestName)
 	{
 		case "begining":
@@ -1607,20 +1609,20 @@ void QuestComplete(string sQuestName)
 			pchar.quest.becomes_oldman.win_condition = "becomes_oldman";
 		break;
 		
-		//      -    
+		//ÃÃ¥Ã°Ã±Ã®Ã­Ã Ã¦ Ã¯Ã®ÃªÃ¨Ã¤Ã Ã¥Ã² ÃÃªÃ±Ã¡Ã½Ã© Ã¢ Ã¯Ã¥Ã°Ã¢Ã»Ã© Ã°Ã Ã§ - Ã¢ÃªÃ«Ã¾Ã·Ã¥Ã­Ã¨Ã¥ Ã¯Ã¥Ã°Ã¢Ã®Ã£Ã® Ã±Ã¾Ã¦Ã¥Ã²Ã­Ã®Ã£Ã® Ã°Ã®Ã«Ã¨ÃªÃ 
 		case "Story_leavingOxbay":
 			SetNationRelation2MainCharacter(FRANCE, RELATION_ENEMY);
 			Locations[FindLocation("Oxbay_town_exit")].locators_radius.goto.citizen08 = 12.0;
-			//    .
+			//Ã¢ÃªÃ«Ã¾Ã·Ã Ã¥Ã¬ ÃªÃ®Ã°Ã Ã¡Ã«Ã¼ Ã®Ã¤Ã­Ã®Ã£Ã® Ã¨Ã§ Ã®Ã´Ã¨Ã¶Ã¥Ã°Ã®Ã¢.
 			//setCharacterShipLocation(characterFromID("Clair Larrouse"), "Muelle_port");
-			//     
+			//Ã“Ã±Ã²Ã Ã­Ã®Ã¢ÃªÃ  Ã Ã²Ã°Ã¨Ã¡Ã³Ã²Ã  Ã¤Ã«Ã¿ Ã¯Ã°Ã®Ã¢Ã¥Ã°ÃªÃ¨ Ã§Ã ÃµÃ¢Ã Ã·Ã¥Ã­Ã­Ã®Ã±Ã²Ã¨ ÃÃªÃ±Ã¡Ã½Ã¿
 			PChar.Quest.Story_OxbayCaptured = "1";
-			//   
+			//Ã‘Ã¬Ã¥Ã­Ã  Ã­Ã Ã¶Ã¨Ã®Ã­Ã Ã«Ã¼Ã­Ã®Ã±Ã²Ã¨ Ã´Ã®Ã°Ã²Ã  ÃÃªÃ±Ã¡Ã½Ã¿
 			Characters[GetCharacterIndex("Oxbay Commander")].nation = FRANCE;
 			Characters[GetCharacterIndex("Oxbay Commander")].model = "Soldier_fra";
 			LAi_SetImmortal(characterFromID("Oxbay Commander"), true);
-			//      
-			// 
+			//Ã‘Ã¬Ã¥Ã­Ã  Ã Ã­Ã£Ã«Ã¨Ã©Ã±ÃªÃ¨Ãµ Ã±Ã®Ã«Ã¤Ã Ã² Ã¢ ÃÃªÃ±Ã¡Ã½Ã¥ Ã­Ã  Ã´Ã°Ã Ã­Ã¶Ã³Ã§Ã±ÃªÃ¨Ãµ
+			//Ã“Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¥ Ã Ã­Ã£Ã«Ã¨Ã©Ã±ÃªÃ¨Ãµ
 			ChangeCharacterAddress(characterFromID("Ox_Soldier_1"), "None", "");
 			ChangeCharacterAddress(characterFromID("Ox_Soldier_2"), "None", "");
 			ChangeCharacterAddress(characterFromID("Ox_Soldier_3"), "None", "");
@@ -1633,7 +1635,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Ox_Patrol_2"), "None", "");
 			ChangeCharacterAddress(characterFromID("Ox_Patrol_3"), "None", "");
 			ChangeCharacterAddress(characterFromID("Ox_Patrol_4"), "None", "");
-			// 
+			//ÃÃ®Ã±Ã²Ã Ã­Ã®Ã¢ÃªÃ  Ã´Ã°Ã Ã­Ã¶Ã³Ã§Ã±ÃªÃ¨Ãµ
 			ChangeCharacterAddress(characterFromID("Fra_occupant_01"), "Oxbay_town", "goto3");
 			ChangeCharacterAddress(characterFromID("Fra_occupant_02"), "Oxbay_town", "goto4");
 			ChangeCharacterAddress(characterFromID("Fra_occupant_03"), "Oxbay_town", "goto1");
@@ -1647,7 +1649,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Occ_Patrol_3"), "Oxbay_town", "goto31");
 			ChangeCharacterAddress(characterFromID("Occ_Patrol_4"), "Oxbay_town", "goto20");
 			
-			//      
+			//ÃÃ®Ã±Ã²Ã Ã­Ã®Ã¢ÃªÃ  Ã¢ Ã£Ã Ã¢Ã Ã­Ã¼ ÃÃªÃ±Ã¡Ã½Ã¿ ÃªÃ®Ã°Ã Ã¡Ã«Ã¥Ã© Ã´Ã°Ã Ã­Ã¶Ã³Ã§Ã±ÃªÃ®Ã© Ã½Ã±ÃªÃ Ã¤Ã°Ã»
 			SetCrewQuantity(characterFromID("Remy Gatien"), 650);
 			SetCrewQuantity(characterFromID("Yves Giner"), 400);
 			SetCrewQuantity(characterFromID("Begon Monchaty"), 400);
@@ -1663,21 +1665,21 @@ void QuestComplete(string sQuestName)
 			Group_SetGroupCommander("Story_French_Squadron", "Remy Gatien");
 			Group_SetAddress("Story_French_Squadron", "Oxbay", "Quest_Ships","Quest_Ship_7");
 			
-			//            
+			//Ã‡Ã Ã¢Ã¥Ã¤Ã¥Ã­Ã¨Ã¥ ÃªÃ¢Ã¥Ã±Ã²Ã  Ã­Ã  Ã¤Ã¨Ã Ã«Ã®Ã£ Ã± Ã±Ã®Ã«Ã¤Ã Ã²Ã Ã¬Ã¨ Ã³ Ã¢ÃµÃ®Ã¤Ã  Ã¢ Ã£Ã®Ã°Ã®Ã¤ ÃÃªÃ±Ã¡Ã½Ã© Ã± Ã®Ã±Ã²Ã°Ã®Ã¢Ã 
 			Pchar.quest.Story_FraSoldiers_attack_in_jungles.win_condition.l1 = "location";
 			Pchar.quest.Story_FraSoldiers_attack_in_jungles.win_condition.l1.location = "Oxbay_town_exit";
 			Pchar.quest.Story_FraSoldiers_attack_in_jungles.win_condition = "Story_FraSoldiers_attack_in_jungles";
 			locations[FindLocation("Oxbay_town_exit")].disableencounters = 1;
 	
-			//    
+			//ÃÃ¥Ã°Ã¥Ã¬Ã¥Ã¹Ã¥Ã­Ã¨Ã¥ ÃÃ¥Ã©Ã¬Ã±Ã  Ã¢ Ã°Ã¥Ã§Ã¨Ã¤Ã¥Ã­Ã¶Ã¨Ã¾ Ã£Ã³Ã¡Ã¥Ã°Ã­Ã Ã²Ã®Ã°Ã 
 			ChangeCharacterAddress(characterFromID("Raoul Rheims"), "Redmond_residence", "goto1");
 		
-			//           
+			//Ã‡Ã Ã¢Ã¥Ã¤Ã¥Ã­Ã¨Ã¥ ÃªÃ¢Ã¥Ã±Ã²Ã  Ã­Ã  Ã¢Ã±Ã²Ã°Ã¥Ã·Ã³ Ã± ÃÃ¥Ã©Ã¬Ã±Ã®Ã¬ Ã¢ Ã°Ã¥Ã§Ã¨Ã¤Ã¥Ã­Ã¶Ã¨Ã¨ Ã£Ã³Ã¡Ã¥Ã°Ã­Ã Ã²Ã®Ã°Ã  Ã¨ Ã³ÃµÃ®Ã¤ ÃÃ¥Ã©Ã¬Ã±Ã 
 			Pchar.quest.Story_First_Meeting_with_Rheims.win_condition.l1 = "location";
 			Pchar.quest.Story_First_Meeting_with_Rheims.win_condition.l1.location = "redmond_residence";
 			Pchar.quest.Story_First_Meeting_with_Rheims.win_condition = "Story_First_Meeting_with_Rheims";
 
-			//     
+			//Ã§Ã Ã¢Ã¥Ã¤Ã¥Ã­Ã¨Ã¥ ÃªÃ¢Ã¥Ã±Ã²Ã  Ã­Ã  Ã¤Ã¨Ã Ã«Ã®Ã£ Ã±Ã® Ã±Ã²Ã°Ã Ã¦Ã­Ã¨ÃªÃ®Ã¬
 			pchar.quest.first_time_to_redmond_townhall.win_condition.l1 = "locator";
 			pchar.quest.first_time_to_redmond_townhall.win_condition.l1.location = "Redmond_town_01";
 			pchar.quest.first_time_to_redmond_townhall.win_condition.l1.locator_group = "goto";
@@ -1697,7 +1699,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Tut_BuySpyGlass.over = "yes";
 			DeleteAttribute(Pchar, "quest.tutorial.Spyglass");
 			
-			//   
+			//Ã„Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¥ Ã§Ã Ã¯Ã¨Ã±Ã¨ Ã¢ Ã¦Ã³Ã°Ã­Ã Ã«
 			SetQuestHeader("Story_OxbayCaptured");
 			AddQuestRecord("Story_OxbayCaptured", "1");
 			PostVideoAndQuest("Invasion",500,"Story_MapLoadAfterleavingOxbay");
@@ -1723,33 +1725,33 @@ void QuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("Eng_soldier_5"), "ENGLAND_SOLDIERS");
 		break;
 
-		//        
+		//ÃÃ°Ã¨ Ã§Ã ÃµÃ®Ã¤Ã¥ Ã¨Ã£Ã°Ã®ÃªÃ  Ã¢ Ã°Ã¥Ã§Ã¨Ã¤Ã¥Ã­Ã¶Ã¨Ã¾ ÃÃ¥Ã¤Ã¬Ã®Ã­Ã¤Ã  ÃÃ¥Ã©Ã¬Ã± Ã¯Ã®ÃªÃ¨Ã¤Ã Ã¥Ã² Ã¥Ã¥
 		case "Story_First_Meeting_with_Rheims": 
 			pchar.quest.first_time_to_redmond_townhall.over = "yes";
 			LAi_SetActorType(Pchar);
 			LAi_SetActorType(characterFromID("Raoul Rheims"));
-			//   
+			//Ã‚Ã»Ã±Ã²Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¥ ÃÃ¥Ã©Ã¬Ã±Ã³ Ã­Ã³Ã¦Ã­Ã®Ã© Ã­Ã®Ã¤Ã»
 			Characters[GetCharacterIndex("Raoul Rheims")].Dialog.CurrentNode = "First_meeting";
 			LAi_ActorFollow(pchar, characterFromID("Raoul Rheims"), "", 1.0);
 			LAi_ActorFollow(characterFromID("Raoul Rheims"), pchar, "Story_First_Meeting_with_Rheims_2", 1.0);
 		break;
 		
 		case "Story_First_Meeting_with_Rheims_2":
-			//----------------     !
+			//----------------ÃÃ¥Ã©Ã¬Ã± Ã¯Ã®Ã¤ÃµÃ®Ã¤Ã¨Ã² Ã¨ Ã¯Ã°Ã®Ã±Ã¨Ã² Ã¥Ã£Ã® Ã¯Ã°Ã®Ã¯Ã³Ã±Ã²Ã¨Ã²Ã¼!
 			LAi_ActorWaitDialog(Pchar, characterFromID("Raoul Rheims"));
 			LAi_ActorDialog(characterFromID("Raoul Rheims"), Pchar, "", 5.0, 0);
 		break;
 
 		case "Rheims_away_from_residence":
 			Locations[FindLocation("Redmond_Residence")].reload.l1.disable = 0;
-			//----------------    ,      
+			//----------------ÃÃ²Ã¯Ã°Ã Ã¢Ã«Ã¿Ã¥Ã¬ Ã¨Ã£Ã°Ã®ÃªÃ  Ã¢ Ã±Ã®Ã±Ã¥Ã¤Ã­Ã¨Ã© Ã«Ã®ÃªÃ Ã²Ã®Ã°, Ã·Ã²Ã®Ã¡Ã» Ã®Ã­ Ã­Ã¥ Ã¬Ã¥Ã¸Ã Ã« ÃÃ¥Ã©Ã¬Ã±Ã³ Ã¢Ã»Ã©Ã²Ã¨
 			LAi_ActorGoToLocator(PChar, "goto", "goto7", "", 4.0);
-			//----------------   
+			//----------------ÃÃ²Ã¯Ã°Ã Ã¢Ã«Ã¿Ã¥Ã¬ ÃÃ¥Ã©Ã¬Ã±Ã  Ã¢ Ã«Ã®ÃªÃ Ã²Ã®Ã°
 			LAi_ActorGoToLocator(CharacterFromID("Raoul Rheims"), "Reload", "reload1", "Story_Rheims_leaves", 2.0);
 		break;
 
 		case "Story_Rheims_leaves": 
-			//------------   
+			//------------ÃÃ¥Ã©Ã¬Ã± Ã²Ã¥Ã«Ã¥Ã¯Ã®Ã°Ã²Ã¨Ã°Ã³Ã¥Ã²Ã±Ã¿ Ã¢ Ã­Ã¨ÃªÃ³Ã¤Ã 
 			ChangeCharacterAddress(characterFromID("Raoul Rheims"), "None", "");
 			LAi_SetPlayerType(pchar);
 		break;
@@ -1779,7 +1781,7 @@ void QuestComplete(string sQuestName)
 			SetCurrentTime(23, 0);
 			LAi_NoRebirthDisable(characterFromID("Fra_occupant_07"));
 			LAi_NoRebirthDisable(characterFromID("Fra_occupant_08"));
-			//      
+			//Ã“Ã­Ã¨Ã·Ã²Ã®Ã¦Ã Ã¥Ã¬ ÃªÃ¢Ã¥Ã±Ã² Ã­Ã  Ã Ã²Ã ÃªÃ³ Ã±Ã®Ã«Ã¤Ã Ã² Ã¢ Ã¤Ã¦Ã³Ã­Ã£Ã«Ã¿Ãµ
 			PChar.Quest.Story_FraSoldiers_attack_in_jungles.over = "yes";
 
 			Locations[FindLocation("Oxbay_town")].reload.l1.disable = 1;
@@ -1789,25 +1791,25 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_Massony_Reload_to_Town":
-			//    
+			//Ã‘Ã¬Ã¥Ã­Ã  Ã„Ã¨Ã Ã«Ã®Ã£Ã  Ã‘Ã²Ã°Ã Ã¦Ã­Ã¨ÃªÃ Ã¬ Ã­Ã  Ã¢Ã®Ã°Ã®Ã²Ã Ãµ
 			Characters[GetCharacterIndex("Fra_Occupant_03")].Dialog.Filename = "Story_French Occupant_2_dialog.c";
 			Characters[GetCharacterIndex("Fra_Occupant_04")].Dialog.Filename = "Story_French Occupant_2_dialog.c";
-			//    
+			//Ã“Ã±Ã²Ã Ã­Ã®Ã¢ÃªÃ¨ Ã¨Ã¬ Ã¢Ã±Ã¥Ã¬ Ã¢Ã°Ã¥Ã¬Ã¥Ã­Ã­Ã®Ã£Ã® Ã¡Ã¥Ã±Ã±Ã¬Ã¥Ã°Ã²Ã¨Ã¿
 			LAi_SetImmortal(characterFromID("Fra_Occupant_03"), true);
 			LAi_SetImmortal(characterFromID("Fra_Occupant_04"), true);
 			LAi_SetImmortal(characterFromID("Valentin Massoni"), true);
 			LAi_SetStayType(pchar);
-			//   			
+			//Ã‘Ã¬Ã¥Ã­Ã  Ã²Ã¨Ã¯Ã  Ã‚Ã Ã«Ã¥Ã­Ã²Ã¨Ã­Ã³ ÃŒÃ Ã±Ã±Ã®Ã­Ã¨			
 			LAi_SetActorType(characterFromID("Valentin Massoni"));
 
-			//       
+			//ÃÃ¥Ã°Ã¥Ã¬Ã¥Ã¹Ã¥Ã­Ã¨Ã¥ ÃŒÃ Ã±Ã±Ã®Ã­Ã¨ Ã¨ ÃÃ«Ã½Ã©Ã§Ã  Ãª Ã¢Ã»ÃµÃ®Ã¤Ã³ Ã¨Ã§ ÃÃªÃ±Ã¡Ã½Ã¿
 			ChangeCharacterAddress(characterFromID("Valentin Massoni"), "Oxbay_town", "goto36");
 			DoQuestReloadToLocation("Oxbay_town", "goto", "goto37", "Story_Check_Blaze_And_Massoni");
 		break;
 
-		//    ,    .
+		//ÃŒÃ Ã±Ã±Ã®Ã­Ã¨ Ã®Ã²Ã¯Ã°Ã Ã¢Ã«Ã¿Ã¥Ã²Ã±Ã¿ Ãª Ã«Ã®ÃªÃ Ã²Ã®Ã°Ã³ Ã°Ã¥Ã«Ã®Ã Ã¤Ã , Ã·Ã²Ã®Ã¡Ã» Ã¢Ã»Ã©Ã²Ã¨ Ã¨Ã§ Ã£Ã®Ã°Ã®Ã¤Ã .
 		case "Story_Massoni_leave_Oxbay":
-			//     
+			//ÃŒÃ Ã±Ã±Ã®Ã­Ã¨ Ã¯Ã¥Ã°Ã¥Ã£Ã°Ã³Ã¦Ã Ã¥Ã²Ã±Ã¿ Ã¢ Ã¢Ã»ÃµÃ®Ã¤ Ã¨Ã§ ÃÃªÃ±Ã¡Ã½Ã¿
 			ChangeCharacterAddress(characterFromID("Valentin Massoni"), "Oxbay_town_exit", "Citizen08");
 		break;
 
@@ -1843,23 +1845,23 @@ void QuestComplete(string sQuestName)
 			pchar.quest.massoni_died.win_condition = "massoni_died";
 			
 			LAi_SetPlayerType(pchar);
-			//     
+			//ÃˆÃ£Ã°Ã®Ãª Ã¯Ã®ÃªÃ¨Ã¤Ã Ã¥Ã² Ã£Ã®Ã°Ã®Ã¤ Ã¢Ã±Ã«Ã¥Ã¤ Ã§Ã  ÃŒÃ Ã±Ã±Ã®Ã­Ã¨
 			Pchar.quest.Story_Walk_Away_with_Massoni.win_condition.l1 = "location";
 			Pchar.quest.Story_Walk_Away_with_Massoni.win_condition.l1.location = "Oxbay_town_exit";
 			Pchar.quest.Story_Walk_Away_with_Massoni.win_condition = "Story_Walk_Away_with_Massoni";
 
-			//    
+			//ÃŒÃ Ã±Ã±Ã®Ã­Ã¨ Ã³ÃµÃ®Ã¤Ã¨Ã² Ã¢ Ã¢Ã®Ã°Ã®Ã²Ã  ÃÃªÃ±Ã¡Ã½Ã¿
 			LAi_ActorGoToLocator(characterFromID("Valentin Massoni"), "reload", "reload12", "Story_Massoni_leave_Oxbay", 5.0);
 			LAi_SetImmortal(characterFromID("Fra_Occupant_01"), false);
 			LAi_SetImmortal(characterFromID("Fra_Occupant_02"), false);
-			//    
+			//Ã‘Ã®Ã«Ã¤Ã Ã²Ã» Ã¢Ã®Ã§Ã¢Ã°Ã Ã¹Ã Ã¾Ã²Ã±Ã¿ Ã­Ã  Ã±Ã¢Ã®Ã¨ Ã¬Ã¥Ã±Ã²Ã 
 			LAi_ActorGoToLocator(characterFromID("Fra_Occupant_01"), "goto", "goto3", "Story_Fra_Occupant_01_ReturnedToPost", 3.0);
-			//   
+			//Ã“Ã¢Ã¥Ã«Ã¨Ã·Ã¨Ã¢Ã Ã¥Ã¬ Ã°Ã Ã¤Ã³Ã¨Ã± Ã¤Ã¥Ã²Ã¥ÃªÃ²Ã®Ã°Ã­Ã®Ã£Ã® Ã«Ã®ÃªÃ Ã²Ã®Ã°Ã 
 			Locations[FindLocation("Oxbay_town_exit")].locators_radius.goto.citizen018 = 2.0;
 			Locations[FindLocation("Oxbay_town_exit")].locators_radius.goto.citizen05 = 3.0;
-			//   
+			//Ã“Ã±Ã²Ã Ã­Ã Ã¢Ã«Ã¨Ã¢Ã Ã¥Ã²Ã±Ã¿ Ã¤Ã¨Ã Ã«Ã®Ã£ Ã¤Ã«Ã¿ ÃŒÃ Ã±Ã±Ã®Ã­Ã¨
 			Characters[GetCharacterIndex("Valentin Massoni")].Dialog.CurrentNode = "What_are_you_waiting_for";
-			//    
+			//Ã‘Ã¬Ã¥Ã­Ã  Ã„Ã¨Ã Ã«Ã®Ã£Ã  Ã‘Ã²Ã°Ã Ã¦Ã­Ã¨ÃªÃ Ã¬ Ã­Ã  Ã¢Ã®Ã°Ã®Ã²Ã Ãµ
 			Characters[GetCharacterIndex("Fra_Occupant_01")].Dialog.Filename = "Story_French Occupant_dialog.c";
 			Characters[GetCharacterIndex("Fra_Occupant_02")].Dialog.Filename = "Story_French Occupant_dialog.c";
 			Characters[GetCharacterIndex("Fra_Occupant_07")].Dialog.Filename = "Story_Fra_Occup_common_dialog.c";
@@ -1872,7 +1874,7 @@ void QuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("Fra_occupant_01"), "FRANCE_SOLDIERS");
 		break;
 
-		//      
+		//Ã¨Ã£Ã°Ã®Ãª Ã¢Ã»ÃµÃ®Ã¤Ã¨Ã² Ã¢ Ã¤Ã¦Ã³Ã­Ã£Ã«Ã¨ Ã¢Ã±Ã«Ã¥Ã¤ Ã§Ã  ÃŒÃ Ã±Ã±Ã®Ã­Ã¨
 		case "Story_Walk_Away_with_Massoni":
 			LAi_SetImmortal(characterFromID("Fra_Occupant_03"), false);
 			LAi_SetImmortal(characterFromID("Fra_Occupant_04"), false);
@@ -1908,7 +1910,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Story_Massoni_order_attack_Blaze_denied.win_condition = "Story_Massoni_order_attack_Blaze_denied";
 		break;
 
-		//      ,    ,   
+		//ÃˆÃ£Ã°Ã®Ãª Ã¨ Ã¯Ã¼Ã¿Ã­Ã»Ã© ÃŒÃ Ã±Ã±Ã®Ã­Ã¨ Ã¨Ã¤Ã³Ã² Ã¢ Ã¤Ã¦Ã³Ã­Ã£Ã«Ã¿Ãµ, Ã¨ Ã¤Ã®Ã©Ã¤Ã¿ Ã¤Ã® Ã«Ã®ÃªÃ Ã²Ã®Ã°Ã , Ã¬Ã Ã±Ã±Ã®Ã­Ã¨ Ã­Ã Ã·Ã¨Ã­Ã Ã¥Ã² Ã¤Ã¨Ã Ã«Ã®Ã£
 		case "Story_Massoni_go_walking":
 			LAi_ActorDialog(characterFromID("Valentin Massoni"), Pchar, "", 20.0, 1.0);
 		break;
@@ -1917,7 +1919,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorGoToLocator(characterFromID("Valentin Massoni"), "goto", "citizen05", "Story_Massoni_found_Cheating", 20.0);
 		break;
 
-		//        
+		//Ã¨Ã£Ã°Ã®Ãª Ã¤Ã®ÃµÃ®Ã¤Ã¨Ã² Ã¤Ã® Ã«Ã®ÃªÃ Ã²Ã®Ã°Ã  Ã£Ã¤Ã¥ ÃŒÃ Ã±Ã±Ã®Ã­Ã¨ Ã®Ã²ÃªÃ Ã§Ã»Ã¢Ã Ã¥Ã²Ã±Ã¿ Ã¨Ã¤Ã²Ã¨ Ã¤Ã Ã«Ã¼Ã¸Ã¥
 		case "Story_Massoni_found_Cheating":
 			Characters[GetCharacterIndex("Valentin Massoni")].Dialog.CurrentNode = "Final_talk";
 			PChar.quest.Story_Massoni_go_walking.over = "yes";
@@ -1932,13 +1934,13 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Oxbay_town_exit")].reload.l3.disable = false;
 			Locations[FindLocation("Oxbay_town_exit")].reload.l4.disable = false;
 			Locations[FindLocation("Oxbay_town_exit")].reload.l5.disable = false;
-			//   
+			//ÃŒÃ Ã±Ã±Ã®Ã­Ã¨ Ã¡Ã¥Ã¦Ã¨Ã² Ãª Ã£Ã®Ã°Ã®Ã¤Ã³
 			pchar.quest.massoni_died.over = "yes";
 			LAi_ActorRunToLocator(characterFromID("Valentin Massoni"), "reload", "reload3", "Story_Massoni_order_attack_Blaze", 30.0);
 			Pchar.quest.Story_1stTaskComplete = 1;
 			ChangeCharacterAddress(characterFromID("Faust Gasquet"), "Falaise_de_fleur_port_01", "goto13");
 			SetCharacterShipLocation(characterFromID("Virgile boon"), "Falaise_de_Fleur_port_01");
-			//       
+			//ÃŠÃ¢Ã¥Ã±Ã² Ã­Ã  Ã¯Ã®Ã¿Ã¢Ã«Ã¥Ã­Ã¨Ã¥ ÃÃ«Ã½Ã©Ã§Ã  Ã­Ã  Ã”Ã Ã«Ã¥ Ã¤Ã¥ Ã”Ã«Ã¥Ã°
 			Pchar.quest.Story_Appear_on_Falaise.win_condition.l1 = "location";
 			Pchar.quest.Story_Appear_on_Falaise.win_condition.l1.location = "Falaise_de_Fleur_port_01";
 			Pchar.quest.Story_Appear_on_Falaise.win_condition = "Story_Appear_on_Falaise";
@@ -1946,7 +1948,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Story_Appear_on_Falaise_shore.win_condition.l1 = "location";
 			Pchar.quest.Story_Appear_on_Falaise_shore.win_condition.l1.location = "Falaise_de_fleur_shore";
 			Pchar.quest.Story_Appear_on_Falaise_shore.win_condition = "Story_Appear_on_Falaise_shore";
-			//    ""
+			//ÃŠÃ¢Ã¥Ã±Ã² Ã­Ã  Ã¯Ã®Ã²Ã®Ã¯Ã«Ã¥Ã­Ã¨Ã¥ Ã¡Ã Ã°ÃªÃ  "ÃÃ©Ã±Ã³"
 			Pchar.quest.Story_Sink_Oiseau.win_condition.l1 = "NPC_Death";
 			Pchar.quest.Story_Sink_Oiseau.win_condition.l1.character = "Virgile Boon";
 			Pchar.quest.Story_Sink_Oiseau.win_condition = "Story_Sink_Oiseau";
@@ -1987,7 +1989,7 @@ void QuestComplete(string sQuestName)
 
 			ChangeCharacterAddress(CharacterFromID("Faust Gasquet"), "Falaise_de_fleur_port_01", "goto1");
 			SetCharacterShipLocation(characterFromID("Virgile boon"), "Falaise_de_Fleur_port_01");
-			//       
+			//ÃŠÃ¢Ã¥Ã±Ã² Ã­Ã  Ã¯Ã®Ã¿Ã¢Ã«Ã¥Ã­Ã¨Ã¥ ÃÃ«Ã½Ã©Ã§Ã  Ã­Ã  Ã”Ã Ã«Ã¥ Ã¤Ã¥ Ã”Ã«Ã¥Ã°
 			Pchar.quest.Story_Appear_on_Falaise.win_condition.l1 = "location";
 			Pchar.quest.Story_Appear_on_Falaise.win_condition.l1.location = "Falaise_de_Fleur_port_01";
 			Pchar.quest.Story_Appear_on_Falaise.win_condition = "Story_Appear_on_Falaise";
@@ -1995,7 +1997,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Story_Appear_on_Falaise_shore.win_condition.l1 = "location";
 			Pchar.quest.Story_Appear_on_Falaise_shore.win_condition.l1.location = "Falaise_de_fleur_shore";
 			Pchar.quest.Story_Appear_on_Falaise_shore.win_condition = "Story_Appear_on_Falaise_shore";
-			//    ""
+			//ÃŠÃ¢Ã¥Ã±Ã² Ã­Ã  Ã¯Ã®Ã²Ã®Ã¯Ã«Ã¥Ã­Ã¨Ã¥ Ã¡Ã Ã°ÃªÃ  "ÃÃ©Ã±Ã³"
 			Pchar.quest.Story_Sink_Oiseau.win_condition.l1 = "NPC_Death";
 			Pchar.quest.Story_Sink_Oiseau.win_condition.l1.character = "Virgile Boon";
 			Pchar.quest.Story_Sink_Oiseau.win_condition = "Story_Sink_Oiseau";
@@ -2009,7 +2011,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.France_becomes_neutral.win_condition = "France_becomes_neutral";
 		break;
 
-		//      ,    ,  
+		//ÃŒÃ Ã±Ã±Ã®Ã­Ã¨ Ã¤Ã®Ã¡Ã¥Ã£Ã Ã¥Ã² Ã¤Ã® Ã¢Ã®Ã°Ã®Ã² Ã¨ Ã¯Ã°Ã¨ÃªÃ Ã§Ã»Ã¢Ã Ã¥Ã² Ã±Ã²Ã°Ã Ã¦Ã­Ã¨ÃªÃ Ã¬, Ã¥Ã±Ã«Ã¨ Ã®Ã­Ã¨ Ã¥Ã¹Ã¥ Ã¥Ã±Ã²Ã¼, Ã³Ã¡Ã¨Ã²Ã¼ ÃÃ«Ã½Ã©Ã§Ã 
 		case "Story_Massoni_order_attack_Blaze":
 			LAi_group_SetRelation("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 			ChangeCharacterAddress(characterFromID("Valentin Massoni"), "none", "");
@@ -2019,7 +2021,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Valentin Massoni"), "none", "");
 		break;
 
-		//    ,       .
+		//Ã‘Ã®Ã«Ã¤Ã Ã²Ã» Ã§Ã Ã¢Ã¿Ã§Ã»Ã¢Ã Ã¾Ã² Ã± Ã¨Ã£Ã°Ã®ÃªÃ®Ã¬ Ã°Ã Ã§Ã£Ã®Ã¢Ã®Ã°Ã®Ã¬, ÃªÃ®Ã£Ã¤Ã  Ã®Ã­ Ã¯Ã®Ã¤ÃµÃ®Ã¤Ã¨Ã² Ãª ÃÃªÃ±Ã¡Ã½Ã¾ Ã± Ã±Ã³Ã¸Ã¨.
 		case "Story_FraSoldiers_attack_in_jungles":
 			LAi_SetCheckMinHP(characterFromID("Fra_occupant_07"), 29.0, false, "fight_before_enter_to_oxbay");
 			LAi_SetCheckMinHP(characterFromID("Fra_occupant_08"), 29.0, false, "fight_before_enter_to_oxbay");
@@ -2060,7 +2062,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "FRANCE_SOLDIERS_in_oxbay_exit_returned_to_post":
-			//    
+			//ÃÃ²Ã¯Ã°Ã Ã¢Ã«Ã¿Ã¥Ã¬ Ã±Ã®Ã«Ã¤Ã Ã² Ã­Ã Ã§Ã Ã¤ Ã­Ã  Ã¯Ã®Ã±Ã²Ã»
 			LAi_ActorGoToLocator(characterFromID("Fra_occupant_07"), "goto", "citizen09", "Fra_occupant_07_return_to_post", -1);
 			LAi_ActorGoToLocator(characterFromID("Fra_occupant_08"), "goto", "citizen010", "Fra_occupant_08_return_to_post", -1);
 		break;
@@ -2075,7 +2077,7 @@ void QuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("Fra_occupant_08"), "FRANCE_SOLDIERS");
 		break;
 		
-		//        ,    
+		//ÃÃ«Ã½Ã©Ã§ Ã¢ Ã¯Ã¥Ã°Ã¢Ã»Ã© Ã°Ã Ã§ Ã¯Ã°Ã¨Ã¯Ã«Ã»Ã¢Ã Ã¥Ã² Ã­Ã  Ã”Ã Ã«Ã¥ Ã¤Ã¥ Ã”Ã«Ã¥Ã°, Ã·Ã²Ã®Ã¡Ã» Ã¯Ã®Ã£Ã®Ã¢Ã®Ã°Ã¨Ã²Ã¼ Ã± ÃÃ¥Ã°Ã Ã­Ã¦Ã¥Ã°Ã¥
 		case "Story_Appear_on_Falaise":
 			locations[FindLocation("Oxbay_town_exit")].disableencounters = 0;
 			pchar.quest.Story_Appear_on_Falaise_shore.over = "yes";
@@ -2117,7 +2119,7 @@ void QuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("Faust Gasquet"), "FRANCE_CITIZENS");
 		break;
 
-		//    Oiseau,    .
+		//ÃÃ«Ã½Ã©Ã§ Ã²Ã®Ã¯Ã¨Ã² Ã±Ã­Ã Ã¡Ã¦Ã¥Ã­Ã·Ã¥Ã±ÃªÃ¨Ã© Ã¡Ã Ã°Ãª Oiseau, Ã®Ã±Ã²Ã Ã¢Ã«Ã¿Ã¿ Ã´Ã°Ã Ã­Ã¶Ã³Ã§Ã®Ã¢ Ã¡Ã¥Ã§ Ã¡Ã®Ã¥Ã¯Ã°Ã¨Ã¯Ã Ã±Ã®Ã¢.
 		case "Story_Sink_Oiseau":
 			SetNationRelation2MainCharacter(ENGLAND, RELATION_FRIEND);
 			SetCharacterShipLocation(characterFromID("Virgile boon"), "none");
@@ -2144,7 +2146,7 @@ void QuestComplete(string sQuestName)
 			pchar.nation = ENGLAND;
 		break;
 
-		//       .
+		//ÃÃ«Ã½Ã©Ã§ Ã¯Ã°Ã¨Ã¯Ã«Ã»Ã¢Ã Ã¥Ã² Ã± Ã¡Ã Ã°ÃªÃ®Ã¬ ÃÃ©Ã±Ã³ Ã­Ã  Ã«Ã¾Ã¡Ã®Ã© Ã®Ã±Ã²Ã°Ã®Ã¢.
 		case "Convoy_Virgile_Boon":
 			pchar.nation = ENGLAND;
 			SetCharacterRemovable(characterFromID("Virgile Boon"), true);
@@ -2230,7 +2232,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Amiel Berangere"), Pchar, "pchar_back_to_player", 1.0, 1.0);
 		break;
 
-		//   
+		//ÃˆÃ£Ã°Ã®Ãª Ã³Ã¡Ã¨Ã¢Ã Ã¥Ã² ÃÃ¬Ã¨Ã«Ã¿ ÃÃ¥Ã°Ã Ã­Ã¦Ã¥Ã°Ã¥
 		case "Story_BlazeStartsThinkAboutGramota":
 			LAi_LocationFightDisable(&Locations[FindLocation(pchar.location)], true);
 			Pchar.Dialog.CurrentNode = "Story_FindBerangereDocuments";
@@ -2254,22 +2256,22 @@ void QuestComplete(string sQuestName)
 			Event("QuestSceneCommand", "ssa", "stay", "", PChar);
 			Event("QuestSceneCommand", "ssass", "turnbylocator", "Story_FoundGramotaAndLebrettonAppeared", PChar, "goto", "goto5");
 			//Event("QuestSceneCommand", "ssas", "action", "Story_FoundGramotaAndLebrettonAppeared", PChar, "");
-			//------- !!!!!!!!     
+			//------- !!!!!!!! Ã‚Ã±Ã²Ã Ã¢Ã¨Ã²Ã¼ Ã¯Ã°Ã®Ã¨Ã£Ã°Ã»Ã¢Ã Ã­Ã¨Ã¥ Ã§Ã¢Ã³ÃªÃ  Ã®Ã²ÃªÃ°Ã»Ã¢Ã Ã¾Ã¹Ã¥Ã©Ã±Ã¿ Ã¤Ã¢Ã¥Ã°Ã¨
 			PostEvent("startAfterWaitScene",0,"a",PChar);
 			AddPartyExp(pchar, 2000);
 		break;
 		
 		case "Story_FoundGramotaAndLebrettonAppeared":
-			//-------- 
+			//--------ÃÃ®Ã«Ã³Ã·Ã¥Ã­Ã¨Ã¥ Ã¯Ã°Ã¥Ã¤Ã¬Ã¥Ã²Ã 
 			GiveItem2Character(Pchar,"Story_Gramota");
-			//--------        
+			//--------ÃÃ®Ã±Ã²Ã Ã­Ã®Ã¢ÃªÃ  Ã‚Ã¨Ã°Ã¤Ã¦Ã¨Ã«Ã  ÃÃ³Ã­Ã  Ã¢ Ã¯Ã¥Ã°Ã¢Ã»Ã© Ã¯Ã®Ã°Ã² Ã”Ã Ã«Ã¥ Ã¤Ã¥ Ã”Ã«Ã¥Ã°
 			ChangeCharacterAddress(characterFromID("Virgile Boon"), "Falaise_de_Fleur_port_01", "goto1");
-			//--------   
+			//-------- ÃÃ®Ã¿Ã¢Ã«Ã¥Ã­Ã¨Ã¥ Ã€Ã­Ã²Ã³Ã Ã­Ã  Ã‹Ã¥Ã¡Ã°Ã¥Ã²Ã²Ã®Ã­Ã 
 			Characters[GetCharacterIndex("antoine lebretton")].dialog.CurrentNode = "Story_Berangere_killed";
 			Locations[FindLocation("Falaise_De_Fleur_tavern_upstairs")].reload.l1.disable = 0;
 			ChangeCharacterAddressGroup(characterFromID("antoine lebretton"), "Falaise_De_Fleur_tavern_upstairs", "reload","reload1");
 			LAi_SetActorType(characterFromID("antoine lebretton"));
-			//-------    
+			//------- Ã“Ã¡Ã¨Ã°Ã Ã¥Ã¬ Ã­Ã¥Ã­Ã³Ã¦Ã­Ã®Ã£Ã® Ã”Ã Ã³Ã±Ã²Ã  ÃƒÃ Ã±ÃªÃ¥
 			ChangeCharacterAddress(characterFromID("Faust Gasquet"), "none", "");
 			LAi_ActorGoToLocator(pchar, "goto", "goto3", "before_lebretton_talk_with_us_in_upstairs", 4.0);
 			LAi_ActorDialog(characterFromID("antoine lebretton"), Pchar, "", 3.0, 1.0);
@@ -2281,9 +2283,9 @@ void QuestComplete(string sQuestName)
 
 		case "Story_Lebretton_leaves_upstairs":
 			LAi_SetPlayerType(pchar);
-			//---------      .
+			//---------Ã¯Ã¥Ã°Ã¥Ã£Ã°Ã³Ã§ÃªÃ  Ã‹Ã¥Ã¡Ã°Ã¥Ã²Ã²Ã®Ã­Ã  Ã®Ã¡Ã°Ã Ã²Ã­Ã® Ã§Ã  Ã±Ã²Ã®Ã©ÃªÃ³ Ã¢ Ã²Ã Ã¢Ã¥Ã°Ã­Ã¥.
 			ChangeCharacterAddressGroup(characterFromID("antoine lebretton"), "Falaise_De_Fleur_tavern", "merchant","goto1");
-			//---------    			
+			//---------Ã±Ã­Ã¨Ã¬Ã Ã¥Ã²Ã±Ã¿ Ã¡Ã¥Ã±Ã±Ã¬Ã¥Ã°Ã²Ã¨Ã¥ Ã± Ã€Ã­Ã²Ã³Ã Ã­Ã  Ã‹Ã¥Ã¡Ã°Ã¥Ã²Ã²Ã®Ã­Ã 			
 			LAi_SetMerchantType(characterFromID("antoine lebretton"));
 			LAi_group_MoveCharacter(characterFromID("antoine lebretton"), "FRANCE_CITIZENS");
 		break;
@@ -2319,7 +2321,7 @@ void QuestComplete(string sQuestName)
 
 		case "Story_Blaze_and_Boon_leaving":
 			characters[GetCharacterIndex("Virgile Boon")].location = "none";
-			//------------      
+			//------------Ã‚Ã»Ã¤Ã Ã·Ã  ÃŠÃ¢Ã¥Ã±Ã²Ã®Ã¢ Ã­Ã  Ã­Ã Ã¯Ã Ã¤Ã¥Ã­Ã¨Ã¥ ÃÃ³Ã­Ã  Ã­Ã  Ã¨Ã£Ã°Ã®ÃªÃ 
 			Pchar.quest.Story_Convoy_Virgile_Boon_1.win_condition.l1 = "location";
 			Pchar.quest.Story_Convoy_Virgile_Boon_1.win_condition.l1.location = "Oxbay";
 			Pchar.quest.Story_Convoy_Virgile_Boon_1.win_condition = "Convoy_Virgile_Boon";
@@ -2358,7 +2360,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_Meeting_Ewan_Glover":
-			//---------        
+			//---------ÃŠÃ Ã¯Ã¨Ã²Ã Ã­ Ã¤Ã¥Ã±Ã Ã­Ã²Ã­Ã®Ã£Ã® Ã¸Ã«Ã¾Ã¯Ã  ÃÃ¢Ã Ã­ ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã° Ã¯Ã®Ã¤ÃµÃ®Ã¤Ã¨Ã² Ãª Ã¨Ã£Ã°Ã®ÃªÃ³ Ã§Ã­Ã ÃªÃ®Ã¬Ã¨Ã²Ã¼Ã±
 			LAi_SetActorType(characterFromID("Ewan Glover"));
 			Locations[FindLocation("Greenford_port")].reload.l1.disable = 1;
 			LAi_SetImmortal(characterFromID("Ewan Glover"), true);
@@ -2366,17 +2368,17 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Ewan_Once_Again_exit_no_join":
-			//---------   
+			//---------ÃÃ²Ã¯Ã°Ã Ã¢Ã«Ã¿Ã¥Ã¬ ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã°Ã  Ãª Ã«Ã®ÃªÃ Ã²Ã®Ã°Ã³
 			LAi_ActorGoToLocator(characterFromID("Ewan Glover"), "goto", "goto2", "", -1);
 		break;
 
 		case "Ewan_exit_no_join":
-			//---------   
+			//---------ÃÃ²Ã¯Ã°Ã Ã¢Ã«Ã¿Ã¥Ã¬ ÃƒÃ°Ã®Ã³Ã¢Ã¥Ã°Ã  Ãª Ã«Ã®ÃªÃ Ã²Ã®Ã°Ã³
 			LAi_ActorGoToLocator(characterfromID("Ewan Glover"), "reload", "reload_1_2", "Story_Glover_goes_to_tavern", -1);
 		break;
 
 		case "Ewan_Exit_need_some_walk":			
-			//---------   
+			//---------ÃÃ²Ã¯Ã°Ã Ã¢Ã«Ã¿Ã¥Ã¬ ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã°Ã  Ãª Ã«Ã®ÃªÃ Ã²Ã®Ã°Ã³
 			LAi_ActorRunToLocator(characterfromID("Ewan Glover"),"Reload","reload4", "Story_Glover_to_tavern_on_Greenford", 20.0);
 			pchar.quest.checker_for_greenford_tavern_for_meet_with_evan_glover.win_condition.l1 = "location";
 			pchar.quest.checker_for_greenford_tavern_for_meet_with_evan_glover.win_condition.l1.location = "Greenford_tavern";
@@ -2409,9 +2411,9 @@ void QuestComplete(string sQuestName)
 		case "Ewan_exit_business":
 			Locations[FindLocation("Greenford_town")].reload.l4.disable = 1;
 			
-			//---------   .
+			//---------Ã‚Ã®Ã§Ã¢Ã°Ã Ã¹Ã Ã¥Ã¬ Ã®Ã¡Ã®Ã¨Ã¬ Ã²Ã¨Ã¯ Ã±Ã²Ã®Ã¿Ã¹Ã¨Ãµ.
 			LAi_SetCitizenType(characterfromID("Ewan Glover"));
-			//---------          
+			//---------ÃÃ Ã·Ã¨Ã­Ã Ã¥Ã¬ Ã¯Ã°Ã®Ã¢Ã¥Ã°ÃªÃ³ Ã­Ã  Ã¯Ã®Ã¯Ã Ã¤Ã Ã­Ã¨Ã¥ Ã¨Ã£Ã°Ã®ÃªÃ  Ã¨ ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã°Ã  Ã¢ Ã«Ã®ÃªÃ¥Ã©Ã¸Ã¥Ã­ Ã­Ã®Ã·Ã­Ã®Ã© Ã¢Ã»Ã±Ã Ã¤ÃªÃ¨
 			Pchar.quest.Story_Blaze_and_Glover_Land_troops.win_condition.l1 = "location";
 			Pchar.quest.Story_Blaze_and_Glover_Land_troops.win_condition.l1.location = "Oxbay_shore_02";
 			Pchar.quest.Story_Blaze_and_Glover_Land_troops.win_condition.l2 = "Ship_location";
@@ -2424,15 +2426,15 @@ void QuestComplete(string sQuestName)
 
 			if (pchar.location == "Greenford_tavern")
 			{
-				//---------   
+				//---------Ã‚Ã»Ã±Ã²Ã Ã¢Ã«Ã¿Ã¥Ã¬ Ã¢Ã°Ã¥Ã¬Ã¿ Ã­Ã  Ã¢Ã¥Ã·Ã¥Ã°
 				SetCurrentTime(23, 0);
 				LAi_SetPlayerType(pchar);
-				//---------   ,     
+				//---------Ã’Ã¥Ã«Ã¥Ã¯Ã®Ã°Ã²Ã¨Ã°Ã³Ã¥Ã¬ ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã°Ã  Ã¢ Ã­Ã¨ÃªÃ³Ã¤Ã , Ã  Ã¨Ã£Ã°Ã®ÃªÃ  Ã­Ã  Ã¯Ã°Ã¨Ã±Ã²Ã Ã­Ã¼ ÃƒÃ°Ã¨Ã­Ã´Ã®Ã°Ã¤Ã 
 				ChangeCharacterAddress(characterFromID("Ewan Glover"), "none", "");
 
 				DoReloadCharacterToLocation("Greenford_port", "Reload", "Reload4");
 			}
-			//   
+			//ÃÃ²ÃªÃ«Ã¾Ã·Ã Ã¥Ã¬ Ã¢Ã»ÃµÃ®Ã¤ Ã¢ ÃªÃ Ã°Ã²Ã³
 			bQuestDisableMapEnter = true;
 		break;
 
@@ -2447,18 +2449,18 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Ewan_Glover_exit_join":
-			//----------    
+			//----------ÃÃ°Ã¨Ã±Ã®Ã¥Ã¤Ã¨Ã­Ã¿Ã¥Ã¬ ÃÃ¢Ã Ã­Ã  ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã°Ã  Ãª Ã¨Ã£Ã°Ã®ÃªÃ³
 			SetCompanionIndex(Pchar, -1, GetCharacterIndex("Ewan Glover"));
 			SetCharacterRemovable(characterFromID("Ewan Glover"), false);
-			//----------     
+			//----------Ã‚Ã»Ã±Ã²Ã Ã¢Ã«Ã¿Ã¥Ã¬ ÃªÃ¢Ã¥Ã±Ã² Ã­Ã  Ã¯Ã®Ã²Ã®Ã¯Ã«Ã¥Ã­Ã¨Ã¥ ÃªÃ®Ã°Ã Ã¡Ã«Ã¿ ÃÃ¢Ã Ã­Ã 
 			Pchar.quest.Story_Convoy_Glover_to_Greenford.win_condition.l1 = "NPC_Death";
 			Pchar.quest.Story_Convoy_Glover_to_Greenford.win_condition.l1.character = "Ewan Glover";
 			Pchar.quest.Story_Convoy_Glover_to_Greenford.win_condition = "Story_Glover_Sunk2";
-			//---------   
+			//---------ÃÃ²Ã¯Ã°Ã Ã¢Ã«Ã¿Ã¥Ã¬ ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã°Ã  Ãª Ã«Ã®ÃªÃ Ã²Ã®Ã°Ã³
 			LAi_ActorRunToLocator(characterFromID("Ewan Glover"), "reload", "sea_1", "Story_Glover_leaves_tavern", 75.0);
-			//-------     
+			//-------Ã¯Ã¥Ã°Ã¥Ã¬Ã¥Ã¹Ã Ã¥Ã¬ Ã¬Ã¥Ã±Ã²Ã­Ã®Ã£Ã® Ã¦Ã¨Ã²Ã¥Ã«Ã¿ Ãª Ã¯Ã°Ã¨Ã·Ã Ã«Ã³ ÃƒÃ°Ã¨Ã­Ã´Ã®Ã°Ã¤Ã 
 			ChangeCharacterAddress(characterFromID("Wilfred"), "Greenford_port", "goto20");
-			//-------       
+			//-------Ã‡Ã Ã¢Ã®Ã¤Ã¨Ã¬ ÃªÃ¢Ã¥Ã±Ã² Ã­Ã  Ã¯Ã®Ã¯Ã Ã¤Ã Ã­Ã¨Ã¥ Ã¨Ã£Ã°Ã®ÃªÃ  Ã¢ Ã¯Ã®Ã°Ã² ÃƒÃ°Ã¨Ã­Ã´Ã®Ã°Ã¤Ã 
 			Pchar.quest.Story_Blaze_reaches_Greenford.win_condition.l1 = "location";
 			Pchar.quest.Story_Blaze_reaches_Greenford.win_condition.l1.location = "Greenford_port";
 			Pchar.quest.Story_Blaze_reaches_Greenford.win_condition = "Story_Blaze_reaches_Greenford";
@@ -2495,13 +2497,13 @@ void QuestComplete(string sQuestName)
 
 		case "prepare_Story_ReloadedtoGreenfordTavernWithGlover":
 			SetCurrentTime(23, 0);
-			//---------      
+			//---------Ã’Ã¥Ã«Ã¥Ã¯Ã®Ã°Ã²Ã¨Ã°Ã³Ã¥Ã¬ ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã°Ã  Ã¨ Ã¨Ã£Ã°Ã®ÃªÃ  Ã¢ Ã²Ã Ã¢Ã¥Ã°Ã­Ã³ ÃƒÃ°Ã¨Ã­Ã´Ã®Ã°Ã¤Ã 
 			ChangeCharacterAddressGroup(characterFromID("Ewan Glover"), "Greenford_tavern", "Sit", "Sit4");
 			DoQuestReloadToLocation("Greenford_tavern", "sit", "sit3", "Story_ReloadedtoGreenfordTavernWithGlover");
 		break;
 		
 		case "prepare_Story_ReloadedtoGreenfordTavernWithGlover_1":
-			//---------      
+			//---------Ã’Ã¥Ã«Ã¥Ã¯Ã®Ã°Ã²Ã¨Ã°Ã³Ã¥Ã¬ ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã°Ã  Ã¨ Ã¨Ã£Ã°Ã®ÃªÃ  Ã¢ Ã²Ã Ã¢Ã¥Ã°Ã­Ã³ ÃƒÃ°Ã¨Ã­Ã´Ã®Ã°Ã¤Ã 
 			ChangeCharacterAddressGroup(characterFromID("Ewan Glover"), "Greenford_tavern", "Sit", "Sit4");
 			//DoQuestReloadToLocation("Greenford_tavern", "sit", "sit3", "Story_ReloadedtoGreenfordTavernWithGlover");
 			LAi_Fade("prepare_Story_ReloadedtoGreenfordTavernWithGlover_2", "Story_ReloadedtoGreenfordTavernWithGlover");
@@ -2531,19 +2533,19 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_Glover_goes_to_tavern":
-			//--------    ... ,    
+			//--------Ã¯Ã¥Ã°Ã¥Ã¬Ã¥Ã¹Ã Ã¥Ã¬ ÃÃ¢Ã Ã­Ã  ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã°Ã  Ã¢ Ã­Ã¨ÃªÃ³Ã¤Ã ... ÃÃ°Ã¥Ã¤Ã¯Ã®Ã«Ã®Ã¦Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã®, Ã®Ã­ Ã¢ Ã²Ã Ã¢Ã¥Ã°Ã­Ã¥ ÃÃ¥Ã¤Ã¬Ã®Ã­Ã¤Ã 
 			ChangeCharacterAddress(characterFromID("Ewan Glover"), "None", "");
 			Pchar.Quest.Story_Ask_for_Glover = "1";
 		break;
 
 		case "Story_Glover_leaves_tavern":
-			//--------    ... ,    
+			//--------Ã¯Ã¥Ã°Ã¥Ã¬Ã¥Ã¹Ã Ã¥Ã¬ ÃÃ¢Ã Ã­Ã  ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã°Ã  Ã¢ Ã­Ã¨ÃªÃ³Ã¤Ã ... ÃÃ°Ã¥Ã¤Ã¯Ã®Ã«Ã®Ã¦Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã®, Ã®Ã­ Ã­Ã  Ã±Ã¢Ã®Ã¥Ã¬ ÃªÃ®Ã°Ã Ã¡Ã«Ã¥
 			ChangeCharacterAddressGroup(characterFromID("Ewan Glover"), "Greenford_port", "Goto", "goto21");
 			LAi_SetImmortal(characterFromID("Ewan Glover"), false);
 		break;
 
 		case "Story_Glover_goes_to_ship":
-			//--------    ... ,    
+			//--------Ã¯Ã¥Ã°Ã¥Ã¬Ã¥Ã¹Ã Ã¥Ã¬ ÃÃ¢Ã Ã­Ã  ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã°Ã  Ã¢ Ã­Ã¨ÃªÃ³Ã¤Ã ... ÃÃ°Ã¥Ã¤Ã¯Ã®Ã«Ã®Ã¦Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã®, Ã®Ã­ Ã­Ã  Ã±Ã¢Ã®Ã¥Ã¬ ÃªÃ®Ã°Ã Ã¡Ã«Ã¥
 			ChangeCharacterAddress(characterFromID("Ewan Glover"), "None", "");
 			LAi_SetImmortal(characterFromID("Ewan Glover"), false);
 		break;
@@ -2556,7 +2558,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Story_Blaze_reaches_shore3.over = "yes";
 			
 			Lai_SetStayType(pchar);
-			//---------     
+			//---------Ã±Ã²Ã Ã¢Ã¨Ã¬ Ã°Ã¿Ã¤Ã®Ã¬ Ã± ÃÃ«Ã½Ã©Ã§Ã®Ã¬ ÃÃ¢Ã Ã­Ã  ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã°Ã 
 			if (!LAi_IsDead(characterFromID("Ewan Glover")))
 			{
 				AddQuestRecord("Story_2ndTask", "5");
@@ -2574,12 +2576,12 @@ void QuestComplete(string sQuestName)
 		case "Story_Blaze_reaches_Greenford_2":
 			LAi_SetActorType(characterFromID("Wilfred"));
 			LAi_ActorDialog(characterFromID("Wilfred"), Pchar, "", 4.0, 1.0);
-			//---------     
+			//---------ÃÃ  Ã¢Ã±Ã¿ÃªÃ¨Ã© Ã±Ã«Ã³Ã·Ã Ã© Ã¤Ã¥Ã«Ã Ã¥Ã¬ Ã¥Ã£Ã® Ã¡Ã¥Ã±Ã±Ã¬Ã¥Ã°Ã²Ã­Ã»Ã¬
 			LAi_SetImmortal(characterFromID("Wilfred"), true);
 		break;
 
 		case "Wilfred_exit_failed":
-			//--------    .
+			//--------ÃÃ²Ã¯Ã°Ã Ã¢ÃªÃ  Ã“Ã¨Ã«Ã´Ã°Ã¥Ã¤Ã  Ã¢ Ã¢Ã®Ã°Ã®Ã²Ã  ÃƒÃ°Ã¨Ã­Ã´Ã®Ã°Ã¤Ã .
 			LAi_ActorRunToLocator(characterFromID("Wilfred"), "Reload","reload4", "Story_Wilfred_leaves_forever", 15.0);
 			LAi_SetPlayerType(pchar);
 			Pchar.quest.Story_2ndTask = "Second_part";
@@ -2589,21 +2591,21 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Wilfred_Exit_failed_in_last_moment":
-			//--------    .
+			//--------ÃÃ²Ã¯Ã°Ã Ã¢ÃªÃ  Ã“Ã¨Ã«Ã´Ã°Ã¥Ã¤Ã  Ãª Ã«Ã®ÃªÃ Ã²Ã®Ã°Ã³ Ã°Ã¥Ã«Ã®Ã Ã¤Ã .
 			LAi_ActorRunToLocator(characterFromID("Wilfred"), "Reload","reload2", "Story_Wilfred_leaves_forever", 15.0);
 			LAi_SetPlayerType(pchar);
 		break;
 
 		case "Story_Wilfred_leaves_forever":
-			//---------   ,       
+			//---------ÃÃ²Ã¯Ã°Ã Ã¢Ã«Ã¿Ã¥Ã¬ Ã“Ã¨Ã«Ã´Ã°Ã¥Ã¤Ã  Ã¢ Ã­Ã¨ÃªÃ³Ã¤Ã , Ã±Ã·Ã¨Ã²Ã Ã¿ Ã·Ã²Ã® Ã®Ã­ Ã®Ã² Ã£Ã®Ã°Ã¿ Ã±Ã¡Ã¥Ã¦Ã Ã« Ã¤Ã®Ã¬Ã®Ã©
 			ChangeCharacterAddress(characterFromID("Wilfred"), "None", "");
 		break;
 
 		case "Story_Convoy_Glover_to_Greenford":
 			AddQuestRecord("Story_2ndTask", "4");
-			//--------   
+			//--------Ã‡Ã Ã·Ã¨Ã±Ã«Ã¿Ã¥Ã¬ Ã¨Ã£Ã°Ã®ÃªÃ³ Ã¯Ã°Ã®Ã¢Ã Ã«Ã¥Ã­Ã­Ã»Ã© ÃªÃ¢Ã¥Ã±Ã²
 			Pchar.quest.Story_Glover_sunk = true;
-			//--------   
+			//--------Ã‘Ã²Ã Ã°Ã²Ã³Ã¥Ã¬ Ã¢Ã²Ã®Ã°Ã³Ã¾ Ã¯Ã®Ã«Ã®Ã¢Ã¨Ã­Ã³ Ã§Ã Ã¤Ã Ã­Ã¨Ã¿
 			Pchar.quest.Story_2ndTask = "Second_part";
 			LAi_SetSitType(characterFromID("CounterSpy"));
 			ChangeCharacterAddressGroup(characterFromID("CounterSpy"), "Oxbay_tavern", "Sit", "Sit6");
@@ -2612,13 +2614,13 @@ void QuestComplete(string sQuestName)
 
 		case "Story_Wilfred_go_to_shore_prepare":
 			AddPartyExp(pchar, 2500);
-			//---------   
+			//---------Ã“Ã±Ã²Ã Ã­Ã®Ã¢ÃªÃ  Ã¤Ã¨Ã Ã«Ã®Ã£Ã  ÃÃ¢Ã Ã­Ã³ ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã°Ã³
 			Characters[GetCharacterIndex("Ewan Glover")].Dialog.CurrentNode = "Are_you_ready";
 			LAi_type_actor_Reset(characterFromID("Ewan Glover"));
 			LAi_ActorDialog(characterFromID("Ewan Glover"), Pchar, "pchar_back_to_player", 3.0, 5.0);
-			//--------  
+			//--------Ã‡Ã Ã¯Ã¨Ã±Ã¼ Ã¢ Ã¦Ã³Ã°Ã­Ã Ã«
 			AddQuestRecord("Story_2ndTask","6");
-			//--------    .
+			//--------ÃÃ²Ã¯Ã°Ã Ã¢ÃªÃ  Ã“Ã¨Ã«Ã´Ã°Ã¥Ã¤Ã  Ã¢ Ã¢Ã®Ã°Ã®Ã²Ã  ÃƒÃ°Ã¨Ã­Ã´Ã®Ã°Ã¤Ã .
 			LAi_ActorRunToLocator(characterFromID("Wilfred"), "Reload", "reload4", "Story_Wilfred_go_to_shore", 60.0);
 		break;
 
@@ -2627,7 +2629,7 @@ void QuestComplete(string sQuestName)
 		break;
 		
 		case "Story_Wilfred_go_to_shore":
-			//---------   ,        
+			//---------ÃÃ²Ã¯Ã°Ã Ã¢Ã«Ã¿Ã¥Ã¬ Ã“Ã¨Ã«Ã´Ã°Ã¥Ã¤Ã  Ã¢ Ã­Ã¨ÃªÃ³Ã¤Ã , Ã±Ã·Ã¨Ã²Ã Ã¿ Ã·Ã²Ã® Ã®Ã­ Ã®Ã²Ã¯Ã°Ã Ã¢Ã¨Ã«Ã±Ã¿ Ã­Ã  Ã¡Ã¥Ã°Ã¥Ã£ Ã¢Ã±Ã²Ã°Ã¥Ã·Ã Ã²Ã¼ ÃÃ«Ã½Ã©Ã§Ã 
 			ChangeCharacterAddress(characterFromID("Wilfred"), "None", "");
 		break;
 
@@ -2639,31 +2641,31 @@ void QuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("Fra_patrolman_02"), "FRANCE_SOLDIERS"); 
 			LAi_group_MoveCharacter(characterFromID("Fra_patrolman_03"), "FRANCE_SOLDIERS"); 
 			LAi_group_MoveCharacter(characterFromID("Fra_patrolman_04"), "FRANCE_SOLDIERS"); 
-			//--------  
+			//--------ÃÃ®Ã¿Ã¢Ã«Ã¥Ã­Ã¨Ã¥ Ã´Ã°Ã Ã­Ã¶Ã³Ã§Ã±ÃªÃ¨Ãµ Ã±Ã®Ã«Ã¤Ã Ã²
 			ChangeCharacterAddressGroup(characterFromID("Fra_patrolman_01"), "Oxbay_shore_02", "reload", "reload2_back");
 			ChangeCharacterAddress(characterFromID("Fra_patrolman_02"), "Oxbay_shore_02", "locator27");
 			ChangeCharacterAddress(characterFromID("Fra_patrolman_03"), "Oxbay_shore_02", "locator26");
 			ChangeCharacterAddress(characterFromID("Fra_patrolman_04"), "Oxbay_shore_02", "locator13");
-			//-----------   
+			//-----------Ã‘Ã¬Ã¥Ã­Ã  Ã²Ã¨Ã¯Ã  Ã Ã­Ã£Ã«Ã¨Ã©Ã±ÃªÃ¨Ã¬ Ã±Ã®Ã«Ã¤Ã Ã²Ã Ã¬
 			LAi_group_MoveCharacter(characterFromID("Eng_land_soldier_01"), LAI_GROUP_PLAYER); 
 			LAi_group_MoveCharacter(characterFromID("Eng_land_soldier_02"), LAI_GROUP_PLAYER); 
 			LAi_group_MoveCharacter(characterFromID("Eng_land_soldier_03"), LAI_GROUP_PLAYER); 
 			LAi_group_MoveCharacter(characterFromID("Eng_land_soldier_04"), LAI_GROUP_PLAYER); 
-			//--------    	
+			//--------Ã­Ã Ã¯Ã Ã¤Ã¥Ã­Ã¨Ã¥ Ã¨Ãµ Ã­Ã  Ã£Ã°Ã³Ã¯Ã¯Ã³ Ã¨Ã£Ã°Ã®ÃªÃ 	
 			LAi_group_SetRelation("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 			LAi_group_FightGroups("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, true);
 			LAi_group_SetCheck("FRANCE_SOLDIERS", "Story_kill_french_patrol");
 
-			//--------   ,    .
+			//--------ÃÃ²Ã¯Ã°Ã Ã¢ÃªÃ  Ã“Ã¨Ã«Ã´Ã°Ã¥Ã¤Ã  Ãª Ã«Ã®ÃªÃ Ã²Ã®Ã°Ã³, Ã£Ã¤Ã¥ Ã®Ã­ Ã¡Ã³Ã¤Ã¥Ã² Ã¡Ã®Ã¿Ã²Ã¼Ã±Ã¿.
 			LAi_SetImmortal(characterFromID("Wilfred"), true);
 			Locations[FindLocation("Oxbay_shore_02")].reload.l3.disable = 1;
 		break;
 
 		case "Story_Glover_to_tavern_on_Greenford":
-			//----------   .
+			//----------Ã‚Ã»Ã±Ã²Ã Ã¢Ã«Ã¿Ã¥Ã¬ ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã°Ã³ Ã±Ã¨Ã¤Ã¿Ã·Ã³Ã¾ Ã¯Ã®Ã§Ã¨Ã¶Ã¨Ã¾.
 			LAi_type_actor_Reset(characterFromID("Ewan Glover"));
 			LAi_SetSitType(characterFromID("Ewan Glover"));
-			//---------     ,     .
+			//---------ÃÃ¥Ã°Ã¥Ã£Ã°Ã³Ã¦Ã Ã¥Ã¬ ÃÃ¢Ã Ã­Ã  ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã°Ã  Ã¢ Ã²Ã Ã¢Ã¥Ã°Ã­Ã³ ÃƒÃ°Ã¨Ã­Ã´Ã®Ã°Ã¤Ã , Ã£Ã¤Ã¥ Ã®Ã­ Ã¡Ã³Ã¤Ã¥Ã² Ã¦Ã¤Ã Ã²Ã¼ Ã¨Ã£Ã°Ã®ÃªÃ .
 			ChangeCharacterAddressGroup(characterFromID("Ewan Glover"), "Greenford_tavern", "sit", "sit4");
 			Characters[GetCharacterIndex("Ewan Glover")].Dialog.CurrentNode = "Are_you_ready_again";
 		break;
@@ -2688,14 +2690,14 @@ void QuestComplete(string sQuestName)
 				Locations[FindLocation("Greenford_town")].reload.l4.disable = 0;
 				if (!LAi_IsDead(characterFromID("Ewan Glover")))
 				{
-					//----------     
+					//----------Ã‚Ã»Ã±Ã Ã¦Ã¨Ã¢Ã Ã¥Ã¬ Ã€Ã­Ã£Ã«Ã¨Ã©Ã±ÃªÃ¨Ãµ Ã±Ã®Ã«Ã¤Ã Ã² Ã¢Ã¬Ã¥Ã±Ã²Ã¥ Ã± Ã¨Ã£Ã°Ã®ÃªÃ®Ã¬
 					ChangeCharacterAddress(characterFromID("Eng_land_soldier_01"), "Oxbay_shore_02", "locator7");
 					ChangeCharacterAddress(characterFromID("Eng_land_soldier_02"), "Oxbay_shore_02", "locator23");
 					ChangeCharacterAddress(characterFromID("Eng_land_soldier_03"), "Oxbay_shore_02", "locator24");
 					ChangeCharacterAddress(characterFromID("Eng_land_soldier_04"), "Oxbay_shore_02", "locator25");
 					Characters[GetCharacterIndex("Wilfred")].Dialog.CurrentNode = "Warning";
 				}
-				//----------  .
+				//----------ÃÃ®Ã¿Ã¢Ã«Ã¿Ã¥Ã¬ Ã¬Ã¥Ã±Ã²Ã­Ã®Ã£Ã® Ã¦Ã¨Ã²Ã¥Ã«Ã¿.
 				LAi_type_actor_Reset(characterFromID("Wilfred"));
 				LAi_type_actor_Reset(characterFromID("Wilfred"));
 				ChangeCharacterAddress(characterFromID("Wilfred"), "Oxbay_shore_02", "locator8");
@@ -2724,9 +2726,9 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Greenford_town")].reload.l4.disable = 0;
 			bQuestDisableMapEnter = false;
 			AddQuestRecord("Story_2ndTask", "8");
-			//--------   
+			//--------Ã‡Ã Ã·Ã¨Ã±Ã«Ã¿Ã¥Ã¬ Ã¨Ã£Ã°Ã®ÃªÃ³ Ã¯Ã°Ã®Ã¢Ã Ã«Ã¥Ã­Ã­Ã»Ã© ÃªÃ¢Ã¥Ã±Ã²
 			Pchar.quest.Story_Glover_sunk = true;
-			//--------   
+			//--------Ã‘Ã²Ã Ã°Ã²Ã³Ã¥Ã¬ Ã¢Ã²Ã®Ã°Ã³Ã¾ Ã¯Ã®Ã«Ã®Ã¢Ã¨Ã­Ã³ Ã§Ã Ã¤Ã Ã­Ã¨Ã¿
 			Pchar.quest.Story_2ndTask = "Second_part";
 			LAi_SetSitType(characterFromID("Counterspy"));
 			ChangeCharacterAddressGroup(characterFromID("CounterSpy"), "Oxbay_tavern", "Sit", "Sit6");
@@ -2740,7 +2742,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Wilfred_exit_complete":
-			//-----------      . 
+			//-----------Ã‚Ã®Ã§Ã¢Ã°Ã Ã¹Ã Ã¥Ã¬ Ã¨Ã£Ã°Ã®ÃªÃ  Ã¢ Ã²Ã Ã¢Ã¥Ã°Ã­Ã³ ÃƒÃ°Ã¨Ã­Ã´Ã®Ã°Ã¤Ã  Ã­Ã  Ã±Ã«Ã¥Ã¤. Ã¤Ã¥Ã­Ã¼
 			LAi_SetImmortal(characterFromID("Wilfred"), false);
 			ChangeCharacterAddress(characterFromID("Eng_land_soldier_01"), "None", "");
 			ChangeCharacterAddress(characterFromID("Eng_land_soldier_02"), "None", "");
@@ -2782,9 +2784,9 @@ void QuestComplete(string sQuestName)
 			pchar.quest.story_glover_to_tavern_on_greenford.over = "yes";
 			pchar.quest.story_convoy_glover_to_greenford.over = "yes";
 			
-			//-----------    
+			//-----------Ã‚Ã®Ã§Ã¢Ã°Ã Ã¹Ã Ã¥Ã¬ Ã¢Ã®Ã§Ã¬Ã®Ã¦Ã­Ã®Ã±Ã²Ã¼ Ã¢Ã»ÃµÃ®Ã¤Ã  Ã¢ ÃªÃ Ã°Ã²Ã³
 			bQuestDisableMapEnter = false;
-			//-----------     .
+			//-----------ÃÃ¢Ã Ã­ ÃƒÃ«Ã®Ã³Ã¢Ã¥Ã° Ã­Ã Ã·Ã¨Ã­Ã Ã¥Ã² Ã¤Ã¨Ã Ã«Ã®Ã£ Ã± Ã¨Ã£Ã°Ã®ÃªÃ®Ã¬.
 			LAi_SetActorType(characterFromID("Ewan Glover"));
 			LAi_SetActorType(pchar);
 			LAi_ActorWaitDialog(pchar, characterFromID("Ewan Glover"));
@@ -2908,7 +2910,7 @@ void QuestComplete(string sQuestName)
 
 		case "Blaze_and_Counterspy_exit_from_shipyard":
 			RemovePassenger(Pchar, characterFromID("Counterspy"));
-			//----------------     
+			//----------------Ã¯Ã¥Ã°Ã¥Ã£Ã°Ã³Ã§Ã¨Ã²Ã¼ Ã¨Ã£Ã°Ã®ÃªÃ  Ã¨ Ã¸Ã¯Ã¨Ã®Ã­Ã  Ã­Ã Ã¢Ã¥Ã°Ãµ Ã¢Ã¥Ã°Ã´Ã¨
 			LAi_Fade("Blaze_and_Counterspy_exit_from_shipyard_2", "Story_HiddenInShipyardWatch");
 		break;
 
@@ -2947,16 +2949,16 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_HiddenInShipyardWatch":
-			//----------------    
+			//----------------Ã‡Ã Ã´Ã¨ÃªÃ±Ã¨Ã²Ã¼ ÃªÃ Ã¬Ã¥Ã°Ã³ Ã¢ Ã­Ã³Ã¦Ã­Ã®Ã¬ Ã«Ã®ÃªÃ Ã²Ã®Ã°Ã¥
 			LAi_QuestDelay("Story_HiddenInShipyardWatch_2", 1.0);
 		break;
 
 		case "Story_HiddenInShipyardWatch_2":
-			//-----------------    .
+			//----------------- ÃŸÃ¢Ã¨Ã²Ã¼ Ã±Ã®Ã«Ã¤Ã Ã² Ã±ÃªÃ¢Ã®Ã§Ã¼ Ã¤Ã¢Ã¥Ã°Ã¼.
 			ChangeCharacterAddressGroup(characterFromID("Fra_arrester_04"),"Oxbay_Shipyard", "Reload","reload1");
 			ChangeCharacterAddressGroup(characterFromID("Fra_arrester_05"),"Oxbay_Shipyard", "Reload","reload1");
 			ChangeCharacterAddressGroup(characterFromID("Fra_arrester_06"),"Oxbay_Shipyard", "Reload","reload1");
-			//----------------     
+			//----------------ÃÃ Ã·Ã Ã²Ã¼ Ã¤Ã¨Ã Ã«Ã®Ã£ Ã¬Ã¥Ã¦Ã¤Ã³ Ã±Ã®Ã«Ã¤Ã Ã²Ã Ã¬Ã¨ Ã¨ ÃÃ³Ã½Ã­Ã®Ã¬
 			LAi_SetActorType(characterFromID("Fra_arrester_04"));
 			LAi_SetActorType(characterFromID("Fra_arrester_05"));
 			LAi_SetActorType(characterFromID("Fra_arrester_06"));
@@ -3061,7 +3063,7 @@ void QuestComplete(string sQuestName)
 		case "Story_LeaveOxbayWithRabelAndCounterspy":
 			Locations[FindLocation("Oxbay_port")].reload.l2.disable = 1;
 			Locations[FindLocation("Oxbay_port")].reload.l3.disable = 1;
-			//--------- ,      .
+			//---------ÃÃ  Ã±Ã«Ã³Ã·Ã Ã©, Ã¥Ã±Ã«Ã¨ Ã¨Ã£Ã°Ã®Ãª Ã¯Ã¥Ã°Ã¢Ã»Ã¬ Ã¤Ã®Ã¡Ã¥Ã¦Ã¨Ã² Ã¤Ã® Ã¢Ã®Ã°Ã®Ã².
 			PlaceCharacter(characterFromID("Counterspy"), "officers", "Oxbay_port");
 			PlaceCharacter(characterFromID("Rabel Iverneau"), "officers", "Oxbay_port");
 
@@ -3559,7 +3561,7 @@ void QuestComplete(string sQuestName)
 			RemoveCharacterCompanion(pchar, characterFromID("danielle"));
 
 			bQuestDisableMapEnter = true;
-			//--------------    
+			//--------------ÃÃ²ÃªÃ«Ã¾Ã·Ã¥Ã­Ã¨Ã¥ Ã¢Ã®Ã§Ã¬Ã®Ã¦Ã­Ã®Ã±Ã²Ã¨ Ã¢Ã»Ã£Ã°Ã³Ã§Ã¨Ã²Ã¼Ã±Ã¿ Ã­Ã  Ã®Ã±Ã²Ã°Ã®Ã¢
 			Island_SetReloadEnableGlobal("Oxbay", false);
 
 			DoReloadCharactertoLocation("Oxbay", "reload", "reload_4");
@@ -3577,9 +3579,9 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_FightingInGreenfordPort":
-			//-----------------         
+			//-----------------Ã‚Ã®Ã§Ã¢Ã°Ã Ã¹Ã¥Ã­Ã¨Ã¥ Ã±Ã®Ã±Ã²Ã®Ã¿Ã­Ã¨Ã¿ ÃÃ¥Ã«Ã®Ã Ã¤Ã®Ã¢ Ã®Ã±Ã²Ã°Ã®Ã¢Ã  ÃÃªÃ±Ã¡Ã½Ã© Ã¨ Ã¢Ã®Ã±Ã±Ã²Ã Ã­Ã®Ã¢Ã«Ã¥Ã­Ã¨Ã¥ Ã¢Ã»ÃµÃ®Ã¤Ã  Ã¢ ÃªÃ Ã°Ã²Ã³
 			Island_SetReloadEnableGlobal("Oxbay", true);
-			//         
+			//Ã‚Ã®Ã±Ã±Ã²Ã Ã­Ã®Ã¢Ã«Ã¥Ã­Ã¨Ã¥ Ã Ã¤Ã°Ã¥Ã±Ã  Ã«Ã®ÃªÃ Ã²Ã®Ã°Ã  Ã¯Ã¥Ã°Ã¥Ã£Ã°Ã³Ã§ÃªÃ¨ Ã¢ ÃÃ®Ã°Ã² ÃƒÃ°Ã¨Ã­Ã´Ã®Ã°Ã¤Ã  Ã¢Ã¬Ã¥Ã±Ã²Ã® Ã´Ã½Ã©ÃªÃ®Ã¢Ã®Ã£Ã® ÃƒÃ°Ã¨Ã­Ã´Ã®Ã°Ã¤Ã 
 			Islands[3].reload.l2.name = "reload_1";
 			Islands[3].reload.l2.go = "Greenford_port";
 			Islands[3].reload.l2.emerge = "reload1";
@@ -3726,7 +3728,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Researcher"), "Oxbay_lighthouse", "goto23");
 			
 			DoQuestReloadToLocation("Oxbay_lighthouse", "Goto", "goto24", "Story_TalkWithResearcherAfterSaving");
-			//    
+			//Ã“Ã¡Ã¨Ã°Ã Ã¥Ã¬ Ã Ã­Ã£Ã«Ã¨Ã©Ã±ÃªÃ¨Ãµ Ã±Ã®Ã«Ã¤Ã Ã² Ã¨Ã§ ÃƒÃ°Ã¨Ã­Ã´Ã®Ã°Ã¤Ã 
 			ChangeCharacterAddress(characterFromID("Eng_soldier_38"), "None", "");
 			ChangeCharacterAddress(characterFromID("Eng_soldier_39"), "None", "");
 			ChangeCharacterAddress(characterFromID("Eng_soldier_40"), "None", "");
@@ -3841,11 +3843,11 @@ void QuestComplete(string sQuestName)
 			DisableFastTravel(false);
 			DisableMenuLaunch(false);
 			CloseQuestHeader("Repel_English_Attack");
-			//-----------------         
+			//-----------------Ã‚Ã®Ã§Ã¢Ã°Ã Ã¹Ã¥Ã­Ã¨Ã¥ Ã±Ã®Ã±Ã²Ã®Ã¿Ã­Ã¨Ã¿ ÃÃ¥Ã«Ã®Ã Ã¤Ã®Ã¢ Ã®Ã±Ã²Ã°Ã®Ã¢Ã  ÃÃªÃ±Ã¡Ã½Ã© Ã¨ Ã¢Ã®Ã±Ã±Ã²Ã Ã­Ã®Ã¢Ã«Ã¥Ã­Ã¨Ã¥ Ã¢Ã»ÃµÃ®Ã¤Ã  Ã¢ ÃªÃ Ã°Ã²Ã³
 			Island_SetReloadEnableGlobal("oxbay",true);
 
 			bQuestDisableMapEnter = false;
-			//-----------------      
+			//-----------------Ã‚Ã®Ã§Ã¢Ã°Ã Ã¹Ã¥Ã­Ã¨Ã¥ Ã±Ã®Ã±Ã²Ã®Ã¿Ã­Ã¨Ã¿ Ã°Ã¥Ã«Ã®Ã Ã¤Ã  Ã¢Ã»ÃµÃ®Ã¤Ã  Ã¨Ã§ Ã£Ã°Ã¨Ã­Ã´Ã®Ã°Ã¤Ã±ÃªÃ®Ã© Ã²Ã Ã¢Ã¥Ã°Ã­Ã»
 			Locations[FindLocation("Greenford_tavern")].reload.l1.name = "reload1";
 			Locations[FindLocation("Greenford_tavern")].reload.l1.go = "Greenford_Town";
 			Locations[FindLocation("Greenford_tavern")].reload.l1.emerge = "reload7";
@@ -4326,7 +4328,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialogNow(characterFromID("Eng_soldier_5"), pchar, "", -1);
 		break;
 
-		//  
+		//Ã‚Ã»ÃµÃ®Ã¤Ã¨Ã¬ Ã®Ã² Ã£Ã³Ã¡Ã¥Ã°Ã­Ã Ã²Ã®Ã°Ã 
 		case "exit_from_silehard_complete":
 			pchar.quest.main_line = "talk_in_tavern_begin";
 			AddPartyExp(pchar, 7000);
@@ -4341,7 +4343,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Danielle"), "Quest_redmond_tavern", "goto2");
 			ChangeCharacterAddress(characterFromID("Ralph Fawn"), "Quest_redmond_tavern", "goto3");
 			ChangeCharacterAddressGroup(characterFromID("Charles Windem"), "Quest_redmond_tavern", "merchant", "goto1");
-			//    
+			//Ã„Ã¥Ã«Ã Ã¥Ã¬ Ã­Ã¥Ã¢Ã®Ã§Ã¬Ã®Ã¦Ã­Ã®Ã±Ã²Ã¼ Ã³Ã©Ã²Ã¨ Ã¨Ã§ Ã«Ã®ÃªÃ Ã¶Ã¨Ã¨
 			locations[FindLocation("Redmond_port")].reload.l2.disable = 1;
 			locations[FindLocation("Redmond_port")].reload.l3.disable = 1;
 			locations[FindLocation("Redmond_Shore_01")].reload.l2.disable = 1;
@@ -4364,14 +4366,14 @@ void QuestComplete(string sQuestName)
 			pchar.quest.to_quest_redmond_tavern.win_condition.l1 = "location";
 			pchar.quest.to_quest_redmond_tavern.win_condition.l1.location = "Quest_Redmond_tavern";
 			pchar.quest.to_quest_redmond_tavern.win_condition = "to_quest_redmond_tavern_complete";
-			//   
+			//Ã³Ã¡Ã¨Ã°Ã Ã¥Ã¬ Ã¢Ã»ÃµÃ®Ã¤ Ã¨Ã§ Ã²Ã Ã¢Ã¥Ã°Ã­Ã»
 			locations[FindLocation("quest_redmond_tavern")].reload.l1.disable = 1;
 			worldMap.islands.Oxbay.locations.city.label.icon = ENGLAND;
 		break;
 		
-		//    .
+		// Ã§Ã ÃµÃ®Ã¤Ã¨Ã¬ Ã¢ ÃªÃ¢Ã¥Ã±Ã²Ã®Ã¢Ã³Ã¾ Ã²Ã Ã¢Ã¥Ã°Ã­Ã³.
 		case "to_quest_redmond_tavern_complete":
-			//   
+			//Ã¢Ã®Ã±Ã±Ã²Ã Ã­Ã Ã¢Ã«Ã¨Ã¢Ã Ã¥Ã¬ Ã¢Ã»ÃµÃ®Ã¤Ã» Ã¨Ã§ Ã£Ã®Ã°Ã®Ã¤Ã 
 			locations[FindLocation("Redmond_port")].reload.l2.disable = 0;
 			locations[FindLocation("Redmond_port")].reload.l3.disable = 0;
 			locations[FindLocation("Redmond_Shore_01")].reload.l2.disable = 0;
@@ -4427,7 +4429,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorWaitDialog(pchar, characterFromID("soldier1"));
 		break;
 
-		//      e
+		//Ã±Ã®Ã«Ã¤Ã Ã² Ã¢ Ã²Ã Ã¢Ã¥Ã°Ã­Ã¥ Ã¡Ã¼Ã¥Ã² Ã­Ã Ã± Ã¯Ã® Ã¬Ã®Ã°Ã¤e
 		case "kicked_by_soldier_complete":
 			LAi_ActorAnimation(characterFromID("soldier1"), "attack_2", "kicked_by_soldier_2_complete", 0.5);
 		break;
@@ -4455,7 +4457,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetOfficerType(characterFromID("danielle"));
 			LAi_SetOfficerType(characterFromID("ralph fawn"));
 			LAi_group_FightGroups("ENGLAND_TAVERN_SOLDIERS", LAI_GROUP_PLAYER, true);
-			//    (  )
+			//Ã²Ã°Ã ÃªÃ²Ã¨Ã°Ã¹Ã¨Ãª Ã³Ã¡Ã¥Ã£Ã Ã¥Ã² Ã¢ Ã®Ã¡Ã»Ã·Ã­Ã³Ã¾ (Ã­Ã¥ ÃªÃ¢Ã¥Ã±Ã²Ã®Ã¢Ã³Ã¾ Ã²Ã Ã¢Ã¥Ã°Ã­Ã³)
 			LAi_SetActorType(characterFromID("Charles Windem"));
 			LAi_ActorRunToLocator(characterFromID("Charles Windem"), "merchant", "reload2", "Charles_escape_from_quest_redmond_tavern_complete", -1);
 			LAi_group_SetCheck("ENGLAND_TAVERN_SOLDIERS", "out_from_quest_tavern_complete");
@@ -4466,7 +4468,7 @@ void QuestComplete(string sQuestName)
 			LAi_KillCharacter(characterFromID("ralph fawn"));
 		break;
 
-		//    
+		//Ã±Ã¬Ã¥Ã°Ã²Ã¼ Ã¢Ã±Ã¥Ãµ Ã±Ã®Ã«Ã¤Ã Ã² Ã¢ Ã²Ã Ã¢Ã¥Ã°Ã­Ã¥
 		case "out_from_quest_tavern_complete":
 			LAi_LocationFightDisable(&Locations[FindLocation("Quest_redmond_tavern")], true);
 			pchar.quest.main_line = "fawn_death";
@@ -4481,9 +4483,9 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Danielle"), pchar, "pchar_back_to_player", 3.0, 1.0);
 		break;
 
-		//   ,   
+		//Ã„Ã Ã­Ã¨Ã¥Ã«Ã¼ Ã³Ã¡Ã¥Ã£Ã Ã¥Ã² Ã¨Ã§ Ã²Ã Ã¢Ã¥Ã°Ã­Ã», Ã®Ã±Ã²Ã Ã¢Ã«Ã¿Ã¿ Ã²Ã Ã¬ ÃÃ«Ã¥Ã©Ã§Ã 
 		case "danielle_escape_from_quest_redmond_tavern_complete":
-			// 
+			//Ã³Ã¡Ã¨Ã°Ã Ã¥Ã¬ Ã„Ã Ã­Ã¨Ã¥Ã«Ã¼
 			ChangeCharacterAddress(characterFromID("Danielle"), "none", "none");
 			LAi_QuestDelay("danielle_escape_from_quest_redmond_tavern_2_complete", 1.0);
 		break;
@@ -4514,9 +4516,9 @@ void QuestComplete(string sQuestName)
 			locCameraToPos(locx, locy, locz, false);
 		break;
 
-		//    
+		//Ã²Ã°Ã ÃªÃ²Ã¨Ã°Ã¹Ã¨Ãª Ã³Ã¡Ã¥Ã£Ã Ã¥Ã² Ã¨Ã§ ÃªÃ¢Ã¥Ã±Ã²Ã®Ã¢Ã®Ã© Ã²Ã Ã¢Ã¥Ã°Ã­Ã»
 		case "Charles_escape_from_quest_redmond_tavern_complete":
-			// 
+			//Ã³Ã¡Ã¨Ã°Ã Ã¥Ã¬ Ã²Ã°Ã ÃªÃ²Ã¨Ã°Ã¹Ã¨ÃªÃ 
 			ChangeCharacterAddressGroup(characterFromID("Charles Windem"), "Redmond_Tavern", "merchant", "goto1");
 			LAi_SetMerchantType(characterFromID("Charles Windem"));
 		break;
@@ -4538,17 +4540,17 @@ void QuestComplete(string sQuestName)
 			CloseQuestHeader("Blaze_out_from_silehard");
 			SetQuestHeader("Blaze_in_prison");
 			AddQuestRecord("Blaze_in_prison", "1");
-			//   
+			//Ã‚Ã»ÃªÃ«Ã¾Ã·Ã Ã¥Ã¬ Ã¢Ã»ÃµÃ®Ã¤ Ã¨Ã§ Ã²Ã¾Ã°Ã¼Ã¬Ã»
 			locations[FindLocation("Redmond_prison")].reload.l1.disable = 1;
-			//       
+			//Ã£Ã®Ã¢Ã®Ã°Ã¨Ã¬ Ã¯Ã®Ã¤Ã®Ã©Ã²Ã¨ ÃÃ¤Ã£Ã Ã°Ã³ Ãª Ã¡Ã«Ã¥Ã©Ã§Ã³ Ã¨ Ã­Ã Ã·Ã Ã²Ã¼ Ã°Ã Ã§Ã£Ã®Ã¢Ã®Ã°
 			LAi_ActorGoToLocator(characterFromID("Edgar Attwood"), "goto", "goto23", "Edgar_to_Blaze_complete", -1);
-			//  
+			//Ã¢ÃªÃ«Ã¾Ã·Ã Ã¥Ã¬ Ã®Ã¡Ã»Ã·Ã­Ã³Ã¾ Ã²Ã Ã¢Ã¥Ã°Ã­Ã³
 			locations[FindLocation("Redmond_town_01")].reload.l11.go = "Redmond_tavern";
-			//      
+			//Ã­Ã  Ã¢Ã±Ã¿ÃªÃ¨Ã© Ã±Ã«Ã³Ã·Ã Ã© Ã¥Ã¹Ã¥ Ã°Ã Ã§ Ã¯Ã¥Ã°Ã¥Ã¤Ã¢Ã¨Ã£Ã Ã¥Ã¬ Ã²Ã°Ã ÃªÃ²Ã¨Ã°Ã¹Ã¨ÃªÃ 
 			ChangeCharacterAddressGroup(characterFromID("Charles Windem"), "Redmond_Tavern", "merchant", "goto1");
 		break;
 
-		//   
+		//ÃÃ¤Ã£Ã Ã° Ã¯Ã®Ã¤ÃµÃ®Ã¤Ã¨Ã² Ãª Ã¡Ã«Ã¥Ã©Ã§Ã³
 		case "Edgar_to_Blaze_complete":
 			locx = stf(loadedLocation.locators.camera.camera13.x);
 			locy = stf(loadedLocation.locators.camera.camera13.y);
@@ -4569,7 +4571,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.to_locator_where_soldiers_in_prison_see_you.win_condition = "to_locator_where_soldiers_in_prison_see_you_complete";
 		break;
 
-		//   
+		//ÃÃ¤Ã£Ã Ã° Ã®Ã²ÃµÃ®Ã¤Ã¨Ã² Ã®Ã² ÃªÃ Ã¬Ã¥Ã°Ã»
 		case "wait_for_night_in_prison_complete":
 			pchar.quest.main_line = "inside_redmond_prison";
 			ChangeCharacterAddressGroup(characterFromID("Robert Christopher Silehard"), "Redmond_Prison", "merchant", "reload13");
@@ -4583,26 +4585,26 @@ void QuestComplete(string sQuestName)
 			LAi_Fade("blaze_exit_from_cam_complete", "second_speak_with_edgar_complete");
 		break;
 
-		//   
+		//ÃÃ«Ã¥Ã©Ã§ Ã¢Ã»ÃµÃ®Ã¤Ã¨Ã² Ã¨Ã§ ÃªÃ Ã¬Ã¥Ã°Ã»
 		case "blaze_exit_from_cam_complete":
 			EnableEquip(pchar, BLADE_ITEM_TYPE, true);
 			EnableEquip(pchar, GUN_ITEM_TYPE, true);
 			EquipCharacterByItem(pchar, FindCharacterItemByGroup(pchar, BLADE_ITEM_TYPE));
 			EquipCharacterByItem(pchar, FindCharacterItemByGroup(pchar, GUN_ITEM_TYPE));
-			//    
+			//Ã±Ã²Ã Ã¢Ã¨Ã¬ ÃÃ¤Ã£Ã Ã°Ã  Ã°Ã¿Ã¤Ã®Ã¬ Ã± Ã¡Ã«Ã¥Ã©Ã§Ã®Ã¬
 			locCameraFollow();
 			ChangeCharacterAddress(pchar, "Redmond_prison", "goto12");
 			pchar.quest.main_line = "escape_from_redmond_prison";
 			ChangeCharacterAddress(characterFromID("Edgar Attwood"), "redmond_prison", "goto23");
-			//       
+			//Ã¤Ã Ã¥Ã¬ ÃªÃ¢Ã¥Ã±Ã² Ã­Ã  Ã³Ã¡Ã¨Ã©Ã±Ã²Ã¢Ã® Ã¢Ã±Ã¥Ãµ Ã±Ã²Ã°Ã Ã¦Ã­Ã¨ÃªÃ®Ã¢ Ã¢ Ã²Ã¾Ã°Ã¼Ã¬Ã¥
 			pchar.quest.kill_all_soldiers_in_prison.win_condition.l1 = "NPC_Death";
 			pchar.quest.kill_all_soldiers_in_prison.win_condition.l1.character = "Eng_soldier_35";
 			pchar.quest.kill_all_soldiers_in_prison.win_condition.l2 = "NPC_Death";
 			pchar.quest.kill_all_soldiers_in_prison.win_condition.l2.character = "Eng_soldier_36";
 			pchar.quest.kill_all_soldiers_in_prison.win_condition = "kill_all_soldiers_in_prison_complete";
-			// ,  ,      .
+			//Ã¯Ã°Ã®Ã¤Ã®Ã«Ã¦Ã Ã¥Ã¬ Ã°Ã Ã§Ã£Ã®Ã¢Ã®Ã°, Ã£Ã¤Ã¥ Ã£Ã®Ã¢Ã®Ã°Ã¨Ã¬, Ã·Ã²Ã® Ã­Ã³Ã¦Ã­Ã® Ã³Ã¡Ã¨Ã²Ã¼ Ã±Ã®Ã«Ã¤Ã Ã² Ã­Ã  Ã¢Ã»ÃµÃ®Ã¤Ã¥.
 			characters[GetCharacterIndex("Robert Christopher Silehard")].dialog.CurrentNode = "escape_from_prison_node";
-			//  
+			//Ã¢Ã°Ã¥Ã¬Ã¥Ã­Ã­Ã® Ã¯Ã°Ã¿Ã·Ã¥Ã¬ Ã£Ã³Ã¡Ã¥Ã°Ã­Ã Ã²Ã®Ã°Ã 
 			ChangeCharacterAddress(characterFromID("Robert Christopher Silehard"), "none", "none");
 			LAi_LocationFightDisable(&Locations[FindLocation("redmond_prison")], false);
 		break;
@@ -4613,7 +4615,7 @@ void QuestComplete(string sQuestName)
 				LAi_SetPlayerType(pchar);
 				pchar.quest.edgar_life = "death";
 				AddQuestRecord("Blaze_in_prison", "4");
-				//      .
+				//Ã±Ã®Ã«Ã¤Ã Ã²Ã» Ã±Ã«Ã»Ã¸Ã Ã² Ã¸Ã³Ã¬ Ã¨ Ã¨Ã¤Ã³Ã² Ã¢Ã®Ã¥Ã¢Ã Ã²Ã¼ Ã¨Ã£Ã°Ã®ÃªÃ .
 				LAi_group_SetRelation("ENGLAND_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 				OfficersReaction("bad");
 			}
@@ -4623,7 +4625,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Edgar Attwood"), pchar, "", 1.0, 1.0);
 		break;
 		
-		//   
+		//Ã±Ã Ã©Ã«ÃµÃ Ã°Ã¤ Ã¯Ã®Ã¤ÃµÃ®Ã¤Ã¨Ã² Ãª Ã¡Ã«Ã¥Ã©Ã§Ã³
 		case "Silehard_to_Blaze_complete":
 			LAi_SetCitizenType(characterFromID("Edgar Attwood"));
 			LAi_ActorDialogNow(characterFromID("Robert Christopher Silehard"), pchar, "", -1);
@@ -4646,7 +4648,7 @@ void QuestComplete(string sQuestName)
 			RecalculateJumpTable();
 		break;
 
-		//     
+		//Ã¯Ã°Ã®ÃµÃ®Ã¤Ã¨Ã¬ Ã§Ã  Ã±Ã Ã©Ã«ÃµÃ Ã°Ã¤Ã®Ã¬ Ã¢ Ã¥Ã£Ã® ÃªÃ Ã¡Ã¨Ã­Ã¥Ã²
 		case "blaze_from_prison_to_residence_complete":
 			ReStorePassengers("Blaze");
 			LAi_group_SetRelation("ENGLAND_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_FRIEND);
@@ -4669,11 +4671,11 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterFromID("Redmond prison commendant"), "redmond_prison", "sit", "sit1");
 
 			DeleteAttribute(Pchar, "Quest.Story_OxbayCaptured"); 
-			//   
+			//Ã‘Ã¬Ã¥Ã­Ã  Ã­Ã Ã¶Ã¨Ã®Ã­Ã Ã«Ã¼Ã­Ã®Ã±Ã²Ã¨ Ã´Ã®Ã°Ã²Ã  ÃÃªÃ±Ã¡Ã½Ã¿
 			Characters[GetCharacterIndex("Oxbay Commander")].nation = ENGLAND;
 			Characters[GetCharacterIndex("Oxbay Commander")].model = "Soldier_Eng";
-			//      
-			// 
+			//Ã‘Ã¬Ã¥Ã­Ã  Ã´Ã°Ã Ã­Ã¶Ã³Ã§Ã±ÃªÃ¨Ãµ Ã±Ã®Ã«Ã¤Ã Ã² Ã¢ ÃÃªÃ±Ã¡Ã½Ã¥ Ã­Ã  Ã Ã­Ã£Ã«Ã¨Ã©Ã±ÃªÃ¨Ãµ
+			//Ã“Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¥ Ã´Ã°Ã Ã­Ã¶Ã³Ã§Ã±ÃªÃ¨Ãµ
 			ChangeCharacterAddress(characterFromID("Fra_occupant_01"), "None", "");
 			ChangeCharacterAddress(characterFromID("Fra_occupant_02"), "None", "");
 			ChangeCharacterAddress(characterFromID("Fra_occupant_03"), "None", "");
@@ -4686,7 +4688,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Occ_Patrol_2"), "none", "");
 			ChangeCharacterAddress(characterFromID("Occ_Patrol_3"), "none", "");
 			ChangeCharacterAddress(characterFromID("Occ_Patrol_4"), "none", "");
-			// 
+			//ÃÃ®Ã±Ã²Ã Ã­Ã®Ã¢ÃªÃ  Ã Ã­Ã£Ã«Ã¨Ã©Ã±ÃªÃ¨Ãµ
 			ChangeCharacterAddress(characterFromID("Ox_Soldier_1"), "Oxbay_town", "goto3");
 			ChangeCharacterAddress(characterFromID("Ox_Soldier_2"), "Oxbay_town", "goto4");
 			ChangeCharacterAddress(characterFromID("Ox_Soldier_3"), "Oxbay_town", "goto1");
@@ -4699,7 +4701,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Ox_Patrol_2"), "Oxbay_port", "goto12");
 			ChangeCharacterAddress(characterFromID("Ox_Patrol_3"), "Oxbay_town", "goto31");
 			ChangeCharacterAddress(characterFromID("Ox_Patrol_4"), "Oxbay_town", "goto20");
-			//      
+			//Ã“Ã¡Ã¨Ã°Ã Ã­Ã¨Ã¥ Ã¨Ã§ Ã£Ã Ã¢Ã Ã­Ã¨ ÃÃªÃ±Ã¡Ã½Ã¿ ÃªÃ®Ã°Ã Ã¡Ã«Ã¥Ã© Ã´Ã°Ã Ã­Ã¶Ã³Ã§Ã±ÃªÃ®Ã© Ã½Ã±ÃªÃ Ã¤Ã°Ã»
 			Group_SetAddress("Story_French_Squadron", "none", "Quest_Ships","Quest_Ship_7");
 			LAi_SetImmortal(characterFromID("FalaiseDeFleur Commander"), false);
 			LAi_SetImmortal(characterFromID("Oxbay Commander"), false);
@@ -4714,10 +4716,10 @@ void QuestComplete(string sQuestName)
 			LAi_SetHuberStayType(characterFromID("Robert Christopher Silehard"));
 		break;
 
-		//    
+		//Ã³Ã¡Ã¨Ã²Ã¼ Ã¢Ã±Ã¥Ãµ Ã±Ã®Ã«Ã¤Ã Ã² Ã¢ Ã²Ã¾Ã°Ã¼Ã¬Ã¥
 		case "kill_all_soldiers_in_prison_complete":
 			LAi_group_SetRelation("ENGLAND_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_FRIEND);
-			//      
+			//Ã¯Ã®Ã¿Ã¢Ã«Ã¥Ã­Ã¨Ã¿ Ã£Ã³Ã¡Ã¥Ã°Ã­Ã Ã²Ã®Ã°Ã  Ã±Ã® Ã±Ã²Ã°Ã Ã¦Ã­Ã¨ÃªÃ Ã¬Ã¨ Ã¨ Ã­Ã Ã·Ã Ã«Ã® Ã°Ã Ã§Ã£Ã®Ã¢Ã®Ã°Ã 
 			LAi_QuestDelay("Silehard_in_prison_complete", 3.0);
 		break;
 
@@ -4730,13 +4732,13 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Robert Christopher Silehard"), pchar, "", 5.0, 0);
 		break;
 
-		//    ,     
+		//Ã¡Ã«Ã¥Ã©Ã§ Ã¤Ã®Ã±Ã²Ã¨Ã£Ã Ã¥Ã² Ã«Ã®ÃªÃ Ã²Ã®Ã°Ã  Ã¢ Ã²Ã¾Ã°Ã¼Ã¬Ã¥, Ã§Ã  ÃªÃ®Ã²Ã®Ã°Ã»Ã¬ Ã¥Ã£Ã® Ã¢Ã¨Ã¤Ã¿Ã² Ã±Ã²Ã°Ã Ã¦Ã­Ã¨ÃªÃ¨
 		case "to_locator_where_soldiers_in_prison_see_you_complete":
 			if (pchar.quest.main_line == "escape_from_redmond_prison")
 			{
 				LAi_group_SetRelation("ENGLAND_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 				LAi_group_FightGroups("ENGLAND_SOLDIERS", LAI_GROUP_PLAYER, true);
-				//  
+				//Ã“Ã¡Ã¨Ã°Ã Ã¥Ã¬ Ã±Ã¨Ã¤Ã¿Ã¹Ã¥Ã£Ã® Ã±Ã®Ã«Ã¤Ã Ã²Ã 
 				ChangeCharacterAddress(characterFromID("Redmond prison commendant"), "none", "none");
 			}
 		break;
@@ -4747,7 +4749,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Edgar Attwood"), pchar, "", 3.0, 1.0);
 		break;
 
-		// ,     
+		//Ã¯Ã®Ã¿Ã¢Ã«Ã¥Ã­Ã¨Ã¥ Ã¬Ã³Ã¦Ã¨ÃªÃ , Ã¤Ã Ã¾Ã¹Ã¥Ã£Ã® Ã¨Ã­Ã´Ã®Ã°Ã¬Ã Ã¶Ã¨Ã¾ Ã® Ã¬Ã¥Ã±Ã²Ã®Ã­Ã ÃµÃ®Ã¦Ã¤Ã¥Ã­Ã¨Ã¨ Ã°Ã¥Ã©Ã¬Ã±Ã 
 		case "ines_denied_exit_from_tavern_complete":
 			pchar.quest.kill_pirate_for_rheims_lore.win_condition.l1 = "NPC_death";
 			pchar.quest.kill_pirate_for_rheims_lore.win_condition.l1.character = "quest_pirate_01";
@@ -4787,7 +4789,7 @@ void QuestComplete(string sQuestName)
 		case "kill_pirate_for_rheims_lore_complete":
 			AddQuestRecord("Blaze_search_Rheims", "13");
 			pchar.quest.main_line = "blaze_talk_with_innes_diaz_complete_21";
-			//    
+			//Ã¢Ã®Ã§Ã°Ã Ã¦Ã¤Ã Ã¥Ã¬ Ã¯Ã¨Ã°Ã Ã²Ã  Ã¤Ã«Ã¿ Ã±Ã«Ã¥Ã¤Ã³Ã¾Ã¹Ã¨Ãµ Ã±Ã¶Ã¥Ã­Ã®Ãª
 			characters[getCharacterIndex("quest_pirate_01")].location = "none";
 			LAi_SetCurHP(characterFromID("quest_pirate_01"), 80.0); 
 			
@@ -4796,7 +4798,7 @@ void QuestComplete(string sQuestName)
 			OfficersReaction("bad");
 		break;
 
-		//      
+		//Ã£Ã®Ã¢Ã®Ã°Ã¨Ã¬ ÃªÃ®Ã­Ã²Ã°Ã Ã¡Ã Ã­Ã¤Ã¨Ã±Ã²Ã Ã¬ Ã®Ã²Ã¢Ã¥Ã±Ã²Ã¨ Ã¡Ã«Ã¥Ã©Ã§Ã  Ãª ÃªÃ Ã¬Ã¨Ã«Ã® Ã¬Ã Ã·Ã Ã¤Ã®
 		case "exit_from_duarte_complete":
 			PlaceCharacter(characterFromID("quest_smuggler_01"), "goto", "Conceicao_town");
 			
@@ -4812,7 +4814,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("quest_smuggler_01"),  pchar, "pchar_back_to_player", 5.0, 1.0);
 		break;
 		
-		//      
+		//Ã¯Ã¥Ã°Ã¢Ã»Ã© Ã°Ã Ã§ Ã¯Ã®Ã¯Ã Ã¤Ã Ã¥Ã¬ Ã¢ Ã¤Ã®Ã¬ Ãª ÃŒÃ Ã·Ã Ã¤Ã®
 		case "blaze_first_speak_with_machado_complete":
 			Locations[FindLocation("Rheims_house_in_smugglers")].reload.l1.disable = 1;
 			Locations[FindLocation("Conceicao_town")].reload.l3.disable = 0;
@@ -4831,25 +4833,25 @@ void QuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("Camilo Machado"), "SMUGGLERS_CITIZENS");
 		break;
 
-		//    
+		//Ã¡Ã«Ã¥Ã©Ã§ Ã¦Ã¤Ã Ã« Ã­Ã®Ã·Ã¨ Ã¢ Ã²Ã Ã¢Ã¥Ã°Ã­Ã¥
 		case "wait_for_night_complete":
-			// .
+			//Ã¢ÃªÃ«Ã¾Ã·Ã Ã¥Ã¬ Ã­Ã®Ã·Ã¼.
 			pchar.quest.main_line = "night_for_rheims_house_complete";
 			Locations[FindLocation("Smugglers_Lair")].reload.l6.disable = 0;
 			AddQuestrecord("Blaze_search_Rheims", "8");
 		break;
 
-		//    
+		//Ã¡Ã«Ã¥Ã©Ã§ Ã¦Ã¤Ã¥Ã² Ã­Ã®Ã·Ã¨ Ã¢ ÃªÃ®Ã¬Ã­Ã Ã²Ã¥
 		case "wait_for_night_in_room_complete":
 			pchar.quest.main_line = "night_for_rheims_house";
 		break;
 
-		//    
+		//ÃÃ«Ã¥Ã©Ã§ Ã¯Ã°Ã®Ã¡Ã°Ã Ã«Ã±Ã¿ Ã¢ Ã¤Ã®Ã¬ ÃÃ¥Ã©Ã¬Ã±Ã 
 		case "blaze_to_rheims_house_in_smugglers_complete":
 			LAi_QuestDelay("blaze_to_rheims_house_in_smugglers_find_book_complete", 2.0);
 		break;
 		
-		//  .
+		//ÃÃ«Ã¥Ã©Ã§ Ã­Ã Ã¸Ã¥Ã« ÃªÃ­Ã¨Ã£Ã³.
 		case "blaze_to_rheims_house_in_smugglers_find_book_complete":
 			LAi_SetActorType(pchar);
 			LAi_ActorGoToLocator(pchar, "goto", "goto2", "blaze_to_rheims_house_in_smugglers_find_book_complete_2", 2.0);
@@ -4858,7 +4860,7 @@ void QuestComplete(string sQuestName)
 		case "blaze_to_rheims_house_in_smugglers_find_book_complete_2":
 			characters[GetCharacterIndex("Robert Christopher Silehard")].dialog.CurrentNode = "blaze_return_to_silehard_node";
 			pchar.quest.main_line = "blaze_found_book_in_rheims_house";
-			// 
+			//Ã„Ã®Ã¡Ã Ã¢Ã«Ã¿Ã¥Ã¬ Ã¯Ã°Ã¥Ã¤Ã¬Ã¥Ã²
 			GiveItem2Character(pchar, RHEIMS_JOURNAL);
 			LAi_ActorSelfDialog(pchar, "");
 		break;
@@ -4867,7 +4869,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Rheims_house_in_smugglers")].reload.l1.disable = 0;
 			if (LAi_IsDead(characterFromID("Macario Regalo")) && LAi_IsDead(characterFromID("Evaristo Filho")))
 			{
-				//  
+				//Ã¯Ã®Ã¿Ã¢Ã«Ã¿Ã¥Ã¬ Ã¤Ã°Ã³Ã£Ã¨Ãµ Ã±Ã²Ã°Ã Ã¦Ã­Ã¨ÃªÃ®Ã¢
 				ChangeCharacterAddressGroup(characterFromID("Fernam  Barrios"), "Rheims_house_in_smugglers", "reload", "reload1");
 				ChangeCharacterAddressGroup(characterFromID("Leborio Violate"), "Rheims_house_in_smugglers", "reload", "reload1");
 				LAi_SetActorType(characterfromID("Leborio Violate"));
@@ -4876,7 +4878,7 @@ void QuestComplete(string sQuestName)
 			}
 			else
 			{
-				//    
+				//Ã¯Ã®Ã¿Ã¢Ã«Ã¿Ã¥Ã¬ Ã±Ã²Ã°Ã Ã¦Ã­Ã¨ÃªÃ®Ã¢ Ã³ Ã¤Ã®Ã¬Ã  Ã°Ã¥Ã©Ã¬Ã±Ã 
 				ChangeCharacterAddressGroup(characterFromID("Macario Regalo"), "Rheims_house_in_smugglers", "reload", "reload1");
 				ChangeCharacterAddressGroup(characterFromID("Evaristo Filho"), "Rheims_house_in_smugglers", "reload", "reload1");
 				LAi_SetActorType(characterfromID("Evaristo Filho"));
@@ -4908,7 +4910,7 @@ void QuestComplete(string sQuestName)
 			LAi_group_SetCheck("SMUGGLERS_SOLDIERS", "kill_guards_in_rheims_house_smugglers_complete");
 		break;
 		
-		//  
+		//Ã¡Ã«Ã¥Ã©Ã§ Ã³Ã¡Ã¨Ã¢Ã Ã¥Ã² Ã±Ã²Ã°Ã Ã¦Ã­Ã¨ÃªÃ®Ã¢
 		case "kill_guards_in_rheims_house_smugglers_complete":
 			if (pchar.location == "Rheims_house_in_smugglers")
 			{
@@ -4925,7 +4927,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetHP(characterFromID("quest_pirate_01"), 80.0, 80.0);
 		break;
 
-		//  
+		//Ã¡Ã«Ã¥Ã©Ã§ Ã³Ã¡Ã¨Ã¢Ã Ã¥Ã² Ã±Ã²Ã°Ã Ã¦Ã­Ã¨ÃªÃ®Ã¢
 		case "kill_guards_in_rheims_house_smugglers_2_complete":
 			LAi_group_SetRelation("SMUGGLERS_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_FRIEND);
 			AddQuestrecord("Blaze_search_Rheims", "9");
@@ -4938,7 +4940,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorGoToLocator(characterfromID("Friedrich Corleis"), "Merchant", "reload3", "blaze_to_incas_collection_begin_1_complete", -1);
 		break;
 
-		//     
+		//Ã’Ã°Ã ÃªÃ²Ã¨Ã°Ã¹Ã¨Ãª Ã­Ã  Ã„Ã³Ã¢Ã¥Ã§Ã¥Ã­Ã¥ Ã³ÃµÃ®Ã¤Ã¨Ã² Ã§Ã  Ã¯Ã¨Ã°Ã Ã²Ã®Ã¬
 		case "blaze_to_incas_collection_begin_1_complete":
 			ChangeCharacterAddress(characterFromID("Friedrich Corleis"), "none", "");
 			LAi_QuestDelay("wait_for_pirate_in_tavern_complete", 2.0);
@@ -4970,7 +4972,7 @@ void QuestComplete(string sQuestName)
 			reStorePassengers(pchar.id);
 		break;
 
-		//       
+		//Ã¯Ã¨Ã°Ã Ã² Ã®Ã¡ÃºÃ¿Ã±Ã­Ã¿Ã¥Ã² Ã­Ã Ã¬ ÃªÃ Ãª Ã¯Ã®Ã¯Ã Ã±Ã²Ã¼ Ã¢ Ã«Ã®Ã£Ã®Ã¢Ã® Ã¯Ã¨Ã°Ã Ã²Ã®Ã¢
 		case "incas_collection_to_douwesen_town_exit":
 			LAi_ActorDialog(characterFromID("quest_pirate_01"), pchar, "", 2.0, 1.0);
 		break;
@@ -5155,7 +5157,7 @@ void QuestComplete(string sQuestName)
 			SetCharacterShipLocation(&characters[GetCharacterIndex("Pirate Captain 05")], "none");
 		break;
 
-		//   
+		//Ã­Ã Ã·Ã¨Ã­Ã Ã¥Ã²Ã±Ã¿ Ã±Ã¶Ã¥Ã­ÃªÃ  Ã± Ã¨Ã§Ã®Ã¡Ã°Ã¥Ã²Ã Ã²Ã¥Ã«Ã¥Ã¬
 		case "prepare_for_first_meeting_with_researcher":
 			pchar.quest.prepare_fighting_on_deck_complete.over = "yes";
 			ChangeCharacterAddress(characterFromID("Bernard Gosling"), "none", "none");
@@ -5312,7 +5314,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetStayType(pchar);
 			Locations[FindLocation("Greenford_town")].reload.l9.disable = 0;
 			pchar.quest.main_line = "resque_researcher_complete";
-			// .
+			//Ã³Ã¡Ã¨Ã°Ã Ã¥Ã¬ Ã±Ã²Ã®Ã«Ã¡.
 			
 			Locations[FindLocation("Greenford_town")].models.always.koster = "";
 			Locations[FindLocation("Greenford_town")].models.always.koster.locator.group = "";
@@ -5328,7 +5330,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.main_line = "resque_researcher_complete";
 			LAi_type_actor_Reset(characterFromID("researcher"));
 			ChangeCharacterAddressGroup(pchar, "Greenford_town", "reload", "reload1");
-			// .
+			//Ã³Ã¡Ã¨Ã°Ã Ã¥Ã¬ Ã±Ã²Ã®Ã«Ã¡.
 			Locations[FindLocation("Greenford_town")].models.always.koster = "";
 			Locations[FindLocation("Greenford_town")].models.always.koster.locator.group = "";
 			Locations[FindLocation("Greenford_town")].models.always.koster.locator.name = "";
@@ -5477,14 +5479,14 @@ void QuestComplete(string sQuestName)
 			CloseQuestHeader("blaze_to_incas_collection");
 		break;
 
-		//         
+		//Ã¢Ã®Ã§Ã¢Ã°Ã Ã¹Ã Ã¥Ã¬Ã±Ã¿ Ã­Ã  Ã¬Ã Ã¿Ãª Ã¤Ã«Ã¿ Ã°Ã Ã§Ã£Ã®Ã¢Ã®Ã°Ã  Ã¤Ã Ã­Ã¨Ã½Ã«Ã¼ Ã¨ Ã®Ã²Ã¯Ã«Ã»Ã²Ã¨Ã¿ Ã§Ã  Ã°Ã¥Ã©Ã¬Ã±Ã®Ã¬
 		case "return_to_lighthouse_search_rheims_complete":
 			PlaceCharacter(characterFromID("Danielle"), "goto", "Oxbay_lighthouse");
 			LAi_SetActorType(characterFromID("danielle"));
 			LAi_ActorDialog(characterFromID("Danielle"), pchar, "", 50, 0);
 		break;
 
-		//   
+		//Ã¯Ã°Ã¨Ã¡Ã»Ã¢Ã Ã¥Ã¬ Ã¢ Ã¯Ã®Ã°Ã² Ã¤Ã³Ã¢Ã¥Ã§Ã¥Ã­Ã 
 		case "to_douwesen_port_search_blaze_complete":
 			if (pchar.quest.main_line == "blaze_goto_douwesen_with_danielle")
 			{
@@ -5501,7 +5503,7 @@ void QuestComplete(string sQuestName)
 			}
 		break;
 
-		//    
+		//Ã¯Ã°Ã¨Ã¡Ã»Ã¢Ã Ã¥Ã¬ Ã­Ã  Ã¯Ã¥Ã°Ã¢Ã»Ã© Ã¯Ã«Ã¿Ã¦ Ã¤Ã³Ã¢Ã¥Ã§Ã¥Ã­Ã 
 		case "to_douwesen_shore_1_search_blaze_complete":
 			if (pchar.quest.main_line == "blaze_goto_douwesen_with_danielle")
 			{
@@ -5518,7 +5520,7 @@ void QuestComplete(string sQuestName)
 			}
 		break;
 
-		//    
+		//Ã¯Ã°Ã¨Ã¡Ã»Ã¢Ã Ã¥Ã¬ Ã­Ã  Ã¢Ã²Ã®Ã°Ã®Ã© Ã¯Ã«Ã¿Ã¦ Ã¤Ã³Ã¢Ã¥Ã§Ã¥Ã­Ã 
 		case "to_douwesen_shore_2_search_blaze_complete":
 			if (pchar.quest.main_line == "blaze_goto_douwesen_with_danielle")
 			{
@@ -5558,7 +5560,7 @@ void QuestComplete(string sQuestName)
 			SetCharacterRemovable(characterFromID("danielle"), false);
 		break;
 
-		//    ,    
+		//Ã§Ã ÃµÃ®Ã¤Ã¨Ã¬ Ã¢ Ã²Ã Ã¢Ã¥Ã°Ã­Ã³ Ã§Ã  Ã‚Ã¨Ã­Ã±Ã¥Ã²Ã®Ã¬, ÃªÃ®Ã²Ã®Ã°Ã»Ã© Ã¯Ã®ÃªÃ Ã¦Ã¥Ã² Ã­Ã Ã¬ Ã°Ã¥Ã©Ã¬Ã±Ã 
 		case "goto_with_danielle_to_douwesen_tavern_for_rheims_complete":
 			LAi_SetActorType(characterFromID("vincent bethune"));
 			LAi_SetActorType(pchar);
@@ -5572,7 +5574,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Vincent Bethune"), pchar, "goto_with_danielle_to_douwesen_tavern_for_rheims_complete_3", 1.0, 1.0);
 		break;
 
-		//    
+		//Ã‚Ã¨Ã­Ã±Ã¥Ã­Ã² Ã¨Ã¤Ã¥Ã² Ã§Ã  Ã±Ã¢Ã®Ã¨Ã¬Ã¨ Ã£Ã®Ã«Ã®Ã¢Ã®Ã°Ã¥Ã§Ã Ã¬Ã¨
 		case "vincent_away_from_tavern_complete":
 			ChangeCharacterAddress(characterFromID("Vincent Bethune"), "none", "none");
 		break;
@@ -5597,7 +5599,7 @@ void QuestComplete(string sQuestName)
 			locations[FindLocation("Douwesen_town_exit")].reload.l2.disable = 1;
 		break;
 
-		//       
+		//Ã¢Ã»ÃµÃ®Ã¤Ã¨Ã¬ Ã¢ Ã£Ã®Ã°Ã®Ã¤ Ã¨ Ã­Ã  Ã­Ã Ã± Ã­Ã Ã¯Ã Ã¤Ã¾Ã² Ã£Ã®Ã«Ã®Ã¢Ã®Ã°Ã¥Ã§Ã»
 		case "from_town_to_jungle_to_rheims_house_complete":
 			PlaceCharacter(characterFromID("danielle"), "goto", "douwesen_town_exit");
 			PlaceCharacter(characterFromID("Raoul Rheims"), "goto", "Douwesen_town_exit");
@@ -5625,7 +5627,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.prepare_dagger.win_condition = "prepare_dagger";
 		break;
 
-		//   
+		//Ã„Ã Ã­Ã¨Ã½Ã«Ã¼ Ã± ÃÃ¥Ã©Ã¬Ã±Ã®Ã¬ Ã³Ã¡Ã¥Ã£Ã Ã¾Ã²
 		case "danielle_with_rheims_runaway_complete":
 			ChangeCharacterAddressGroup(characterFromID("Danielle"), "Rheims_house_inside", "item", "item1");
 			ChangeCharacterAddress(characterFromID("Raoul Rheims"), "Rheims_house_inside", "goto1");
@@ -5691,7 +5693,7 @@ void QuestComplete(string sQuestName)
 			locations[FindLocation("Douwesen_town_exit")].reload.l2.disable = 0;
 		break;
 
-		//     
+		//ÃÃ«Ã½Ã©Ã§ Ã±Ã«Ã»Ã¸Ã¨Ã² Ã¤Ã¨Ã Ã«Ã®Ã£ Ã„Ã Ã­Ã¨Ã¥Ã«Ã¼ Ã± ÃÃ¥Ã©Ã¬Ã±Ã®Ã¬
 		case "start_quest_movie_speak_with_rheims_complete":
 			locx = stf(loadedLocation.locators.camera.locator4.x);
 			locy = stf(loadedLocation.locators.camera.locator4.y);
@@ -5722,7 +5724,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.kill_ferro_cerezo_complete.over = "yes";
 		break;
 
-		//   
+		//Ã¡Ã«Ã½Ã©Ã§Ã  Ã¡Ã¼Ã¾Ã² Ã¯Ã® Ã¡Ã Ã¸ÃªÃ¥
 		case "to_oxbay_mine_complete":
 			if (pchar.location.locator == "reload1")
 			{
@@ -5834,7 +5836,7 @@ void QuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("mine_soldier_01"), "ENGLAND_SOLDIERS");
 		break;
 
-		// ,   .
+		//Ã¢ÃªÃ«Ã¾Ã·Ã Ã¥Ã¬ Ã°Ã®Ã«Ã¨Ãª, Ã°Ã Ã±Ã±Ã²Ã Ã¢Ã«Ã¿Ã¥Ã¬ Ã¢Ã±Ã¥Ãµ Ã¯Ã¥Ã°Ã±Ã®Ã­Ã Ã¦Ã¥Ã©.
 		case "movie_with_fight_complete":
 			SetCurrentTime(23, 0);
 			characters[GetCharacterIndex("danielle")].skill.fencing = "7";
@@ -5926,13 +5928,13 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "blaze_to_map_complete":
-			//   
+			//Ã§Ã Ã¤Ã¨Ã§Ã¥Ã©Ã¡Ã«Ã¨Ã²Ã¼ Ã¢Ã»ÃµÃ®Ã¤ Ã¨Ã§ ÃªÃ Ã°Ã²Ã»
 			pchar.location.from_sea = "Redmond_shore_01";
 			DoReloadFromSeaToLocation("Redmond_shore_01", "reload", "reload1");
 			pchar.quest.to_secret_oxbay_shore_complete.win_condition.l1 = "location";
 			pchar.quest.to_secret_oxbay_shore_complete.win_condition.l1.location = "Redmond_shore_01";
 			pchar.quest.to_secret_oxbay_shore_complete.win_condition = "to_secret_oxbay_shore_complete";
-			//   
+			//Ã°Ã Ã§Ã°Ã¥Ã¸Ã¨Ã²Ã¼ Ã¢Ã»ÃµÃ®Ã¤ Ã¨Ã§ ÃªÃ Ã°Ã²Ã»
 		break;
 
 		case "to_secret_oxbay_shore_complete":
@@ -7275,7 +7277,7 @@ void QuestComplete(string sQuestName)
 			DoQuestReloadToLocation(pchar.location + "_upstairs", "goto", "goto2", "restore_hp");
 		break;
 
-		case "OnUse_Idol": //  .
+		case "OnUse_Idol": //Ã¨Ã±Ã¯Ã®Ã«Ã¼Ã§Ã³Ã¥Ã¬ Ã±Ã²Ã Ã²Ã³Ã¾ Ã¨Ã¤Ã®Ã«Ã¼Ã±ÃªÃ³Ã¾.
 			bMainMenuLaunchAfterVideo = true;
 			PostVideoAndQuest("idol", 100, "OnUse_Idol_2");
 		break;
@@ -7513,12 +7515,12 @@ void QuestComplete(string sQuestName)
 
 		case "blaze_fighting_with_amiel_berangere":
 			LAi_LocationFightDisable(&Locations[FindLocation("Falaise_de_fleur_tavern_upstairs")], false);
-			//---   
+			//---ÃÃ¬Ã¨Ã«Ã¼ Ã­Ã Ã¯Ã Ã¤Ã Ã¥Ã² Ã­Ã  ÃÃ«Ã½Ã©Ã§Ã 
 			LAi_SetImmortal(characterFromID("Amiel Berangere"), false); 
 			LAi_ActorAttack(characterFromID("Amiel Berangere"), PChar, "");
 			locations[FindLocation("Falaise_De_Fleur_tavern_upstairs")].reload.l1.disable = 1;
-			//----    
-			//-------   
+			//----ÃÃ²ÃªÃ«Ã¾Ã·Ã Ã¥Ã²Ã±Ã¿ Ã«Ã®ÃªÃ Ã²Ã®Ã° Ã¢Ã»ÃµÃ®Ã¤Ã  Ã¨Ã§ ÃªÃ®Ã¬Ã­Ã Ã²Ã»
+			//-------Ã“Ã¡Ã¨Ã¬Ã°Ã Ã¥Ã¬ Ã­Ã¥Ã­Ã³Ã¦Ã­Ã®Ã£Ã® Ã”Ã Ã³Ã±Ã²Ã  ÃƒÃ Ã±ÃªÃ¥
 			ChangeCharacterAddress(characterFromID("Faust Gasquet"), "None", "");
 			
 			Pchar.quest.Story_BlazeStartsThinkAboutGramota.win_condition.l1 = "NPC_death";
@@ -7561,7 +7563,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Counterspy_Exit_fight":
-			//----------   
+			//----------ÃÃ®Ã¿Ã¢Ã«Ã¥Ã­Ã¨Ã¥ Ã±Ã®Ã«Ã¤Ã Ã² Ã¢ Ã²Ã Ã¢Ã¥Ã°Ã­Ã¥
 			LAi_group_SetRelation(LAI_DEFAULT_GROUP, "FRANCE_SOLDIERS", LAI_GROUP_NEITRAL);
 			ChangeCharacterAddressGroup(characterFromID("Fra_arrester_01"), "Oxbay_Tavern", "Reload", "Reload1");
 			ChangeCharacterAddressGroup(characterFromID("Fra_arrester_02"), "Oxbay_Tavern", "Reload", "Reload1");
@@ -7584,17 +7586,17 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Counterspy_After_Fight_Exit":
-			//-------------      
+			//-------------Ã‡Ã Ã¢Ã®Ã¤Ã¨Ã²Ã±Ã¿ ÃªÃ¢Ã¥Ã±Ã² Ã­Ã  Ã¯Ã®Ã¯Ã Ã¤Ã Ã­Ã¨Ã¥ Ã¢ Ã¢Ã¥Ã°Ã´Ã¼ ÃÃªÃ±Ã¡Ã½Ã¿
 			Pchar.quest.Story_Goto_Oxbay_shipyard_with_Counterspy.win_condition.l1 = "location";
 			Pchar.quest.Story_Goto_Oxbay_shipyard_with_Counterspy.win_condition.l1.location = "Oxbay_shipyard";
 			Pchar.quest.Story_Goto_Oxbay_shipyard_with_Counterspy.win_condition = "Story_Goto_Oxbay_shipyard_with_Counterspy";
 
-			//-------------        
+			//-------------Ã‡Ã Ã¢Ã®Ã¤Ã¨Ã²Ã±Ã¿ ÃªÃ¢Ã¥Ã±Ã² Ã­Ã  ÃÃ®Ã¯Ã»Ã²ÃªÃ³ Ã±Ã¡Ã¥Ã¦Ã Ã²Ã¼ Ã¨Ã§ Ã£Ã®Ã°Ã®Ã¤Ã  Ã¢ Ã¤Ã¦Ã³Ã­Ã£Ã«Ã¨
 			Pchar.quest.Story_PlayerTriesToRunFromOxbay.win_condition.l1 = "location";
 			Pchar.quest.Story_PlayerTriesToRunFromOxbay.win_condition.l1.location = "Oxbay_town_exit";
 			Pchar.quest.Story_PlayerTriesToRunFromOxbay.win_condition = "Story_PlayerTriesToRunFromOxbay";
 			
-			//-----------    		
+			//-----------ÃÃ°Ã¨Ã±Ã®Ã¥Ã¤Ã¨Ã­Ã¥Ã­Ã¨Ã¥ Ã¸Ã¯Ã¨Ã®Ã­Ã  Ã¢ ÃªÃ Ã·Ã¥Ã±Ã²Ã¢Ã¥ Ã®Ã´Ã¨Ã¶Ã¥Ã°Ã 		
 			SetOfficersIndex(Pchar, 3, GetCharacterIndex("CounterSpy"));
 			SetCharacterRemovable(characterFromID("Counterspy"), false);
 			LAi_SetActorType(characterFromID("Oweyn McDorey"));
@@ -8037,7 +8039,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.main_line = "return_idol_from_greenford_1";
 
 			AddQuestRecord("Revenge_for_Silehard", "7");
-			//  .
+			//Ã¢Ã»Ã±Ã²Ã Ã¢Ã«Ã¿Ã¥Ã¬ Ã Ã­Ã£Ã«Ã¨Ã¾ Ã¢Ã°Ã Ã¦Ã¤Ã¥Ã¡Ã­Ã®Ã©.
 			LAi_group_SetRelation("ENGLAND_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 			
 			LAi_group_FightGroups("ENGLAND_SOLDIERS", LAI_GROUP_PLAYER, true);
@@ -8689,7 +8691,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		///////////////////////////////////////////////////////////////
-		//     
+		// ÃªÃ¢Ã¥Ã±Ã²Ã®Ã¢Ã Ã¿ Ã«Ã¨Ã­Ã¥Ã©ÃªÃ  Ã¨Ã£Ã°Ã» Ã¢ ÃªÃ®Ã±Ã²Ã¨
 		///////////////////////////////////////////////////////////////
 
 		case "to_the_room_for_see_girl":
@@ -8900,7 +8902,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		///////////////////////////////////////////////////////////////
-		//    
+		// ÃªÃ¢Ã¥Ã±Ã²Ã®Ã¢Ã Ã¿ Ã«Ã¨Ã­Ã¥Ã©ÃªÃ  Ã±Ã¯Ã Ã±Ã¥Ã­Ã¨Ã¿ Ã¤Ã¥Ã¢Ã³Ã¸ÃªÃ¨
 		///////////////////////////////////////////////////////////////
 
 		case "to_ship_of_Bernardo_Gamboa":
@@ -9018,7 +9020,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		///////////////////////////////////////////////////////////////
-		//    
+		// ÃªÃ¢Ã¥Ã±Ã²Ã®Ã¢Ã Ã¿ Ã«Ã¨Ã­Ã¥Ã©ÃªÃ  Ã§Ã Ã¨Ã¤Ã  Ã¬Ã³Ã°Ã®
 		///////////////////////////////////////////////////////////////
 		case "Mendes_go_away_from_muelle_store":
 			pchar.quest.death_of_vigila_mendes.win_condition.l1 = "NPC_death";
@@ -9117,7 +9119,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		///////////////////////////////////////////////////////////////
-		//    
+		// ÃªÃ¢Ã¥Ã±Ã²Ã®Ã¢Ã Ã¿ Ã«Ã¨Ã­Ã¥Ã©ÃªÃ  Ã§Ã®Ã«Ã®Ã²Ã®Ã© Ã¸Ã ÃµÃ²Ã»
 		///////////////////////////////////////////////////////////////
 
 		case "to_oxbay_mines_with_larrouse_complete":
@@ -12779,7 +12781,7 @@ void QuestComplete(string sQuestName)
 			//Log_SetStringToLog(iTradeNation);
 			
 			AddCharacterGoods(pchar, iTradeGoods, iQuantityGoods);
-			// 
+			//Ã§Ã Ã¤Ã Ã¥Ã¬ ÃªÃ¢Ã¥Ã±Ã²
 			pchar.quest.generate_trade_quest.win_condition.l1 = "Timer";
 			pchar.quest.generate_trade_quest.win_condition.l1.date.day = GetAddingDataDay(0, 0, 20);
     		pchar.quest.generate_trade_quest.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 20);
@@ -13257,7 +13259,7 @@ void QuestComplete(string sQuestName)
 		case "mendes_away_forewer":
 			LAi_SetActorType(characterFromID("Vigila Mendes"));
 			LAi_ActorGoToLocation(characterFromID("Vigila Mendes"), "reload", "locator2", "none", "", "", "", 3.0);
-			//ZAID MURRO -     
+			//ZAID MURRO - Ã§Ã ÃªÃ°Ã»Ã¢Ã Ã¥Ã¬ Ã¢Ã®Ã§Ã¬Ã®Ã¦Ã­Ã®Ã±Ã²Ã¼ Ã¯Ã°Ã®ÃµÃ®Ã¤Ã¨Ã²Ã¼ Ã½Ã²Ã®Ã² ÃªÃ¢Ã¥Ã±Ã²
 			ChangeCharacterAddress(characterFromID("Zaid Murro"), "none", "");
 		break;
 		
@@ -13298,7 +13300,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.prepare_for_kill_pirate.win_condition.l1 = "location";
 			pchar.quest.prepare_for_kill_pirate.win_condition.l1.location = pchar.quest.killdestination;
 			pchar.quest.prepare_for_kill_pirate.win_condition = "prepare_for_kill_pirate";
-			// 
+			//Ã§Ã Ã¢Ã®Ã¤ ÃªÃ­Ã¨Ã£Ã¨
 			switch (pchar.quest.killdestination)
 			{
 				case "Falaisedefleur": DeleteQuestHeader("kill_fal"); SetQuestHeader("kill_fal"); AddQuestRecord("kill_fal", "1"); break;
@@ -13385,998 +13387,17 @@ void QuestComplete(string sQuestName)
 			DoQuestReloadToLocation(pchar.quest.PJ_teleportation, pchar.quest.PJ_teleportation.goto1, pchar.quest.PJ_teleportation.goto2, "PJ_QR_teleportation_3");
 			SetCharacterShipLocation(Pchar, pchar.quest.PJ_teleportation.port);
 			pchar.quest.PJ_teleportation = "";
-			i = rand(15);
-			switch (i)
-			{
-				case 0: pchar.model = "skel1"; break;
-				case 1: pchar.model	= "blaze"; break;
-				case 2: pchar.model	= "maltese"; break;
-				case 3: pchar.model	= "killer"; break;
-				case 4: pchar.model	= "pirat3"; break;
-				case 5: pchar.model	= "pirat5"; break;
-				case 6: pchar.model	= "pirat8"; break;
-				case 7: pchar.model	= "pirat9"; break;
-				case 8: pchar.model	= "pirat10"; break;
-				case 9: pchar.model	= "capitan"; break;
-				case 10: pchar.model	= "chameleon"; break;
-				case 11: pchar.model	= "corsair1_1"; break;
-				case 12: pchar.model	= "animists1"; break;
-				case 13: pchar.model	= "animists2"; break;
-				case 14: pchar.model	= "will"; break;
-				case 15: pchar.model	= "blackman"; break;
-			}
 		break;
 
 		case "PJ_QR_teleportation_3":
 			Log_SetStringToLog(GlobalStringConvert("PJ_TELEPORTATION_1"));
 		break;
 
-		case "quest_S1_agreeded":
-			DeleteQuestHeader("PJ_S1"); SetQuestHeader("PJ_S1");
-			pchar.quest_S1_step = 1;
-			TreasureHunterNextStep();
+		case "PJ_end_MQ":
+			Log_SetStringToLog(GlobalStringConvert("PJ_END_MQ_1"));
+			DoQuestReloadToLocation("redmond_residence", "goto", "goto3", "blaze_from_prison_to_residence_complete");
+			Log_SetStringToLog(GlobalStringConvert("PJ_END_MQ_2"));
 		break;
-		
-		case "quest_S1_step1":
-			pchar.quest_S1_step = makeint(pchar.quest_S1_step) + 1;
-			TreasureHunterNextStep();
-		break;
-		
-		case "quest_S1_step2":
-			Log_SetStringToLog("C'est le bon chemin, continu !");
-			pchar.quest_S1_step = makeint(pchar.quest_S1_step) + 1;
-			TreasureHunterNextStep();
-		break;
-		
-		case "quest_S1_step3":
-			Log_SetStringToLog("C'est le bon chemin, continu !");
-			pchar.quest_S1_step = makeint(pchar.quest_S1_step) + 1;
-			TreasureHunterNextStep();
-		break;
-		
-		case "quest_S1_step4":
-			Log_SetStringToLog("C'est le bon chemin, continu !");
-			pchar.quest_S1_step = makeint(pchar.quest_S1_step) + 1;
-			TreasureHunterNextStep();
-		break;
-		
-		case "quest_S1_step5":
-			Log_SetStringToLog("C'est le bon chemin, continu !");
-			pchar.quest_S1_step = makeint(pchar.quest_S1_step) + 1;
-			TreasureHunterNextStep();
-		break;
-		
-		case "quest_S1_completed_1":
-			switch (pchar.quest_S1_startIsland) {
-				case "Redmond":            rCrew_leader = characterFromID("Elizabeth Goodale TQC 2");    sCrew_leader = "Elizabeth Goodale TQC 2"; break;
-				case "FleurDeFalaise":     rCrew_leader = characterFromID("Eustache Busket TQC 2");      sCrew_leader = "Eustache Busket TQC" 2; break;
-				case "Conceicao":          rCrew_leader = characterFromID("Bartolomeo Portugues TQC 2"); sCrew_leader = "Bartolomeo Portugues TQC 2"; break;
-				case "IslaMuelle":         rCrew_leader = characterFromID("Benito Bonito TQC 2");        sCrew_leader = "Benito Bonito TQC 2"; break;
-				case "Douwesen":           rCrew_leader = characterFromID("Hendrick van Hoven TQC 2");   sCrew_leader = "Hendrick van Hoven TQC 2"; break;
-				case "Oxbay_Greenford":    rCrew_leader = characterFromID("Wimund TQC 2");               sCrew_leader = "Wimund TQC 2"; break;
-				case "Oxbay_Oxbay":        rCrew_leader = characterFromID("Samuel Bellamy TQC 2");       sCrew_leader = "Samuel Bellamy TQC 2"; break;
-				case "QuebradasCostillas": rCrew_leader = characterFromID("Edward Thatch TQC 2");        sCrew_leader = "Edward Thatch TQC 2"; break;
-			}
-			
-			if (pchar.quest_S1_allQuestsCompleted == true) {
-				DoQuestCheckDelay("quest_S1_lastQuest_3", 0);
-			} else {
-				if (pchar.quest_S1_failed == true) {
-					ChangeCharacterReputation(pchar, -1);
-					AddQuestRecord("PJ_S1", "2");
-					Log_SetStringToLog(GlobalStringConvert("PJ_S1_failed"));
-					DoQuestCheckDelay("quest_S1_closed", 1.0);
-				} else {
-					AddQuestRecord("PJ_S1", "1");
-					homelocation = pchar.location;
-					
-					PlaceCharacter(rCrew_leader, "goto", homelocation);
-					LAi_SetActorType(rCrew_leader);
-					LAi_SetActorType(pchar);
-					LAi_ActorFollow(pchar, rCrew_leader, "", 2.0);
-					LAi_ActorFollow(rCrew_leader, pchar, "quest_S1_completed_2", 2.0);
-				}
-			}
-		break;
-		
-		case "quest_S1_completed_2":
-			AddPartyExp(pchar, makeint(pchar.rank) * 1000);
-			LAi_type_actor_Reset(pchar);
-			
-			switch (pchar.quest_S1_startIsland) {
-				case "Redmond":            rCrew_leader = characterFromID("Elizabeth Goodale TQC 2");    sCrew_leader = "Elizabeth Goodale TQC 2"; break;
-				case "FleurDeFalaise":     rCrew_leader = characterFromID("Eustache Busket TQC 2");      sCrew_leader = "Eustache Busket TQC 2"; break;
-				case "Conceicao":          rCrew_leader = characterFromID("Bartolomeo Portugues TQC 2"); sCrew_leader = "Bartolomeo Portugues TQC 2"; break;
-				case "IslaMuelle":         rCrew_leader = characterFromID("Benito Bonito TQC 2");        sCrew_leader = "Benito Bonito TQC 2"; break;
-				case "Douwesen":           rCrew_leader = characterFromID("Hendrick van Hoven TQC 2");   sCrew_leader = "Hendrick van Hoven TQC 2"; break;
-				case "Oxbay_Greenford":    rCrew_leader = characterFromID("Wimund TQC 2");               sCrew_leader = "Wimund TQC 2"; break;
-				case "Oxbay_Oxbay":        rCrew_leader = characterFromID("Samuel Bellamy TQC 2");       sCrew_leader = "Samuel Bellamy TQC 2"; break;
-				case "QuebradasCostillas": rCrew_leader = characterFromID("Edward Thatch TQC 2");        sCrew_leader = "Edward Thatch TQC 2"; break;
-			}
-			
-			LAi_ActorWaitDialog(pchar, rCrew_leader);
-			LAi_ActorDialog(rCrew_leader, pchar, "pchar_back_to_player", 2.0, 1.0);
-			characters[GetCharacterIndex(sCrew_leader)].dialog.currentnode = "complete_quest";
-		break;
-		
-		case "quest_S1_fight":
-			homelocation = pchar.location;
-			
-			switch (pchar.quest_S1_startIsland) {
-				case "Redmond":
-					pchar.quest_S1_Elizabeth_Goodale_TQC1_visible = false;
-					PlaceCharacter(characterFromID("Elizabeth Goodale TQC 1"), "goto", "none");
-					rCrew_leader = characterFromID("Elizabeth Goodale TQC 2");
-					sCrew_leader = "Elizabeth Goodale TQC 2";
-					rCrew1 = characterFromID("TQC for fight 1 1");
-					sCrew1 = "TQC for fight 1 1";
-					rCrew2 = characterFromID("TQC for fight 1 2");
-					sCrew2 = "TQC for fight 1 2";
-					rCrew3 = characterFromID("TQC for fight 1 3");
-					sCrew3 = "TQC for fight 1 3";
-				break;
-				case "FleurDeFalaise":
-					pchar.quest_S1_Eustache_Busket_TQC1_visible = false;
-					PlaceCharacter(characterFromID("Eustache Busket TQC 1"), "goto", "none");
-					rCrew_leader = characterFromID("Eustache Busket TQC 2");
-					sCrew_leader = "Eustache Busket TQC 2";
-					rCrew1 = characterFromID("TQC for fight 2 1");
-					sCrew1 = "TQC for fight 2 1";
-					rCrew2 = characterFromID("TQC for fight 2 2");
-					sCrew2 = "TQC for fight 2 2";
-					rCrew3 = characterFromID("TQC for fight 2 3");
-					sCrew3 = "TQC for fight 2 3";
-				break;
-				case "Conceicao":
-					pchar.quest_S1_Bartolomeo_Portugues_TQC1_visible = false;
-					PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 1"), "goto", "none");
-					rCrew_leader = characterFromID("Bartolomeo Portugues TQC 2");
-					sCrew_leader = "Bartolomeo Portugues TQC 2";
-					rCrew1 = characterFromID("TQC for fight 3 1");
-					sCrew1 = "TQC for fight 3 1";
-					rCrew2 = characterFromID("TQC for fight 3 2");
-					sCrew2 = "TQC for fight 3 2";
-					rCrew3 = characterFromID("TQC for fight 3 3");
-					sCrew3 = "TQC for fight 3 3";
-				break;
-				case "IslaMuelle":
-					pchar.quest_S1_Benito_Bonito_TQC1_visible = false;
-					PlaceCharacter(characterFromID("Benito Bonito TQC 1"), "goto", "none");
-					rCrew_leader = characterFromID("Benito Bonito TQC 2");
-					sCrew_leader = "Benito Bonito TQC 2";
-					rCrew1 = characterFromID("TQC for fight 4 1");
-					sCrew1 = "TQC for fight 4 1";
-					rCrew2 = characterFromID("TQC for fight 4 2");
-					sCrew2 = "TQC for fight 4 2";
-					rCrew3 = characterFromID("TQC for fight 4 3");
-					sCrew3 = "TQC for fight 4 3";
-				break;
-				case "Douwesen":
-					pchar.quest_S1_Hendrick_van_Hoven_TQC1_visible = false;
-					PlaceCharacter(characterFromID("Hendrick van Hoven TQC 1"), "goto", "none");
-					rCrew_leader = characterFromID("Hendrick van Hoven TQC 2");
-					sCrew_leader = "Hendrick van Hoven TQC 2";
-					rCrew1 = characterFromID("TQC for fight 5 1");
-					sCrew1 = "TQC for fight 5 1";
-					rCrew2 = characterFromID("TQC for fight 5 2");
-					sCrew2 = "TQC for fight 5 2";
-					rCrew3 = characterFromID("TQC for fight 5 3");
-					sCrew3 = "TQC for fight 5 3";
-				break;
-				case "Oxbay_Greenford":
-					pchar.quest_S1_Wimund_TQC1_visible = false;
-					PlaceCharacter(characterFromID("Wimund TQC 1"), "goto", "none");
-					rCrew_leader = characterFromID("Wimund TQC 2");
-					sCrew_leader = "Wimund TQC 2";
-					rCrew1 = characterFromID("TQC for fight 6 1");
-					sCrew1 = "TQC for fight 6 1";
-					rCrew2 = characterFromID("TQC for fight 6 2");
-					sCrew2 = "TQC for fight 6 2";
-					rCrew3 = characterFromID("TQC for fight 6 3");
-					sCrew3 = "TQC for fight 6 3";
-				break;
-				case "Oxbay_Oxbay":
-					pchar.quest_S1_Samuel_Bellamy_TQC1_visible = false;
-					PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", "none");
-					rCrew_leader = characterFromID("Samuel Bellamy TQC 2");
-					sCrew_leader = "Samuel Bellamy TQC 2";
-					rCrew1 = characterFromID("TQC for fight 7 1");
-					sCrew1 = "TQC for fight 7 1";
-					rCrew2 = characterFromID("TQC for fight 7 2");
-					sCrew2 = "TQC for fight 7 2";
-					rCrew3 = characterFromID("TQC for fight 7 3");
-					sCrew3 = "TQC for fight 7 3";
-				break;
-				case "QuebradasCostillas":
-					pchar.quest_S1_Edward_Thatch_TQC1_visible = false;
-					PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", "none");
-					rCrew_leader = characterFromID("Edward Thatch TQC 2");
-					sCrew_leader = "Edward Thatch TQC 2";
-					rCrew1 = characterFromID("TQC for fight 8 1");
-					sCrew1 = "TQC for fight 8 1";
-					rCrew2 = characterFromID("TQC for fight 8 2");
-					sCrew2 = "TQC for fight 8 2";
-					rCrew3 = characterFromID("TQC for fight 8 3");
-					sCrew3 = "TQC for fight 8 3";
-				break;
-			}
-			
-			LAi_group_MoveCharacter(rCrew_leader, "S1_FIGHT");
-			Pchar.quest.quest_S1_fight_won.win_condition.l1 = "NPC_Death";
-			Pchar.quest.quest_S1_fight_won.win_condition.l1.character = sCrew_leader;
-			
-			PlaceCharacter(rCrew1, "goto", homelocation);
-			PlaceCharacter(rCrew2, "goto", homelocation);
-			PlaceCharacter(rCrew3, "goto", homelocation);
-			LAi_RemoveCheckMinHP(rCrew1);
-			LAi_RemoveCheckMinHP(rCrew2);
-			LAi_RemoveCheckMinHP(rCrew3);
-			LAi_group_MoveCharacter(rCrew1, "S1_FIGHT");
-			LAi_group_MoveCharacter(rCrew2, "S1_FIGHT");
-			LAi_group_MoveCharacter(rCrew3, "S1_FIGHT");
-			
-			Pchar.quest.quest_S1_fight_won.win_condition.l2 = "NPC_Death";
-			Pchar.quest.quest_S1_fight_won.win_condition.l2.character = sCrew1;
-			Pchar.quest.quest_S1_fight_won.win_condition.l3 = "NPC_Death";
-			Pchar.quest.quest_S1_fight_won.win_condition.l3.character = sCrew2;
-			Pchar.quest.quest_S1_fight_won.win_condition.l4 = "NPC_Death";
-			Pchar.quest.quest_S1_fight_won.win_condition.l4.character = sCrew3;
-			Pchar.quest.quest_S1_fight_won.win_condition = "quest_S1_fight_won";
-			
-			LAi_group_FightGroups("S1_FIGHT", LAI_GROUP_PLAYER, true);
-		break;
-		
-		case "quest_S1_fight_won":
-			int n;
-			
-			ChangeCharacterReputation(pchar, -5);
-			AddPartyExp(pchar, 50000);
-			
-			AddMoneyToCharacter(pchar, makeint(pchar.quest_S1_gain_gold) * 20);
-			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry1) * 20; n++) {GiveItem2Character(Pchar, "jewelry1");}
-			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry2) * 20; n++) {GiveItem2Character(Pchar, "jewelry2");}
-			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry3) * 20; n++) {GiveItem2Character(Pchar, "jewelry3");}
-			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry4) * 20; n++) {GiveItem2Character(Pchar, "jewelry4");}
-			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry5) * 20; n++) {GiveItem2Character(Pchar, "jewelry5");}
-			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry6) * 20; n++) {GiveItem2Character(Pchar, "jewelry6");}
-			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry7) * 20; n++) {GiveItem2Character(Pchar, "jewelry7");}
-			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry8) * 20; n++) {GiveItem2Character(Pchar, "jewelry8");}
-			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry9) * 20; n++) {GiveItem2Character(Pchar, "jewelry9");}
-			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry10) * 20; n++) {GiveItem2Character(Pchar, "jewelry10");}
-			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry11) * 20; n++) {GiveItem2Character(Pchar, "jewelry11");}
-			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry12) * 20; n++) {GiveItem2Character(Pchar, "jewelry12");}
-			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry13) * 20; n++) {GiveItem2Character(Pchar, "jewelry13");}
-			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry14) * 20; n++) {GiveItem2Character(Pchar, "jewelry14");}
-			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry15) * 20; n++) {GiveItem2Character(Pchar, "jewelry15");}
-			for(n = 1; n <= makeint(pchar.quest_S1_gain_jewelry16) * 20; n++) {GiveItem2Character(Pchar, "jewelry16");}
-			
-			AddQuestRecord("PJ_S1", "3");
-			
-			DoQuestCheckDelay("quest_S1_closed", 1.0);
-		break;
-		
-		case "quest_S1_closed":
-			CloseQuestHeader("PJ_S1");
-			
-			switch (pchar.quest_S1_startIsland) {
-				case "Redmond":            rCrew_leader = characterFromID("Elizabeth Goodale TQC 2"); break;
-				case "FleurDeFalaise":     rCrew_leader = characterFromID("Eustache Busket TQC 2"); break;
-				case "Conceicao":          rCrew_leader = characterFromID("Bartolomeo Portugues TQC 2"); break;
-				case "IslaMuelle":         rCrew_leader = characterFromID("Benito Bonito TQC 2"); break;
-				case "Douwesen":           rCrew_leader = characterFromID("Hendrick van Hoven TQC 2"); break;
-				case "Oxbay_Greenford":    rCrew_leader = characterFromID("Wimund TQC 2"); break;
-				case "Oxbay_Oxbay":        rCrew_leader = characterFromID("Samuel Bellamy TQC 2") break;;
-				case "QuebradasCostillas": rCrew_leader = characterFromID("Edward Thatch TQC 2"); break;
-			}
-			
-			LAi_ActorGoToLocation(rCrew_leader, "reload", homelocator, "none", "", "", "", 10.0);
-			
-			pchar.quest.quest_S1_step1.over = "yes";
-			pchar.quest.quest_S1_step1 = "completed";
-			pchar.quest.quest_S1_step2.over = "yes";
-			pchar.quest.quest_S1_step2 = "completed";
-			pchar.quest.quest_S1_step3.over = "yes";
-			pchar.quest.quest_S1_step3 = "completed";
-			pchar.quest.quest_S1_step4.over = "yes";
-			pchar.quest.quest_S1_step4 = "completed";
-			pchar.quest.quest_S1_step5.over = "yes";
-			pchar.quest.quest_S1_step5 = "completed";
-			pchar.quest.quest_S1_completed_1.over = "yes";
-			pchar.quest.quest_S1_completed_1 = "completed";
-			pchar.quest.quest_S1_completed_2.over = "yes";
-			pchar.quest.quest_S1_completed_2 = "completed";
-			pchar.quest.quest_S1_fight.over = "yes";
-			pchar.quest.quest_S1_fight = "completed";
-			pchar.quest.quest_S1_fight_won.over = "yes";
-			pchar.quest.quest_S1_fight_won = "completed";
-			
-			//realisation de toutes les quetes
-			switch (makeint(pchar.quest_S1_numQuests)) {
-				case 1: pchar.quest_S1_quest_1_completed = true; break;
-				case 2: pchar.quest_S1_quest_2_completed = true; break;
-				case 3: pchar.quest_S1_quest_3_completed = true; break;
-				case 4: pchar.quest_S1_quest_4_completed = true; break;
-				case 5: pchar.quest_S1_quest_5_completed = true; break;
-				case 6: pchar.quest_S1_quest_6_completed = true; break;
-				case 7: pchar.quest_S1_quest_7_completed = true; break;
-				case 8: pchar.quest_S1_quest_8_completed = true; break;
-				case 9: pchar.quest_S1_quest_9_completed = true; break;
-				case 10: pchar.quest_S1_quest_10_completed = true; break;
-				case 11: pchar.quest_S1_quest_11_completed = true; break;
-				case 12: pchar.quest_S1_quest_12_completed = true; break;
-				case 13: pchar.quest_S1_quest_13_completed = true; break;
-				case 14: pchar.quest_S1_quest_14_completed = true; break;
-				case 15: pchar.quest_S1_quest_15_completed = true; break;
-				case 16: pchar.quest_S1_quest_16_completed = true; break;
-				case 17: pchar.quest_S1_quest_17_completed = true; break;
-				case 18: pchar.quest_S1_quest_18_completed = true; break;
-				case 19: pchar.quest_S1_quest_19_completed = true; break;
-				case 20: pchar.quest_S1_quest_20_completed = true; break;
-			}
-			//DEBUG TEST
-			// pour déboguer la fin rapidement
-			// toutes les quetes sont faites
-			/*
-			pchar.quest_S1_quest_1_completed = true;
-			pchar.quest_S1_quest_2_completed = true;
-			pchar.quest_S1_quest_3_completed = true;
-			pchar.quest_S1_quest_4_completed = true;
-			pchar.quest_S1_quest_5_completed = true;
-			pchar.quest_S1_quest_6_completed = true;
-			pchar.quest_S1_quest_7_completed = true;
-			pchar.quest_S1_quest_8_completed = true;
-			pchar.quest_S1_quest_9_completed = true;
-			pchar.quest_S1_quest_10_completed = true;
-			pchar.quest_S1_quest_11_completed = true;
-			pchar.quest_S1_quest_12_completed = true;
-			pchar.quest_S1_quest_13_completed = true;
-			pchar.quest_S1_quest_14_completed = true;
-			pchar.quest_S1_quest_15_completed = true;
-			pchar.quest_S1_quest_16_completed = true;
-			pchar.quest_S1_quest_17_completed = true;
-			pchar.quest_S1_quest_18_completed = true;
-			pchar.quest_S1_quest_19_completed = true;
-			pchar.quest_S1_quest_20_completed = true;
-			//fin du DEBUG TEST*/
-			n = 0;
-			bool questCompleted;
-			int numQuest;
-			if (pchar.quest_S1_quest_1_completed == true) n++;
-			if (pchar.quest_S1_quest_2_completed == true) n++;
-			if (pchar.quest_S1_quest_3_completed == true) n++;
-			if (pchar.quest_S1_quest_4_completed == true) n++;
-			if (pchar.quest_S1_quest_5_completed == true) n++;
-			if (pchar.quest_S1_quest_6_completed == true) n++;
-			if (pchar.quest_S1_quest_7_completed == true) n++;
-			if (pchar.quest_S1_quest_8_completed == true) n++;
-			if (pchar.quest_S1_quest_9_completed == true) n++;
-			if (pchar.quest_S1_quest_10_completed == true) n++;
-			if (pchar.quest_S1_quest_11_completed == true) n++;
-			if (pchar.quest_S1_quest_12_completed == true) n++;
-			if (pchar.quest_S1_quest_13_completed == true) n++;
-			if (pchar.quest_S1_quest_14_completed == true) n++;
-			if (pchar.quest_S1_quest_15_completed == true) n++;
-			if (pchar.quest_S1_quest_16_completed == true) n++;
-			if (pchar.quest_S1_quest_17_completed == true) n++;
-			if (pchar.quest_S1_quest_18_completed == true) n++;
-			if (pchar.quest_S1_quest_19_completed == true) n++;
-			if (pchar.quest_S1_quest_20_completed == true) n++;
-			// Log_SetStringToLog("PJ DEBUG TEST (quests_reaction.c) : n:"+n);
-			// Log_SetStringToLog("PJ DEBUG TEST (quests_reaction.c) : quest_S1_nbQuests:"+pchar.quest_S1_nbQuests);
-			if (makeint(n) == makeint(pchar.quest_S1_nbQuests)) {
-				pchar.quest_S1_allQuestsCompleted = true;
-				pchar.quest_S1_quest_1_completed = false;
-				pchar.quest_S1_quest_2_completed = false;
-				pchar.quest_S1_quest_3_completed = false;
-				pchar.quest_S1_quest_4_completed = false;
-				pchar.quest_S1_quest_5_completed = false;
-				pchar.quest_S1_quest_6_completed = false;
-				pchar.quest_S1_quest_7_completed = false;
-				pchar.quest_S1_quest_8_completed = false;
-				pchar.quest_S1_quest_9_completed = false;
-				pchar.quest_S1_quest_10_completed = false;
-				pchar.quest_S1_quest_11_completed = false;
-				pchar.quest_S1_quest_12_completed = false;
-				pchar.quest_S1_quest_13_completed = false;
-				pchar.quest_S1_quest_14_completed = false;
-				pchar.quest_S1_quest_15_completed = false;
-				pchar.quest_S1_quest_16_completed = false;
-				pchar.quest_S1_quest_17_completed = false;
-				pchar.quest_S1_quest_18_completed = false;
-				pchar.quest_S1_quest_19_completed = false;
-				pchar.quest_S1_quest_20_completed = false;
-			}
-			
-			// initialisation des variables
-			pchar.quest_S1_numQuests = 0;
-			pchar.quest_S1_step = 0;
-			pchar.quest_S1_Unearthing = false;
-			pchar.quest_S1_failed = false;
-			pchar.quest_S1_gain_gold_jewelry = 0;
-			pchar.quest_S1_gain_gold_jewelry_text = "";
-			pchar.quest_S1_gain_gold = 0;
-			pchar.quest_S1_gain_jewelry1 = 0;
-			pchar.quest_S1_gain_jewelry2 = 0;
-			pchar.quest_S1_gain_jewelry3 = 0;
-			pchar.quest_S1_gain_jewelry4 = 0;
-			pchar.quest_S1_gain_jewelry5 = 0;
-			pchar.quest_S1_gain_jewelry6 = 0;
-			pchar.quest_S1_gain_jewelry7 = 0;
-			pchar.quest_S1_gain_jewelry8 = 0;
-			pchar.quest_S1_gain_jewelry9 = 0;
-			pchar.quest_S1_gain_jewelry10 = 0;
-			pchar.quest_S1_gain_jewelry11 = 0;
-			pchar.quest_S1_gain_jewelry12 = 0;
-			pchar.quest_S1_gain_jewelry13 = 0;
-			pchar.quest_S1_gain_jewelry14 = 0;
-			pchar.quest_S1_gain_jewelry15 = 0;
-			pchar.quest_S1_gain_jewelry16 = 0;
-		break;
-		
-		case "quest_S1_lastQuest_1":
-			DeleteQuestHeader("PJ_S1"); SetQuestHeader("PJ_S1"); AddQuestRecord("PJ_S1", 38);
-			pchar.quest.quest_S1_lastQuest_2.win_condition.l1 = "location";
-			pchar.quest.quest_S1_lastQuest_2.win_condition.l1.location = "QC_pirate_house_inside";
-			pchar.quest.quest_S1_lastQuest_2.win_condition = "quest_S1_lastQuest_2";
-		break;
-		
-		case "quest_S1_lastQuest_2":
-			pchar.quest_S1_Unearthing = true;
-			AddQuestRecord("PJ_S1", 39);
-			pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
-			pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = -13;
-			pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = -9;
-			pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = 1;
-			pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
-			pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 7;
-			pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 11;
-			pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
-		break;
-		
-		case "quest_S1_lastQuest_3":
-			AddQuestRecord("PJ_S1", 40);
-			
-			pchar.quest_S1_Unearthing = false;
-			
-			homelocation = pchar.location;
-			
-			PlaceCharacter(characterFromID("Youyi TQC 2"), "goto", homelocation);
-			LAi_SetActorType(characterFromID("Youyi TQC 2"));
-			LAi_SetActorType(pchar);
-			LAi_ActorFollow(pchar, characterFromID("Youyi TQC 2"), "", 2.0);
-			LAi_ActorFollow(characterFromID("Youyi TQC 2"), pchar, "quest_S1_lastQuest_4", 2.0);
-		break;
-		
-		case "quest_S1_lastQuest_4":
-			LAi_type_actor_Reset(pchar);
-			LAi_ActorWaitDialog(pchar, characterFromID("Youyi TQC 2"));
-			LAi_ActorDialog(characterFromID("Youyi TQC 2"), pchar, "pchar_back_to_player", 2.0, 1.0);
-			characters[GetCharacterIndex("Youyi TQC 2")].dialog.currentnode = "complete_quest";
-		break;
-		
-		case "quest_S1_lastQuest_closed":
-			CloseQuestHeader("PJ_S1");
-			
-			//gain
-			for(n = 1; n <= 17; n++) {GiveItem2Character(Pchar, "jewelry1");}//saphir = 615
-			for(n = 1; n <= 7; n++) {GiveItem2Character(Pchar, "jewelry2");}//diamant = 1538
-			for(n = 1; n <= 14; n++) {GiveItem2Character(Pchar, "jewelry3");}//rubis = 769
-			for(n = 1; n <= 9; n++) {GiveItem2Character(Pchar, "jewelry4");}//emeraude = 1153
-			for(n = 1; n <= 7; n++) {GiveItem2Character(Pchar, "jewelry5");}//pepite d'or = 1538
-			for(n = 1; n <= 14; n++) {GiveItem2Character(Pchar, "jewelry11");}//grosse perle = 769
-			for(n = 1; n <= 27; n++) {GiveItem2Character(Pchar, "jewelry12");}//petite perle = 384
-			
-			LAi_ActorGoToLocation(characterFromID("Youyi TQC 2"), "reload", homelocator, "none", "", "", "", 10.0);
-			
-			pchar.quest.quest_S1_lastQuest_1.over = "yes";
-			pchar.quest.quest_S1_lastQuest_1 = "completed";
-			pchar.quest.quest_S1_lastQuest_2.over = "yes";
-			pchar.quest.quest_S1_lastQuest_2 = "completed";
-			pchar.quest.quest_S1_lastQuest_3.over = "yes";
-			pchar.quest.quest_S1_lastQuest_3 = "completed";
-			pchar.quest.quest_S1_lastQuest_4.over = "yes";
-			pchar.quest.quest_S1_lastQuest_4 = "completed";
-			pchar.quest.quest_S1_completed_1.over = "yes";
-			pchar.quest.quest_S1_completed_1 = "completed";
-			
-			pchar.quest_S1_allQuestsCompleted = false;
-		break;
-
-		case "quest_S2_agreeded":
-			DeleteQuestHeader("PJ_S2"); SetQuestHeader("PJ_S2");
-			switch (pchar.location) {
-				case "Redmond_town_04": pchar.quest_S2_started = 1; AddQuestRecord("PJ_S2", 8); AddQuestRecord("PJ_S2", 1); break
-				case "Falaise_De_Fleur_location_02": pchar.quest_S2_started = 2; AddQuestRecord("PJ_S2", 9); AddQuestRecord("PJ_S2", 2); break
-				case "Conceicao_town": pchar.quest_S2_started = 3; AddQuestRecord("PJ_S2", 10); AddQuestRecord("PJ_S2", 3); break
-				case "Muelle_town_02": pchar.quest_S2_started = 4; AddQuestRecord("PJ_S2", 11); AddQuestRecord("PJ_S2", 4); break
-				case "Douwesen_town": pchar.quest_S2_started = 5; AddQuestRecord("PJ_S2", 12); AddQuestRecord("PJ_S2", 5); break
-				case "Greenford_town": pchar.quest_S2_started = 6; AddQuestRecord("PJ_S2", 13); AddQuestRecord("PJ_S2", 6); break
-				case "Oxbay_town": pchar.quest_S2_started = 7; AddQuestRecord("PJ_S2", 14); AddQuestRecord("PJ_S2", 7); break
-			}
-			pchar.quest.quest_S2_timeOut.win_condition.l1 = "Timer";
-			pchar.quest.quest_S2_timeOut.win_condition.l1.date.day = GetAddingDataDay(0, 0, 7);
-			pchar.quest.quest_S2_timeOut.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 7);
-			pchar.quest.quest_S2_timeOut.win_condition.l1.date.year = GetAddingDataYear(0, 0, 7);
-			pchar.quest.quest_S2_timeOut.win_condition = "quest_S2_timeOut";
-		break;
-		
-		case "quest_S2_timeOut":
-			Log_SetStringToLog(GlobalStringConvert("PJ_S2_failed"));
-			AddQuestRecord("PJ_S2", 16);
-			DoQuestCheckDelay("quest_S2_closed_2", 1.0);
-		break;
-		
-		case "quest_S2_closed_1":
-			AddQuestRecord("PJ_S2", 15);
-			
-			ChangeCharacterReputation(pchar, 7);
-			AddPartyExp(pchar, 1000 * makeint(pchar.rank));
-			
-			DoQuestCheckDelay("quest_S2_closed_2", 1.0);
-		break;
-		
-		case "quest_S2_closed_2":
-			pchar.quest_S2_started = 0;
-			
-			switch (pchar.location) {
-				case "Redmond_town_03": pchar.quest_S2_Redmond_done = true; break
-				case "Falaise_De_Fleur_location_03": pchar.quest_S2_FalaiseDeFleur_done = true; break
-				case "Conceicao_town": pchar.quest_S2_Conceicao_done = true; break
-				case "Muelle_town_04": pchar.quest_S2_IslaMuelle_done = true; break
-				case "Douwesen_town": pchar.quest_S2_Douwesen_done = true; break
-				case "Greenford_town": pchar.quest_S2_Greenford_done = true; break
-				case "Oxbay_town": pchar.quest_S2_Oxbay_done = true; break
-			}
-			
-			pchar.quest.quest_S2_timeOut.over = "yes";
-			pchar.quest.quest_S2_timeOut = "completed";
-			
-			//conditions de vistoire finale
-			if (pchar.quest_S2_Redmond_done == true
-					&& pchar.quest_S2_FalaiseDeFleur_done == true
-					&& pchar.quest_S2_Conceicao_done == true
-					&& pchar.quest_S2_IslaMuelle_done == true
-					&& pchar.quest_S2_Douwesen_done == true
-					&& pchar.quest_S2_Greenford_done == true
-					&& pchar.quest_S2_Oxbay_done == true) {
-				
-				homelocation = pchar.location;
-				PlaceCharacter(characterFromID("Fabiola Rochefort"), "goto", homelocation);
-				LAi_SetActorType(characterFromID("Fabiola Rochefort"));
-				LAi_SetActorType(pchar);
-				LAi_ActorFollow(pchar, characterFromID("Fabiola Rochefort"), "", 2.0);
-				LAi_ActorFollow(characterFromID("Fabiola Rochefort"), pchar, "quest_S2_lastQuest", 2.0);
-			}
-			
-			CloseQuestHeader("PJ_S2");
-		break;
-		
-		case "quest_S2_lastQuest":
-			LAi_type_actor_Reset(pchar);
-			LAi_ActorWaitDialog(pchar, characterFromID("Fabiola Rochefort"));
-			LAi_ActorDialog(characterFromID("Fabiola Rochefort"), pchar, "pchar_back_to_player", 2.0, 1.0);
-			characters[GetCharacterIndex("Fabiola Rochefort")].dialog.currentnode = "First time";
-		break;
-		
-		case "quest_S2_lastQuest_closed":
-			DeleteQuestHeader("PJ_S2"); SetQuestHeader("PJ_S2"); AddQuestRecord("PJ_S2", 17); CloseQuestHeader("PJ_S2");
-			
-			pchar.quest.quest_S2_lastQuest.over = "yes";
-			pchar.quest.quest_S2_lastQuest = "completed";
-		break;
-
-		case "quest_M1_agreeded":
-			DeleteQuestHeader("PJ_M1"); SetQuestHeader("PJ_M1"); AddQuestRecord("PJ_M1", 1);
-			
-			pchar.quest.quest_M1_RedmondBoats.win_condition.l1 = "location";
-			pchar.quest.quest_M1_RedmondBoats.win_condition.l1.location = "Redmond";
-			pchar.quest.quest_M1_RedmondBoats.win_condition = "quest_M1_RedmondBoats";
-			
-			pchar.quest.quest_M1_FdFBoats.win_condition.l1 = "location";
-			pchar.quest.quest_M1_FdFBoats.win_condition.l1.location = "Falaise_de_Fleur";
-			pchar.quest.quest_M1_FdFBoats.win_condition = "quest_M1_FdFBoats";
-			
-			pchar.quest.quest_M1_ConceicaoBoats.win_condition.l1 = "location";
-			pchar.quest.quest_M1_ConceicaoBoats.win_condition.l1.location = "Conceicao";
-			pchar.quest.quest_M1_ConceicaoBoats.win_condition = "quest_M1_ConceicaoBoats";
-			
-			pchar.quest.quest_M1_IslaMuelleBoats.win_condition.l1 = "location";
-			pchar.quest.quest_M1_IslaMuelleBoats.win_condition.l1.location = "IslaMuelle";
-			pchar.quest.quest_M1_IslaMuelleBoats.win_condition = "quest_M1_IslaMuelleBoats";
-			
-			pchar.quest.quest_M1_DouwesenBoats.win_condition.l1 = "location";
-			pchar.quest.quest_M1_DouwesenBoats.win_condition.l1.location = "Douwesen";
-			pchar.quest.quest_M1_DouwesenBoats.win_condition = "quest_M1_DouwesenBoats";
-			
-			pchar.quest.quest_M1_OxbayBoats.win_condition.l1 = "location";
-			pchar.quest.quest_M1_OxbayBoats.win_condition.l1.location = "Oxbay";
-			pchar.quest.quest_M1_OxbayBoats.win_condition = "quest_M1_OxbayBoats";
-			
-			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Francois_l_Olonnais"));
-			
-			Pchar.quest_M1_step = 2;
-			
-			Pchar.quest.quest_M1_CaptureRedmondFort.win_condition.l1 = "FORT_destroy";
-			Pchar.quest.quest_M1_CaptureRedmondFort.win_condition.l1.character = "Redmond Commander";
-			Pchar.quest.quest_M1_CaptureRedmondFort.win_condition = "quest_M1_CaptureRedmondFort";
-			
-			Pchar.quest.quest_M1_CaptureFalaiseDeFleurFort.win_condition.l1 = "FORT_destroy";
-			Pchar.quest.quest_M1_CaptureFalaiseDeFleurFort.win_condition.l1.character = "FalaiseDeFleur Commander";
-			Pchar.quest.quest_M1_CaptureFalaiseDeFleurFort.win_condition = "quest_M1_CaptureFalaiseDeFleurFort";
-			
-			Pchar.quest.quest_M1_CaptureConceicaoFort.win_condition.l1 = "FORT_destroy";
-			Pchar.quest.quest_M1_CaptureConceicaoFort.win_condition.l1.character = "Conceicao Commander";
-			Pchar.quest.quest_M1_CaptureConceicaoFort.win_condition = "quest_M1_CaptureConceicaoFort";
-			
-			Pchar.quest.quest_M1_CaptureIslaMuelleFort.win_condition.l1 = "FORT_destroy";
-			Pchar.quest.quest_M1_CaptureIslaMuelleFort.win_condition.l1.character = "IslaMuelle Commander";
-			Pchar.quest.quest_M1_CaptureIslaMuelleFort.win_condition = "quest_M1_CaptureIslaMuelleFort";
-			
-			Pchar.quest.quest_M1_CaptureDouwesenFort.win_condition.l1 = "FORT_destroy";
-			Pchar.quest.quest_M1_CaptureDouwesenFort.win_condition.l1.character = "Douwesen Commander";
-			Pchar.quest.quest_M1_CaptureDouwesenFort.win_condition = "quest_M1_CaptureDouwesenFort";
-			
-			Pchar.quest.quest_M1_CaptureGreenfordFort.win_condition.l1 = "FORT_destroy";
-			Pchar.quest.quest_M1_CaptureGreenfordFort.win_condition.l1.character = "Greenford Commander";
-			Pchar.quest.quest_M1_CaptureGreenfordFort.win_condition = "quest_M1_CaptureGreenfordFort";
-			
-			Pchar.quest.quest_M1_CaptureOxbayFort.win_condition.l1 = "FORT_destroy";
-			Pchar.quest.quest_M1_CaptureOxbayFort.win_condition.l1.character = "Oxbay Commander";
-			Pchar.quest.quest_M1_CaptureOxbayFort.win_condition = "quest_M1_CaptureOxbayFort";
-			
-			// LAi_SetImmortal(characterFromID("Douwesen Commander"), false);//PJ a supprimer ?
-			// LAi_SetImmortal(characterFromID("Greenford Commander"), false);//PJ a supprimer ?
-			
-			//Desactivation de la capacite de dechargement sur l’ile
-			Island_SetReloadEnableGlobal("Redmond", false);
-			Island_SetReloadEnableGlobal("FalaiseDeFleur", false);
-			Island_SetReloadEnableGlobal("Conceicao", false);
-			Island_SetReloadEnableGlobal("IslaMuelle", false);
-			Island_SetReloadEnableGlobal("Douwesen", false);
-			Island_SetReloadEnableGlobal("Oxbay", false);
-			
-			//relations avec les pays
-			pchar.quest_M1_NationRelation_ENGLAND  = GetNationRelation2MainCharacter(ENGLAND);
-			pchar.quest_M1_NationRelation_FRANCE   = GetNationRelation2MainCharacter(FRANCE);
-			pchar.quest_M1_NationRelation_SPAIN    = GetNationRelation2MainCharacter(SPAIN);
-			pchar.quest_M1_NationRelation_PORTUGAL = GetNationRelation2MainCharacter(PORTUGAL);
-			pchar.quest_M1_NationRelation_HOLLAND  = GetNationRelation2MainCharacter(HOLLAND);
-			
-			SetNationRelation2MainCharacter(ENGLAND,RELATION_ENEMY);
-			SetNationRelation2MainCharacter(FRANCE,RELATION_ENEMY);
-			SetNationRelation2MainCharacter(SPAIN,RELATION_ENEMY);
-			SetNationRelation2MainCharacter(PORTUGAL,RELATION_ENEMY);
-			SetNationRelation2MainCharacter(HOLLAND,RELATION_ENEMY);
-			SetNationRelation2MainCharacter(PIRATE,RELATION_FRIEND);
-			
-			
-			Pchar.quest.quest_M1_FightingInRedmondPort.win_condition.l1 = "location";
-			Pchar.quest.quest_M1_FightingInRedmondPort.win_condition.l1.location = "Redmond_port";
-			Pchar.quest.quest_M1_FightingInRedmondPort.win_condition = "quest_M1_FightingInRedmondPort";
-			
-			Pchar.quest.quest_M1_FightingInFalaiseDeFleurPort.win_condition.l1 = "location";
-			Pchar.quest.quest_M1_FightingInFalaiseDeFleurPort.win_condition.l1.location = "FalaiseDeFleur_port";
-			Pchar.quest.quest_M1_FightingInFalaiseDeFleurPort.win_condition = "quest_M1_FightingInFalaiseDeFleurPort";
-			
-			Pchar.quest.quest_M1_FightingInConceicaoPort.win_condition.l1 = "location";
-			Pchar.quest.quest_M1_FightingInConceicaoPort.win_condition.l1.location = "Conceicao_port";
-			Pchar.quest.quest_M1_FightingInConceicaoPort.win_condition = "quest_M1_FightingInConceicaoPort";
-			
-			Pchar.quest.quest_M1_FightingInIslaMuellePort.win_condition.l1 = "location";
-			Pchar.quest.quest_M1_FightingInIslaMuellePort.win_condition.l1.location = "IslaMuelle_port";
-			Pchar.quest.quest_M1_FightingInIslaMuellePort.win_condition = "quest_M1_FightingInIslaMuellePort";
-			
-			Pchar.quest.quest_M1_FightingInDouwesenPort.win_condition.l1 = "location";
-			Pchar.quest.quest_M1_FightingInDouwesenPort.win_condition.l1.location = "Douwesen_port";
-			Pchar.quest.quest_M1_FightingInDouwesenPort.win_condition = "quest_M1_FightingInDouwesenPort";
-			
-			Pchar.quest.quest_M1_FightingInGreenfordPort.win_condition.l1 = "location";
-			Pchar.quest.quest_M1_FightingInGreenfordPort.win_condition.l1.location = "Greenford_port";
-			Pchar.quest.quest_M1_FightingInGreenfordPort.win_condition = "quest_M1_FightingInGreenfordPort";
-			
-			Pchar.quest.quest_M1_FightingInOxbayPort.win_condition.l1 = "location";
-			Pchar.quest.quest_M1_FightingInOxbayPort.win_condition.l1.location = "Oxbay_port";
-			Pchar.quest.quest_M1_FightingInOxbayPort.win_condition = "quest_M1_FightingInOxbayPort";
-		break;
-
-		case "quest_M1_RedmondBoats":
-			Group_CreateGroup("M1_Redmond");
-			Group_AddCharacter("M1_Redmond", "Captain Redmond 1");
-			Group_SetGroupCommander("M1_Redmond", "Captain Redmond 1");
-			Group_AddCharacter("M1_Redmond", "Captain Redmond 2");
-			Group_AddCharacter("M1_Redmond", "Captain Redmond 3");
-			Group_SetPursuitGroup("M1_Redmond", PLAYER_GROUP);
-			Group_SetTaskAttack("M1_Redmond", PLAYER_GROUP);
-			Group_SetAddress("M1_Redmond", Characters[GetMainCharacterIndex()].location, "", "");
-			Group_LockTask("M1_Redmond");
-		break;
-
-		case "quest_M1_FdFBoats":
-			Group_CreateGroup("M1_FalaiseDeFleur");
-			Group_AddCharacter("M1_FalaiseDeFleur", "Captain FalaiseDeFleur 1");
-			Group_SetGroupCommander("M1_FalaiseDeFleur", "Captain FalaiseDeFleur 1");
-			Group_AddCharacter("M1_FalaiseDeFleur", "Captain FalaiseDeFleur 2");
-			Group_AddCharacter("M1_FalaiseDeFleur", "Captain FalaiseDeFleur 3");
-			Group_SetPursuitGroup("M1_FalaiseDeFleur", PLAYER_GROUP);
-			Group_SetTaskAttack("M1_FalaiseDeFleur", PLAYER_GROUP);
-			Group_SetAddress("M1_FalaiseDeFleur", Characters[GetMainCharacterIndex()].location, "", "");
-			Group_LockTask("M1_FalaiseDeFleur");
-		break;
-
-		case "quest_M1_ConceicaoBoats":
-			Group_CreateGroup("M1_Conceicao");
-			Group_AddCharacter("M1_Conceicao", "Captain Conceicao 1");
-			Group_SetGroupCommander("M1_Conceicao", "Captain Conceicao 1");
-			Group_AddCharacter("M1_Conceicao", "Captain Conceicao 2");
-			Group_AddCharacter("M1_Conceicao", "Captain Conceicao 3");
-			Group_SetPursuitGroup("M1_Conceicao", PLAYER_GROUP);
-			Group_SetTaskAttack("M1_Conceicao", PLAYER_GROUP);
-			Group_SetAddress("M1_Conceicao", Characters[GetMainCharacterIndex()].location, "", "");
-			Group_LockTask("M1_Conceicao");
-		break;
-
-		case "quest_M1_IslaMuelleBoats":
-			Group_CreateGroup("M1_IslaMuelle");
-			Group_AddCharacter("M1_IslaMuelle", "Captain IslaMuelle 1");
-			Group_SetGroupCommander("M1_IslaMuelle", "Captain IslaMuelle 1");
-			Group_AddCharacter("M1_IslaMuelle", "Captain IslaMuelle 2");
-			Group_AddCharacter("M1_IslaMuelle", "Captain IslaMuelle 3");
-			Group_SetPursuitGroup("M1_IslaMuelle", PLAYER_GROUP);
-			Group_SetTaskAttack("M1_IslaMuelle", PLAYER_GROUP);
-			Group_SetAddress("M1_IslaMuelle", Characters[GetMainCharacterIndex()].location, "", "");
-			Group_LockTask("M1_IslaMuelle");
-		break;
-
-		case "quest_M1_DouwesenBoats":
-			Group_CreateGroup("M1_Douwesen");
-			Group_AddCharacter("M1_Douwesen", "Captain Douwesen 1");
-			Group_SetGroupCommander("M1_Douwesen", "Captain Douwesen 1");
-			Group_AddCharacter("M1_Douwesen", "Captain Douwesen 2");
-			Group_AddCharacter("M1_Douwesen", "Captain Douwesen 3");
-			Group_SetPursuitGroup("M1_Douwesen", PLAYER_GROUP);
-			Group_SetTaskAttack("M1_Douwesen", PLAYER_GROUP);
-			Group_SetAddress("M1_Douwesen", Characters[GetMainCharacterIndex()].location, "", "");
-			Group_LockTask("M1_Douwesen");
-		break;
-
-		case "quest_M1_OxbayBoats":
-			Group_CreateGroup("M1_Oxbay");
-			Group_AddCharacter("M1_Oxbay", "Captain Oxbay 1");
-			Group_SetGroupCommander("M1_Oxbay", "Captain Oxbay 1");
-			Group_AddCharacter("M1_Oxbay", "Captain Oxbay 2");
-			Group_AddCharacter("M1_Oxbay", "Captain Oxbay 3");
-			Group_SetPursuitGroup("M1_Oxbay", PLAYER_GROUP);
-			Group_SetTaskAttack("M1_Oxbay", PLAYER_GROUP);
-			Group_SetAddress("M1_Oxbay", Characters[GetMainCharacterIndex()].location, "", "");
-			Group_LockTask("M1_Oxbay");
-		break;
-
-		case "quest_M1_CaptureRedmondFort":
-			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Francois_l_Olonnais"));
-		break;
-
-		case "quest_M1_FightingInRedmondPort":
-			AddQuestRecord("PJ_M1", 2);
-			Pchar.quest_M1_step++;
-			M1_EndQuest();
-			
-			if (makeint(Pchar.quest_M1_step) < 9) {
-				LAi_SetActorType(characterFromID("Francois_l_Olonnais"));
-				LAi_SetActorType(pchar);
-				LAi_ActorFollow(pchar, characterFromID("Francois_l_Olonnais"), "", 2.0);
-				LAi_ActorFollow(characterFromID("Francois_l_Olonnais"), pchar, "quest_M1_FightingInRedmondPort_continue", 2.0);
-			}
-		break;
-		
-		case "quest_M1_FightingInRedmondPort_continue":
-			LAi_type_actor_Reset(pchar);
-			LAi_ActorWaitDialog(pchar, characterFromID("Francois_l_Olonnais"));
-			LAi_ActorDialog(characterFromID("Francois_l_Olonnais"), pchar, "pchar_back_to_player", 2.0, 1.0);
-			characters[GetCharacterIndex("Francois_l_Olonnais")].dialog.currentnode = "FightingInRedmondFort_won";
-		break;
-
-		case "quest_M1_CaptureFalaiseDeFleurFort":
-			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Francois_l_Olonnais"));
-		break;
-
-		case "quest_M1_FightingInFalaiseDeFleurPort":
-			AddQuestRecord("PJ_M1", 3);
-			Pchar.quest_M1_step++;
-			M1_EndQuest();
-			
-			if (makeint(Pchar.quest_M1_step) < 9) {
-				LAi_SetActorType(characterFromID("Francois_l_Olonnais"));
-				LAi_SetActorType(pchar);
-				LAi_ActorFollow(pchar, characterFromID("Francois_l_Olonnais"), "", 2.0);
-				LAi_ActorFollow(characterFromID("Francois_l_Olonnais"), pchar, "quest_M1_FightingInFalaiseDeFleurPort_continue", 2.0);
-			}
-		break;
-		
-		case "quest_M1_FightingInFalaiseDeFleurPort_continue":
-			LAi_type_actor_Reset(pchar);
-			LAi_ActorWaitDialog(pchar, characterFromID("Francois_l_Olonnais"));
-			LAi_ActorDialog(characterFromID("Francois_l_Olonnais"), pchar, "pchar_back_to_player", 2.0, 1.0);
-			characters[GetCharacterIndex("Francois_l_Olonnais")].dialog.currentnode = "FightingInFalaiseDeFleurFort_won";
-		break;
-
-		case "quest_M1_CaptureConceicaoFort":
-			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Francois_l_Olonnais"));
-		break;
-
-		case "quest_M1_FightingInConceicaoPort":
-			AddQuestRecord("PJ_M1", 4);
-			Pchar.quest_M1_step++;
-			M1_EndQuest();
-			
-			if (makeint(Pchar.quest_M1_step) < 9) {
-				LAi_SetActorType(characterFromID("Francois_l_Olonnais"));
-				LAi_SetActorType(pchar);
-				LAi_ActorFollow(pchar, characterFromID("Francois_l_Olonnais"), "", 2.0);
-				LAi_ActorFollow(characterFromID("Francois_l_Olonnais"), pchar, "quest_M1_FightingInConceicaoPort_continue", 2.0);
-			}
-		break;
-		
-		case "quest_M1_FightingInConceicaoPort_continue":
-			LAi_type_actor_Reset(pchar);
-			LAi_ActorWaitDialog(pchar, characterFromID("Francois_l_Olonnais"));
-			LAi_ActorDialog(characterFromID("Francois_l_Olonnais"), pchar, "pchar_back_to_player", 2.0, 1.0);
-			characters[GetCharacterIndex("Francois_l_Olonnais")].dialog.currentnode = "FightingInConceicaoFort_won";
-		break;
-
-		case "quest_M1_CaptureIslaMuelleFort":
-			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Francois_l_Olonnais"));
-		break;
-
-		case "quest_M1_FightingInIslaMuellePort":
-			AddQuestRecord("PJ_M1", 5);
-			Pchar.quest_M1_step++;
-			M1_EndQuest();
-			
-			if (makeint(Pchar.quest_M1_step) < 9) {
-				LAi_SetActorType(characterFromID("Francois_l_Olonnais"));
-				LAi_SetActorType(pchar);
-				LAi_ActorFollow(pchar, characterFromID("Francois_l_Olonnais"), "", 2.0);
-				LAi_ActorFollow(characterFromID("Francois_l_Olonnais"), pchar, "quest_M1_FightingInIslaMuellePort_continue", 2.0);
-			}
-		break;
-		
-		case "quest_M1_FightingInIslaMuellePort_continue":
-			LAi_type_actor_Reset(pchar);
-			LAi_ActorWaitDialog(pchar, characterFromID("Francois_l_Olonnais"));
-			LAi_ActorDialog(characterFromID("Francois_l_Olonnais"), pchar, "pchar_back_to_player", 2.0, 1.0);
-			characters[GetCharacterIndex("Francois_l_Olonnais")].dialog.currentnode = "FightingInIslaMuelleFort_won";
-		break;
-
-		case "quest_M1_CaptureDouwesenFort":
-			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Francois_l_Olonnais"));
-		break;
-
-		case "quest_M1_FightingInDouwesenPort":
-			AddQuestRecord("PJ_M1", 6);
-			Pchar.quest_M1_step++;
-			Pchar.quest_M1_step = 9;//PJ a supprimer
-			M1_EndQuest();
-			
-			if (makeint(Pchar.quest_M1_step) < 9) {
-				LAi_SetActorType(characterFromID("Francois_l_Olonnais"));
-				LAi_SetActorType(pchar);
-				LAi_ActorFollow(pchar, characterFromID("Francois_l_Olonnais"), "", 2.0);
-				LAi_ActorFollow(characterFromID("Francois_l_Olonnais"), pchar, "quest_M1_FightingInDouwesenPort_continue", 2.0);
-			}
-		break;
-		
-		case "quest_M1_FightingInDouwesenPort_continue":
-			LAi_type_actor_Reset(pchar);
-			LAi_ActorWaitDialog(pchar, characterFromID("Francois_l_Olonnais"));
-			LAi_ActorDialog(characterFromID("Francois_l_Olonnais"), pchar, "pchar_back_to_player", 2.0, 1.0);
-			characters[GetCharacterIndex("Francois_l_Olonnais")].dialog.currentnode = "FightingInDouwesenFort_won";
-		break;
-
-		case "quest_M1_CaptureGreenfordFort":
-			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Francois_l_Olonnais"));
-		break;
-
-		case "quest_M1_FightingInGreenfordPort":
-			AddQuestRecord("PJ_M1", 7);
-			Pchar.quest_M1_step++;
-			M1_EndQuest();
-			
-			if (makeint(Pchar.quest_M1_step) < 9) {
-				LAi_SetActorType(characterFromID("Francois_l_Olonnais"));
-				LAi_SetActorType(pchar);
-				LAi_ActorFollow(pchar, characterFromID("Francois_l_Olonnais"), "", 2.0);
-				LAi_ActorFollow(characterFromID("Francois_l_Olonnais"), pchar, "quest_M1_FightingInGreenfordPort_continue", 2.0);
-			}
-		break;
-		
-		case "quest_M1_FightingInGreenfordPort_continue":
-			LAi_type_actor_Reset(pchar);
-			LAi_ActorWaitDialog(pchar, characterFromID("Francois_l_Olonnais"));
-			LAi_ActorDialog(characterFromID("Francois_l_Olonnais"), pchar, "pchar_back_to_player", 2.0, 1.0);
-			characters[GetCharacterIndex("Francois_l_Olonnais")].dialog.currentnode = "FightingInGreenfordFort_won";
-		break;
-
-		case "quest_M1_CaptureOxbayFort":
-			SetOfficersIndex(Pchar, -1, GetCharacterIndex("Francois_l_Olonnais"));
-		break;
-
-		case "quest_M1_FightingInOxbayPort":
-			AddQuestRecord("PJ_M1", 8);
-			Pchar.quest_M1_step++;
-			M1_EndQuest();
-			
-			if (makeint(Pchar.quest_M1_step) < 9) {
-				LAi_SetActorType(characterFromID("Francois_l_Olonnais"));
-				LAi_SetActorType(pchar);
-				LAi_ActorFollow(pchar, characterFromID("Francois_l_Olonnais"), "", 2.0);
-				LAi_ActorFollow(characterFromID("Francois_l_Olonnais"), pchar, "quest_M1_FightingInOxbayPort_continue", 2.0);
-			}
-		break;
-		
-		case "quest_M1_FightingInOxbayPort_continue":
-			LAi_type_actor_Reset(pchar);
-			LAi_ActorWaitDialog(pchar, characterFromID("Francois_l_Olonnais"));
-			LAi_ActorDialog(characterFromID("Francois_l_Olonnais"), pchar, "pchar_back_to_player", 2.0, 1.0);
-			characters[GetCharacterIndex("Francois_l_Olonnais")].dialog.currentnode = "FightingInOxbayFort_won";
-		break;
-		
-		case "quest_M1_QCBoats":
-			Group_CreateGroup("M1_QC");
-			Group_AddCharacter("M1_QC", "Captain QC 1");
-			Group_SetGroupCommander("M1_QC", "Captain QC 1");
-			Group_AddCharacter("M1_QC", "Captain QC 2");
-			Group_AddCharacter("M1_QC", "Captain QC 3");
-			Group_AddCharacter("M1_QC", "Captain QC 4");
-			Group_AddCharacter("M1_QC", "Captain QC 5");
-			Group_AddCharacter("M1_QC", "Captain QC 6");
-			Group_AddCharacter("M1_QC", "Captain QC 7");
-			Group_AddCharacter("M1_QC", "Captain QC 8");
-			Group_AddCharacter("M1_QC", "Captain QC 9");
-			Group_SetPursuitGroup("M1_QC", PLAYER_GROUP);
-			Group_SetTaskAttack("M1_QC", PLAYER_GROUP);
-			Group_SetAddress("M1_QC", Characters[GetMainCharacterIndex()].location, "", "");
-			Group_LockTask("M1_QC");
-		break;
-		
-		case "quest_M1_GotoRedmondPrison":
-			AddQuestRecord("PJ_M1", 16);
-			
-			//reactivation de la capacite de dechargement sur l’ile
-			Island_SetReloadEnableGlobal("Redmond", true);
-			Island_SetReloadEnableGlobal("FalaiseDeFleur", true);
-			Island_SetReloadEnableGlobal("Conceicao", true);
-			Island_SetReloadEnableGlobal("IslaMuelle", true);
-			Island_SetReloadEnableGlobal("Douwesen", true);
-			Island_SetReloadEnableGlobal("Oxbay", true);
-			
-			LAi_Fade("quest_M1_RedmondPrison", "");
-		break;
-		
-		case "quest_M1_RedmondPrison":
-			Log_SetStringToLog("Prison de Redmond.");
-			ChangeCharacterAddress(characterFromID("Francois_l_Olonnais"), "Fake_Greenford_prison", "goto9");
-			DoQuestReloadToLocation("Fake_Greenford_prison", "goto", "goto18", "quest_M1_RedmondPrisonDialog");
-		break
-
-		case "quest_M1_RedmondPrisonDialog":
-			characters[GetCharacterIndex("Francois_l_Olonnais")].dialog.currentnode = "FightingInOxbayFort_won";
-		break
-
-		case "quest_M1_END_1":
-			LAi_Fade("quest_M1_END_2", "");
-		break
-
-		case "quest_M1_END_2":
-			DoQuestReloadToLocation("QC_pirate_house_inside", "goto", "goto1", "quest_M1_END_3");
-		break
-
-		case "quest_M1_END_3":
-			Log_SetStringToLog("Chui A-poo a disparu mais il a laisse une lettre.");
-			for(n = 1; n <= 200; n++) {GiveItem2Character(Pchar, "jewelry2");}//diamant = 1538
-			for(n = 1; n <= 150; n++) {GiveItem2Character(Pchar, "jewelry5");}//pepite d'or = 1538
-			AddQuestRecord("PJ_M1", 17);
-			CloseQuestHeader("PJ_M1");
-		break
 		// fin ajout PJ
 	}
 }

@@ -1,15 +1,4 @@
 {
-  // Encodage & fins de ligne
-  "files.encoding": "windows1252",
-  "files.autoGuessEncoding": false,
-  "files.eol": "\r\n",
-
-  // Sécurité : voir les caractères invisibles / Unicode exotiques
-  "editor.renderWhitespace": "boundary",
-  "editor.renderControlCharacters": true,
-
-  // Qualité de vie
-  "editor.insertSpaces": true,
-  "editor.tabSize": 4,
-  "editor.rulers": [100]
+  "files.encoding": "iso88591",
+  "files.autoGuessEncoding": false
 }

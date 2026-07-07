@@ -1,0 +1,22 @@
+string DLG_TEXT[19] = {
+"Alors, t'as découvert quelque chose? Comment vont nos enfants?!",
+"Je vais essayer d'aider, mais pour le moment débarrasse le plancher.",
+"Qu'est-ce que tu regardes? Tu es venu te moquer comme les autres?",
+"Du calme. Qu'est-ce qui ne va pas?",
+"Désolé. Je ne peux rien pour toi.",
+"Tu as découvert quelque chose?",
+"J'ai ramené les enfants. On les débarque en ce moment même.",
+"Oh, merci, merci, tu es si gentil.",
+"Au revoir.",
+"Oh, en voilà un autre! Il trouve ça drôle de rire et de se moquer de nous!",
+"Je ne comprends pas ce qui se passe ici, tu peux peut-être me le dire?",
+"Nos enfants ont été enlevés la nuit dernière et le gouverneur n'a même pas levé le petit doigt!",
+"Attends, comment ça, enlevés? Qui a fait ça?",
+"Je n'en sais rien! Quand je me suis endormie, mon bébé était dans son berceau et à mon réveil, il avait disparu!",
+"C'est terrible! Et qu'en dit le gouverneur?",
+"Il n'a toujours pas osé se pointer! Il a peur! C'est un lâche!",
+"S'il te plaît, essaie de te calmer. Je vais aller parler au gouverneur.",
+"Béni sois-tu, béni sois-tu!",
+"Attends-moi, je vais revenir.",
+
+};

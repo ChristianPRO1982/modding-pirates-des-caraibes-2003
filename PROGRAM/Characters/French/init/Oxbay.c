@@ -5,7 +5,7 @@ int CreateOxbayCharacters(int n)
 	ref PChar;
 	PChar = GetMainCharacter();
 //Location: Oxbay Pier (an entrance to the town from the pier)
-	
+
 	// ajout PJ
 	//afficher tous les modele de personnages sur la plage du port d'Oxbay
 	// makeref(ch,Characters[n]); ch.name 	= "admiral"; ch.lastname 	= ""; ch.id		= "admiral"; ch.model = "admiral"; ch.sound_type = "pirate"; ch.location	= "Oxbay_port"; ch.location.group = "goto"; ch.location.locator = "goto2"; ch.Dialog.Filename = "aa PNJ Quest.c"; ch.greeting = "Gr_Mateus Santos"; ch.rank 	= 1; ch.nation = ENGLAND; ch.reputation = "None"; ch.experience = "0"; ch.skill.Leadership = "1"; ch.skill.Fencing = "1"; ch.skill.Sailing = "1"; ch.skill.Accuracy = "1"; ch.skill.Cannons = "1"; ch.skill.Grappling = "1"; ch.skill.Repair = "1"; ch.skill.Defence = "1"; ch.skill.Commerce = "1"; ch.skill.Sneak = "1"; ch.money = "10"; LAi_SetCitizenType(ch); LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS"); n = n + 1;
@@ -153,8 +153,8 @@ int CreateOxbayCharacters(int n)
 	// makeref(ch,Characters[n]); ch.name 	= "will"; ch.lastname 	= ""; ch.id		= "will"; ch.model = "will"; ch.sound_type = "pirate"; ch.location	= "Oxbay_port"; ch.location.group = "goto"; ch.location.locator = "goto2"; ch.Dialog.Filename = "aa PNJ Quest.c"; ch.greeting = "Gr_Mateus Santos"; ch.rank 	= 1; ch.nation = ENGLAND; ch.reputation = "None"; ch.experience = "0"; ch.skill.Leadership = "1"; ch.skill.Fencing = "1"; ch.skill.Sailing = "1"; ch.skill.Accuracy = "1"; ch.skill.Cannons = "1"; ch.skill.Grappling = "1"; ch.skill.Repair = "1"; ch.skill.Defence = "1"; ch.skill.Commerce = "1"; ch.skill.Sneak = "1"; ch.money = "10"; LAi_SetCitizenType(ch); LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS"); n = n + 1;
 	// makeref(ch,Characters[n]); ch.name 	= "will US  deux"; ch.lastname 	= ""; ch.id		= "will_2"; ch.model = "will_2"; ch.sound_type = "pirate"; ch.location	= "Oxbay_port"; ch.location.group = "goto"; ch.location.locator = "goto2"; ch.Dialog.Filename = "aa PNJ Quest.c"; ch.greeting = "Gr_Mateus Santos"; ch.rank 	= 1; ch.nation = ENGLAND; ch.reputation = "None"; ch.experience = "0"; ch.skill.Leadership = "1"; ch.skill.Fencing = "1"; ch.skill.Sailing = "1"; ch.skill.Accuracy = "1"; ch.skill.Cannons = "1"; ch.skill.Grappling = "1"; ch.skill.Repair = "1"; ch.skill.Defence = "1"; ch.skill.Commerce = "1"; ch.skill.Sneak = "1"; ch.money = "10"; LAi_SetCitizenType(ch); LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS"); n = n + 1;
 	// fin ajout PJ
-	
-	makeref(ch,Characters[n]);		//ùùùùùùùùùù ùùùùùùù - ùùùùùùù ùùùùùùù ùùùùùùùùùùù ùùùùùùùù
+
+	makeref(ch,Characters[n]);		//?????????? ??????? - ??????? ??????? ??????????? ????????
 	ch.name 	= "Bartholomew";
 	ch.lastname 	= "Pardner";
 	ch.id		= "Bartholomew Pardner";
@@ -186,7 +186,7 @@ int CreateOxbayCharacters(int n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			//ùùùùùù ùùùùùùùù - ùùùùùùù ùùùùù ù ùùùùùùùùùù
+	makeref(ch,Characters[n]);			//?????? ???????? - ??????? ????? ? ??????????
 	ch.name 	= "Olyver";
 	ch.lastname 	= "Blaxter";
 	ch.id		= "Olyver Blaxter";
@@ -216,106 +216,8 @@ int CreateOxbayCharacters(int n)
 	LAi_SetCitizenType(ch);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
-	
-	// ajout PJ
-	// plus de PNJ en ville/port/faubourg
-	if (pchar.quest.PNJ_villes == true) {
-		makeref(ch,Characters[n]);
-		ch.name 	= "Flora";
-		ch.lastname 	= "Hayward";
-		ch.id		= "Flora Hayward";
-		ch.model	= "towngirl6";
-		ch.sex = "woman";
-		ch.sound_type = "female_citizen";
-		ch.location	= "Oxbay_port";
-		ch.location.group = "goto";
-		ch.location.locator = "goto13";// goto1 goto2 goto6 goto9 goto13
-		ch.Dialog.Filename = "oxbay citizen_dialog.c";
-		ch.greeting = "Gr_Woman_English Citizen";
-		ch.rank 	= 1;
-		ch.nation = ENGLAND;
-		ch.reputation = "None";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-		n = n + 1;
-		
-		makeref(ch,Characters[n]);
-		ch.name 	= "Frere Bartholomew";
-		ch.lastname 	= "";
-		ch.id		= "Frere Bartholomew";
-		ch.model	= "Monk2";
-		ch.sex = "man";
-		ch.sound_type = "seaman";
-		ch.location	= "Oxbay_port";
-		ch.location.group = "goto";
-		ch.location.locator = "goto13";// goto1 goto2 goto6 goto9 goto13
-		ch.Dialog.Filename = "oxbay citizen_dialog.c";
-		ch.greeting = "Gr_Oxbay Citizen";
-		ch.rank 	= 1;
-		ch.nation = ENGLAND;
-		ch.reputation = "None";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-		n = n + 1;
-		
-		makeref(ch,Characters[n]);
-		ch.name 	= "Meredith";
-		ch.lastname 	= "Thaxter";
-		ch.id		= "Meredith Thaxter";
-		ch.model	= "shkiper";
-		ch.sex = "man";
-		ch.sound_type = "seaman";
-		ch.location	= "Oxbay_port";
-		ch.location.group = "goto";
-		ch.location.locator = "goto6";// goto1 goto2 goto6 goto9 goto13
-		ch.Dialog.Filename = "oxbay citizen_dialog.c";
-		ch.greeting = "Gr_Oxbay Citizen";
-		ch.rank 	= 1;
-		ch.nation = ENGLAND;
-		ch.reputation = "None";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-		n = n + 1;
-	}
-	// fin ajout PJ
 
-	makeref(ch,Characters[n]);			//Soldier ùù ùùùùù ù ùùùùù
+	makeref(ch,Characters[n]);			//Soldier ?? ????? ? ?????
 	ch.name 	= "Soldat";
 	ch.lastname 	= " ";
 	ch.id		= "Ox_soldier_1";
@@ -351,7 +253,7 @@ int CreateOxbayCharacters(int n)
 	ch.greeting = "Gr_Oxbay Soldier";
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			//Soldier ùù ùùùùù ù ùùùùù
+	makeref(ch,Characters[n]);			//Soldier ?? ????? ? ?????
 	ch.name 	= "Soldat";
 	ch.lastname 	= " ";
 	ch.id		= "Ox_soldier_2";
@@ -459,7 +361,7 @@ int CreateOxbayCharacters(int n)
 	ch.greeting = "Gr_Patrol";
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			//ùùùùùùù ùùùùùùùù
+	makeref(ch,Characters[n]);			//??????? ????????
 	ch.name 	= "Beatrice";
 	ch.lastname 	= "Applegate";
 	ch.id		= "Beatrice Applegate";
@@ -490,7 +392,7 @@ int CreateOxbayCharacters(int n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			//ùùùùùùù ùùùùùùùù
+	makeref(ch,Characters[n]);			//??????? ????????
 	ch.name 	= "Brennan";
 	ch.lastname 	= "Applegate";
 	ch.id		= "Brennan Applegate";
@@ -738,7 +640,7 @@ int CreateOxbayCharacters(int n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
 	ch.greeting = "Gr_Patrol";
 	n = n + 1;
-	
+
 	// ajout PJ
 	if (pchar.quest.PNJ_Trop_Fort == true) {
 		makeref(ch,Characters[n]);
@@ -804,7 +706,7 @@ int CreateOxbayCharacters(int n)
 	}
 	// fin ajout PJ
 
-	makeref(ch,Characters[n]);			//ùùùùù ùùùùùùù
+	makeref(ch,Characters[n]);			//????? ???????
 	ch.name 	= "Moses";
 	ch.lastname 	= "Blinman";
 	ch.id		= "Moses Blinman";
@@ -834,106 +736,8 @@ int CreateOxbayCharacters(int n)
 	LAi_SetCitizenType(ch);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
-	
-	// ajout PJ
-	// plus de PNJ en ville/port/faubourg
-	if (pchar.quest.PNJ_villes == true) {
-		makeref(ch,Characters[n]);
-		ch.name = "Edward";
-		ch.lastname = "Punter";
-		ch.id = "Edward Punter";
-		ch.model = "blackman";
-		ch.sound_type = "male_citizen";
-		ch.sex = "man";
-		ch.location = "Oxbay_town";
-		ch.location.group = "goto";
-		ch.location.locator = "goto12";
-		ch.Dialog.Filename = "Oxbay citizen_dialog.c";
-		ch.greeting = "Gr_Oxbay Citizen";
-		ch.rank = 1;
-		ch.nation = ENGLAND;
-		ch.reputation = "None";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-		n = n + 1;
-		
-		makeref(ch,Characters[n]);
-		ch.name = "Raulfe";
-		ch.lastname = "Trenchard";
-		ch.id = "Raulfe Trenchard";
-		ch.model = "man1_2";
-		ch.sound_type = "male_citizen";
-		ch.sex = "man";
-		ch.location = "Oxbay_town";
-		ch.location.group = "goto";
-		ch.location.locator = "goto31";
-		ch.Dialog.Filename = "Oxbay citizen_dialog.c";
-		ch.greeting = "Gr_Oxbay Citizen";
-		ch.rank = 1;
-		ch.nation = ENGLAND;
-		ch.reputation = "None";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-		n = n + 1;
 
-		makeref(ch,Characters[n]);
-		ch.name = "Priscilla";
-		ch.lastname = "Duncalf";
-		ch.id = "Priscilla Duncalf";
-		ch.model = "Oldwoman";
-		ch.sound_type = "female_citizen";
-		ch.sex = "woman";
-		ch.location = "Oxbay_town";
-		ch.location.group = "goto";
-		ch.location.locator = "goto8";
-		ch.Dialog.Filename = "Oxbay citizen_dialog.c";
-		ch.greeting = "Gr_Woman_English Citizen";
-		ch.rank = 1;
-		ch.nation = ENGLAND;
-		ch.reputation = "None";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "10";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-		n = n + 1;
-	}
-	// fin ajout PJ
-
-	makeref(ch,Characters[n]);			// ùù ùùùùùù - ùùùùùùùù ù ùùùùùùù
+	makeref(ch,Characters[n]);			// ?? ?????? - ???????? ? ???????
 	ch.name 	= "Ed";
 	ch.lastname 	= "Postle";
 	ch.id		= "Ed Postle";
@@ -964,7 +768,7 @@ int CreateOxbayCharacters(int n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			//ùùùùùùù ùùùù
+	makeref(ch,Characters[n]);			//??????? ????
 	ch.name 	= "Lavinia";
 	ch.lastname 	= "Ault";
 	ch.id		= "Lavinia Ault";
@@ -995,7 +799,7 @@ int CreateOxbayCharacters(int n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			//ùùùùù ùùùùùù
+	makeref(ch,Characters[n]);			//????? ??????
 	ch.name 	= "Flann";
 	ch.lastname 	= "Vickers";
 	ch.id		= "Flann Vickers";
@@ -1027,7 +831,7 @@ int CreateOxbayCharacters(int n)
 
 	n = n + 1;
 
-	makeref(ch,Characters[n]);		//ùùùùù ùùùùùù
+	makeref(ch,Characters[n]);		//????? ??????
 	ch.name 	= "Peter";
 	ch.lastname 	= "Dashwood";
 	ch.id		= "Peter Dashwood";
@@ -1059,7 +863,7 @@ int CreateOxbayCharacters(int n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			//ùùùùù ùùùùù
+	makeref(ch,Characters[n]);			//????? ?????
 	ch.name 	= "Flora";
 	ch.lastname 	= "Debney";
 	ch.id		= "Flora Debney";
@@ -1128,7 +932,7 @@ int CreateOxbayCharacters(int n)
 
 //Location: Oxbay Tavern
 
-	makeref(ch,Characters[n]);			// ùùùùùùù ùùùùùù
+	makeref(ch,Characters[n]);			// ??????? ??????
 	ch.name 	= "Everard";
 	ch.lastname 	= "Gordon";
 	ch.id		= "Everard Gordon";
@@ -1193,7 +997,7 @@ int CreateOxbayCharacters(int n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			// ùùùùù ùùùùù
+	makeref(ch,Characters[n]);			// ????? ?????
 	ch.name 	= "Raulf";
 	ch.lastname 	= "Mather";
 	ch.id		= "Raulf Mather";
@@ -1289,7 +1093,7 @@ int CreateOxbayCharacters(int n)
 
 //Location: Oxbay Store (Where the church stands)
 
-	makeref(ch,Characters[n]);			//ùùùù ùùùùùù
+	makeref(ch,Characters[n]);			//???? ??????
 	ch.name 	= "Alan";
 	ch.lastname 	= "Milds";
 	ch.id		= "Alan Milds";
@@ -1323,7 +1127,7 @@ int CreateOxbayCharacters(int n)
 
 //Location: Oxbay Shipyard (Where the church stands)
 
-	makeref(ch,Characters[n]);			//ùùùù ùùù ùùùù
+	makeref(ch,Characters[n]);			//???? ??? ????
 	ch.name 	= "Oweyn";
 	ch.lastname 	= "McDorey";
 	ch.id		= "Oweyn McDorey";
@@ -1431,106 +1235,6 @@ int CreateOxbayCharacters(int n)
 // Soldiers are called "Green_soldier_n"
 // Location: Greenford_port
 
-	// ajout PJ
-	// plus de PNJ en ville/port/faubourg
-	if (pchar.quest.PNJ_villes == true) {
-		makeref(ch,Characters[n]);
-		ch.name = "Filbert";
-		ch.lastname = "Papigay";
-		ch.id = "Filbert Papigay";
-		ch.model = "storeman2";
-		ch.sound_type = "seaman";
-		ch.sex = "man";
-		ch.location = "Greenford_port";
-		ch.location.group = "goto";
-		ch.location.locator = "
-		goto18";
-		ch.Dialog.Filename = "Greenford Citizen_dialog.c";
-		ch.greeting = "Gr_Greenford Citizen";
-		ch.rank = 1;
-		ch.nation = ENGLAND;
-		ch.reputation = "None";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "1";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-		n = n + 1;
-
-		makeref(ch,Characters[n]);
-		ch.name = "Gilbert";
-		ch.lastname = "Bighead";
-		ch.id = "Gilbert Bighead";
-		ch.model = "Fatman2_1";
-		ch.sound_type = "seaman";
-		ch.sex = "man";
-		ch.location = "Greenford_port";
-		ch.location.group = "goto";
-		ch.location.locator = "
-		goto14";
-		ch.Dialog.Filename = "Greenford Citizen_dialog.c";
-		ch.greeting = "Gr_Greenford Citizen";
-		ch.rank = 1;
-		ch.nation = ENGLAND;
-		ch.reputation = "None";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "1";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-		n = n + 1;
-
-		makeref(ch,Characters[n]);
-		ch.name = "Yvonne";
-		ch.lastname = "Longman";
-		ch.id = "Yvonne Longman";
-		ch.model = "Oldwoman";
-		ch.sound_type = "female_citizen";
-		ch.sex = "woman";
-		ch.location = "Greenford_port";
-		ch.location.group = "goto";
-		ch.location.locator = "goto5";
-		ch.Dialog.Filename = "Greenford Citizen_dialog.c";
-		ch.greeting = "Gr_Woman_English Citizen";
-		ch.rank = 1;
-		ch.nation = ENGLAND;
-		ch.reputation = "None";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "1";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-		n = n + 1;
-	}
-	// fin ajout PJ
-	
 	makeref(ch,Characters[n]);			// Evan Hart -- fisherman
 	ch.name 	= "Evan";
 	ch.lastname = "Hart";
@@ -2260,7 +1964,7 @@ int CreateOxbayCharacters(int n)
 	LAi_group_MoveCharacter(ch, "ENGLAND_SOLDIERS");
 	ch.greeting = "Gr_Greenford Soldier";
 	n = n + 1;
-	
+
 	// ajout PJ
 	if (pchar.quest.PNJ_Trop_Fort == true) {
 		makeref(ch,Characters[n]);
@@ -2326,104 +2030,6 @@ int CreateOxbayCharacters(int n)
 	LAi_SetCitizenType(ch);
 	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
 	n = n + 1;
-	
-	// ajout PJ
-	// plus de PNJ en ville/port/faubourg
-	if (pchar.quest.PNJ_villes == true) {
-		makeref(ch,Characters[n]);
-		ch.name = "Killian";
-		ch.lastname = "Wager";
-		ch.id = "Killian Wager";
-		ch.model = "man3";
-		ch.sound_type = "male_citizen";
-		ch.sex = "man";
-		ch.location = "Greenford_town";
-		ch.location.group = "goto";
-		ch.location.locator = "goto4";
-		ch.Dialog.Filename = "Greenford Citizen_dialog.c";
-		ch.greeting = "Gr_Greenford Citizen";
-		ch.rank = 1;
-		ch.nation = ENGLAND;
-		ch.reputation = "None";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "1";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-		n = n + 1;
-
-		makeref(ch,Characters[n]);
-		ch.name = "Pere Gilbert";
-		ch.lastname = "";
-		ch.id = "Pere Gilbert";
-		ch.model = "Monk";
-		ch.sound_type = "male_citizen";
-		ch.sex = "man";
-		ch.location = "Greenford_town";
-		ch.location.group = "goto";
-		ch.location.locator = "goto27";
-		ch.Dialog.Filename = "Greenford Citizen_dialog.c";
-		ch.greeting = "Gr_Greenford Citizen";
-		ch.rank = 1;
-		ch.nation = ENGLAND;
-		ch.reputation = "None";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "1";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-		n = n + 1;
-
-		makeref(ch,Characters[n]);
-		ch.name = "Anne";
-		ch.lastname = "Fiddler";
-		ch.id = "Anne Fiddler";
-		ch.model = "towngirl3";
-		ch.sound_type = "female_citizen";
-		ch.sex = "woman";
-		ch.location = "Greenford_town";
-		ch.location.group = "goto";
-		ch.location.locator = "goto15";
-		ch.Dialog.Filename = "Greenford Citizen_dialog.c";
-		ch.greeting = "Gr_Woman_English Citizen";
-		ch.rank = 1;
-		ch.nation = ENGLAND;
-		ch.reputation = "None";
-		ch.experience = "0";
-		ch.skill.Leadership = "1";
-		ch.skill.Fencing = "1";
-		ch.skill.Sailing = "1";
-		ch.skill.Accuracy = "1";
-		ch.skill.Cannons = "1";
-		ch.skill.Grappling = "1";
-		ch.skill.Repair = "1";
-		ch.skill.Defence = "1";
-		ch.skill.Commerce = "1";
-		ch.skill.Sneak = "1";
-		ch.money = "1";
-		LAi_SetCitizenType(ch);
-		LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-		n = n + 1;
-	}
-	// fin ajout PJ
 
 	makeref(ch,Characters[n]);			// Garry Ankers -- Brodyaga
 	ch.name 	= "Garry";
@@ -2815,7 +2421,7 @@ int CreateOxbayCharacters(int n)
 
 	//Greenford prison
 
-	makeref(ch,Characters[n]);		//ùùùùùùùùùù ùùùùùù ùù ùùùùùùùùù
+	makeref(ch,Characters[n]);		//?????????? ?????? ?? ?????????
 	ch.name 	= "Ronald";
 	ch.lastname 	= "Blacklock";
 	ch.id		= "Greenford Prison Commendant";
@@ -3384,7 +2990,7 @@ int CreateOxbayCharacters(int n)
 	n = n + 1;
 
 	makeref(ch,Characters[n]);			//Father Jerald
-	ch.name 	= "Pùre";
+	ch.name 	= "P?re";
 	ch.lastname 	= "Jerald";
 	ch.id		= "Father Jerald";
 	ch.model	= "monk";

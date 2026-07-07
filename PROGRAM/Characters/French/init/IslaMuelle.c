@@ -803,7 +803,7 @@ int CreateIslaMuelleCharacters(int n)
 	LAi_group_MoveCharacter(ch, "SPAIN_SOLDIERS");
 	ch.greeting = "Gr_Patrol";
 	n = n + 1;
-	
+
 	// ajout PJ
 	if (pchar.quest.PNJ_Trop_Fort == true) {
 		makeref(ch,Characters[n]);

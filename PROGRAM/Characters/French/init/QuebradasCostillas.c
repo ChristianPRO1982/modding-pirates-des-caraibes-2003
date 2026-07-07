@@ -115,7 +115,7 @@ int CreateQuebradasCostillasCharacters(int n)
 
 
 // QC_town:
-	
+
 	// ajout PJ
 	if (pchar.quest.PNJ_Trop_Fort == true) {
 		makeref(ch,Characters[n]);
@@ -154,7 +154,7 @@ int CreateQuebradasCostillasCharacters(int n)
 		n = n + 1;
 	}
 	// fin ajout PJ
-	
+
 	makeref(ch,Characters[n]);		// Natan Bueno -- Corsair1
 	ch.name 	= "Natan";
 	ch.lastname = "Bueno";

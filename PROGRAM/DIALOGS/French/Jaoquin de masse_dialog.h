@@ -1,0 +1,21 @@
+string DLG_TEXT[18] = {
+"La victoire sera pour nous!",
+"...",
+"Bonjour! J'ai beaucoup entendu parler de toi. En fait, nous te sommes très reconnaissants de ton aide.",
+"Moi aussi, je suis heureux de te rencontrer. Mais de quelle aide parles-tu? Oh, attends... Tu veux parler de cette agitation autour des côtes d'Oxbay?",
+"Un service, commandant? Et si quelqu'un avait enlevé ton fils ou ta fille et qu'un bureaucrate te demandait de lui rendre un service avant de te laisser sauver tes enfants?! \nC'est un scandale! Un tel homme a-t-il un cœur?",
+"",
+"Exactement, ",
+". Tu nous as été d'une grande aide. Sans toi, je crois que je serais au fond de l'estomac d'un poisson, à l'heure qu'il est.",
+"Et si je ne me trompe, tu es le passager mystérieux qui a débarqué au port de Greenford. C'est exact?",
+"Ah, je comprends ce que tu veux dire. Oui, c'est moi.",
+"Alors tu pourras peut-être me dire ton nom et en quoi tu es mêlé aux récents événements.",
+"Bien sûr. Je m'appelle ",
+". Je suis un chevalier de Malte. Il y a quelques années, j'ai participé à l'éradication d'un culte en Italie...",
+"Et tu es venu ici pour finir le travail?",
+"C'est ça. Si ça ne t'ennuie pas, je voudrais m'associer avec toi. Crois-moi : je te serai utile.",
+"Eh bien, tu connais l'ennemi et je suis sûr que tu sais te battre. Je ne vois pas de raison de dire non.",
+"Tu ne le regretteras pas, capitaine. Où dois-je te suivre pour commencer?",
+"À Isla Muelle! Nous avons besoin d'informations supplémentaires.",
+
+};
