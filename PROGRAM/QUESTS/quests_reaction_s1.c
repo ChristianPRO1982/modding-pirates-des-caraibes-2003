@@ -1,5 +1,9 @@
 // S1 - treasure hunter
 
+bool S1_DEV_COMPLETE_ALL_QUESTS_ON_WIN = false;
+
+// Dev shunt: when a normal S1 quest is won, mark the whole series complete and unlock Youyi.
+
 string S1_GetLeaderId(string startIsland)
 {
 	switch (startIsland)
@@ -179,6 +183,7 @@ void S1_ClearQuestRuntime()
 	pchar.quest_S1_gain_jewelry14 = 0;
 	pchar.quest_S1_gain_jewelry15 = 0;
 	pchar.quest_S1_gain_jewelry16 = 0;
+	pchar.quest_S1_currentQuestWon = false;
 }
 
 void S1_ResetQuestConditions()
@@ -234,6 +239,32 @@ void S1_MarkCurrentQuestCompleted()
 	}
 }
 
+void S1_MarkAllQuestsCompleted()
+{
+	ref PChar = GetMainCharacter();
+
+	pchar.quest_S1_quest_1_completed = true;
+	pchar.quest_S1_quest_2_completed = true;
+	pchar.quest_S1_quest_3_completed = true;
+	pchar.quest_S1_quest_4_completed = true;
+	pchar.quest_S1_quest_5_completed = true;
+	pchar.quest_S1_quest_6_completed = true;
+	pchar.quest_S1_quest_7_completed = true;
+	pchar.quest_S1_quest_8_completed = true;
+	pchar.quest_S1_quest_9_completed = true;
+	pchar.quest_S1_quest_10_completed = true;
+	pchar.quest_S1_quest_11_completed = true;
+	pchar.quest_S1_quest_12_completed = true;
+	pchar.quest_S1_quest_13_completed = true;
+	pchar.quest_S1_quest_14_completed = true;
+	pchar.quest_S1_quest_15_completed = true;
+	pchar.quest_S1_quest_16_completed = true;
+	pchar.quest_S1_quest_17_completed = true;
+	pchar.quest_S1_quest_18_completed = true;
+	pchar.quest_S1_quest_19_completed = true;
+	pchar.quest_S1_quest_20_completed = true;
+}
+
 int S1_CountCompletedQuests()
 {
 	ref PChar = GetMainCharacter();
@@ -287,6 +318,20 @@ void S1_ClearCompletedQuestFlags()
 	pchar.quest_S1_quest_18_completed = false;
 	pchar.quest_S1_quest_19_completed = false;
 	pchar.quest_S1_quest_20_completed = false;
+}
+
+void S1_ResetLastQuestConditions()
+{
+	ref PChar = GetMainCharacter();
+
+	pchar.quest.quest_S1_lastQuest_1.over = "yes";
+	pchar.quest.quest_S1_lastQuest_1 = "completed";
+	pchar.quest.quest_S1_lastQuest_2.over = "yes";
+	pchar.quest.quest_S1_lastQuest_2 = "completed";
+	pchar.quest.quest_S1_lastQuest_3.over = "yes";
+	pchar.quest.quest_S1_lastQuest_3 = "completed";
+	pchar.quest.quest_S1_lastQuest_4.over = "yes";
+	pchar.quest.quest_S1_lastQuest_4 = "completed";
 }
 
 void GenerateTreasureHunterQuests()
@@ -361,7 +406,9 @@ void GenerateTreasureHunterQuests()
 	pchar.quest_S1_gain_jewelry15 = 0;
 	pchar.quest_S1_gain_jewelry16 = 0;
 	pchar.quest_S1_no_treasure_here_text = 1;
-	pchar.quest_S1_final_enabled = false;
+	pchar.quest_S1_currentQuestWon = false;
+	pchar.quest_S1_final_enabled = true;
+	S1_ResetLastQuestConditions();
 }
 
 void TreasureHunterNextStep()
@@ -1189,6 +1236,8 @@ void S1_ProcessLocationEnter()
 	PlaceCharacter(characterFromID("TQC for fight 8 1"), "goto", "none");
 	PlaceCharacter(characterFromID("TQC for fight 8 2"), "goto", "none");
 	PlaceCharacter(characterFromID("TQC for fight 8 3"), "goto", "none");
+	PlaceCharacter(characterFromID("Youyi TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Youyi TQC 2"), "goto", "none");
 
 	if (pchar.quest_S1_step == 0)
 	{
@@ -1239,8 +1288,12 @@ void S1_ProcessLocationEnter()
 		{
 			PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", homelocation);
 		}
-	}
 
+		if (pchar.location == "QC_town" && pchar.quest_S1_allQuestsCompleted == true)
+		{
+			PlaceCharacter(characterFromID("Youyi TQC 1"), "goto", homelocation);
+		}
+	}
 }
 
 bool QuestComplete_S1(string sQuestName)
@@ -1256,6 +1309,7 @@ bool QuestComplete_S1(string sQuestName)
 		case "quest_S1_agreeded":
 			DeleteQuestHeader("PJ_S1");
 			SetQuestHeader("PJ_S1");
+			pchar.quest_S1_currentQuestWon = false;
 			pchar.quest_S1_step = 1;
 			TreasureHunterNextStep();
 			return true;
@@ -1296,6 +1350,11 @@ bool QuestComplete_S1(string sQuestName)
 		break;
 
 		case "quest_S1_completed_1":
+			if (pchar.quest_S1_allQuestsCompleted == true)
+			{
+				DoQuestCheckDelay("quest_S1_lastQuest_3", 0.0);
+				return true;
+			}
 			leaderId = S1_GetLeaderId(pchar.quest_S1_startIsland);
 			if (leaderId == "")
 			{
@@ -1304,12 +1363,14 @@ bool QuestComplete_S1(string sQuestName)
 			}
 			if (pchar.quest_S1_failed == true)
 			{
+				pchar.quest_S1_currentQuestWon = false;
 				ChangeCharacterReputation(pchar, -1);
 				AddQuestRecord("PJ_S1", "2");
 				Log_SetStringToLog(GlobalStringConvert("PJ_S1_failed"));
 				DoQuestCheckDelay("quest_S1_closed", 1.0);
 				return true;
 			}
+			pchar.quest_S1_currentQuestWon = true;
 			AddQuestRecord("PJ_S1", "1");
 			homelocation = pchar.location;
 			rCrew_leader = characterFromID(leaderId);
@@ -1383,6 +1444,7 @@ bool QuestComplete_S1(string sQuestName)
 		break;
 
 		case "quest_S1_fight_won":
+			pchar.quest_S1_currentQuestWon = true;
 			ChangeCharacterReputation(pchar, -5);
 			AddPartyExp(pchar, 50000);
 
@@ -1420,11 +1482,22 @@ bool QuestComplete_S1(string sQuestName)
 			}
 
 			S1_ResetQuestConditions();
-			S1_MarkCurrentQuestCompleted();
-			if (makeint(pchar.quest_S1_final_enabled) == true && makeint(S1_CountCompletedQuests()) == makeint(pchar.quest_S1_nbQuests))
+			if (pchar.quest_S1_currentQuestWon == true)
 			{
-				pchar.quest_S1_allQuestsCompleted = true;
-				S1_ClearCompletedQuestFlags();
+				S1_MarkCurrentQuestCompleted();
+				if (makeint(pchar.quest_S1_final_enabled) == true && (S1_DEV_COMPLETE_ALL_QUESTS_ON_WIN == true || makeint(S1_CountCompletedQuests()) == makeint(pchar.quest_S1_nbQuests)))
+				{
+					if (S1_DEV_COMPLETE_ALL_QUESTS_ON_WIN == true)
+					{
+						S1_MarkAllQuestsCompleted();
+					}
+					pchar.quest_S1_allQuestsCompleted = true;
+					S1_ClearCompletedQuestFlags();
+				}
+				else
+				{
+					pchar.quest_S1_allQuestsCompleted = false;
+				}
 			}
 			else
 			{
@@ -1433,9 +1506,77 @@ bool QuestComplete_S1(string sQuestName)
 			S1_ClearQuestRuntime();
 			return true;
 		break;
+
+		case "quest_S1_lastQuest_1":
+			DeleteQuestHeader("PJ_S1");
+			SetQuestHeader("PJ_S1");
+			AddQuestRecord("PJ_S1", 38);
+			pchar.quest_S1_currentQuestWon = false;
+			pchar.quest.quest_S1_lastQuest_2.win_condition.l1 = "location";
+			pchar.quest.quest_S1_lastQuest_2.win_condition.l1.location = "QC_pirate_house_inside";
+			pchar.quest.quest_S1_lastQuest_2.win_condition = "quest_S1_lastQuest_2";
+			return true;
+		break;
+
+		case "quest_S1_lastQuest_2":
+			pchar.quest_S1_Unearthing = true;
+			AddQuestRecord("PJ_S1", 39);
+			pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+			pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = -13;
+			pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = -9;
+			pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = 1;
+			pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+			pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 7;
+			pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 11;
+			pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+			return true;
+		break;
+
+		case "quest_S1_lastQuest_3":
+			AddQuestRecord("PJ_S1", 40);
+			pchar.quest_S1_Unearthing = false;
+			homelocation = pchar.location;
+			PlaceCharacter(characterFromID("Youyi TQC 1"), "goto", "none");
+			PlaceCharacter(characterFromID("Youyi TQC 2"), "goto", homelocation);
+			LAi_SetActorType(characterFromID("Youyi TQC 2"));
+			LAi_SetActorType(pchar);
+			LAi_ActorFollow(pchar, characterFromID("Youyi TQC 2"), "", 2.0);
+			LAi_ActorFollow(characterFromID("Youyi TQC 2"), pchar, "quest_S1_lastQuest_4", 2.0);
+			return true;
+		break;
+
+		case "quest_S1_lastQuest_4":
+			LAi_type_actor_Reset(pchar);
+			LAi_ActorWaitDialog(pchar, characterFromID("Youyi TQC 2"));
+			LAi_ActorDialog(characterFromID("Youyi TQC 2"), pchar, "pchar_back_to_player", 2.0, 1.0);
+			characters[GetCharacterIndex("Youyi TQC 2")].dialog.currentnode = "complete_quest";
+			return true;
+		break;
+
+		case "quest_S1_lastQuest_closed":
+			CloseQuestHeader("PJ_S1");
+
+			for(n = 1; n <= 17; n++) {GiveItem2Character(Pchar, "jewelry1");}
+			for(n = 1; n <= 7; n++) {GiveItem2Character(Pchar, "jewelry2");}
+			for(n = 1; n <= 14; n++) {GiveItem2Character(Pchar, "jewelry3");}
+			for(n = 1; n <= 9; n++) {GiveItem2Character(Pchar, "jewelry4");}
+			for(n = 1; n <= 7; n++) {GiveItem2Character(Pchar, "jewelry5");}
+			for(n = 1; n <= 14; n++) {GiveItem2Character(Pchar, "jewelry11");}
+			for(n = 1; n <= 27; n++) {GiveItem2Character(Pchar, "jewelry12");}
+
+			LAi_ActorGoToLocation(characterFromID("Youyi TQC 2"), "reload", homelocator, "none", "", "", "", 10.0);
+
+			S1_ResetLastQuestConditions();
+			pchar.quest.quest_S1_completed_1.over = "yes";
+			pchar.quest.quest_S1_completed_1 = "completed";
+			pchar.quest_S1_allQuestsCompleted = false;
+			pchar.quest_S1_currentQuestWon = false;
+			return true;
+		break;
 	}
 
 	return false;
 }
 //*/
+
 
