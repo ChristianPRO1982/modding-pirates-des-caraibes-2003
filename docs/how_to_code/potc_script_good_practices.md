@@ -3,6 +3,12 @@
 ## Objectif
 Ce depot modde uniquement des fichiers plats dans `PROGRAM/` et `RESOURCE/`. Le langage ressemble a du C, mais ce n'est pas du C standard: c'est une couche script du moteur Sea Dogs, avec chargement de segments, attributs dynamiques et handlers moteur.
 
+Point pratique important pour ce depot:
+
+- les fichiers gameplay historiques sous `PROGRAM/` et `RESOURCE/` doivent etre manipules en `ISO-8859-1`,
+- ne pas les rouvrir/sauvegarder en `UTF-8` par defaut,
+- un mauvais encodage peut casser les caracteres existants ou produire des diffs trompeurs.
+
 Le bon reflexe est:
 
 - modifier peu,
@@ -178,6 +184,20 @@ Le depot suit explicitement le texte francais pour:
 - `PROGRAM/Characters/French/init/*.c`
 
 Si le mod cible ce depot, la branche francaise est la reference de travail.
+
+### Preserver l'encodage des flat files
+Quand on edite des fichiers historiques du jeu dans:
+
+- `PROGRAM/`
+- `RESOURCE/`
+
+il faut preserver leur encodage `ISO-8859-1`.
+
+Bon reflexe:
+
+- relire le fichier apres modification si l'outil a pu reencoder automatiquement,
+- se mefier specialement des outils qui imposent `UTF-8`,
+- traiter toute erreur du type `invalid utf-8 sequence` comme un signal que le fichier doit etre relu/reecrit en `ISO-8859-1`.
 
 ## 4. Structure recommandee d'une modif de quete
 

@@ -3,6 +3,11 @@
 ## Objectif
 Ce workflow sert a creer une nouvelle quete en reutilisant uniquement les fichiers plats du depot. Il ne suppose ni nouvelle ile, ni nouveau model, ni nouveau son, ni nouvelle video.
 
+Contrainte pratique a garder en tete des le debut:
+
+- les fichiers plats historiques du runtime, surtout sous `PROGRAM/` et `RESOURCE/`, sont a preserver en `ISO-8859-1`,
+- il faut eviter les sauvegardes automatiques en `UTF-8` qui peuvent corrompre ou reformater silencieusement ces fichiers.
+
 Le cas cible est:
 
 - un lieu existant,
@@ -36,6 +41,11 @@ Une quete propre passe en general par cette chaine:
 ### Textes joueur
 - `RESOURCE/INI/TEXTS/FRENCH/QUESTBOOK/quests_texts.txt`
 - `RESOURCE/INI/TEXTS/FRENCH/globals.txt`
+
+Note d'encodage:
+
+- pour ces fichiers historiques, conserver `ISO-8859-1`,
+- verifier l'encodage avant une grosse serie d'edits ou apres un copier-coller externe.
 
 ### Dans ce depot, la branche de travail la plus concrete est
 - `PROGRAM/Characters/French/init/*.c`
@@ -278,6 +288,7 @@ CloseQuestHeader("MyQuest");
 - Poser une `win_condition` sans la desactiver ensuite.
 - Ajouter un texte de journal sans l'appeler via `AddQuestRecord()`.
 - Ajouter un `GlobalStringConvert()` sans la cle dans `globals.txt`.
+- Sauvegarder un fichier historique en `UTF-8` alors que le depot attend ici du `ISO-8859-1`.
 
 ## 14. Definition de fini
 Une quete est "propre" dans ce depot quand un lecteur peut suivre sans deviner:
