@@ -43,6 +43,18 @@ void QuestsInit()
 
 void QuestsCheck_forLocEnter()
 {
+	// ajout PJ
+	ref pchar = GetMainCharacter();
+	// POUR CREER DES QUETES
+	SetNationRelation2MainCharacter(PIRATE, RELATION_FRIEND);
+	//PJ connaitre a chaque reload des informations (ex : position = pchar.location)
+	Log_SetStringToLog("PJ 1:"+pchar.location);
+	Log_SetStringToLog("PJ 2:"+pchar.location.locator);
+	Log_SetStringToLog("PJ 3:"+pchar.location.locator_group);//location.group
+	// Log_SetStringToLog("PJ blade:"+pchar.equip.blade);
+	// Log_SetStringToLog("PJ gun:"+pchar.equip.gun);
+	// fin ajout PJ
+
 	QC_DoUnloadLocation();
 	QuestsCheck();
 	S1_ProcessLocationEnter();

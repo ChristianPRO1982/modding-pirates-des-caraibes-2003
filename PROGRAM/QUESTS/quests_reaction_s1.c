@@ -7,6 +7,27 @@ string S1_GetLeaderId(string startIsland)
 		case "Redmond":
 			return "Elizabeth Goodale TQC 2";
 		break;
+		case "FleurDeFalaise":
+			return "Eustache Busket TQC 2";
+		break;
+		case "Conceicao":
+			return "Bartolomeo Portugues TQC 2";
+		break;
+		case "IslaMuelle":
+			return "Benito Bonito TQC 2";
+		break;
+		case "Douwesen":
+			return "Hendrick van Hoven TQC 2";
+		break;
+		case "Oxbay_Greenford":
+			return "Wimund TQC 2";
+		break;
+		case "Oxbay_Oxbay":
+			return "Samuel Bellamy TQC 2";
+		break;
+		case "QuebradasCostillas":
+			return "Edward Thatch TQC 2";
+		break;
 	}
 	return "";
 }
@@ -18,6 +39,27 @@ string S1_GetStarterId(string startIsland)
 		case "Redmond":
 			return "Elizabeth Goodale TQC 1";
 		break;
+		case "FleurDeFalaise":
+			return "Eustache Busket TQC 1";
+		break;
+		case "Conceicao":
+			return "Bartolomeo Portugues TQC 1";
+		break;
+		case "IslaMuelle":
+			return "Benito Bonito TQC 1";
+		break;
+		case "Douwesen":
+			return "Hendrick van Hoven TQC 1";
+		break;
+		case "Oxbay_Greenford":
+			return "Wimund TQC 1";
+		break;
+		case "Oxbay_Oxbay":
+			return "Samuel Bellamy TQC 1";
+		break;
+		case "QuebradasCostillas":
+			return "Edward Thatch TQC 1";
+		break;
 	}
 	return "";
 }
@@ -28,6 +70,27 @@ string S1_GetStarterVisibleAttr(string startIsland)
 	{
 		case "Redmond":
 			return "quest_S1_Elizabeth_Goodale_TQC1_visible";
+		break;
+		case "FleurDeFalaise":
+			return "quest_S1_Eustache_Busket_TQC1_visible";
+		break;
+		case "Conceicao":
+			return "quest_S1_Bartolomeo_Portugues_TQC1_visible";
+		break;
+		case "IslaMuelle":
+			return "quest_S1_Benito_Bonito_TQC1_visible";
+		break;
+		case "Douwesen":
+			return "quest_S1_Hendrick_van_Hoven_TQC1_visible";
+		break;
+		case "Oxbay_Greenford":
+			return "quest_S1_Wimund_TQC1_visible";
+		break;
+		case "Oxbay_Oxbay":
+			return "quest_S1_Samuel_Bellamy_TQC1_visible";
+		break;
+		case "QuebradasCostillas":
+			return "quest_S1_Edward_Thatch_TQC1_visible";
 		break;
 	}
 	return "";
@@ -41,6 +104,48 @@ bool S1_GetFightCrewIds(string startIsland, ref crew1Id, ref crew2Id, ref crew3I
 			crew1Id = "TQC for fight 1 1";
 			crew2Id = "TQC for fight 1 2";
 			crew3Id = "TQC for fight 1 3";
+			return true;
+		break;
+		case "FleurDeFalaise":
+			crew1Id = "TQC for fight 2 1";
+			crew2Id = "TQC for fight 2 2";
+			crew3Id = "TQC for fight 2 3";
+			return true;
+		break;
+		case "Conceicao":
+			crew1Id = "TQC for fight 3 1";
+			crew2Id = "TQC for fight 3 2";
+			crew3Id = "TQC for fight 3 3";
+			return true;
+		break;
+		case "IslaMuelle":
+			crew1Id = "TQC for fight 4 1";
+			crew2Id = "TQC for fight 4 2";
+			crew3Id = "TQC for fight 4 3";
+			return true;
+		break;
+		case "Douwesen":
+			crew1Id = "TQC for fight 5 1";
+			crew2Id = "TQC for fight 5 2";
+			crew3Id = "TQC for fight 5 3";
+			return true;
+		break;
+		case "Oxbay_Greenford":
+			crew1Id = "TQC for fight 6 1";
+			crew2Id = "TQC for fight 6 2";
+			crew3Id = "TQC for fight 6 3";
+			return true;
+		break;
+		case "Oxbay_Oxbay":
+			crew1Id = "TQC for fight 7 1";
+			crew2Id = "TQC for fight 7 2";
+			crew3Id = "TQC for fight 7 3";
+			return true;
+		break;
+		case "QuebradasCostillas":
+			crew1Id = "TQC for fight 8 1";
+			crew2Id = "TQC for fight 8 2";
+			crew3Id = "TQC for fight 8 3";
 			return true;
 		break;
 	}
@@ -1049,13 +1154,90 @@ void S1_ProcessLocationEnter()
 	PlaceCharacter(characterFromID("TQC for fight 1 1"), "goto", "none");
 	PlaceCharacter(characterFromID("TQC for fight 1 2"), "goto", "none");
 	PlaceCharacter(characterFromID("TQC for fight 1 3"), "goto", "none");
+	PlaceCharacter(characterFromID("Eustache Busket TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Eustache Busket TQC 2"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 2 1"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 2 2"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 2 3"), "goto", "none");
+	PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 2"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 3 1"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 3 2"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 3 3"), "goto", "none");
+	PlaceCharacter(characterFromID("Benito Bonito TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Benito Bonito TQC 2"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 4 1"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 4 2"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 4 3"), "goto", "none");
+	PlaceCharacter(characterFromID("Hendrick van Hoven TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Hendrick van Hoven TQC 2"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 5 1"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 5 2"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 5 3"), "goto", "none");
+	PlaceCharacter(characterFromID("Wimund TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Wimund TQC 2"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 6 1"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 6 2"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 6 3"), "goto", "none");
+	PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Samuel Bellamy TQC 2"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 7 1"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 7 2"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 7 3"), "goto", "none");
+	PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Edward Thatch TQC 2"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 8 1"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 8 2"), "goto", "none");
+	PlaceCharacter(characterFromID("TQC for fight 8 3"), "goto", "none");
 
 	if (pchar.quest_S1_step == 0)
 	{
 		starterVisibleAttr = S1_GetStarterVisibleAttr("Redmond");
-		if (rand(3) == 0 && pchar.location == "Redmond_town_01" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
+		if (rand(3) >= 0 && pchar.location == "Redmond_town_01" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
 		{
 			PlaceCharacter(characterFromID("Elizabeth Goodale TQC 1"), "goto", homelocation);
+		}
+
+		starterVisibleAttr = S1_GetStarterVisibleAttr("FleurDeFalaise");
+		if (rand(3) >= 0 && pchar.location == "Falaise_de_fleur_port_02" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
+		{
+			PlaceCharacter(characterFromID("Eustache Busket TQC 1"), "goto", homelocation);
+		}
+
+		starterVisibleAttr = S1_GetStarterVisibleAttr("Conceicao");
+		if (rand(3) >= 0 && pchar.location == "Conceicao_town" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
+		{
+			PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 1"), "goto", homelocation);
+		}
+
+		starterVisibleAttr = S1_GetStarterVisibleAttr("IslaMuelle");
+		if (rand(3) >= 0 && pchar.location == "Muelle_town_02" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
+		{
+			PlaceCharacter(characterFromID("Benito Bonito TQC 1"), "goto", homelocation);
+		}
+
+		starterVisibleAttr = S1_GetStarterVisibleAttr("Douwesen");
+		if (rand(3) >= 0 && pchar.location == "Douwesen_town" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
+		{
+			PlaceCharacter(characterFromID("Hendrick van Hoven TQC 1"), "goto", homelocation);
+		}
+
+		starterVisibleAttr = S1_GetStarterVisibleAttr("Oxbay_Greenford");
+		if (rand(3) >= 0 && pchar.location == "Greenford_town" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
+		{
+			PlaceCharacter(characterFromID("Wimund TQC 1"), "goto", homelocation);
+		}
+
+		starterVisibleAttr = S1_GetStarterVisibleAttr("Oxbay_Oxbay");
+		if (rand(3) >= 0 && pchar.location == "Oxbay_town" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
+		{
+			PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", homelocation);
+		}
+
+		starterVisibleAttr = S1_GetStarterVisibleAttr("QuebradasCostillas");
+		if (rand(3) >= 0 && pchar.location == "QC_town" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
+		{
+			PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", homelocation);
 		}
 	}
 
