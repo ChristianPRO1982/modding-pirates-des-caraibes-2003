@@ -1,0 +1,4 @@
+Lis et prends conscience de ce projet de modding du jeu Pirates des Caraïbes 2003.
+En particulier lis la documentation dans .\docs\
+
+Plus particulièrement on va travailler sur la quête décrite dans 
