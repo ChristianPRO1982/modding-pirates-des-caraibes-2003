@@ -11,6 +11,10 @@ Modding du jeu pirates des Caraïbes de Bethesda de 2003. Ce modding ne modifie 
 Dans les fichiers plats .c et .h .
 > Retrouve les traces en commentaire avec mon pseudo "PJ"
 
+# pour jouer sous Win11
+
+RivaTuner
+
 # codes utiles
 
 ## sync.ps1
