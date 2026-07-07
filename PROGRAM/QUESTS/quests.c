@@ -190,10 +190,10 @@ void DeleteQuestHeader(string idQuest)
 }
 
 //**********************************************************************************
-// ������� ��� ������ � ��������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //==================================================================================
 
-// ��������� ���� ��������� ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //-----------------------------------------
 bool CheckQuestAttribute(string attributeName, string attributeValue)
 {
@@ -203,7 +203,7 @@ bool CheckQuestAttribute(string attributeName, string attributeValue)
 	return false;
 }
 
-// ������� ���� ��������� ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //------------------------------------------
 void DeleteQuestAttribute(string attributeName)
 {
@@ -247,7 +247,7 @@ bool GetNearLocator(string groupName, ref float_dist, ref findedLocator, float m
 	return bYesFind;
 }
 
-// ���������� ��������� � ��������� ������� ������ goto (�� �� ����� ����������� ���������)
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ goto (ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 //--------------------------------------------------------------------------------------------
 bool SetCharacterToNearLocatorFromMe(string characterID, float minDistance)
 {
@@ -264,7 +264,7 @@ bool SetCharacterToNearLocatorFromMe(string characterID, float minDistance)
 	return true;
 }
 
-// �������� ������ �� �������� ����� ��� ID-����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ID-ï¿½ï¿½ï¿½ï¿½
 //------------------------------------------------------
 ref CharacterFromID(string characterID)
 {
@@ -281,7 +281,7 @@ void WaitDatePostEventControl()
 	QuestsCheck();
 }
 
-// ���������� ��������� ����� � ������ ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //----------------------------------------------------
 void WaitDate(string postName,int year, int month, int day, int hour, int minute)
 {
@@ -294,7 +294,7 @@ void WaitDate(string postName,int year, int month, int day, int hour, int minute
 	WaitDatePostEventControl();
 }
 
-// ���������� ������ �� �������� ������� ��������� � ������� ����� ����� �������� ����� ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //---------------------------------------------------------------------------------------------
 bool SetCameraToShipView(string characterName, string questCheckName, float viewTimeInSec)
 {
@@ -333,7 +333,7 @@ void QuestCameraRestore()
 	}
 }
 
-// ������� ��� ������ �� ���� � ������ ������������ ������ �������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //-----------------------------------------------------------------
 bool QuestCloseSeaExit()
 {
@@ -357,7 +357,7 @@ bool QuestCloseSeaExit()
 	return true;
 }
 
-// ������� ��� ������ �� ���� � ������ ������������ ������ �������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //-----------------------------------------------------------------
 bool QuestOpenSeaExit()
 {
@@ -378,7 +378,7 @@ bool QuestOpenSeaExit()
 	return true;
 }
 
-// ����� ������� � ������� �� �����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 //-----------------------------------
 bool FindLocator(string locationName, string locatorName, ref locatorRef, bool fromRealLoadedLocators)
 {
@@ -427,7 +427,7 @@ bool FindLocator(string locationName, string locatorName, ref locatorRef, bool f
 	return false;
 }
 
-// ��������� �������� �� ���������� � �������� ������� � ������� �������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 bool CheckCurLocator(string group,string locator,float x,float y,float z)
 {
 	int locIdx = FindLoadedLocation();
@@ -442,7 +442,7 @@ bool CheckCurLocator(string group,string locator,float x,float y,float z)
 	else return false;
 }
 
-// �������� ���� ������� �� ����� ����� �����������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //---------------------------------------------------
 bool ChangeReloadData(string locationName,string locatorName, string toLocationName,string toLocatorName)
 {
@@ -463,7 +463,7 @@ bool ChangeReloadData(string locationName,string locatorName, string toLocationN
 	return true;
 }
 
-// ������� �������� ������ ����� ����������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 bool ChangeBackReloadData(string locationName,string locatorName)
 {
 	aref locRef;
@@ -476,7 +476,7 @@ bool ChangeBackReloadData(string locationName,string locatorName)
 	return true;
 }
 
-// ������� �������� ������ ����� �������� ����� ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //------------------------------------------------------
 void DoQuestCheckDelay(string questCheckName, float delayInSecond)
 {
@@ -526,7 +526,7 @@ void ExitActAnimation()
 	}
 }
 
-// �������� ��������� ��� ������ � ����� ������� � ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //--------------------------------------------------------
 bool ShipTempRemove(ref _refCharacter)
 {
@@ -540,7 +540,7 @@ bool ShipTempRemove(ref _refCharacter)
 	return true;
 }
 
-// ������������ ������ � ����� ������ ������� �� ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //------------------------------------------------------
 bool RestoreTempRemovedShip(ref _refCharacter)
 {
@@ -555,7 +555,7 @@ bool RestoreTempRemovedShip(ref _refCharacter)
 	return true;
 }
 
-// �������� ���� ���������� ���������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //------------------------------------
 void ExchangeCharacterShip(ref oneCharacter, ref twoCharacter)
 {
@@ -577,7 +577,7 @@ void QuestProcessDialogExit()
 	DeleteAttribute(two_aref,"act.disableDialog");
 }
 
-// ������ �����, ����������� ����� ������ �� �������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //---------------------------------------------------
 void AddDialogExitQuest(string questName)
 {
@@ -605,7 +605,7 @@ void QuestDialogExitProcedure()
 	string attrName;
 	ref mc = GetMainCharacter();
 
-	// ����� ���� �������� ����� ������ ������
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	ExecuteAfterDialogTask(otherCh);
 	ExecuteAfterDialogTask(mc);
 
@@ -642,7 +642,7 @@ void DoDeleteFakeLocation()
 	}
 }
 
-// ����������� �������� ��������� � ������ ������� � �� ���������� ������� �����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 //-------------------------------------------------------------------------------
 bool DoQuestReloadToLocation(string idLocation, string idGroup, string idLocator, string questName)
 {
@@ -663,7 +663,7 @@ bool DoQuestReloadToLocation(string idLocation, string idGroup, string idLocator
 	return DoReloadCharacterToLocation(idLocation,idGroup,idLocator);
 }
 
-// ����������� �������� ��������� � ������ �������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //-------------------------------------------------------------------------------
 bool DoReloadCharacterToLocation(string idLocation, string idGroup, string idLocator)
 {
@@ -697,7 +697,7 @@ bool DoReloadCharacterToLocation(string idLocation, string idGroup, string idLoc
 	return TeleportCharacterFromCurLocationToLocation("fakeReload",idGroup,idLocator);
 }
 
-// ����������� �������� ��������� � ������ ������� �� ����� ����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 //-------------------------------------------------------------------------------
 bool DoReloadFromWorldMapToLocation(string idLocation, string idGroup, string idLocator)
 {
@@ -718,7 +718,7 @@ void ReloadFromWMtoL_complete()
 	DeleteAttribute(pchar,"tmpWDMtoLand");
 }
 
-// ����������� �������� ��������� � ������ ������� �� ����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 //-------------------------------------------------------------------------------
 bool DoReloadFromSeaToLocation(string idLocation, string idGroup, string idLocator)
 {
@@ -745,7 +745,7 @@ void EndReloadToLocation()
 	ReloadFromWMtoL_complete();
 }
 
-// ������� ����� �� ������ ����������� �������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //---------------------------------------------
 void DeleteQuestCheck(string sQuestName)
 {
@@ -754,7 +754,7 @@ void DeleteQuestCheck(string sQuestName)
 	if( CheckAttribute(mc,"quest."+sQuestName+".win_condition") )	mc.quest.(sQuestName).over = "yes";
 }
 
-// �������� ������ ��� ���������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //----------------------------------
 string GetCharacterFullName(string idCharacter)
 {
@@ -768,7 +768,7 @@ string GetCharacterFullName(string idCharacter)
 	return retStr;
 }
 
-// ��������� ��������� � ���������� �� ��������� ���������� � �������� ������� �� ����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 //-------------------------------------------------------------------------------------
 bool StorePassengers(string idCharacter)
 {
@@ -780,7 +780,7 @@ bool StorePassengers(string idCharacter)
 	string sTmp;
 	aref arTmp;
 	int i,idx;
-	// �������� ��������
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	makearef(arTmp,refCh.Fellows.Old.Officers);
 	for(i=1; i<4; i++)
 	{
@@ -789,7 +789,7 @@ bool StorePassengers(string idCharacter)
 		sTmp = "id"+i;
 		arTmp.(sTmp) = idx;
 	}
-	// �������� ����������
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	makearef(arTmp,refCh.Fellows.Old.Passengers);
 	for(i=0; GetPassengersQuantity(refCh)>0; i++)
 	{
@@ -803,7 +803,7 @@ bool StorePassengers(string idCharacter)
 	return true;
 }
 
-// ������������ ����������� ����� ���������� � �� ����������� ��������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //----------------------------------------------------------------------
 bool RestorePassengers(string idCharacter)
 {
@@ -814,7 +814,7 @@ bool RestorePassengers(string idCharacter)
 
 	int i,idx;
 	aref arTmp,arCur;
-	// �������������� ����������
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	makearef(arTmp,refCh.Fellows.Old.Passengers);
 	for(i=0; i<GetAttributesNum(arTmp); i++)
 	{
@@ -822,7 +822,7 @@ bool RestorePassengers(string idCharacter)
 		idx = sti(GetAttributeValue(arCur));
 		AddPassenger(refCh,GetCharacter(idx),false);
 	}
-	// �������������� ��������
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	makearef(arTmp,refCh.Fellows.Old.Officers);
 	for(i=0; i<GetAttributesNum(arTmp); i++)
 	{
@@ -832,12 +832,12 @@ bool RestorePassengers(string idCharacter)
 		SetOfficersIndex(refCh,-1,idx);
 	}
 
-	// �������� ���������� ��������� ����������
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	DeleteAttribute(refCh,"Fellows.Old");
 	return true;
 }
 
-// ������� �� ������ ������ ���������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //--------------------------------------
 bool StartLookAfterCharacter(string idCharacter)
 {
@@ -856,14 +856,14 @@ void LookAfterCharacterProc()
 	PostEvent("evntLookAfterCharacter",100,"l",idxCh);
 }
 
-// ���������� �������� �� ��������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //-----------------------------------
 void EndLookAfterCharacter()
 {
 	DelEventHandler("evntLookAfterCharacter","LookAfterCharacterProc");
 }
 
-// ������������ �������� (�� ������, ���� �� ��� �� ����� ����)
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
 bool ReanimateCharacter(string characterID)
 {
 	int idx = GetCharacterIndex(characterID);
@@ -878,7 +878,7 @@ bool ReanimateCharacter(string characterID)
 }
 
 //extern void SetRandomNameToCharacter(ref chref);
-// ���������� ��������� ��� ��� ���������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 bool SetCharacterRandomName(string characterID)
 {
 	int idx = GetCharacterIndex(characterID);
@@ -892,7 +892,7 @@ bool SetCharacterRandomName(string characterID)
 }
 
 
-// ��������� ������� �� ����������� �����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 void QuestFortDestroyed()
 {
 	int idx = GetEventData();
@@ -911,7 +911,7 @@ void QuestGroupDeath()
 	mc.GroupDeath.(groupName) = "1";
 }
 
-// ������������� � �������� � ���� �� ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 object questToSeaLoginer;
 void QuestToSeaLogin_PrepareLoc(string islandID, string locGroup, string locName, bool sailUP)
 {
@@ -953,7 +953,7 @@ void QuestToSeaLogin_Prepare(float x, float z, string islandID)
 	questToSeaLoginer.PlayerGroup.z = z;
 	questToSeaLoginer.Island = islandID;
 }
-// ����������� ��������� ��� �������� � ���� �� ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 void QuestToSeaLogin_Add(string groupName)
 {
 	aref arql,ar;
@@ -976,7 +976,7 @@ void QuestToSeaLogin_Add(string groupName)
 		}
 	}
 }
-// ��������� ��������� �������� � ����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½
 void QuestToSeaLogin_Launch()
 {
 	SetEventHandler("FaderEvent_EndFade", "QuestToSeaLoginFade", 0);
@@ -996,7 +996,7 @@ void QuestToSeaLoginFade()
 	SeaLogin(&questToSeaLoginer);
 }
 
-// �������� ���������� ��������� ����� ������
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 int	GetCharacterFromFantom(ref chref)
 {
 	/*int tmpi = FindLoadedLocation();
@@ -1021,7 +1021,7 @@ int	GetCharacterFromFantom(ref chref)
 	return -1;
 }
 
-// ������ �� ������� ���� ������ ���������� ����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 void RemoveCharactersFromLocation(string idLocation, string modelName, string type)
 {
 	for(int i=0; i<MAX_CHARACTERS; i++)
@@ -1070,10 +1070,10 @@ void procEvntQuestComplete()
 }
 
 ///////////////////////////////////
-///  ��� ������ ����� - �� ������������� ���� ���� �����... ������
+///  ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½... ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ///////////////////////////////////
 
-// ��������� �������� � �� �� ���������� ������� �����
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 //------------------------------------------------------------
 void ActAnimation(ref chref, string action, string questName)
 {
@@ -1081,7 +1081,7 @@ void ActAnimation(ref chref, string action, string questName)
 //	actAction(chref, action, "ExitActAnimation");
 }
 
-// ���� ������� ������ ������ ������, �������� ��������� �� ���� �������.
+// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 void BreakAllAttack()
 {
 //	actAllarm = 0.0;

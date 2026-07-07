@@ -497,6 +497,919 @@ void PlaceCharacter(aref ch, string group, string location)
 	ChangeCharacterAddressGroup(ch, location, group, homelocator);
 }
 
+// ajout PJ
+void GenerateTreasureHunterQuests()
+{
+	ref PChar = GetMainCharacter();
+	int n = 0;
+	
+	pchar.quest_S1_treasure_hunter_1_win_condition_step1_island = "Conceicao"; n++;
+	pchar.quest_S1_treasure_hunter_2_win_condition_step1_island = "Conceicao"; n++;
+	pchar.quest_S1_treasure_hunter_3_win_condition_step1_island = "Douwesen"; n++;
+	pchar.quest_S1_treasure_hunter_4_win_condition_step1_island = "Douwesen"; n++;
+	pchar.quest_S1_treasure_hunter_5_win_condition_step1_island = "Falaise de Fleur"; n++;
+	pchar.quest_S1_treasure_hunter_6_win_condition_step1_island = "Falaise de Fleur"; n++;
+	pchar.quest_S1_treasure_hunter_7_win_condition_step1_island = "Isla Muelle"; n++;
+	pchar.quest_S1_treasure_hunter_8_win_condition_step1_island = "Isla Muelle"; n++;
+	pchar.quest_S1_treasure_hunter_9_win_condition_step1_island = "Quebradas Costillas"; n++;
+	pchar.quest_S1_treasure_hunter_10_win_condition_step1_island = "Quebradas Costillas"; n++;
+	pchar.quest_S1_treasure_hunter_11_win_condition_step1_island = "Redmond"; n++;
+	pchar.quest_S1_treasure_hunter_12_win_condition_step1_island = "Redmond"; n++;
+	pchar.quest_S1_treasure_hunter_13_win_condition_step1_island = "Oxbay"; n++;
+	pchar.quest_S1_treasure_hunter_14_win_condition_step1_island = "Oxbay"; n++;
+	pchar.quest_S1_treasure_hunter_15_win_condition_step1_island = "Oxbay"; n++;
+	pchar.quest_S1_treasure_hunter_16_win_condition_step1_island = "Oxbay"; n++;
+	pchar.quest_S1_treasure_hunter_17_win_condition_step1_island = "Oxbay"; n++;
+	pchar.quest_S1_treasure_hunter_18_win_condition_step1_island = "Oxbay"; n++;
+	pchar.quest_S1_treasure_hunter_19_win_condition_step1_island = "Redmond"; n++;
+	pchar.quest_S1_treasure_hunter_20_win_condition_step1_island = "Isla Muelle"; n++;
+	
+	//initialisation des variables
+	pchar.quest_S1_nbQuests = n;
+	pchar.quest_S1_numQuests = 0;
+	pchar.quest_S1_quest_1_completed = false;
+	pchar.quest_S1_quest_2_completed = false;
+	pchar.quest_S1_quest_3_completed = false;
+	pchar.quest_S1_quest_4_completed = false;
+	pchar.quest_S1_quest_5_completed = false;
+	pchar.quest_S1_quest_6_completed = false;
+	pchar.quest_S1_quest_7_completed = false;
+	pchar.quest_S1_quest_8_completed = false;
+	pchar.quest_S1_quest_9_completed = false;
+	pchar.quest_S1_quest_10_completed = false;
+	pchar.quest_S1_quest_11_completed = false;
+	pchar.quest_S1_quest_12_completed = false;
+	pchar.quest_S1_quest_13_completed = false;
+	pchar.quest_S1_quest_14_completed = false;
+	pchar.quest_S1_quest_15_completed = false;
+	pchar.quest_S1_quest_16_completed = false;
+	pchar.quest_S1_quest_17_completed = false;
+	pchar.quest_S1_quest_18_completed = false;
+	pchar.quest_S1_quest_19_completed = false;
+	pchar.quest_S1_quest_20_completed = false;
+	pchar.quest_S1_allQuestsCompleted = false;
+	pchar.quest_S1_step = 0;
+	pchar.quest_S1_Unearthing = false;
+	pchar.quest_S1_failed = false;
+	pchar.quest_S1_gain_gold_jewelry = 0;
+	pchar.quest_S1_gain_gold_jewelry_text = "";
+	pchar.quest_S1_gain_gold = 0;
+	pchar.quest_S1_gain_jewelry1 = 0;
+	pchar.quest_S1_gain_jewelry2 = 0;
+	pchar.quest_S1_gain_jewelry3 = 0;
+	pchar.quest_S1_gain_jewelry4 = 0;
+	pchar.quest_S1_gain_jewelry5 = 0;
+	pchar.quest_S1_gain_jewelry6 = 0;
+	pchar.quest_S1_gain_jewelry7 = 0;
+	pchar.quest_S1_gain_jewelry8 = 0;
+	pchar.quest_S1_gain_jewelry9 = 0;
+	pchar.quest_S1_gain_jewelry10 = 0;
+	pchar.quest_S1_gain_jewelry11 = 0;
+	pchar.quest_S1_gain_jewelry12 = 0;
+	pchar.quest_S1_gain_jewelry13 = 0;
+	pchar.quest_S1_gain_jewelry14 = 0;
+	pchar.quest_S1_gain_jewelry15 = 0;
+	pchar.quest_S1_gain_jewelry16 = 0;
+	pchar.quest_S1_no_treasure_here_text = 1;
+}
+
+void TreasureHunterNextStep()
+{
+	ref PChar = GetMainCharacter();
+	
+	switch (makeint(pchar.quest_S1_numQuests)) {
+		case 1://quete nВ°1 - Conceicao
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 4);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Conceicao_shore_02";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 5);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "Smugglers_Lair_exit";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "Conceicao_jungle_01";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://CONTINUE STEP
+					pchar.quest.quest_S1_step4.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step4.win_condition.l1.location = "Conceicao_town_exit";
+					pchar.quest.quest_S1_step4.win_condition = "quest_S1_step4";
+				break;
+				case 5://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = -61;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = -54;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -6;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 0;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -105;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -95;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 2://quete nВ°2 - Conceicao
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 6);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Conceicao_shore_01";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://FINAL STEP
+					AddQuestRecord("PJ_S1", 7);
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 1.4;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 5;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = 1;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 3;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 34;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 36;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 3://quete nВ°3 - Douwesen
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 8);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Douwesen_shore_01";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 9);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "Douwesen_jungle_01";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "Douwesen_jungle_02";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://CONTINUE STEP
+					pchar.quest.quest_S1_step4.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step4.win_condition.l1.location = "Rheims_house";
+					pchar.quest.quest_S1_step4.win_condition = "quest_S1_step4";
+				break;
+				case 5://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 11;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 19;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 2;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 4;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 4://quete nВ°4 - Douwesen
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 10);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Douwesen_shore_02";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 11);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "Douwesen_jungle_03";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "Douwesen_town_exit";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 35;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 41;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -2;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 1;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 74;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 80;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 5://quete nВ°5 - Fleur de Falaise
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 12);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Falaise_de_Fleur_shore";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://FINAL STEP
+					AddQuestRecord("PJ_S1", 13);
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 100;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 126;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 17;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 55;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 6://quete nВ°6 - Fleur de Falaise
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 14);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Falaise_de_Fleur_shore";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 15);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "Falaise_de_Fleur_Jungle";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 11;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -2;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 2;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -1;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 2;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 7://quete nВ°7 - Isla Muelle
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 16);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "muelle_shore";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 17);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "muelle_passage";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 23;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 27;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = 0;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 20;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -17;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -7;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 8://quete nВ°8 - Isla Muelle
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 18);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "muelle_shore";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 19);
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 16;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 23;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = 0;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 20;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -52;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -45;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 9://quete nВ°9 - Quebradas Costillas
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 20);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "QC_port";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 21);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "QC_town_exit";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 13;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 15;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 20;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 28;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 10://quete nВ°10 - Quebradas Costillas
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 22);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "QC_port";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 23);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "QC_town_exit";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "QC_pirate_house";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 17;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 19;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -7;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 11://quete nВ°11 - Redmond
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 24);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Redmond_Shore_01";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://FINAL STEP
+					AddQuestRecord("PJ_S1", 25);
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = -12;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = -7;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = 3;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 5;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -23;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -18;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 12://quete nВ°12 - Redmond
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 26);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Redmond_Shore_02";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 27);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "Redmond_jungle_01";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = -60;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = -54;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -3;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = -1;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -107;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -98;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 13://quete nВ°13 - Oxbay
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 28);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Oxbay_shore_02";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 29);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "oxbay_jungle_03";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "greenford_town_exit";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 8;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 14;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 3;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 6;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 14://quete nВ°14 - Oxbay
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 30);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Oxbay_shore_02";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 31);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "oxbay_jungle_03";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "oxbay_jungle_02";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://CONTINUE STEP
+					pchar.quest.quest_S1_step4.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step4.win_condition.l1.location = "oxbay_town_exit";
+					pchar.quest.quest_S1_step4.win_condition = "quest_S1_step4";
+				break;
+				case 5://CONTINUE STEP
+					pchar.quest.quest_S1_step5.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step5.win_condition.l1.location = "oxbay_jungle_01";
+					pchar.quest.quest_S1_step5.win_condition = "quest_S1_step5";
+				break;
+				case 6://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 16;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 1;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 4;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 15://quete nВ°15 - Oxbay
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 32);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Oxbay_shore_01";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 33);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "oxbay_jungle_01";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "oxbay_town_exit";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://CONTINUE STEP
+					pchar.quest.quest_S1_step4.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step4.win_condition.l1.location = "oxbay_jungle_02";
+					pchar.quest.quest_S1_step4.win_condition = "quest_S1_step4";
+				break;
+				case 5://CONTINUE STEP
+					pchar.quest.quest_S1_step5.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step5.win_condition.l1.location = "oxbay_cave_exit";
+					pchar.quest.quest_S1_step5.win_condition = "quest_S1_step5";
+				break;
+				case 6://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 1;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 6;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 4;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 6;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 16://quete nВ°16 - Oxbay
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 34);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Oxbay_shore_01";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 35);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "oxbay_jungle_01";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "oxbay_town_exit";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://CONTINUE STEP
+					pchar.quest.quest_S1_step4.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step4.win_condition.l1.location = "oxbay_jungle_02";
+					pchar.quest.quest_S1_step4.win_condition = "quest_S1_step4";
+				break;
+				case 5://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = -8;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 1;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -14;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -3;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 17://quete nВ°17 - Oxbay
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 36);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Oxbay_lighthouse";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://FINAL STEP
+					AddQuestRecord("PJ_S1", 37);
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 24;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 27;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = 0;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 30;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -31;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -25;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 18://quete nВ°18 - Oxbay
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 41);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Oxbay_lighthouse";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 42);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "Oxbay_canyon";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = 57;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 61;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 25;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 30;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 19://quete nВ°19 - Redmond
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 43);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "Redmond_Shore_02";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 44);
+					pchar.quest.quest_S1_step2.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step2.win_condition.l1.location = "Redmond_jungle_01";
+					pchar.quest.quest_S1_step2.win_condition = "quest_S1_step2";
+				break;
+				case 3://CONTINUE STEP
+					pchar.quest.quest_S1_step3.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step3.win_condition.l1.location = "Redmond_town_exit_2";
+					pchar.quest.quest_S1_step3.win_condition = "quest_S1_step3";
+				break;
+				case 4://FINAL STEP
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = -21;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = -15;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = -20;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = -55;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = -51;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+		case 20://quete nВ°20 - Isla Muelle
+			switch (makeint(pchar.quest_S1_step)) {
+				case 1://FIRST STEP
+					AddQuestRecord("PJ_S1", 45);
+					pchar.quest.quest_S1_step1.win_condition.l1 = "location";
+					pchar.quest.quest_S1_step1.win_condition.l1.location = "muelle_shore";
+					pchar.quest.quest_S1_step1.win_condition = "quest_S1_step1";
+				break;
+				case 2://CONTINUE STEP
+					AddQuestRecord("PJ_S1", 46);
+					pchar.quest_S1_Unearthing = true;
+					pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = -3;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = 0;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = 0;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 20;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 16;
+					pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 19;
+					pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+				break;
+			}
+		break;
+	}
+}
+
+void GenerateTreasureHunterQuest(string startIsland, int alternativeQuestNumber)
+{
+	ref PChar = GetMainCharacter();
+	int n;
+	
+	//generation des gains
+	if (rand(makeint(pchar.skill.Sneak)) < 3) {
+		// OR
+		pchar.quest_S1_gain_gold = 1000 + (75 * makeint(pchar.rank)) + (5 * makeint(pchar.rank) * rand(makeint(pchar.skill.sneak)));
+	} else {
+		// JEWELRY <=> JOAILLERIE (prix a Redmond en debut de partie)
+		// jewelry1 : saphir = 615
+		// jewelry2 : diamant = 1538
+		// jewelry3 : rubis = 769
+		// jewelry4 : emeraude = 1153
+		// jewelry5 : pepite d'or = 1538
+		// jewelry6 : bague en argent et saphir = 769
+		// jewelry7 : bague en or et emeraude = 961
+		// jewelry8 : bague en bronze = 384
+		// jewelry9 : croix en bronze = 307
+		// jewelry10 : bague en or et saphir = 1538
+		// jewelry11 : grosse perle = 769
+		// jewelry12 : petite perle = 384
+		// jewelry13 : broche en argent = 1538
+		// jewelry14 : broche en or = 769
+		// jewelry15 : pendetif emeraude = 769
+		// jewelry16 : collier en pierres precieuses = 384
+		for(n = 1; n <= 10 + rand(makeint(pchar.rank)); n++) {
+			if (makeint(pchar.skill.sneak) <= 3) {
+				switch(rand(24)+1) {
+					case 1: pchar.quest_S1_gain_jewelry1 = makeint(pchar.quest_S1_gain_jewelry1) + 1; break;
+					case 2: pchar.quest_S1_gain_jewelry2 = makeint(pchar.quest_S1_gain_jewelry2) + 1; break;
+					case 3: pchar.quest_S1_gain_jewelry3 = makeint(pchar.quest_S1_gain_jewelry3) + 1; break;
+					case 4: pchar.quest_S1_gain_jewelry4 = makeint(pchar.quest_S1_gain_jewelry4) + 1; break;
+					case 5: pchar.quest_S1_gain_jewelry5 = makeint(pchar.quest_S1_gain_jewelry5) + 1; break;
+					case 6: pchar.quest_S1_gain_jewelry6 = makeint(pchar.quest_S1_gain_jewelry6) + 1; break;
+					case 7: pchar.quest_S1_gain_jewelry7 = makeint(pchar.quest_S1_gain_jewelry7) + 1; break;
+					case 8: pchar.quest_S1_gain_jewelry8 = makeint(pchar.quest_S1_gain_jewelry8) + 1; break;
+					case 9: pchar.quest_S1_gain_jewelry9 = makeint(pchar.quest_S1_gain_jewelry9) + 1; break;
+					case 10: pchar.quest_S1_gain_jewelry8 = makeint(pchar.quest_S1_gain_jewelry8) + 1; break;
+					case 11: pchar.quest_S1_gain_jewelry9 = makeint(pchar.quest_S1_gain_jewelry9) + 1; break;
+					case 12: pchar.quest_S1_gain_jewelry10 = makeint(pchar.quest_S1_gain_jewelry10) + 1; break;
+					case 13: pchar.quest_S1_gain_jewelry11 = makeint(pchar.quest_S1_gain_jewelry11) + 1; break;
+					case 14: pchar.quest_S1_gain_jewelry12 = makeint(pchar.quest_S1_gain_jewelry12) + 1; break;
+					case 15: pchar.quest_S1_gain_jewelry12 = makeint(pchar.quest_S1_gain_jewelry12) + 1; break;
+					case 16: pchar.quest_S1_gain_jewelry13 = makeint(pchar.quest_S1_gain_jewelry13) + 1; break;
+					case 17: pchar.quest_S1_gain_jewelry14 = makeint(pchar.quest_S1_gain_jewelry14) + 1; break;
+					case 18: pchar.quest_S1_gain_jewelry15 = makeint(pchar.quest_S1_gain_jewelry15) + 1; break;
+					case 19: pchar.quest_S1_gain_jewelry16 = makeint(pchar.quest_S1_gain_jewelry16) + 1; break;
+					case 20: pchar.quest_S1_gain_jewelry16 = makeint(pchar.quest_S1_gain_jewelry16) + 1; break;
+					case 21: break;
+					case 22: break;
+					case 23: break;
+					case 24: break;
+					case 25: break;
+				}
+			}
+			if (makeint(pchar.skill.sneak) > 3 && makeint(pchar.skill.sneak) <= 6) {
+				switch(rand(21)+1) {
+					case 1: pchar.quest_S1_gain_jewelry1 = makeint(pchar.quest_S1_gain_jewelry1) + 1; break;
+					case 2: pchar.quest_S1_gain_jewelry1 = makeint(pchar.quest_S1_gain_jewelry1) + 1; break;
+					case 3: pchar.quest_S1_gain_jewelry2 = makeint(pchar.quest_S1_gain_jewelry2) + 1; break;
+					case 4: pchar.quest_S1_gain_jewelry3 = makeint(pchar.quest_S1_gain_jewelry3) + 1; break;
+					case 5: pchar.quest_S1_gain_jewelry3 = makeint(pchar.quest_S1_gain_jewelry3) + 1; break;
+					case 6: pchar.quest_S1_gain_jewelry4 = makeint(pchar.quest_S1_gain_jewelry4) + 1; break;
+					case 7: pchar.quest_S1_gain_jewelry5 = makeint(pchar.quest_S1_gain_jewelry5) + 1; break;
+					case 8: pchar.quest_S1_gain_jewelry6 = makeint(pchar.quest_S1_gain_jewelry6) + 1; break;
+					case 9: pchar.quest_S1_gain_jewelry6 = makeint(pchar.quest_S1_gain_jewelry6) + 1; break;
+					case 10: pchar.quest_S1_gain_jewelry7 = makeint(pchar.quest_S1_gain_jewelry7) + 1; break;
+					case 11: pchar.quest_S1_gain_jewelry10 = makeint(pchar.quest_S1_gain_jewelry10) + 1; break;
+					case 12: pchar.quest_S1_gain_jewelry11 = makeint(pchar.quest_S1_gain_jewelry11) + 1; break;
+					case 13: pchar.quest_S1_gain_jewelry11 = makeint(pchar.quest_S1_gain_jewelry11) + 1; break;
+					case 14: pchar.quest_S1_gain_jewelry13 = makeint(pchar.quest_S1_gain_jewelry13) + 1; break;
+					case 15: pchar.quest_S1_gain_jewelry14 = makeint(pchar.quest_S1_gain_jewelry14) + 1; break;
+					case 16: pchar.quest_S1_gain_jewelry15 = makeint(pchar.quest_S1_gain_jewelry15) + 1; break;
+					case 17: pchar.quest_S1_gain_jewelry14 = makeint(pchar.quest_S1_gain_jewelry14) + 1; break;
+					case 18: pchar.quest_S1_gain_jewelry15 = makeint(pchar.quest_S1_gain_jewelry15) + 1; break;
+					case 19: break;
+					case 20: break;
+					case 21: break;
+					case 22: break;
+				}
+			}
+			if (makeint(pchar.skill.sneak) > 6 && makeint(pchar.skill.sneak) <= 9) {
+				switch(rand(10)+1) {
+					case 1: pchar.quest_S1_gain_jewelry2 = makeint(pchar.quest_S1_gain_jewelry2) + 1; break;
+					case 2: pchar.quest_S1_gain_jewelry4 = makeint(pchar.quest_S1_gain_jewelry4) + 1; break;
+					case 3: pchar.quest_S1_gain_jewelry4 = makeint(pchar.quest_S1_gain_jewelry4) + 1; break;
+					case 4: pchar.quest_S1_gain_jewelry5 = makeint(pchar.quest_S1_gain_jewelry5) + 1; break;
+					case 5: pchar.quest_S1_gain_jewelry7 = makeint(pchar.quest_S1_gain_jewelry7) + 1; break;
+					case 6: pchar.quest_S1_gain_jewelry7 = makeint(pchar.quest_S1_gain_jewelry7) + 1; break;
+					case 7: pchar.quest_S1_gain_jewelry10 = makeint(pchar.quest_S1_gain_jewelry10) + 1; break;
+					case 8: pchar.quest_S1_gain_jewelry13 = makeint(pchar.quest_S1_gain_jewelry13) + 1; break;
+					case 9: break;
+					case 10: break;
+					case 11: break;
+				}
+			}
+			if (makeint(pchar.skill.sneak) == 10) {
+				switch(rand(5)+1) {
+					case 1: pchar.quest_S1_gain_jewelry2 = makeint(pchar.quest_S1_gain_jewelry2) + 1; break;
+					case 2: pchar.quest_S1_gain_jewelry5 = makeint(pchar.quest_S1_gain_jewelry5) + 1; break;
+					case 3: pchar.quest_S1_gain_jewelry10 = makeint(pchar.quest_S1_gain_jewelry10) + 1; break;
+					case 4: pchar.quest_S1_gain_jewelry13 = makeint(pchar.quest_S1_gain_jewelry13) + 1; break;
+					case 5: break;
+					case 6: break;
+				}
+			}
+		}
+	}
+	
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_gold);
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry1) * 615;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry2) * 1538;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry3) * 769;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry4) * 1153;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry5) * 1538;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry6) * 769;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry7) * 961;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry8) * 384;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry9) * 307;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry10) * 1538;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry11) * 769;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry12) * 384;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry13) * 1538;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry14) * 769;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry15) * 769;
+	pchar.quest_S1_gain_gold_jewelry = makeint(pchar.quest_S1_gain_gold_jewelry) + makeint(pchar.quest_S1_gain_jewelry16) * 384;
+	
+	if (makeint(pchar.quest_S1_gain_gold) > 0) pchar.quest_S1_gain_gold_jewelry_text = "pieces d'or uniquement.";
+	if (makeint(pchar.quest_S1_gain_jewelry1) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry1 + " saphirs.";
+	if (makeint(pchar.quest_S1_gain_jewelry2) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry2 + " diamant.";
+	if (makeint(pchar.quest_S1_gain_jewelry3) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry3 + " rubis.";
+	if (makeint(pchar.quest_S1_gain_jewelry4) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry4 + " emeraudes.";
+	if (makeint(pchar.quest_S1_gain_jewelry5) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry5 + " pepites d'or.";
+	if (makeint(pchar.quest_S1_gain_jewelry6) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry6 + " bagues en argent et saphirs.";
+	if (makeint(pchar.quest_S1_gain_jewelry7) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry7 + " bagues en or et emeraude.";
+	if (makeint(pchar.quest_S1_gain_jewelry8) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry8 + " bagues en bronze.";
+	if (makeint(pchar.quest_S1_gain_jewelry9) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry9 + " croix en bronze.";
+	if (makeint(pchar.quest_S1_gain_jewelry10) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry10 + " bagues en or et saphirs.";
+	if (makeint(pchar.quest_S1_gain_jewelry11) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry11 + " grosses perles.";
+	if (makeint(pchar.quest_S1_gain_jewelry12) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry12 + " petites perles.";
+	if (makeint(pchar.quest_S1_gain_jewelry13) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry13 + " broches en argent.";
+	if (makeint(pchar.quest_S1_gain_jewelry14) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry14 + " broches en or.";
+	if (makeint(pchar.quest_S1_gain_jewelry15) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry15 + " pendetifs en emeraude.";
+	if (makeint(pchar.quest_S1_gain_jewelry16) > 0) pchar.quest_S1_gain_gold_jewelry_text = pchar.quest_S1_gain_gold_jewelry_text + pchar.quest_S1_gain_jewelry16 + " colliers en pierres precieuses.";
+	
+	pchar.quest_S1_numQuests = makeint(rand(makeint(pchar.quest_S1_nbQuests) - 1)) + 1;
+	switch (makeint(pchar.quest_S1_numQuests)) {
+		case 1:  if (pchar.quest_S1_treasure_hunter_1_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 2:  if (pchar.quest_S1_treasure_hunter_2_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 3:  if (pchar.quest_S1_treasure_hunter_3_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 4:  if (pchar.quest_S1_treasure_hunter_4_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 5:  if (pchar.quest_S1_treasure_hunter_5_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 6:  if (pchar.quest_S1_treasure_hunter_6_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 7:  if (pchar.quest_S1_treasure_hunter_7_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 8:  if (pchar.quest_S1_treasure_hunter_8_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 9:  if (pchar.quest_S1_treasure_hunter_9_win_condition_step1_island  == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 10: if (pchar.quest_S1_treasure_hunter_10_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 11: if (pchar.quest_S1_treasure_hunter_11_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 12: if (pchar.quest_S1_treasure_hunter_12_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 13: if (pchar.quest_S1_treasure_hunter_13_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 14: if (pchar.quest_S1_treasure_hunter_14_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 15: if (pchar.quest_S1_treasure_hunter_15_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 16: if (pchar.quest_S1_treasure_hunter_16_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 17: if (pchar.quest_S1_treasure_hunter_17_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 18: if (pchar.quest_S1_treasure_hunter_18_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 19: if (pchar.quest_S1_treasure_hunter_19_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+		case 20: if (pchar.quest_S1_treasure_hunter_20_win_condition_step1_island == startIsland) pchar.quest_S1_numQuests = alternativeQuestNumber; break;
+	}
+	
+	switch (makeint(pchar.quest_S1_numQuests)) {
+		case 1:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_1_win_condition_step1_island; break;
+		case 2:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_2_win_condition_step1_island; break;
+		case 3:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_3_win_condition_step1_island; break;
+		case 4:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_4_win_condition_step1_island; break;
+		case 5:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_5_win_condition_step1_island; break;
+		case 6:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_6_win_condition_step1_island; break;
+		case 7:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_7_win_condition_step1_island; break;
+		case 8:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_8_win_condition_step1_island; break;
+		case 9:  pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_9_win_condition_step1_island; break;
+		case 10: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_10_win_condition_step1_island; break;
+		case 11: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_11_win_condition_step1_island; break;
+		case 12: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_12_win_condition_step1_island; break;
+		case 13: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_13_win_condition_step1_island; break;
+		case 14: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_14_win_condition_step1_island; break;
+		case 15: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_15_win_condition_step1_island; break;
+		case 16: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_16_win_condition_step1_island; break;
+		case 17: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_17_win_condition_step1_island; break;
+		case 18: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_18_win_condition_step1_island; break;
+		case 19: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_19_win_condition_step1_island; break;
+		case 20: pchar.quest_S1_island = pchar.quest_S1_treasure_hunter_20_win_condition_step1_island; break;
+	}
+}
+void M1_EndQuest()
+{
+	ref PChar;
+	PChar = GetMainCharacter();
+	
+	//relations avec les pays
+	SetNationRelation2MainCharacter(ENGLAND,RELATION_ENEMY);
+	SetNationRelation2MainCharacter(FRANCE,RELATION_ENEMY);
+	SetNationRelation2MainCharacter(SPAIN,RELATION_ENEMY);
+	SetNationRelation2MainCharacter(PORTUGAL,RELATION_ENEMY);
+	SetNationRelation2MainCharacter(HOLLAND,RELATION_ENEMY);
+	SetNationRelation2MainCharacter(PIRATE,RELATION_FRIEND);
+	
+	switch (makeint(Pchar.quest_M1_step)) {
+		case 3: AddQuestRecord("PJ_M1", 9);  break;
+		case 4: AddQuestRecord("PJ_M1", 10); break;
+		case 5: AddQuestRecord("PJ_M1", 11); break;
+		case 6: AddQuestRecord("PJ_M1", 12); break;
+		case 7: AddQuestRecord("PJ_M1", 13); break;
+		case 8: AddQuestRecord("PJ_M1", 14); break;
+		case 9: AddQuestRecord("PJ_M1", 15); break;
+	}
+	
+	//fin de la quete
+	if (makeint(Pchar.quest_M1_step) == 9) {
+		Log_SetStringToLog(GlobalStringConvert("PJ_M1_AllPorts"));
+		
+		//relations avec les pays
+		SetNationRelation2MainCharacter(ENGLAND,pchar.quest_M1_NationRelation_ENGLAND);
+		SetNationRelation2MainCharacter(FRANCE,pchar.quest_M1_NationRelation_FRANCE);
+		SetNationRelation2MainCharacter(SPAIN,pchar.quest_M1_NationRelation_SPAIN);
+		SetNationRelation2MainCharacter(PORTUGAL,pchar.quest_M1_NationRelation_PORTUGAL);
+		SetNationRelation2MainCharacter(HOLLAND,pchar.quest_M1_NationRelation_HOLLAND);
+		SetNationRelation2MainCharacter(PIRATE,RELATION_ENEMY);
+		
+		PlaceCharacter(characterFromID("Francois_l_Olonnais"), "none", "none");
+		RemovePassenger(pchar, Characters[GetCharacterIndex("Francois_l_Olonnais")]);
+		
+		pchar.quest.quest_M1_QCBoats.win_condition.l1 = "location";
+		pchar.quest.quest_M1_QCBoats.win_condition.l1.location = "QuebradasCostillas";
+		pchar.quest.quest_M1_QCBoats.win_condition = "quest_M1_QCBoats";
+	}
+}
+// fin ajout PJ
+
 void QuestComplete(string sQuestName)
 {
 	ref PChar, sld;
@@ -508,6 +1421,8 @@ void QuestComplete(string sQuestName)
 	int iColony;
 	int iTradeGoods, iQuantityGoods, iTradeNation;
 	string homelocation, homegroup, homelocator, tavernfriend;
+	ref rCrew_leader, rCrew1, rCrew2, rCrew3;// ajout PJ Quest S1
+	string sCrew_leader, sCrew1, sCrew2, sCrew3;// ajout PJ Quest S1
 
 	//Log_SetStringToLog("Quest " + sQuestName + " completed");
 	//trace("=============================================== QUEST " + sQuestName + " CHECKED");
@@ -694,20 +1609,20 @@ void QuestComplete(string sQuestName)
 			pchar.quest.becomes_oldman.win_condition = "becomes_oldman";
 		break;
 		
-		//Персонаж покидает Оксбэй в первый раз - включение первого сюжетного ролика
+		//ГЏГҐГ°Г±Г®Г­Г Г¦ ГЇГ®ГЄГЁГ¤Г ГҐГІ ГЋГЄГ±ГЎГЅГ© Гў ГЇГҐГ°ГўГ»Г© Г°Г Г§ - ГўГЄГ«ГѕГ·ГҐГ­ГЁГҐ ГЇГҐГ°ГўГ®ГЈГ® Г±ГѕГ¦ГҐГІГ­Г®ГЈГ® Г°Г®Г«ГЁГЄГ 
 		case "Story_leavingOxbay":
 			SetNationRelation2MainCharacter(FRANCE, RELATION_ENEMY);
 			Locations[FindLocation("Oxbay_town_exit")].locators_radius.goto.citizen08 = 12.0;
-			//включаем корабль одного из офицеров.
+			//ГўГЄГ«ГѕГ·Г ГҐГ¬ ГЄГ®Г°Г ГЎГ«Гј Г®Г¤Г­Г®ГЈГ® ГЁГ§ Г®ГґГЁГ¶ГҐГ°Г®Гў.
 			//setCharacterShipLocation(characterFromID("Clair Larrouse"), "Muelle_port");
-			//Установка атрибута для проверки захваченности Оксбэя
+			//Г“Г±ГІГ Г­Г®ГўГЄГ  Г ГІГ°ГЁГЎГіГІГ  Г¤Г«Гї ГЇГ°Г®ГўГҐГ°ГЄГЁ Г§Г ГµГўГ Г·ГҐГ­Г­Г®Г±ГІГЁ ГЋГЄГ±ГЎГЅГї
 			PChar.Quest.Story_OxbayCaptured = "1";
-			//Смена национальности форта Оксбэя
+			//Г‘Г¬ГҐГ­Г  Г­Г Г¶ГЁГ®Г­Г Г«ГјГ­Г®Г±ГІГЁ ГґГ®Г°ГІГ  ГЋГЄГ±ГЎГЅГї
 			Characters[GetCharacterIndex("Oxbay Commander")].nation = FRANCE;
 			Characters[GetCharacterIndex("Oxbay Commander")].model = "Soldier_fra";
 			LAi_SetImmortal(characterFromID("Oxbay Commander"), true);
-			//Смена английских солдат в Оксбэе на французских
-			//Удаление английских
+			//Г‘Г¬ГҐГ­Г  Г Г­ГЈГ«ГЁГ©Г±ГЄГЁГµ Г±Г®Г«Г¤Г ГІ Гў ГЋГЄГ±ГЎГЅГҐ Г­Г  ГґГ°Г Г­Г¶ГіГ§Г±ГЄГЁГµ
+			//Г“Г¤Г Г«ГҐГ­ГЁГҐ Г Г­ГЈГ«ГЁГ©Г±ГЄГЁГµ
 			ChangeCharacterAddress(characterFromID("Ox_Soldier_1"), "None", "");
 			ChangeCharacterAddress(characterFromID("Ox_Soldier_2"), "None", "");
 			ChangeCharacterAddress(characterFromID("Ox_Soldier_3"), "None", "");
@@ -720,7 +1635,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Ox_Patrol_2"), "None", "");
 			ChangeCharacterAddress(characterFromID("Ox_Patrol_3"), "None", "");
 			ChangeCharacterAddress(characterFromID("Ox_Patrol_4"), "None", "");
-			//Постановка французских
+			//ГЏГ®Г±ГІГ Г­Г®ГўГЄГ  ГґГ°Г Г­Г¶ГіГ§Г±ГЄГЁГµ
 			ChangeCharacterAddress(characterFromID("Fra_occupant_01"), "Oxbay_town", "goto3");
 			ChangeCharacterAddress(characterFromID("Fra_occupant_02"), "Oxbay_town", "goto4");
 			ChangeCharacterAddress(characterFromID("Fra_occupant_03"), "Oxbay_town", "goto1");
@@ -734,7 +1649,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Occ_Patrol_3"), "Oxbay_town", "goto31");
 			ChangeCharacterAddress(characterFromID("Occ_Patrol_4"), "Oxbay_town", "goto20");
 			
-			//Постановка в гавань Оксбэя кораблей французской эскадры
+			//ГЏГ®Г±ГІГ Г­Г®ГўГЄГ  Гў ГЈГ ГўГ Г­Гј ГЋГЄГ±ГЎГЅГї ГЄГ®Г°Г ГЎГ«ГҐГ© ГґГ°Г Г­Г¶ГіГ§Г±ГЄГ®Г© ГЅГ±ГЄГ Г¤Г°Г»
 			SetCrewQuantity(characterFromID("Remy Gatien"), 650);
 			SetCrewQuantity(characterFromID("Yves Giner"), 400);
 			SetCrewQuantity(characterFromID("Begon Monchaty"), 400);
@@ -750,21 +1665,21 @@ void QuestComplete(string sQuestName)
 			Group_SetGroupCommander("Story_French_Squadron", "Remy Gatien");
 			Group_SetAddress("Story_French_Squadron", "Oxbay", "Quest_Ships","Quest_Ship_7");
 			
-			//Заведение квеста на диалог с солдатами у входа в город Оксбэй с острова
+			//Г‡Г ГўГҐГ¤ГҐГ­ГЁГҐ ГЄГўГҐГ±ГІГ  Г­Г  Г¤ГЁГ Г«Г®ГЈ Г± Г±Г®Г«Г¤Г ГІГ Г¬ГЁ Гі ГўГµГ®Г¤Г  Гў ГЈГ®Г°Г®Г¤ ГЋГЄГ±ГЎГЅГ© Г± Г®Г±ГІГ°Г®ГўГ 
 			Pchar.quest.Story_FraSoldiers_attack_in_jungles.win_condition.l1 = "location";
 			Pchar.quest.Story_FraSoldiers_attack_in_jungles.win_condition.l1.location = "Oxbay_town_exit";
 			Pchar.quest.Story_FraSoldiers_attack_in_jungles.win_condition = "Story_FraSoldiers_attack_in_jungles";
 			locations[FindLocation("Oxbay_town_exit")].disableencounters = 1;
 	
-			//Перемещение Реймса в резиденцию губернатора
+			//ГЏГҐГ°ГҐГ¬ГҐГ№ГҐГ­ГЁГҐ ГђГҐГ©Г¬Г±Г  Гў Г°ГҐГ§ГЁГ¤ГҐГ­Г¶ГЁГѕ ГЈГіГЎГҐГ°Г­Г ГІГ®Г°Г 
 			ChangeCharacterAddress(characterFromID("Raoul Rheims"), "Redmond_residence", "goto1");
 		
-			//Заведение квеста на встречу с Реймсом в резиденции губернатора и уход Реймса
+			//Г‡Г ГўГҐГ¤ГҐГ­ГЁГҐ ГЄГўГҐГ±ГІГ  Г­Г  ГўГ±ГІГ°ГҐГ·Гі Г± ГђГҐГ©Г¬Г±Г®Г¬ Гў Г°ГҐГ§ГЁГ¤ГҐГ­Г¶ГЁГЁ ГЈГіГЎГҐГ°Г­Г ГІГ®Г°Г  ГЁ ГіГµГ®Г¤ ГђГҐГ©Г¬Г±Г 
 			Pchar.quest.Story_First_Meeting_with_Rheims.win_condition.l1 = "location";
 			Pchar.quest.Story_First_Meeting_with_Rheims.win_condition.l1.location = "redmond_residence";
 			Pchar.quest.Story_First_Meeting_with_Rheims.win_condition = "Story_First_Meeting_with_Rheims";
 
-			//заведение квеста на диалог со стражником
+			//Г§Г ГўГҐГ¤ГҐГ­ГЁГҐ ГЄГўГҐГ±ГІГ  Г­Г  Г¤ГЁГ Г«Г®ГЈ Г±Г® Г±ГІГ°Г Г¦Г­ГЁГЄГ®Г¬
 			pchar.quest.first_time_to_redmond_townhall.win_condition.l1 = "locator";
 			pchar.quest.first_time_to_redmond_townhall.win_condition.l1.location = "Redmond_town_01";
 			pchar.quest.first_time_to_redmond_townhall.win_condition.l1.locator_group = "goto";
@@ -784,7 +1699,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Tut_BuySpyGlass.over = "yes";
 			DeleteAttribute(Pchar, "quest.tutorial.Spyglass");
 			
-			//Добавление записи в журнал
+			//Г„Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ Г§Г ГЇГЁГ±ГЁ Гў Г¦ГіГ°Г­Г Г«
 			SetQuestHeader("Story_OxbayCaptured");
 			AddQuestRecord("Story_OxbayCaptured", "1");
 			PostVideoAndQuest("Invasion",500,"Story_MapLoadAfterleavingOxbay");
@@ -810,33 +1725,33 @@ void QuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("Eng_soldier_5"), "ENGLAND_SOLDIERS");
 		break;
 
-		//При заходе игрока в резиденцию Редмонда Реймс покидает ее
+		//ГЏГ°ГЁ Г§Г ГµГ®Г¤ГҐ ГЁГЈГ°Г®ГЄГ  Гў Г°ГҐГ§ГЁГ¤ГҐГ­Г¶ГЁГѕ ГђГҐГ¤Г¬Г®Г­Г¤Г  ГђГҐГ©Г¬Г± ГЇГ®ГЄГЁГ¤Г ГҐГІ ГҐГҐ
 		case "Story_First_Meeting_with_Rheims": 
 			pchar.quest.first_time_to_redmond_townhall.over = "yes";
 			LAi_SetActorType(Pchar);
 			LAi_SetActorType(characterFromID("Raoul Rheims"));
-			//Выставление Реймсу нужной ноды
+			//Г‚Г»Г±ГІГ ГўГ«ГҐГ­ГЁГҐ ГђГҐГ©Г¬Г±Гі Г­ГіГ¦Г­Г®Г© Г­Г®Г¤Г»
 			Characters[GetCharacterIndex("Raoul Rheims")].Dialog.CurrentNode = "First_meeting";
 			LAi_ActorFollow(pchar, characterFromID("Raoul Rheims"), "", 1.0);
 			LAi_ActorFollow(characterFromID("Raoul Rheims"), pchar, "Story_First_Meeting_with_Rheims_2", 1.0);
 		break;
 		
 		case "Story_First_Meeting_with_Rheims_2":
-			//----------------Реймс подходит и просит его пропустить!
+			//----------------ГђГҐГ©Г¬Г± ГЇГ®Г¤ГµГ®Г¤ГЁГІ ГЁ ГЇГ°Г®Г±ГЁГІ ГҐГЈГ® ГЇГ°Г®ГЇГіГ±ГІГЁГІГј!
 			LAi_ActorWaitDialog(Pchar, characterFromID("Raoul Rheims"));
 			LAi_ActorDialog(characterFromID("Raoul Rheims"), Pchar, "", 5.0, 0);
 		break;
 
 		case "Rheims_away_from_residence":
 			Locations[FindLocation("Redmond_Residence")].reload.l1.disable = 0;
-			//----------------Отправляем игрока в соседний локатор, чтобы он не мешал Реймсу выйти
+			//----------------ГЋГІГЇГ°Г ГўГ«ГїГҐГ¬ ГЁГЈГ°Г®ГЄГ  Гў Г±Г®Г±ГҐГ¤Г­ГЁГ© Г«Г®ГЄГ ГІГ®Г°, Г·ГІГ®ГЎГ» Г®Г­ Г­ГҐ Г¬ГҐГёГ Г« ГђГҐГ©Г¬Г±Гі ГўГ»Г©ГІГЁ
 			LAi_ActorGoToLocator(PChar, "goto", "goto7", "", 4.0);
-			//----------------Отправляем Реймса в локатор
+			//----------------ГЋГІГЇГ°Г ГўГ«ГїГҐГ¬ ГђГҐГ©Г¬Г±Г  Гў Г«Г®ГЄГ ГІГ®Г°
 			LAi_ActorGoToLocator(CharacterFromID("Raoul Rheims"), "Reload", "reload1", "Story_Rheims_leaves", 2.0);
 		break;
 
 		case "Story_Rheims_leaves": 
-			//------------Реймс телепортируется в никуда
+			//------------ГђГҐГ©Г¬Г± ГІГҐГ«ГҐГЇГ®Г°ГІГЁГ°ГіГҐГІГ±Гї Гў Г­ГЁГЄГіГ¤Г 
 			ChangeCharacterAddress(characterFromID("Raoul Rheims"), "None", "");
 			LAi_SetPlayerType(pchar);
 		break;
@@ -866,7 +1781,7 @@ void QuestComplete(string sQuestName)
 			SetCurrentTime(23, 0);
 			LAi_NoRebirthDisable(characterFromID("Fra_occupant_07"));
 			LAi_NoRebirthDisable(characterFromID("Fra_occupant_08"));
-			//Уничтожаем квест на атаку солдат в джунглях
+			//Г“Г­ГЁГ·ГІГ®Г¦Г ГҐГ¬ ГЄГўГҐГ±ГІ Г­Г  Г ГІГ ГЄГі Г±Г®Г«Г¤Г ГІ Гў Г¤Г¦ГіГ­ГЈГ«ГїГµ
 			PChar.Quest.Story_FraSoldiers_attack_in_jungles.over = "yes";
 
 			Locations[FindLocation("Oxbay_town")].reload.l1.disable = 1;
@@ -876,25 +1791,25 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_Massony_Reload_to_Town":
-			//Смена Диалога Стражникам на воротах
+			//Г‘Г¬ГҐГ­Г  Г„ГЁГ Г«Г®ГЈГ  Г‘ГІГ°Г Г¦Г­ГЁГЄГ Г¬ Г­Г  ГўГ®Г°Г®ГІГ Гµ
 			Characters[GetCharacterIndex("Fra_Occupant_03")].Dialog.Filename = "Story_French Occupant_2_dialog.c";
 			Characters[GetCharacterIndex("Fra_Occupant_04")].Dialog.Filename = "Story_French Occupant_2_dialog.c";
-			//Установки им всем временного бессмертия
+			//Г“Г±ГІГ Г­Г®ГўГЄГЁ ГЁГ¬ ГўГ±ГҐГ¬ ГўГ°ГҐГ¬ГҐГ­Г­Г®ГЈГ® ГЎГҐГ±Г±Г¬ГҐГ°ГІГЁГї
 			LAi_SetImmortal(characterFromID("Fra_Occupant_03"), true);
 			LAi_SetImmortal(characterFromID("Fra_Occupant_04"), true);
 			LAi_SetImmortal(characterFromID("Valentin Massoni"), true);
 			LAi_SetStayType(pchar);
-			//Смена типа Валентину Массони			
+			//Г‘Г¬ГҐГ­Г  ГІГЁГЇГ  Г‚Г Г«ГҐГ­ГІГЁГ­Гі ГЊГ Г±Г±Г®Г­ГЁ			
 			LAi_SetActorType(characterFromID("Valentin Massoni"));
 
-			//Перемещение Массони и Блэйза к выходу из Оксбэя
+			//ГЏГҐГ°ГҐГ¬ГҐГ№ГҐГ­ГЁГҐ ГЊГ Г±Г±Г®Г­ГЁ ГЁ ГЃГ«ГЅГ©Г§Г  ГЄ ГўГ»ГµГ®Г¤Гі ГЁГ§ ГЋГЄГ±ГЎГЅГї
 			ChangeCharacterAddress(characterFromID("Valentin Massoni"), "Oxbay_town", "goto36");
 			DoQuestReloadToLocation("Oxbay_town", "goto", "goto37", "Story_Check_Blaze_And_Massoni");
 		break;
 
-		//Массони отправляется к локатору релоада, чтобы выйти из города.
+		//ГЊГ Г±Г±Г®Г­ГЁ Г®ГІГЇГ°Г ГўГ«ГїГҐГІГ±Гї ГЄ Г«Г®ГЄГ ГІГ®Г°Гі Г°ГҐГ«Г®Г Г¤Г , Г·ГІГ®ГЎГ» ГўГ»Г©ГІГЁ ГЁГ§ ГЈГ®Г°Г®Г¤Г .
 		case "Story_Massoni_leave_Oxbay":
-			//Массони перегружается в выход из Оксбэя
+			//ГЊГ Г±Г±Г®Г­ГЁ ГЇГҐГ°ГҐГЈГ°ГіГ¦Г ГҐГІГ±Гї Гў ГўГ»ГµГ®Г¤ ГЁГ§ ГЋГЄГ±ГЎГЅГї
 			ChangeCharacterAddress(characterFromID("Valentin Massoni"), "Oxbay_town_exit", "Citizen08");
 		break;
 
@@ -930,23 +1845,23 @@ void QuestComplete(string sQuestName)
 			pchar.quest.massoni_died.win_condition = "massoni_died";
 			
 			LAi_SetPlayerType(pchar);
-			//Игрок покидает город вслед за Массони
+			//Г€ГЈГ°Г®ГЄ ГЇГ®ГЄГЁГ¤Г ГҐГІ ГЈГ®Г°Г®Г¤ ГўГ±Г«ГҐГ¤ Г§Г  ГЊГ Г±Г±Г®Г­ГЁ
 			Pchar.quest.Story_Walk_Away_with_Massoni.win_condition.l1 = "location";
 			Pchar.quest.Story_Walk_Away_with_Massoni.win_condition.l1.location = "Oxbay_town_exit";
 			Pchar.quest.Story_Walk_Away_with_Massoni.win_condition = "Story_Walk_Away_with_Massoni";
 
-			//Массони уходит в ворота Оксбэя
+			//ГЊГ Г±Г±Г®Г­ГЁ ГіГµГ®Г¤ГЁГІ Гў ГўГ®Г°Г®ГІГ  ГЋГЄГ±ГЎГЅГї
 			LAi_ActorGoToLocator(characterFromID("Valentin Massoni"), "reload", "reload12", "Story_Massoni_leave_Oxbay", 5.0);
 			LAi_SetImmortal(characterFromID("Fra_Occupant_01"), false);
 			LAi_SetImmortal(characterFromID("Fra_Occupant_02"), false);
-			//Солдаты возвращаются на свои места
+			//Г‘Г®Г«Г¤Г ГІГ» ГўГ®Г§ГўГ°Г Г№Г ГѕГІГ±Гї Г­Г  Г±ГўГ®ГЁ Г¬ГҐГ±ГІГ 
 			LAi_ActorGoToLocator(characterFromID("Fra_Occupant_01"), "goto", "goto3", "Story_Fra_Occupant_01_ReturnedToPost", 3.0);
-			//Увеличиваем радуис детекторного локатора
+			//Г“ГўГҐГ«ГЁГ·ГЁГўГ ГҐГ¬ Г°Г Г¤ГіГЁГ± Г¤ГҐГІГҐГЄГІГ®Г°Г­Г®ГЈГ® Г«Г®ГЄГ ГІГ®Г°Г 
 			Locations[FindLocation("Oxbay_town_exit")].locators_radius.goto.citizen018 = 2.0;
 			Locations[FindLocation("Oxbay_town_exit")].locators_radius.goto.citizen05 = 3.0;
-			//Устанавливается диалог для Массони
+			//Г“Г±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГІГ±Гї Г¤ГЁГ Г«Г®ГЈ Г¤Г«Гї ГЊГ Г±Г±Г®Г­ГЁ
 			Characters[GetCharacterIndex("Valentin Massoni")].Dialog.CurrentNode = "What_are_you_waiting_for";
-			//Смена Диалога Стражникам на воротах
+			//Г‘Г¬ГҐГ­Г  Г„ГЁГ Г«Г®ГЈГ  Г‘ГІГ°Г Г¦Г­ГЁГЄГ Г¬ Г­Г  ГўГ®Г°Г®ГІГ Гµ
 			Characters[GetCharacterIndex("Fra_Occupant_01")].Dialog.Filename = "Story_French Occupant_dialog.c";
 			Characters[GetCharacterIndex("Fra_Occupant_02")].Dialog.Filename = "Story_French Occupant_dialog.c";
 			Characters[GetCharacterIndex("Fra_Occupant_07")].Dialog.Filename = "Story_Fra_Occup_common_dialog.c";
@@ -959,7 +1874,7 @@ void QuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("Fra_occupant_01"), "FRANCE_SOLDIERS");
 		break;
 
-		//игрок выходит в джунгли вслед за Массони
+		//ГЁГЈГ°Г®ГЄ ГўГ»ГµГ®Г¤ГЁГІ Гў Г¤Г¦ГіГ­ГЈГ«ГЁ ГўГ±Г«ГҐГ¤ Г§Г  ГЊГ Г±Г±Г®Г­ГЁ
 		case "Story_Walk_Away_with_Massoni":
 			LAi_SetImmortal(characterFromID("Fra_Occupant_03"), false);
 			LAi_SetImmortal(characterFromID("Fra_Occupant_04"), false);
@@ -995,7 +1910,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Story_Massoni_order_attack_Blaze_denied.win_condition = "Story_Massoni_order_attack_Blaze_denied";
 		break;
 
-		//Игрок и пьяный Массони идут в джунглях, и дойдя до локатора, массони начинает диалог
+		//Г€ГЈГ°Г®ГЄ ГЁ ГЇГјГїГ­Г»Г© ГЊГ Г±Г±Г®Г­ГЁ ГЁГ¤ГіГІ Гў Г¤Г¦ГіГ­ГЈГ«ГїГµ, ГЁ Г¤Г®Г©Г¤Гї Г¤Г® Г«Г®ГЄГ ГІГ®Г°Г , Г¬Г Г±Г±Г®Г­ГЁ Г­Г Г·ГЁГ­Г ГҐГІ Г¤ГЁГ Г«Г®ГЈ
 		case "Story_Massoni_go_walking":
 			LAi_ActorDialog(characterFromID("Valentin Massoni"), Pchar, "", 20.0, 1.0);
 		break;
@@ -1004,7 +1919,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorGoToLocator(characterFromID("Valentin Massoni"), "goto", "citizen05", "Story_Massoni_found_Cheating", 20.0);
 		break;
 
-		//игрок доходит до локатора где Массони отказывается идти дальше
+		//ГЁГЈГ°Г®ГЄ Г¤Г®ГµГ®Г¤ГЁГІ Г¤Г® Г«Г®ГЄГ ГІГ®Г°Г  ГЈГ¤ГҐ ГЊГ Г±Г±Г®Г­ГЁ Г®ГІГЄГ Г§Г»ГўГ ГҐГІГ±Гї ГЁГ¤ГІГЁ Г¤Г Г«ГјГёГҐ
 		case "Story_Massoni_found_Cheating":
 			Characters[GetCharacterIndex("Valentin Massoni")].Dialog.CurrentNode = "Final_talk";
 			PChar.quest.Story_Massoni_go_walking.over = "yes";
@@ -1019,13 +1934,13 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Oxbay_town_exit")].reload.l3.disable = false;
 			Locations[FindLocation("Oxbay_town_exit")].reload.l4.disable = false;
 			Locations[FindLocation("Oxbay_town_exit")].reload.l5.disable = false;
-			//Массони бежит к городу
+			//ГЊГ Г±Г±Г®Г­ГЁ ГЎГҐГ¦ГЁГІ ГЄ ГЈГ®Г°Г®Г¤Гі
 			pchar.quest.massoni_died.over = "yes";
 			LAi_ActorRunToLocator(characterFromID("Valentin Massoni"), "reload", "reload3", "Story_Massoni_order_attack_Blaze", 30.0);
 			Pchar.quest.Story_1stTaskComplete = 1;
 			ChangeCharacterAddress(characterFromID("Faust Gasquet"), "Falaise_de_fleur_port_01", "goto13");
 			SetCharacterShipLocation(characterFromID("Virgile boon"), "Falaise_de_Fleur_port_01");
-			//Квест на появление Блэйза на Фале де Флер
+			//ГЉГўГҐГ±ГІ Г­Г  ГЇГ®ГїГўГ«ГҐГ­ГЁГҐ ГЃГ«ГЅГ©Г§Г  Г­Г  Г”Г Г«ГҐ Г¤ГҐ Г”Г«ГҐГ°
 			Pchar.quest.Story_Appear_on_Falaise.win_condition.l1 = "location";
 			Pchar.quest.Story_Appear_on_Falaise.win_condition.l1.location = "Falaise_de_Fleur_port_01";
 			Pchar.quest.Story_Appear_on_Falaise.win_condition = "Story_Appear_on_Falaise";
@@ -1033,7 +1948,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Story_Appear_on_Falaise_shore.win_condition.l1 = "location";
 			Pchar.quest.Story_Appear_on_Falaise_shore.win_condition.l1.location = "Falaise_de_fleur_shore";
 			Pchar.quest.Story_Appear_on_Falaise_shore.win_condition = "Story_Appear_on_Falaise_shore";
-			//Квест на потопление барка "Ойсу"
+			//ГЉГўГҐГ±ГІ Г­Г  ГЇГ®ГІГ®ГЇГ«ГҐГ­ГЁГҐ ГЎГ Г°ГЄГ  "ГЋГ©Г±Гі"
 			Pchar.quest.Story_Sink_Oiseau.win_condition.l1 = "NPC_Death";
 			Pchar.quest.Story_Sink_Oiseau.win_condition.l1.character = "Virgile Boon";
 			Pchar.quest.Story_Sink_Oiseau.win_condition = "Story_Sink_Oiseau";
@@ -1074,7 +1989,7 @@ void QuestComplete(string sQuestName)
 
 			ChangeCharacterAddress(CharacterFromID("Faust Gasquet"), "Falaise_de_fleur_port_01", "goto1");
 			SetCharacterShipLocation(characterFromID("Virgile boon"), "Falaise_de_Fleur_port_01");
-			//Квест на появление Блэйза на Фале де Флер
+			//ГЉГўГҐГ±ГІ Г­Г  ГЇГ®ГїГўГ«ГҐГ­ГЁГҐ ГЃГ«ГЅГ©Г§Г  Г­Г  Г”Г Г«ГҐ Г¤ГҐ Г”Г«ГҐГ°
 			Pchar.quest.Story_Appear_on_Falaise.win_condition.l1 = "location";
 			Pchar.quest.Story_Appear_on_Falaise.win_condition.l1.location = "Falaise_de_Fleur_port_01";
 			Pchar.quest.Story_Appear_on_Falaise.win_condition = "Story_Appear_on_Falaise";
@@ -1082,7 +1997,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Story_Appear_on_Falaise_shore.win_condition.l1 = "location";
 			Pchar.quest.Story_Appear_on_Falaise_shore.win_condition.l1.location = "Falaise_de_fleur_shore";
 			Pchar.quest.Story_Appear_on_Falaise_shore.win_condition = "Story_Appear_on_Falaise_shore";
-			//Квест на потопление барка "Ойсу"
+			//ГЉГўГҐГ±ГІ Г­Г  ГЇГ®ГІГ®ГЇГ«ГҐГ­ГЁГҐ ГЎГ Г°ГЄГ  "ГЋГ©Г±Гі"
 			Pchar.quest.Story_Sink_Oiseau.win_condition.l1 = "NPC_Death";
 			Pchar.quest.Story_Sink_Oiseau.win_condition.l1.character = "Virgile Boon";
 			Pchar.quest.Story_Sink_Oiseau.win_condition = "Story_Sink_Oiseau";
@@ -1096,7 +2011,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.France_becomes_neutral.win_condition = "France_becomes_neutral";
 		break;
 
-		//Массони добегает до ворот и приказывает стражникам, если они еще есть, убить Блэйза
+		//ГЊГ Г±Г±Г®Г­ГЁ Г¤Г®ГЎГҐГЈГ ГҐГІ Г¤Г® ГўГ®Г°Г®ГІ ГЁ ГЇГ°ГЁГЄГ Г§Г»ГўГ ГҐГІ Г±ГІГ°Г Г¦Г­ГЁГЄГ Г¬, ГҐГ±Г«ГЁ Г®Г­ГЁ ГҐГ№ГҐ ГҐГ±ГІГј, ГіГЎГЁГІГј ГЃГ«ГЅГ©Г§Г 
 		case "Story_Massoni_order_attack_Blaze":
 			LAi_group_SetRelation("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 			ChangeCharacterAddress(characterFromID("Valentin Massoni"), "none", "");
@@ -1106,7 +2021,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Valentin Massoni"), "none", "");
 		break;
 
-		//Солдаты завязывают с игроком разговором, когда он подходит к Оксбэю с суши.
+		//Г‘Г®Г«Г¤Г ГІГ» Г§Г ГўГїГ§Г»ГўГ ГѕГІ Г± ГЁГЈГ°Г®ГЄГ®Г¬ Г°Г Г§ГЈГ®ГўГ®Г°Г®Г¬, ГЄГ®ГЈГ¤Г  Г®Г­ ГЇГ®Г¤ГµГ®Г¤ГЁГІ ГЄ ГЋГЄГ±ГЎГЅГѕ Г± Г±ГіГёГЁ.
 		case "Story_FraSoldiers_attack_in_jungles":
 			LAi_SetCheckMinHP(characterFromID("Fra_occupant_07"), 29.0, false, "fight_before_enter_to_oxbay");
 			LAi_SetCheckMinHP(characterFromID("Fra_occupant_08"), 29.0, false, "fight_before_enter_to_oxbay");
@@ -1147,7 +2062,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "FRANCE_SOLDIERS_in_oxbay_exit_returned_to_post":
-			//Отправляем солдат назад на посты
+			//ГЋГІГЇГ°Г ГўГ«ГїГҐГ¬ Г±Г®Г«Г¤Г ГІ Г­Г Г§Г Г¤ Г­Г  ГЇГ®Г±ГІГ»
 			LAi_ActorGoToLocator(characterFromID("Fra_occupant_07"), "goto", "citizen09", "Fra_occupant_07_return_to_post", -1);
 			LAi_ActorGoToLocator(characterFromID("Fra_occupant_08"), "goto", "citizen010", "Fra_occupant_08_return_to_post", -1);
 		break;
@@ -1162,7 +2077,7 @@ void QuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("Fra_occupant_08"), "FRANCE_SOLDIERS");
 		break;
 		
-		//Блэйз в первый раз приплывает на Фале де Флер, чтобы поговорить с Беранжере
+		//ГЃГ«ГЅГ©Г§ Гў ГЇГҐГ°ГўГ»Г© Г°Г Г§ ГЇГ°ГЁГЇГ«Г»ГўГ ГҐГІ Г­Г  Г”Г Г«ГҐ Г¤ГҐ Г”Г«ГҐГ°, Г·ГІГ®ГЎГ» ГЇГ®ГЈГ®ГўГ®Г°ГЁГІГј Г± ГЃГҐГ°Г Г­Г¦ГҐГ°ГҐ
 		case "Story_Appear_on_Falaise":
 			locations[FindLocation("Oxbay_town_exit")].disableencounters = 0;
 			pchar.quest.Story_Appear_on_Falaise_shore.over = "yes";
@@ -1204,7 +2119,7 @@ void QuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("Faust Gasquet"), "FRANCE_CITIZENS");
 		break;
 
-		//Блэйз топит снабженческий барк Oiseau, оставляя французов без боеприпасов.
+		//ГЃГ«ГЅГ©Г§ ГІГ®ГЇГЁГІ Г±Г­Г ГЎГ¦ГҐГ­Г·ГҐГ±ГЄГЁГ© ГЎГ Г°ГЄ Oiseau, Г®Г±ГІГ ГўГ«ГїГї ГґГ°Г Г­Г¶ГіГ§Г®Гў ГЎГҐГ§ ГЎГ®ГҐГЇГ°ГЁГЇГ Г±Г®Гў.
 		case "Story_Sink_Oiseau":
 			SetNationRelation2MainCharacter(ENGLAND, RELATION_FRIEND);
 			SetCharacterShipLocation(characterFromID("Virgile boon"), "none");
@@ -1231,7 +2146,7 @@ void QuestComplete(string sQuestName)
 			pchar.nation = ENGLAND;
 		break;
 
-		//Блэйз приплывает с барком Ойсу на любой остров.
+		//ГЃГ«ГЅГ©Г§ ГЇГ°ГЁГЇГ«Г»ГўГ ГҐГІ Г± ГЎГ Г°ГЄГ®Г¬ ГЋГ©Г±Гі Г­Г  Г«ГѕГЎГ®Г© Г®Г±ГІГ°Г®Гў.
 		case "Convoy_Virgile_Boon":
 			pchar.nation = ENGLAND;
 			SetCharacterRemovable(characterFromID("Virgile Boon"), true);
@@ -1317,7 +2232,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Amiel Berangere"), Pchar, "pchar_back_to_player", 1.0, 1.0);
 		break;
 
-		//Игрок убивает Эмиля Беранжере
+		//Г€ГЈГ°Г®ГЄ ГіГЎГЁГўГ ГҐГІ ГќГ¬ГЁГ«Гї ГЃГҐГ°Г Г­Г¦ГҐГ°ГҐ
 		case "Story_BlazeStartsThinkAboutGramota":
 			LAi_LocationFightDisable(&Locations[FindLocation(pchar.location)], true);
 			Pchar.Dialog.CurrentNode = "Story_FindBerangereDocuments";
@@ -1341,22 +2256,22 @@ void QuestComplete(string sQuestName)
 			Event("QuestSceneCommand", "ssa", "stay", "", PChar);
 			Event("QuestSceneCommand", "ssass", "turnbylocator", "Story_FoundGramotaAndLebrettonAppeared", PChar, "goto", "goto5");
 			//Event("QuestSceneCommand", "ssas", "action", "Story_FoundGramotaAndLebrettonAppeared", PChar, "");
-			//------- !!!!!!!! Вставить проигрывание звука открывающейся двери
+			//------- !!!!!!!! Г‚Г±ГІГ ГўГЁГІГј ГЇГ°Г®ГЁГЈГ°Г»ГўГ Г­ГЁГҐ Г§ГўГіГЄГ  Г®ГІГЄГ°Г»ГўГ ГѕГ№ГҐГ©Г±Гї Г¤ГўГҐГ°ГЁ
 			PostEvent("startAfterWaitScene",0,"a",PChar);
 			AddPartyExp(pchar, 2000);
 		break;
 		
 		case "Story_FoundGramotaAndLebrettonAppeared":
-			//--------Получение предмета
+			//--------ГЏГ®Г«ГіГ·ГҐГ­ГЁГҐ ГЇГ°ГҐГ¤Г¬ГҐГІГ 
 			GiveItem2Character(Pchar,"Story_Gramota");
-			//--------Постановка Вирджила Буна в первый порт Фале де Флер
+			//--------ГЏГ®Г±ГІГ Г­Г®ГўГЄГ  Г‚ГЁГ°Г¤Г¦ГЁГ«Г  ГЃГіГ­Г  Гў ГЇГҐГ°ГўГ»Г© ГЇГ®Г°ГІ Г”Г Г«ГҐ Г¤ГҐ Г”Г«ГҐГ°
 			ChangeCharacterAddress(characterFromID("Virgile Boon"), "Falaise_de_Fleur_port_01", "goto1");
-			//-------- Появление Антуана Лебреттона
+			//-------- ГЏГ®ГїГўГ«ГҐГ­ГЁГҐ ГЂГ­ГІГіГ Г­Г  Г‹ГҐГЎГ°ГҐГІГІГ®Г­Г 
 			Characters[GetCharacterIndex("antoine lebretton")].dialog.CurrentNode = "Story_Berangere_killed";
 			Locations[FindLocation("Falaise_De_Fleur_tavern_upstairs")].reload.l1.disable = 0;
 			ChangeCharacterAddressGroup(characterFromID("antoine lebretton"), "Falaise_De_Fleur_tavern_upstairs", "reload","reload1");
 			LAi_SetActorType(characterFromID("antoine lebretton"));
-			//------- Убираем ненужного Фауста Гаске
+			//------- Г“ГЎГЁГ°Г ГҐГ¬ Г­ГҐГ­ГіГ¦Г­Г®ГЈГ® Г”Г ГіГ±ГІГ  ГѓГ Г±ГЄГҐ
 			ChangeCharacterAddress(characterFromID("Faust Gasquet"), "none", "");
 			LAi_ActorGoToLocator(pchar, "goto", "goto3", "before_lebretton_talk_with_us_in_upstairs", 4.0);
 			LAi_ActorDialog(characterFromID("antoine lebretton"), Pchar, "", 3.0, 1.0);
@@ -1368,9 +2283,9 @@ void QuestComplete(string sQuestName)
 
 		case "Story_Lebretton_leaves_upstairs":
 			LAi_SetPlayerType(pchar);
-			//---------перегрузка Лебреттона обратно за стойку в таверне.
+			//---------ГЇГҐГ°ГҐГЈГ°ГіГ§ГЄГ  Г‹ГҐГЎГ°ГҐГІГІГ®Г­Г  Г®ГЎГ°Г ГІГ­Г® Г§Г  Г±ГІГ®Г©ГЄГі Гў ГІГ ГўГҐГ°Г­ГҐ.
 			ChangeCharacterAddressGroup(characterFromID("antoine lebretton"), "Falaise_De_Fleur_tavern", "merchant","goto1");
-			//---------снимается бессмертие с Антуана Лебреттона			
+			//---------Г±Г­ГЁГ¬Г ГҐГІГ±Гї ГЎГҐГ±Г±Г¬ГҐГ°ГІГЁГҐ Г± ГЂГ­ГІГіГ Г­Г  Г‹ГҐГЎГ°ГҐГІГІГ®Г­Г 			
 			LAi_SetMerchantType(characterFromID("antoine lebretton"));
 			LAi_group_MoveCharacter(characterFromID("antoine lebretton"), "FRANCE_CITIZENS");
 		break;
@@ -1406,7 +2321,7 @@ void QuestComplete(string sQuestName)
 
 		case "Story_Blaze_and_Boon_leaving":
 			characters[GetCharacterIndex("Virgile Boon")].location = "none";
-			//------------Выдача Квестов на нападение Буна на игрока
+			//------------Г‚Г»Г¤Г Г·Г  ГЉГўГҐГ±ГІГ®Гў Г­Г  Г­Г ГЇГ Г¤ГҐГ­ГЁГҐ ГЃГіГ­Г  Г­Г  ГЁГЈГ°Г®ГЄГ 
 			Pchar.quest.Story_Convoy_Virgile_Boon_1.win_condition.l1 = "location";
 			Pchar.quest.Story_Convoy_Virgile_Boon_1.win_condition.l1.location = "Oxbay";
 			Pchar.quest.Story_Convoy_Virgile_Boon_1.win_condition = "Convoy_Virgile_Boon";
@@ -1445,7 +2360,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_Meeting_Ewan_Glover":
-			//---------Капитан десантного шлюпа Эван Глоувер подходит к игроку знакомитьс
+			//---------ГЉГ ГЇГЁГІГ Г­ Г¤ГҐГ±Г Г­ГІГ­Г®ГЈГ® ГёГ«ГѕГЇГ  ГќГўГ Г­ ГѓГ«Г®ГіГўГҐГ° ГЇГ®Г¤ГµГ®Г¤ГЁГІ ГЄ ГЁГЈГ°Г®ГЄГі Г§Г­Г ГЄГ®Г¬ГЁГІГјГ±
 			LAi_SetActorType(characterFromID("Ewan Glover"));
 			Locations[FindLocation("Greenford_port")].reload.l1.disable = 1;
 			LAi_SetImmortal(characterFromID("Ewan Glover"), true);
@@ -1453,17 +2368,17 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Ewan_Once_Again_exit_no_join":
-			//---------Отправляем Глоувера к локатору
+			//---------ГЋГІГЇГ°Г ГўГ«ГїГҐГ¬ ГѓГ«Г®ГіГўГҐГ°Г  ГЄ Г«Г®ГЄГ ГІГ®Г°Гі
 			LAi_ActorGoToLocator(characterFromID("Ewan Glover"), "goto", "goto2", "", -1);
 		break;
 
 		case "Ewan_exit_no_join":
-			//---------Отправляем Гроувера к локатору
+			//---------ГЋГІГЇГ°Г ГўГ«ГїГҐГ¬ ГѓГ°Г®ГіГўГҐГ°Г  ГЄ Г«Г®ГЄГ ГІГ®Г°Гі
 			LAi_ActorGoToLocator(characterfromID("Ewan Glover"), "reload", "reload_1_2", "Story_Glover_goes_to_tavern", -1);
 		break;
 
 		case "Ewan_Exit_need_some_walk":			
-			//---------Отправляем Глоувера к локатору
+			//---------ГЋГІГЇГ°Г ГўГ«ГїГҐГ¬ ГѓГ«Г®ГіГўГҐГ°Г  ГЄ Г«Г®ГЄГ ГІГ®Г°Гі
 			LAi_ActorRunToLocator(characterfromID("Ewan Glover"),"Reload","reload4", "Story_Glover_to_tavern_on_Greenford", 20.0);
 			pchar.quest.checker_for_greenford_tavern_for_meet_with_evan_glover.win_condition.l1 = "location";
 			pchar.quest.checker_for_greenford_tavern_for_meet_with_evan_glover.win_condition.l1.location = "Greenford_tavern";
@@ -1496,9 +2411,9 @@ void QuestComplete(string sQuestName)
 		case "Ewan_exit_business":
 			Locations[FindLocation("Greenford_town")].reload.l4.disable = 1;
 			
-			//---------Возвращаем обоим тип стоящих.
+			//---------Г‚Г®Г§ГўГ°Г Г№Г ГҐГ¬ Г®ГЎГ®ГЁГ¬ ГІГЁГЇ Г±ГІГ®ГїГ№ГЁГµ.
 			LAi_SetCitizenType(characterfromID("Ewan Glover"));
-			//---------Начинаем проверку на попадание игрока и Глоувера в локейшен ночной высадки
+			//---------ГЌГ Г·ГЁГ­Г ГҐГ¬ ГЇГ°Г®ГўГҐГ°ГЄГі Г­Г  ГЇГ®ГЇГ Г¤Г Г­ГЁГҐ ГЁГЈГ°Г®ГЄГ  ГЁ ГѓГ«Г®ГіГўГҐГ°Г  Гў Г«Г®ГЄГҐГ©ГёГҐГ­ Г­Г®Г·Г­Г®Г© ГўГ»Г±Г Г¤ГЄГЁ
 			Pchar.quest.Story_Blaze_and_Glover_Land_troops.win_condition.l1 = "location";
 			Pchar.quest.Story_Blaze_and_Glover_Land_troops.win_condition.l1.location = "Oxbay_shore_02";
 			Pchar.quest.Story_Blaze_and_Glover_Land_troops.win_condition.l2 = "Ship_location";
@@ -1511,15 +2426,15 @@ void QuestComplete(string sQuestName)
 
 			if (pchar.location == "Greenford_tavern")
 			{
-				//---------Выставляем время на вечер
+				//---------Г‚Г»Г±ГІГ ГўГ«ГїГҐГ¬ ГўГ°ГҐГ¬Гї Г­Г  ГўГҐГ·ГҐГ°
 				SetCurrentTime(23, 0);
 				LAi_SetPlayerType(pchar);
-				//---------Телепортируем Глоувера в никуда, а игрока на пристань Гринфорда
+				//---------Г’ГҐГ«ГҐГЇГ®Г°ГІГЁГ°ГіГҐГ¬ ГѓГ«Г®ГіГўГҐГ°Г  Гў Г­ГЁГЄГіГ¤Г , Г  ГЁГЈГ°Г®ГЄГ  Г­Г  ГЇГ°ГЁГ±ГІГ Г­Гј ГѓГ°ГЁГ­ГґГ®Г°Г¤Г 
 				ChangeCharacterAddress(characterFromID("Ewan Glover"), "none", "");
 
 				DoReloadCharacterToLocation("Greenford_port", "Reload", "Reload4");
 			}
-			//Отключаем выход в карту
+			//ГЋГІГЄГ«ГѕГ·Г ГҐГ¬ ГўГ»ГµГ®Г¤ Гў ГЄГ Г°ГІГі
 			bQuestDisableMapEnter = true;
 		break;
 
@@ -1534,18 +2449,18 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Ewan_Glover_exit_join":
-			//----------Присоединяем Эвана Глоувера к игроку
+			//----------ГЏГ°ГЁГ±Г®ГҐГ¤ГЁГ­ГїГҐГ¬ ГќГўГ Г­Г  ГѓГ«Г®ГіГўГҐГ°Г  ГЄ ГЁГЈГ°Г®ГЄГі
 			SetCompanionIndex(Pchar, -1, GetCharacterIndex("Ewan Glover"));
 			SetCharacterRemovable(characterFromID("Ewan Glover"), false);
-			//----------Выставляем квест на потопление корабля Эвана
+			//----------Г‚Г»Г±ГІГ ГўГ«ГїГҐГ¬ ГЄГўГҐГ±ГІ Г­Г  ГЇГ®ГІГ®ГЇГ«ГҐГ­ГЁГҐ ГЄГ®Г°Г ГЎГ«Гї ГќГўГ Г­Г 
 			Pchar.quest.Story_Convoy_Glover_to_Greenford.win_condition.l1 = "NPC_Death";
 			Pchar.quest.Story_Convoy_Glover_to_Greenford.win_condition.l1.character = "Ewan Glover";
 			Pchar.quest.Story_Convoy_Glover_to_Greenford.win_condition = "Story_Glover_Sunk2";
-			//---------Отправляем Глоувера к локатору
+			//---------ГЋГІГЇГ°Г ГўГ«ГїГҐГ¬ ГѓГ«Г®ГіГўГҐГ°Г  ГЄ Г«Г®ГЄГ ГІГ®Г°Гі
 			LAi_ActorRunToLocator(characterFromID("Ewan Glover"), "reload", "sea_1", "Story_Glover_leaves_tavern", 75.0);
-			//-------перемещаем местного жителя к причалу Гринфорда
+			//-------ГЇГҐГ°ГҐГ¬ГҐГ№Г ГҐГ¬ Г¬ГҐГ±ГІГ­Г®ГЈГ® Г¦ГЁГІГҐГ«Гї ГЄ ГЇГ°ГЁГ·Г Г«Гі ГѓГ°ГЁГ­ГґГ®Г°Г¤Г 
 			ChangeCharacterAddress(characterFromID("Wilfred"), "Greenford_port", "goto20");
-			//-------Заводим квест на попадание игрока в порт Гринфорда
+			//-------Г‡Г ГўГ®Г¤ГЁГ¬ ГЄГўГҐГ±ГІ Г­Г  ГЇГ®ГЇГ Г¤Г Г­ГЁГҐ ГЁГЈГ°Г®ГЄГ  Гў ГЇГ®Г°ГІ ГѓГ°ГЁГ­ГґГ®Г°Г¤Г 
 			Pchar.quest.Story_Blaze_reaches_Greenford.win_condition.l1 = "location";
 			Pchar.quest.Story_Blaze_reaches_Greenford.win_condition.l1.location = "Greenford_port";
 			Pchar.quest.Story_Blaze_reaches_Greenford.win_condition = "Story_Blaze_reaches_Greenford";
@@ -1582,13 +2497,13 @@ void QuestComplete(string sQuestName)
 
 		case "prepare_Story_ReloadedtoGreenfordTavernWithGlover":
 			SetCurrentTime(23, 0);
-			//---------Телепортируем Глоувера и игрока в таверну Гринфорда
+			//---------Г’ГҐГ«ГҐГЇГ®Г°ГІГЁГ°ГіГҐГ¬ ГѓГ«Г®ГіГўГҐГ°Г  ГЁ ГЁГЈГ°Г®ГЄГ  Гў ГІГ ГўГҐГ°Г­Гі ГѓГ°ГЁГ­ГґГ®Г°Г¤Г 
 			ChangeCharacterAddressGroup(characterFromID("Ewan Glover"), "Greenford_tavern", "Sit", "Sit4");
 			DoQuestReloadToLocation("Greenford_tavern", "sit", "sit3", "Story_ReloadedtoGreenfordTavernWithGlover");
 		break;
 		
 		case "prepare_Story_ReloadedtoGreenfordTavernWithGlover_1":
-			//---------Телепортируем Глоувера и игрока в таверну Гринфорда
+			//---------Г’ГҐГ«ГҐГЇГ®Г°ГІГЁГ°ГіГҐГ¬ ГѓГ«Г®ГіГўГҐГ°Г  ГЁ ГЁГЈГ°Г®ГЄГ  Гў ГІГ ГўГҐГ°Г­Гі ГѓГ°ГЁГ­ГґГ®Г°Г¤Г 
 			ChangeCharacterAddressGroup(characterFromID("Ewan Glover"), "Greenford_tavern", "Sit", "Sit4");
 			//DoQuestReloadToLocation("Greenford_tavern", "sit", "sit3", "Story_ReloadedtoGreenfordTavernWithGlover");
 			LAi_Fade("prepare_Story_ReloadedtoGreenfordTavernWithGlover_2", "Story_ReloadedtoGreenfordTavernWithGlover");
@@ -1618,19 +2533,19 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_Glover_goes_to_tavern":
-			//--------перемещаем Эвана Глоувера в никуда... Предположительно, он в таверне Редмонда
+			//--------ГЇГҐГ°ГҐГ¬ГҐГ№Г ГҐГ¬ ГќГўГ Г­Г  ГѓГ«Г®ГіГўГҐГ°Г  Гў Г­ГЁГЄГіГ¤Г ... ГЏГ°ГҐГ¤ГЇГ®Г«Г®Г¦ГЁГІГҐГ«ГјГ­Г®, Г®Г­ Гў ГІГ ГўГҐГ°Г­ГҐ ГђГҐГ¤Г¬Г®Г­Г¤Г 
 			ChangeCharacterAddress(characterFromID("Ewan Glover"), "None", "");
 			Pchar.Quest.Story_Ask_for_Glover = "1";
 		break;
 
 		case "Story_Glover_leaves_tavern":
-			//--------перемещаем Эвана Глоувера в никуда... Предположительно, он на своем корабле
+			//--------ГЇГҐГ°ГҐГ¬ГҐГ№Г ГҐГ¬ ГќГўГ Г­Г  ГѓГ«Г®ГіГўГҐГ°Г  Гў Г­ГЁГЄГіГ¤Г ... ГЏГ°ГҐГ¤ГЇГ®Г«Г®Г¦ГЁГІГҐГ«ГјГ­Г®, Г®Г­ Г­Г  Г±ГўГ®ГҐГ¬ ГЄГ®Г°Г ГЎГ«ГҐ
 			ChangeCharacterAddressGroup(characterFromID("Ewan Glover"), "Greenford_port", "Goto", "goto21");
 			LAi_SetImmortal(characterFromID("Ewan Glover"), false);
 		break;
 
 		case "Story_Glover_goes_to_ship":
-			//--------перемещаем Эвана Глоувера в никуда... Предположительно, он на своем корабле
+			//--------ГЇГҐГ°ГҐГ¬ГҐГ№Г ГҐГ¬ ГќГўГ Г­Г  ГѓГ«Г®ГіГўГҐГ°Г  Гў Г­ГЁГЄГіГ¤Г ... ГЏГ°ГҐГ¤ГЇГ®Г«Г®Г¦ГЁГІГҐГ«ГјГ­Г®, Г®Г­ Г­Г  Г±ГўГ®ГҐГ¬ ГЄГ®Г°Г ГЎГ«ГҐ
 			ChangeCharacterAddress(characterFromID("Ewan Glover"), "None", "");
 			LAi_SetImmortal(characterFromID("Ewan Glover"), false);
 		break;
@@ -1643,7 +2558,7 @@ void QuestComplete(string sQuestName)
 			Pchar.quest.Story_Blaze_reaches_shore3.over = "yes";
 			
 			Lai_SetStayType(pchar);
-			//---------ставим рядом с Блэйзом Эвана Глоувера
+			//---------Г±ГІГ ГўГЁГ¬ Г°ГїГ¤Г®Г¬ Г± ГЃГ«ГЅГ©Г§Г®Г¬ ГќГўГ Г­Г  ГѓГ«Г®ГіГўГҐГ°Г 
 			if (!LAi_IsDead(characterFromID("Ewan Glover")))
 			{
 				AddQuestRecord("Story_2ndTask", "5");
@@ -1661,12 +2576,12 @@ void QuestComplete(string sQuestName)
 		case "Story_Blaze_reaches_Greenford_2":
 			LAi_SetActorType(characterFromID("Wilfred"));
 			LAi_ActorDialog(characterFromID("Wilfred"), Pchar, "", 4.0, 1.0);
-			//---------На всякий случай делаем его бессмертным
+			//---------ГЌГ  ГўГ±ГїГЄГЁГ© Г±Г«ГіГ·Г Г© Г¤ГҐГ«Г ГҐГ¬ ГҐГЈГ® ГЎГҐГ±Г±Г¬ГҐГ°ГІГ­Г»Г¬
 			LAi_SetImmortal(characterFromID("Wilfred"), true);
 		break;
 
 		case "Wilfred_exit_failed":
-			//--------Отправка Уилфреда в ворота Гринфорда.
+			//--------ГЋГІГЇГ°Г ГўГЄГ  Г“ГЁГ«ГґГ°ГҐГ¤Г  Гў ГўГ®Г°Г®ГІГ  ГѓГ°ГЁГ­ГґГ®Г°Г¤Г .
 			LAi_ActorRunToLocator(characterFromID("Wilfred"), "Reload","reload4", "Story_Wilfred_leaves_forever", 15.0);
 			LAi_SetPlayerType(pchar);
 			Pchar.quest.Story_2ndTask = "Second_part";
@@ -1676,21 +2591,21 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Wilfred_Exit_failed_in_last_moment":
-			//--------Отправка Уилфреда к локатору релоада.
+			//--------ГЋГІГЇГ°Г ГўГЄГ  Г“ГЁГ«ГґГ°ГҐГ¤Г  ГЄ Г«Г®ГЄГ ГІГ®Г°Гі Г°ГҐГ«Г®Г Г¤Г .
 			LAi_ActorRunToLocator(characterFromID("Wilfred"), "Reload","reload2", "Story_Wilfred_leaves_forever", 15.0);
 			LAi_SetPlayerType(pchar);
 		break;
 
 		case "Story_Wilfred_leaves_forever":
-			//---------Отправляем Уилфреда в никуда, считая что он от горя сбежал домой
+			//---------ГЋГІГЇГ°Г ГўГ«ГїГҐГ¬ Г“ГЁГ«ГґГ°ГҐГ¤Г  Гў Г­ГЁГЄГіГ¤Г , Г±Г·ГЁГІГ Гї Г·ГІГ® Г®Г­ Г®ГІ ГЈГ®Г°Гї Г±ГЎГҐГ¦Г Г« Г¤Г®Г¬Г®Г©
 			ChangeCharacterAddress(characterFromID("Wilfred"), "None", "");
 		break;
 
 		case "Story_Convoy_Glover_to_Greenford":
 			AddQuestRecord("Story_2ndTask", "4");
-			//--------Зачисляем игроку проваленный квест
+			//--------Г‡Г Г·ГЁГ±Г«ГїГҐГ¬ ГЁГЈГ°Г®ГЄГі ГЇГ°Г®ГўГ Г«ГҐГ­Г­Г»Г© ГЄГўГҐГ±ГІ
 			Pchar.quest.Story_Glover_sunk = true;
-			//--------Стартуем вторую половину задания
+			//--------Г‘ГІГ Г°ГІГіГҐГ¬ ГўГІГ®Г°ГіГѕ ГЇГ®Г«Г®ГўГЁГ­Гі Г§Г Г¤Г Г­ГЁГї
 			Pchar.quest.Story_2ndTask = "Second_part";
 			LAi_SetSitType(characterFromID("CounterSpy"));
 			ChangeCharacterAddressGroup(characterFromID("CounterSpy"), "Oxbay_tavern", "Sit", "Sit6");
@@ -1699,13 +2614,13 @@ void QuestComplete(string sQuestName)
 
 		case "Story_Wilfred_go_to_shore_prepare":
 			AddPartyExp(pchar, 2500);
-			//---------Установка диалога Эвану Глоуверу
+			//---------Г“Г±ГІГ Г­Г®ГўГЄГ  Г¤ГЁГ Г«Г®ГЈГ  ГќГўГ Г­Гі ГѓГ«Г®ГіГўГҐГ°Гі
 			Characters[GetCharacterIndex("Ewan Glover")].Dialog.CurrentNode = "Are_you_ready";
 			LAi_type_actor_Reset(characterFromID("Ewan Glover"));
 			LAi_ActorDialog(characterFromID("Ewan Glover"), Pchar, "pchar_back_to_player", 3.0, 5.0);
-			//--------Запись в журнал
+			//--------Г‡Г ГЇГЁГ±Гј Гў Г¦ГіГ°Г­Г Г«
 			AddQuestRecord("Story_2ndTask","6");
-			//--------Отправка Уилфреда в ворота Гринфорда.
+			//--------ГЋГІГЇГ°Г ГўГЄГ  Г“ГЁГ«ГґГ°ГҐГ¤Г  Гў ГўГ®Г°Г®ГІГ  ГѓГ°ГЁГ­ГґГ®Г°Г¤Г .
 			LAi_ActorRunToLocator(characterFromID("Wilfred"), "Reload", "reload4", "Story_Wilfred_go_to_shore", 60.0);
 		break;
 
@@ -1714,7 +2629,7 @@ void QuestComplete(string sQuestName)
 		break;
 		
 		case "Story_Wilfred_go_to_shore":
-			//---------Отправляем Уилфреда в никуда, считая что он отправился на берег встречать Блэйза
+			//---------ГЋГІГЇГ°Г ГўГ«ГїГҐГ¬ Г“ГЁГ«ГґГ°ГҐГ¤Г  Гў Г­ГЁГЄГіГ¤Г , Г±Г·ГЁГІГ Гї Г·ГІГ® Г®Г­ Г®ГІГЇГ°Г ГўГЁГ«Г±Гї Г­Г  ГЎГҐГ°ГҐГЈ ГўГ±ГІГ°ГҐГ·Г ГІГј ГЃГ«ГЅГ©Г§Г 
 			ChangeCharacterAddress(characterFromID("Wilfred"), "None", "");
 		break;
 
@@ -1726,31 +2641,31 @@ void QuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("Fra_patrolman_02"), "FRANCE_SOLDIERS"); 
 			LAi_group_MoveCharacter(characterFromID("Fra_patrolman_03"), "FRANCE_SOLDIERS"); 
 			LAi_group_MoveCharacter(characterFromID("Fra_patrolman_04"), "FRANCE_SOLDIERS"); 
-			//--------Появление французских солдат
+			//--------ГЏГ®ГїГўГ«ГҐГ­ГЁГҐ ГґГ°Г Г­Г¶ГіГ§Г±ГЄГЁГµ Г±Г®Г«Г¤Г ГІ
 			ChangeCharacterAddressGroup(characterFromID("Fra_patrolman_01"), "Oxbay_shore_02", "reload", "reload2_back");
 			ChangeCharacterAddress(characterFromID("Fra_patrolman_02"), "Oxbay_shore_02", "locator27");
 			ChangeCharacterAddress(characterFromID("Fra_patrolman_03"), "Oxbay_shore_02", "locator26");
 			ChangeCharacterAddress(characterFromID("Fra_patrolman_04"), "Oxbay_shore_02", "locator13");
-			//-----------Смена типа английским солдатам
+			//-----------Г‘Г¬ГҐГ­Г  ГІГЁГЇГ  Г Г­ГЈГ«ГЁГ©Г±ГЄГЁГ¬ Г±Г®Г«Г¤Г ГІГ Г¬
 			LAi_group_MoveCharacter(characterFromID("Eng_land_soldier_01"), LAI_GROUP_PLAYER); 
 			LAi_group_MoveCharacter(characterFromID("Eng_land_soldier_02"), LAI_GROUP_PLAYER); 
 			LAi_group_MoveCharacter(characterFromID("Eng_land_soldier_03"), LAI_GROUP_PLAYER); 
 			LAi_group_MoveCharacter(characterFromID("Eng_land_soldier_04"), LAI_GROUP_PLAYER); 
-			//--------нападение их на группу игрока	
+			//--------Г­Г ГЇГ Г¤ГҐГ­ГЁГҐ ГЁГµ Г­Г  ГЈГ°ГіГЇГЇГі ГЁГЈГ°Г®ГЄГ 	
 			LAi_group_SetRelation("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 			LAi_group_FightGroups("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, true);
 			LAi_group_SetCheck("FRANCE_SOLDIERS", "Story_kill_french_patrol");
 
-			//--------Отправка Уилфреда к локатору, где он будет бояться.
+			//--------ГЋГІГЇГ°Г ГўГЄГ  Г“ГЁГ«ГґГ°ГҐГ¤Г  ГЄ Г«Г®ГЄГ ГІГ®Г°Гі, ГЈГ¤ГҐ Г®Г­ ГЎГіГ¤ГҐГІ ГЎГ®ГїГІГјГ±Гї.
 			LAi_SetImmortal(characterFromID("Wilfred"), true);
 			Locations[FindLocation("Oxbay_shore_02")].reload.l3.disable = 1;
 		break;
 
 		case "Story_Glover_to_tavern_on_Greenford":
-			//----------Выставляем Глоуверу сидячую позицию.
+			//----------Г‚Г»Г±ГІГ ГўГ«ГїГҐГ¬ ГѓГ«Г®ГіГўГҐГ°Гі Г±ГЁГ¤ГїГ·ГіГѕ ГЇГ®Г§ГЁГ¶ГЁГѕ.
 			LAi_type_actor_Reset(characterFromID("Ewan Glover"));
 			LAi_SetSitType(characterFromID("Ewan Glover"));
-			//---------Перегружаем Эвана Глоувера в таверну Гринфорда, где он будет ждать игрока.
+			//---------ГЏГҐГ°ГҐГЈГ°ГіГ¦Г ГҐГ¬ ГќГўГ Г­Г  ГѓГ«Г®ГіГўГҐГ°Г  Гў ГІГ ГўГҐГ°Г­Гі ГѓГ°ГЁГ­ГґГ®Г°Г¤Г , ГЈГ¤ГҐ Г®Г­ ГЎГіГ¤ГҐГІ Г¦Г¤Г ГІГј ГЁГЈГ°Г®ГЄГ .
 			ChangeCharacterAddressGroup(characterFromID("Ewan Glover"), "Greenford_tavern", "sit", "sit4");
 			Characters[GetCharacterIndex("Ewan Glover")].Dialog.CurrentNode = "Are_you_ready_again";
 		break;
@@ -1775,14 +2690,14 @@ void QuestComplete(string sQuestName)
 				Locations[FindLocation("Greenford_town")].reload.l4.disable = 0;
 				if (!LAi_IsDead(characterFromID("Ewan Glover")))
 				{
-					//----------Высаживаем Английских солдат вместе с игроком
+					//----------Г‚Г»Г±Г Г¦ГЁГўГ ГҐГ¬ ГЂГ­ГЈГ«ГЁГ©Г±ГЄГЁГµ Г±Г®Г«Г¤Г ГІ ГўГ¬ГҐГ±ГІГҐ Г± ГЁГЈГ°Г®ГЄГ®Г¬
 					ChangeCharacterAddress(characterFromID("Eng_land_soldier_01"), "Oxbay_shore_02", "locator7");
 					ChangeCharacterAddress(characterFromID("Eng_land_soldier_02"), "Oxbay_shore_02", "locator23");
 					ChangeCharacterAddress(characterFromID("Eng_land_soldier_03"), "Oxbay_shore_02", "locator24");
 					ChangeCharacterAddress(characterFromID("Eng_land_soldier_04"), "Oxbay_shore_02", "locator25");
 					Characters[GetCharacterIndex("Wilfred")].Dialog.CurrentNode = "Warning";
 				}
-				//----------Появляем местного жителя.
+				//----------ГЏГ®ГїГўГ«ГїГҐГ¬ Г¬ГҐГ±ГІГ­Г®ГЈГ® Г¦ГЁГІГҐГ«Гї.
 				LAi_type_actor_Reset(characterFromID("Wilfred"));
 				LAi_type_actor_Reset(characterFromID("Wilfred"));
 				ChangeCharacterAddress(characterFromID("Wilfred"), "Oxbay_shore_02", "locator8");
@@ -1811,9 +2726,9 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Greenford_town")].reload.l4.disable = 0;
 			bQuestDisableMapEnter = false;
 			AddQuestRecord("Story_2ndTask", "8");
-			//--------Зачисляем игроку проваленный квест
+			//--------Г‡Г Г·ГЁГ±Г«ГїГҐГ¬ ГЁГЈГ°Г®ГЄГі ГЇГ°Г®ГўГ Г«ГҐГ­Г­Г»Г© ГЄГўГҐГ±ГІ
 			Pchar.quest.Story_Glover_sunk = true;
-			//--------Стартуем вторую половину задания
+			//--------Г‘ГІГ Г°ГІГіГҐГ¬ ГўГІГ®Г°ГіГѕ ГЇГ®Г«Г®ГўГЁГ­Гі Г§Г Г¤Г Г­ГЁГї
 			Pchar.quest.Story_2ndTask = "Second_part";
 			LAi_SetSitType(characterFromID("Counterspy"));
 			ChangeCharacterAddressGroup(characterFromID("CounterSpy"), "Oxbay_tavern", "Sit", "Sit6");
@@ -1827,7 +2742,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Wilfred_exit_complete":
-			//-----------Возвращаем игрока в таверну Гринфорда на след. день
+			//-----------Г‚Г®Г§ГўГ°Г Г№Г ГҐГ¬ ГЁГЈГ°Г®ГЄГ  Гў ГІГ ГўГҐГ°Г­Гі ГѓГ°ГЁГ­ГґГ®Г°Г¤Г  Г­Г  Г±Г«ГҐГ¤. Г¤ГҐГ­Гј
 			LAi_SetImmortal(characterFromID("Wilfred"), false);
 			ChangeCharacterAddress(characterFromID("Eng_land_soldier_01"), "None", "");
 			ChangeCharacterAddress(characterFromID("Eng_land_soldier_02"), "None", "");
@@ -1869,9 +2784,9 @@ void QuestComplete(string sQuestName)
 			pchar.quest.story_glover_to_tavern_on_greenford.over = "yes";
 			pchar.quest.story_convoy_glover_to_greenford.over = "yes";
 			
-			//-----------Возвращаем возможность выхода в карту
+			//-----------Г‚Г®Г§ГўГ°Г Г№Г ГҐГ¬ ГўГ®Г§Г¬Г®Г¦Г­Г®Г±ГІГј ГўГ»ГµГ®Г¤Г  Гў ГЄГ Г°ГІГі
 			bQuestDisableMapEnter = false;
-			//-----------Эван Глоувер начинает диалог с игроком.
+			//-----------ГќГўГ Г­ ГѓГ«Г®ГіГўГҐГ° Г­Г Г·ГЁГ­Г ГҐГІ Г¤ГЁГ Г«Г®ГЈ Г± ГЁГЈГ°Г®ГЄГ®Г¬.
 			LAi_SetActorType(characterFromID("Ewan Glover"));
 			LAi_SetActorType(pchar);
 			LAi_ActorWaitDialog(pchar, characterFromID("Ewan Glover"));
@@ -1995,7 +2910,7 @@ void QuestComplete(string sQuestName)
 
 		case "Blaze_and_Counterspy_exit_from_shipyard":
 			RemovePassenger(Pchar, characterFromID("Counterspy"));
-			//----------------перегрузить игрока и шпиона наверх верфи
+			//----------------ГЇГҐГ°ГҐГЈГ°ГіГ§ГЁГІГј ГЁГЈГ°Г®ГЄГ  ГЁ ГёГЇГЁГ®Г­Г  Г­Г ГўГҐГ°Гµ ГўГҐГ°ГґГЁ
 			LAi_Fade("Blaze_and_Counterspy_exit_from_shipyard_2", "Story_HiddenInShipyardWatch");
 		break;
 
@@ -2034,16 +2949,16 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_HiddenInShipyardWatch":
-			//----------------Зафиксить камеру в нужном локаторе
+			//----------------Г‡Г ГґГЁГЄГ±ГЁГІГј ГЄГ Г¬ГҐГ°Гі Гў Г­ГіГ¦Г­Г®Г¬ Г«Г®ГЄГ ГІГ®Г°ГҐ
 			LAi_QuestDelay("Story_HiddenInShipyardWatch_2", 1.0);
 		break;
 
 		case "Story_HiddenInShipyardWatch_2":
-			//----------------- Явить солдат сквозь дверь.
+			//----------------- ГџГўГЁГІГј Г±Г®Г«Г¤Г ГІ Г±ГЄГўГ®Г§Гј Г¤ГўГҐГ°Гј.
 			ChangeCharacterAddressGroup(characterFromID("Fra_arrester_04"),"Oxbay_Shipyard", "Reload","reload1");
 			ChangeCharacterAddressGroup(characterFromID("Fra_arrester_05"),"Oxbay_Shipyard", "Reload","reload1");
 			ChangeCharacterAddressGroup(characterFromID("Fra_arrester_06"),"Oxbay_Shipyard", "Reload","reload1");
-			//----------------Начать диалог между солдатами и Оуэном
+			//----------------ГЌГ Г·Г ГІГј Г¤ГЁГ Г«Г®ГЈ Г¬ГҐГ¦Г¤Гі Г±Г®Г«Г¤Г ГІГ Г¬ГЁ ГЁ ГЋГіГЅГ­Г®Г¬
 			LAi_SetActorType(characterFromID("Fra_arrester_04"));
 			LAi_SetActorType(characterFromID("Fra_arrester_05"));
 			LAi_SetActorType(characterFromID("Fra_arrester_06"));
@@ -2148,7 +3063,7 @@ void QuestComplete(string sQuestName)
 		case "Story_LeaveOxbayWithRabelAndCounterspy":
 			Locations[FindLocation("Oxbay_port")].reload.l2.disable = 1;
 			Locations[FindLocation("Oxbay_port")].reload.l3.disable = 1;
-			//---------На случай, если игрок первым добежит до ворот.
+			//---------ГЌГ  Г±Г«ГіГ·Г Г©, ГҐГ±Г«ГЁ ГЁГЈГ°Г®ГЄ ГЇГҐГ°ГўГ»Г¬ Г¤Г®ГЎГҐГ¦ГЁГІ Г¤Г® ГўГ®Г°Г®ГІ.
 			PlaceCharacter(characterFromID("Counterspy"), "officers", "Oxbay_port");
 			PlaceCharacter(characterFromID("Rabel Iverneau"), "officers", "Oxbay_port");
 
@@ -2646,7 +3561,7 @@ void QuestComplete(string sQuestName)
 			RemoveCharacterCompanion(pchar, characterFromID("danielle"));
 
 			bQuestDisableMapEnter = true;
-			//--------------Отключение возможности выгрузиться на остров
+			//--------------ГЋГІГЄГ«ГѕГ·ГҐГ­ГЁГҐ ГўГ®Г§Г¬Г®Г¦Г­Г®Г±ГІГЁ ГўГ»ГЈГ°ГіГ§ГЁГІГјГ±Гї Г­Г  Г®Г±ГІГ°Г®Гў
 			Island_SetReloadEnableGlobal("Oxbay", false);
 
 			DoReloadCharactertoLocation("Oxbay", "reload", "reload_4");
@@ -2664,9 +3579,9 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Story_FightingInGreenfordPort":
-			//-----------------Возвращение состояния Релоадов острова Оксбэй и восстановление выхода в карту
+			//-----------------Г‚Г®Г§ГўГ°Г Г№ГҐГ­ГЁГҐ Г±Г®Г±ГІГ®ГїГ­ГЁГї ГђГҐГ«Г®Г Г¤Г®Гў Г®Г±ГІГ°Г®ГўГ  ГЋГЄГ±ГЎГЅГ© ГЁ ГўГ®Г±Г±ГІГ Г­Г®ГўГ«ГҐГ­ГЁГҐ ГўГ»ГµГ®Г¤Г  Гў ГЄГ Г°ГІГі
 			Island_SetReloadEnableGlobal("Oxbay", true);
-			//Восстановление адреса локатора перегрузки в Порт Гринфорда вместо фэйкового Гринфорда
+			//Г‚Г®Г±Г±ГІГ Г­Г®ГўГ«ГҐГ­ГЁГҐ Г Г¤Г°ГҐГ±Г  Г«Г®ГЄГ ГІГ®Г°Г  ГЇГҐГ°ГҐГЈГ°ГіГ§ГЄГЁ Гў ГЏГ®Г°ГІ ГѓГ°ГЁГ­ГґГ®Г°Г¤Г  ГўГ¬ГҐГ±ГІГ® ГґГЅГ©ГЄГ®ГўГ®ГЈГ® ГѓГ°ГЁГ­ГґГ®Г°Г¤Г 
 			Islands[3].reload.l2.name = "reload_1";
 			Islands[3].reload.l2.go = "Greenford_port";
 			Islands[3].reload.l2.emerge = "reload1";
@@ -2813,7 +3728,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Researcher"), "Oxbay_lighthouse", "goto23");
 			
 			DoQuestReloadToLocation("Oxbay_lighthouse", "Goto", "goto24", "Story_TalkWithResearcherAfterSaving");
-			//Убираем английских солдат из Гринфорда
+			//Г“ГЎГЁГ°Г ГҐГ¬ Г Г­ГЈГ«ГЁГ©Г±ГЄГЁГµ Г±Г®Г«Г¤Г ГІ ГЁГ§ ГѓГ°ГЁГ­ГґГ®Г°Г¤Г 
 			ChangeCharacterAddress(characterFromID("Eng_soldier_38"), "None", "");
 			ChangeCharacterAddress(characterFromID("Eng_soldier_39"), "None", "");
 			ChangeCharacterAddress(characterFromID("Eng_soldier_40"), "None", "");
@@ -2928,11 +3843,11 @@ void QuestComplete(string sQuestName)
 			DisableFastTravel(false);
 			DisableMenuLaunch(false);
 			CloseQuestHeader("Repel_English_Attack");
-			//-----------------Возвращение состояния Релоадов острова Оксбэй и восстановление выхода в карту
+			//-----------------Г‚Г®Г§ГўГ°Г Г№ГҐГ­ГЁГҐ Г±Г®Г±ГІГ®ГїГ­ГЁГї ГђГҐГ«Г®Г Г¤Г®Гў Г®Г±ГІГ°Г®ГўГ  ГЋГЄГ±ГЎГЅГ© ГЁ ГўГ®Г±Г±ГІГ Г­Г®ГўГ«ГҐГ­ГЁГҐ ГўГ»ГµГ®Г¤Г  Гў ГЄГ Г°ГІГі
 			Island_SetReloadEnableGlobal("oxbay",true);
 
 			bQuestDisableMapEnter = false;
-			//-----------------Возвращение состояния релоада выхода из гринфордской таверны
+			//-----------------Г‚Г®Г§ГўГ°Г Г№ГҐГ­ГЁГҐ Г±Г®Г±ГІГ®ГїГ­ГЁГї Г°ГҐГ«Г®Г Г¤Г  ГўГ»ГµГ®Г¤Г  ГЁГ§ ГЈГ°ГЁГ­ГґГ®Г°Г¤Г±ГЄГ®Г© ГІГ ГўГҐГ°Г­Г»
 			Locations[FindLocation("Greenford_tavern")].reload.l1.name = "reload1";
 			Locations[FindLocation("Greenford_tavern")].reload.l1.go = "Greenford_Town";
 			Locations[FindLocation("Greenford_tavern")].reload.l1.emerge = "reload7";
@@ -3405,6 +4320,7 @@ void QuestComplete(string sQuestName)
 			//LaunchMainMenu();
 			Characters[GetCharacterIndex("researcher")].Dialog.CurrentNode = "First time";
 			Characters[GetCharacterIndex("danielle")].Dialog.CurrentNode = "First time";
+			pchar.quest_M1_step = 0;
 		break;
 
 		case "remove_officers_from_blaze_in_redmond_complete":
@@ -3412,7 +4328,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialogNow(characterFromID("Eng_soldier_5"), pchar, "", -1);
 		break;
 
-		//Выходим от губернатора
+		//Г‚Г»ГµГ®Г¤ГЁГ¬ Г®ГІ ГЈГіГЎГҐГ°Г­Г ГІГ®Г°Г 
 		case "exit_from_silehard_complete":
 			pchar.quest.main_line = "talk_in_tavern_begin";
 			AddPartyExp(pchar, 7000);
@@ -3427,7 +4343,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Danielle"), "Quest_redmond_tavern", "goto2");
 			ChangeCharacterAddress(characterFromID("Ralph Fawn"), "Quest_redmond_tavern", "goto3");
 			ChangeCharacterAddressGroup(characterFromID("Charles Windem"), "Quest_redmond_tavern", "merchant", "goto1");
-			//Делаем невозможность уйти из локации
+			//Г„ГҐГ«Г ГҐГ¬ Г­ГҐГўГ®Г§Г¬Г®Г¦Г­Г®Г±ГІГј ГіГ©ГІГЁ ГЁГ§ Г«Г®ГЄГ Г¶ГЁГЁ
 			locations[FindLocation("Redmond_port")].reload.l2.disable = 1;
 			locations[FindLocation("Redmond_port")].reload.l3.disable = 1;
 			locations[FindLocation("Redmond_Shore_01")].reload.l2.disable = 1;
@@ -3450,14 +4366,14 @@ void QuestComplete(string sQuestName)
 			pchar.quest.to_quest_redmond_tavern.win_condition.l1 = "location";
 			pchar.quest.to_quest_redmond_tavern.win_condition.l1.location = "Quest_Redmond_tavern";
 			pchar.quest.to_quest_redmond_tavern.win_condition = "to_quest_redmond_tavern_complete";
-			//убираем выход из таверны
+			//ГіГЎГЁГ°Г ГҐГ¬ ГўГ»ГµГ®Г¤ ГЁГ§ ГІГ ГўГҐГ°Г­Г»
 			locations[FindLocation("quest_redmond_tavern")].reload.l1.disable = 1;
 			worldMap.islands.Oxbay.locations.city.label.icon = ENGLAND;
 		break;
 		
-		// заходим в квестовую таверну.
+		// Г§Г ГµГ®Г¤ГЁГ¬ Гў ГЄГўГҐГ±ГІГ®ГўГіГѕ ГІГ ГўГҐГ°Г­Гі.
 		case "to_quest_redmond_tavern_complete":
-			//восстанавливаем выходы из города
+			//ГўГ®Г±Г±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГ¬ ГўГ»ГµГ®Г¤Г» ГЁГ§ ГЈГ®Г°Г®Г¤Г 
 			locations[FindLocation("Redmond_port")].reload.l2.disable = 0;
 			locations[FindLocation("Redmond_port")].reload.l3.disable = 0;
 			locations[FindLocation("Redmond_Shore_01")].reload.l2.disable = 0;
@@ -3513,7 +4429,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorWaitDialog(pchar, characterFromID("soldier1"));
 		break;
 
-		//солдат в таверне бьет нас по мордe
+		//Г±Г®Г«Г¤Г ГІ Гў ГІГ ГўГҐГ°Г­ГҐ ГЎГјГҐГІ Г­Г Г± ГЇГ® Г¬Г®Г°Г¤e
 		case "kicked_by_soldier_complete":
 			LAi_ActorAnimation(characterFromID("soldier1"), "attack_2", "kicked_by_soldier_2_complete", 0.5);
 		break;
@@ -3541,7 +4457,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetOfficerType(characterFromID("danielle"));
 			LAi_SetOfficerType(characterFromID("ralph fawn"));
 			LAi_group_FightGroups("ENGLAND_TAVERN_SOLDIERS", LAI_GROUP_PLAYER, true);
-			//трактирщик убегает в обычную (не квестовую таверну)
+			//ГІГ°Г ГЄГІГЁГ°Г№ГЁГЄ ГіГЎГҐГЈГ ГҐГІ Гў Г®ГЎГ»Г·Г­ГіГѕ (Г­ГҐ ГЄГўГҐГ±ГІГ®ГўГіГѕ ГІГ ГўГҐГ°Г­Гі)
 			LAi_SetActorType(characterFromID("Charles Windem"));
 			LAi_ActorRunToLocator(characterFromID("Charles Windem"), "merchant", "reload2", "Charles_escape_from_quest_redmond_tavern_complete", -1);
 			LAi_group_SetCheck("ENGLAND_TAVERN_SOLDIERS", "out_from_quest_tavern_complete");
@@ -3552,7 +4468,7 @@ void QuestComplete(string sQuestName)
 			LAi_KillCharacter(characterFromID("ralph fawn"));
 		break;
 
-		//смерть всех солдат в таверне
+		//Г±Г¬ГҐГ°ГІГј ГўГ±ГҐГµ Г±Г®Г«Г¤Г ГІ Гў ГІГ ГўГҐГ°Г­ГҐ
 		case "out_from_quest_tavern_complete":
 			LAi_LocationFightDisable(&Locations[FindLocation("Quest_redmond_tavern")], true);
 			pchar.quest.main_line = "fawn_death";
@@ -3567,9 +4483,9 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Danielle"), pchar, "pchar_back_to_player", 3.0, 1.0);
 		break;
 
-		//Даниель убегает из таверны, оставляя там Блейза
+		//Г„Г Г­ГЁГҐГ«Гј ГіГЎГҐГЈГ ГҐГІ ГЁГ§ ГІГ ГўГҐГ°Г­Г», Г®Г±ГІГ ГўГ«ГїГї ГІГ Г¬ ГЃГ«ГҐГ©Г§Г 
 		case "danielle_escape_from_quest_redmond_tavern_complete":
-			//убираем Даниель
+			//ГіГЎГЁГ°Г ГҐГ¬ Г„Г Г­ГЁГҐГ«Гј
 			ChangeCharacterAddress(characterFromID("Danielle"), "none", "none");
 			LAi_QuestDelay("danielle_escape_from_quest_redmond_tavern_2_complete", 1.0);
 		break;
@@ -3600,9 +4516,9 @@ void QuestComplete(string sQuestName)
 			locCameraToPos(locx, locy, locz, false);
 		break;
 
-		//трактирщик убегает из квестовой таверны
+		//ГІГ°Г ГЄГІГЁГ°Г№ГЁГЄ ГіГЎГҐГЈГ ГҐГІ ГЁГ§ ГЄГўГҐГ±ГІГ®ГўГ®Г© ГІГ ГўГҐГ°Г­Г»
 		case "Charles_escape_from_quest_redmond_tavern_complete":
-			//убираем трактирщика
+			//ГіГЎГЁГ°Г ГҐГ¬ ГІГ°Г ГЄГІГЁГ°Г№ГЁГЄГ 
 			ChangeCharacterAddressGroup(characterFromID("Charles Windem"), "Redmond_Tavern", "merchant", "goto1");
 			LAi_SetMerchantType(characterFromID("Charles Windem"));
 		break;
@@ -3624,17 +4540,17 @@ void QuestComplete(string sQuestName)
 			CloseQuestHeader("Blaze_out_from_silehard");
 			SetQuestHeader("Blaze_in_prison");
 			AddQuestRecord("Blaze_in_prison", "1");
-			//Выключаем выход из тюрьмы
+			//Г‚Г»ГЄГ«ГѕГ·Г ГҐГ¬ ГўГ»ГµГ®Г¤ ГЁГ§ ГІГѕГ°ГјГ¬Г»
 			locations[FindLocation("Redmond_prison")].reload.l1.disable = 1;
-			//говорим подойти Эдгару к блейзу и начать разговор
+			//ГЈГ®ГўГ®Г°ГЁГ¬ ГЇГ®Г¤Г®Г©ГІГЁ ГќГ¤ГЈГ Г°Гі ГЄ ГЎГ«ГҐГ©Г§Гі ГЁ Г­Г Г·Г ГІГј Г°Г Г§ГЈГ®ГўГ®Г°
 			LAi_ActorGoToLocator(characterFromID("Edgar Attwood"), "goto", "goto23", "Edgar_to_Blaze_complete", -1);
-			//включаем обычную таверну
+			//ГўГЄГ«ГѕГ·Г ГҐГ¬ Г®ГЎГ»Г·Г­ГіГѕ ГІГ ГўГҐГ°Г­Гі
 			locations[FindLocation("Redmond_town_01")].reload.l11.go = "Redmond_tavern";
-			//на всякий случай еще раз передвигаем трактирщика
+			//Г­Г  ГўГ±ГїГЄГЁГ© Г±Г«ГіГ·Г Г© ГҐГ№ГҐ Г°Г Г§ ГЇГҐГ°ГҐГ¤ГўГЁГЈГ ГҐГ¬ ГІГ°Г ГЄГІГЁГ°Г№ГЁГЄГ 
 			ChangeCharacterAddressGroup(characterFromID("Charles Windem"), "Redmond_Tavern", "merchant", "goto1");
 		break;
 
-		//Эдгар подходит к блейзу
+		//ГќГ¤ГЈГ Г° ГЇГ®Г¤ГµГ®Г¤ГЁГІ ГЄ ГЎГ«ГҐГ©Г§Гі
 		case "Edgar_to_Blaze_complete":
 			locx = stf(loadedLocation.locators.camera.camera13.x);
 			locy = stf(loadedLocation.locators.camera.camera13.y);
@@ -3655,7 +4571,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.to_locator_where_soldiers_in_prison_see_you.win_condition = "to_locator_where_soldiers_in_prison_see_you_complete";
 		break;
 
-		//Эдгар отходит от камеры
+		//ГќГ¤ГЈГ Г° Г®ГІГµГ®Г¤ГЁГІ Г®ГІ ГЄГ Г¬ГҐГ°Г»
 		case "wait_for_night_in_prison_complete":
 			pchar.quest.main_line = "inside_redmond_prison";
 			ChangeCharacterAddressGroup(characterFromID("Robert Christopher Silehard"), "Redmond_Prison", "merchant", "reload13");
@@ -3669,26 +4585,26 @@ void QuestComplete(string sQuestName)
 			LAi_Fade("blaze_exit_from_cam_complete", "second_speak_with_edgar_complete");
 		break;
 
-		//Блейз выходит из камеры
+		//ГЃГ«ГҐГ©Г§ ГўГ»ГµГ®Г¤ГЁГІ ГЁГ§ ГЄГ Г¬ГҐГ°Г»
 		case "blaze_exit_from_cam_complete":
 			EnableEquip(pchar, BLADE_ITEM_TYPE, true);
 			EnableEquip(pchar, GUN_ITEM_TYPE, true);
 			EquipCharacterByItem(pchar, FindCharacterItemByGroup(pchar, BLADE_ITEM_TYPE));
 			EquipCharacterByItem(pchar, FindCharacterItemByGroup(pchar, GUN_ITEM_TYPE));
-			//ставим Эдгара рядом с блейзом
+			//Г±ГІГ ГўГЁГ¬ ГќГ¤ГЈГ Г°Г  Г°ГїГ¤Г®Г¬ Г± ГЎГ«ГҐГ©Г§Г®Г¬
 			locCameraFollow();
 			ChangeCharacterAddress(pchar, "Redmond_prison", "goto12");
 			pchar.quest.main_line = "escape_from_redmond_prison";
 			ChangeCharacterAddress(characterFromID("Edgar Attwood"), "redmond_prison", "goto23");
-			//даем квест на убийство всех стражников в тюрьме
+			//Г¤Г ГҐГ¬ ГЄГўГҐГ±ГІ Г­Г  ГіГЎГЁГ©Г±ГІГўГ® ГўГ±ГҐГµ Г±ГІГ°Г Г¦Г­ГЁГЄГ®Гў Гў ГІГѕГ°ГјГ¬ГҐ
 			pchar.quest.kill_all_soldiers_in_prison.win_condition.l1 = "NPC_Death";
 			pchar.quest.kill_all_soldiers_in_prison.win_condition.l1.character = "Eng_soldier_35";
 			pchar.quest.kill_all_soldiers_in_prison.win_condition.l2 = "NPC_Death";
 			pchar.quest.kill_all_soldiers_in_prison.win_condition.l2.character = "Eng_soldier_36";
 			pchar.quest.kill_all_soldiers_in_prison.win_condition = "kill_all_soldiers_in_prison_complete";
-			//продолжаем разговор, где говорим, что нужно убить солдат на выходе.
+			//ГЇГ°Г®Г¤Г®Г«Г¦Г ГҐГ¬ Г°Г Г§ГЈГ®ГўГ®Г°, ГЈГ¤ГҐ ГЈГ®ГўГ®Г°ГЁГ¬, Г·ГІГ® Г­ГіГ¦Г­Г® ГіГЎГЁГІГј Г±Г®Г«Г¤Г ГІ Г­Г  ГўГ»ГµГ®Г¤ГҐ.
 			characters[GetCharacterIndex("Robert Christopher Silehard")].dialog.CurrentNode = "escape_from_prison_node";
-			//временно прячем губернатора
+			//ГўГ°ГҐГ¬ГҐГ­Г­Г® ГЇГ°ГїГ·ГҐГ¬ ГЈГіГЎГҐГ°Г­Г ГІГ®Г°Г 
 			ChangeCharacterAddress(characterFromID("Robert Christopher Silehard"), "none", "none");
 			LAi_LocationFightDisable(&Locations[FindLocation("redmond_prison")], false);
 		break;
@@ -3699,7 +4615,7 @@ void QuestComplete(string sQuestName)
 				LAi_SetPlayerType(pchar);
 				pchar.quest.edgar_life = "death";
 				AddQuestRecord("Blaze_in_prison", "4");
-				//солдаты слышат шум и идут воевать игрока.
+				//Г±Г®Г«Г¤Г ГІГ» Г±Г«Г»ГёГ ГІ ГёГіГ¬ ГЁ ГЁГ¤ГіГІ ГўГ®ГҐГўГ ГІГј ГЁГЈГ°Г®ГЄГ .
 				LAi_group_SetRelation("ENGLAND_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 				OfficersReaction("bad");
 			}
@@ -3709,7 +4625,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Edgar Attwood"), pchar, "", 1.0, 1.0);
 		break;
 		
-		//сайлхард подходит к блейзу
+		//Г±Г Г©Г«ГµГ Г°Г¤ ГЇГ®Г¤ГµГ®Г¤ГЁГІ ГЄ ГЎГ«ГҐГ©Г§Гі
 		case "Silehard_to_Blaze_complete":
 			LAi_SetCitizenType(characterFromID("Edgar Attwood"));
 			LAi_ActorDialogNow(characterFromID("Robert Christopher Silehard"), pchar, "", -1);
@@ -3732,7 +4648,7 @@ void QuestComplete(string sQuestName)
 			RecalculateJumpTable();
 		break;
 
-		//проходим за сайлхардом в его кабинет
+		//ГЇГ°Г®ГµГ®Г¤ГЁГ¬ Г§Г  Г±Г Г©Г«ГµГ Г°Г¤Г®Г¬ Гў ГҐГЈГ® ГЄГ ГЎГЁГ­ГҐГІ
 		case "blaze_from_prison_to_residence_complete":
 			ReStorePassengers("Blaze");
 			LAi_group_SetRelation("ENGLAND_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_FRIEND);
@@ -3755,11 +4671,11 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddressGroup(characterFromID("Redmond prison commendant"), "redmond_prison", "sit", "sit1");
 
 			DeleteAttribute(Pchar, "Quest.Story_OxbayCaptured"); 
-			//Смена национальности форта Оксбэя
+			//Г‘Г¬ГҐГ­Г  Г­Г Г¶ГЁГ®Г­Г Г«ГјГ­Г®Г±ГІГЁ ГґГ®Г°ГІГ  ГЋГЄГ±ГЎГЅГї
 			Characters[GetCharacterIndex("Oxbay Commander")].nation = ENGLAND;
 			Characters[GetCharacterIndex("Oxbay Commander")].model = "Soldier_Eng";
-			//Смена французских солдат в Оксбэе на английских
-			//Удаление французских
+			//Г‘Г¬ГҐГ­Г  ГґГ°Г Г­Г¶ГіГ§Г±ГЄГЁГµ Г±Г®Г«Г¤Г ГІ Гў ГЋГЄГ±ГЎГЅГҐ Г­Г  Г Г­ГЈГ«ГЁГ©Г±ГЄГЁГµ
+			//Г“Г¤Г Г«ГҐГ­ГЁГҐ ГґГ°Г Г­Г¶ГіГ§Г±ГЄГЁГµ
 			ChangeCharacterAddress(characterFromID("Fra_occupant_01"), "None", "");
 			ChangeCharacterAddress(characterFromID("Fra_occupant_02"), "None", "");
 			ChangeCharacterAddress(characterFromID("Fra_occupant_03"), "None", "");
@@ -3772,7 +4688,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Occ_Patrol_2"), "none", "");
 			ChangeCharacterAddress(characterFromID("Occ_Patrol_3"), "none", "");
 			ChangeCharacterAddress(characterFromID("Occ_Patrol_4"), "none", "");
-			//Постановка английских
+			//ГЏГ®Г±ГІГ Г­Г®ГўГЄГ  Г Г­ГЈГ«ГЁГ©Г±ГЄГЁГµ
 			ChangeCharacterAddress(characterFromID("Ox_Soldier_1"), "Oxbay_town", "goto3");
 			ChangeCharacterAddress(characterFromID("Ox_Soldier_2"), "Oxbay_town", "goto4");
 			ChangeCharacterAddress(characterFromID("Ox_Soldier_3"), "Oxbay_town", "goto1");
@@ -3785,7 +4701,7 @@ void QuestComplete(string sQuestName)
 			ChangeCharacterAddress(characterFromID("Ox_Patrol_2"), "Oxbay_port", "goto12");
 			ChangeCharacterAddress(characterFromID("Ox_Patrol_3"), "Oxbay_town", "goto31");
 			ChangeCharacterAddress(characterFromID("Ox_Patrol_4"), "Oxbay_town", "goto20");
-			//Убирание из гавани Оксбэя кораблей французской эскадры
+			//Г“ГЎГЁГ°Г Г­ГЁГҐ ГЁГ§ ГЈГ ГўГ Г­ГЁ ГЋГЄГ±ГЎГЅГї ГЄГ®Г°Г ГЎГ«ГҐГ© ГґГ°Г Г­Г¶ГіГ§Г±ГЄГ®Г© ГЅГ±ГЄГ Г¤Г°Г»
 			Group_SetAddress("Story_French_Squadron", "none", "Quest_Ships","Quest_Ship_7");
 			LAi_SetImmortal(characterFromID("FalaiseDeFleur Commander"), false);
 			LAi_SetImmortal(characterFromID("Oxbay Commander"), false);
@@ -3800,10 +4716,10 @@ void QuestComplete(string sQuestName)
 			LAi_SetHuberStayType(characterFromID("Robert Christopher Silehard"));
 		break;
 
-		//убить всех солдат в тюрьме
+		//ГіГЎГЁГІГј ГўГ±ГҐГµ Г±Г®Г«Г¤Г ГІ Гў ГІГѕГ°ГјГ¬ГҐ
 		case "kill_all_soldiers_in_prison_complete":
 			LAi_group_SetRelation("ENGLAND_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_FRIEND);
-			//появления губернатора со стражниками и начало разговора
+			//ГЇГ®ГїГўГ«ГҐГ­ГЁГї ГЈГіГЎГҐГ°Г­Г ГІГ®Г°Г  Г±Г® Г±ГІГ°Г Г¦Г­ГЁГЄГ Г¬ГЁ ГЁ Г­Г Г·Г Г«Г® Г°Г Г§ГЈГ®ГўГ®Г°Г 
 			LAi_QuestDelay("Silehard_in_prison_complete", 3.0);
 		break;
 
@@ -3816,13 +4732,13 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Robert Christopher Silehard"), pchar, "", 5.0, 0);
 		break;
 
-		//блейз достигает локатора в тюрьме, за которым его видят стражники
+		//ГЎГ«ГҐГ©Г§ Г¤Г®Г±ГІГЁГЈГ ГҐГІ Г«Г®ГЄГ ГІГ®Г°Г  Гў ГІГѕГ°ГјГ¬ГҐ, Г§Г  ГЄГ®ГІГ®Г°Г»Г¬ ГҐГЈГ® ГўГЁГ¤ГїГІ Г±ГІГ°Г Г¦Г­ГЁГЄГЁ
 		case "to_locator_where_soldiers_in_prison_see_you_complete":
 			if (pchar.quest.main_line == "escape_from_redmond_prison")
 			{
 				LAi_group_SetRelation("ENGLAND_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 				LAi_group_FightGroups("ENGLAND_SOLDIERS", LAI_GROUP_PLAYER, true);
-				//Убираем сидящего солдата
+				//Г“ГЎГЁГ°Г ГҐГ¬ Г±ГЁГ¤ГїГ№ГҐГЈГ® Г±Г®Г«Г¤Г ГІГ 
 				ChangeCharacterAddress(characterFromID("Redmond prison commendant"), "none", "none");
 			}
 		break;
@@ -3833,7 +4749,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Edgar Attwood"), pchar, "", 3.0, 1.0);
 		break;
 
-		//появление мужика, дающего информацию о местонахождении реймса
+		//ГЇГ®ГїГўГ«ГҐГ­ГЁГҐ Г¬ГіГ¦ГЁГЄГ , Г¤Г ГѕГ№ГҐГЈГ® ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГѕ Г® Г¬ГҐГ±ГІГ®Г­Г ГµГ®Г¦Г¤ГҐГ­ГЁГЁ Г°ГҐГ©Г¬Г±Г 
 		case "ines_denied_exit_from_tavern_complete":
 			pchar.quest.kill_pirate_for_rheims_lore.win_condition.l1 = "NPC_death";
 			pchar.quest.kill_pirate_for_rheims_lore.win_condition.l1.character = "quest_pirate_01";
@@ -3873,7 +4789,7 @@ void QuestComplete(string sQuestName)
 		case "kill_pirate_for_rheims_lore_complete":
 			AddQuestRecord("Blaze_search_Rheims", "13");
 			pchar.quest.main_line = "blaze_talk_with_innes_diaz_complete_21";
-			//возраждаем пирата для следующих сценок
+			//ГўГ®Г§Г°Г Г¦Г¤Г ГҐГ¬ ГЇГЁГ°Г ГІГ  Г¤Г«Гї Г±Г«ГҐГ¤ГіГѕГ№ГЁГµ Г±Г¶ГҐГ­Г®ГЄ
 			characters[getCharacterIndex("quest_pirate_01")].location = "none";
 			LAi_SetCurHP(characterFromID("quest_pirate_01"), 80.0); 
 			
@@ -3882,7 +4798,7 @@ void QuestComplete(string sQuestName)
 			OfficersReaction("bad");
 		break;
 
-		//говорим контрабандистам отвести блейза к камило мачадо
+		//ГЈГ®ГўГ®Г°ГЁГ¬ ГЄГ®Г­ГІГ°Г ГЎГ Г­Г¤ГЁГ±ГІГ Г¬ Г®ГІГўГҐГ±ГІГЁ ГЎГ«ГҐГ©Г§Г  ГЄ ГЄГ Г¬ГЁГ«Г® Г¬Г Г·Г Г¤Г®
 		case "exit_from_duarte_complete":
 			PlaceCharacter(characterFromID("quest_smuggler_01"), "goto", "Conceicao_town");
 			
@@ -3898,7 +4814,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("quest_smuggler_01"),  pchar, "pchar_back_to_player", 5.0, 1.0);
 		break;
 		
-		//первый раз попадаем в дом к Мачадо
+		//ГЇГҐГ°ГўГ»Г© Г°Г Г§ ГЇГ®ГЇГ Г¤Г ГҐГ¬ Гў Г¤Г®Г¬ ГЄ ГЊГ Г·Г Г¤Г®
 		case "blaze_first_speak_with_machado_complete":
 			Locations[FindLocation("Rheims_house_in_smugglers")].reload.l1.disable = 1;
 			Locations[FindLocation("Conceicao_town")].reload.l3.disable = 0;
@@ -3917,25 +4833,25 @@ void QuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("Camilo Machado"), "SMUGGLERS_CITIZENS");
 		break;
 
-		//блейз ждал ночи в таверне
+		//ГЎГ«ГҐГ©Г§ Г¦Г¤Г Г« Г­Г®Г·ГЁ Гў ГІГ ГўГҐГ°Г­ГҐ
 		case "wait_for_night_complete":
-			//включаем ночь.
+			//ГўГЄГ«ГѕГ·Г ГҐГ¬ Г­Г®Г·Гј.
 			pchar.quest.main_line = "night_for_rheims_house_complete";
 			Locations[FindLocation("Smugglers_Lair")].reload.l6.disable = 0;
 			AddQuestrecord("Blaze_search_Rheims", "8");
 		break;
 
-		//блейз ждет ночи в комнате
+		//ГЎГ«ГҐГ©Г§ Г¦Г¤ГҐГІ Г­Г®Г·ГЁ Гў ГЄГ®Г¬Г­Г ГІГҐ
 		case "wait_for_night_in_room_complete":
 			pchar.quest.main_line = "night_for_rheims_house";
 		break;
 
-		//Блейз пробрался в дом Реймса
+		//ГЃГ«ГҐГ©Г§ ГЇГ°Г®ГЎГ°Г Г«Г±Гї Гў Г¤Г®Г¬ ГђГҐГ©Г¬Г±Г 
 		case "blaze_to_rheims_house_in_smugglers_complete":
 			LAi_QuestDelay("blaze_to_rheims_house_in_smugglers_find_book_complete", 2.0);
 		break;
 		
-		//Блейз нашел книгу.
+		//ГЃГ«ГҐГ©Г§ Г­Г ГёГҐГ« ГЄГ­ГЁГЈГі.
 		case "blaze_to_rheims_house_in_smugglers_find_book_complete":
 			LAi_SetActorType(pchar);
 			LAi_ActorGoToLocator(pchar, "goto", "goto2", "blaze_to_rheims_house_in_smugglers_find_book_complete_2", 2.0);
@@ -3944,7 +4860,7 @@ void QuestComplete(string sQuestName)
 		case "blaze_to_rheims_house_in_smugglers_find_book_complete_2":
 			characters[GetCharacterIndex("Robert Christopher Silehard")].dialog.CurrentNode = "blaze_return_to_silehard_node";
 			pchar.quest.main_line = "blaze_found_book_in_rheims_house";
-			//Добавляем предмет
+			//Г„Г®ГЎГ ГўГ«ГїГҐГ¬ ГЇГ°ГҐГ¤Г¬ГҐГІ
 			GiveItem2Character(pchar, RHEIMS_JOURNAL);
 			LAi_ActorSelfDialog(pchar, "");
 		break;
@@ -3953,7 +4869,7 @@ void QuestComplete(string sQuestName)
 			Locations[FindLocation("Rheims_house_in_smugglers")].reload.l1.disable = 0;
 			if (LAi_IsDead(characterFromID("Macario Regalo")) && LAi_IsDead(characterFromID("Evaristo Filho")))
 			{
-				//появляем других стражников
+				//ГЇГ®ГїГўГ«ГїГҐГ¬ Г¤Г°ГіГЈГЁГµ Г±ГІГ°Г Г¦Г­ГЁГЄГ®Гў
 				ChangeCharacterAddressGroup(characterFromID("Fernam  Barrios"), "Rheims_house_in_smugglers", "reload", "reload1");
 				ChangeCharacterAddressGroup(characterFromID("Leborio Violate"), "Rheims_house_in_smugglers", "reload", "reload1");
 				LAi_SetActorType(characterfromID("Leborio Violate"));
@@ -3962,7 +4878,7 @@ void QuestComplete(string sQuestName)
 			}
 			else
 			{
-				//появляем стражников у дома реймса
+				//ГЇГ®ГїГўГ«ГїГҐГ¬ Г±ГІГ°Г Г¦Г­ГЁГЄГ®Гў Гі Г¤Г®Г¬Г  Г°ГҐГ©Г¬Г±Г 
 				ChangeCharacterAddressGroup(characterFromID("Macario Regalo"), "Rheims_house_in_smugglers", "reload", "reload1");
 				ChangeCharacterAddressGroup(characterFromID("Evaristo Filho"), "Rheims_house_in_smugglers", "reload", "reload1");
 				LAi_SetActorType(characterfromID("Evaristo Filho"));
@@ -3994,7 +4910,7 @@ void QuestComplete(string sQuestName)
 			LAi_group_SetCheck("SMUGGLERS_SOLDIERS", "kill_guards_in_rheims_house_smugglers_complete");
 		break;
 		
-		//блейз убивает стражников
+		//ГЎГ«ГҐГ©Г§ ГіГЎГЁГўГ ГҐГІ Г±ГІГ°Г Г¦Г­ГЁГЄГ®Гў
 		case "kill_guards_in_rheims_house_smugglers_complete":
 			if (pchar.location == "Rheims_house_in_smugglers")
 			{
@@ -4011,7 +4927,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetHP(characterFromID("quest_pirate_01"), 80.0, 80.0);
 		break;
 
-		//блейз убивает стражников
+		//ГЎГ«ГҐГ©Г§ ГіГЎГЁГўГ ГҐГІ Г±ГІГ°Г Г¦Г­ГЁГЄГ®Гў
 		case "kill_guards_in_rheims_house_smugglers_2_complete":
 			LAi_group_SetRelation("SMUGGLERS_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_FRIEND);
 			AddQuestrecord("Blaze_search_Rheims", "9");
@@ -4024,7 +4940,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorGoToLocator(characterfromID("Friedrich Corleis"), "Merchant", "reload3", "blaze_to_incas_collection_begin_1_complete", -1);
 		break;
 
-		//Трактирщик на Дувезене уходит за пиратом
+		//Г’Г°Г ГЄГІГЁГ°Г№ГЁГЄ Г­Г  Г„ГіГўГҐГ§ГҐГ­ГҐ ГіГµГ®Г¤ГЁГІ Г§Г  ГЇГЁГ°Г ГІГ®Г¬
 		case "blaze_to_incas_collection_begin_1_complete":
 			ChangeCharacterAddress(characterFromID("Friedrich Corleis"), "none", "");
 			LAi_QuestDelay("wait_for_pirate_in_tavern_complete", 2.0);
@@ -4056,7 +4972,7 @@ void QuestComplete(string sQuestName)
 			reStorePassengers(pchar.id);
 		break;
 
-		//пират объясняет нам как попасть в логово пиратов
+		//ГЇГЁГ°Г ГІ Г®ГЎГєГїГ±Г­ГїГҐГІ Г­Г Г¬ ГЄГ ГЄ ГЇГ®ГЇГ Г±ГІГј Гў Г«Г®ГЈГ®ГўГ® ГЇГЁГ°Г ГІГ®Гў
 		case "incas_collection_to_douwesen_town_exit":
 			LAi_ActorDialog(characterFromID("quest_pirate_01"), pchar, "", 2.0, 1.0);
 		break;
@@ -4241,7 +5157,7 @@ void QuestComplete(string sQuestName)
 			SetCharacterShipLocation(&characters[GetCharacterIndex("Pirate Captain 05")], "none");
 		break;
 
-		//начинается сценка с изобретателем
+		//Г­Г Г·ГЁГ­Г ГҐГІГ±Гї Г±Г¶ГҐГ­ГЄГ  Г± ГЁГ§Г®ГЎГ°ГҐГІГ ГІГҐГ«ГҐГ¬
 		case "prepare_for_first_meeting_with_researcher":
 			pchar.quest.prepare_fighting_on_deck_complete.over = "yes";
 			ChangeCharacterAddress(characterFromID("Bernard Gosling"), "none", "none");
@@ -4398,7 +5314,7 @@ void QuestComplete(string sQuestName)
 			LAi_SetStayType(pchar);
 			Locations[FindLocation("Greenford_town")].reload.l9.disable = 0;
 			pchar.quest.main_line = "resque_researcher_complete";
-			//убираем столб.
+			//ГіГЎГЁГ°Г ГҐГ¬ Г±ГІГ®Г«ГЎ.
 			
 			Locations[FindLocation("Greenford_town")].models.always.koster = "";
 			Locations[FindLocation("Greenford_town")].models.always.koster.locator.group = "";
@@ -4414,7 +5330,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.main_line = "resque_researcher_complete";
 			LAi_type_actor_Reset(characterFromID("researcher"));
 			ChangeCharacterAddressGroup(pchar, "Greenford_town", "reload", "reload1");
-			//убираем столб.
+			//ГіГЎГЁГ°Г ГҐГ¬ Г±ГІГ®Г«ГЎ.
 			Locations[FindLocation("Greenford_town")].models.always.koster = "";
 			Locations[FindLocation("Greenford_town")].models.always.koster.locator.group = "";
 			Locations[FindLocation("Greenford_town")].models.always.koster.locator.name = "";
@@ -4563,14 +5479,14 @@ void QuestComplete(string sQuestName)
 			CloseQuestHeader("blaze_to_incas_collection");
 		break;
 
-		//возвращаемся на маяк для разговора даниэль и отплытия за реймсом
+		//ГўГ®Г§ГўГ°Г Г№Г ГҐГ¬Г±Гї Г­Г  Г¬Г ГїГЄ Г¤Г«Гї Г°Г Г§ГЈГ®ГўГ®Г°Г  Г¤Г Г­ГЁГЅГ«Гј ГЁ Г®ГІГЇГ«Г»ГІГЁГї Г§Г  Г°ГҐГ©Г¬Г±Г®Г¬
 		case "return_to_lighthouse_search_rheims_complete":
 			PlaceCharacter(characterFromID("Danielle"), "goto", "Oxbay_lighthouse");
 			LAi_SetActorType(characterFromID("danielle"));
 			LAi_ActorDialog(characterFromID("Danielle"), pchar, "", 50, 0);
 		break;
 
-		//прибываем в порт дувезена
+		//ГЇГ°ГЁГЎГ»ГўГ ГҐГ¬ Гў ГЇГ®Г°ГІ Г¤ГіГўГҐГ§ГҐГ­Г 
 		case "to_douwesen_port_search_blaze_complete":
 			if (pchar.quest.main_line == "blaze_goto_douwesen_with_danielle")
 			{
@@ -4587,7 +5503,7 @@ void QuestComplete(string sQuestName)
 			}
 		break;
 
-		//прибываем на первый пляж дувезена
+		//ГЇГ°ГЁГЎГ»ГўГ ГҐГ¬ Г­Г  ГЇГҐГ°ГўГ»Г© ГЇГ«ГїГ¦ Г¤ГіГўГҐГ§ГҐГ­Г 
 		case "to_douwesen_shore_1_search_blaze_complete":
 			if (pchar.quest.main_line == "blaze_goto_douwesen_with_danielle")
 			{
@@ -4604,7 +5520,7 @@ void QuestComplete(string sQuestName)
 			}
 		break;
 
-		//прибываем на второй пляж дувезена
+		//ГЇГ°ГЁГЎГ»ГўГ ГҐГ¬ Г­Г  ГўГІГ®Г°Г®Г© ГЇГ«ГїГ¦ Г¤ГіГўГҐГ§ГҐГ­Г 
 		case "to_douwesen_shore_2_search_blaze_complete":
 			if (pchar.quest.main_line == "blaze_goto_douwesen_with_danielle")
 			{
@@ -4644,7 +5560,7 @@ void QuestComplete(string sQuestName)
 			SetCharacterRemovable(characterFromID("danielle"), false);
 		break;
 
-		//заходим в таверну за Винсетом, который покажет нам реймса
+		//Г§Г ГµГ®Г¤ГЁГ¬ Гў ГІГ ГўГҐГ°Г­Гі Г§Г  Г‚ГЁГ­Г±ГҐГІГ®Г¬, ГЄГ®ГІГ®Г°Г»Г© ГЇГ®ГЄГ Г¦ГҐГІ Г­Г Г¬ Г°ГҐГ©Г¬Г±Г 
 		case "goto_with_danielle_to_douwesen_tavern_for_rheims_complete":
 			LAi_SetActorType(characterFromID("vincent bethune"));
 			LAi_SetActorType(pchar);
@@ -4658,7 +5574,7 @@ void QuestComplete(string sQuestName)
 			LAi_ActorDialog(characterFromID("Vincent Bethune"), pchar, "goto_with_danielle_to_douwesen_tavern_for_rheims_complete_3", 1.0, 1.0);
 		break;
 
-		//Винсент идет за своими головорезами
+		//Г‚ГЁГ­Г±ГҐГ­ГІ ГЁГ¤ГҐГІ Г§Г  Г±ГўГ®ГЁГ¬ГЁ ГЈГ®Г«Г®ГўГ®Г°ГҐГ§Г Г¬ГЁ
 		case "vincent_away_from_tavern_complete":
 			ChangeCharacterAddress(characterFromID("Vincent Bethune"), "none", "none");
 		break;
@@ -4683,7 +5599,7 @@ void QuestComplete(string sQuestName)
 			locations[FindLocation("Douwesen_town_exit")].reload.l2.disable = 1;
 		break;
 
-		//выходим в город и на нас нападют головорезы
+		//ГўГ»ГµГ®Г¤ГЁГ¬ Гў ГЈГ®Г°Г®Г¤ ГЁ Г­Г  Г­Г Г± Г­Г ГЇГ Г¤ГѕГІ ГЈГ®Г«Г®ГўГ®Г°ГҐГ§Г»
 		case "from_town_to_jungle_to_rheims_house_complete":
 			PlaceCharacter(characterFromID("danielle"), "goto", "douwesen_town_exit");
 			PlaceCharacter(characterFromID("Raoul Rheims"), "goto", "Douwesen_town_exit");
@@ -4711,7 +5627,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.prepare_dagger.win_condition = "prepare_dagger";
 		break;
 
-		//Даниэль с Реймсом убегают
+		//Г„Г Г­ГЁГЅГ«Гј Г± ГђГҐГ©Г¬Г±Г®Г¬ ГіГЎГҐГЈГ ГѕГІ
 		case "danielle_with_rheims_runaway_complete":
 			ChangeCharacterAddressGroup(characterFromID("Danielle"), "Rheims_house_inside", "item", "item1");
 			ChangeCharacterAddress(characterFromID("Raoul Rheims"), "Rheims_house_inside", "goto1");
@@ -4777,7 +5693,7 @@ void QuestComplete(string sQuestName)
 			locations[FindLocation("Douwesen_town_exit")].reload.l2.disable = 0;
 		break;
 
-		//Блэйз слышит диалог Даниель с Реймсом
+		//ГЃГ«ГЅГ©Г§ Г±Г«Г»ГёГЁГІ Г¤ГЁГ Г«Г®ГЈ Г„Г Г­ГЁГҐГ«Гј Г± ГђГҐГ©Г¬Г±Г®Г¬
 		case "start_quest_movie_speak_with_rheims_complete":
 			locx = stf(loadedLocation.locators.camera.locator4.x);
 			locy = stf(loadedLocation.locators.camera.locator4.y);
@@ -4808,7 +5724,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.kill_ferro_cerezo_complete.over = "yes";
 		break;
 
-		//блэйза бьют по башке
+		//ГЎГ«ГЅГ©Г§Г  ГЎГјГѕГІ ГЇГ® ГЎГ ГёГЄГҐ
 		case "to_oxbay_mine_complete":
 			if (pchar.location.locator == "reload1")
 			{
@@ -4920,7 +5836,7 @@ void QuestComplete(string sQuestName)
 			LAi_group_MoveCharacter(characterFromID("mine_soldier_01"), "ENGLAND_SOLDIERS");
 		break;
 
-		//включаем ролик, расставляем всех персонажей.
+		//ГўГЄГ«ГѕГ·Г ГҐГ¬ Г°Г®Г«ГЁГЄ, Г°Г Г±Г±ГІГ ГўГ«ГїГҐГ¬ ГўГ±ГҐГµ ГЇГҐГ°Г±Г®Г­Г Г¦ГҐГ©.
 		case "movie_with_fight_complete":
 			SetCurrentTime(23, 0);
 			characters[GetCharacterIndex("danielle")].skill.fencing = "7";
@@ -5012,13 +5928,13 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "blaze_to_map_complete":
-			//задизейблить выход из карты
+			//Г§Г Г¤ГЁГ§ГҐГ©ГЎГ«ГЁГІГј ГўГ»ГµГ®Г¤ ГЁГ§ ГЄГ Г°ГІГ»
 			pchar.location.from_sea = "Redmond_shore_01";
 			DoReloadFromSeaToLocation("Redmond_shore_01", "reload", "reload1");
 			pchar.quest.to_secret_oxbay_shore_complete.win_condition.l1 = "location";
 			pchar.quest.to_secret_oxbay_shore_complete.win_condition.l1.location = "Redmond_shore_01";
 			pchar.quest.to_secret_oxbay_shore_complete.win_condition = "to_secret_oxbay_shore_complete";
-			//разрешить выход из карты
+			//Г°Г Г§Г°ГҐГёГЁГІГј ГўГ»ГµГ®Г¤ ГЁГ§ ГЄГ Г°ГІГ»
 		break;
 
 		case "to_secret_oxbay_shore_complete":
@@ -6361,7 +7277,7 @@ void QuestComplete(string sQuestName)
 			DoQuestReloadToLocation(pchar.location + "_upstairs", "goto", "goto2", "restore_hp");
 		break;
 
-		case "OnUse_Idol": //используем статую идольскую.
+		case "OnUse_Idol": //ГЁГ±ГЇГ®Г«ГјГ§ГіГҐГ¬ Г±ГІГ ГІГіГѕ ГЁГ¤Г®Г«ГјГ±ГЄГіГѕ.
 			bMainMenuLaunchAfterVideo = true;
 			PostVideoAndQuest("idol", 100, "OnUse_Idol_2");
 		break;
@@ -6599,12 +7515,12 @@ void QuestComplete(string sQuestName)
 
 		case "blaze_fighting_with_amiel_berangere":
 			LAi_LocationFightDisable(&Locations[FindLocation("Falaise_de_fleur_tavern_upstairs")], false);
-			//---Эмиль нападает на Блэйза
+			//---ГќГ¬ГЁГ«Гј Г­Г ГЇГ Г¤Г ГҐГІ Г­Г  ГЃГ«ГЅГ©Г§Г 
 			LAi_SetImmortal(characterFromID("Amiel Berangere"), false); 
 			LAi_ActorAttack(characterFromID("Amiel Berangere"), PChar, "");
 			locations[FindLocation("Falaise_De_Fleur_tavern_upstairs")].reload.l1.disable = 1;
-			//----Отключается локатор выхода из комнаты
-			//-------Убимраем ненужного Фауста Гаске
+			//----ГЋГІГЄГ«ГѕГ·Г ГҐГІГ±Гї Г«Г®ГЄГ ГІГ®Г° ГўГ»ГµГ®Г¤Г  ГЁГ§ ГЄГ®Г¬Г­Г ГІГ»
+			//-------Г“ГЎГЁГ¬Г°Г ГҐГ¬ Г­ГҐГ­ГіГ¦Г­Г®ГЈГ® Г”Г ГіГ±ГІГ  ГѓГ Г±ГЄГҐ
 			ChangeCharacterAddress(characterFromID("Faust Gasquet"), "None", "");
 			
 			Pchar.quest.Story_BlazeStartsThinkAboutGramota.win_condition.l1 = "NPC_death";
@@ -6647,7 +7563,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Counterspy_Exit_fight":
-			//----------Появление солдат в таверне
+			//----------ГЏГ®ГїГўГ«ГҐГ­ГЁГҐ Г±Г®Г«Г¤Г ГІ Гў ГІГ ГўГҐГ°Г­ГҐ
 			LAi_group_SetRelation(LAI_DEFAULT_GROUP, "FRANCE_SOLDIERS", LAI_GROUP_NEITRAL);
 			ChangeCharacterAddressGroup(characterFromID("Fra_arrester_01"), "Oxbay_Tavern", "Reload", "Reload1");
 			ChangeCharacterAddressGroup(characterFromID("Fra_arrester_02"), "Oxbay_Tavern", "Reload", "Reload1");
@@ -6670,17 +7586,17 @@ void QuestComplete(string sQuestName)
 		break;
 
 		case "Counterspy_After_Fight_Exit":
-			//-------------Заводится квест на попадание в верфь Оксбэя
+			//-------------Г‡Г ГўГ®Г¤ГЁГІГ±Гї ГЄГўГҐГ±ГІ Г­Г  ГЇГ®ГЇГ Г¤Г Г­ГЁГҐ Гў ГўГҐГ°ГґГј ГЋГЄГ±ГЎГЅГї
 			Pchar.quest.Story_Goto_Oxbay_shipyard_with_Counterspy.win_condition.l1 = "location";
 			Pchar.quest.Story_Goto_Oxbay_shipyard_with_Counterspy.win_condition.l1.location = "Oxbay_shipyard";
 			Pchar.quest.Story_Goto_Oxbay_shipyard_with_Counterspy.win_condition = "Story_Goto_Oxbay_shipyard_with_Counterspy";
 
-			//-------------Заводится квест на Попытку сбежать из города в джунгли
+			//-------------Г‡Г ГўГ®Г¤ГЁГІГ±Гї ГЄГўГҐГ±ГІ Г­Г  ГЏГ®ГЇГ»ГІГЄГі Г±ГЎГҐГ¦Г ГІГј ГЁГ§ ГЈГ®Г°Г®Г¤Г  Гў Г¤Г¦ГіГ­ГЈГ«ГЁ
 			Pchar.quest.Story_PlayerTriesToRunFromOxbay.win_condition.l1 = "location";
 			Pchar.quest.Story_PlayerTriesToRunFromOxbay.win_condition.l1.location = "Oxbay_town_exit";
 			Pchar.quest.Story_PlayerTriesToRunFromOxbay.win_condition = "Story_PlayerTriesToRunFromOxbay";
 			
-			//-----------Присоединение шпиона в качестве офицера		
+			//-----------ГЏГ°ГЁГ±Г®ГҐГ¤ГЁГ­ГҐГ­ГЁГҐ ГёГЇГЁГ®Г­Г  Гў ГЄГ Г·ГҐГ±ГІГўГҐ Г®ГґГЁГ¶ГҐГ°Г 		
 			SetOfficersIndex(Pchar, 3, GetCharacterIndex("CounterSpy"));
 			SetCharacterRemovable(characterFromID("Counterspy"), false);
 			LAi_SetActorType(characterFromID("Oweyn McDorey"));
@@ -7123,7 +8039,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.main_line = "return_idol_from_greenford_1";
 
 			AddQuestRecord("Revenge_for_Silehard", "7");
-			//выставляем англию враждебной.
+			//ГўГ»Г±ГІГ ГўГ«ГїГҐГ¬ Г Г­ГЈГ«ГЁГѕ ГўГ°Г Г¦Г¤ГҐГЎГ­Г®Г©.
 			LAi_group_SetRelation("ENGLAND_SOLDIERS", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
 			
 			LAi_group_FightGroups("ENGLAND_SOLDIERS", LAI_GROUP_PLAYER, true);
@@ -7775,7 +8691,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		///////////////////////////////////////////////////////////////
-		// квестовая линейка игры в кости
+		// ГЄГўГҐГ±ГІГ®ГўГ Гї Г«ГЁГ­ГҐГ©ГЄГ  ГЁГЈГ°Г» Гў ГЄГ®Г±ГІГЁ
 		///////////////////////////////////////////////////////////////
 
 		case "to_the_room_for_see_girl":
@@ -7986,7 +8902,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		///////////////////////////////////////////////////////////////
-		// квестовая линейка спасения девушки
+		// ГЄГўГҐГ±ГІГ®ГўГ Гї Г«ГЁГ­ГҐГ©ГЄГ  Г±ГЇГ Г±ГҐГ­ГЁГї Г¤ГҐГўГіГёГЄГЁ
 		///////////////////////////////////////////////////////////////
 
 		case "to_ship_of_Bernardo_Gamboa":
@@ -8104,7 +9020,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		///////////////////////////////////////////////////////////////
-		// квестовая линейка заида муро
+		// ГЄГўГҐГ±ГІГ®ГўГ Гї Г«ГЁГ­ГҐГ©ГЄГ  Г§Г ГЁГ¤Г  Г¬ГіГ°Г®
 		///////////////////////////////////////////////////////////////
 		case "Mendes_go_away_from_muelle_store":
 			pchar.quest.death_of_vigila_mendes.win_condition.l1 = "NPC_death";
@@ -8203,7 +9119,7 @@ void QuestComplete(string sQuestName)
 		break;
 
 		///////////////////////////////////////////////////////////////
-		// квестовая линейка золотой шахты
+		// ГЄГўГҐГ±ГІГ®ГўГ Гї Г«ГЁГ­ГҐГ©ГЄГ  Г§Г®Г«Г®ГІГ®Г© ГёГ ГµГІГ»
 		///////////////////////////////////////////////////////////////
 
 		case "to_oxbay_mines_with_larrouse_complete":
@@ -11865,7 +12781,7 @@ void QuestComplete(string sQuestName)
 			//Log_SetStringToLog(iTradeNation);
 			
 			AddCharacterGoods(pchar, iTradeGoods, iQuantityGoods);
-			//задаем квест
+			//Г§Г Г¤Г ГҐГ¬ ГЄГўГҐГ±ГІ
 			pchar.quest.generate_trade_quest.win_condition.l1 = "Timer";
 			pchar.quest.generate_trade_quest.win_condition.l1.date.day = GetAddingDataDay(0, 0, 20);
     		pchar.quest.generate_trade_quest.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 20);
@@ -12343,7 +13259,7 @@ void QuestComplete(string sQuestName)
 		case "mendes_away_forewer":
 			LAi_SetActorType(characterFromID("Vigila Mendes"));
 			LAi_ActorGoToLocation(characterFromID("Vigila Mendes"), "reload", "locator2", "none", "", "", "", 3.0);
-			//ZAID MURRO - закрываем возможность проходить этот квест
+			//ZAID MURRO - Г§Г ГЄГ°Г»ГўГ ГҐГ¬ ГўГ®Г§Г¬Г®Г¦Г­Г®Г±ГІГј ГЇГ°Г®ГµГ®Г¤ГЁГІГј ГЅГІГ®ГІ ГЄГўГҐГ±ГІ
 			ChangeCharacterAddress(characterFromID("Zaid Murro"), "none", "");
 		break;
 		
@@ -12384,7 +13300,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest.prepare_for_kill_pirate.win_condition.l1 = "location";
 			pchar.quest.prepare_for_kill_pirate.win_condition.l1.location = pchar.quest.killdestination;
 			pchar.quest.prepare_for_kill_pirate.win_condition = "prepare_for_kill_pirate";
-			//завод книги
+			//Г§Г ГўГ®Г¤ ГЄГ­ГЁГЈГЁ
 			switch (pchar.quest.killdestination)
 			{
 				case "Falaisedefleur": DeleteQuestHeader("kill_fal"); SetQuestHeader("kill_fal"); AddQuestRecord("kill_fal", "1"); break;

@@ -116,7 +116,7 @@ void CreateCharacters()
 	stmp = CHEAP_SPYGLASS;	Ch.items.(stmp) = 1;*/
 
 
-	//PJ pour créer des quête
+	//PJ pour crï¿½er des quï¿½te
 	ch.quest.PNJ_Trop_Fort = true;
 
 	//QUESTS PJ

@@ -4,9 +4,9 @@ int CreateTempQuestCharacters(int n)
 {
 	ref ch;
 	// ajout PJ
-	//§§§§§§§§§§§§§§§§
-	//§§§ QUEST S1 §§§
-	//§§§§§§§§§§§§§§§§
+	//В§В§В§В§В§В§В§В§В§В§В§В§В§В§В§В§
+	//В§В§В§ QUEST S1 В§В§В§
+	//В§В§В§В§В§В§В§В§В§В§В§В§В§В§В§В§
 	///////// \\\\\\\\\
 	///// REDMOND \\\\\
 	///////// \\\\\\\\\
@@ -1539,7 +1539,7 @@ int CreateTempQuestCharacters(int n)
 	n = n + 1;
 	
 
-	makeref(ch,Characters[n]);			// Ethilrede Claar - пират, который продал в рабство одного из наших офицеров () Leborio Drago
+	makeref(ch,Characters[n]);			// Ethilrede Claar - ГЇГЁГ°Г ГІ, ГЄГ®ГІГ®Г°Г»Г© ГЇГ°Г®Г¤Г Г« Гў Г°Г ГЎГ±ГІГўГ® Г®Г¤Г­Г®ГЈГ® ГЁГ§ Г­Г ГёГЁГµ Г®ГґГЁГ¶ГҐГ°Г®Гў () Leborio Drago
 	ch.name 	= "Ethilrede";
 	ch.lastname 	= "Dubois";
 	ch.id		= "Ethilrede Claar";
@@ -1580,7 +1580,7 @@ int CreateTempQuestCharacters(int n)
 	ch.greeting = "Gr_Gyles Dubois";
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			// Stephan Bonser - контрабандист на пляже редмонда
+	makeref(ch,Characters[n]);			// Stephan Bonser - ГЄГ®Г­ГІГ°Г ГЎГ Г­Г¤ГЁГ±ГІ Г­Г  ГЇГ«ГїГ¦ГҐ Г°ГҐГ¤Г¬Г®Г­Г¤Г 
 	ch.name 	= "Stephan";
 	ch.lastname 	= "Bonser";
 	ch.id		= "Stephan Bonser";
@@ -1614,7 +1614,7 @@ int CreateTempQuestCharacters(int n)
 	LAi_NoRebirthEnable(ch);
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			// Wilfred Bythesea - так, старый знакомы Блэйза, появляющийся эпизодически
+	makeref(ch,Characters[n]);			// Wilfred Bythesea - ГІГ ГЄ, Г±ГІГ Г°Г»Г© Г§Г­Г ГЄГ®Г¬Г» ГЃГ«ГЅГ©Г§Г , ГЇГ®ГїГўГ«ГїГѕГ№ГЁГ©Г±Гї ГЅГЇГЁГ§Г®Г¤ГЁГ·ГҐГ±ГЄГЁ
 	ch.name 	= "Wilfred";
 	ch.lastname 	= "Bythesea";
 	ch.id		= "Wilfred Bythesea";
@@ -1649,7 +1649,7 @@ int CreateTempQuestCharacters(int n)
 	LAi_NoRebirthEnable(ch);
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			// Oswald Chappel - контрабандист на пляже редмонда
+	makeref(ch,Characters[n]);			// Oswald Chappel - ГЄГ®Г­ГІГ°Г ГЎГ Г­Г¤ГЁГ±ГІ Г­Г  ГЇГ«ГїГ¦ГҐ Г°ГҐГ¤Г¬Г®Г­Г¤Г 
 	ch.name 	= "Oswald";
 	ch.lastname 	= "Chappel";
 	ch.id		= "Oswald Chappel";
@@ -1683,7 +1683,7 @@ int CreateTempQuestCharacters(int n)
 	ch.greeting = "Gr_Oswald Chappel";
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			// Gyles Dubois - контрабандист на пляже редмонда
+	makeref(ch,Characters[n]);			// Gyles Dubois - ГЄГ®Г­ГІГ°Г ГЎГ Г­Г¤ГЁГ±ГІ Г­Г  ГЇГ«ГїГ¦ГҐ Г°ГҐГ¤Г¬Г®Г­Г¤Г 
 	ch.name 	= "Gyles";
 	ch.lastname 	= "Dubois";
 	ch.id		= "Gyles Dubois";
@@ -3363,7 +3363,7 @@ int CreateTempQuestCharacters(int n)
 	n = n + 1;
 
 	makeref(ch,Characters[n]);		// father Gareth -- man3
-	ch.name 	= "Pиre";
+	ch.name 	= "PГЁre";
 	ch.lastname = "Gareth";
 	ch.id		= "father Gareth";
 	ch.model	= "monk2";
@@ -3396,7 +3396,7 @@ int CreateTempQuestCharacters(int n)
 	n = n + 1;
 
 	makeref(ch,Characters[n]);			// 
-	ch.name 	= "Homme-mystиre";
+	ch.name 	= "Homme-mystГЁre";
 	ch.lastname 	= "";
 	ch.id		= "Mystery_Man_01";
 	ch.model = "ANIMISTS2";
@@ -3439,7 +3439,7 @@ int CreateTempQuestCharacters(int n)
 	n = n + 1;
 
 	makeref(ch,Characters[n]);			// 
-	ch.name 	= "Homme-mystиre";
+	ch.name 	= "Homme-mystГЁre";
 	ch.lastname 	= "";
 	ch.id		= "Mystery_Man_02";
 	ch.model = "ANIMISTS2";
@@ -3480,7 +3480,7 @@ int CreateTempQuestCharacters(int n)
 	n = n + 1;
 
 	makeref(ch,Characters[n]);			// 
-	ch.name 	= "Homme-mystиre";
+	ch.name 	= "Homme-mystГЁre";
 	ch.lastname 	= "";
 	ch.id		= "Mystery_Man_03";
 	ch.model = "ANIMISTS2";
@@ -3521,10 +3521,10 @@ int CreateTempQuestCharacters(int n)
 	n = n + 1;
 
 
-//Контрабандисты для перевозки контрабанды
+//ГЉГ®Г­ГІГ°Г ГЎГ Г­Г¤ГЁГ±ГІГ» Г¤Г«Гї ГЇГҐГ°ГҐГўГ®Г§ГЄГЁ ГЄГ®Г­ГІГ°Г ГЎГ Г­Г¤Г»
 
 
-	makeref(ch,Characters[n]);			// контрабандист 1
+	makeref(ch,Characters[n]);			// ГЄГ®Г­ГІГ°Г ГЎГ Г­Г¤ГЁГ±ГІ 1
 	ch.name 	= "Contrebandier";
 	ch.lastname 	= "";
 	ch.id		= "Rand_Smug01";
@@ -3560,7 +3560,7 @@ int CreateTempQuestCharacters(int n)
 	ch.greeting = "Gr_Smuggler_OnShore";
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			// контрабандист 2
+	makeref(ch,Characters[n]);			// ГЄГ®Г­ГІГ°Г ГЎГ Г­Г¤ГЁГ±ГІ 2
 	ch.name 	= "Contrebandier";
 	ch.lastname 	= "";
 	ch.id		= "Rand_Smug02";
@@ -3596,7 +3596,7 @@ int CreateTempQuestCharacters(int n)
 	ch.greeting = "Gr_Smuggler_OnShore";
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			// контрабандист 3
+	makeref(ch,Characters[n]);			// ГЄГ®Г­ГІГ°Г ГЎГ Г­Г¤ГЁГ±ГІ 3
 	ch.name 	= "Contrebandier";
 	ch.lastname 	= "";
 	ch.id		= "Rand_Smug03";
@@ -3632,7 +3632,7 @@ int CreateTempQuestCharacters(int n)
 	ch.greeting = "Gr_Smuggler_OnShore";
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			// Bernardo Gamboa - испанец. корсар на службе голландии
+	makeref(ch,Characters[n]);			// Bernardo Gamboa - ГЁГ±ГЇГ Г­ГҐГ¶. ГЄГ®Г°Г±Г Г° Г­Г  Г±Г«ГіГ¦ГЎГҐ ГЈГ®Г«Г«Г Г­Г¤ГЁГЁ
 	ch.name 	= "Bernardo";
 	ch.lastname 	= "Gamboa";
 	ch.id		= "Bernardo Gamboa";
@@ -3674,7 +3674,7 @@ int CreateTempQuestCharacters(int n)
 	ch.greeting = "Gr_Bernardo Gamboa";
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			// Corentin Lucay - помощник пердыдущего перса
+	makeref(ch,Characters[n]);			// Corentin Lucay - ГЇГ®Г¬Г®Г№Г­ГЁГЄ ГЇГҐГ°Г¤Г»Г¤ГіГ№ГҐГЈГ® ГЇГҐГ°Г±Г 
 	ch.name 	= "Corentin";
 	ch.lastname 	= "Lucay";
 	ch.id		= "Corentin Lucay";
@@ -3709,7 +3709,7 @@ int CreateTempQuestCharacters(int n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	n = n + 1;
 
-	makeref(ch,Characters[n]);		//первый капитан береговой стражи
+	makeref(ch,Characters[n]);		//ГЇГҐГ°ГўГ»Г© ГЄГ ГЇГЁГІГ Г­ ГЎГҐГ°ГҐГЈГ®ГўГ®Г© Г±ГІГ°Г Г¦ГЁ
 	ch.name 	= " ";
 	ch.lastname = " ";
 	ch.id		= "Coastal_Captain01";
@@ -3733,7 +3733,7 @@ int CreateTempQuestCharacters(int n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	n = n + 1;
 
-	makeref(ch,Characters[n]);		//второй капитан береговой стражи
+	makeref(ch,Characters[n]);		//ГўГІГ®Г°Г®Г© ГЄГ ГЇГЁГІГ Г­ ГЎГҐГ°ГҐГЈГ®ГўГ®Г© Г±ГІГ°Г Г¦ГЁ
 	ch.name 	= " ";
 	ch.lastname = " ";
 	ch.id		= "Coastal_Captain02";
@@ -3758,7 +3758,7 @@ int CreateTempQuestCharacters(int n)
 	n = n + 1;
 
 
-	makeref(ch,Characters[n]);		//третий капитан береговой стражи
+	makeref(ch,Characters[n]);		//ГІГ°ГҐГІГЁГ© ГЄГ ГЇГЁГІГ Г­ ГЎГҐГ°ГҐГЈГ®ГўГ®Г© Г±ГІГ°Г Г¦ГЁ
 	ch.name 	= " ";
 	ch.lastname = " ";
 	ch.id		= "Coastal_Captain03";
@@ -3782,7 +3782,7 @@ int CreateTempQuestCharacters(int n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			// Mergildo Hurtado - капитан барка со священниками
+	makeref(ch,Characters[n]);			// Mergildo Hurtado - ГЄГ ГЇГЁГІГ Г­ ГЎГ Г°ГЄГ  Г±Г® Г±ГўГїГ№ГҐГ­Г­ГЁГЄГ Г¬ГЁ
 	ch.name 	= "Mergildo";
 	ch.lastname 	= "Hurtado";
 	ch.id		= "Mergildo Hurtado";
@@ -3823,7 +3823,7 @@ int CreateTempQuestCharacters(int n)
 	ch.greeting = "Gr_Mergildo Hurtado";
 	n = n + 1;
 
-	makeref(ch,Characters[n]);			// Jordano - сын кузнеца на Муэле
+	makeref(ch,Characters[n]);			// Jordano - Г±Г»Г­ ГЄГіГ§Г­ГҐГ¶Г  Г­Г  ГЊГіГЅГ«ГҐ
 	ch.name 	= "Jordano";
 	ch.lastname 	= "";
 	ch.id		= "Jordano";
@@ -5079,7 +5079,7 @@ int CreateTempQuestCharacters(int n)
 	ch.greeting = "Gr_Anacleto";
 	n = n + 1;
 
-	makeref(ch,Characters[n]);		//первый капитан-мститель за поруганнцю честь ростовщика
+	makeref(ch,Characters[n]);		//ГЇГҐГ°ГўГ»Г© ГЄГ ГЇГЁГІГ Г­-Г¬Г±ГІГЁГІГҐГ«Гј Г§Г  ГЇГ®Г°ГіГЈГ Г­Г­Г¶Гѕ Г·ГҐГ±ГІГј Г°Г®Г±ГІГ®ГўГ№ГЁГЄГ 
 	ch.name 	= " ";
 	ch.lastname = " ";
 	ch.id		= "Usurer_Avenger01";
@@ -5101,7 +5101,7 @@ int CreateTempQuestCharacters(int n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	n = n + 1;
 
-	makeref(ch,Characters[n]);		//второй капитан-мститель за поруганнцю честь ростовщика
+	makeref(ch,Characters[n]);		//ГўГІГ®Г°Г®Г© ГЄГ ГЇГЁГІГ Г­-Г¬Г±ГІГЁГІГҐГ«Гј Г§Г  ГЇГ®Г°ГіГЈГ Г­Г­Г¶Гѕ Г·ГҐГ±ГІГј Г°Г®Г±ГІГ®ГўГ№ГЁГЄГ 
 	ch.name 	= " ";
 	ch.lastname = " ";
 	ch.id		= "Usurer_Avenger02";
@@ -5123,7 +5123,7 @@ int CreateTempQuestCharacters(int n)
 	LAi_SetHP(ch, 80.0, 80.0);
 	n = n + 1;
 
-	makeref(ch,Characters[n]);		//третий капитан-мститель за поруганнцю честь ростовщика
+	makeref(ch,Characters[n]);		//ГІГ°ГҐГІГЁГ© ГЄГ ГЇГЁГІГ Г­-Г¬Г±ГІГЁГІГҐГ«Гј Г§Г  ГЇГ®Г°ГіГЈГ Г­Г­Г¶Гѕ Г·ГҐГ±ГІГј Г°Г®Г±ГІГ®ГўГ№ГЁГЄГ 
 	ch.name 	= " ";
 	ch.lastname = " ";
 	ch.id		= "Usurer_Avenger03";
