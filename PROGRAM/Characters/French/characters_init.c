@@ -118,6 +118,12 @@ void CreateCharacters()
 
 	//PJ pour créer des quête
 	ch.quest.PNJ_Trop_Fort = true;
+
+	//QUESTS PJ
+	//S1 : chasseur de tresor
+	GenerateTreasureHunterQuests();
+	ch.quest_S1_Elizabeth_Goodale_TQC1_visible = true;
+	ch.quest_S1_final_enabled = false;
 	// GiveItem2Character(ch, "blade1");
 	// GiveItem2Character(ch, "blade2");
 	// GiveItem2Character(ch, "blade3");

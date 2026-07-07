@@ -37,6 +37,13 @@ Implication pratique:
 - pas des structs C strictes,
 - beaucoup de champs existent seulement si le script les cree.
 
+Regle pratique importante sur ce moteur:
+
+- si une fonction ou procedure utilise `pchar`, `npchar` ou une autre reference script, la reference doit etre redeclaree en debut de fonction,
+- cette regle vaut aussi pour les petits helpers prives et les fonctions utilitaires, pas seulement pour les grosses procedures de quete,
+- ne pas supposer qu'une reference declaree ailleurs reste disponible,
+- pour le personnage joueur, le reflexe sur est: `ref PChar = GetMainCharacter();`
+
 ### Attributs dynamiques
 Le moteur stocke beaucoup d'etat sous forme de chemins d'attributs:
 
@@ -198,6 +205,15 @@ Bon reflexe:
 - relire le fichier apres modification si l'outil a pu reencoder automatiquement,
 - se mefier specialement des outils qui imposent `UTF-8`,
 - traiter toute erreur du type `invalid utf-8 sequence` comme un signal que le fichier doit etre relu/reecrit en `ISO-8859-1`.
+
+### Regle defensive sur les `switch`
+Sur ce moteur legacy, il vaut mieux ecrire les `switch` de facon tres defensive:
+
+- mettre un `break;` dans chaque `case`,
+- le garder meme si le `case` contient deja un `return`,
+- eviter les `case` groupes avec fallthrough implicite.
+
+En pratique, si un script parait correct mais plante au chargement, verifier d'abord qu'aucun `case` ne manque de `break;`.
 
 ## 4. Structure recommandee d'une modif de quete
 

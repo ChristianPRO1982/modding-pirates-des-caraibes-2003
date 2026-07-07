@@ -169,6 +169,8 @@ void chrCharacterExitFromLocator()
 void chrCharacterKeys()
 {
 	string controlName = GetEventData();
+	ref PChar = GetMainCharacter();
+	if(pchar.quest_S1_Unearthing == true && controlName == "BiFastCommand") QuestsCheck();
 	if(controlName != "ChrAction") return;
 	//Skip if interface active
 	if(sti(InterfaceStates.Launched)==true) return;

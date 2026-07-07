@@ -158,6 +158,36 @@ bool ProcessCondition(aref condition)
 		return false;
 	break;
 
+	case "locator_PJ":
+		ref PChar = GetMainCharacter();
+		float locx_pj;
+		float locy_pj;
+		float locz_pj;
+
+		GetCharacterPos(PChar, &locx_pj, &locy_pj, &locz_pj);
+		if (locx_pj > stf(condition.minLocx) && locx_pj < stf(condition.maxLocx) &&
+			locy_pj > stf(condition.minLocy) && locy_pj < stf(condition.maxLocy) &&
+			locz_pj > stf(condition.minLocz) && locz_pj < stf(condition.maxLocz))
+		{
+			return true;
+		}
+		if (pchar.quest_S1_failed == true)
+		{
+			return true;
+		}
+		if (pchar.quest_S1_no_treasure_here_text == 1)
+		{
+			pchar.quest_S1_no_treasure_here_text = 2;
+			Log_SetStringToLog(GlobalStringConvert("PJ_S1_no_treasure_here_1"));
+		}
+		else
+		{
+			pchar.quest_S1_no_treasure_here_text = 1;
+			Log_SetStringToLog(GlobalStringConvert("PJ_S1_no_treasure_here_2"));
+		}
+		return false;
+	break;
+
 	case "locator":
 		if(refCharacter.location == condition.location)
 		{

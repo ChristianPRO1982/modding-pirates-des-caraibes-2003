@@ -1,5 +1,9 @@
 PJ_TELEPORTATION_1 {Mmmh ! Plus rapide que McFly}
 
+PJ_S1_no_treasure_here_1 {Il faut encore creuser...}
+PJ_S1_no_treasure_here_2 {Il n'y a pas de trésor ici...}
+PJ_S1_failed {Hé ! Mon gars, tu es allé trop loin ! Le trésor n'est pas par là.}
+
 PJ_END_MQ_1 {>>>PJ_END_MQ_1<<<}
 PJ_END_MQ_2 {FIN DU DÉBUT DE LA QUÊTE PRINCIPALE.....}
 

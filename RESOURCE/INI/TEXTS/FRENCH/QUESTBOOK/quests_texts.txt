@@ -821,3 +821,98 @@ Après avoir survécu à une tempête effroyable, je suis enfin arrivé à Oxbay. Heur
 
 
 
+
+#QUEST	PJ_S1
+Chasseur de trésor
+#TEXT	1
+Tu as trouvé le trésor.
+#TEXT	2
+Malheureusement, tu n'as pas réussi à retrouver le trésor. Le capitaine qui t'a demandé de l'aide l'a déterré mais il a pensé que tu étais pressé. Peut-être une autre fois, qui sait !
+#TEXT	3
+L'appât du gain était le plus fort. Tu as provoqué le capitaine qui te proposait une partie de son trésor pour tout garder pour toi. Tu as été victorieux mais dans l'avenir, il sera plus difficile de retrouver un pirate qui veuille bien te proposer de partager son trésor.
+#TEXT	4
+La carte du trésor indique l'île de Conceicao, un lieu nommé le "Roc du Léviathan".
+#TEXT	5
+La carte indique qu'il faut sortir de la plage et s'enfoncer dans la jungle puis tourner à droite au fortin des pirates. Ensuite il faut continuer tout droit à travers la jungle. Avant d'arriver dans la plaine devant la muraille de la ville, il faut aller sur la gauche dans un renfoncement entre deux falaises. Il y a un creux avec deux arbres et un arbuste entre les deux. C'est au pied de cet arbuste que le trésor se trouve.
+#TEXT	6
+La carte du trésor indique l'île de Conceicao, un lieu nommé le "Havre radieux".
+#TEXT	7
+Le trésor se trouve sur cette plage. On voit sur la carte plein de rochers mais il y a un qui fait comme une arche naturelle et on peut passer dessous a priori. C'est sous lui que le trésor est enterré.
+#TEXT	8
+La carte du trésor indique l'île de Douwesen, un lieu nommé la "plage aux palmiers".
+#TEXT	9
+La carte indique qu'il faut sortir de la plage et s'enfoncer dans la jungle. Au premier croisement, il faut aller tout droit. Au deuxième, il faut tourner à droite. Il y a normalement une maison. Sur la gauche de la maison, il y a un gros rocher, le trésor est enterré derrière lui.
+#TEXT	10
+La carte du trésor indique l'île de Douwesen, un lieu nommé les "falaises aux crabes".
+#TEXT	11
+La carte indique qu'il faut sortir de la plage et s'enfoncer dans la jungle. Au premier croisement, il faut aller à droite vers la ville. Avant la ville de Douwesen, il y a une cascade à gauche. Le trésor est enterré au pied d'un arbre juste à droite de l'étendue d'eau.
+#TEXT	12
+La carte du trésor indique l'île de Fleur de Falaise, un lieu nommé la "Baie aux pieuvres".
+#TEXT	13
+Le trésor se trouve sur cette plage. En face, il y a le chemin pour aller vers la ville à travers la jungle. Derrière nous à gauche, il y a deux énormes rochers dans la mer. Le trésor est caché sous l'eau entre ces deux rochers.
+#TEXT	14
+La carte du trésor indique l'île de Fleur de Falaise, un lieu nommé la "Baie aux pieuvres".
+#TEXT	15
+La carte indique qu'il faut sortir de la plage et s'enfoncer dans la jungle en direction de la ville de Fleur de Falaise. Avant les remparts de la ville, il y a une maison. Le trésor est enterré derrière cette maison au pied d'un arbre.
+#TEXT	16
+La carte du trésor indique l'île d'Isla Muelle, un lieu nommé la "plage aux huîtres".
+#TEXT	17
+La carte indique qu'il faut sortir de la plage et aller dans la jungle. Il faut passer sous une arche puis prendre un pont de singes et s'enfoncer dans un passage creusé dans la montagne. Ensuite, il faut suivre le chemin de la falaise. Il y a une crique en contrebas à gauche avec une plage, en regardant à droite il y a un rocher de la taille d'un homme. Le trésor est enterré près de ce rocher.
+#TEXT	18
+La carte du trésor indique l'île d'Isla Muelle, un lieu nommé la "plage aux huîtres".
+#TEXT	19
+Le trésor n'est pas loin de cette plage. Il y a deux chemin qui sortent de la plage et se rejoignent en un point. À partir de ce point, lorsque l'on regarde l'arche de pierre, on peut voir un chemin passant sous l'arche. Il ne faut pas prendre ce chemin mais aller vers la droite hors du chemin. Le trésor a été enterré au pied d'un arbre.
+#TEXT	20
+La carte du trésor indique l'île de Quebradas Costillas.
+#TEXT	21
+Arrivé au port, il faut aller vers le fortin des pirates. Il y a une maison devant le fortin et un chemin à droite allant vers une maison éloignée. À droite de ce chemin, il y a un renfoncement dans la falaise, le trésor est enterré au pied d'un arbre, dans ce renfoncement.
+#TEXT	22
+La carte du trésor indique l'île de Quebradas Costillas.
+#TEXT	23
+Arrivé au port, il faut aller vers la maison éloignée, celle qui est le plus loin du fortin des pirates. Le trésor a été enterré devant la fenêtre de la maison !
+#TEXT	24
+La carte du trésor indique l'île de Redmond, un lieu nommé la "Gorge du Diable".
+#TEXT	25
+Le trésor a été enfoui sur la plage. Il faut passer sous les deux arches en pierre, il y a un arbre juste après à gauche. C'est à son pied que le trésor est enterré.
+#TEXT	26
+La carte du trésor indique l'île de Redmond, un lieu nommé la "côte rocailleuse".
+#TEXT	27
+Il faut sortir de la plage et s'enfoncer dans la jungle. Sur la droite il y a un renfoncement entre deux falaises. Le trésor est enterré entre deux arbustes.
+#TEXT	28
+La carte du trésor indique l'île d'Oxbay, un lieu nommé la "baie du rocher gris".
+#TEXT	29
+La carte indique qu'il faut sortir de la plage et aller dans la jungle. Ensuite il faut prendre le chemin de droite. Avant la ville de Greenford, il y a un renfoncement sur la droite avec beaucoup d'arbres. Le trésor est enterré au pied d'un de ces arbres.
+#TEXT	30
+La carte du trésor indique l'île d'Oxbay, un lieu nommé la "baie du rocher gris".
+#TEXT	31
+La carte indique qu'il faut sortir de la plage et aller dans le canyon. Ensuite il faut prendre le chemin de gauche puis continuer tout droit. Avant la ville d'Oxbay, il faut prendre à gauche. Il y a un énorme rocher au milieu du chemin. Sur la droite, il y a une plaine avec un petit morceau de végétation où il devrait y avoir un arbuste. C'est au pied de cet arbuste que le trésor est enterré.
+#TEXT	32
+La carte du trésor indique l'île d'Oxbay, un lieu nommé la "plage éloignée".
+#TEXT	33
+La carte indique qu'il faut sortir de la plage et aller dans la jungle. Ensuite il faut aller tout droit puis tourner à droite pour ne pas aller à Oxbay. Prendre de nouveau à droite vers un lieu perdu de l'île où se trouve l'entrée d'une grotte. En face de la grotte, à une vingtaine de mètres, il y a des petits rochers à terre. Le trésor est dessous.
+#TEXT	34
+La carte du trésor indique l'île d'Oxbay, un lieu nommé la "plage éloignée".
+#TEXT	35
+La carte indique qu'il faut sortir de la plage et aller dans la jungle. Ensuite il faut aller tout droit puis tourner à droite pour ne pas aller à Oxbay. Il y a un monticule avec beaucoup d'arbres. Le trésor est enterré au pied d'un de ces arbres.
+#TEXT	36
+La carte du trésor indique l'île d'Oxbay, un lieu nommé le "phare".
+#TEXT	37
+La carte indique qu'il faut se diriger vers le phare détruit. À coté de ce phare se trouve deux murs en ruines. Le trésor est au pied de ces murs.
+#TEXT	38
+Cette dernière chasse au trésor se trouve dans la maison étrange de l'île des pirates !
+#TEXT	39
+Pas besoin de fouiller toute l'île, le trésor se trouve dans la maison...
+#TEXT	40
+Te voilà avec un beau trésor ! C'est malheureusement la fin des chasses au trésor !!!
+#TEXT	41
+La carte du trésor indique l'île d'Oxbay, un lieu nommé le "phare".
+#TEXT	42
+La carte indique qu'il faut sortir de la plage et aller dans le canyon. En suivant le chemin, tu trouveras un arbre abattu entre deux morceaux de falaise. En dessous, il y a des rochers éboulés. Le trésor s'y trouve.
+#TEXT	43
+La carte du trésor indique l'île de Redmond, un lieu nommé la "côte rocailleuse".
+#TEXT	44
+Il faut sortir de la plage et s'enfoncer dans la jungle. Continuer tout droit vers la ville de Redmond. Au pied de la muraille de la ville se trouve un puits. Le trésor doit toujours y être.
+#TEXT	45
+La carte du trésor indique l'île d'Isla Muelle, un lieu nommé la "plage aux huîtres".
+#TEXT	46
+La carte indique qu'il faut sortir de la plage et aller dans la jungle. Il faut passer sous une arche puis prendre un pont de singe. Juste avant de s'enfoncer dans un passage creusé dans la montagne, il y a des rochers prêts à tomber sur la droite. Le trésor y est enterré.

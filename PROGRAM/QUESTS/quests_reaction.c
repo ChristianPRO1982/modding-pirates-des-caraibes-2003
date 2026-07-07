@@ -512,6 +512,8 @@ void QuestComplete(string sQuestName)
 	//Log_SetStringToLog("Quest " + sQuestName + " completed");
 	//trace("=============================================== QUEST " + sQuestName + " CHECKED");
 
+
+	if (QuestComplete_S1(sQuestName)) return;
 	switch(sQuestName)
 	{
 		case "begining":
