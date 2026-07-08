@@ -1191,6 +1191,8 @@ void S1_ProcessLocationEnter()
 	PlaceCharacter(characterFromID("TQC for fight 8 1"), "goto", "none");
 	PlaceCharacter(characterFromID("TQC for fight 8 2"), "goto", "none");
 	PlaceCharacter(characterFromID("TQC for fight 8 3"), "goto", "none");
+	PlaceCharacter(characterFromID("Youyi TQC 1"), "goto", "none");
+	PlaceCharacter(characterFromID("Youyi TQC 2"), "goto", "none");
 
 	if (pchar.quest_S1_step == 0)
 	{
@@ -1241,8 +1243,12 @@ void S1_ProcessLocationEnter()
 		{
 			PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", homelocation);
 		}
-	}
 
+		if (pchar.location == "QC_town" && pchar.quest_S1_allQuestsCompleted == true)
+		{
+			PlaceCharacter(characterFromID("Youyi TQC 1"), "goto", homelocation);
+		}
+	}
 }
 
 bool QuestComplete_S1(string sQuestName)
@@ -1440,5 +1446,7 @@ bool QuestComplete_S1(string sQuestName)
 	return false;
 }
 //*/
+
+
 
 
