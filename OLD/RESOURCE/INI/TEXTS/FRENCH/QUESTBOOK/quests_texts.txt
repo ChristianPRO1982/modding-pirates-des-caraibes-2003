@@ -918,7 +918,7 @@ Je me suis engagé à aider Llewellyn Brooker à demander la main de Magdalen Spoon
 #TEXT	2
 Je me suis engagé à aider Fabrisse De Lucien à demander la main de Donatienne de La Fayette. Je doit être un peu fleur bleue ! En tout cas je n'ai qu'une semaine pour trouver le cadeau idéale pour la demande en fiançailles.
 #TEXT	3
-Je me suis engagé à aider Florencio Baiano à demander la main de Violamte Pinto. Je doit être un peu fleur bleue ! En tout cas je n'ai qu'une semaine pour trouver le cadeau idéale pour la demande en fiançailles.
+Je me suis engagé à aider Florencio Baiano à demander la main de Violante Pinto. Je doit être un peu fleur bleue ! En tout cas je n'ai qu'une semaine pour trouver le cadeau idéale pour la demande en fiançailles.
 #TEXT	4
 Je me suis engagé à aider Cricorium Taffarel à demander la main de Alejandrina	Acosto. Je doit être un peu fleur bleue ! En tout cas je n'ai qu'une semaine pour trouver le cadeau idéale pour la demande en fiançailles.
 #TEXT	5

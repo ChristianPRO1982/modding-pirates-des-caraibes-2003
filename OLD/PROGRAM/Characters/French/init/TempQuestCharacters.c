@@ -1715,9 +1715,9 @@ int CreateTempQuestCharacters(int n)
 	n = n + 1;
 	
 	makeref(ch,Characters[n]);
-	ch.name 	= "Violamte";
+	ch.name 	= "Violante";
 	ch.lastname = "Pinto";
-	ch.id		= "Violamte Pinto";
+	ch.id		= "Violante Pinto";
 	ch.model	= "towngirl1_1";
 	ch.sex = "woman";
 	ch.sound_type = "female_citizen";

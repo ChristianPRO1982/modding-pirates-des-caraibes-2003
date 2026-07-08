@@ -18,7 +18,7 @@ void ProcessDialogEvent()
 	switch (pchar.location) {
 		case "Redmond_town_04": amantFirstName = "Llewellyn"; amantLastName = "Brooker"; smjhFirstName = "Magdalen"; smjhLastName = "Spooner"; smjhJewelry = "une bague en or sertie d'emeraudes."; break;
 		case "Falaise_De_Fleur_location_02": amantFirstName = "Fabrisse"; amantLastName = "De Lucien"; smjhFirstName = "Donatienne"; smjhLastName = "de La Fayette"; smjhJewelry = "une bague en or sertie de saphirs."; break;
-		case "Conceicao_town": amantFirstName = "Florencio"; amantLastName = "Baiano"; smjhFirstName = "Violamte"; smjhLastName = "Pinto"; smjhJewelry = "une broche en or."; break;
+		case "Conceicao_town": amantFirstName = "Florencio"; amantLastName = "Baiano"; smjhFirstName = "Violante"; smjhLastName = "Pinto"; smjhJewelry = "une broche en or."; break;
 		case "Muelle_town_02": amantFirstName = "Cricorium"; amantLastName = "Taffarel"; smjhFirstName = "Alejandrina"; smjhLastName = "Acosto"; smjhJewelry = "une broche en argent de son pays natal."; break;
 		case "Douwesen_town": amantFirstName = "Ghijsbrecht"; amantLastName = "Van Der Hagen"; smjhFirstName = "Tjaatje"; smjhLastName = "Meilink-Roelofsz"; smjhJewelry = "bague en argent sertie de saphirs."; break;
 		case "Greenford_town": amantFirstName = "Rawlin"; amantLastName = "Feaver"; smjhFirstName = "Astrid"; smjhLastName = "Weather"; smjhJewelry = "un pendetif en emeraude."; break;

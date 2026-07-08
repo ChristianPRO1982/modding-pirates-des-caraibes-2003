@@ -1,20 +1,20 @@
-string DLG_TEXT[17] = {
-"Bonjour monsieur. Conceicao est petite, mais les rumeurs y courent vite. Qui etes-vous ?",
+string DLG_TEXT[18] = {
+"Bonjour monsieur. Conceicao est petite, mais les rumeurs y courent vite. Qui êtes-vous ?",
 "Je viens de la part de ",
 " et je porte son message.",
-"Alors j'ecoute, mais vite.",
+"Alors j'écoute, mais vite.",
 "Florencio Baiano m'envoie. Il veut vous montrer que sa patience n'est pas de la faiblesse.",
-"Florencio a du coeur, mais le coeur seul ne paie ni les voyages ni les promesses.",
-"Il espere pourtant vous convaincre.",
-"Avez-vous apporte ce qu'il m'a promis ?",
-"Non. Sans preuve, je ne peux rien prendre au serieux.",
-"Alors voyez par vous-meme.",
+"Florencio a du coeur, mais le coeur seul ne paie ni les promesses ni les lendemains.",
+"Il espère pourtant vous convaincre.",
+"Avez-vous apporté ce qu'il m'a promis ?",
+"Non. Sans preuve, je ne peux rien prendre au sérieux.",
+"Alors voyez par vous-même.",
 "Voici la broche en or qu'il vous offre pour vous demander votre main.",
 "Oh... ",
-" ... Il a donc ose depenser plus que ses mots. C'est peut-etre cela que j'attendais.",
+" ... Il a donc osé dépenser plus que ses mots. C'est peut-être cela que j'attendais.",
 "Je pense qu'il a voulu vous parler avec des actes.",
 "Merci, capitaine ",
-". Dites a Florencio qu'il a bien fait de ne pas laisser l'Europe penser a sa place.",
+". Dites à Florencio qu'il a bien fait de ne pas laisser ma famille décider à ma place.",
 "Je lui dirai.",
-"Merci capitaine. Vous avez donne a cette histoire une chance de devenir vraie."
+"Merci capitaine. Vous avez donné à cette histoire une chance de devenir vraie."
 };

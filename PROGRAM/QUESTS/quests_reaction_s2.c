@@ -100,7 +100,7 @@ string S2_GetLadyId(int variant)
 	{
 		case 1: return "Magdalen Spooner"; break;
 		case 2: return "Donatienne de La Fayette"; break;
-		case 3: return "Violamte Pinto"; break;
+		case 3: return "Violante Pinto"; break;
 		case 4: return "Alejandrina Acosto"; break;
 		case 5: return "Tjaatje Meilink-Roelofsz"; break;
 		case 6: return "Astrid Weather"; break;
@@ -192,6 +192,19 @@ int S2_GetQuestFinalRecord()
 int S2_GetQuestTimeoutDays()
 {
 	return 7;
+}
+
+void S2_ArmTimeout()
+{
+	ref pchar = GetMainCharacter();
+	int timeoutDays;
+
+	timeoutDays = S2_GetQuestTimeoutDays();
+	pchar.quest.quest_S2_timeOut.win_condition.l1 = "Timer";
+	pchar.quest.quest_S2_timeOut.win_condition.l1.date.day = GetAddingDataDay(0, 0, timeoutDays);
+	pchar.quest.quest_S2_timeOut.win_condition.l1.date.month = GetAddingDataMonth(0, 0, timeoutDays);
+	pchar.quest.quest_S2_timeOut.win_condition.l1.date.year = GetAddingDataYear(0, 0, timeoutDays);
+	pchar.quest.quest_S2_timeOut.win_condition = "quest_S2_timeOut";
 }
 
 bool S2_IsVariantDone(int variant)
@@ -295,5 +308,39 @@ void S2_ProcessLocationEnter()
 
 bool QuestComplete_S2(string sQuestName)
 {
+	ref pchar = GetMainCharacter();
+	int variant;
+	int cityRecord;
+	int contextRecord;
+
+	switch(sQuestName)
+	{
+		case "quest_S2_agreeded":
+			variant = S2_GetVariantFromLoverLocation(pchar.location);
+			if (variant == 0)
+			{
+				break;
+			}
+
+			DeleteQuestHeader("PJ_S2");
+			SetQuestHeader("PJ_S2");
+			pchar.quest_S2_started = variant;
+
+			cityRecord = S2_GetQuestCityRecord(variant);
+			contextRecord = S2_GetQuestContextRecord(variant);
+			if (contextRecord > 0)
+			{
+				AddQuestRecord("PJ_S2", contextRecord);
+			}
+			if (cityRecord > 0)
+			{
+				AddQuestRecord("PJ_S2", cityRecord);
+			}
+
+			S2_ArmTimeout();
+			return true;
+		break;
+	}
+
 	return false;
 }

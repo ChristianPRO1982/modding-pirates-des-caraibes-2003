@@ -90,7 +90,7 @@ void QuestsCheck_forLocEnter()
 	PlaceCharacter(characterFromID("Fabrisse De Lucien"), "goto", "none");
 	PlaceCharacter(characterFromID("Donatienne de La Fayette"), "goto", "none");
 	PlaceCharacter(characterFromID("Florencio Baiano"), "goto", "none");
-	PlaceCharacter(characterFromID("Violamte Pinto"), "goto", "none");
+	PlaceCharacter(characterFromID("Violante Pinto"), "goto", "none");
 	PlaceCharacter(characterFromID("Cricorium Taffarel"), "goto", "none");
 	PlaceCharacter(characterFromID("Alejandrina	Acosto"), "goto", "none");
 	PlaceCharacter(characterFromID("Ghijsbrecht Van Der Hagen"), "goto", "none");
@@ -122,7 +122,7 @@ void QuestsCheck_forLocEnter()
 	} else {
 		if (pchar.quest_S2_started == 1 && pchar.location == "Redmond_town_03") PlaceCharacter(characterFromID("Magdalen Spooner"), "goto", homelocation);
 		if (pchar.quest_S2_started == 2 && pchar.location == "Falaise_De_Fleur_location_03") PlaceCharacter(characterFromID("Donatienne de La Fayette"), "goto", homelocation);
-		if (pchar.quest_S2_started == 3 && pchar.location == "Conceicao_town") PlaceCharacter(characterFromID("Violamte Pinto"), "goto", homelocation);
+		if (pchar.quest_S2_started == 3 && pchar.location == "Conceicao_town") PlaceCharacter(characterFromID("Violante Pinto"), "goto", homelocation);
 		if (pchar.quest_S2_started == 4 && pchar.location == "Muelle_town_04") PlaceCharacter(characterFromID("Alejandrina	Acosto"), "goto", homelocation);
 		if (pchar.quest_S2_started == 5 && pchar.location == "Douwesen_town") PlaceCharacter(characterFromID("Tjaatje Meilink-Roelofsz"), "goto", homelocation);
 		if (pchar.quest_S2_started == 6 && pchar.location == "Greenford_town") PlaceCharacter(characterFromID("Astrid Weather"), "goto", homelocation);

@@ -338,7 +338,7 @@ void InitCharactersNames()
 	n = AddStr2Array(&sPoWomenNames, n, "Albertina,Ana,Argentina,Beatriz,Benedita,Caridade,Carmo,Catarina,Clara,Conceicao,Cristina,Dolores");
 	n = AddStr2Array(&sPoWomenNames, n, "Emilia,Eufemia,Felicidade,Fernanda,Filipa,Gertrudes,Gloria,Graca,Guiomar,Guymar,Helena,Hermin,Hilma");
 	n = AddStr2Array(&sPoWomenNames, n, "Ida,Ines,Irene,Irmelinda,Isabel,Isabel,Joana,Julia,Leonor,Ligia,Luciana,Lucimar,Lucrecia,Luisa,Magdalena");
-	n = AddStr2Array(&sPoWomenNames, n, "Manuela,Margarida,Maria,Marina,Neves,Raisa,Regla,Sofia,Teodora,Teresa,Trinidade,Verna,Violamte,Visitacao");
+	n = AddStr2Array(&sPoWomenNames, n, "Manuela,Margarida,Maria,Marina,Neves,Raisa,Regla,Sofia,Teodora,Teresa,Trinidade,Verna,Violante,Visitacao");
 
 // families
 	n = 0;
