@@ -162,6 +162,7 @@ void S1_ClearQuestRuntime()
 	pchar.quest_S1_step = 0;
 	pchar.quest_S1_Unearthing = false;
 	pchar.quest_S1_failed = false;
+	pchar.quest_S1_currentQuestWon = false;
 	pchar.quest_S1_gain_gold_jewelry = 0;
 	pchar.quest_S1_gain_gold_jewelry_text = "";
 	pchar.quest_S1_gain_gold = 0;
@@ -382,6 +383,7 @@ void GenerateTreasureHunterQuests()
 	pchar.quest_S1_step = 0;
 	pchar.quest_S1_Unearthing = false;
 	pchar.quest_S1_failed = false;
+	pchar.quest_S1_currentQuestWon = false;
 	pchar.quest_S1_gain_gold_jewelry = 0;
 	pchar.quest_S1_gain_gold_jewelry_text = "";
 	pchar.quest_S1_gain_gold = 0;
@@ -1489,3 +1491,5 @@ bool QuestComplete_S1(string sQuestName)
 
 	return false;
 }
+
+
