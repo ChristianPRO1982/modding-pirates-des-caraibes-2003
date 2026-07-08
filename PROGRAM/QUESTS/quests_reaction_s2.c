@@ -249,12 +249,22 @@ void S2_ProcessLocationEnter()
 	string homelocation;
 	int variant;
 	string loverId;
+	string ladyId;
 
 	homelocation = pchar.location;
 	S2_HideAllNpcs();
 
 	if (S2_GetActiveVariant() != 0)
 	{
+		variant = S2_GetActiveVariant();
+		if (homelocation == S2_GetLadyLocation(variant))
+		{
+			ladyId = S2_GetLadyId(variant);
+			if (ladyId != "")
+			{
+				PlaceCharacter(characterFromID(ladyId), "goto", homelocation);
+			}
+		}
 		return;
 	}
 
