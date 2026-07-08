@@ -1,6 +1,6 @@
 // S1 - treasure hunter
 
-bool S1_DEV_COMPLETE_ALL_QUESTS_ON_WIN = false;
+bool S1_DEV_COMPLETE_ALL_QUESTS_ON_WIN = true;
 
 string S1_GetLeaderId(string startIsland)
 {
@@ -219,6 +219,33 @@ void S1_ResetLastQuestConditions()
 	pchar.quest.quest_S1_lastQuest_4.over = "yes";
 	pchar.quest.quest_S1_lastQuest_4 = "completed";
 }
+
+void S1_MarkAllQuestsCompleted()
+{
+	ref PChar = GetMainCharacter();
+
+	pchar.quest_S1_quest_1_completed = true;
+	pchar.quest_S1_quest_2_completed = true;
+	pchar.quest_S1_quest_3_completed = true;
+	pchar.quest_S1_quest_4_completed = true;
+	pchar.quest_S1_quest_5_completed = true;
+	pchar.quest_S1_quest_6_completed = true;
+	pchar.quest_S1_quest_7_completed = true;
+	pchar.quest_S1_quest_8_completed = true;
+	pchar.quest_S1_quest_9_completed = true;
+	pchar.quest_S1_quest_10_completed = true;
+	pchar.quest_S1_quest_11_completed = true;
+	pchar.quest_S1_quest_12_completed = true;
+	pchar.quest_S1_quest_13_completed = true;
+	pchar.quest_S1_quest_14_completed = true;
+	pchar.quest_S1_quest_15_completed = true;
+	pchar.quest_S1_quest_16_completed = true;
+	pchar.quest_S1_quest_17_completed = true;
+	pchar.quest_S1_quest_18_completed = true;
+	pchar.quest_S1_quest_19_completed = true;
+	pchar.quest_S1_quest_20_completed = true;
+}
+
 void S1_MarkCurrentQuestCompleted()
 {
 	ref PChar = GetMainCharacter();
@@ -1442,6 +1469,10 @@ bool QuestComplete_S1(string sQuestName)
 
 			S1_ResetQuestConditions();
 			S1_MarkCurrentQuestCompleted();
+			if (S1_DEV_COMPLETE_ALL_QUESTS_ON_WIN == true)
+			{
+				S1_MarkAllQuestsCompleted();
+			}
 			if (makeint(pchar.quest_S1_final_enabled) == true && makeint(S1_CountCompletedQuests()) == makeint(pchar.quest_S1_nbQuests))
 			{
 				pchar.quest_S1_allQuestsCompleted = true;
@@ -1458,9 +1489,3 @@ bool QuestComplete_S1(string sQuestName)
 
 	return false;
 }
-//*/
-
-
-
-
-
