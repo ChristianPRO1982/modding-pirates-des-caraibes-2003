@@ -1349,17 +1349,20 @@ bool QuestComplete_S1(string sQuestName)
 			leaderId = S1_GetLeaderId(pchar.quest_S1_startIsland);
 			if (leaderId == "")
 			{
+				pchar.quest_S1_currentQuestWon = false;
 				DoQuestCheckDelay("quest_S1_closed", 0.0);
 				return true;
 			}
 			if (pchar.quest_S1_failed == true)
 			{
+				pchar.quest_S1_currentQuestWon = false;
 				ChangeCharacterReputation(pchar, -1);
 				AddQuestRecord("PJ_S1", "2");
 				Log_SetStringToLog(GlobalStringConvert("PJ_S1_failed"));
 				DoQuestCheckDelay("quest_S1_closed", 1.0);
 				return true;
 			}
+			pchar.quest_S1_currentQuestWon = true;
 			AddQuestRecord("PJ_S1", "1");
 			homelocation = pchar.location;
 			rCrew_leader = characterFromID(leaderId);
@@ -1433,6 +1436,7 @@ bool QuestComplete_S1(string sQuestName)
 		break;
 
 		case "quest_S1_fight_won":
+			pchar.quest_S1_currentQuestWon = true;
 			ChangeCharacterReputation(pchar, -5);
 			AddPartyExp(pchar, 50000);
 
@@ -1470,15 +1474,22 @@ bool QuestComplete_S1(string sQuestName)
 			}
 
 			S1_ResetQuestConditions();
-			S1_MarkCurrentQuestCompleted();
-			if (S1_DEV_COMPLETE_ALL_QUESTS_ON_WIN == true)
+			if (pchar.quest_S1_currentQuestWon == true)
 			{
-				S1_MarkAllQuestsCompleted();
-			}
-			if (makeint(pchar.quest_S1_final_enabled) == true && makeint(S1_CountCompletedQuests()) == makeint(pchar.quest_S1_nbQuests))
-			{
-				pchar.quest_S1_allQuestsCompleted = true;
-				S1_ClearCompletedQuestFlags();
+				S1_MarkCurrentQuestCompleted();
+				if (S1_DEV_COMPLETE_ALL_QUESTS_ON_WIN == true)
+				{
+					S1_MarkAllQuestsCompleted();
+				}
+				if (makeint(pchar.quest_S1_final_enabled) == true && makeint(S1_CountCompletedQuests()) == makeint(pchar.quest_S1_nbQuests))
+				{
+					pchar.quest_S1_allQuestsCompleted = true;
+					S1_ClearCompletedQuestFlags();
+				}
+				else
+				{
+					pchar.quest_S1_allQuestsCompleted = false;
+				}
 			}
 			else
 			{
@@ -1491,5 +1502,6 @@ bool QuestComplete_S1(string sQuestName)
 
 	return false;
 }
+
 
 
