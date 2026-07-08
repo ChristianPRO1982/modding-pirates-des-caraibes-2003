@@ -248,6 +248,51 @@ void S2_HideAllNpcs()
 	PlaceCharacter(characterFromID(S2_GetFinalNpcId()), "goto", "none");
 }
 
+void S2_SetVariantCompletion(int variant, bool success)
+{
+	ref pchar = GetMainCharacter();
+
+	switch (variant)
+	{
+		case 1:
+			pchar.quest_S2_Redmond_done = true;
+			pchar.quest_S2_Redmond_success = success;
+		break;
+		case 2:
+			pchar.quest_S2_FalaiseDeFleur_done = true;
+			pchar.quest_S2_FalaiseDeFleur_success = success;
+		break;
+		case 3:
+			pchar.quest_S2_Conceicao_done = true;
+			pchar.quest_S2_Conceicao_success = success;
+		break;
+		case 4:
+			pchar.quest_S2_IslaMuelle_done = true;
+			pchar.quest_S2_IslaMuelle_success = success;
+		break;
+		case 5:
+			pchar.quest_S2_Douwesen_done = true;
+			pchar.quest_S2_Douwesen_success = success;
+		break;
+		case 6:
+			pchar.quest_S2_Greenford_done = true;
+			pchar.quest_S2_Greenford_success = success;
+		break;
+		case 7:
+			pchar.quest_S2_Oxbay_done = true;
+			pchar.quest_S2_Oxbay_success = success;
+		break;
+	}
+}
+
+void S2_ClearTimeout()
+{
+	ref pchar = GetMainCharacter();
+
+	pchar.quest.quest_S2_timeOut.over = "yes";
+	pchar.quest.quest_S2_timeOut = "completed";
+}
+
 // jewelry6 : bague en argent et saphir = 769
 // jewelry7 : bague en or et emeraude = 961
 // jewelry10 : bague en or et saphir = 1538
@@ -346,6 +391,20 @@ bool QuestComplete_S2(string sQuestName)
 			ChangeCharacterReputation(pchar, 7);
 			AddPartyExp(pchar, 1000 * makeint(pchar.rank));
 			DoQuestCheckDelay("quest_S2_closed_2", 1.0);
+			return true;
+		break;
+
+		case "quest_S2_closed_2":
+			variant = S2_GetActiveVariant();
+			if (variant == 0)
+			{
+				break;
+			}
+
+			S2_SetVariantCompletion(variant, true);
+			S2_ClearTimeout();
+			pchar.quest_S2_started = 0;
+			CloseQuestHeader("PJ_S2");
 			return true;
 		break;
 	}
