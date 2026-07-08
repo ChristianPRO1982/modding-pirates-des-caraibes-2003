@@ -1,0 +1,22 @@
+string DLG_TEXT[20] = {
+"Bonjour capitaine. Vous semblez savoir ecouter sans vous moquer des gens simples.",
+"Je peux au moins essayer. Qui etes-vous ?",
+"Je m'appelle Llewellyn Brooker. Je viens des rues de Redmond, et aujourd'hui elles me paraissent bien etroites.",
+"Que vous arrive-t-il donc ?",
+"Je suis epris de Magdalen Spooner. Elle vaut mieux que toutes les vitrines de joailliers de Redmond, et c'est bien mon probleme.",
+"Je ne suis pas certain de pouvoir me fier a vous. Redmond a la langue trop legere pour confier pareil secret au premier capitaine venu.",
+"Je comprends. Je vous laisse donc a votre silence.",
+"Je crois que votre reputation parle pour vous mieux que bien des sermons.",
+"Alors dites-moi ce qui vous tourmente.",
+"Magdalen ne veut pas d'une promesse vide. Elle veut un anneau en or serti d'emeraudes, digne d'une demande faite sans mendier a ma famille.",
+"Redmond n'est pourtant pas avare en familles riches. Pourquoi ne pas attendre ?",
+"Parce qu'il ne me reste qu'une semaine. Un autre pretendant doit revenir d'Europe, fortune faite, et sa mere le pousse deja vers elle.",
+"Vous voulez donc gagner cette course avant son retour.",
+"Oui. Si vous m'aidez, je ne pourrai vous offrir que ma gratitude, mais elle sera sincere.",
+"Tres bien. Je veux bien porter cette affaire jusqu'au bout.",
+"Desole, mais cette comedie mondaine se jouera sans moi.",
+"Merci, capitaine ",
+". Remettez cet anneau a Magdalen Spooner, et dites-lui que pour une fois Redmond a vu juste sur un homme.",
+"Je vais m'en charger.",
+"Avez-vous des nouvelles de Magdalen ? Le temps file plus vite que les ragots de Redmond."
+};

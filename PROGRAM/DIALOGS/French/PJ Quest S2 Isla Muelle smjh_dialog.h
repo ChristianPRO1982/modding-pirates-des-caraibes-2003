@@ -1,0 +1,20 @@
+string DLG_TEXT[17] = {
+"Qui etes-vous, monsieur ? Les inconnus sont nombreux a Isla Muelle.",
+"Je viens de la part de ",
+" et je crois porter quelque chose qui vous touche de pres.",
+"Alors je vous ecoute.",
+"Cricorium Taffarel m'envoie. Il pense avoir compris qu'un present vaut mieux qu'un serment recite.",
+"Il lui a fallu du temps. Beaucoup ici regardent mon visage avant d'essayer de comprendre ce qui me manque vraiment.",
+"Il veut pourtant vous montrer qu'il a compris.",
+"Avez-vous apporte ce qu'il m'a promis ?",
+"Non. Sans cela, tout le reste n'est que theatre.",
+"Alors regardez ce qu'il a choisi.",
+"Voici la broche en argent de votre pays natal qu'il vous offre pour vous demander votre main.",
+"Oh... ",
+" ... Celle-la, il ne pouvait pas l'inventer sans m'avoir vraiment ecoute.",
+"Je crois qu'il voulait justement vous prouver cela.",
+"Merci, capitaine ",
+". Dites a Cricorium qu'il vient enfin de parler a mon coeur au lieu de parler a ma robe.",
+"Je lui transmettrai.",
+"Merci capitaine. Ce present a bien plus de valeur qu'il ne le croit."
+};

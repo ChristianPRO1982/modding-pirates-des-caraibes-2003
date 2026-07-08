@@ -1,0 +1,20 @@
+string DLG_TEXT[17] = {
+"Bonjour monsieur. Conceicao est petite, mais les rumeurs y courent vite. Qui etes-vous ?",
+"Je viens de la part de ",
+" et je porte son message.",
+"Alors j'ecoute, mais vite.",
+"Florencio Baiano m'envoie. Il veut vous montrer que sa patience n'est pas de la faiblesse.",
+"Florencio a du coeur, mais le coeur seul ne paie ni les voyages ni les promesses.",
+"Il espere pourtant vous convaincre.",
+"Avez-vous apporte ce qu'il m'a promis ?",
+"Non. Sans preuve, je ne peux rien prendre au serieux.",
+"Alors voyez par vous-meme.",
+"Voici la broche en or qu'il vous offre pour vous demander votre main.",
+"Oh... ",
+" ... Il a donc ose depenser plus que ses mots. C'est peut-etre cela que j'attendais.",
+"Je pense qu'il a voulu vous parler avec des actes.",
+"Merci, capitaine ",
+". Dites a Florencio qu'il a bien fait de ne pas laisser l'Europe penser a sa place.",
+"Je lui dirai.",
+"Merci capitaine. Vous avez donne a cette histoire une chance de devenir vraie."
+};

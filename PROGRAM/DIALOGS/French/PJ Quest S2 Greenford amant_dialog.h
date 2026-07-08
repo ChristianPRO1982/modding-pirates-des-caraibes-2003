@@ -1,0 +1,22 @@
+string DLG_TEXT[20] = {
+"Capitaine, ne filez pas si vite. J'ai besoin d'un homme capable de tenir sa parole a Greenford.",
+"Vous avez donc quelque chose de serieux a me demander ?",
+"Rawlin Feaver. Je voudrais demander Astrid Weather en mariage, mais sans le bon present je passerai pour un reveur de plus.",
+"Quel present faut-il donc ?",
+"Un pendentif en emeraude. Astrid dit que le coeur d'un homme se juge a ce qu'il ose offrir quand personne ne le pousse.",
+"Je ne puis pas confier cela a quelqu'un dont la reputation ferait hausser les epaules de tout Greenford.",
+"Dans ce cas, oubliez-moi.",
+"Heureusement, votre nom m'inspire davantage confiance que la plupart des notables d'ici.",
+"Qu'est-ce qui rend l'affaire si urgente ?",
+"Un rival revient d'Europe dans une semaine, avec des poches pleines et des manieres apprises ailleurs. Ici, cela suffit souvent a gagner une famille.",
+"Vous voulez donc prendre les devants avant son arrivee.",
+"Oui. Si Astrid recoit ce pendentif en emeraude, elle saura que je n'ai pas attendu qu'un autre decide de ma vie a ma place.",
+"Et vous me demandez de porter cet aveu en votre nom.",
+"Oui. Je ne peux rien vous offrir de materiel, seulement une dette de coeur.",
+"D'accord. Je m'en charge.",
+"Non. Je vous laisse ce combat.",
+"Merci, capitaine ",
+". Dites a Astrid qu'un pendentif en emeraude l'attend, et qu'il vient d'un homme qui a enfin trouve le courage d'agir.",
+"Je vais faire cela.",
+"Avez-vous vu Astrid ? Plus la semaine avance, plus Greenford ressemble a un piege."
+};

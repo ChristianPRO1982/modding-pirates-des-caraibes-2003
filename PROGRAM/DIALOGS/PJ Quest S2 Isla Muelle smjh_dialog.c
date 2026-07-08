@@ -1,9 +1,12 @@
-//nclude "DIALOGS\PJ Quest S2 Redmond amant_dialog.h"
+//nclude "DIALOGS\PJ Quest S2 Isla Muelle smjh_dialog.h"
 void ProcessDialogEvent()
 {
 	ref NPChar, PChar, d;
 	PChar = GetMainCharacter();
 	aref Link, Diag;
+	string amantFullName;
+	string smjhJewelry;
+	string smjhJewelryID;
 
 	DeleteAttribute(&Dialog,"Links");
 
@@ -11,6 +14,10 @@ void ProcessDialogEvent()
 	makearef(Link, Dialog.Links);
 	makeref(d, Dialog);
 	makearef(Diag, NPChar.Dialog);
+
+	amantFullName = "Cricorium Taffarel";
+	smjhJewelry = "une broche en argent de son pays natal.";
+	smjhJewelryID = "jewelry13";
 
 	switch(Dialog.CurrentNode)
 	{
@@ -43,64 +50,57 @@ void ProcessDialogEvent()
 		case "Start":
 			Diag.TempNode = "Start";
 			dialog.snd = "Voice\ARSI\ARSI001";
-			if (pchar.reputation > 64)
-			{
-				d.Text = DLG_TEXT[7];
-				Link.l1 = DLG_TEXT[8];
-				Link.l1.go = "Continue_02";
-			}
-			else
-			{
-				d.Text = DLG_TEXT[5];
-				Link.l1 = DLG_TEXT[6];
-				Link.l1.go = "exit";
-			}
+			d.Text = DLG_TEXT[4];
+			Link.l1 = DLG_TEXT[5] + amantFullName + ".";
+			Link.l1.go = "Continue_02";
 		break;
 
 		case "Continue_02":
 			dialog.snd = "Voice\ARSI\ARSI001";
-			d.Text = DLG_TEXT[9];
-			Link.l1 = DLG_TEXT[10];
-			Link.l1.go = "Continue_03";
+			d.Text = DLG_TEXT[6];
+			if (CheckCharacterItem(Pchar,smjhJewelryID))
+			{
+				Link.l1 = DLG_TEXT[10];
+				Link.l1.go = "Continue_04";
+			}
+			else
+			{
+				Link.l1 = DLG_TEXT[7];
+				Link.l1.go = "Continue_03";
+			}
 		break;
 
 		case "Continue_03":
 			dialog.snd = "Voice\ARSI\ARSI001";
-			d.Text = DLG_TEXT[11];
-			Link.l1 = DLG_TEXT[12];
-			Link.l1.go = "Continue_04";
+			d.Text = DLG_TEXT[8];
+			Link.l1 = DLG_TEXT[9];
+			Link.l1.go = "exit";
 		break;
 
 		case "Continue_04":
 			dialog.snd = "Voice\ARSI\ARSI001";
-			d.Text = DLG_TEXT[13];
-			Link.l1 = DLG_TEXT[14];
-			Link.l1.go = "agreeded";
-			Link.l2 = DLG_TEXT[15];
-			Link.l2.go = "exit";
+			d.Text = DLG_TEXT[11] + smjhJewelry + DLG_TEXT[12];
+			Link.l1 = DLG_TEXT[13];
+			Link.l1.go = "congratulation";
 		break;
 
-		case "agreeded":
-			Diag.TempNode = "Waiting";
+		case "congratulation":
+			Diag.TempNode = "thanks";
+			TakeItemFromCharacter(Pchar, smjhJewelryID);
 			dialog.snd = "Voice\ARSI\ARSI001";
-			d.Text = DLG_TEXT[16] + pchar.lastname + DLG_TEXT[17];
-			Link.l1 = DLG_TEXT[18];
+			d.Text = DLG_TEXT[14] + PChar.lastname + ".";
+			Link.l1 = DLG_TEXT[15];
+			Link.l1.go = "exit";
+			AddDialogExitQuest("quest_S2_closed_1");
+		break;
+
+		case "thanks":
+			dialog.snd = "Voice\ARSI\ARSI001";
+			d.Text = DLG_TEXT[16];
 			Link.l1.go = "Continue_05";
 		break;
 		
 		case "Continue_05":
-			Diag.CurrentNode = Diag.TempNode;
-			DialogExit();
-			AddDialogExitQuest("quest_S2_agreeded");
-		break;
-
-		case "Waiting":
-			dialog.snd = "Voice\ARSI\ARSI001";
-			d.Text = DLG_TEXT[19];
-			Link.l1.go = "Continue_06";
-		break;
-		
-		case "Continue_06":
 			DialogExit();
 		break;
 

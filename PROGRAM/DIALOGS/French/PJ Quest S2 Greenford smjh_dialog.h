@@ -1,0 +1,20 @@
+string DLG_TEXT[17] = {
+"Bonjour monsieur. J'espere que ce n'est pas encore un marchand venu se faire valoir.",
+"Rien de cela. Je viens de la part de ",
+" et il m'a charge de vous parler franchement.",
+"Alors j'apprecierai cette franchise.",
+"Rawlin Feaver m'envoie. Il dit qu'un homme vaut peu s'il attend toujours que le monde lui fasse signe.",
+"C'est une phrase plus courageuse que d'habitude. J'avais besoin de voir s'il pouvait agir sans se cacher derriere les circonstances.",
+"Il a essaye de vous le montrer.",
+"Avez-vous apporte ce qu'il m'a promis ?",
+"Non. Sans cela, Greenford restera Greenford: beaucoup de bruit, peu de preuve.",
+"Alors regardez plutot ceci.",
+"Voici le pendentif en emeraude qu'il vous offre pour vous demander votre main.",
+"Oh... ",
+" ... Il a donc enfin compris qu'une promesse doit peser quelque chose pour etre entendue.",
+"Je crois qu'il espere surtout que vous le jugerez sur cet effort.",
+"Merci, capitaine ",
+". Dites a Rawlin que je l'attendrai, mais pas indefiniment: il vient de gagner du temps, pas une certitude.",
+"Je transmettrai mot pour mot.",
+"Merci capitaine. Vous avez peut-etre empeche une belle sottise."
+};

@@ -1,0 +1,22 @@
+string DLG_TEXT[20] = {
+"Capitaine, attendez. Je vous prie de m'accorder une minute avant que tout Falaise de Fleur n'invente le reste.",
+"Je vous ecoute. A qui ai-je l'honneur ?",
+"Je suis Fabrisse De Lucien. Mon nom ouvre encore des portes, mais il ne m'aide guere a gagner le coeur de Donatienne de La Fayette.",
+"C'est donc une affaire de mariage ?",
+"Oui, et dans cette ville on jauge l'amour comme un bal bien tenu. Donatienne veut une bague en or sertie de saphirs, preuve que je peux choisir par moi-meme.",
+"Pardonnez-moi, mais je ne puis me confier a quelqu'un dont la reputation ferait jaser tout le port.",
+"Alors je ne vous retiens pas davantage.",
+"Votre nom, lui, ne me fait pas honte. Peut-etre avez-vous l'honneur qu'il me faut emprunter.",
+"Expliquez-moi cela plus clairement.",
+"Mon pere tient a me marier utilement. Donatienne aussi est courtisee, et son rival le mieux dote revient d'Europe dans une semaine.",
+"Vous cherchez a frapper vite avant son retour.",
+"Exactement. Si Donatienne recoit ce bijou de ma part, elle saura que je ne courbe plus l'echine devant mon nom.",
+"Et vous voulez que je devienne le discret messager de cette rebellion galante.",
+"Oui. Je n'ai pas d'or a vous promettre, seulement le souvenir d'avoir servi une belle cause.",
+"Soit. Je porterai votre bague a Donatienne.",
+"Non. Les salons de Falaise de Fleur se passeront de moi.",
+"Merci, capitaine ",
+". Dites a Donatienne qu'une bague en or sertie de saphirs l'attend, et qu'elle vient d'un homme qui a enfin choisi son propre camp.",
+"Je lui remettrai le message.",
+"Capitaine, avez-vous vu Donatienne ? Dans cette ville, une semaine suffit pour perdre une vie entiere."
+};

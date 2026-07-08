@@ -1,0 +1,20 @@
+string DLG_TEXT[17] = {
+"Qui etes-vous, monsieur ? Oxbay n'envoie pas ses inconnus pour rien.",
+"Je viens de la part de ",
+" et je prefere aller droit au but.",
+"C'est une bonne maniere de commencer.",
+"Rys Scorer m'envoie. Il espere que ce qu'il n'osait pas porter lui-meme parlera enfin pour lui.",
+"Rys a de l'audace quand il s'agit de rever, moins quand il faut choisir devant tout le monde.",
+"Il essaie aujourd'hui de corriger cela.",
+"Avez-vous apporte le present qu'il m'a promis ?",
+"Non. Sans preuve, je n'ai rien a entendre.",
+"Alors regardez ce qu'il a ose choisir.",
+"Voici le collier en pierres precieuses qu'il vous offre pour vous demander votre main.",
+"Oh... ",
+" ... Cette fois, il ne s'est pas contente de parler plus fort que les autres. Il a choisi.",
+"Je pense que c'est ce qu'il voulait vous faire savoir.",
+"Merci, capitaine ",
+". Dites a Rys qu'il vient peut-etre de cesser d'etre un reveur pour devenir un homme.",
+"Je le lui dirai.",
+"Merci capitaine. Meme Oxbay peut parfois voir naitre quelque chose de sincere."
+};

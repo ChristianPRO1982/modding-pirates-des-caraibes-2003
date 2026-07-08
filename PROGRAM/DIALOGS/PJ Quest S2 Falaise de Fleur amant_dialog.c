@@ -1,4 +1,4 @@
-//nclude "DIALOGS\PJ Quest S2 Redmond amant_dialog.h"
+//nclude "DIALOGS\PJ Quest S2 Falaise de Fleur amant_dialog.h"
 void ProcessDialogEvent()
 {
 	ref NPChar, PChar, d;

@@ -1,0 +1,22 @@
+string DLG_TEXT[20] = {
+"Holà capitaine. Vous avez l'air d'un homme qui connait la valeur des choses rares.",
+"Peut-etre. Qui me parle ?",
+"Cricorium Taffarel, d'Isla Muelle. Je tiens a Alejandrina Acosto plus qu'a ma propre fierte, ce qui devient embarrassant.",
+"Vous avez besoin d'un service amoureux, j'imagine.",
+"Alejandrina ne veut pas d'une demande ordinaire. Elle veut une broche en argent de son pays natal, quelque chose qui lui rappelle qu'on la comprend vraiment.",
+"Je n'ouvrirai pas mon coeur a un capitaine dont la reputation risque de salir son nom.",
+"Alors gardez votre secret.",
+"Votre renommee me semble assez propre pour cette affaire. C'est deja beaucoup dans un port comme celui-ci.",
+"Qui menace votre place ?",
+"Un riche sot qui revient d'Europe dans une semaine. Avec son argent, il croit pouvoir acheter jusqu'au souvenir de son pays.",
+"Vous voulez donc la toucher avant que lui ne l'etouffe sous le clinquant.",
+"Exactement. Si elle recoit cette broche en argent, elle saura que j'ai retenu ce qui compte vraiment pour elle.",
+"Et vous voulez que je sois l'homme de confiance au milieu de tout cela.",
+"Oui. Je n'ai pas de fortune a vous offrir, seulement la satisfaction d'avoir servi un amour honnete.",
+"Tres bien. Je porterai cette broche.",
+"Non. Je laisse vos affaires de coeur a d'autres.",
+"Merci, capitaine ",
+". Dites a Alejandrina qu'une broche en argent de son pays l'attend, et qu'elle vient d'un homme qui a pris la peine de l'ecouter.",
+"Comptez sur moi.",
+"Avez-vous trouve Alejandrina ? Une semaine passe vite quand on a peur d'etre remplace."
+};

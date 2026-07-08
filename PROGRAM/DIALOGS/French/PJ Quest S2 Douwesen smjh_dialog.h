@@ -1,0 +1,20 @@
+string DLG_TEXT[17] = {
+"Bonjour monsieur. Vous cherchez quelqu'un ?",
+"Oui. Je viens de la part de ",
+" et je souhaiterais vous dire un mot.",
+"S'il s'agit de Ghijsbrecht, je peux l'entendre.",
+"Il m'envoie vers vous avec l'espoir de vous montrer qu'il sait tenir une promesse.",
+"Ghijsbrecht est un homme droit, mais la droiture a besoin d'un peu d'audace pour devenir un avenir.",
+"Il a tente d'en trouver aujourd'hui.",
+"Avez-vous le present qu'il m'avait laisse imaginer ?",
+"Non. Alors mieux vaut attendre avant de parler davantage.",
+"Dans ce cas, voyez ceci.",
+"Voici la bague en argent sertie de saphirs qu'il vous offre pour vous demander votre main.",
+"Oh... ",
+" ... C'est simple, net, et plus courageux que bien des declarations.",
+"Je pense qu'il a cherche a vous ressembler un peu dans ce choix.",
+"Merci, capitaine ",
+". Dites a Ghijsbrecht qu'il a bien fait de laisser parler ses actes avant ses habitudes.",
+"Je lui dirai.",
+"Merci capitaine. Vous avez rendu cette decision plus facile qu'elle ne devait l'etre."
+};
