@@ -1,6 +1,6 @@
 // S1 - treasure hunter
 
-bool S1_DEV_COMPLETE_ALL_QUESTS_ON_WIN = true;
+bool S1_DEV_COMPLETE_ALL_QUESTS_ON_WIN = false;
 
 string S1_GetLeaderId(string startIsland)
 {
@@ -1239,49 +1239,49 @@ void S1_ProcessLocationEnter()
 	if (pchar.quest_S1_step == 0)
 	{
 		starterVisibleAttr = S1_GetStarterVisibleAttr("Redmond");
-		if (rand(3) >= 0 && pchar.location == "Redmond_town_01" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
+		if (rand(3) == 0 && pchar.location == "Redmond_town_01" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
 		{
 			PlaceCharacter(characterFromID("Elizabeth Goodale TQC 1"), "goto", homelocation);
 		}
 
 		starterVisibleAttr = S1_GetStarterVisibleAttr("FleurDeFalaise");
-		if (rand(3) >= 0 && pchar.location == "Falaise_de_fleur_port_02" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
+		if (rand(3) == 0 && pchar.location == "Falaise_de_fleur_port_02" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
 		{
 			PlaceCharacter(characterFromID("Eustache Busket TQC 1"), "goto", homelocation);
 		}
 
 		starterVisibleAttr = S1_GetStarterVisibleAttr("Conceicao");
-		if (rand(3) >= 0 && pchar.location == "Conceicao_town" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
+		if (rand(3) == 0 && pchar.location == "Conceicao_town" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
 		{
 			PlaceCharacter(characterFromID("Bartolomeo Portugues TQC 1"), "goto", homelocation);
 		}
 
 		starterVisibleAttr = S1_GetStarterVisibleAttr("IslaMuelle");
-		if (rand(3) >= 0 && pchar.location == "Muelle_town_02" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
+		if (rand(3) == 0 && pchar.location == "Muelle_town_02" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
 		{
 			PlaceCharacter(characterFromID("Benito Bonito TQC 1"), "goto", homelocation);
 		}
 
 		starterVisibleAttr = S1_GetStarterVisibleAttr("Douwesen");
-		if (rand(3) >= 0 && pchar.location == "Douwesen_town" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
+		if (rand(3) == 0 && pchar.location == "Douwesen_town" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
 		{
 			PlaceCharacter(characterFromID("Hendrick van Hoven TQC 1"), "goto", homelocation);
 		}
 
 		starterVisibleAttr = S1_GetStarterVisibleAttr("Oxbay_Greenford");
-		if (rand(3) >= 0 && pchar.location == "Greenford_town" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
+		if (rand(3) == 0 && pchar.location == "Greenford_town" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
 		{
 			PlaceCharacter(characterFromID("Wimund TQC 1"), "goto", homelocation);
 		}
 
 		starterVisibleAttr = S1_GetStarterVisibleAttr("Oxbay_Oxbay");
-		if (rand(3) >= 0 && pchar.location == "Oxbay_town" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
+		if (rand(3) == 0 && pchar.location == "Oxbay_town" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
 		{
 			PlaceCharacter(characterFromID("Samuel Bellamy TQC 1"), "goto", homelocation);
 		}
 
 		starterVisibleAttr = S1_GetStarterVisibleAttr("QuebradasCostillas");
-		if (rand(3) >= 0 && pchar.location == "QC_town" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
+		if (rand(3) == 0 && pchar.location == "QC_town" && CheckAttribute(pchar, starterVisibleAttr) && sti(pchar.(starterVisibleAttr)) == true)
 		{
 			PlaceCharacter(characterFromID("Edward Thatch TQC 1"), "goto", homelocation);
 		}
@@ -1429,6 +1429,7 @@ bool QuestComplete_S1(string sQuestName)
 		break;
 
 		case "quest_S1_lastQuest_closed":
+			CloseQuestHeader("PJ_S1");
 			for(n = 1; n <= 17; n++) {GiveItem2Character(Pchar, "jewelry1");}
 			for(n = 1; n <= 7; n++) {GiveItem2Character(Pchar, "jewelry2");}
 			for(n = 1; n <= 14; n++) {GiveItem2Character(Pchar, "jewelry3");}
@@ -1573,9 +1574,3 @@ bool QuestComplete_S1(string sQuestName)
 
 	return false;
 }
-
-
-
-
-
-
