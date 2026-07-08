@@ -130,7 +130,7 @@ void CreateCharacters()
 	ch.quest_S1_Wimund_TQC1_visible = true;
 	ch.quest_S1_Samuel_Bellamy_TQC1_visible = true;
 	ch.quest_S1_Edward_Thatch_TQC1_visible = true;
-	ch.quest_S1_final_enabled = false;
+	ch.quest_S1_final_enabled = true;
 	// GiveItem2Character(ch, "blade1");
 	// GiveItem2Character(ch, "blade2");
 	// GiveItem2Character(ch, "blade3");
