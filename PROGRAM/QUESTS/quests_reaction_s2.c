@@ -407,6 +407,22 @@ bool QuestComplete_S2(string sQuestName)
 			CloseQuestHeader("PJ_S2");
 			return true;
 		break;
+
+		case "quest_S2_timeOut":
+			variant = S2_GetActiveVariant();
+			if (variant == 0)
+			{
+				break;
+			}
+
+			Log_SetStringToLog(GlobalStringConvert("PJ_S2_failed"));
+			AddQuestRecord("PJ_S2", S2_GetQuestFailureRecord());
+			S2_SetVariantCompletion(variant, false);
+			S2_ClearTimeout();
+			pchar.quest_S2_started = 0;
+			CloseQuestHeader("PJ_S2");
+			return true;
+		break;
 	}
 
 	return false;
