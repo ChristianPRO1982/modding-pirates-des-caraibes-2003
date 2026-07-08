@@ -3743,6 +3743,15 @@ void QuestComplete(string sQuestName)
 			LAi_group_SetAlarm("ENGLAND_CITIZENS", LAI_GROUP_PLAYER, 0.0);
 			LAi_group_SetAlarm("FRANCE_SOLDIERS", LAI_GROUP_PLAYER, 0.0);
 
+			pchar.quest_S1_Elizabeth_Goodale_TQC1_visible = true;
+			pchar.quest_S1_Eustache_Busket_TQC1_visible = true;
+			pchar.quest_S1_Bartolomeo_Portugues_TQC1_visible = true;
+			pchar.quest_S1_Benito_Bonito_TQC1_visible = true;
+			pchar.quest_S1_Hendrick_van_Hoven_TQC1_visible = true;
+			pchar.quest_S1_Wimund_TQC1_visible = true;
+			pchar.quest_S1_Samuel_Bellamy_TQC1_visible = true;
+			pchar.quest_S1_Edward_Thatch_TQC1_visible = true;
+
 			LAi_LocationFightDisable(&Locations[FindLocation("redmond_prison")], true);
 			pchar.quest.kill_edgar_attwood_in_prison.over = "yes";
 			pchar.quest.to_locator_where_soldiers_in_prison_see_you.over = "yes";
@@ -12485,3 +12494,4 @@ void QuestComplete(string sQuestName)
 		// fin ajout PJ
 	}
 }
+

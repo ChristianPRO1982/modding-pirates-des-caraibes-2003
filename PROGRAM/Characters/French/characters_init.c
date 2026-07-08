@@ -122,14 +122,14 @@ void CreateCharacters()
 	//QUESTS PJ
 	//S1 : chasseur de tresor
 	GenerateTreasureHunterQuests();
-	ch.quest_S1_Elizabeth_Goodale_TQC1_visible = true;
-	ch.quest_S1_Eustache_Busket_TQC1_visible = true;
-	ch.quest_S1_Bartolomeo_Portugues_TQC1_visible = true;
-	ch.quest_S1_Benito_Bonito_TQC1_visible = true;
-	ch.quest_S1_Hendrick_van_Hoven_TQC1_visible = true;
-	ch.quest_S1_Wimund_TQC1_visible = true;
-	ch.quest_S1_Samuel_Bellamy_TQC1_visible = true;
-	ch.quest_S1_Edward_Thatch_TQC1_visible = true;
+	ch.quest_S1_Elizabeth_Goodale_TQC1_visible = false;
+	ch.quest_S1_Eustache_Busket_TQC1_visible = false;
+	ch.quest_S1_Bartolomeo_Portugues_TQC1_visible = false;
+	ch.quest_S1_Benito_Bonito_TQC1_visible = false;
+	ch.quest_S1_Hendrick_van_Hoven_TQC1_visible = false;
+	ch.quest_S1_Wimund_TQC1_visible = false;
+	ch.quest_S1_Samuel_Bellamy_TQC1_visible = false;
+	ch.quest_S1_Edward_Thatch_TQC1_visible = false;
 	ch.quest_S1_final_enabled = true;
 	// GiveItem2Character(ch, "blade1");
 	// GiveItem2Character(ch, "blade2");
@@ -391,3 +391,4 @@ void SetAllFellows()
 		}
 	}
 }
+
