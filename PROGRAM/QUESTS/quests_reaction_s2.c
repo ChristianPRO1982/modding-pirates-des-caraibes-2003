@@ -194,6 +194,47 @@ int S2_GetQuestTimeoutDays()
 	return 7;
 }
 
+bool S2_IsVariantDone(int variant)
+{
+	ref pchar = GetMainCharacter();
+
+	switch (variant)
+	{
+		case 1: return pchar.quest_S2_Redmond_done == true; break;
+		case 2: return pchar.quest_S2_FalaiseDeFleur_done == true; break;
+		case 3: return pchar.quest_S2_Conceicao_done == true; break;
+		case 4: return pchar.quest_S2_IslaMuelle_done == true; break;
+		case 5: return pchar.quest_S2_Douwesen_done == true; break;
+		case 6: return pchar.quest_S2_Greenford_done == true; break;
+		case 7: return pchar.quest_S2_Oxbay_done == true; break;
+	}
+
+	return false;
+}
+
+void S2_HideAllNpcs()
+{
+	int variant;
+	string loverId;
+	string ladyId;
+
+	for (variant = 1; variant <= 7; variant++)
+	{
+		loverId = S2_GetLoverId(variant);
+		ladyId = S2_GetLadyId(variant);
+		if (loverId != "")
+		{
+			PlaceCharacter(characterFromID(loverId), "goto", "none");
+		}
+		if (ladyId != "")
+		{
+			PlaceCharacter(characterFromID(ladyId), "goto", "none");
+		}
+	}
+
+	PlaceCharacter(characterFromID(S2_GetFinalNpcId()), "goto", "none");
+}
+
 // jewelry6 : bague en argent et saphir = 769
 // jewelry7 : bague en or et emeraude = 961
 // jewelry10 : bague en or et saphir = 1538
@@ -204,6 +245,42 @@ int S2_GetQuestTimeoutDays()
 
 void S2_ProcessLocationEnter()
 {
+	ref pchar = GetMainCharacter();
+	string homelocation;
+	int variant;
+	string loverId;
+
+	homelocation = pchar.location;
+	S2_HideAllNpcs();
+
+	if (S2_GetActiveVariant() != 0)
+	{
+		return;
+	}
+
+	variant = S2_GetVariantFromLoverLocation(homelocation);
+	if (variant == 0)
+	{
+		return;
+	}
+
+	if (S2_IsVariantDone(variant))
+	{
+		return;
+	}
+
+	if (rand(7) != 0)
+	{
+		return;
+	}
+
+	loverId = S2_GetLoverId(variant);
+	if (loverId == "")
+	{
+		return;
+	}
+
+	PlaceCharacter(characterFromID(loverId), "goto", homelocation);
 }
 
 bool QuestComplete_S2(string sQuestName)
