@@ -86,7 +86,7 @@ string S2_GetLoverId(int variant)
 		case 1: return "Llewellyn Brooker"; break;
 		case 2: return "Fabrisse De Lucien"; break;
 		case 3: return "Florencio Baiano"; break;
-		case 4: return "Cricorium Taffarel"; break;
+		case 4: return "Gregorio de Acosta"; break;
 		case 5: return "Ghijsbrecht Van Der Hagen"; break;
 		case 6: return "Rawlin Feaver"; break;
 		case 7: return "Rys Scorer"; break;
@@ -338,6 +338,14 @@ bool QuestComplete_S2(string sQuestName)
 			}
 
 			S2_ArmTimeout();
+			return true;
+		break;
+
+		case "quest_S2_closed_1":
+			AddQuestRecord("PJ_S2", S2_GetQuestSuccessRecord(S2_GetActiveVariant()));
+			ChangeCharacterReputation(pchar, 7);
+			AddPartyExp(pchar, 1000 * makeint(pchar.rank));
+			DoQuestCheckDelay("quest_S2_closed_2", 1.0);
 			return true;
 		break;
 	}

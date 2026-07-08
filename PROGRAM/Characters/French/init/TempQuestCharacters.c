@@ -5355,9 +5355,9 @@ int CreateTempQuestCharacters(int n)
 	///// ISLA MUELLE \\\\\
 	/////////// \\\\\\\\\\\
 	makeref(ch,Characters[n]);
-	ch.name = "Cricorium";
-	ch.lastname = "Taffarel";
-	ch.id = "Cricorium Taffarel";
+	ch.name = "Gregorio";
+	ch.lastname = "de Acosta";
+	ch.id = "Gregorio de Acosta";
 	ch.model = "huber_spa";
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";

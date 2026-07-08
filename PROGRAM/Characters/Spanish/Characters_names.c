@@ -358,7 +358,7 @@ void InitCharactersNames()
 	n = AddStr2Array(&sPoFamilies, n, "Peixoto,Pereira,Pereyra,Pessao,Pessoa,Peteira,Pinto,Pinto,Pitta,Pombal,Porfirio,Prazeres,Prestes,Queiroz");
 	n = AddStr2Array(&sPoFamilies, n, "Ramos,Regalo,Reis,Resende,Ribeiro,Rios,Rivaldo,Rocha,Rodrigues,Rosa,Rubalcaba,Rui Sa Pinto,Sacramento");
 	n = AddStr2Array(&sPoFamilies, n, "Salazar,Salvador,Sampaio,Santos,Santoso,Secretario,Serpa,Serrao,Simoes,Simos,Soares,Sobrinho,Sousa");
-	n = AddStr2Array(&sPoFamilies, n, "Soveral,Taffarel,Tanse,Teixeira,Torres,Travada,Travassos,Trigoso,Vaz,Velho,Vento,Vidigal,Vieira,Vilela");
+	n = AddStr2Array(&sPoFamilies, n, "Soveral,de Acosta,Tanse,Teixeira,Torres,Travada,Travassos,Trigoso,Vaz,Velho,Vento,Vidigal,Vieira,Vilela");
 	n = AddStr2Array(&sPoFamilies, n, "Villa,Vilna,Violate,Vozone,Zeimoto,Zonta");
 
 // French
@@ -592,7 +592,7 @@ void InitCharactersNames()
 	n = AddStr2Array(&sSpManNames, n, "Barros,Bartolome,Bartolomeau,Bastiacute,Bautista,Beatus,Bellito,Beltran,Benatus,Beneyto,Benito,Bera");
 	n = AddStr2Array(&sSpManNames, n, "Bernaldus,Bernardino,Bernardo,Bernardo,Berto,Blas,Bolimirus,Bonifacius,Bonimirus,Bonon,Braolio,Cambranes");
 	n = AddStr2Array(&sSpManNames, n, "Carlo,Carlos,Celestino,Cereial,Cesario,Chago,Chencho,Chico,Christoforo,Christofor,Cililia,Cipriano");
-	n = AddStr2Array(&sSpManNames, n, "Ciprianus,Ciro,Cisila,Citi,Claudio,Conantius,Coram,Correnbalde,Cosendinus,Cosme,Cricorium,Cristobal");
+	n = AddStr2Array(&sSpManNames, n, "Ciprianus,Ciro,Cisila,Citi,Claudio,Conantius,Coram,Correnbalde,Cosendinus,Cosme,Gregorio,Cristobal");
 	n = AddStr2Array(&sSpManNames, n, "Daniel,Daniel,Dante,Dario,David,Deodato,Deodavi,Diaco,Diago,Diago,Diaz,Diego,Domingo,Dominico,Dominico");
 	n = AddStr2Array(&sSpManNames, n, "Don,Donato,Donino,Donnel,Donno,Dulcidio,Durante,Ecta,Edmundo,Eduardo,Eduardo,Egas,Egica,Egila,Eiza");
 	n = AddStr2Array(&sSpManNames, n, "Eizac,Elca,Eldo,Eloy,Elpidius,Emellio,Emiliano,Enrique,Enrique,Ermegildo,Ermegildus,Ermildi,Ernesto");
@@ -712,7 +712,7 @@ void InitCharactersNames()
 	n = AddStr2Array(&sSpFamilies, n, "Sanz,Sarabia,Sarmiento,Sarsola,Seabra,Sebrian,Seda,Sedeno,Segarra,Segurola,Senra-Silva,Sepulveda,Sergi");
 	n = AddStr2Array(&sSpFamilies, n, "Serna,Serpa,Serra,Serrano,Sert,Servia,Siculo,Sieres,Sierra,Siliceo,Silloniz,Soitino,Solana,Solano");
 	n = AddStr2Array(&sSpFamilies, n, "Soldadera,Soldan,Solozano,Sortani,Sosa,Sota,Sotelo,Sotomayor,Spano,Sporleda,Suarez,Suarez,Tabuyo,Tadena");
-	n = AddStr2Array(&sSpFamilies, n, "Taffarel,Tapia,Tarrega,Tavares,Tejada,Tello,Teofilo,Terezinho,Terranova,Terreros,Texidor,Tintorero");
+	n = AddStr2Array(&sSpFamilies, n, "de Acosta,Tapia,Tarrega,Tavares,Tejada,Tello,Teofilo,Terezinho,Terranova,Terreros,Texidor,Tintorero");
 	n = AddStr2Array(&sSpFamilies, n, "Toldeo,Toledano,Toledo,Tomas,Toriano,Toribio,Torrens,Torres,Torrillas,Tortosa,Tovar,Troncoso,Trujillo");
 	n = AddStr2Array(&sSpFamilies, n, "Tuero,Tuscarora,Ubidia,Ugarte,Ulloa,Unzue,Urrutia,Urteaga,Ussica,Vaime,Valcarcel,Valderrama,Valencia");
 	n = AddStr2Array(&sSpFamilies, n, "Valente,Valenzuela,Valero,Vales,Valignano,Vallalpando,Valle,Vallejo,Vaquero,Varela,Vargas,Vargos,Vasques");

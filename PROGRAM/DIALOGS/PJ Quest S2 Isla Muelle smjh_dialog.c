@@ -15,7 +15,7 @@ void ProcessDialogEvent()
 	makeref(d, Dialog);
 	makearef(Diag, NPChar.Dialog);
 
-	amantFullName = "Cricorium Taffarel";
+	amantFullName = "Gregorio de Acosta";
 	smjhJewelry = "une broche en argent de son pays natal.";
 	smjhJewelryID = "jewelry13";
 

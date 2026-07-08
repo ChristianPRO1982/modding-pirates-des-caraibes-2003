@@ -76,7 +76,7 @@ Les bijoux restent fixes par ville. Ne pas remplacer ce fonctionnement par un ti
 | 1 | Redmond | Llewellyn Brooker | Magdalen Spooner | `Redmond_town_04` | `Redmond_town_03` | `jewelry7` |
 | 2 | Falaise de Fleur | Fabrisse De Lucien | Donatienne de La Fayette | `Falaise_De_Fleur_location_02` | `Falaise_De_Fleur_location_03` | `jewelry10` |
 | 3 | Conceicao | Florencio Baiano | Violante Pinto | `Conceicao_town` | `Conceicao_town` | `jewelry14` |
-| 4 | Isla Muelle | Cricorium Taffarel | Alejandrina Acosto | `Muelle_town_02` | `Muelle_town_04` | `jewelry13` |
+| 4 | Isla Muelle | Gregorio de Acosta | Alejandrina Acosto | `Muelle_town_02` | `Muelle_town_04` | `jewelry13` |
 | 5 | Douwesen | Ghijsbrecht Van Der Hagen | Tjaatje Meilink-Roelofsz | `Douwesen_town` | `Douwesen_town` | `jewelry6` |
 | 6 | Greenford | Rawlin Feaver | Astrid Weather | `Greenford_town` | `Greenford_town` | `jewelry15` |
 | 7 | Oxbay | Rys Scorer | Valeria Pride | `Oxbay_town` | `Oxbay_town` | `jewelry16` |

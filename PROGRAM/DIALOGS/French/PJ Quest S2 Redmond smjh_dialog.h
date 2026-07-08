@@ -1,20 +1,20 @@
-string DLG_TEXT[17] = {
-"Bonjour monsieur. Redmond apprend tres tot a se mefier. Qui etes-vous ?",
+string DLG_TEXT[18] = {
+"Bonjour monsieur. Redmond apprend très tôt à se méfier. Qui êtes-vous ?",
 "Je viens de la part de ",
 " et je ne vous veux aucun mal.",
 "Vous pouvez parler. Mais choisissez bien vos mots.",
-"Llewellyn Brooker m'envoie. Il espere encore que vous ecouterez ce qu'il n'ose pas dire en face.",
-"Llewellyn est brave, mais Redmond est pleine de fils obÃ©issants tant que leurs meres les regardent.",
+"Llewellyn Brooker m'envoie. Il espère encore que vous écouterez ce qu'il n'ose pas dire en face.",
+"Llewellyn est brave, mais Redmond est pleine de fils d'artisans dociles tant que leurs mères les regardent.",
 "Il voudrait vous prouver qu'il peut choisir seul.",
-"Sans un vrai present, ce ne sont que des mots. Avez-vous apporte ce qu'il promet ?",
+"Sans un vrai présent, ce ne sont que des mots. Avez-vous apporté ce qu'il promet ?",
 "Non. Revenez quand vous aurez autre chose qu'un discours poli.",
-"Alors laissez-moi vous montrer ce qu'il a prepare.",
+"Alors laissez-moi vous montrer ce qu'il a préparé.",
 "Voici l'anneau qu'il vous offre pour vous demander votre main.",
 "Oh... ",
-" ... Il a donc trouve le courage d'aller jusqu'au bout. C'est plus que je n'attendais de Redmond.",
+" ... Il a donc trouvé le courage d'aller jusqu'au bout. C'est plus que je n'attendais de Redmond.",
 "Je pense qu'il saura se montrer digne de vous.",
 "Merci, capitaine ",
-". Dites a Llewellyn que je l'attendrai avec une reponse plus douce que mes habitudes.",
+". Dites à Llewellyn que je l'attendrai avec une réponse plus douce que mes habitudes.",
 "Au revoir, monsieur.",
 "Merci capitaine. Pour une fois, Redmond aura servi une belle histoire."
 };
