@@ -1345,6 +1345,31 @@ bool QuestComplete_S1(string sQuestName)
 			return true;
 		break;
 
+		case "quest_S1_lastQuest_1":
+			DeleteQuestHeader("PJ_S1");
+			SetQuestHeader("PJ_S1");
+			AddQuestRecord("PJ_S1", "38");
+			pchar.quest_S1_currentQuestWon = false;
+			pchar.quest.quest_S1_lastQuest_2.win_condition.l1 = "location";
+			pchar.quest.quest_S1_lastQuest_2.win_condition.l1.location = "QC_pirate_house_inside";
+			pchar.quest.quest_S1_lastQuest_2.win_condition = "quest_S1_lastQuest_2";
+			return true;
+		break;
+
+		case "quest_S1_lastQuest_2":
+			pchar.quest_S1_Unearthing = true;
+			AddQuestRecord("PJ_S1", "39");
+			pchar.quest.quest_S1_completed_1.win_condition.l1 = "locator_PJ";
+			pchar.quest.quest_S1_completed_1.win_condition.l1.minLocx = -13;
+			pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocx = -9;
+			pchar.quest.quest_S1_completed_1.win_condition.l1.minLocy = 1;
+			pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocy = 10;
+			pchar.quest.quest_S1_completed_1.win_condition.l1.minLocz = 7;
+			pchar.quest.quest_S1_completed_1.win_condition.l1.maxLocz = 11;
+			pchar.quest.quest_S1_completed_1.win_condition = "quest_S1_completed_1";
+			return true;
+		break;
+
 		case "quest_S1_completed_1":
 			leaderId = S1_GetLeaderId(pchar.quest_S1_startIsland);
 			if (leaderId == "")
@@ -1502,6 +1527,7 @@ bool QuestComplete_S1(string sQuestName)
 
 	return false;
 }
+
 
 
 
