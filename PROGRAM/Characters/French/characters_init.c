@@ -131,6 +131,24 @@ void CreateCharacters()
 	ch.quest_S1_Samuel_Bellamy_TQC1_visible = false;
 	ch.quest_S1_Edward_Thatch_TQC1_visible = false;
 	ch.quest_S1_final_enabled = true;
+
+	//S2 : amoureux
+	ch.quest_S2_started = 0;
+	ch.quest_S2_Redmond_done = false;
+	ch.quest_S2_Redmond_success = false;
+	ch.quest_S2_FalaiseDeFleur_done = false;
+	ch.quest_S2_FalaiseDeFleur_success = false;
+	ch.quest_S2_Conceicao_done = false;
+	ch.quest_S2_Conceicao_success = false;
+	ch.quest_S2_IslaMuelle_done = false;
+	ch.quest_S2_IslaMuelle_success = false;
+	ch.quest_S2_Douwesen_done = false;
+	ch.quest_S2_Douwesen_success = false;
+	ch.quest_S2_Greenford_done = false;
+	ch.quest_S2_Greenford_success = false;
+	ch.quest_S2_Oxbay_done = false;
+	ch.quest_S2_Oxbay_success = false;
+	ch.quest_S2_final_done = false;
 	// GiveItem2Character(ch, "blade1");
 	// GiveItem2Character(ch, "blade2");
 	// GiveItem2Character(ch, "blade3");
