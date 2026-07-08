@@ -207,6 +207,18 @@ void S1_ResetQuestConditions()
 	pchar.quest.quest_S1_fight_won = "completed";
 }
 
+void S1_ResetLastQuestConditions()
+{
+	ref PChar = GetMainCharacter();
+	pchar.quest.quest_S1_lastQuest_1.over = "yes";
+	pchar.quest.quest_S1_lastQuest_1 = "completed";
+	pchar.quest.quest_S1_lastQuest_2.over = "yes";
+	pchar.quest.quest_S1_lastQuest_2 = "completed";
+	pchar.quest.quest_S1_lastQuest_3.over = "yes";
+	pchar.quest.quest_S1_lastQuest_3 = "completed";
+	pchar.quest.quest_S1_lastQuest_4.over = "yes";
+	pchar.quest.quest_S1_lastQuest_4 = "completed";
+}
 void S1_MarkCurrentQuestCompleted()
 {
 	ref PChar = GetMainCharacter();
@@ -364,6 +376,7 @@ void GenerateTreasureHunterQuests()
 	pchar.quest_S1_gain_jewelry16 = 0;
 	pchar.quest_S1_no_treasure_here_text = 1;
 	pchar.quest_S1_final_enabled = true;
+	S1_ResetLastQuestConditions();
 }
 
 void TreasureHunterNextStep()
@@ -1446,6 +1459,7 @@ bool QuestComplete_S1(string sQuestName)
 	return false;
 }
 //*/
+
 
 
 
