@@ -1371,6 +1371,11 @@ bool QuestComplete_S1(string sQuestName)
 		break;
 
 		case "quest_S1_completed_1":
+			if (pchar.quest_S1_allQuestsCompleted == true)
+			{
+				DoQuestCheckDelay("quest_S1_lastQuest_3", 0.0);
+				return true;
+			}
 			leaderId = S1_GetLeaderId(pchar.quest_S1_startIsland);
 			if (leaderId == "")
 			{
@@ -1396,6 +1401,30 @@ bool QuestComplete_S1(string sQuestName)
 			LAi_SetActorType(pchar);
 			LAi_ActorFollow(pchar, rCrew_leader, "", 2.0);
 			LAi_ActorFollow(rCrew_leader, pchar, "quest_S1_completed_2", 2.0);
+			return true;
+		break;
+
+		case "quest_S1_lastQuest_3":
+			AddQuestRecord("PJ_S1", "40");
+			pchar.quest_S1_Unearthing = false;
+			PlaceCharacter(characterFromID("Youyi TQC 1"), "goto", "none");
+			homelocation = pchar.location;
+			rCrew_leader = characterFromID("Youyi TQC 2");
+			PlaceCharacter(rCrew_leader, "goto", homelocation);
+			LAi_SetActorType(rCrew_leader);
+			LAi_SetActorType(pchar);
+			LAi_ActorFollow(pchar, rCrew_leader, "", 2.0);
+			LAi_ActorFollow(rCrew_leader, pchar, "quest_S1_lastQuest_4", 2.0);
+			return true;
+		break;
+
+		case "quest_S1_lastQuest_4":
+			AddPartyExp(pchar, makeint(pchar.rank) * 1000);
+			LAi_type_actor_Reset(pchar);
+			rCrew_leader = characterFromID("Youyi TQC 2");
+			LAi_ActorWaitDialog(pchar, rCrew_leader);
+			LAi_ActorDialog(rCrew_leader, pchar, "pchar_back_to_player", 2.0, 1.0);
+			characters[GetCharacterIndex("Youyi TQC 2")].dialog.currentnode = "complete_quest";
 			return true;
 		break;
 
@@ -1527,6 +1556,7 @@ bool QuestComplete_S1(string sQuestName)
 
 	return false;
 }
+
 
 
 
