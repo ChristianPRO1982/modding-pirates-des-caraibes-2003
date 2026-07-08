@@ -1428,6 +1428,23 @@ bool QuestComplete_S1(string sQuestName)
 			return true;
 		break;
 
+		case "quest_S1_lastQuest_closed":
+			for(n = 1; n <= 17; n++) {GiveItem2Character(Pchar, "jewelry1");}
+			for(n = 1; n <= 7; n++) {GiveItem2Character(Pchar, "jewelry2");}
+			for(n = 1; n <= 14; n++) {GiveItem2Character(Pchar, "jewelry3");}
+			for(n = 1; n <= 9; n++) {GiveItem2Character(Pchar, "jewelry4");}
+			for(n = 1; n <= 7; n++) {GiveItem2Character(Pchar, "jewelry5");}
+			for(n = 1; n <= 14; n++) {GiveItem2Character(Pchar, "jewelry11");}
+			for(n = 1; n <= 27; n++) {GiveItem2Character(Pchar, "jewelry12");}
+			PlaceCharacter(characterFromID("Youyi TQC 2"), "goto", "none");
+			S1_ResetLastQuestConditions();
+			pchar.quest.quest_S1_completed_1.over = "yes";
+			pchar.quest.quest_S1_completed_1 = "completed";
+			pchar.quest_S1_allQuestsCompleted = false;
+			pchar.quest_S1_currentQuestWon = false;
+			return true;
+		break;
+
 		case "quest_S1_completed_2":
 			leaderId = S1_GetLeaderId(pchar.quest_S1_startIsland);
 			if (leaderId == "")
@@ -1556,6 +1573,7 @@ bool QuestComplete_S1(string sQuestName)
 
 	return false;
 }
+
 
 
 
