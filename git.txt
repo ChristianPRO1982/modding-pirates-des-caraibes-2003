@@ -1,3 +1,3 @@
 git add .
-git commit -m "debug - premier tour - mécanique OK - dialogues KO"
+git commit -m "debug - deuxième tour - mécanique OK - dialogues OK pour Oxbay"
 git push origin dev-s2_the_Lovers_quest
