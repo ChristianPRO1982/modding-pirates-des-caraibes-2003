@@ -5,6 +5,7 @@
 #include "quests\quests_scenes.c"
 #include "quests\both_reaction.c"
 #include "quests\quests_reaction.c"
+#include "quests\quests_reaction_help.c"
 #include "quests\quests_reaction_s1.c"
 #include "quests\quests_reaction_s2.c"
 #include "quests\quests_reaction_s3.c"
@@ -59,6 +60,7 @@ void QuestsCheck_forLocEnter()
 
 	QC_DoUnloadLocation();
 	QuestsCheck();
+	HELP_ProcessLocationEnter();
 	S1_ProcessLocationEnter();
 	S2_ProcessLocationEnter();
 	// S3_ProcessLocationEnter();

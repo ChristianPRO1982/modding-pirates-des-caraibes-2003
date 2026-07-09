@@ -54,6 +54,30 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[6];
 			link.l1.go = "donation";
 			link.l2 = DLG_TEXT[7];
+						if (CheckAttribute(pchar, "quest_S3_city") && pchar.quest_S3_city == "Conceicao")
+			{
+				if (CheckAttribute(pchar, "quest_S3_status"))
+				{
+					switch (pchar.quest_S3_status)
+					{
+						case "accepted":
+						case "investigation":
+						case "candidate_target_kill":
+						case "candidate_target_release":
+							if (!CheckAttribute(pchar, "quest_S3_informant_priest"))
+							{
+								link.l20 = "J'aurais besoin de votre jugement sur une personne de cette ville.";
+								link.l20.go = "S3_priest_start";
+							}
+							else
+							{
+								link.l21 = "Vous m'avez deja parle de cette affaire.";
+								link.l21.go = "S3_priest_repeat";
+							}
+						break;
+					}
+				}
+			}
 			link.l2.go = "exit";
 		break;
 
@@ -173,6 +197,30 @@ void ProcessDialogEvent()
 		case "Exit":
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+		case "S3_priest_start":
+			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
+			{
+				d.Text = "Si vous me demandez mon jugement en conscience, je ne vous mentirai pas. " + pchar.quest_S3_target_name + " porte une faute grave dans son ame. Cette personne n'est pas innocente.";
+			}
+			else
+			{
+				d.Text = "Si vous me demandez mon jugement en conscience, je ne vous mentirai pas. Je ne vois pas dans l'ame de " + pchar.quest_S3_target_name + " la noirceur dont on l'accuse. A mes yeux, cette personne est innocente.";
+			}
+			link.l1 = "Cela me suffit.";
+			link.l1.go = "S3_priest_done";
+		break;
+
+		case "S3_priest_done":
+			pchar.quest_S3_informant_priest = true;
+			Log_SetStringToLog("S3 informant answered");
+			DialogExit();
+		break;
+
+		case "S3_priest_repeat":
+			d.Text = "Je vous ai deja dit ce que je pouvais en conscience. La suite vous appartient.";
+			link.l1 = "Je comprends.";
+			link.l1.go = "exit";
 		break;
 	}
 }

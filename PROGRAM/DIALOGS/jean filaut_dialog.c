@@ -59,6 +59,30 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[10];
 			link.l1.go = "Second time";
 			link.l2 = DLG_TEXT[11];
+						if (CheckAttribute(pchar, "quest_S3_city") && pchar.quest_S3_city == "FalaiseDeFleur")
+			{
+				if (CheckAttribute(pchar, "quest_S3_status"))
+				{
+					switch (pchar.quest_S3_status)
+					{
+						case "accepted":
+						case "investigation":
+						case "candidate_target_kill":
+						case "candidate_target_release":
+							if (!CheckAttribute(pchar, "quest_S3_informant_shipyard"))
+							{
+								link.l20 = "J'aurais besoin d'un avis de marin sur quelqu'un de cette ville.";
+								link.l20.go = "S3_shipyard_start";
+							}
+							else
+							{
+								link.l21 = "Vous m'avez deja parle de cette personne.";
+								link.l21.go = "S3_shipyard_repeat";
+							}
+						break;
+					}
+				}
+			}
 			link.l2.go = "exit";
 		break;
 
@@ -165,6 +189,30 @@ void ProcessDialogEvent()
 		case "Exit":
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+		case "S3_shipyard_start":
+			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
+			{
+				d.Text = "Sur les quais, on reconnait les hommes nets et ceux qui cherchent toujours a embarquer avant l'aube. " + pchar.quest_S3_target_name + " a laisse derriere soi assez de signes pour faire froncer bien des sourcils.";
+			}
+			else
+			{
+				d.Text = "Je vois passer les gens du port toute la journee. " + pchar.quest_S3_target_name + " n'a pas la demarche d'un coupe-jarret traque ni les habitudes d'un vrai malfaiteur. Je dirais qu'on charge cette personne un peu vite.";
+			}
+			link.l1 = "C'est note.";
+			link.l1.go = "S3_shipyard_done";
+		break;
+
+		case "S3_shipyard_done":
+			pchar.quest_S3_informant_shipyard = true;
+			Log_SetStringToLog("S3 informant answered");
+			DialogExit();
+		break;
+
+		case "S3_shipyard_repeat":
+			d.Text = "Je vous ai deja livre mon sentiment. Les quais n'ont rien ajoute depuis.";
+			link.l1 = "Je comprends.";
+			link.l1.go = "exit";
 		break;
 	}
 }

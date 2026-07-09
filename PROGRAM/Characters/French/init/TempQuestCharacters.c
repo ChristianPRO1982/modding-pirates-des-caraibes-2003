@@ -4,6 +4,44 @@ int CreateTempQuestCharacters(int n)
 {
 	ref ch;
 	// ajout PJ
+
+	//§§§§§§§§§§§§
+	//§§§ HELP §§§
+	//§§§§§§§§§§§§
+	makeref(ch,Characters[n]);			// Malcolm Hatcher
+	ch.name 	= "Malcolm";
+	ch.lastname 	= "Hatcher";
+	ch.id		= "HELP Malcolm Hatcher";
+	ch.model = "bocman3";
+	ch.sex = "man";
+	ch.sound_type = "pirate";
+	GiveItem2Character(ch, "blade20");
+	ch.equip.blade = "blade20";
+	ch.location	= "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "Malcolm Hatcher_dialog.c";
+	ch.greeting = "Gr_Malcolm Hatcher";
+	ch.rank 	= 7;
+	ch.reputation = "30";
+	ch.experience = "0";
+	ch.skill.Leadership = "0";
+	ch.skill.Fencing = "10";
+	ch.skill.Sailing = "6";
+	ch.skill.Accuracy = "3";
+	ch.skill.Cannons = "3";
+	ch.skill.Grappling = "4";
+	ch.skill.Repair = "5";
+	ch.skill.Defence = "4";
+	ch.skill.Commerce = "2";
+	ch.skill.Sneak = "1";
+	ch.money = "500";
+	ch.quest.meeting = "0";
+	LAi_SetWarriorTypeNoGroup(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 400.0, 400.0);
+	n = n + 1;
+
 	//§§§§§§§§§§§§§§§§
 	//§§§ QUEST S1 §§§
 	//§§§§§§§§§§§§§§§§

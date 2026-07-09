@@ -96,7 +96,30 @@ void ProcessDialogEvent()
 
 		case "quests":
 			iTest = 0;
-			if (CheckAttribute(pchar, "quest.iQuantityGoods"))
+						if (CheckAttribute(pchar, "quest_S3_city") && pchar.quest_S3_city == "Douwesen")
+			{
+				if (CheckAttribute(pchar, "quest_S3_status"))
+				{
+					switch (pchar.quest_S3_status)
+					{
+						case "accepted":
+						case "investigation":
+						case "candidate_target_kill":
+						case "candidate_target_release":
+							if (!CheckAttribute(pchar, "quest_S3_informant_merchant"))
+							{
+								link.l20 = "Je voudrais votre avis de marchand sur une personne de cette ville.";
+								link.l20.go = "S3_merchant_start";
+							}
+							else
+							{
+								link.l21 = "Vous m'avez deja donne votre avis sur cette affaire.";
+								link.l21.go = "S3_merchant_repeat";
+							}
+						break;
+					}
+				}
+			}if (CheckAttribute(pchar, "quest.iQuantityGoods"))
 			{
 				int iQuantityShipGoods = pchar.quest.iQuantityGoods;
 				int iQuestTradeGoods = pchar.quest.iTradeGoods;
@@ -250,6 +273,30 @@ void ProcessDialogEvent()
 		case "Exit":
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			DialogExit();
+		break;
+		case "S3_merchant_start":
+			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
+			{
+				d.Text = "Un marchand apprend vite a reconnaitre les clients qui paient trop tard, mentent trop vite et changent trop souvent d'histoire. " + pchar.quest_S3_target_name + " m'inspire ce genre de mefiance. Je ne ferais pas credit a cette personne.";
+			}
+			else
+			{
+				d.Text = "Je juge les gens a leurs comptes, a leurs promesses et a la facon dont ils traitent ceux qui dependent d'eux. Jusqu'ici, je n'ai rien vu chez " + pchar.quest_S3_target_name + " qui merite un chatiment de sang.";
+			}
+			link.l1 = "Votre franchise m'est utile.";
+			link.l1.go = "S3_merchant_done";
+		break;
+
+		case "S3_merchant_done":
+			pchar.quest_S3_informant_merchant = true;
+			Log_SetStringToLog("S3 informant answered");
+			DialogExit();
+		break;
+
+		case "S3_merchant_repeat":
+			d.Text = "Je vous ai deja dit ce que j'avais observe. Je n'ai rien a y ajouter pour le moment.";
+			link.l1 = "Tres bien.";
+			link.l1.go = "exit";
 		break;
 	}
 }
