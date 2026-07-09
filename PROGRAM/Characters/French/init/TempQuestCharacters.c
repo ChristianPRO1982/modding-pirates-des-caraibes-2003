@@ -20,7 +20,7 @@ int CreateTempQuestCharacters(int n)
 	ch.location	= "none";
 	ch.location.group = "";
 	ch.location.locator = "";
-	ch.Dialog.Filename = "Malcolm Hatcher_dialog.c";
+	ch.Dialog.Filename = "PJ HELP Malcolm Hatcher_dialog.c";
 	ch.greeting = "Gr_Malcolm Hatcher";
 	ch.rank 	= 7;
 	ch.reputation = "30";
