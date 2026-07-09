@@ -5,6 +5,15 @@
 
 Cette spec decrit uniquement la partie technique cible. Les PNJ, noms, dialogues, textes detailles et variantes narratives seront documentes dans une annexe separee.
 
+## Documentations
+
+`S3` possède plusieurs doc de cadrage :
+- docs\quests\quest_s3_1_Par_l_Article_du_Sabre_technique.md : ce document d'entrée
+- docs\quests\quest_s3_2_Par_l_Article_du_Sabre_pilotage.md : Pour cadrer l?ordre de travail sans doublonner le contexte technique du repo.
+- docs\quests\quest_s3_3_Par_l_Article_du_Sabre_questbook.md : Avec une version à placeholders et une version générique sans placeholders, au cas où le moteur ne remplace pas dynamiquement les noms.
+- docs\quests\quest_s3_4_Par_l_Article_du_Sabre_annexe_PNJ_tableaux_lois.md : réserve exploitable : noms, tableaux d?indices, dialogues-types et codex pirate. Elle contient : noms possibles du commanditaire ; noms possibles des cibles ; PNJ informateurs ; tableau de probabilités ; tables de répliques par PNJ ; table de fausses pistes ; codex des 10 lois pirates.
+- docs\quests\quest_s3_5_Par_l_Article_du_Sabre_dialogues.md : dédié aux dialogues jouables de S3. Il contient : première rencontre avec le commanditaire ; relance après refus/interruption ; propositions de mission ; demande de précisions ; confirmation finale avec {TARGET_NAME} et {REWARD_GOLD} ; dialogues avec cible masculine et féminine ; confirmation combat/libération ; retour au commanditaire si cible tuée ; duel contre le commanditaire si cible libérée.
+
 ## Scope
 `S3` doit rester compatible avec du modding simple par fichiers plats uniquement.
 
