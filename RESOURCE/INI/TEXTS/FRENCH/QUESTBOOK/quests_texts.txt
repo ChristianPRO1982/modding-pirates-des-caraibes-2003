@@ -916,3 +916,51 @@ Il faut sortir de la plage et s'enfoncer dans la jungle. Continuer tout droit ve
 La carte du trésor indique l'île d'Isla Muelle, un lieu nommé la "plage aux huîtres".
 #TEXT	46
 La carte indique qu'il faut sortir de la plage et aller dans la jungle. Il faut passer sous une arche puis prendre un pont de singe. Juste avant de s'enfoncer dans un passage creusé dans la montagne, il y a des rochers prêts à tomber sur la droite. Le trésor y est enterré.
+#QUEST	PJ_S2
+Quete des amoureux
+#TEXT	1
+Je me suis engage a aider Llewellyn Brooker a demander la main de Magdalen Spooner a Redmond. Je dois etre un peu fleur bleue ! En tout cas, je n'ai qu'une semaine pour trouver le cadeau ideal pour la demande en fiancailles.
+#TEXT	2
+Je me suis engage a aider Fabrisse De Lucien a demander la main de Donatienne de La Fayette a Falaise de Fleur. Je dois etre un peu fleur bleue ! En tout cas, je n'ai qu'une semaine pour trouver le cadeau ideal pour la demande en fiancailles.
+#TEXT	3
+Je me suis engage a aider Florencio Baiano a demander la main de Violante Pinto a Conceicao. Je dois etre un peu fleur bleue ! En tout cas, je n'ai qu'une semaine pour trouver le cadeau ideal pour la demande en fiancailles.
+#TEXT	4
+Je me suis engage a aider Gregorio de Acosta a demander la main d'Alejandrina Acosto a Isla Muelle. Je dois etre un peu fleur bleue ! En tout cas, je n'ai qu'une semaine pour trouver le cadeau ideal pour la demande en fiancailles.
+#TEXT	5
+Je me suis engage a aider Ghijsbrecht Van Der Hagen a demander la main de Tjaatje Meilink-Roelofsz a Douwesen. Je dois etre un peu fleur bleue ! En tout cas, je n'ai qu'une semaine pour trouver le cadeau ideal pour la demande en fiancailles.
+#TEXT	6
+Je me suis engage a aider Rawlin Feaver a demander la main d'Astrid Weather a Greenford. Je dois etre un peu fleur bleue ! En tout cas, je n'ai qu'une semaine pour trouver le cadeau ideal pour la demande en fiancailles.
+#TEXT	7
+Je me suis engage a aider Rys Scorer a demander la main de Valeria Pride a Oxbay. Je dois etre un peu fleur bleue ! En tout cas, je n'ai qu'une semaine pour trouver le cadeau ideal pour la demande en fiancailles.
+#TEXT	8
+Ce n'est pas n'importe quel cadeau qu'elle souhaite a Redmond, mais une bague en or sertie d'emeraudes.
+#TEXT	9
+Ce n'est pas n'importe quel cadeau qu'elle souhaite a Falaise de Fleur, mais une bague en or sertie de saphirs.
+#TEXT	10
+Ce n'est pas n'importe quel cadeau qu'elle souhaite a Conceicao, mais une broche en or.
+#TEXT	11
+Ce n'est pas n'importe quel cadeau qu'elle souhaite a Isla Muelle, mais une broche en argent de son pays natal.
+#TEXT	12
+Ce n'est pas n'importe quel cadeau qu'elle souhaite a Douwesen, mais une bague en argent sertie de saphirs.
+#TEXT	13
+Ce n'est pas n'importe quel cadeau qu'elle souhaite a Greenford, mais un pendentif en emeraude.
+#TEXT	14
+Ce n'est pas n'importe quel cadeau qu'elle souhaite a Oxbay, mais un collier en pierres precieuses.
+#TEXT	15
+Llewellyn Brooker et Magdalen Spooner vont enfin pouvoir se fiancer a Redmond. Mon aide n'aura pas ete vaine.
+#TEXT	16
+Fabrisse De Lucien et Donatienne de La Fayette vont enfin pouvoir se fiancer a Falaise de Fleur. Mon aide n'aura pas ete vaine.
+#TEXT	17
+Florencio Baiano et Violante Pinto vont enfin pouvoir se fiancer a Conceicao. Mon aide n'aura pas ete vaine.
+#TEXT	18
+Gregorio de Acosta et Alejandrina Acosto vont enfin pouvoir se fiancer a Isla Muelle. Mon aide n'aura pas ete vaine.
+#TEXT	19
+Ghijsbrecht Van Der Hagen et Tjaatje Meilink-Roelofsz vont enfin pouvoir se fiancer a Douwesen. Mon aide n'aura pas ete vaine.
+#TEXT	20
+Rawlin Feaver et Astrid Weather vont enfin pouvoir se fiancer a Greenford. Mon aide n'aura pas ete vaine.
+#TEXT	21
+Rys Scorer et Valeria Pride vont enfin pouvoir se fiancer a Oxbay. Mon aide n'aura pas ete vaine.
+#TEXT	22
+Malheureusement, le temps a manque pour aider ces tourtereaux.
+#TEXT	23
+J'ai rencontre Fabiola Rochefort, une vieille femme qui m'a observe depuis tout ce temps ou j'aidais des amoureux a se fiancer. Elle m'a remercie en m'offrant un coffre rempli de bijoux de luxe. Comme quoi, etre fleur bleue vaut le coup !
