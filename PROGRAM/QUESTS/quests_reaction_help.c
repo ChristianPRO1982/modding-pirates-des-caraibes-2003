@@ -8,13 +8,13 @@ void HELP_ProcessLocationEnter()
 	
 	switch (pchar.location)
 	{
-		case "Conceicao_port": PlaceCharacter(characterFromID("HELP Malcolm Hatcher"), "goto", homelocation); break;
-		case "Falaise_de_fleur_port_01": PlaceCharacter(characterFromID("HELP Malcolm Hatcher"), "goto", homelocation); break;
-		case "Redmond_port": PlaceCharacter(characterFromID("HELP Malcolm Hatcher"), "goto", homelocation); break;
-		case "Muelle_port": PlaceCharacter(characterFromID("HELP Malcolm Hatcher"), "goto", homelocation); break;
-		case "Douwesen_port": PlaceCharacter(characterFromID("HELP Malcolm Hatcher"), "goto", homelocation); break;
-		case "Greenford_port": PlaceCharacter(characterFromID("HELP Malcolm Hatcher"), "goto", homelocation); break;
-		case "Oxbay_port": PlaceCharacter(characterFromID("HELP Malcolm Hatcher"), "goto", homelocation); break;
-		case "QC_port": PlaceCharacter(characterFromID("HELP Malcolm Hatcher"), "goto", homelocation); break;
+		case "Conceicao_port": PlaceCharacter(characterFromID("PJ Malcolm Hatcher"), "goto", homelocation); break;
+		case "Falaise_de_fleur_port_01": PlaceCharacter(characterFromID("PJ Malcolm Hatcher"), "goto", homelocation); break;
+		case "Redmond_port": PlaceCharacter(characterFromID("PJ Malcolm Hatcher"), "goto", homelocation); break;
+		case "Muelle_port": PlaceCharacter(characterFromID("PJ Malcolm Hatcher"), "goto", homelocation); break;
+		case "Douwesen_port": PlaceCharacter(characterFromID("PJ Malcolm Hatcher"), "goto", homelocation); break;
+		case "Greenford_port": PlaceCharacter(characterFromID("PJ Malcolm Hatcher"), "goto", homelocation); break;
+		case "Oxbay_port": PlaceCharacter(characterFromID("PJ Malcolm Hatcher"), "goto", homelocation); break;
+		case "QC_port": PlaceCharacter(characterFromID("PJ Malcolm Hatcher"), "goto", homelocation); break;
 	}
 }
