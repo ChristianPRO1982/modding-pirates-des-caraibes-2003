@@ -176,17 +176,27 @@ int S2_GetQuestContextRecord(int variant)
 
 int S2_GetQuestSuccessRecord(int variant)
 {
-	return 15;
+	switch (variant)
+	{
+		case 1: return 15; break;
+		case 2: return 16; break;
+		case 3: return 17; break;
+		case 4: return 18; break;
+		case 5: return 19; break;
+		case 6: return 20; break;
+		case 7: return 21; break;
+	}
+	return 0;
 }
 
 int S2_GetQuestFailureRecord()
 {
-	return 16;
+	return 22;
 }
 
 int S2_GetQuestFinalRecord()
 {
-	return 17;
+	return 23;
 }
 
 int S2_GetQuestTimeoutDays()
@@ -317,6 +327,11 @@ void S2_StartFinalEncounter()
 		return;
 	}
 
+	if (CheckAttribute(pchar, "quest_S2_final_started") && pchar.quest_S2_final_started == true)
+	{
+		return;
+	}
+
 	if (!S2_AreAllVariantsSuccessful())
 	{
 		return;
@@ -324,7 +339,7 @@ void S2_StartFinalEncounter()
 
 	homelocation = pchar.location;
 	fabiola = characterFromID(S2_GetFinalNpcId());
-	pchar.quest_S2_final_done = true;
+	pchar.quest_S2_final_started = true;
 	PlaceCharacter(fabiola, "goto", homelocation);
 	LAi_SetActorType(fabiola);
 	LAi_SetActorType(pchar);
@@ -376,7 +391,7 @@ void S2_ProcessLocationEnter()
 		return;
 	}
 
-	if (rand(7) != 0)
+	if (rand(0) != 0)
 	{
 		return;
 	}
@@ -465,6 +480,7 @@ bool QuestComplete_S2(string sQuestName)
 		break;
 
 		case "quest_S2_lastQuest":
+			LAi_type_actor_Reset(pchar);
 			LAi_ActorWaitDialog(pchar, characterFromID(S2_GetFinalNpcId()));
 			LAi_ActorDialog(characterFromID(S2_GetFinalNpcId()), pchar, "pchar_back_to_player", 2.0, 1.0);
 			characters[GetCharacterIndex(S2_GetFinalNpcId())].dialog.currentnode = "First time";
@@ -472,10 +488,14 @@ bool QuestComplete_S2(string sQuestName)
 		break;
 
 		case "quest_S2_lastQuest_closed":
+			DeleteQuestHeader("PJ_S2");
+			SetQuestHeader("PJ_S2");
 			AddQuestRecord("PJ_S2", S2_GetQuestFinalRecord());
 			CloseQuestHeader("PJ_S2");
 			pchar.quest.quest_S2_lastQuest.over = "yes";
 			pchar.quest.quest_S2_lastQuest = "completed";
+			DeleteAttribute(pchar, "quest_S2_final_started");
+			pchar.quest_S2_final_done = true;
 			return true;
 		break;
 	}

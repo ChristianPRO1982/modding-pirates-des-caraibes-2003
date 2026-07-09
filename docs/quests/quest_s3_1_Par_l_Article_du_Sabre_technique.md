@@ -515,18 +515,31 @@ Si le delai est ajoute:
 - la quete doit alors se fermer proprement.
 
 ## Technical Anchors To Prepare
+
 Fichiers probables a inspecter lors de l'implementation:
 
-- `PROGRAM/QUESTS/quests_reaction.c`
 - `PROGRAM/QUESTS/quests.c`
+- `PROGRAM/QUESTS/quests_reaction.c`
 - `PROGRAM/QUESTS/quests_check.c`
 - `PROGRAM/Characters/*/init/TempQuestCharacters.c`
 - `PROGRAM/DIALOGS/*`
 - `RESOURCE/INI/TEXTS/FRENCH/QUESTBOOK/quests_texts.txt`
 
+Principe d'integration retenu:
+
+- `PROGRAM/QUESTS/quests_reaction.c` doit rester le moins modifie possible;
+- la logique de reaction propre a `S3` doit etre isolee dans un nouveau fichier dedie:
+  - `PROGRAM/QUESTS/quests_reaction_s3.c`;
+- ce fichier doit suivre le meme principe que les fichiers de quetes deja isoles, par exemple:
+  - `PROGRAM/QUESTS/quests_reaction_s1.c`;
+- le branchement de `quests_reaction_s3.c` doit etre declare dans `PROGRAM/QUESTS/quests.c`, de la meme maniere que les autres fichiers de quetes separes;
+- `quests_reaction.c` ne doit recevoir que les appels ou ajouts strictement necessaires au routage;
+- toute logique longue, specifique a `S3`, doit etre placee dans `quests_reaction_s3.c`.
+
 Important:
 
-- ne pas creer de nouveaux fichiers `quests.c`, `quests_check.c` ou `quests_reaction.c`;
+- ne pas creer de nouveaux fichiers generiques nommes `quests.c`, `quests_check.c` ou `quests_reaction.c`;
+- la creation de `quests_reaction_s3.c` est autorisee et attendue;
 - travailler par ajouts marques;
 - isoler les modifications avec `// ajout PJ` et `// fin ajout PJ` lors de l'implementation.
 
