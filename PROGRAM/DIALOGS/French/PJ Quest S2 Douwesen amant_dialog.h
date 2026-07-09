@@ -1,0 +1,22 @@
+string DLG_TEXT[20] = {
+"Capitaine, puis-je vous retenir un instant ? Le vent de Douwesen me semble aujourd'hui bien froid.",
+"Je vous écoute. Qui êtes-vous ?",
+"Ghijsbrecht Van Der Hagen. Je voudrais épouser Tjaatje Meilink-Roelofsz, mais les bonnes intentions ne valent rien sans preuve.",
+"Quelle preuve attend-elle ?",
+"Une bague en argent sertie de saphirs. Ici, même les coeurs sobres aiment voir un engagement taillé dans quelque chose de durable.",
+"Je ne peux pas vous parler plus avant si votre réputation mettait Tjaatje mal à l'aise.",
+"Alors restons-en là.",
+"Votre réputation me rassure au contraire. Elle me dit que je peux parler sans attirer le malheur sur nous.",
+"Quel est donc le danger ?",
+"Un marchand bien né revient d'Europe que dans une semaine. Sa famille le pousse déjà vers elle comme s'il était une affaire conclue.",
+"Vous voulez rompre cette affaire avant qu'elle ne se signe.",
+"Oui. Si Tjaatje reçoit cette bague en argent sertie de saphirs, elle saura que ma parole n'est pas en retard sur mon courage.",
+"Et vous me demandez d'être le porteur de cette parole.",
+"C'est exactement cela. Je n'ai pas d'autre paiement à vous promettre qu'une reconnaissance durable.",
+"Très bien. Je vais vous aider.",
+"Non. Je ne me mêle pas de cela.",
+"Merci, capitaine ",
+". Remettez cette bague à Tjaatje et dites-lui qu'elle vient d'un homme qui préfère l'honnêteté aux beaux comptes.",
+"Je transmettrai.",
+"Capitaine, avez-vous vu Tjaatje ? Le temps ne fait pas de cadeau, même à Douwesen."
+};

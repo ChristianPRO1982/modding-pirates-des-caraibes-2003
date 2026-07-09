@@ -1,0 +1,22 @@
+string DLG_TEXT[20] = {
+"Qui êtes-vous, monsieur ? Oxbay n'envoie pas ses inconnus pour rien.",
+"Je viens au nom de Rys Scorer. J'aimerais vous parler d'une affaire qui le concerne.",
+"Alors parlez. Je vous écoute.",
+"Rys m'envoie. Il espère que je saurai mieux que lui vous faire entendre son intention.",
+"Rys a de l'audace quand il s'agit de rêver, moins quand il faut tenir tête aux belles familles du port.",
+"Il essaie aujourd'hui de corriger cela.",
+"Avez-vous apporté le présent qu'il m'a promis ?",
+"Pas encore.",
+"Alors revenez avec une preuve. Sans cela, je n'ai rien à entendre.",
+"Je reviendrai.",
+"Oui. Voici le collier en pierres précieuses qu'il vous offre pour vous demander votre main.",
+"Oh... ",
+" Cette fois, il ne s'est pas contenté de parler plus fort que les autres. Il a choisi.",
+"Je pense que c'est ce qu'il voulait vous faire savoir.",
+"Merci, capitaine ",
+". Vous pouvez être fier d'avoir porté jusqu'à moi une si belle promesse.",
+"Merci, capitaine ",
+". Je n'oublierai pas ce que vous avez fait pour nous, et Oxbay en entendra parler en bien.",
+"Je vous souhaite tout le bonheur possible à tous les deux.",
+"Merci encore, capitaine. Je saurai dire partout que vous avez servi notre bonheur avec honneur."
+};

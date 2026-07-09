@@ -60,3 +60,4 @@ OFFIC_TYPE_CANNONEER {Canonnier}
 OFFIC_TYPE_QMASTER {Commissaire}
 OFFIC_TYPE_NAVIGATOR {Navigateur}
 OFFIC_TYPE_FIRSTMATE {Premier matelot}
+PJ_S2_failed {Malheureusement, le temps a manqué pour aider nos tourtereaux.}

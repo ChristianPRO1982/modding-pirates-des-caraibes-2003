@@ -1,0 +1,22 @@
+string DLG_TEXT[20] = {
+"Monsieur, à Falaise de Fleur on ne s'approche pas d'une demoiselle sans raison. La vôtre ?",
+"Je viens au nom de Fabrisse de Lucien. J'espère ne pas vous offenser.",
+"Vous n'y parviendrez pas si vous évitez les banalités.",
+"Fabrisse m'envoie. Il veut vous prouver qu'il sait enfin décider sans sa famille.",
+"Ce serait en effet une nouveauté. J'en ai assez des jeunes hommes qui demandent à leur nom de penser pour eux.",
+"Il veut vous montrer autre chose que son nom.",
+"Alors tout dépend du présent. L'avez-vous apporté ?",
+"Pas encore.",
+"Sans cela, cette conversation n'a aucun intérêt pour moi.",
+"Je reviendrai avec une meilleure preuve.",
+"Oui. Voici la bague en or sertie de saphirs qu'il vous offre pour vous demander votre main.",
+"Oh... ",
+" Il a donc compris ce qui compte vraiment : choisir et assumer ce choix.",
+"Je crois qu'il a fait un vrai pas vers vous.",
+"Merci, capitaine ",
+". Vous pouvez être fier d'avoir porté jusqu'à moi une si belle promesse.",
+"Capitaine ",
+". Je n'oublierai pas votre délicatesse, et je saurai faire entendre à Falaise de Fleur que vous avez servi cette affaire mieux que bien des courtisans.",
+"Je vous souhaite une vie heureuse, et un nom que nul n'aura à rougir de porter.",
+"Merci encore, capitaine. Vous avez épargné à Falaise de Fleur une scène bien plus vulgaire."
+};

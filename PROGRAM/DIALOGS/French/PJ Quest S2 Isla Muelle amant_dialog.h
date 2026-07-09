@@ -1,0 +1,22 @@
+string DLG_TEXT[20] = {
+"Holà capitaine. Vous avez l'air d'un homme qui connaît la valeur des choses rares.",
+"Peut-être. Qui me parle ?",
+"Gregorio de Acosta, d'Isla Muelle. Je tiens à Alejandra de Zúñiga plus qu'à ma propre fierté, ce qui devient embarrassant.",
+"Vous avez besoin d'un service amoureux, j'imagine.",
+"Alejandra ne veut pas d'une demande ordinaire. Elle veut une broche en argent de son pays natal, quelque chose qui lui rappelle qu'on la comprend vraiment.",
+"Je n'ouvrirai pas mon coeur à un capitaine dont la réputation risque de salir son nom.",
+"Alors gardez votre secret.",
+"Votre renommée me semble assez propre pour cette affaire. C'est déjà beaucoup dans un port comme celui-ci.",
+"Qui menace votre place ?",
+"Un cadet de grande noblesse doit arriver dans une semaine. Il n'a peut-être pas d'esprit, mais son blason ouvre les portes et fait taire les familles.",
+"Vous voulez donc la toucher avant que son nom ne l'étouffe sous les convenances.",
+"Exactement. Si elle reçoit cette broche en argent, elle saura que j'ai retenu ce qui compte vraiment pour elle.",
+"Et vous voulez que je sois l'homme de confiance au milieu de tout cela.",
+"Oui. Je n'ai pas de fortune à vous offrir, seulement la satisfaction d'avoir servi un amour honnête.",
+"Très bien. Je porterai cette broche.",
+"Non. Je laisse vos affaires de coeur à d'autres.",
+"Merci, capitaine ",
+". Dites à Alejandra qu'une broche en argent de son pays l'attend, et qu'elle vient d'un homme qui a pris la peine de l'écouter.",
+"Comptez sur moi.",
+"Avez-vous trouvé Alejandra ? Une semaine passe vite quand on a peur d'être remplacé."
+};

@@ -1,0 +1,22 @@
+string DLG_TEXT[20] = {
+"Capitaine, une seconde. Oxbay est bruyante, mais ma chance, elle, devient bien silencieuse.",
+"Je peux peut-être la faire parler. Qui êtes-vous ?",
+"Rys Scorer. J'aime Valeria Pride depuis assez longtemps pour savoir que les sentiments seuls ne suffiront pas.",
+"Elle exige un gage plus visible ?",
+"Oui. Un collier en pierres précieuses. Oxbay pardonne beaucoup de choses, mais pas la timidité quand il s'agit de choisir sa vie.",
+"Je ne vous ouvrirai pas mon coeur si votre réputation risque d'attirer les ennuis jusque chez Valeria.",
+"Alors je n'ai rien entendu.",
+"Votre réputation me semble au contraire assez solide pour soutenir une affaire délicate.",
+"Quel ennui vous menace exactement ?",
+"Une famille récemment enrichie sur le port pousse son fils vers Valeria. Ils ont de l'argent frais, peu de scrupules, et voient ce mariage comme une bonne affaire.",
+"Vous voulez donc faire votre demande avant que cette famille ne vienne tout fausser.",
+"C'est cela. Si Valeria reçoit ce collier en pierres précieuses, elle saura que je ne me suis pas couché devant la facilité.",
+"Et vous souhaitez que je sois le passeur de ce geste.",
+"Oui. Je n'ai pas de fortune à vous promettre, seulement le plaisir d'avoir bien fait.",
+"Très bien. Je vous aiderai.",
+"Non. Cette histoire n'est pas pour moi.",
+"Merci, capitaine ",
+". Dites à Valeria qu'un collier en pierres précieuses l'attend, et qu'il vient d'un homme qui a enfin osé choisir.",
+"Je m'en occupe.",
+"Avez-vous trouvé Valeria ? Une semaine à Oxbay suffit pour faire tourner la chance."
+};

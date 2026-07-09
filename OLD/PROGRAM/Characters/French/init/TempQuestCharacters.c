@@ -1715,9 +1715,9 @@ int CreateTempQuestCharacters(int n)
 	n = n + 1;
 	
 	makeref(ch,Characters[n]);
-	ch.name 	= "Violamte";
+	ch.name 	= "Violante";
 	ch.lastname = "Pinto";
-	ch.id		= "Violamte Pinto";
+	ch.id		= "Violante Pinto";
 	ch.model	= "towngirl1_1";
 	ch.sex = "woman";
 	ch.sound_type = "female_citizen";
@@ -1749,9 +1749,9 @@ int CreateTempQuestCharacters(int n)
 	///// ISLA MUELLE \\\\\
 	/////////// \\\\\\\\\\\
 	makeref(ch,Characters[n]);
-	ch.name 	= "Cricorium";
-	ch.lastname 	= "Taffarel";
-	ch.id		= "Cricorium Taffarel";
+	ch.name 	= "Gregorio";
+	ch.lastname 	= "de Acosta";
+	ch.id		= "Gregorio de Acosta";
 	ch.model = "huber_spa";
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";

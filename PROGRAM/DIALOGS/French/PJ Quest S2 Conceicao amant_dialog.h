@@ -1,0 +1,22 @@
+string DLG_TEXT[20] = {
+"Capitaine, un mot si vous voulez bien. Conceicao aime les chansons, mais moi je n'ai plus le coeur à chanter.",
+"Parlez donc. Qui êtes-vous ?",
+"Je suis Florencio Baiano. Je travaille, j'épargne, j'espère, et pourtant cela ne suffit pas à convaincre Violante Pinto.",
+"Elle vous demande une preuve plus éclatante ?",
+"Une broche en or. Ici, même les amours les plus sincères doivent briller un peu si elles veulent être prises au sérieux.",
+"Je ne peux pas confier cela à quelqu'un dont le nom ferait peur à la moitié du quai.",
+"Je vois. Je n'insiste pas.",
+"En revanche, votre réputation me rassure. C'est peut-être le signe que le ciel n'a pas tout oublié.",
+"Qu'est-ce qui presse à ce point ?",
+"Sa famille attend une réponse avant la bénédiction de dimanche prochain. Un marchand du port s'est déjà proposé, avec sa bourse pleine et son sourire trop propre.",
+"Vous voulez parler avant que sa famille ne choisisse pour elle.",
+"Oui. Si Violante reçoit cette broche en or, elle saura que je n'ai pas laissé la chance me filer entre les doigts.",
+"Et vous attendez de moi que je porte cette chance jusque chez elle.",
+"C'est cela. Je ne peux vous offrir qu'un merci, mais il viendra du fond du coeur.",
+"Très bien. Je vais vous aider.",
+"Non, cette histoire devra se terminer sans moi.",
+"Merci, capitaine ",
+". Dites à Violante qu'une broche en or l'attend, et qu'elle vient d'un homme qui refuse d'être pauvre jusque dans ses sentiments.",
+"Je n'oublierai pas.",
+"Avez-vous parlé à Violante ? Le temps court plus vite ici qu'une famille pressée de décider."
+};
