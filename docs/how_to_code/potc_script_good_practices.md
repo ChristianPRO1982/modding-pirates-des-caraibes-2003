@@ -215,6 +215,53 @@ Sur ce moteur legacy, il vaut mieux ecrire les `switch` de facon tres defensive:
 
 En pratique, si un script parait correct mais plante au chargement, verifier d'abord qu'aucun `case` ne manque de `break;`.
 
+### Regle defensive sur les `string`
+Ce langage ressemble a du C, mais ce n'est pas un C standard moderne.
+
+En pratique sur ce moteur, il faut se mefier des comparaisons de `string` combinees avec des operateurs booleens, surtout `||`.
+
+Exemple a eviter:
+
+```c
+if ((status == "spawned" || status == "offered") && S3_IsCommanditaireHour())
+{
+	S3_PlaceCommanditaire(locationId);
+	return;
+}
+```
+
+Ce type d'ecriture peut sembler valide, mais il peut faire planter le script ou etre mal interprete par le moteur.
+
+Bon reflexe:
+
+- preferer un `switch (status)` quand on teste plusieurs valeurs de `string`,
+- ou faire plusieurs `if` simples separes,
+- eviter de supposer que les operateurs booleens sur des expressions de `string` se comportent comme en C standard.
+
+Exemple recommande:
+
+```c
+if (S3_IsCommanditaireHour())
+{
+	switch (status)
+	{
+		case "spawned":
+			S3_PlaceCommanditaire(locationId);
+			return;
+		break;
+		case "offered":
+			S3_PlaceCommanditaire(locationId);
+			return;
+		break;
+	}
+}
+```
+
+Regle pratique:
+
+- pour des nombres ou des booleens, `&&` et `||` restent utilisables normalement,
+- pour des `string`, preferer des branches explicites et simples.
+
 ## 4. Structure recommandee d'une modif de quete
 
 1. Identifier un point d'entree dialogue.

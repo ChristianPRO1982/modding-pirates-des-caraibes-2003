@@ -7,6 +7,7 @@
 #include "quests\quests_reaction.c"
 #include "quests\quests_reaction_s1.c"
 #include "quests\quests_reaction_s2.c"
+#include "quests\quests_reaction_s3.c"
 
 #event_handler("LocationWaitNihgtEnd","WaitDatePostEventControl");
 #event_handler("evntQuestCameraRestore","QuestCameraRestore");
@@ -60,6 +61,7 @@ void QuestsCheck_forLocEnter()
 	QuestsCheck();
 	S1_ProcessLocationEnter();
 	S2_ProcessLocationEnter();
+	// S3_ProcessLocationEnter();
 }
 
 void CharacterDeadProcess()

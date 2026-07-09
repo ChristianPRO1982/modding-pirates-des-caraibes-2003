@@ -22,9 +22,17 @@ bool S3_IsQuestActive()
 	}
 
 	status = pchar.quest_S3_status;
-	if (status == "" || status == "closed" || status == "completed")
+	switch (status)
 	{
-		return false;
+		case "":
+			return false;
+		break;
+		case "closed":
+			return false;
+		break;
+		case "completed":
+			return false;
+		break;
 	}
 
 	return true;
@@ -422,22 +430,50 @@ void S3_ProcessLocationEnter()
 	S3_PrepareTargetCharacter();
 	S3_PrepareWitnessCharacter();
 
-	if ((status == "spawned" || status == "offered") && S3_IsCommanditaireHour())
+	if (S3_IsCommanditaireHour())
 	{
-		S3_PlaceCommanditaire(locationId);
-		return;
+		switch (status)
+		{
+			case "spawned":
+				S3_PlaceCommanditaire(locationId);
+				return;
+			break;
+			case "offered":
+				S3_PlaceCommanditaire(locationId);
+				return;
+			break;
+			case "target_killed":
+				S3_PlaceCommanditaire(locationId);
+				return;
+			break;
+			case "target_released":
+				S3_PlaceCommanditaire(locationId);
+				return;
+			break;
+		}
 	}
 
-	if ((status == "accepted" || status == "investigation" || status == "candidate_target_kill" || status == "candidate_target_release") && S3_IsTargetHour())
+	if (S3_IsTargetHour())
 	{
-		S3_PlaceTarget(locationId);
-		return;
-	}
-
-	if ((status == "target_killed" || status == "target_released") && S3_IsCommanditaireHour())
-	{
-		S3_PlaceCommanditaire(locationId);
-		return;
+		switch (status)
+		{
+			case "accepted":
+				S3_PlaceTarget(locationId);
+				return;
+			break;
+			case "investigation":
+				S3_PlaceTarget(locationId);
+				return;
+			break;
+			case "candidate_target_kill":
+				S3_PlaceTarget(locationId);
+				return;
+			break;
+			case "candidate_target_release":
+				S3_PlaceTarget(locationId);
+				return;
+			break;
+		}
 	}
 }
 
