@@ -1,20 +1,22 @@
-string DLG_TEXT[18] = {
+string DLG_TEXT[20] = {
 "Bonjour monsieur. Redmond apprend très tôt à se méfier. Qui êtes-vous ?",
-"Je viens de la part de ",
-" et je ne vous veux aucun mal.",
+"Je viens au nom de Llewellyn Brooker, et je ne vous veux aucun mal.",
 "Vous pouvez parler. Mais choisissez bien vos mots.",
-"Llewellyn Brooker m'envoie. Il espère encore que vous écouterez ce qu'il n'ose pas dire en face.",
+"Llewellyn m'envoie. Il espère encore que vous écouterez ce qu'il n'ose pas dire en face.",
 "Llewellyn est brave, mais Redmond est pleine de fils d'artisans dociles tant que leurs mères les regardent.",
 "Il voudrait vous prouver qu'il peut choisir seul.",
 "Sans un vrai présent, ce ne sont que des mots. Avez-vous apporté ce qu'il promet ?",
-"Non. Revenez quand vous aurez autre chose qu'un discours poli.",
-"Alors laissez-moi vous montrer ce qu'il a préparé.",
-"Voici l'anneau qu'il vous offre pour vous demander votre main.",
+"Pas encore.",
+"Revenez quand vous aurez autre chose qu'un discours poli.",
+"Je reviendrai avec une vraie preuve.",
+"Oui. Voici la bague en or sertie d'émeraudes qu'il vous offre pour vous demander votre main.",
 "Oh... ",
-" ... Il a donc trouvé le courage d'aller jusqu'au bout. C'est plus que je n'attendais de Redmond.",
+" Il a donc trouvé le courage d'aller jusqu'au bout. C'est plus que je n'attendais de Redmond.",
 "Je pense qu'il saura se montrer digne de vous.",
 "Merci, capitaine ",
-". Dites à Llewellyn que je l'attendrai avec une réponse plus douce que mes habitudes.",
-"Au revoir, monsieur.",
-"Merci capitaine. Pour une fois, Redmond aura servi une belle histoire."
+". Vous pouvez être fier d'avoir porté jusqu'à moi une si belle promesse.",
+"Capitaine ",
+". Je n'oublierai pas votre bonne manière, et je saurai faire entendre à Redmond qu'un pirate bien élevé peut rendre un service qu'un lord n'aurait pas mieux conduit.",
+"Je vous souhaite une vie honorable, paisible, et à l'abri des commérages.",
+"Merci encore, capitaine. Pour une fois, Redmond aura servi une belle histoire."
 };

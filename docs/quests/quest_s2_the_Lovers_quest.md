@@ -76,7 +76,7 @@ Les bijoux restent fixes par ville. Ne pas remplacer ce fonctionnement par un ti
 | 1 | Redmond | Llewellyn Brooker | Magdalen Spooner | `Redmond_town_04` | `Redmond_town_03` | `jewelry7` |
 | 2 | Falaise de Fleur | Fabrisse De Lucien | Donatienne de La Fayette | `Falaise_De_Fleur_location_02` | `Falaise_De_Fleur_location_03` | `jewelry10` |
 | 3 | Conceicao | Florencio Baiano | Violante Pinto | `Conceicao_town` | `Conceicao_town` | `jewelry14` |
-| 4 | Isla Muelle | Gregorio de Acosta | Alejandrina Acosto | `Muelle_town_02` | `Muelle_town_04` | `jewelry13` |
+| 4 | Isla Muelle | Gregorio de Acosta | Alejandra de Zúñiga | `Muelle_town_02` | `Muelle_town_04` | `jewelry13` |
 | 5 | Douwesen | Ghijsbrecht Van Der Hagen | Tjaatje Meilink-Roelofsz | `Douwesen_town` | `Douwesen_town` | `jewelry6` |
 | 6 | Greenford | Rawlin Feaver | Astrid Weather | `Greenford_town` | `Greenford_town` | `jewelry15` |
 | 7 | Oxbay | Rys Scorer | Valeria Pride | `Oxbay_town` | `Oxbay_town` | `jewelry16` |
@@ -93,7 +93,7 @@ Commentaires de prix a garder pres du mapping technique:
 // jewelry16 : collier en pierres precieuses = 384
 ```
 
-Note de nettoyage: dans `V3`, l'id de `Alejandrina Acosto` semble contenir une tabulation dans certains appels. La cible doit utiliser un identifiant propre et stable, sans tabulation parasite.
+Note de nettoyage: dans `V3`, l'id de `Alejandra de Zúñiga` semble contenir une tabulation dans certains appels historiques sous son ancien nom. La cible doit utiliser un identifiant propre et stable, sans tabulation parasite.
 
 ## Dialog Design
 Les dialogues existants de `V3` doivent etre conserves dans leur logique generale:
@@ -318,7 +318,7 @@ Ecarts historiques a corriger:
 - le final ne doit plus se declencher sur les seuls flags `done`,
 - il faut distinguer les variantes terminees des variantes reussies,
 - la recompense finale ne doit plus dependre de `rank + Sneak`,
-- l'id de `Alejandrina Acosto` ne doit pas contenir de tabulation parasite.
+- l'id de `Alejandra de Zúñiga` ne doit pas contenir de tabulation parasite.
 
 ## Scope
 Cette spec reste volontairement courte:

@@ -4,7 +4,6 @@ void ProcessDialogEvent()
 	ref NPChar, PChar, d;
 	PChar = GetMainCharacter();
 	aref Link, Diag;
-	string amantFullName;
 	string smjhJewelry;
 	string smjhJewelryID;
 
@@ -15,7 +14,6 @@ void ProcessDialogEvent()
 	makeref(d, Dialog);
 	makearef(Diag, NPChar.Dialog);
 
-	amantFullName = "Rawlin Feaver";
 	smjhJewelry = "un pendetif en emeraude.";
 	smjhJewelryID = "jewelry15";
 
@@ -51,7 +49,7 @@ void ProcessDialogEvent()
 			Diag.TempNode = "Start";
 			dialog.snd = "Voice\ARSI\ARSI001";
 			d.Text = DLG_TEXT[4];
-			Link.l1 = DLG_TEXT[5] + amantFullName + ".";
+			Link.l1 = DLG_TEXT[5];
 			Link.l1.go = "Continue_02";
 		break;
 
@@ -88,15 +86,16 @@ void ProcessDialogEvent()
 			Diag.TempNode = "thanks";
 			TakeItemFromCharacter(Pchar, smjhJewelryID);
 			dialog.snd = "Voice\ARSI\ARSI001";
-			d.Text = DLG_TEXT[14] + PChar.lastname + ".";
-			Link.l1 = DLG_TEXT[15];
+			d.Text = DLG_TEXT[16] + PChar.lastname + DLG_TEXT[17];
+			Link.l1 = DLG_TEXT[18];
 			Link.l1.go = "exit";
 			AddDialogExitQuest("quest_S2_closed_1");
 		break;
 
 		case "thanks":
 			dialog.snd = "Voice\ARSI\ARSI001";
-			d.Text = DLG_TEXT[16];
+			d.Text = DLG_TEXT[19];
+			Link.l1 = DLG_TEXT[18];
 			Link.l1.go = "Continue_05";
 		break;
 		

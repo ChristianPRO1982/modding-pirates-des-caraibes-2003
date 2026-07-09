@@ -1,20 +1,22 @@
-string DLG_TEXT[18] = {
+string DLG_TEXT[20] = {
 "Bonjour monsieur. J'espère que ce n'est pas encore un marchand venu se faire valoir.",
-"Rien de cela. Je viens de la part de ",
-" et il m'a chargé de vous parler franchement.",
+"Rien de cela. Je viens au nom de Rawlin Feaver et il m'a chargé de vous parler franchement.",
 "Alors j'apprécierai cette franchise.",
-"Rawlin Feaver m'envoie. Il dit qu'un homme vaut peu s'il attend toujours que le monde lui fasse signe.",
+"Rawlin m'envoie. Il dit qu'un homme vaut peu s'il attend toujours que le monde lui fasse signe.",
 "C'est une phrase plus courageuse que d'habitude. J'avais besoin de voir s'il pouvait agir sans se cacher derrière les circonstances.",
 "Il a essayé de vous le montrer.",
 "Avez-vous apporté ce qu'il m'a promis ?",
-"Non. Sans cela, Greenford restera Greenford: beaucoup de bruit, peu de preuves.",
-"Alors regardez plutôt ceci.",
-"Voici le pendentif en émeraude qu'il vous offre pour vous demander votre main.",
+"Pas encore.",
+"Sans cela, Greenford restera Greenford : beaucoup de bruit, peu de preuves.",
+"Je reviendrai avec une preuve cette fois.",
+"Oui. Voici le pendentif en émeraude qu'il vous offre pour vous demander votre main.",
 "Oh... ",
-" ... Il a donc enfin compris qu'une promesse doit peser quelque chose pour être entendue.",
+" Il a donc enfin compris qu'une promesse doit peser quelque chose pour être entendue.",
 "Je crois qu'il espère surtout que vous le jugerez sur cet effort.",
 "Merci, capitaine ",
-". Dites à Rawlin que je l'attendrai, mais pas indéfiniment: il vient de gagner du temps, pas une certitude.",
-"Je transmettrai mot pour mot.",
-"Merci capitaine. Vous avez peut-être empêché une belle sottise."
+". Vous pouvez être fier d'avoir porté jusqu'à moi une si belle promesse.",
+"Capitaine ",
+". Je n'oublierai pas ce bon office, et Greenford saura qu'un pirate bien élevé peut rendre meilleur service qu'un riche prétendant sans tenue.",
+"Je vous souhaite une vie solide, prospère, et sans faux-semblants.",
+"Merci encore, capitaine. Vous avez peut-être empêché une belle sottise."
 };

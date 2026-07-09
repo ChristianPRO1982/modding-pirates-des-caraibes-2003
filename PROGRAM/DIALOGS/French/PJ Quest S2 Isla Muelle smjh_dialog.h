@@ -1,20 +1,22 @@
-string DLG_TEXT[18] = {
+string DLG_TEXT[20] = {
 "Qui êtes-vous, monsieur ? Les inconnus sont nombreux à Isla Muelle.",
-"Je viens de la part de ",
-" et je crois porter quelque chose qui vous touche de près.",
+"Je viens au nom de Gregorio de Acosta. Je crois porter quelque chose qui vous touche de près.",
 "Alors je vous écoute.",
-"Gregorio de Acosta m'envoie. Il pense avoir compris qu'un présent vaut mieux qu'un serment récité.",
+"Gregorio m'envoie. Il pense avoir compris qu'un présent vaut mieux qu'un serment récité.",
 "Il lui a fallu du temps. Beaucoup ici croient qu'un blason ou une belle parole suffit à remplacer ce qui manque vraiment.",
 "Il veut pourtant vous montrer qu'il a compris.",
 "Avez-vous apporté ce qu'il m'a promis ?",
-"Non. Sans cela, tout le reste n'est que théâtre.",
-"Alors regardez ce qu'il a choisi.",
-"Voici la broche en argent de votre pays natal qu'il vous offre pour vous demander votre main.",
+"Pas encore.",
+"Sans cela, tout le reste n'est que théâtre.",
+"Je reviendrai avec ce qu'il vous destine.",
+"Oui. Voici la broche en argent de votre pays natal qu'il vous offre pour vous demander votre main.",
 "Oh... ",
-" ... Celle-là, il ne pouvait pas l'inventer sans m'avoir vraiment écoutée.",
+" Celle-là, il ne pouvait pas l'inventer sans m'avoir vraiment écoutée.",
 "Je crois qu'il voulait justement vous prouver cela.",
 "Merci, capitaine ",
-". Dites à Gregorio qu'il vient enfin de parler à mon coeur au lieu de parler à mon rang.",
-"Je lui transmettrai.",
-"Merci capitaine. Ce présent a bien plus de valeur qu'il ne le croit."
+". Vous pouvez être fier d'avoir porté jusqu'à moi une si belle promesse.",
+"Capitaine ",
+". Je n'oublierai pas votre courtoisie, et je dirai à Isla Muelle que vous avez servi notre honneur avec un tact que bien des hidalgos n'ont pas.",
+"Je vous souhaite une vie noble, fidèle, et plus sincère que toutes les belles paroles.",
+"Merci encore, capitaine. Ce présent a bien plus de valeur qu'il ne le croit."
 };

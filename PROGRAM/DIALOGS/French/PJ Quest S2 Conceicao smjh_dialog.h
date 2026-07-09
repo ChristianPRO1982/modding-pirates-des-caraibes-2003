@@ -1,20 +1,22 @@
-string DLG_TEXT[18] = {
+string DLG_TEXT[20] = {
 "Bonjour monsieur. Conceicao est petite, mais les rumeurs y courent vite. Qui êtes-vous ?",
-"Je viens de la part de ",
-" et je porte son message.",
+"Je viens au nom de Florencio Baiano. J'aimerais vous parler d'une affaire qui le concerne.",
 "Alors j'écoute, mais vite.",
-"Florencio Baiano m'envoie. Il veut vous montrer que sa patience n'est pas de la faiblesse.",
+"Florencio m'envoie. Il veut vous montrer que sa patience n'est pas de la faiblesse.",
 "Florencio a du coeur, mais le coeur seul ne paie ni les promesses ni les lendemains.",
 "Il espère pourtant vous convaincre.",
 "Avez-vous apporté ce qu'il m'a promis ?",
-"Non. Sans preuve, je ne peux rien prendre au sérieux.",
-"Alors voyez par vous-même.",
-"Voici la broche en or qu'il vous offre pour vous demander votre main.",
+"Pas encore.",
+"Alors revenez avec une preuve. Sans cela, je ne peux rien prendre au sérieux.",
+"Je reviendrai.",
+"Oui. Voici la broche en or qu'il vous offre pour vous demander votre main.",
 "Oh... ",
-" ... Il a donc osé dépenser plus que ses mots. C'est peut-être cela que j'attendais.",
+" Il a donc osé dépenser plus que ses mots. C'est peut-être cela que j'attendais.",
 "Je pense qu'il a voulu vous parler avec des actes.",
 "Merci, capitaine ",
-". Dites à Florencio qu'il a bien fait de ne pas laisser ma famille décider à ma place.",
-"Je lui dirai.",
-"Merci capitaine. Vous avez donné à cette histoire une chance de devenir vraie."
+". Vous pouvez être fier d'avoir porté jusqu'à moi une si belle promesse.",
+"Capitaine ",
+". Je n'oublierai pas votre obligeance, et je saurai dire à Conceicao qu'un pirate peut se conduire avec plus d'honneur qu'un gentilhomme sans parole.",
+"Je vous souhaite une union digne de vos promesses, madame.",
+"Merci encore, capitaine. Vous avez donné à cette histoire une chance de devenir vraie."
 };

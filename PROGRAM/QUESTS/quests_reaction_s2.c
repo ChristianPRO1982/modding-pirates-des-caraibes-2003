@@ -101,7 +101,7 @@ string S2_GetLadyId(int variant)
 		case 1: return "Magdalen Spooner"; break;
 		case 2: return "Donatienne de La Fayette"; break;
 		case 3: return "Violante Pinto"; break;
-		case 4: return "Alejandrina Acosto"; break;
+		case 4: return "Alejandra de Zúñiga"; break;
 		case 5: return "Tjaatje Meilink-Roelofsz"; break;
 		case 6: return "Astrid Weather"; break;
 		case 7: return "Valeria Pride"; break;
