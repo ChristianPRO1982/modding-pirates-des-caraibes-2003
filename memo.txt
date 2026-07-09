@@ -1,1 +1,8 @@
 DoQuestReloadToLocation("redmond_residence", "goto", "goto3", "blaze_from_prison_to_residence_complete");
+
+Lis et prends conscience de ce projet de modding du jeu Pirates des Caraïbes 2003.
+En particulier lis la documentation dans .\docs\
+
+Plus particulièrement on va travailler sur la quête décrite dans docs\quests\quest_s3_1_Par_l_Article_du_Sabre_technique.md et ses documents liés décrits dedans
+Fais moi un plan pour implémenter cette quête.
+Attention : On va travailler pas à pas. Codex n'a le droit que de modifier un seul fichier à la fois.
