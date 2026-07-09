@@ -1,0 +1,21 @@
+string DLG_TEXT[19] = {
+"Encore un regard de travers... Que me voulez-vous ?",
+"Quelques questions. Rien de plus, pour l'instant.",
+"On m'a parle de vous. Certains vous disent dangereux.",
+"Dans une ville portuaire ? Alors on m'accuse de respirer au mauvais endroit.",
+"Je peux encore poursuivre mon enquete.",
+"Faites donc. J'en ai assez des langues sales et des hommes payes pour les ecouter.",
+"Je pense que vous etes innocent. Partez, vite.",
+"Vous me donneriez cette chance ?",
+"Oui. Partez avant que quelqu'un nous voie ensemble.",
+"Je ne peux pas vous faire confiance. Tirez votre lame.",
+"Alors c'etait donc vrai. Vous n'etes qu'un sabre a louer.",
+"Une derniere parole avant que tout s'acheve ?",
+"Je ne suis pas venu pour bavarder.",
+"Je vous ai deja dit ce que je pouvais.",
+"Je n'ai plus rien a ajouter.",
+"Je vous dois peut-etre la vie. Je ne l'oublierai pas.",
+"Partez. Maintenant.",
+"Si vous venez pour achever ce que vous avez commence, je n'ai rien a dire.",
+"Adieu."
+};
