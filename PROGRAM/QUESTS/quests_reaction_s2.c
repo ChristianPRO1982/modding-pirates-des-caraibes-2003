@@ -293,6 +293,45 @@ void S2_ClearTimeout()
 	pchar.quest.quest_S2_timeOut = "completed";
 }
 
+bool S2_AreAllVariantsSuccessful()
+{
+	ref pchar = GetMainCharacter();
+
+	return pchar.quest_S2_Redmond_success == true
+		&& pchar.quest_S2_FalaiseDeFleur_success == true
+		&& pchar.quest_S2_Conceicao_success == true
+		&& pchar.quest_S2_IslaMuelle_success == true
+		&& pchar.quest_S2_Douwesen_success == true
+		&& pchar.quest_S2_Greenford_success == true
+		&& pchar.quest_S2_Oxbay_success == true;
+}
+
+void S2_StartFinalEncounter()
+{
+	ref pchar = GetMainCharacter();
+	ref fabiola;
+	string homelocation;
+
+	if (pchar.quest_S2_final_done == true)
+	{
+		return;
+	}
+
+	if (!S2_AreAllVariantsSuccessful())
+	{
+		return;
+	}
+
+	homelocation = pchar.location;
+	fabiola = characterFromID(S2_GetFinalNpcId());
+	pchar.quest_S2_final_done = true;
+	PlaceCharacter(fabiola, "goto", homelocation);
+	LAi_SetActorType(fabiola);
+	LAi_SetActorType(pchar);
+	LAi_ActorFollow(pchar, fabiola, "", 2.0);
+	LAi_ActorFollow(fabiola, pchar, "quest_S2_lastQuest", 2.0);
+}
+
 // jewelry6 : bague en argent et saphir = 769
 // jewelry7 : bague en or et emeraude = 961
 // jewelry10 : bague en or et saphir = 1538
@@ -405,6 +444,7 @@ bool QuestComplete_S2(string sQuestName)
 			S2_ClearTimeout();
 			pchar.quest_S2_started = 0;
 			CloseQuestHeader("PJ_S2");
+			S2_StartFinalEncounter();
 			return true;
 		break;
 
@@ -421,6 +461,21 @@ bool QuestComplete_S2(string sQuestName)
 			S2_ClearTimeout();
 			pchar.quest_S2_started = 0;
 			CloseQuestHeader("PJ_S2");
+			return true;
+		break;
+
+		case "quest_S2_lastQuest":
+			LAi_ActorWaitDialog(pchar, characterFromID(S2_GetFinalNpcId()));
+			LAi_ActorDialog(characterFromID(S2_GetFinalNpcId()), pchar, "pchar_back_to_player", 2.0, 1.0);
+			characters[GetCharacterIndex(S2_GetFinalNpcId())].dialog.currentnode = "First time";
+			return true;
+		break;
+
+		case "quest_S2_lastQuest_closed":
+			AddQuestRecord("PJ_S2", S2_GetQuestFinalRecord());
+			CloseQuestHeader("PJ_S2");
+			pchar.quest.quest_S2_lastQuest.over = "yes";
+			pchar.quest.quest_S2_lastQuest = "completed";
 			return true;
 		break;
 	}
