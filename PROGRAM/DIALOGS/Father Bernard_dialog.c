@@ -116,6 +116,63 @@ void ProcessDialogEvent()
 				link.l1 = DLG_TEXT[30];
 				link.l1.go = "destroyed_sekt";
 			}
+			if (CheckAttribute(pchar, "quest_S3_city") && pchar.quest_S3_city == "Redmond")
+			{
+				if (CheckAttribute(pchar, "quest_S3_status"))
+				{
+					switch (pchar.quest_S3_status)
+					{
+						case "accepted":
+							if (!CheckAttribute(pchar, "quest_S3_informant_priest"))
+							{
+								link.l3 = "J'aurais besoin de votre jugement sur une personne de cette ville.";
+								link.l3.go = "S3_priest_start";
+							}
+							else
+							{
+								link.l4 = "Vous m'avez deja parle de cette affaire.";
+								link.l4.go = "S3_priest_repeat";
+							}
+						break;
+						case "investigation":
+							if (!CheckAttribute(pchar, "quest_S3_informant_priest"))
+							{
+								link.l3 = "J'aurais besoin de votre jugement sur une personne de cette ville.";
+								link.l3.go = "S3_priest_start";
+							}
+							else
+							{
+								link.l4 = "Vous m'avez deja parle de cette affaire.";
+								link.l4.go = "S3_priest_repeat";
+							}
+						break;
+						case "candidate_target_kill":
+							if (!CheckAttribute(pchar, "quest_S3_informant_priest"))
+							{
+								link.l3 = "J'aurais besoin de votre jugement sur une personne de cette ville.";
+								link.l3.go = "S3_priest_start";
+							}
+							else
+							{
+								link.l4 = "Vous m'avez deja parle de cette affaire.";
+								link.l4.go = "S3_priest_repeat";
+							}
+						break;
+						case "candidate_target_release":
+							if (!CheckAttribute(pchar, "quest_S3_informant_priest"))
+							{
+								link.l3 = "J'aurais besoin de votre jugement sur une personne de cette ville.";
+								link.l3.go = "S3_priest_start";
+							}
+							else
+							{
+								link.l4 = "Vous m'avez deja parle de cette affaire.";
+								link.l4.go = "S3_priest_repeat";
+							}
+						break;
+					}
+				}
+			}
 			if (CheckQuestAttribute("artois_line", "found_gold") && makeint(pchar.money) >=4000)
 			{
 				link.l1 = DLG_TEXT[31];
@@ -408,6 +465,33 @@ void ProcessDialogEvent()
 			SetQuestHeader("Church_help");
 			AddQuestRecord("Church_help", "1");
 			npchar.quest.church_help = "to_greenford";
+		break;
+
+		case "S3_priest_start":
+			dialog.snd = "Voice\FATB\FATB006";
+			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
+			{
+				d.Text = "Si vous me demandez mon jugement en conscience, je ne vous mentirai pas, mon fils. " + pchar.quest_S3_target_name + " porte une faute grave dans son ame. Je ne puis pas vous dire quelle lame tirer, mais cette personne n'est pas innocente.";
+			}
+			else
+			{
+				d.Text = "Si vous me demandez mon jugement en conscience, je ne vous mentirai pas, mon fils. Je ne vois pas dans l'ame de " + pchar.quest_S3_target_name + " la noirceur dont on l'accuse. A mes yeux, cette personne est innocente.";
+			}
+			link.l1 = "Cela me suffit. Merci, mon pere.";
+			link.l1.go = "S3_priest_done";
+		break;
+
+		case "S3_priest_done":
+			pchar.quest_S3_informant_priest = true;
+			Log_SetStringToLog("S3 informant answered");
+			DialogExit();
+		break;
+
+		case "S3_priest_repeat":
+			dialog.snd = "Voice\FATB\FATB006";
+			d.Text = "Je vous ai deja dit ce que je pouvais en conscience, mon fils. La suite vous appartient.";
+			link.l1 = "Je comprends.";
+			link.l1.go = "exit";
 		break;
 
 		case "No quest":
