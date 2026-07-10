@@ -5709,6 +5709,8 @@ int CreateTempQuestCharacters(int n)
 	ch.Dialog.Filename = "PJ Quest S3 commanditaire_dialog.c";
 	ch.greeting = "Gr_falaise de fleur citizen";
 	ch.nation = FRANCE;
+	GiveItem2Character(ch, "blade2");
+	ch.equip.blade = "blade2";
 	ch.rank = 1;
 	ch.reputation = "30";
 	ch.experience = "0";
@@ -5743,6 +5745,8 @@ int CreateTempQuestCharacters(int n)
 	ch.Dialog.Filename = "PJ Quest S3 target_dialog.c";
 	ch.greeting = "Gr_Woman_French citizen";
 	ch.nation = FRANCE;
+	GiveItem2Character(ch, "blade17");
+	ch.equip.blade = "blade17";
 	ch.rank = 1;
 	ch.reputation = "50";
 	ch.experience = "0";
@@ -5777,6 +5781,8 @@ int CreateTempQuestCharacters(int n)
 	ch.Dialog.Filename = "PJ Quest S3 witness_dialog.c";
 	ch.greeting = "Gr_falaise de fleur citizen";
 	ch.nation = FRANCE;
+	GiveItem2Character(ch, "blade22");
+	ch.equip.blade = "blade22";
 	ch.rank = 1;
 	ch.reputation = "50";
 	ch.experience = "0";

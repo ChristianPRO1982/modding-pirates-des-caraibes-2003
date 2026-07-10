@@ -43,7 +43,8 @@ bool S3_IsCommanditaireHour()
 	int hour;
 
 	hour = makeint(GetHour());
-	return hour >= 16 && hour <= 22;
+	return hour >= 0 && hour <= 23;
+	// return hour >= 16 && hour <= 22;
 }
 
 bool S3_IsTargetHour()
@@ -51,7 +52,8 @@ bool S3_IsTargetHour()
 	int hour;
 
 	hour = makeint(GetHour());
-	return hour >= 8 && hour <= 15;
+	return hour >= 0 && hour <= 23;
+	// return hour >= 8 && hour <= 15;
 }
 
 bool S3_IsCommanditaireStatus(string status)
@@ -213,6 +215,9 @@ void S3_PrepareTargetCharacter()
 		ch.sex = "woman";
 		ch.sound_type = "female_citizen";
 		ch.greeting = "Gr_Woman_French citizen";
+		ch.model.animation = "towngirl";
+		ch.headModel = "h_towngirl4";
+		ch.FaceId = "0";
 	}
 	else
 	{
@@ -222,6 +227,9 @@ void S3_PrepareTargetCharacter()
 		ch.sex = "man";
 		ch.sound_type = "male_citizen";
 		ch.greeting = "Gr_falaise de fleur citizen";
+		ch.model.animation = "man";
+		ch.headModel = "h_man1";
+		ch.FaceId = "0";
 	}
 
 	ch.nation = FRANCE;
@@ -397,6 +405,9 @@ void S3_StartTargetFight()
 	locationId = pchar.location;
 
 	PlaceCharacter(target, "goto", locationId);
+	GiveItem2Character(target, BLADE_SABER);
+	target.equip.blade = BLADE_SABER;
+	EquipCharacterByItem(target, BLADE_SABER);
 	LAi_SetWarriorType(target);
 	target.Dialog.CurrentNode = "Finished";
 	LAi_group_MoveCharacter(target, "S3_TARGET_GROUP");
@@ -595,6 +606,16 @@ bool QuestComplete_S3(string sQuestName)
 		break;
 
 		case "quest_S3_start_duel":
+			if (pchar.quest_S3_target_truth == "guilty")
+			{
+				ChangeCharacterReputation(pchar, -3);
+				AddPartyExp(pchar, 100 * makeint(pchar.rank));
+				pchar.quest_S3_city_bad_reputation = true;
+				AddQuestRecord("PJ_S3", "8");
+				S3_FinalizeQuest("bad_release");
+				return true;
+			}
+
 			pchar.quest_S3_status = "commanditaire_duel";
 			S3_StartCommanditaireDuel();
 			return true;
