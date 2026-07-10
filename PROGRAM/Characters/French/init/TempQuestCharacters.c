@@ -54,7 +54,7 @@ int CreateTempQuestCharacters(int n)
 	makeref(ch,Characters[n]);
 	ch.name = "Malcolm";
 	ch.lastname = "Hatcher";
-	ch.id = "PJ Malcolm Hatcher";
+	ch.id = "PJ HELP Malcolm Hatcher";
 	ch.model = "bocman3";
 	ch.sound_type = "pirate";
 	LAi_NoRebirthEnable(ch);
@@ -64,7 +64,7 @@ int CreateTempQuestCharacters(int n)
 	ch.location = "none";
 	ch.location.group = "";
 	ch.location.locator = "";
-	ch.Dialog.Filename = "PJ HELP_dialog.c";
+	ch.Dialog.Filename = "PJ HELP Malcolm Hatcher_dialog.c";
 	ch.greeting = "Gr_Malcolm Hatcher";
 	ch.rank = 1;
 	ch.reputation = "None";

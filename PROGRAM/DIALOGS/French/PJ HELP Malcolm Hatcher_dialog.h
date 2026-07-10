@@ -1,4 +1,4 @@
-string DLG_TEXT[13] = {
+string DLG_TEXT[17] = {
 "Ah, capitaine ! Te voilà enfin. J'allais croire que la mer t'avait gardé pour elle toute seule. Viens donc boire un coup, qu'on parle de nos vieilles affaires.",
 "Hé, l'ami ! Par tous les tonneaux de rhum des Caraïbes, ça fait plaisir de revoir ta trogne. Assieds-toi, j'ai deux ou trois souvenirs qui grattent encore la gorge.",
 "Tiens donc, voilà mon vieux compagnon de traversée ! Approche, capitaine. Les hommes polis serrent les mains, nous autres on vide les verres et on raconte les tempêtes.",
@@ -11,5 +11,9 @@ string DLG_TEXT[13] = {
 "Pour le trésor, je te conseille de ne pas battre le fer avec ces gaillards. Ce sont de redoutables bretteurs, et pas du genre à tomber au premier coup de vent. Et puis... j'ai le nez des vieux marins, capitaine : quelque chose de plus gros semble se profiler à l'horizon.",
 "Pour les amoureux fauchés, il faudra avoir bonne réputation. Les jeunes coeurs tremblent vite quand un capitaine sent trop la poudre et les mauvaises affaires. Mais entre nous, quelque chose me dit qu'à la fin de cette histoire, il pourrait bien y avoir un coffre au trésor.",
 "Pour les contrats de sang, ouvre grand tes oreilles et écoute les gens de la ville. Certains profitent du désordre pour faire porter un meurtre à d'autres. Dans ces îles, capitaine, un couteau ment moins souvent qu'un homme. Sois vigilant.",
+"Et où je trouverai ces personnes ? Il vous pas sortir de terre !",
+"Il traine dans les rues des villes. Facile à voir avec leur épée.",
+"Ce sont généralement de beaux jeunes hommes, ils restent plantés là des heures.",
+"En sortie de ville le soir.",
 "Merci, mon bon Malcolm. Fidèle au poste, comme toujours.",
 };
