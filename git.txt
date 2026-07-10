@@ -1,3 +1,3 @@
 git add .
-git commit -m "S3 debug: start OK"
+git commit -m "S3 debug: start moteur OK"
 git push origin dev-s3_Par_l_Article_du_Sabre

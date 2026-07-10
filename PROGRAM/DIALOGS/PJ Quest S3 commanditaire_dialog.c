@@ -108,6 +108,10 @@ void ProcessDialogEvent()
 
 		case "Offer_03":
 			dialog.snd = "Voice\ARSI\ARSI001";
+			if (!CheckAttribute(PChar, "quest_S3_target_name"))
+			{
+				S3_SetGeneratedTargetData();
+			}
 			d.Text = DLG_TEXT[7];
 			Link.l1 = DLG_TEXT[11];
 			Link.l1.go = "Accept";
@@ -124,6 +128,10 @@ void ProcessDialogEvent()
 
 		case "Offer_More_02":
 			dialog.snd = "Voice\ARSI\ARSI001";
+			if (!CheckAttribute(PChar, "quest_S3_target_name"))
+			{
+				S3_SetGeneratedTargetData();
+			}
 			d.Text = DLG_TEXT[7];
 			Link.l1 = DLG_TEXT[11];
 			Link.l1.go = "Accept";
@@ -134,7 +142,11 @@ void ProcessDialogEvent()
 		case "Accept":
 			dialog.snd = "Voice\ARSI\ARSI001";
 			Diag.TempNode = "Waiting";
-			d.Text = DLG_TEXT[13];
+			if (!CheckAttribute(PChar, "quest_S3_target_name"))
+			{
+				S3_SetGeneratedTargetData();
+			}
+			d.Text = DLG_TEXT[13] + PChar.quest_S3_target_name + DLG_TEXT[25];
 			Link.l1 = DLG_TEXT[14];
 			Link.l1.go = "Accept_Exit";
 		break;

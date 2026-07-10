@@ -965,29 +965,47 @@ J'ai rencontré Fabiola Rochefort, une vieille femme qui m'a observé depuis tout 
 #QUEST	PJ_S3
 Par l'Article du Sabre
 #TEXT	1
-Un homme peu fréquentable m'a proposé un contrat en dehors de la ville. Il veut que j'élimine une personne de l'île. Ses explications sont troubles. Avant de lever la main, je ferais mieux d'interroger les habitants.
+Un homme peu frequentable m'a propose un contrat en dehors de la ville. Il m'a finalement donne le nom de sa cible. Ses explications sont troubles. Avant de lever la main, je ferais mieux d'interroger les habitants.
 #TEXT	2
-La cible est morte. Reste à savoir si j'ai rendu justice ou si je me suis laissé acheter par un menteur. Le commanditaire m'attend pour régler le contrat.
+La cible est morte. Reste a savoir si j'ai rendu justice ou si je me suis laisse acheter par un menteur. Le commanditaire m'attend pour regler le contrat.
 #TEXT	3
-J'ai choisi de laisser partir la cible. Si mes soupçons sont justes, le vrai danger se trouve peut-être du côté du commanditaire.
+J'ai choisi de laisser partir la cible. Si mes soupcons sont justes, le vrai danger se trouve peut-etre du cote du commanditaire.
 #TEXT	4
-Le commanditaire m'a payé comme promis. L'affaire est close, mais l'or pèse parfois plus lourd que le sang.
+Le commanditaire m'a paye comme promis. L'affaire est close, mais l'or pese parfois plus lourd que le sang.
 #TEXT	5
-Le commanditaire a tiré l'acier quand il a compris que je ne suivrais pas son jeu. Il est mort par la lame qu'il voulait acheter.
+Le commanditaire a tire l'acier quand il a compris que je ne suivrais pas son jeu. Il est mort par la lame qu'il voulait acheter.
 #TEXT	6
-La ville sait maintenant que j'ai éliminé une crapule. Certains habitants me remercient à demi-mot. Dans ces îles, c'est déjà beaucoup.
+La ville sait maintenant que j'ai elimine une crapule. Certains habitants me remercient a demi-mot. Dans ces iles, c'est deja beaucoup.
 #TEXT	7
-J'ai fait tuer un innocent. L'or est bienvenu, mais il laisse un goût amer.
+J'ai fait tuer un innocent. L'or est bienvenu, mais il laisse un gout amer.
 #TEXT	8
-J'ai laissé filer une vraie menace. Les habitants risquent de payer longtemps mon erreur.
+J'ai laisse filer une vraie menace. Les habitants risquent de payer longtemps mon erreur.
+#TEXT	9
+Le commanditaire m'a designe Jean-Baptiste Lemoine. Si je dois agir, je veux d'abord savoir quel homme il est vraiment.
+#TEXT	10
+Le commanditaire m'a designe Jeanne Mercier. Si je dois agir, je veux d'abord savoir quelle femme elle est vraiment.
 
 #QUEST	PJ_S3_CODEX
 Codex des Frères de l'Horizon
 #TEXT	1
-Article II - Par l'Article du Sabre
+Article X - Des Mots Interdits en Mer : "Certains mots attirent la malchance et les tempêtes. Le mot ?retraite? est formellement proscrit en mer. Celui qui le prononce devra affronter une bouteille à la mer contenant? un message d'amour de sa mère."
 #TEXT	2
-Quand la justice des hommes échoue ou dort trop profondément, alors s'applique l'Article du Sabre.
+Article IX - De l'Hospitalité Obligée : "Tout navire pirate doit offrir refuge à un frère ou une s?ur du Code traqué(e) par les autorités, sauf si ladite personne a trahi l'Article I. Le refus d'accueil est vu comme une tentative de collaboration terrestre."
 #TEXT	3
-Le Verbe accuse, la Lame tranche.
+Article VIII - Du Droit au Duel : "Lorsqu'un litige éclate entre pirates, le duel à l'épée ou au pistolet peut être invoqué. Le duel doit être public, loyal, et les témoins doivent être sobres au minimum de l'?il gauche."
 #TEXT	4
-Le sang parle là où les juges se taisent.
+Article VII - Du Partage Juste du Butin : "Tout butin trouvé ou pris en mer devra être partagé équitablement selon les parts jurées. Les tricheurs auront les poches cousues et les doigts comptés à la dague."
+#TEXT	5
+Article VI - De l'Interdiction Sacrée des Bananes Effigies : "Nul pirate ne portera de banane sculptée, peinte ou portée comme symbole personnel. Depuis l'Incident de Port-Gérard, les bananes sont tolérées uniquement en bouche, jamais en bannière. Les récidivistes seront condamnés à jongler publiquement avec trois poulpes endormis."
+#TEXT	6
+Article V - Du Rhum, Nectar des Braves : "Toute interdiction, taxation abusive ou dilution du rhum constitue un crime contre la piraterie. Le rhum appartient à tous, sauf aux gouverneurs qui le boivent comme du vinaigre."
+#TEXT	7
+Article IV - Des Ordres à Abattre : "Toute loge, secte, ou société cachée, usant d'influence contre les lois du large, devra être traquée sans merci. La mer n'a point de place pour les chaînes de l'esprit ou les jeux de pouvoir masqués."
+#TEXT	8
+Article III - De la Confrérie Interdite : "Aucun pirate n'a droit d'entrer ou de pactiser avec toute société secrète, ordre occulte, ou culte sans nom. Celui qu'on surprend à prêter allégeance dans l'ombre verra sa langue clouée à la grand-voile."
+#TEXT	9
+Article II - Par l'Article du Sabre : "Quand la justice des hommes échoue ou dort trop profondément, alors s'applique l'Article du Sabre. Le Verbe accuse, la Lame tranche. Le sang parle là où les juges se taisent."
+#TEXT	10
+Article I - Le Code au-dessus de tout : "Qu'un pirate jure fidélité à son pavillon, à son équipage ou à son or, nul serment ne surpasse celui prêté au Code. Tout contrevenant sera jugé par la Lame ou abandonné à la merci des requins et des corbeaux de mer."
+#TEXT	11
+Tel que consigné sous le regard des vents et scellé par l'écume des mers. « Nul n'est au-dessus du Code, pas même celui qui l'a écrit avec son sang. » - Prologue du Codex, manuscrit de feu le Capitaine Grégoire "Crochet d'Azur"

@@ -257,10 +257,17 @@ void S3_OpenQuestHeaders()
 	SetQuestHeader("PJ_S3");
 	DeleteQuestHeader("PJ_S3_CODEX");
 	SetQuestHeader("PJ_S3_CODEX");
-	AddQuestRecord("PJ_S3_CODEX", "4");
-	AddQuestRecord("PJ_S3_CODEX", "3");
-	AddQuestRecord("PJ_S3_CODEX", "2");
 	AddQuestRecord("PJ_S3_CODEX", "1");
+	AddQuestRecord("PJ_S3_CODEX", "2");
+	AddQuestRecord("PJ_S3_CODEX", "3");
+	AddQuestRecord("PJ_S3_CODEX", "4");
+	AddQuestRecord("PJ_S3_CODEX", "5");
+	AddQuestRecord("PJ_S3_CODEX", "6");
+	AddQuestRecord("PJ_S3_CODEX", "7");
+	AddQuestRecord("PJ_S3_CODEX", "8");
+	AddQuestRecord("PJ_S3_CODEX", "9");
+	AddQuestRecord("PJ_S3_CODEX", "10");
+	AddQuestRecord("PJ_S3_CODEX", "11");
 }
 
 void S3_CloseQuestHeaders()
@@ -527,7 +534,10 @@ bool QuestComplete_S3(string sQuestName)
 
 			S3_OpenQuestHeaders();
 			S3_SetRunCity(cityKey);
-			S3_SetGeneratedTargetData();
+			if (!CheckAttribute(pchar, "quest_S3_target_name"))
+			{
+				S3_SetGeneratedTargetData();
+			}
 			S3_PrepareCommanditaireCharacter();
 			S3_PrepareTargetCharacter();
 			S3_PrepareWitnessCharacter();
@@ -535,6 +545,20 @@ bool QuestComplete_S3(string sQuestName)
 			pchar.quest_S3_city_reward_gold = 250 + (50 * makeint(pchar.rank));
 			pchar.quest_S3_status = "investigation";
 			AddQuestRecord("PJ_S3", "1");
+			if (CheckAttribute(pchar, "quest_S3_target_name"))
+			{
+				if (pchar.quest_S3_target_name == "Jean-Baptiste Lemoine")
+				{
+					AddQuestRecord("PJ_S3", "9");
+				}
+				else
+				{
+					if (pchar.quest_S3_target_name == "Jeanne Mercier")
+					{
+						AddQuestRecord("PJ_S3", "10");
+					}
+				}
+			}
 			Log_SetStringToLog("S3 contract accepted");
 			Log_SetStringToLog("S3 target generated");
 			return true;
