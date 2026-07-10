@@ -21,7 +21,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Aeaeia ia?aue - ia?aay ano?a?a
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
 			NPChar.quest.meeting = NPC_Meeting;
@@ -150,13 +150,7 @@ void ProcessDialogEvent()
 			{
 				if (CheckAttribute(pchar, "quest_S3_status"))
 				{
-					switch (pchar.quest_S3_status)
-					{
-						case "accepted":
-						case "investigation":
-						case "candidate_target_kill":
-						case "candidate_target_release":
-							if (!CheckAttribute(pchar, "quest_S3_informant_merchant"))
+					bool s3_dialogue = false;  					switch (pchar.quest_S3_status) 					{ 						case "accepted": 							s3_dialogue = true; 						break; 						case "investigation": 							s3_dialogue = true; 						break; 						case "candidate_target_kill": 							s3_dialogue = true; 						break; 						case "candidate_target_release": 							s3_dialogue = true; 						break; 					}  					if (s3_dialogue) 					{ 						if (!CheckAttribute(pchar, "quest_S3_informant_merchant"))
 							{
 								link.l20 = "Je voudrais votre avis de marchand sur une personne de cette ville.";
 								link.l20.go = "S3_merchant_start";
@@ -166,7 +160,6 @@ void ProcessDialogEvent()
 								link.l21 = "Vous m'avez deja donne votre avis sur cette affaire.";
 								link.l21.go = "S3_merchant_repeat";
 							}
-						break;
 					}
 				}
 			}
@@ -178,7 +171,7 @@ void ProcessDialogEvent()
 			if (npchar.quest.trade_date != lastspeak_date)
 			{
 				npchar.quest.trade_date = lastspeak_date;
-				//проверка враждебности нам страны торговца
+				//i?iaa?ea a?a?aaaiinoe iai no?aiu oi?aiaoa
 				if (GetNationRelation2MainCharacter(ENGLAND) == RELATION_ENEMY)
 				{
 					dialog.snd = "Voice\ALMI\ALMI009";
@@ -198,9 +191,9 @@ void ProcessDialogEvent()
 					}
 					else
 					{
-						//проверяем импорт/экспорт
+						//i?iaa?yai eiii?o/yenii?o
 						int iTradeGoods = rand(20) + 6;
-						//проверяем свободное место (при этом должно вмещаться по меньшей мере 100 единиц выбранного груза
+						//i?iaa?yai naiaiaiia ianoi (i?e yoii aie?ii aiauaouny ii iaiuoae ia?a 100 aaeieo aua?aiiiai a?oca
 						if (GetSquadronFreeSpace(pchar, iTradeGoods) < 100)
 						{
 							dialog.snd = "Voice\ALMI\ALMI011";

@@ -22,7 +22,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Aeaeia ia?aue - ia?aay ano?a?a
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -119,13 +119,7 @@ void ProcessDialogEvent()
 			{
 				if (CheckAttribute(pchar, "quest_S3_status"))
 				{
-					switch (pchar.quest_S3_status)
-					{
-						case "accepted":
-						case "investigation":
-						case "candidate_target_kill":
-						case "candidate_target_release":
-							if (!CheckAttribute(pchar, "quest_S3_informant_tavernier"))
+					bool s3_dialogue = false;  					switch (pchar.quest_S3_status) 					{ 						case "accepted": 							s3_dialogue = true; 						break; 						case "investigation": 							s3_dialogue = true; 						break; 						case "candidate_target_kill": 							s3_dialogue = true; 						break; 						case "candidate_target_release": 							s3_dialogue = true; 						break; 					}  					if (s3_dialogue) 					{ 						if (!CheckAttribute(pchar, "quest_S3_informant_tavernier"))
 							{
 								link.l5 = "Je cherche des rumeurs sur quelqu'un de cette ville.";
 								link.l5.go = "S3_tavern_start";
@@ -135,7 +129,6 @@ void ProcessDialogEvent()
 								link.l6 = "Vous m'avez deja confie vos rumeurs sur cette affaire.";
 								link.l6.go = "S3_tavern_repeat";
 							}
-						break;
 					}
 				}
 			}

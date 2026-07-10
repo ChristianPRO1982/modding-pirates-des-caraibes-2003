@@ -207,13 +207,55 @@ Bon reflexe:
 - traiter toute erreur du type `invalid utf-8 sequence` comme un signal que le fichier doit etre relu/reecrit en `ISO-8859-1`.
 
 ### Regle defensive sur les `switch`
-Sur ce moteur legacy, il vaut mieux ecrire les `switch` de facon tres defensive:
+Sur ce moteur legacy, il vaut mieux ecrire les `switch` de facon tres defensive. Le script PotC ressemble a du C, mais c'est un C interprete legacy, pas un C moderne fiable sur les raccourcis d'ecriture:
 
 - mettre un `break;` dans chaque `case`,
 - le garder meme si le `case` contient deja un `return`,
-- eviter les `case` groupes avec fallthrough implicite.
+- ne pas faire de fallthrough implicite, meme volontaire,
+- eviter les `case` groupes qui mutualisent un seul bloc final.
 
 En pratique, si un script parait correct mais plante au chargement, verifier d'abord qu'aucun `case` ne manque de `break;`.
+
+Exemple a eviter:
+
+```c
+switch (pchar.quest_S3_status)
+{
+	case "accepted":
+	case "investigation":
+	case "candidate_target_kill":
+	case "candidate_target_release":
+		// bloc partage
+	break;
+}
+```
+
+Forme recommandee:
+
+```c
+bool s3_dialogue = false;
+
+switch (pchar.quest_S3_status)
+{
+	case "accepted":
+		s3_dialogue = true;
+	break;
+	case "investigation":
+		s3_dialogue = true;
+	break;
+	case "candidate_target_kill":
+		s3_dialogue = true;
+	break;
+	case "candidate_target_release":
+		s3_dialogue = true;
+	break;
+}
+
+if (s3_dialogue)
+{
+	// ajouter les liens ou executer la logique commune ici
+}
+```
 
 ### Regle defensive sur les `string`
 Ce langage ressemble a du C, mais ce n'est pas un C standard moderne.

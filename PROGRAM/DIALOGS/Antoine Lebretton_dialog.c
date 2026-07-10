@@ -495,13 +495,7 @@ void ProcessDialogEvent()
 			{
 				if (CheckAttribute(pchar, "quest_S3_status"))
 				{
-					switch (pchar.quest_S3_status)
-					{
-						case "accepted":
-						case "investigation":
-						case "candidate_target_kill":
-						case "candidate_target_release":
-							if (!CheckAttribute(pchar, "quest_S3_informant_tavernier"))
+					bool s3_dialogue = false;  					switch (pchar.quest_S3_status) 					{ 						case "accepted": 							s3_dialogue = true; 						break; 						case "investigation": 							s3_dialogue = true; 						break; 						case "candidate_target_kill": 							s3_dialogue = true; 						break; 						case "candidate_target_release": 							s3_dialogue = true; 						break; 					}  					if (s3_dialogue) 					{ 						if (!CheckAttribute(pchar, "quest_S3_informant_tavernier"))
 							{
 								link.l20 = "Je cherche des rumeurs sur quelqu'un de cette ville.";
 								link.l20.go = "S3_tavern_start";
@@ -511,7 +505,6 @@ void ProcessDialogEvent()
 								link.l21 = "Vous m'avez deja confie vos rumeurs sur cette affaire.";
 								link.l21.go = "S3_tavern_repeat";
 							}
-						break;
 					}
 				}
 			}

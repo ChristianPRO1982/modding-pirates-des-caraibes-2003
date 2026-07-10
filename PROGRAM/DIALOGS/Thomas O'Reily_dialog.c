@@ -21,7 +21,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Aeaeia ia?aue - ia?aay ano?a?a
 		case "exit":
 			Diag.CurrentNode = Diag.TempNode;
 			NPChar.quest.meeting = NPC_Meeting;
@@ -107,7 +107,7 @@ void ProcessDialogEvent()
 			d.Text = DLG_TEXT[24];
 			if (npchar.quest_begin == "0")
 			////////////////////////////////////////
-			// ВЫДАЧА КВЕСТОВ
+			// AUAA?A EAANOIA
 			////////////////////////////////////////
 			{
 				if (npchar.quest.contraband == "100000000" && !LAI_IsDead(characterFromID("Andre Juliao")) && GetSquadronFreeSpace(pchar, GOOD_EBONY)>=100)
@@ -144,7 +144,7 @@ void ProcessDialogEvent()
 				}
 			}
 			////////////////////////////////////////
-			// ПРИЕМ КВЕСТОВ
+			// I?EAI EAANOIA
 			////////////////////////////////////////
 			if (NPChar.quest.first_job == "complete" && iTest < QUEST_COUNTER)
 			{
@@ -159,7 +159,7 @@ void ProcessDialogEvent()
 				iTest = iTest + 1;
 			}
 			////////////////////////////////////////
-			// квест про котнрабандистов
+			// eaano i?i eioi?aaaiaenoia
 			////////////////////////////////////////
 			if (Characters[GetCharacterIndex("Milon Blacque")].quest.son == "2" && iTest < QUEST_COUNTER)
 			{
@@ -180,19 +180,13 @@ void ProcessDialogEvent()
 				iTest = iTest + 1;
 			}
 			////////////////////////////////////////
-			// конец квеста про котнрабандистов
+			// eiiao eaanoa i?i eioi?aaaiaenoia
 			////////////////////////////////////////
 			if (CheckAttribute(pchar, "quest_S3_city") && pchar.quest_S3_city == "Redmond")
 			{
 				if (CheckAttribute(pchar, "quest_S3_status"))
 				{
-					switch (pchar.quest_S3_status)
-					{
-						case "accepted":
-						case "investigation":
-						case "candidate_target_kill":
-						case "candidate_target_release":
-							if (!CheckAttribute(pchar, "quest_S3_informant_merchant"))
+					bool s3_dialogue = false;  					switch (pchar.quest_S3_status) 					{ 						case "accepted": 							s3_dialogue = true; 						break; 						case "investigation": 							s3_dialogue = true; 						break; 						case "candidate_target_kill": 							s3_dialogue = true; 						break; 						case "candidate_target_release": 							s3_dialogue = true; 						break; 					}  					if (s3_dialogue) 					{ 						if (!CheckAttribute(pchar, "quest_S3_informant_merchant"))
 							{
 								link.l4 = "Je voudrais votre avis de marchand sur une personne de cette ville.";
 								link.l4.go = "S3_merchant_start";
@@ -202,7 +196,6 @@ void ProcessDialogEvent()
 								link.l5 = "Vous m'avez deja donne votre avis sur cette affaire.";
 								link.l5.go = "S3_merchant_repeat";
 							}
-						break;
 					}
 				}
 			}
@@ -513,7 +506,7 @@ void ProcessDialogEvent()
 			if (npchar.quest.trade_date != lastspeak_date)
 			{
 				npchar.quest.trade_date = lastspeak_date;
-				//проверка враждебности нам страны торговца
+				//i?iaa?ea a?a?aaaiinoe iai no?aiu oi?aiaoa
 				if (GetNationRelation2MainCharacter(ENGLAND) == RELATION_ENEMY)
 				{
 					dialog.text = DLG_TEXT[180];
@@ -531,9 +524,9 @@ void ProcessDialogEvent()
 					}
 					else
 					{
-						//проверяем импорт/экспорт
+						//i?iaa?yai eiii?o/yenii?o
 						int iTradeGoods = rand(20) + 6;
-						//проверяем свободное место (при этом должно вмещаться по меньшей мере 100 единиц выбранного груза
+						//i?iaa?yai naiaiaiia ianoi (i?e yoii aie?ii aiauaouny ii iaiuoae ia?a 100 aaeieo aua?aiiiai a?oca
 						if (GetSquadronFreeSpace(pchar, iTradeGoods) < 100)
 						{
 							dialog.text = DLG_TEXT[184];

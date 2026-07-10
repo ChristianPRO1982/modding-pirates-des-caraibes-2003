@@ -17,7 +17,7 @@ void ProcessDialogEvent()
 	trace ("----------------------------------" + Dialog.CurrentNode);
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Aeaeia ia?aue - ia?aay ano?a?a
 
 		case "exit":
 			NPChar.quest.meeting = NPC_meeting; 
@@ -80,13 +80,7 @@ void ProcessDialogEvent()
 				{
 					if (CheckAttribute(pchar, "quest_S3_status"))
 					{
-						switch (pchar.quest_S3_status)
-						{
-							case "accepted":
-							case "investigation":
-							case "candidate_target_kill":
-							case "candidate_target_release":
-								if (!CheckAttribute(pchar, "quest_S3_informant_governor"))
+						bool s3_dialogue = false;  						switch (pchar.quest_S3_status) 						{ 							case "accepted": 								s3_dialogue = true; 							break; 							case "investigation": 								s3_dialogue = true; 							break; 							case "candidate_target_kill": 								s3_dialogue = true; 							break; 							case "candidate_target_release": 								s3_dialogue = true; 							break; 						}  						if (s3_dialogue) 						{ 							if (!CheckAttribute(pchar, "quest_S3_informant_governor"))
 								{
 									link.l2 = "J'aurais besoin de votre jugement sur une personne de cette ville.";
 									link.l2.go = "S3_governor_start";
@@ -96,7 +90,6 @@ void ProcessDialogEvent()
 									link.l3 = "Vous m'avez deja donne votre jugement sur cette affaire.";
 									link.l3.go = "S3_governor_repeat";
 								}
-							break;
 						}
 					}
 				}
@@ -931,7 +924,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[300];
 			link.l1 = DLG_TEXT[301];
 			link.l1.go = "escape_from_prison_8";
-			//убиваем Эдгара
+			//oaeaaai Yaaa?a
 			ChangeCharacterAddress(characterFromID("Edgar Attwood"), "none", "none");
 			characters[GetCharacterIndex("Edgar Attwood")].act.hp = 0.0;
 		break;

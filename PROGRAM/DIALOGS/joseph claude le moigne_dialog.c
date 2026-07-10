@@ -20,7 +20,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------ƒиалог первый - перва€ встреча
+		// -----------------------------------Aeaeia ia?aue - ia?aay ano?a?a
 		case "First time":
 			Dialog.defAni = "Gov_dialog_1";
 			Dialog.defCam = "1";
@@ -81,13 +81,7 @@ void ProcessDialogEvent()
 			{
 				if (CheckAttribute(pchar, "quest_S3_status"))
 				{
-					switch (pchar.quest_S3_status)
-					{
-						case "accepted":
-						case "investigation":
-						case "candidate_target_kill":
-						case "candidate_target_release":
-							if (!CheckAttribute(pchar, "quest_S3_informant_governor"))
+					bool s3_dialogue = false;  					switch (pchar.quest_S3_status) 					{ 						case "accepted": 							s3_dialogue = true; 						break; 						case "investigation": 							s3_dialogue = true; 						break; 						case "candidate_target_kill": 							s3_dialogue = true; 						break; 						case "candidate_target_release": 							s3_dialogue = true; 						break; 					}  					if (s3_dialogue) 					{ 						if (!CheckAttribute(pchar, "quest_S3_informant_governor"))
 							{
 								link.l20 = "J'aurais besoin de votre jugement sur une personne de cette ville.";
 								link.l20.go = "S3_governor_start";
@@ -97,7 +91,6 @@ void ProcessDialogEvent()
 								link.l21 = "Vous m'avez deja donne votre jugement sur cette affaire.";
 								link.l21.go = "S3_governor_repeat";
 							}
-						break;
 					}
 				}
 			}if (npchar.quest.english_war_ship == "0")
@@ -117,7 +110,7 @@ void ProcessDialogEvent()
 			{
 				if (CheckQuestAttribute("gambling_with_girl", "to_hovernor_2") && GetNationRelation2MainCharacter(FRANCE) == RELATION_ENEMY)
 				{
-					//прощают
+					//i?iua?o
 					dialog.text = DLG_TEXT[27];
 					link.l1 = DLG_TEXT[28];
 					link.l1.go = "forgive";
@@ -128,7 +121,7 @@ void ProcessDialogEvent()
 				{
 					if (GetNationRelation2MainCharacter(FRANCE) == RELATION_ENEMY)
 					{
-						//позвол€ют уйти
+						//iicaiey?o oeoe
 						dialog.text = DLG_TEXT[29];
 						link.l1 = DLG_TEXT[30] + GetCharacterFullName(DLG_TEXT[31]) + DLG_TEXT[32];
 						link.l1.go = "ransom";
@@ -137,7 +130,7 @@ void ProcessDialogEvent()
 					}
 					else
 					{
-						//обычный разговор
+						//iau?iue ?acaiai?
 						dialog.text = DLG_TEXT[33];
 						link.l1 = DLG_TEXT[34] + GetCharacterFullName(DLG_TEXT[35]) + DLG_TEXT[36];
 						link.l1.go = "virginie";

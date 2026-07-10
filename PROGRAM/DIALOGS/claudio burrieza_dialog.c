@@ -25,7 +25,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		//-----------------------------------Диалог первый - первая встреча
+		//-----------------------------------Aeaeia ia?aue - ia?aay ano?a?a
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -131,13 +131,7 @@ void ProcessDialogEvent()
 			{
 				if (CheckAttribute(pchar, "quest_S3_status"))
 				{
-					switch (pchar.quest_S3_status)
-					{
-						case "accepted":
-						case "investigation":
-						case "candidate_target_kill":
-						case "candidate_target_release":
-							if (!CheckAttribute(pchar, "quest_S3_informant_tavernier"))
+					bool s3_dialogue = false;  					switch (pchar.quest_S3_status) 					{ 						case "accepted": 							s3_dialogue = true; 						break; 						case "investigation": 							s3_dialogue = true; 						break; 						case "candidate_target_kill": 							s3_dialogue = true; 						break; 						case "candidate_target_release": 							s3_dialogue = true; 						break; 					}  					if (s3_dialogue) 					{ 						if (!CheckAttribute(pchar, "quest_S3_informant_tavernier"))
 							{
 								link.l20 = "Je cherche des rumeurs sur quelqu'un de cette ville.";
 								link.l20.go = "S3_tavern_start";
@@ -147,7 +141,6 @@ void ProcessDialogEvent()
 								link.l21 = "Vous m'avez deja confie vos rumeurs sur cette affaire.";
 								link.l21.go = "S3_tavern_repeat";
 							}
-						break;
 					}
 				}
 			}
@@ -285,7 +278,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[84];
 			link.l1 = DLG_TEXT[85];
 			link.l1.go = "exit";
-			//Ставим штормовую погоду
+			//Noaaei ooi?iiao? iiaiao
 			pchar.quest.movie_with_fight.win_condition.l1 = "locator";
 			pchar.quest.movie_with_fight.win_condition.l1.location = "Muelle_tavern";
 			pchar.quest.movie_with_fight.win_condition.l1.locator_group = "reload";
