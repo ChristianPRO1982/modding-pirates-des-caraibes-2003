@@ -351,11 +351,8 @@ void S3_PlaceCommanditaire(string locationId)
 	ref ch;
 
 	ch = characterFromID(S3_GetCommanditaireId());
-	Log_SetStringToLog("S3 commanditaire id: " + ch.id);
-	Log_SetStringToLog("S3 commanditaire target location: " + locationId);
 	ch.Dialog.CurrentNode = "First time";
 	PlaceCharacter(ch, "goto", locationId);
-	Log_SetStringToLog("S3 commanditaire PlaceCharacter done");
 }
 
 void S3_PlaceTarget(string locationId)
@@ -448,12 +445,10 @@ void S3_ProcessLocationEnter()
 	{
 		if (!S3_IsCommanditaireHour())
 		{
-			Log_SetStringToLog("S3 no spawn: wrong commanditaire hour");
 			return;
 		}
 		if (rand(2) == 0)
 		{
-			Log_SetStringToLog("S3 no spawn: random roll failed");
 			return;
 		}
 
@@ -462,30 +457,24 @@ void S3_ProcessLocationEnter()
 		pchar.quest_S3_run_id = S3_GetRunId() + 1;
 		S3_SetRunCity(cityKey);
 		S3_PrepareCommanditaireCharacter();
-		Log_SetStringToLog("S3 commanditaire prepared");
 		S3_PrepareTargetCharacter();
 		S3_PrepareWitnessCharacter();
-		Log_SetStringToLog("S3 new occurrence created");
 		S3_PlaceCommanditaire(locationId);
-		Log_SetStringToLog("S3 commanditaire placed");
 		return;
 	}
 
 	status = pchar.quest_S3_status;
 	if (!CheckAttribute(pchar, "quest_S3_city"))
 	{
-		Log_SetStringToLog("S3 active but no city");
 		return;
 	}
 
 	if (locationId != S3_GetExteriorLocationFromCity(pchar.quest_S3_city))
 	{
-		Log_SetStringToLog("S3 active: wrong exterior scene");
 		return;
 	}
 
 	S3_PrepareCommanditaireCharacter();
-	Log_SetStringToLog("S3 commanditaire prepared for active state");
 	S3_PrepareTargetCharacter();
 	S3_PrepareWitnessCharacter();
 
@@ -493,11 +482,9 @@ void S3_ProcessLocationEnter()
 	{
 		if (!S3_IsCommanditaireHour())
 		{
-			Log_SetStringToLog("S3 active commanditaire hidden: wrong hour");
 			return;
 		}
 
-		Log_SetStringToLog("S3 active commanditaire re-place: " + status);
 		S3_PlaceCommanditaire(locationId);
 		return;
 	}
@@ -506,11 +493,9 @@ void S3_ProcessLocationEnter()
 	{
 		if (!S3_IsTargetHour())
 		{
-			Log_SetStringToLog("S3 active target hidden: wrong hour");
 			return;
 		}
 
-		Log_SetStringToLog("S3 active target re-place: " + status);
 		S3_PlaceTarget(locationId);
 		return;
 	}
@@ -559,8 +544,6 @@ bool QuestComplete_S3(string sQuestName)
 					}
 				}
 			}
-			Log_SetStringToLog("S3 contract accepted");
-			Log_SetStringToLog("S3 target generated");
 			return true;
 		break;
 
@@ -574,7 +557,6 @@ bool QuestComplete_S3(string sQuestName)
 			pchar.quest_S3_target_released = true;
 			pchar.quest_S3_status = "target_released";
 			AddQuestRecord("PJ_S3", "3");
-			Log_SetStringToLog("S3 target released");
 			return true;
 		break;
 
@@ -588,21 +570,17 @@ bool QuestComplete_S3(string sQuestName)
 			pchar.quest_S3_target_killed = true;
 			pchar.quest_S3_status = "target_killed";
 			AddQuestRecord("PJ_S3", "2");
-			Log_SetStringToLog("S3 target killed");
 			return true;
 		break;
 
 		case "quest_S3_collect_reward":
 			AddMoneyToCharacter(pchar, makeint(pchar.quest_S3_reward_gold));
 			pchar.quest_S3_status = "commanditaire_paid";
-			Log_SetStringToLog("S3 commanditaire paid");
-
 			if (pchar.quest_S3_target_truth == "guilty")
 			{
 				ChangeCharacterReputation(pchar, 3);
 				AddPartyExp(pchar, 1000 * makeint(pchar.rank));
 				AddQuestRecord("PJ_S3", "4");
-				Log_SetStringToLog("S3 completed good_kill");
 				S3_FinalizeQuest("good_kill");
 			}
 			else
@@ -611,7 +589,6 @@ bool QuestComplete_S3(string sQuestName)
 				AddPartyExp(pchar, 250 * makeint(pchar.rank));
 				pchar.quest_S3_city_bad_reputation = true;
 				AddQuestRecord("PJ_S3", "7");
-				Log_SetStringToLog("S3 completed bad_kill");
 				S3_FinalizeQuest("bad_kill");
 			}
 			return true;
@@ -625,7 +602,6 @@ bool QuestComplete_S3(string sQuestName)
 
 		case "quest_S3_commanditaire_dead":
 			pchar.quest_S3_commanditaire_killed = true;
-			Log_SetStringToLog("S3 commanditaire killed");
 
 			if (pchar.quest_S3_target_truth == "innocent")
 			{
@@ -639,7 +615,6 @@ bool QuestComplete_S3(string sQuestName)
 			AddPartyExp(pchar, 100 * makeint(pchar.rank));
 			pchar.quest_S3_city_bad_reputation = true;
 			AddQuestRecord("PJ_S3", "8");
-			Log_SetStringToLog("S3 completed bad_release");
 			S3_FinalizeQuest("bad_release");
 			return true;
 		break;
@@ -658,7 +633,6 @@ bool QuestComplete_S3(string sQuestName)
 			ChangeCharacterReputation(pchar, 7);
 			AddPartyExp(pchar, 1000 * makeint(pchar.rank));
 			AddQuestRecord("PJ_S3", "6");
-			Log_SetStringToLog("S3 completed good_release");
 			S3_FinalizeQuest("good_release");
 			return true;
 		break;
