@@ -5693,9 +5693,9 @@ int CreateTempQuestCharacters(int n)
 	LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
 	n = n + 1;
 
-	//////// \\\\\\\
-	///// S3 QUEST \\\\
-	//////// \\\\\\\
+	//////////\\\\\\\\\\
+	///// S3 QUEST \\\\\
+	//////////\\\\\\\\\\
 	makeref(ch,Characters[n]);
 	ch.name = "Marius";
 	ch.lastname = "Leroux";

@@ -54,6 +54,7 @@ void QuestsCheck_forLocEnter()
 	// Log_SetStringToLog("PJ 1:"+pchar.location);
 	// Log_SetStringToLog("PJ 2:"+pchar.location.locator);
 	// Log_SetStringToLog("PJ 3:"+pchar.location.locator_group);//location.group
+	// Log_SetStringToLog("PJ hour:"+ makeint(GetHour()));
 	// Log_SetStringToLog("PJ blade:"+pchar.equip.blade);
 	// Log_SetStringToLog("PJ gun:"+pchar.equip.gun);
 	// fin ajout PJ
@@ -63,7 +64,7 @@ void QuestsCheck_forLocEnter()
 	HELP_ProcessLocationEnter();
 	S1_ProcessLocationEnter();
 	S2_ProcessLocationEnter();
-	// S3_ProcessLocationEnter();
+	S3_ProcessLocationEnter();
 }
 
 void CharacterDeadProcess()

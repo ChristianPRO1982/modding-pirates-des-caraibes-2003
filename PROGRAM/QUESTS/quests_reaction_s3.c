@@ -54,6 +54,48 @@ bool S3_IsTargetHour()
 	return hour >= 8 && hour <= 15;
 }
 
+bool S3_IsCommanditaireStatus(string status)
+{
+	switch (status)
+	{
+		case "spawned":
+			return true;
+		break;
+		case "offered":
+			return true;
+		break;
+		case "target_killed":
+			return true;
+		break;
+		case "target_released":
+			return true;
+		break;
+	}
+
+	return false;
+}
+
+bool S3_IsTargetStatus(string status)
+{
+	switch (status)
+	{
+		case "accepted":
+			return true;
+		break;
+		case "investigation":
+			return true;
+		break;
+		case "candidate_target_kill":
+			return true;
+		break;
+		case "candidate_target_release":
+			return true;
+		break;
+	}
+
+	return false;
+}
+
 string S3_GetCommanditaireId()
 {
 	return "PJ_S3_Commanditaire";
@@ -73,7 +115,7 @@ string S3_GetCityKeyFromLocation(string locationId)
 {
 	switch (locationId)
 	{
-		case "Redmond_town_exit_1": return "Redmond"; break;
+		case "Redmond_town_exit_2": return "Redmond"; break;
 		case "Falaise_de_fleur_location_02": return "FalaiseDeFleur"; break;
 		case "Conceicao_town_exit": return "Conceicao"; break;
 		case "Muelle_town_exit": return "IslaMuelle"; break;
@@ -89,7 +131,7 @@ string S3_GetExteriorLocationFromCity(string cityKey)
 {
 	switch (cityKey)
 	{
-		case "Redmond": return "Redmond_town_exit_1"; break;
+		case "Redmond": return "Redmond_town_exit_2"; break;
 		case "FalaiseDeFleur": return "Falaise_de_fleur_location_02"; break;
 		case "Conceicao": return "Conceicao_town_exit"; break;
 		case "IslaMuelle": return "Muelle_town_exit"; break;
@@ -302,8 +344,11 @@ void S3_PlaceCommanditaire(string locationId)
 	ref ch;
 
 	ch = characterFromID(S3_GetCommanditaireId());
+	Log_SetStringToLog("S3 commanditaire id: " + ch.id);
+	Log_SetStringToLog("S3 commanditaire target location: " + locationId);
 	ch.Dialog.CurrentNode = "First time";
 	PlaceCharacter(ch, "goto", locationId);
+	Log_SetStringToLog("S3 commanditaire PlaceCharacter done");
 }
 
 void S3_PlaceTarget(string locationId)
@@ -396,10 +441,12 @@ void S3_ProcessLocationEnter()
 	{
 		if (!S3_IsCommanditaireHour())
 		{
+			Log_SetStringToLog("S3 no spawn: wrong commanditaire hour");
 			return;
 		}
-		if (rand(4) != 0)
+		if (rand(2) == 0)
 		{
+			Log_SetStringToLog("S3 no spawn: random roll failed");
 			return;
 		}
 
@@ -408,72 +455,57 @@ void S3_ProcessLocationEnter()
 		pchar.quest_S3_run_id = S3_GetRunId() + 1;
 		S3_SetRunCity(cityKey);
 		S3_PrepareCommanditaireCharacter();
+		Log_SetStringToLog("S3 commanditaire prepared");
 		S3_PrepareTargetCharacter();
 		S3_PrepareWitnessCharacter();
+		Log_SetStringToLog("S3 new occurrence created");
 		S3_PlaceCommanditaire(locationId);
-		Log_SetStringToLog("S3 spawned");
+		Log_SetStringToLog("S3 commanditaire placed");
 		return;
 	}
 
 	status = pchar.quest_S3_status;
 	if (!CheckAttribute(pchar, "quest_S3_city"))
 	{
+		Log_SetStringToLog("S3 active but no city");
 		return;
 	}
 
 	if (locationId != S3_GetExteriorLocationFromCity(pchar.quest_S3_city))
 	{
+		Log_SetStringToLog("S3 active: wrong exterior scene");
 		return;
 	}
 
 	S3_PrepareCommanditaireCharacter();
+	Log_SetStringToLog("S3 commanditaire prepared for active state");
 	S3_PrepareTargetCharacter();
 	S3_PrepareWitnessCharacter();
 
-	if (S3_IsCommanditaireHour())
+	if (S3_IsCommanditaireStatus(status))
 	{
-		switch (status)
+		if (!S3_IsCommanditaireHour())
 		{
-			case "spawned":
-				S3_PlaceCommanditaire(locationId);
-				return;
-			break;
-			case "offered":
-				S3_PlaceCommanditaire(locationId);
-				return;
-			break;
-			case "target_killed":
-				S3_PlaceCommanditaire(locationId);
-				return;
-			break;
-			case "target_released":
-				S3_PlaceCommanditaire(locationId);
-				return;
-			break;
+			Log_SetStringToLog("S3 active commanditaire hidden: wrong hour");
+			return;
 		}
+
+		Log_SetStringToLog("S3 active commanditaire re-place: " + status);
+		S3_PlaceCommanditaire(locationId);
+		return;
 	}
 
-	if (S3_IsTargetHour())
+	if (S3_IsTargetStatus(status))
 	{
-		switch (status)
+		if (!S3_IsTargetHour())
 		{
-			case "accepted":
-				S3_PlaceTarget(locationId);
-				return;
-			break;
-			case "investigation":
-				S3_PlaceTarget(locationId);
-				return;
-			break;
-			case "candidate_target_kill":
-				S3_PlaceTarget(locationId);
-				return;
-			break;
-			case "candidate_target_release":
-				S3_PlaceTarget(locationId);
-				return;
-			break;
+			Log_SetStringToLog("S3 active target hidden: wrong hour");
+			return;
 		}
+
+		Log_SetStringToLog("S3 active target re-place: " + status);
+		S3_PlaceTarget(locationId);
+		return;
 	}
 }
 
