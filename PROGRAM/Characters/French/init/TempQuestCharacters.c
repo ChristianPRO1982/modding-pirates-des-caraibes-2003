@@ -5697,8 +5697,8 @@ int CreateTempQuestCharacters(int n)
 	///// S3 QUEST \\\\\
 	//////////\\\\\\\\\\
 	makeref(ch,Characters[n]);
-	ch.name = "Marius";
-	ch.lastname = "Leroux";
+	ch.name = "Commanditaire";
+	ch.lastname = "";
 	ch.id = "PJ_S3_Commanditaire";
 	ch.model = "capitan1";
 	ch.sex = "man";
@@ -5733,8 +5733,8 @@ int CreateTempQuestCharacters(int n)
 	n = n + 1;
 
 	makeref(ch,Characters[n]);
-	ch.name = "Jeanne";
-	ch.lastname = "Mercier";
+	ch.name = "Target";
+	ch.lastname = "";
 	ch.id = "PJ_S3_Target";
 	ch.model = "towngirl4";
 	ch.sex = "woman";
@@ -5769,8 +5769,8 @@ int CreateTempQuestCharacters(int n)
 	n = n + 1;
 
 	makeref(ch,Characters[n]);
-	ch.name = "Bastien";
-	ch.lastname = "Ravel";
+	ch.name = "Witness";
+	ch.lastname = "";
 	ch.id = "PJ_S3_Witness";
 	ch.model = "bocman";
 	ch.sex = "man";

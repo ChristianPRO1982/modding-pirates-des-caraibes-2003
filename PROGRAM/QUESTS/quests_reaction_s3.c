@@ -295,9 +295,17 @@ void S3_ResetRuntime()
 	DeleteAttribute(pchar, "quest_S3_status");
 	DeleteAttribute(pchar, "quest_S3_city");
 	DeleteAttribute(pchar, "quest_S3_commanditaire_id");
+	DeleteAttribute(pchar, "quest_S3_commanditaire_name");
+	DeleteAttribute(pchar, "quest_S3_commanditaire_firstname");
+	DeleteAttribute(pchar, "quest_S3_commanditaire_lastname");
 	DeleteAttribute(pchar, "quest_S3_target_id");
 	DeleteAttribute(pchar, "quest_S3_witness_id");
+	DeleteAttribute(pchar, "quest_S3_witness_name");
+	DeleteAttribute(pchar, "quest_S3_witness_firstname");
+	DeleteAttribute(pchar, "quest_S3_witness_lastname");
 	DeleteAttribute(pchar, "quest_S3_target_name");
+	DeleteAttribute(pchar, "quest_S3_target_firstname");
+	DeleteAttribute(pchar, "quest_S3_target_lastname");
 	DeleteAttribute(pchar, "quest_S3_target_gender");
 	DeleteAttribute(pchar, "quest_S3_target_truth");
 	DeleteAttribute(pchar, "quest_S3_reward_gold");
@@ -327,6 +335,532 @@ void S3_SetRunCity(string cityKey)
 	pchar.quest_S3_commanditaire_id = S3_GetCommanditaireId();
 	pchar.quest_S3_target_id = S3_GetTargetId();
 	pchar.quest_S3_witness_id = S3_GetWitnessId();
+}
+
+void S3_SetGeneratedCommanditaireIdentity()
+{
+	ref pchar = GetMainCharacter();
+
+	switch (rand(29))
+	{
+		case 0:
+			pchar.quest_S3_commanditaire_firstname = "Charles";
+			pchar.quest_S3_commanditaire_lastname = "dit le Rat d'égout";
+		break;
+		case 1:
+			pchar.quest_S3_commanditaire_firstname = "Edgar";
+			pchar.quest_S3_commanditaire_lastname = "dit le Furet";
+		break;
+		case 2:
+			pchar.quest_S3_commanditaire_firstname = "Silas";
+			pchar.quest_S3_commanditaire_lastname = "dit la Suie";
+		break;
+		case 3:
+			pchar.quest_S3_commanditaire_firstname = "Victor";
+			pchar.quest_S3_commanditaire_lastname = "dit le Brouillard";
+		break;
+		case 4:
+			pchar.quest_S3_commanditaire_firstname = "Tobias";
+			pchar.quest_S3_commanditaire_lastname = "dit le Crochet";
+		break;
+		case 5:
+			pchar.quest_S3_commanditaire_firstname = "Abel";
+			pchar.quest_S3_commanditaire_lastname = "dit la Griffe";
+		break;
+		case 6:
+			pchar.quest_S3_commanditaire_firstname = "Elias";
+			pchar.quest_S3_commanditaire_lastname = "dit le Corbeau";
+		break;
+		case 7:
+			pchar.quest_S3_commanditaire_firstname = "Morris";
+			pchar.quest_S3_commanditaire_lastname = "dit le Verrou";
+		break;
+		case 8:
+			pchar.quest_S3_commanditaire_firstname = "Gideon";
+			pchar.quest_S3_commanditaire_lastname = "dit le Cendreux";
+		break;
+		case 9:
+			pchar.quest_S3_commanditaire_firstname = "Barnaby";
+			pchar.quest_S3_commanditaire_lastname = "dit le Chiffon Noir";
+		break;
+		case 10:
+			pchar.quest_S3_commanditaire_firstname = "Rupert";
+			pchar.quest_S3_commanditaire_lastname = "dit la Lanterne Morte";
+		break;
+		case 11:
+			pchar.quest_S3_commanditaire_firstname = "Jonas";
+			pchar.quest_S3_commanditaire_lastname = "dit le Bec de Rat";
+		break;
+		case 12:
+			pchar.quest_S3_commanditaire_firstname = "Crispin";
+			pchar.quest_S3_commanditaire_lastname = "dit le Casse-Bourse";
+		break;
+		case 13:
+			pchar.quest_S3_commanditaire_firstname = "Walter";
+			pchar.quest_S3_commanditaire_lastname = "dit le Crachat";
+		break;
+		case 14:
+			pchar.quest_S3_commanditaire_firstname = "Dorian";
+			pchar.quest_S3_commanditaire_lastname = "dit la Brume";
+		break;
+		case 15:
+			pchar.quest_S3_commanditaire_firstname = "Phineas";
+			pchar.quest_S3_commanditaire_lastname = "dit le Taupier";
+		break;
+		case 16:
+			pchar.quest_S3_commanditaire_firstname = "Oswald";
+			pchar.quest_S3_commanditaire_lastname = "dit le Chien Crevé";
+		break;
+		case 17:
+			pchar.quest_S3_commanditaire_firstname = "Neville";
+			pchar.quest_S3_commanditaire_lastname = "dit la Rouille";
+		break;
+		case 18:
+			pchar.quest_S3_commanditaire_firstname = "Quentin";
+			pchar.quest_S3_commanditaire_lastname = "dit le Ruisseau Noir";
+		break;
+		case 19:
+			pchar.quest_S3_commanditaire_firstname = "Jasper";
+			pchar.quest_S3_commanditaire_lastname = "dit le Goupil";
+		break;
+		case 20:
+			pchar.quest_S3_commanditaire_firstname = "Lionel";
+			pchar.quest_S3_commanditaire_lastname = "dit le Clou";
+		break;
+		case 21:
+			pchar.quest_S3_commanditaire_firstname = "Harold";
+			pchar.quest_S3_commanditaire_lastname = "dit le Couteau Tordu";
+		break;
+		case 22:
+			pchar.quest_S3_commanditaire_firstname = "Duncan";
+			pchar.quest_S3_commanditaire_lastname = "dit la Boue";
+		break;
+		case 23:
+			pchar.quest_S3_commanditaire_firstname = "Cedric";
+			pchar.quest_S3_commanditaire_lastname = "dit le Sifflet";
+		break;
+		case 24:
+			pchar.quest_S3_commanditaire_firstname = "Ambrose";
+			pchar.quest_S3_commanditaire_lastname = "dit la Charette Grince";
+		break;
+		case 25:
+			pchar.quest_S3_commanditaire_firstname = "Percival";
+			pchar.quest_S3_commanditaire_lastname = "dit le Croc";
+		break;
+		case 26:
+			pchar.quest_S3_commanditaire_firstname = "Basil";
+			pchar.quest_S3_commanditaire_lastname = "dit le Drap Sale";
+		break;
+		case 27:
+			pchar.quest_S3_commanditaire_firstname = "Cornelius";
+			pchar.quest_S3_commanditaire_lastname = "dit la Balafre";
+		break;
+		case 28:
+			pchar.quest_S3_commanditaire_firstname = "Nathaniel";
+			pchar.quest_S3_commanditaire_lastname = "dit le Caniveau";
+		break;
+		case 29:
+			pchar.quest_S3_commanditaire_firstname = "Gregory";
+			pchar.quest_S3_commanditaire_lastname = "dit le Rat de Cave";
+		break;
+	}
+
+	pchar.quest_S3_commanditaire_name = pchar.quest_S3_commanditaire_firstname + " " + pchar.quest_S3_commanditaire_lastname;
+}
+
+void S3_SetGeneratedTargetMaleIdentity()
+{
+	ref pchar = GetMainCharacter();
+
+	pchar.quest_S3_target_gender = "male";
+	switch (rand(49))
+	{
+		case 0:
+			pchar.quest_S3_target_firstname = "Mat";
+			pchar.quest_S3_target_lastname = "Ahari";
+		break;
+		case 1:
+			pchar.quest_S3_target_firstname = "James";
+			pchar.quest_S3_target_lastname = "Bon";
+		break;
+		case 2:
+			pchar.quest_S3_target_firstname = "Don";
+			pchar.quest_S3_target_lastname = "Juan";
+		break;
+		case 3:
+			pchar.quest_S3_target_firstname = "Arsene";
+			pchar.quest_S3_target_lastname = "Larcin";
+		break;
+		case 4:
+			pchar.quest_S3_target_firstname = "Victor";
+			pchar.quest_S3_target_lastname = "Larcin";
+		break;
+		case 5:
+			pchar.quest_S3_target_firstname = "Hector";
+			pchar.quest_S3_target_lastname = "Passepasse";
+		break;
+		case 6:
+			pchar.quest_S3_target_firstname = "Robin";
+			pchar.quest_S3_target_lastname = "Escroc";
+		break;
+		case 7:
+			pchar.quest_S3_target_firstname = "Max";
+			pchar.quest_S3_target_lastname = "Racket";
+		break;
+		case 8:
+			pchar.quest_S3_target_firstname = "Oscar";
+			pchar.quest_S3_target_lastname = "Niaque";
+		break;
+		case 9:
+			pchar.quest_S3_target_firstname = "César";
+			pchar.quest_S3_target_lastname = "Frappe";
+		break;
+		case 10:
+			pchar.quest_S3_target_firstname = "Hugo";
+			pchar.quest_S3_target_lastname = "Pique";
+		break;
+		case 11:
+			pchar.quest_S3_target_firstname = "éo";
+			pchar.quest_S3_target_lastname = "Clandestin";
+		break;
+		case 12:
+			pchar.quest_S3_target_firstname = "Nico";
+			pchar.quest_S3_target_lastname = "Tine";
+		break;
+		case 13:
+			pchar.quest_S3_target_firstname = "Félix";
+			pchar.quest_S3_target_lastname = "Crochet";
+		break;
+		case 14:
+			pchar.quest_S3_target_firstname = "Basil";
+			pchar.quest_S3_target_lastname = "Bourse";
+		break;
+		case 15:
+			pchar.quest_S3_target_firstname = "Edgar";
+			pchar.quest_S3_target_lastname = "Pogne";
+		break;
+		case 16:
+			pchar.quest_S3_target_firstname = "Milo";
+			pchar.quest_S3_target_lastname = "Minuit";
+		break;
+		case 17:
+			pchar.quest_S3_target_firstname = "Simon";
+			pchar.quest_S3_target_lastname = "Blesse";
+		break;
+		case 18:
+			pchar.quest_S3_target_firstname = "Boris";
+			pchar.quest_S3_target_lastname = "Baston";
+		break;
+		case 19:
+			pchar.quest_S3_target_firstname = "Rémy";
+			pchar.quest_S3_target_lastname = "Rififi";
+		break;
+		case 20:
+			pchar.quest_S3_target_firstname = "Marcel";
+			pchar.quest_S3_target_lastname = "Carambouille";
+		break;
+		case 21:
+			pchar.quest_S3_target_firstname = "Gaston";
+			pchar.quest_S3_target_lastname = "Gredin";
+		break;
+		case 22:
+			pchar.quest_S3_target_firstname = "Luc";
+			pchar.quest_S3_target_lastname = "Volteface";
+		break;
+		case 23:
+			pchar.quest_S3_target_firstname = "Armand";
+			pchar.quest_S3_target_lastname = "Magouille";
+		break;
+		case 24:
+			pchar.quest_S3_target_firstname = "Sylvain";
+			pchar.quest_S3_target_lastname = "Surin";
+		break;
+		case 25:
+			pchar.quest_S3_target_firstname = "Théo";
+			pchar.quest_S3_target_lastname = "Canaille";
+		break;
+		case 26:
+			pchar.quest_S3_target_firstname = "Nestor";
+			pchar.quest_S3_target_lastname = "Filou";
+		break;
+		case 27:
+			pchar.quest_S3_target_firstname = "Pascal";
+			pchar.quest_S3_target_lastname = "Embrouille";
+		break;
+		case 28:
+			pchar.quest_S3_target_firstname = "Jules";
+			pchar.quest_S3_target_lastname = "Cassecou";
+		break;
+		case 29:
+			pchar.quest_S3_target_firstname = "Anton";
+			pchar.quest_S3_target_lastname = "Rapine";
+		break;
+		case 30:
+			pchar.quest_S3_target_firstname = "Bruno";
+			pchar.quest_S3_target_lastname = "Passemuraille";
+		break;
+		case 31:
+			pchar.quest_S3_target_firstname = "Gaspard";
+			pchar.quest_S3_target_lastname = "Grappin";
+		break;
+		case 32:
+			pchar.quest_S3_target_firstname = "Clovis";
+			pchar.quest_S3_target_lastname = "Coupfourre";
+		break;
+		case 33:
+			pchar.quest_S3_target_firstname = "Damien";
+			pchar.quest_S3_target_lastname = "Dague";
+		break;
+		case 34:
+			pchar.quest_S3_target_firstname = "Martin";
+			pchar.quest_S3_target_lastname = "Fripon";
+		break;
+		case 35:
+			pchar.quest_S3_target_firstname = "Achille";
+			pchar.quest_S3_target_lastname = "Traquenard";
+		break;
+		case 36:
+			pchar.quest_S3_target_firstname = "Leon";
+			pchar.quest_S3_target_lastname = "Grimace";
+		break;
+		case 37:
+			pchar.quest_S3_target_firstname = "Quentin";
+			pchar.quest_S3_target_lastname = "Quiproquo";
+		break;
+		case 38:
+			pchar.quest_S3_target_firstname = "Firmin";
+			pchar.quest_S3_target_lastname = "Faussepiste";
+		break;
+		case 39:
+			pchar.quest_S3_target_firstname = "Alaric";
+			pchar.quest_S3_target_lastname = "Aigrefin";
+		break;
+		case 40:
+			pchar.quest_S3_target_firstname = "Didier";
+			pchar.quest_S3_target_lastname = "Doublefond";
+		break;
+		case 41:
+			pchar.quest_S3_target_firstname = "Fabian";
+			pchar.quest_S3_target_lastname = "Fumee";
+		break;
+		case 42:
+			pchar.quest_S3_target_firstname = "Corbin";
+			pchar.quest_S3_target_lastname = "Corbeau";
+		break;
+		case 43:
+			pchar.quest_S3_target_firstname = "Marius";
+			pchar.quest_S3_target_lastname = "Mainleste";
+		break;
+		case 44:
+			pchar.quest_S3_target_firstname = "Auguste";
+			pchar.quest_S3_target_lastname = "Mauvaiscoup";
+		break;
+		case 45:
+			pchar.quest_S3_target_firstname = "Raoul";
+			pchar.quest_S3_target_lastname = "Rancune";
+		break;
+		case 46:
+			pchar.quest_S3_target_firstname = "Severin";
+			pchar.quest_S3_target_lastname = "Sournois";
+		break;
+		case 47:
+			pchar.quest_S3_target_firstname = "Isidore";
+			pchar.quest_S3_target_lastname = "Triche";
+		break;
+		case 48:
+			pchar.quest_S3_target_firstname = "Anatole";
+			pchar.quest_S3_target_lastname = "Trahison";
+		break;
+		case 49:
+			pchar.quest_S3_target_firstname = "Blaise";
+			pchar.quest_S3_target_lastname = "Braconnier";
+		break;
+	}
+
+	pchar.quest_S3_target_name = pchar.quest_S3_target_firstname + " " + pchar.quest_S3_target_lastname;
+}
+
+void S3_SetGeneratedTargetFemaleIdentity()
+{
+	ref pchar = GetMainCharacter();
+
+	pchar.quest_S3_target_gender = "female";
+	switch (rand(19))
+	{
+		case 0:
+			pchar.quest_S3_target_firstname = "Hélène";
+			pchar.quest_S3_target_lastname = "Detrois";
+		break;
+		case 1:
+			pchar.quest_S3_target_firstname = "Bella";
+			pchar.quest_S3_target_lastname = "Donna";
+		break;
+		case 2:
+			pchar.quest_S3_target_firstname = "Vera";
+			pchar.quest_S3_target_lastname = "Volta";
+		break;
+		case 3:
+			pchar.quest_S3_target_firstname = "Iris";
+			pchar.quest_S3_target_lastname = "Noire";
+		break;
+		case 4:
+			pchar.quest_S3_target_firstname = "Lola";
+			pchar.quest_S3_target_lastname = "Larcin";
+		break;
+		case 5:
+			pchar.quest_S3_target_firstname = "Carmen";
+			pchar.quest_S3_target_lastname = "Fatale";
+		break;
+		case 6:
+			pchar.quest_S3_target_firstname = "Nora";
+			pchar.quest_S3_target_lastname = "Niaque";
+		break;
+		case 7:
+			pchar.quest_S3_target_firstname = "Violette";
+			pchar.quest_S3_target_lastname = "Venin";
+		break;
+		case 8:
+			pchar.quest_S3_target_firstname = "Eva";
+			pchar.quest_S3_target_lastname = "Sive";
+		break;
+		case 9:
+			pchar.quest_S3_target_firstname = "Rita";
+			pchar.quest_S3_target_lastname = "Rixe";
+		break;
+		case 10:
+			pchar.quest_S3_target_firstname = "Sonia";
+			pchar.quest_S3_target_lastname = "Sombre";
+		break;
+		case 11:
+			pchar.quest_S3_target_firstname = "Bianca";
+			pchar.quest_S3_target_lastname = "Brume";
+		break;
+		case 12:
+			pchar.quest_S3_target_firstname = "Gloria";
+			pchar.quest_S3_target_lastname = "Gifle";
+		break;
+		case 13:
+			pchar.quest_S3_target_firstname = "Stella";
+			pchar.quest_S3_target_lastname = "Surin";
+		break;
+		case 14:
+			pchar.quest_S3_target_firstname = "Sylvia";
+			pchar.quest_S3_target_lastname = "Vipere";
+		break;
+		case 15:
+			pchar.quest_S3_target_firstname = "Morgane";
+			pchar.quest_S3_target_lastname = "Morsure";
+		break;
+		case 16:
+			pchar.quest_S3_target_firstname = "Clara";
+			pchar.quest_S3_target_lastname = "Cassecoeur";
+		break;
+		case 17:
+			pchar.quest_S3_target_firstname = "Diana";
+			pchar.quest_S3_target_lastname = "Dague";
+		break;
+		case 18:
+			pchar.quest_S3_target_firstname = "Paula";
+			pchar.quest_S3_target_lastname = "Poudre";
+		break;
+		case 19:
+			pchar.quest_S3_target_firstname = "Roxane";
+			pchar.quest_S3_target_lastname = "Ruse";
+		break;
+	}
+
+	pchar.quest_S3_target_name = pchar.quest_S3_target_firstname + " " + pchar.quest_S3_target_lastname;
+}
+
+void S3_SetGeneratedWitnessIdentity()
+{
+	ref pchar = GetMainCharacter();
+
+	switch (rand(19))
+	{
+		case 0:
+			pchar.quest_S3_witness_firstname = "Général";
+			pchar.quest_S3_witness_lastname = "De Gaulle";
+		break;
+		case 1:
+			pchar.quest_S3_witness_firstname = "Sherlock";
+			pchar.quest_S3_witness_lastname = "Holmes";
+		break;
+		case 2:
+			pchar.quest_S3_witness_firstname = "Zinédine";
+			pchar.quest_S3_witness_lastname = "Zidane";
+		break;
+		case 3:
+			pchar.quest_S3_witness_firstname = "Steve";
+			pchar.quest_S3_witness_lastname = "Jobs";
+		break;
+		case 4:
+			pchar.quest_S3_witness_firstname = "Albert";
+			pchar.quest_S3_witness_lastname = "Einstein";
+		break;
+		case 5:
+			pchar.quest_S3_witness_firstname = "Isaac";
+			pchar.quest_S3_witness_lastname = "Newton";
+		break;
+		case 6:
+			pchar.quest_S3_witness_firstname = "Leonardo";
+			pchar.quest_S3_witness_lastname = "da Vinci";
+		break;
+		case 7:
+			pchar.quest_S3_witness_firstname = "Victor";
+			pchar.quest_S3_witness_lastname = "Hugo";
+		break;
+		case 8:
+			pchar.quest_S3_witness_firstname = "Alexandre";
+			pchar.quest_S3_witness_lastname = "Dumas";
+		break;
+		case 9:
+			pchar.quest_S3_witness_firstname = "Napoléon";
+			pchar.quest_S3_witness_lastname = "Bonaparte";
+		break;
+		case 10:
+			pchar.quest_S3_witness_firstname = "Jules";
+			pchar.quest_S3_witness_lastname = "César";
+		break;
+		case 11:
+			pchar.quest_S3_witness_firstname = "Charlemagne";
+			pchar.quest_S3_witness_lastname = "le Grand";
+		break;
+		case 12:
+			pchar.quest_S3_witness_firstname = "Galilée";
+			pchar.quest_S3_witness_lastname = "Galilée";
+		break;
+		case 13:
+			pchar.quest_S3_witness_firstname = "Christophe";
+			pchar.quest_S3_witness_lastname = "Colomb";
+		break;
+		case 14:
+			pchar.quest_S3_witness_firstname = "Wolfgang";
+			pchar.quest_S3_witness_lastname = "Mozart";
+		break;
+		case 15:
+			pchar.quest_S3_witness_firstname = "Ludwig";
+			pchar.quest_S3_witness_lastname = "Beethoven";
+		break;
+		case 16:
+			pchar.quest_S3_witness_firstname = "Jean-Baptiste";
+			pchar.quest_S3_witness_lastname = "Molière";
+		break;
+		case 17:
+			pchar.quest_S3_witness_firstname = "Elvis";
+			pchar.quest_S3_witness_lastname = "Presley";
+		break;
+		case 18:
+			pchar.quest_S3_witness_firstname = "Michael";
+			pchar.quest_S3_witness_lastname = "Jackson";
+		break;
+		case 19:
+			pchar.quest_S3_witness_firstname = "Charlie";
+			pchar.quest_S3_witness_lastname = "Chaplin";
+		break;
+	}
+
+	pchar.quest_S3_witness_name = pchar.quest_S3_witness_firstname + " " + pchar.quest_S3_witness_lastname;
 }
 
 void S3_SetGeneratedTargetData()
