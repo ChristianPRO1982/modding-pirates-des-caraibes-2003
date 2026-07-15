@@ -44,12 +44,35 @@ void QuestsInit()
 	SetEventHandler(ABORDAGE_START_EVENT,"QuestAbordageStartEvent",0);
 }
 
+void QuestTracker_EnforceImmutableQuestStates()
+{
+	// Hook generique :
+	// les quetes futures pourront y reimposer des etats qui doivent rester immuables
+	// pendant leur execution (relations, reloads, flags globaux, etc.).
+}
+
+void QuestTracker_UpdateCurrentQuestState()
+{
+	ref pchar = GetMainCharacter();
+
+	// Hook generique :
+	// les quetes futures pourront y publier un etat de test standardise via
+	// pchar.quest_in_progress et pchar.quest_in_progress_step.
+	if (!CheckAttribute(pchar, "quest_in_progress"))
+	{
+		pchar.quest_in_progress = "none";
+	}
+	if (!CheckAttribute(pchar, "quest_in_progress_step"))
+	{
+		pchar.quest_in_progress_step = "-1";
+	}
+}
 void QuestsCheck_forLocEnter()
 {
 	// ajout PJ
 	ref pchar = GetMainCharacter();
-	// POUR CREER DES QUETES
-	SetNationRelation2MainCharacter(PIRATE, RELATION_FRIEND);
+	QuestTracker_UpdateCurrentQuestState();
+	QuestTracker_EnforceImmutableQuestStates();
 	//PJ connaitre a chaque reload des informations (ex : position = pchar.location)
 	// Log_SetStringToLog("PJ 1:"+pchar.location);
 	// Log_SetStringToLog("PJ 2:"+pchar.location.locator);
@@ -65,6 +88,7 @@ void QuestsCheck_forLocEnter()
 	S1_ProcessLocationEnter();
 	S2_ProcessLocationEnter();
 	S3_ProcessLocationEnter();
+	QuestTracker_UpdateCurrentQuestState();
 }
 
 void CharacterDeadProcess()

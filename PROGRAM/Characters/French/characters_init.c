@@ -103,6 +103,8 @@ void CreateCharacters()
 	ch.quest.gambling = "0";
 	ch.quest.friend_in_tavern = "";
 	ch.quest.main_line = "0";
+	ch.quest_in_progress = "none";
+	ch.quest_in_progress_step = "none";
 	ch.quest.killed.pirates = "0";
 	Ch.quest.Story_LeavingOxbay.win_condition.l1 = "location";
 	Ch.quest.Story_LeavingOxbay.win_condition.l1.character = "Blaze";
