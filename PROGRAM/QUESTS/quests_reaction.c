@@ -3753,6 +3753,7 @@ void QuestComplete(string sQuestName)
 			pchar.quest_S1_Wimund_TQC1_visible = true;
 			pchar.quest_S1_Samuel_Bellamy_TQC1_visible = true;
 			pchar.quest_S1_Edward_Thatch_TQC1_visible = true;
+			pchar.quest_PJ_sidequests_unlocked = true;
 
 			LAi_LocationFightDisable(&Locations[FindLocation("redmond_prison")], true);
 			pchar.quest.kill_edgar_attwood_in_prison.over = "yes";

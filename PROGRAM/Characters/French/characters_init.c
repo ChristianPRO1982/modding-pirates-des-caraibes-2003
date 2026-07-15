@@ -120,7 +120,7 @@ void CreateCharacters()
 
 
 	//PJ pour créer des quête
-	ch.quest.PNJ_Trop_Fort = true;
+	ch.quest.PNJ_Trop_Fort = false;
 
 	//QUESTS PJ
 	//S1 : chasseur de tresor
@@ -133,6 +133,7 @@ void CreateCharacters()
 	ch.quest_S1_Wimund_TQC1_visible = false;
 	ch.quest_S1_Samuel_Bellamy_TQC1_visible = false;
 	ch.quest_S1_Edward_Thatch_TQC1_visible = false;
+	ch.quest_PJ_sidequests_unlocked = false;
 	ch.quest_S1_final_enabled = true;
 
 	//S2 : amoureux

@@ -1117,6 +1117,11 @@ void S3_ProcessLocationEnter()
 	locationId = pchar.location;
 	S3_HideAllNpcs();
 
+	if (!CheckAttribute(pchar, "quest_PJ_sidequests_unlocked") || sti(pchar.quest_PJ_sidequests_unlocked) != true)
+	{
+		return;
+	}
+
 	if (S3_IsDeadlineExpired())
 	{
 		S3_ExpireAcceptedQuest();

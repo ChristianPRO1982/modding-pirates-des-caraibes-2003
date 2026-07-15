@@ -366,6 +366,11 @@ void S2_ProcessLocationEnter()
 	homelocation = pchar.location;
 	S2_HideAllNpcs();
 
+	if (!CheckAttribute(pchar, "quest_PJ_sidequests_unlocked") || sti(pchar.quest_PJ_sidequests_unlocked) != true)
+	{
+		return;
+	}
+
 	if (S2_GetActiveVariant() != 0)
 	{
 		variant = S2_GetActiveVariant();

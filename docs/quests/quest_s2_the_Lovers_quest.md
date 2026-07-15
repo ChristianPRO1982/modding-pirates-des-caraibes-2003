@@ -8,7 +8,7 @@ La famille contient 7 variantes au total: une par port civilise. Il n'y a pas de
 Ce document decrit la version cible a viser pour la suite. `V3` sert ici de reference technique pour comprendre comment la famille etait branchee, pas de modele a recopier a l'identique.
 
 ## Availability
-`S2` est disponible des le debut du jeu au niveau runtime: il n'y a pas de seuil de quete principale a attendre.
+`S2` n'est pas disponible des le debut du jeu au niveau runtime. Dans le depot actif, la famille s'ouvre seulement apres `blaze_from_prison_to_residence_complete`.
 
 En revanche, l'amoureux ne fait confiance au joueur que si sa reputation est suffisante. La condition de confiance issue de `V3` est conservee:
 
@@ -18,7 +18,7 @@ pchar.reputation > 64
 
 Design attendu:
 
-- les amoureux peuvent apparaitre des le debut de partie,
+- les amoureux ne peuvent apparaitre qu'apres `blaze_from_prison_to_residence_complete`,
 - un joueur de mauvaise reputation peut les rencontrer mais ne peut pas accepter leur demande,
 - la condition de reputation appartient au dialogue de l'amoureux, pas au spawn,
 - cette condition donne du sens au theme: les amoureux ne confient leur avenir qu'a un capitaine juge fiable.

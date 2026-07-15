@@ -14,16 +14,16 @@ Concretement, il faut un point de bascule clair dans les fichiers plats du runti
 - les apparitions `S1` ne deviennent eligibles qu'apres cette ouverture,
 - avant ce seuil, aucun capitaine `S1` ne doit apparaitre.
 
-Seuil cible retenu pour la suite: ouvrir `S1` seulement apres `pchar.quest.main_line = "blaze_talk_with_silehard_complete"`.
+Seuil retenu dans le depot actif: ouvrir `S1` a `blaze_from_prison_to_residence_complete`.
 
-Ce choix correspond au moment ou la trame principale se calme vraiment autour d'Oxbay: la colonie est repassee sous controle anglais et Silehard enchaine deja sur la suite de l'histoire. C'est un meilleur seuil de design que la simple reouverture technique du port.
+Ce choix correspond au moment ou la trame principale sort de la prison et relance la circulation vers la residence de Silehard. Dans le runtime actuel, c'est ce basculement qui arme effectivement les quetes PJ secondaires.
 
 Point de repere utile pour ne pas confondre les deux moments:
 
 - `Story_WeMadeThem` retablit techniquement la navigation et les reloads d'Oxbay,
-- `blaze_talk_with_silehard_complete` est le seuil narratif retenu pour debloquer `S1`.
+- `blaze_from_prison_to_residence_complete` est le seuil runtime actuellement utilise pour debloquer `S1`.
 
-Note historique: dans `V3`, l'initialisation etait plus precoce. Ce document fixe la cible future, plus tardive et mieux controlee.
+Note historique: une cible plus tardive autour de `blaze_talk_with_silehard_complete` avait ete envisagee. Le depot actif est maintenant aligne sur le seuil runtime plus totif `blaze_from_prison_to_residence_complete`.
 
 ## Quest Loop
 La boucle standard `S1` doit rester lisible et repetable:
@@ -104,7 +104,7 @@ Seuil de reference dans le depot actif:
 
 - `PROGRAM/QUESTS/quests_reaction.c`: `Story_WeMadeThem` pour la reouverture technique d'Oxbay
 - `PROGRAM/QUESTS/quests_reaction.c`: `pchar.quest.main_line = "blaze_talk_with_silehard"` avant l'entretien avec Silehard
-- `PROGRAM/DIALOGS/Robert Christopher Silehard_dialog.c`: `pchar.quest.main_line = "blaze_talk_with_silehard_complete"` comme seuil cible retenu pour debloquer `S1`
+- `PROGRAM/QUESTS/quests_reaction.c`: `blaze_from_prison_to_residence_complete` comme seuil runtime retenu pour debloquer `S1`
 
 ## Notes from V3
 Ecarts historiques a garder en tete sans les reproduire automatiquement:

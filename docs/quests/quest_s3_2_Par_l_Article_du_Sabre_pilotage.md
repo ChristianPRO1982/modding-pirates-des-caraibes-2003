@@ -20,7 +20,7 @@ Regle principale: une seule modification de fichier a la fois, puis test en jeu.
 
 ## Decisions fermees
 
-- `S3` est disponible des le debut de partie.
+- `S3` devient disponible apres `blaze_from_prison_to_residence_complete`.
 - `S3` est une quete courte de type `S`, meme si sa profondeur morale est plus forte qu'une petite quete classique.
 - Le commanditaire apparait en sortie de ville.
 - Le commanditaire inspire la mefiance mais reste credible.

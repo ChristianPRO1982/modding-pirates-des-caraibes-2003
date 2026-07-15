@@ -8,6 +8,39 @@ int CreateTempQuestCharacters(int n)
 	//§§§§§§§§§§§§
 	//§§§ HELP §§§
 	//§§§§§§§§§§§§
+	makeref(ch,Characters[n]);
+	ch.name = "Malcolm";
+	ch.lastname = "Hatcher";
+	ch.id = "PJ HELP Malcolm Hatcher";
+	ch.model = "bocman3";
+	ch.sound_type = "pirate";
+	LAi_NoRebirthEnable(ch);
+	GiveItem2Character(ch, "blade20");
+	ch.equip.blade = "blade20";
+	ch.sex = "man";
+	ch.location = "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "PJ HELP Malcolm Hatcher_dialog.c";
+	ch.greeting = "Gr_Malcolm Hatcher";
+	ch.rank = 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetGuardianType(ch);
+	LAi_SetCitizenType(ch);
+	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	n = n + 1;
 
 	//§§§§§§§§§§§§§§§§
 	//§§§ QUEST S1 §§§
@@ -32,40 +65,6 @@ int CreateTempQuestCharacters(int n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "PJ Quest S1 Elizabeth_dialog.c";
 	ch.greeting = "Gr_danielle";
-	ch.rank = 1;
-	ch.reputation = "None";
-	ch.experience = "0";
-	ch.skill.Leadership = "1";
-	ch.skill.Fencing = "1";
-	ch.skill.Sailing = "1";
-	ch.skill.Accuracy = "1";
-	ch.skill.Cannons = "1";
-	ch.skill.Grappling = "1";
-	ch.skill.Repair = "1";
-	ch.skill.Defence = "1";
-	ch.skill.Commerce = "1";
-	ch.skill.Sneak = "1";
-	ch.money = "10";
-	LAi_SetGuardianType(ch);
-	LAi_SetCitizenType(ch);
-	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
-	n = n + 1;
-
-	makeref(ch,Characters[n]);
-	ch.name = "Malcolm";
-	ch.lastname = "Hatcher";
-	ch.id = "PJ HELP Malcolm Hatcher";
-	ch.model = "bocman3";
-	ch.sound_type = "pirate";
-	LAi_NoRebirthEnable(ch);
-	GiveItem2Character(ch, "blade20");
-	ch.equip.blade = "blade20";
-	ch.sex = "man";
-	ch.location = "none";
-	ch.location.group = "";
-	ch.location.locator = "";
-	ch.Dialog.Filename = "PJ HELP Malcolm Hatcher_dialog.c";
-	ch.greeting = "Gr_Malcolm Hatcher";
 	ch.rank = 1;
 	ch.reputation = "None";
 	ch.experience = "0";

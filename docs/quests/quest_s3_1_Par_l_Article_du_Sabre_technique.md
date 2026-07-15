@@ -34,13 +34,13 @@ Contraintes de scope:
 Note de convention: l'identifiant demande est `S3`. La quete est de taille moyenne par sa mecanique, mais conserve l'identifiant `S3` pour rester coherente avec la nomenclature de PJ.
 
 ## Availability
-`S3` est disponible des le debut du jeu.
+`S3` n'est pas disponible des le debut du jeu. Dans le depot actif, la quete s'ouvre seulement apres `blaze_from_prison_to_residence_complete`.
 
 Condition cible:
 
-- aucune progression de quete principale requise;
+- progression principale requise jusqu'a `blaze_from_prison_to_residence_complete`;
 - aucun prerequis de reputation requis;
-- la quete ne doit pas bloquer les premieres quetes principales;
+- la quete ne doit pas interferer avec les premieres quetes principales avant ce seuil;
 - le spawn doit rester discret et facultatif.
 
 ## Core Loop
@@ -571,7 +571,7 @@ Points a trancher avant implementation:
 Pour reduire les risques, la premiere implementation devrait viser:
 
 - quete unique;
-- disponible des le debut;
+- disponible seulement apres `blaze_from_prison_to_residence_complete`;
 - un commanditaire temporaire;
 - une cible temporaire;
 - verite tiree a 50/50;

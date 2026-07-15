@@ -11,7 +11,7 @@ void wdmEvent_EncounterCreate()
 {
 	// ajout PJ
 	// pour bloquer les rencontres et tempêtes : MODE DEBUG TEST
-	/*
+	
 	float dltTime = GetEventData();
 	float playerShipX = GetEventData();
 	float playerShipZ = GetEventData();
