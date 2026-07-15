@@ -17,7 +17,7 @@ void ProcessDialogEvent()
 	trace ("----------------------------------" + Dialog.CurrentNode);
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Aeaeia ia?aue - ia?aay ano?a?a
 
 		case "exit":
 			NPChar.quest.meeting = NPC_meeting; 
@@ -76,6 +76,23 @@ void ProcessDialogEvent()
 			else
 			{
 				d.Text = DLG_TEXT[18];
+				if (CheckAttribute(pchar, "quest_S3_city") && pchar.quest_S3_city == "Redmond")
+				{
+					if (CheckAttribute(pchar, "quest_S3_status"))
+					{
+						bool s3_dialogue = false;  						switch (pchar.quest_S3_status) 						{ 							case "accepted": 								s3_dialogue = true; 							break; 							case "investigation": 								s3_dialogue = true; 							break; 							case "candidate_target_kill": 								s3_dialogue = true; 							break; 							case "candidate_target_release": 								s3_dialogue = true; 							break; 						}  						if (s3_dialogue) 						{ 							if (!CheckAttribute(pchar, "quest_S3_informant_governor"))
+								{
+									link.l2 = "J'aurais besoin de votre jugement sur une personne de cette ville.";
+									link.l2.go = "S3_governor_start";
+								}
+								else
+								{
+									link.l3 = "Vous m'avez deja donne votre jugement sur cette affaire.";
+									link.l3.go = "S3_governor_repeat";
+								}
+						}
+					}
+				}
 				Link.l99 = DLG_TEXT[19];
 				Link.l99.go = "No quest";
 				if(CheckQuestAttribute("Story_1stTaskComplete", "1"))
@@ -907,7 +924,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[300];
 			link.l1 = DLG_TEXT[301];
 			link.l1.go = "escape_from_prison_8";
-			//убиваем Эдгара
+			//oaeaaai Yaaa?a
 			ChangeCharacterAddress(characterFromID("Edgar Attwood"), "none", "none");
 			characters[GetCharacterIndex("Edgar Attwood")].act.hp = 0.0;
 		break;
@@ -934,6 +951,30 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[305];
 			link.l1.go = "escape_from_prison_8";
 			AddMoneytoCharacter(pchar, 1000);
+		break;
+		case "S3_governor_start":
+			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
+			{
+				d.Text = "Je pese mes mots, capitaine. L'administration entend bien des plaintes, et toutes ne meritent pas la corde. Mais au sujet de " + pchar.quest_S3_target_name + ", plusieurs signaux concordent. Si vous cherchez mon jugement, cette personne n'est pas blanche comme neige.";
+			}
+			else
+			{
+				d.Text = "Je pese mes mots, capitaine. Rien, dans les rapports ni dans les plaintes serieuses, ne me permet d'accabler " + pchar.quest_S3_target_name + ". Je vous conseille la prudence avant de verser le sang.";
+			}
+			link.l1 = "Votre avis m'eclaire.";
+			link.l1.go = "S3_governor_done";
+		break;
+
+		case "S3_governor_done":
+			pchar.quest_S3_informant_governor = true;
+			Log_SetStringToLog("S3 informant answered");
+			DialogExit();
+		break;
+
+		case "S3_governor_repeat":
+			d.Text = "Je vous ai deja livre l'appreciation que je pouvais formuler. Je n'ai rien a y retrancher.";
+			link.l1 = "Tres bien, Excellence.";
+			link.l1.go = "exit";
 		break;
 	}
 }

@@ -391,7 +391,7 @@ void S2_ProcessLocationEnter()
 		return;
 	}
 
-	if (rand(0) != 0)
+	if (rand(4) != 0)
 	{
 		return;
 	}

@@ -25,7 +25,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Aeaeia ia?aue - ia?aay ano?a?a
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -57,7 +57,7 @@ void ProcessDialogEvent()
 					link.l3.go = "quests";
 				}
 			}
-			if ((characters[GetCharacterIndex("Sabine Matton")].quest.hire == "ransom_1")&&(pchar.location == "Falaise_De_Fleur_shore")) // разговор на пляже
+			if ((characters[GetCharacterIndex("Sabine Matton")].quest.hire == "ransom_1")&&(pchar.location == "Falaise_De_Fleur_shore")) // ?acaiai? ia iey?a
 			{
 				dialog.snd = "Voice\ARMA\ARMA005";
 				dialog.text = DLG_TEXT[11] + Characters[GetCharacterIndex(DLG_TEXT[12])].name + DLG_TEXT[13];
@@ -90,7 +90,7 @@ void ProcessDialogEvent()
 			dialog.snd = "Voice\ARMA\ARMA008";
 			Dialog.text = DLG_TEXT[26];
 			//////////////////////////////
-			// Выдача квестов
+			// Auaa?a eaanoia
 			//////////////////////////////
 			if (npchar.quest_begin == "100")
 			{
@@ -109,7 +109,23 @@ void ProcessDialogEvent()
 				}
 				
 			}
-			if (CheckAttribute(pchar, "quest.iQuantityGoods"))
+						if (CheckAttribute(pchar, "quest_S3_city") && pchar.quest_S3_city == "FalaiseDeFleur")
+			{
+				if (CheckAttribute(pchar, "quest_S3_status"))
+				{
+					bool s3_dialogue = false;  					switch (pchar.quest_S3_status) 					{ 						case "accepted": 							s3_dialogue = true; 						break; 						case "investigation": 							s3_dialogue = true; 						break; 						case "candidate_target_kill": 							s3_dialogue = true; 						break; 						case "candidate_target_release": 							s3_dialogue = true; 						break; 					}  					if (s3_dialogue) 					{ 						if (!CheckAttribute(pchar, "quest_S3_informant_merchant"))
+							{
+								link.l20 = "Je voudrais votre avis de marchand sur une personne de cette ville.";
+								link.l20.go = "S3_merchant_start";
+							}
+							else
+							{
+								link.l21 = "Vous m'avez deja donne votre avis sur cette affaire.";
+								link.l21.go = "S3_merchant_repeat";
+							}
+					}
+				}
+			}if (CheckAttribute(pchar, "quest.iQuantityGoods"))
 			{
 				int iQuantityShipGoods = pchar.quest.iQuantityGoods;
 				int iQuestTradeGoods = pchar.quest.iTradeGoods;
@@ -134,10 +150,10 @@ void ProcessDialogEvent()
 			}
 			
 			//////////////////////////////
-			// ПРИЕМ КВЕСТОВ
+			// I?EAI EAANOIA
 			//////////////////////////////
 			//////////////////////////////
-			// Квест балдуина Кофье
+			// Eaano aaeaoeia Eioua
 			//////////////////////////////
 			if (characters[GetCharacterIndex("Baldewyn Coffier")].quest.hire ==  "not_money" && iTest < QUEST_COUNTER)
 			{
@@ -176,7 +192,7 @@ void ProcessDialogEvent()
 				iTest = iTest + 1;
 			}
 			//////////////////////////////
-			// Конец квеста балдуина Кофье
+			// Eiiao eaanoa aaeaoeia Eioua
 			//////////////////////////////
 			if (npchar.quest.to_redmond_1 ==  "cargo_done_1" && iTest < QUEST_COUNTER)
 			{
@@ -197,7 +213,7 @@ void ProcessDialogEvent()
 				iTest = iTest + 1;
 			}
 			//////////////////////////////
-			// Квест про дочку Арно Маттона
+			// Eaano i?i ai?eo A?ii Iaooiia
 			//////////////////////////////
 			if (characters[GetCharacterIndex("Sabine Matton")].quest.hire ==  "almost_done_1" && iTest < QUEST_COUNTER)
 			{
@@ -223,7 +239,7 @@ void ProcessDialogEvent()
 				Link.l5.go = "ransom";
 			}
 			//////////////////////////////
-			// Конец квеста про дочку Арно маттона
+			// Eiiao eaanoa i?i ai?eo A?ii iaooiia
 			//////////////////////////////
 			Link.l99 = DLG_TEXT[69];
 			Link.l99.go = "exit";
@@ -263,7 +279,7 @@ void ProcessDialogEvent()
 			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "enemy_forever";
 			ChangeCharacterReputation(pchar, -2);
 			///////////////////////////////////////////////////////////////////////////
-			// Арно уходит, а за нами начинается охотиться 1 фрегат и 2 наемных убийцы, плюс Франция становится враждебной.
+			// A?ii ooiaeo, a ca iaie ia?eiaaony ioioeouny 1 o?aaao e 2 iaaiiuo oaeeou, ie?n O?aioey noaiiaeony a?a?aaaiie.
 			///////////////////////////////////////////////////////////////////////////
 		break;
 
@@ -286,7 +302,7 @@ void ProcessDialogEvent()
 			AddMoneyToCharacter(pchar, 5000);
 			RemovePassenger(pchar, Characters[GetCharacterIndex("Sabine Matton")]);
 			//fading();
-			ChangeCharacterAddress(&characters[GetCharacterIndex("Sabine Matton")], "shore1","citizen06"); //появление девушки.
+			ChangeCharacterAddress(&characters[GetCharacterIndex("Sabine Matton")], "shore1","citizen06"); //iiyaeaiea aaaooee.
 			npchar.location	= "Falaise_de_Fleur_store";
 			npchar.location.locator = "locator4";
 			characters[GetCharacterIndex("Sabine Matton")].location = "none";
@@ -324,7 +340,7 @@ void ProcessDialogEvent()
 			link.l1 = DLG_TEXT[104];
 			link.l1.go = "exit";
 			///////////////////////////////////////////////////////////////////////
-			// Появление девушки, перезагрузка локейшена. Франция враждебна. Драка. 
+			// Iiyaeaiea aaaooee, ia?acaa?ocea eieaeoaia. O?aioey a?a?aaaia. A?aea. 
 			///////////////////////////////////////////////////////////////////////
 			characters[GetCharacterIndex("Sabine Matton")].quest.hire = "enemy_forever";
 			ChangeCharacterReputation(pchar, -1);
@@ -584,7 +600,7 @@ void ProcessDialogEvent()
 			if (npchar.quest.trade_date != lastspeak_date)
 			{
 				npchar.quest.trade_date = lastspeak_date;
-				//проверка враждебности нам страны торговца
+				//i?iaa?ea a?a?aaaiinoe iai no?aiu oi?aiaoa
 				if (GetNationRelation2MainCharacter(FRANCE) == RELATION_ENEMY)
 				{
 					dialog.snd = "Voice\ARMA\ARMA045";
@@ -604,9 +620,9 @@ void ProcessDialogEvent()
 					}
 					else
 					{
-						//проверяем импорт/экспорт
+						//i?iaa?yai eiii?o/yenii?o
 						int iTradeGoods = rand(20) + 6;
-						//проверяем свободное место (при этом должно вмещаться по меньшей мере 100 единиц выбранного груза
+						//i?iaa?yai naiaiaiia ianoi (i?e yoii aie?ii aiauaouny ii iaiuoae ia?a 100 aaeieo aua?aiiiai a?oca
 						if (GetSquadronFreeSpace(pchar, iTradeGoods) < 100)
 						{
 							dialog.snd = "Voice\ARMA\ARMA047";
@@ -1060,6 +1076,30 @@ void ProcessDialogEvent()
 		case "Exit":
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			DialogExit();
+		break;
+		case "S3_merchant_start":
+			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
+			{
+				d.Text = "Un marchand apprend vite a reconnaitre les clients qui paient trop tard, mentent trop vite et changent trop souvent d'histoire. " + pchar.quest_S3_target_name + " m'inspire ce genre de mefiance. Je ne ferais pas credit a cette personne.";
+			}
+			else
+			{
+				d.Text = "Je juge les gens a leurs comptes, a leurs promesses et a la facon dont ils traitent ceux qui dependent d'eux. Jusqu'ici, je n'ai rien vu chez " + pchar.quest_S3_target_name + " qui merite un chatiment de sang.";
+			}
+			link.l1 = "Votre franchise m'est utile.";
+			link.l1.go = "S3_merchant_done";
+		break;
+
+		case "S3_merchant_done":
+			pchar.quest_S3_informant_merchant = true;
+			Log_SetStringToLog("S3 informant answered");
+			DialogExit();
+		break;
+
+		case "S3_merchant_repeat":
+			d.Text = "Je vous ai deja dit ce que j'avais observe. Je n'ai rien a y ajouter pour le moment.";
+			link.l1 = "Tres bien.";
+			link.l1.go = "exit";
 		break;
 	}
 }

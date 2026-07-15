@@ -207,13 +207,102 @@ Bon reflexe:
 - traiter toute erreur du type `invalid utf-8 sequence` comme un signal que le fichier doit etre relu/reecrit en `ISO-8859-1`.
 
 ### Regle defensive sur les `switch`
-Sur ce moteur legacy, il vaut mieux ecrire les `switch` de facon tres defensive:
+Sur ce moteur legacy, il vaut mieux ecrire les `switch` de facon tres defensive. Le script PotC ressemble a du C, mais c'est un C interprete legacy, pas un C moderne fiable sur les raccourcis d'ecriture:
 
 - mettre un `break;` dans chaque `case`,
 - le garder meme si le `case` contient deja un `return`,
-- eviter les `case` groupes avec fallthrough implicite.
+- ne pas faire de fallthrough implicite, meme volontaire,
+- eviter les `case` groupes qui mutualisent un seul bloc final.
 
 En pratique, si un script parait correct mais plante au chargement, verifier d'abord qu'aucun `case` ne manque de `break;`.
+
+Exemple a eviter:
+
+```c
+switch (pchar.quest_S3_status)
+{
+	case "accepted":
+	case "investigation":
+	case "candidate_target_kill":
+	case "candidate_target_release":
+		// bloc partage
+	break;
+}
+```
+
+Forme recommandee:
+
+```c
+bool s3_dialogue = false;
+
+switch (pchar.quest_S3_status)
+{
+	case "accepted":
+		s3_dialogue = true;
+	break;
+	case "investigation":
+		s3_dialogue = true;
+	break;
+	case "candidate_target_kill":
+		s3_dialogue = true;
+	break;
+	case "candidate_target_release":
+		s3_dialogue = true;
+	break;
+}
+
+if (s3_dialogue)
+{
+	// ajouter les liens ou executer la logique commune ici
+}
+```
+
+### Regle defensive sur les `string`
+Ce langage ressemble a du C, mais ce n'est pas un C standard moderne.
+
+En pratique sur ce moteur, il faut se mefier des comparaisons de `string` combinees avec des operateurs booleens, surtout `||`.
+
+Exemple a eviter:
+
+```c
+if ((status == "spawned" || status == "offered") && S3_IsCommanditaireHour())
+{
+	S3_PlaceCommanditaire(locationId);
+	return;
+}
+```
+
+Ce type d'ecriture peut sembler valide, mais il peut faire planter le script ou etre mal interprete par le moteur.
+
+Bon reflexe:
+
+- preferer un `switch (status)` quand on teste plusieurs valeurs de `string`,
+- ou faire plusieurs `if` simples separes,
+- eviter de supposer que les operateurs booleens sur des expressions de `string` se comportent comme en C standard.
+
+Exemple recommande:
+
+```c
+if (S3_IsCommanditaireHour())
+{
+	switch (status)
+	{
+		case "spawned":
+			S3_PlaceCommanditaire(locationId);
+			return;
+		break;
+		case "offered":
+			S3_PlaceCommanditaire(locationId);
+			return;
+		break;
+	}
+}
+```
+
+Regle pratique:
+
+- pour des nombres ou des booleens, `&&` et `||` restent utilisables normalement,
+- pour des `string`, preferer des branches explicites et simples.
 
 ## 4. Structure recommandee d'une modif de quete
 

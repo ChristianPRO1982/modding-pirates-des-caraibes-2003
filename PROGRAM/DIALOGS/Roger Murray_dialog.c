@@ -20,7 +20,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Aeaeia ia?aue - ia?aay ano?a?a
 		case "First time":
 			Dialog.defAni = "Gov_Dialog_1";
 			Dialog.ani = "Gov_Dialog_1";
@@ -66,6 +66,23 @@ void ProcessDialogEvent()
 		case "quest lines":
 				Dialog.snd = "voice\ROMU\ROMU004";
 				d.Text = DLG_TEXT[16] + PChar.name + DLG_TEXT[17];
+				if (CheckAttribute(pchar, "quest_S3_city") && pchar.quest_S3_city == "Redmond")
+				{
+					if (CheckAttribute(pchar, "quest_S3_status"))
+					{
+						bool s3_dialogue = false;  						switch (pchar.quest_S3_status) 						{ 							case "accepted": 								s3_dialogue = true; 							break; 							case "investigation": 								s3_dialogue = true; 							break; 							case "candidate_target_kill": 								s3_dialogue = true; 							break; 							case "candidate_target_release": 								s3_dialogue = true; 							break; 						}  						if (s3_dialogue) 						{ 							if (!CheckAttribute(pchar, "quest_S3_informant_shipyard"))
+								{
+									link.l2 = "J'aurais besoin d'un avis de marin sur quelqu'un de cette ville.";
+									link.l2.go = "S3_shipyard_start";
+								}
+								else
+								{
+									link.l3 = "Vous m'avez deja parle de cette personne.";
+									link.l3.go = "S3_shipyard_repeat";
+								}
+						}
+					}
+				}
 				Link.l1 = DLG_TEXT[18];
 				Link.l1.go = "no quest";
 		break;
@@ -183,5 +200,31 @@ void ProcessDialogEvent()
 			DialogExit();
 		break;
 		
+		case "S3_shipyard_start":
+			Dialog.snd = "voice\ROMU\ROMU004";
+			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
+			{
+				d.Text = "Sur les quais, on reconnait les hommes nets et ceux qui cherchent toujours a embarquer avant l'aube. " + pchar.quest_S3_target_name + " a laisse derriere soi assez de signes pour faire froncer bien des sourcils.";
+			}
+			else
+			{
+				d.Text = "Je vois passer les gens du port toute la journee. " + pchar.quest_S3_target_name + " n'a pas la demarche d'un coupe-jarret traque ni les habitudes d'un vrai malfaiteur. Je dirais qu'on charge cette personne un peu vite.";
+			}
+			link.l1 = "C'est note.";
+			link.l1.go = "S3_shipyard_done";
+		break;
+
+		case "S3_shipyard_done":
+			pchar.quest_S3_informant_shipyard = true;
+			Log_SetStringToLog("S3 informant answered");
+			DialogExit();
+		break;
+
+		case "S3_shipyard_repeat":
+			Dialog.snd = "voice\ROMU\ROMU005";
+			d.Text = "Je vous ai deja livre mon sentiment. Les quais n'ont rien ajoute depuis.";
+			link.l1 = "Je comprends.";
+			link.l1.go = "exit";
+		break;
 	}
 }

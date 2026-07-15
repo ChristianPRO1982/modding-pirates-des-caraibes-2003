@@ -20,7 +20,7 @@ void ProcessDialogEvent()
 	
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Aeaeia ia?aue - ia?aay ano?a?a
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -57,7 +57,23 @@ void ProcessDialogEvent()
 			link.l2.go = "ispoved";
 			link.l3 = DLG_TEXT[8];
 			link.l3.go = "exit";
-			if (npchar.quest.prihod == "0")
+						if (CheckAttribute(pchar, "quest_S3_city") && pchar.quest_S3_city == "FalaiseDeFleur")
+			{
+				if (CheckAttribute(pchar, "quest_S3_status"))
+				{
+					bool s3_dialogue = false;  					switch (pchar.quest_S3_status) 					{ 						case "accepted": 							s3_dialogue = true; 						break; 						case "investigation": 							s3_dialogue = true; 						break; 						case "candidate_target_kill": 							s3_dialogue = true; 						break; 						case "candidate_target_release": 							s3_dialogue = true; 						break; 					}  					if (s3_dialogue) 					{ 						if (!CheckAttribute(pchar, "quest_S3_informant_priest"))
+							{
+								link.l20 = "J'aurais besoin de votre jugement sur une personne de cette ville.";
+								link.l20.go = "S3_priest_start";
+							}
+							else
+							{
+								link.l21 = "Vous m'avez deja parle de cette affaire.";
+								link.l21.go = "S3_priest_repeat";
+							}
+					}
+				}
+			}if (npchar.quest.prihod == "0")
 			{
 				link.l4 = DLG_TEXT[9];
 				link.l4.go = "prihod";
@@ -255,6 +271,30 @@ void ProcessDialogEvent()
 		case "Exit":
 			DialogExit();
 			NextDiag.CurrentNode = NextDiag.TempNode;
+		break;
+		case "S3_priest_start":
+			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
+			{
+				d.Text = "Si vous me demandez mon jugement en conscience, je ne vous mentirai pas. " + pchar.quest_S3_target_name + " porte une faute grave dans son ame. Cette personne n'est pas innocente.";
+			}
+			else
+			{
+				d.Text = "Si vous me demandez mon jugement en conscience, je ne vous mentirai pas. Je ne vois pas dans l'ame de " + pchar.quest_S3_target_name + " la noirceur dont on l'accuse. A mes yeux, cette personne est innocente.";
+			}
+			link.l1 = "Cela me suffit.";
+			link.l1.go = "S3_priest_done";
+		break;
+
+		case "S3_priest_done":
+			pchar.quest_S3_informant_priest = true;
+			Log_SetStringToLog("S3 informant answered");
+			DialogExit();
+		break;
+
+		case "S3_priest_repeat":
+			d.Text = "Je vous ai deja dit ce que je pouvais en conscience. La suite vous appartient.";
+			link.l1 = "Je comprends.";
+			link.l1.go = "exit";
 		break;
 	}
 }

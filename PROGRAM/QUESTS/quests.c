@@ -5,8 +5,10 @@
 #include "quests\quests_scenes.c"
 #include "quests\both_reaction.c"
 #include "quests\quests_reaction.c"
+#include "quests\quests_reaction_help.c"
 #include "quests\quests_reaction_s1.c"
 #include "quests\quests_reaction_s2.c"
+#include "quests\quests_reaction_s3.c"
 
 #event_handler("LocationWaitNihgtEnd","WaitDatePostEventControl");
 #event_handler("evntQuestCameraRestore","QuestCameraRestore");
@@ -49,17 +51,20 @@ void QuestsCheck_forLocEnter()
 	// POUR CREER DES QUETES
 	SetNationRelation2MainCharacter(PIRATE, RELATION_FRIEND);
 	//PJ connaitre a chaque reload des informations (ex : position = pchar.location)
-	Log_SetStringToLog("PJ 1:"+pchar.location);
+	// Log_SetStringToLog("PJ 1:"+pchar.location);
 	// Log_SetStringToLog("PJ 2:"+pchar.location.locator);
 	// Log_SetStringToLog("PJ 3:"+pchar.location.locator_group);//location.group
+	// Log_SetStringToLog("PJ hour:"+ makeint(GetHour()));
 	// Log_SetStringToLog("PJ blade:"+pchar.equip.blade);
 	// Log_SetStringToLog("PJ gun:"+pchar.equip.gun);
 	// fin ajout PJ
 
 	QC_DoUnloadLocation();
 	QuestsCheck();
+	HELP_ProcessLocationEnter();
 	S1_ProcessLocationEnter();
 	S2_ProcessLocationEnter();
+	S3_ProcessLocationEnter();
 }
 
 void CharacterDeadProcess()

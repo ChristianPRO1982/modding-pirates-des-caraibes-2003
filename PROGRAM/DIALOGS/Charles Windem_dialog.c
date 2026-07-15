@@ -22,7 +22,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Aeaeia ia?aue - ia?aay ano?a?a
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -115,6 +115,23 @@ void ProcessDialogEvent()
 
 //Lucas
 
+			if (CheckAttribute(pchar, "quest_S3_city") && pchar.quest_S3_city == "Redmond")
+			{
+				if (CheckAttribute(pchar, "quest_S3_status"))
+				{
+					bool s3_dialogue = false;  					switch (pchar.quest_S3_status) 					{ 						case "accepted": 							s3_dialogue = true; 						break; 						case "investigation": 							s3_dialogue = true; 						break; 						case "candidate_target_kill": 							s3_dialogue = true; 						break; 						case "candidate_target_release": 							s3_dialogue = true; 						break; 					}  					if (s3_dialogue) 					{ 						if (!CheckAttribute(pchar, "quest_S3_informant_tavernier"))
+							{
+								link.l5 = "Je cherche des rumeurs sur quelqu'un de cette ville.";
+								link.l5.go = "S3_tavern_start";
+							}
+							else
+							{
+								link.l6 = "Vous m'avez deja confie vos rumeurs sur cette affaire.";
+								link.l6.go = "S3_tavern_repeat";
+							}
+					}
+				}
+			}
 			Link.l99 = DLG_TEXT[38] + NPChar.name + DLG_TEXT[39];
 			Link.l99.go = "No quest";
 		break;
@@ -367,5 +384,31 @@ void ProcessDialogEvent()
 
 //Lucas
 
+		case "S3_tavern_start":
+			dialog.snd = "Voice\CHWI\CHWI007";
+			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
+			{
+				d.Text = "Dans une taverne, on entend tout. Et sur " + pchar.quest_S3_target_name + ", ce ne sont pas des histoires de saint. Plusieurs langues disent que cette personne traine dans de sales affaires. A votre place, je prendrais l'avertissement au serieux.";
+			}
+			else
+			{
+				d.Text = "Dans une taverne, on entend tout. Et sur " + pchar.quest_S3_target_name + ", je n'ai recueilli que des querelles ordinaires et des langues trop promptes. Rien qui sente le vrai scelerat.";
+			}
+			link.l1 = "C'est exactement ce qu'il me fallait.";
+			link.l1.go = "S3_tavern_done";
+		break;
+
+		case "S3_tavern_done":
+			pchar.quest_S3_informant_tavernier = true;
+			Log_SetStringToLog("S3 informant answered");
+			DialogExit();
+		break;
+
+		case "S3_tavern_repeat":
+			dialog.snd = "Voice\CHWI\CHWI008";
+			d.Text = "Je vous ai deja servi tout ce que mes clients savaient. Revenez quand la ville aura de nouvelles rumeurs.";
+			link.l1 = "Entendu.";
+			link.l1.go = "exit";
+		break;
 	}
 }

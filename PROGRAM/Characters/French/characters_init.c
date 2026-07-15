@@ -83,9 +83,10 @@ void CreateCharacters()
 	ch.perks.freepoints = 1;
 	ch.money = "1000";
 	ch.Ship.Name = "Victory";
+	ch.Ship.Type = SHIP_LUGGER_ENGLAND;
+	
 	//ch.Ship.Type = SHIP_FRIGATE_ENGLAND;
 	//ch.Ship.Type = SHIP_CORVETTE_ENGLAND;
-	ch.Ship.Type = SHIP_LUGGER_ENGLAND;
 	//ch.Ship.Type = SHIP_MANOWAR2_FRANCE;
 	ch.Ship.Stopped = true;
 	//ch.Ship.Cannons.Type = CANNON_TYPE_TEST;

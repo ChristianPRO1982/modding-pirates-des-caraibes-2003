@@ -4,6 +4,11 @@ int CreateTempQuestCharacters(int n)
 {
 	ref ch;
 	// ajout PJ
+
+	//§§§§§§§§§§§§
+	//§§§ HELP §§§
+	//§§§§§§§§§§§§
+
 	//§§§§§§§§§§§§§§§§
 	//§§§ QUEST S1 §§§
 	//§§§§§§§§§§§§§§§§
@@ -27,6 +32,40 @@ int CreateTempQuestCharacters(int n)
 	ch.location.locator = "";
 	ch.Dialog.Filename = "PJ Quest S1 Elizabeth_dialog.c";
 	ch.greeting = "Gr_danielle";
+	ch.rank = 1;
+	ch.reputation = "None";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	LAi_SetGuardianType(ch);
+	LAi_SetCitizenType(ch);
+	LAi_group_MoveCharacter(ch, "ENGLAND_CITIZENS");
+	n = n + 1;
+
+	makeref(ch,Characters[n]);
+	ch.name = "Malcolm";
+	ch.lastname = "Hatcher";
+	ch.id = "PJ HELP Malcolm Hatcher";
+	ch.model = "bocman3";
+	ch.sound_type = "pirate";
+	LAi_NoRebirthEnable(ch);
+	GiveItem2Character(ch, "blade20");
+	ch.equip.blade = "blade20";
+	ch.sex = "man";
+	ch.location = "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "PJ HELP Malcolm Hatcher_dialog.c";
+	ch.greeting = "Gr_Malcolm Hatcher";
 	ch.rank = 1;
 	ch.reputation = "None";
 	ch.experience = "0";
@@ -5652,6 +5691,117 @@ int CreateTempQuestCharacters(int n)
 	ch.quest.meeting = "0";
 	LAi_SetCitizenType(ch);
 	LAi_group_MoveCharacter(ch, "FRANCE_CITIZENS");
+	n = n + 1;
+
+	//////////\\\\\\\\\\
+	///// S3 QUEST \\\\\
+	//////////\\\\\\\\\\
+	makeref(ch,Characters[n]);
+	ch.name = "Commanditaire";
+	ch.lastname = "";
+	ch.id = "PJ_S3_Commanditaire";
+	ch.model = "capitan1";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	ch.location = "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "PJ Quest S3 commanditaire_dialog.c";
+	ch.greeting = "Gr_falaise de fleur citizen";
+	ch.nation = FRANCE;
+	GiveItem2Character(ch, "blade2");
+	ch.equip.blade = "blade2";
+	ch.rank = 1;
+	ch.reputation = "30";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.meeting = "0";
+	LAi_SetCitizenType(ch);
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	n = n + 1;
+
+	makeref(ch,Characters[n]);
+	ch.name = "Target";
+	ch.lastname = "";
+	ch.id = "PJ_S3_Target";
+	ch.model = "towngirl4";
+	ch.sex = "woman";
+	ch.sound_type = "female_citizen";
+	ch.location = "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "PJ Quest S3 target_dialog.c";
+	ch.greeting = "Gr_Woman_French citizen";
+	ch.nation = FRANCE;
+	GiveItem2Character(ch, "blade17");
+	ch.equip.blade = "blade17";
+	ch.rank = 1;
+	ch.reputation = "50";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.meeting = "0";
+	LAi_SetCitizenType(ch);
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
+	n = n + 1;
+
+	makeref(ch,Characters[n]);
+	ch.name = "Witness";
+	ch.lastname = "";
+	ch.id = "PJ_S3_Witness";
+	ch.model = "bocman";
+	ch.sex = "man";
+	ch.sound_type = "male_citizen";
+	ch.location = "none";
+	ch.location.group = "";
+	ch.location.locator = "";
+	ch.Dialog.Filename = "PJ Quest S3 witness_dialog.c";
+	ch.greeting = "Gr_falaise de fleur citizen";
+	ch.nation = FRANCE;
+	GiveItem2Character(ch, "blade22");
+	ch.equip.blade = "blade22";
+	ch.rank = 1;
+	ch.reputation = "50";
+	ch.experience = "0";
+	ch.skill.Leadership = "1";
+	ch.skill.Fencing = "1";
+	ch.skill.Sailing = "1";
+	ch.skill.Accuracy = "1";
+	ch.skill.Cannons = "1";
+	ch.skill.Grappling = "1";
+	ch.skill.Repair = "1";
+	ch.skill.Defence = "1";
+	ch.skill.Commerce = "1";
+	ch.skill.Sneak = "1";
+	ch.money = "10";
+	ch.quest.meeting = "0";
+	LAi_SetCitizenType(ch);
+	LAi_SetGuardianType(ch);
+	LAi_SetLoginTime(ch, 0.0, 24.0);
+	LAi_SetHP(ch, 80.0, 80.0);
 	n = n + 1;
 
 	return n;

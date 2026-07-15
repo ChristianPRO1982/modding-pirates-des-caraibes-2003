@@ -24,7 +24,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		// -----------------------------------Диалог первый - первая встреча
+		// -----------------------------------Aeaeia ia?aue - ia?aay ano?a?a
 			case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -491,6 +491,23 @@ void ProcessDialogEvent()
 			link.l2.go = "crew";
 			link.l3 = pcharrepphrase(DLG_TEXT[164], DLG_TEXT[165]);
 			link.l3.go = "room";
+			if (CheckAttribute(pchar, "quest_S3_city") && pchar.quest_S3_city == "FalaiseDeFleur")
+			{
+				if (CheckAttribute(pchar, "quest_S3_status"))
+				{
+					bool s3_dialogue = false;  					switch (pchar.quest_S3_status) 					{ 						case "accepted": 							s3_dialogue = true; 						break; 						case "investigation": 							s3_dialogue = true; 						break; 						case "candidate_target_kill": 							s3_dialogue = true; 						break; 						case "candidate_target_release": 							s3_dialogue = true; 						break; 					}  					if (s3_dialogue) 					{ 						if (!CheckAttribute(pchar, "quest_S3_informant_tavernier"))
+							{
+								link.l20 = "Je cherche des rumeurs sur quelqu'un de cette ville.";
+								link.l20.go = "S3_tavern_start";
+							}
+							else
+							{
+								link.l21 = "Vous m'avez deja confie vos rumeurs sur cette affaire.";
+								link.l21.go = "S3_tavern_repeat";
+							}
+					}
+				}
+			}
 			NextDiag.TempNode = "Second time";
 		break;
 
@@ -685,7 +702,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "Story_Berangere_killed_7":
-		/*	//--------Проверка на попадание игрока в море
+		/*	//--------I?iaa?ea ia iiiaaaiea ea?iea a ii?a
 			Pchar.quest.Story_Lebretton_betrayal.win_condition.l1 = "location";
 			Pchar.quest.Story_Lebretton_betrayal.win_condition.l1.character = PChar.id;
 			Pchar.quest.Story_Lebretton_betrayal.win_condition.l1.location = "falaise_de_fleur_01";
@@ -858,6 +875,30 @@ void ProcessDialogEvent()
 			NPChar.quest.meeting = NPC_Meeting;
 			DialogExit();
 			AddDialogExitQuest("exit_sit");
+		break;
+		case "S3_tavern_start":
+			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
+			{
+				d.Text = "Dans une taverne, on entend tout. Et sur " + pchar.quest_S3_target_name + ", ce ne sont pas des histoires de saint. Plusieurs langues disent que cette personne traine dans de sales affaires. A votre place, je prendrais l'avertissement au serieux.";
+			}
+			else
+			{
+				d.Text = "Dans une taverne, on entend tout. Et sur " + pchar.quest_S3_target_name + ", je n'ai recueilli que des querelles ordinaires et des langues trop promptes. Rien qui sente le vrai scelerat.";
+			}
+			link.l1 = "C'est exactement ce qu'il me fallait.";
+			link.l1.go = "S3_tavern_done";
+		break;
+
+		case "S3_tavern_done":
+			pchar.quest_S3_informant_tavernier = true;
+			Log_SetStringToLog("S3 informant answered");
+			DialogExit();
+		break;
+
+		case "S3_tavern_repeat":
+			d.Text = "Je vous ai deja servi tout ce que mes clients savaient. Revenez quand la ville aura de nouvelles rumeurs.";
+			link.l1 = "Entendu.";
+			link.l1.go = "exit";
 		break;
 	}
 }

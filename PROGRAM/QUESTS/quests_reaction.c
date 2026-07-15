@@ -515,6 +515,7 @@ void QuestComplete(string sQuestName)
 
 	if (QuestComplete_S1(sQuestName)) return;
 	if (QuestComplete_S2(sQuestName)) return;
+	if (QuestComplete_S3(sQuestName)) return;
 	switch(sQuestName)
 	{
 		case "begining":

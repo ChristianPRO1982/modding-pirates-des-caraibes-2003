@@ -25,7 +25,7 @@ void ProcessDialogEvent()
 
 	switch(Dialog.CurrentNode)
 	{
-		//-----------------------------------Диалог первый - первая встреча
+		//-----------------------------------Aeaeia ia?aue - ia?aay ano?a?a
 		case "First time":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
@@ -126,6 +126,23 @@ void ProcessDialogEvent()
 			{
 				link.l10 = DLG_TEXT[41];
 				link.l10.go = "convoy";
+			}
+						if (CheckAttribute(pchar, "quest_S3_city") && pchar.quest_S3_city == "IslaMuelle")
+			{
+				if (CheckAttribute(pchar, "quest_S3_status"))
+				{
+					bool s3_dialogue = false;  					switch (pchar.quest_S3_status) 					{ 						case "accepted": 							s3_dialogue = true; 						break; 						case "investigation": 							s3_dialogue = true; 						break; 						case "candidate_target_kill": 							s3_dialogue = true; 						break; 						case "candidate_target_release": 							s3_dialogue = true; 						break; 					}  					if (s3_dialogue) 					{ 						if (!CheckAttribute(pchar, "quest_S3_informant_tavernier"))
+							{
+								link.l20 = "Je cherche des rumeurs sur quelqu'un de cette ville.";
+								link.l20.go = "S3_tavern_start";
+							}
+							else
+							{
+								link.l21 = "Vous m'avez deja confie vos rumeurs sur cette affaire.";
+								link.l21.go = "S3_tavern_repeat";
+							}
+					}
+				}
 			}
 			link.l99 = DLG_TEXT[42];
 			link.l99.go = "node_1";
@@ -261,7 +278,7 @@ void ProcessDialogEvent()
 			dialog.text = DLG_TEXT[84];
 			link.l1 = DLG_TEXT[85];
 			link.l1.go = "exit";
-			//Ставим штормовую погоду
+			//Noaaei ooi?iiao? iiaiao
 			pchar.quest.movie_with_fight.win_condition.l1 = "locator";
 			pchar.quest.movie_with_fight.win_condition.l1.location = "Muelle_tavern";
 			pchar.quest.movie_with_fight.win_condition.l1.locator_group = "reload";
@@ -434,6 +451,30 @@ void ProcessDialogEvent()
 					}
 				}
 			}
+		break;
+		case "S3_tavern_start":
+			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
+			{
+				d.Text = "Dans une taverne, on entend tout. Et sur " + pchar.quest_S3_target_name + ", ce ne sont pas des histoires de saint. Plusieurs langues disent que cette personne traine dans de sales affaires. A votre place, je prendrais l'avertissement au serieux.";
+			}
+			else
+			{
+				d.Text = "Dans une taverne, on entend tout. Et sur " + pchar.quest_S3_target_name + ", je n'ai recueilli que des querelles ordinaires et des langues trop promptes. Rien qui sente le vrai scelerat.";
+			}
+			link.l1 = "C'est exactement ce qu'il me fallait.";
+			link.l1.go = "S3_tavern_done";
+		break;
+
+		case "S3_tavern_done":
+			pchar.quest_S3_informant_tavernier = true;
+			Log_SetStringToLog("S3 informant answered");
+			DialogExit();
+		break;
+
+		case "S3_tavern_repeat":
+			d.Text = "Je vous ai deja servi tout ce que mes clients savaient. Revenez quand la ville aura de nouvelles rumeurs.";
+			link.l1 = "Entendu.";
+			link.l1.go = "exit";
 		break;
 	}
 }
