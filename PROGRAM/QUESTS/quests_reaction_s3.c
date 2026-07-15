@@ -11,6 +11,39 @@ int S3_GetRunId()
 	return makeint(pchar.quest_S3_run_id);
 }
 
+bool S3_IsQuestStartedStatus(string status)
+{
+	switch (status)
+	{
+		case "accepted":
+			return true;
+		break;
+		case "investigation":
+			return true;
+		break;
+		case "candidate_target_kill":
+			return true;
+		break;
+		case "candidate_target_release":
+			return true;
+		break;
+		case "target_killed":
+			return true;
+		break;
+		case "target_released":
+			return true;
+		break;
+		case "commanditaire_paid":
+			return true;
+		break;
+		case "commanditaire_duel":
+			return true;
+		break;
+	}
+
+	return false;
+}
+
 bool S3_IsQuestActive()
 {
 	ref pchar = GetMainCharacter();
@@ -22,17 +55,25 @@ bool S3_IsQuestActive()
 	}
 
 	status = pchar.quest_S3_status;
-	switch (status)
+	if (status == "")
 	{
-		case "":
-			return false;
-		break;
-		case "closed":
-			return false;
-		break;
-		case "completed":
-			return false;
-		break;
+		return false;
+	}
+	if (status == "closed")
+	{
+		return false;
+	}
+	if (status == "completed")
+	{
+		return false;
+	}
+	if (status == "spawned")
+	{
+		return false;
+	}
+	if (status == "offered")
+	{
+		return false;
 	}
 
 	return true;
@@ -94,6 +135,53 @@ bool S3_IsTargetStatus(string status)
 			return true;
 		break;
 	}
+
+	return false;
+}
+
+bool S3_HasDeadline()
+{
+	ref pchar = GetMainCharacter();
+
+	if (!CheckAttribute(pchar, "quest_S3_deadline_day")) return false;
+	if (!CheckAttribute(pchar, "quest_S3_deadline_month")) return false;
+	if (!CheckAttribute(pchar, "quest_S3_deadline_year")) return false;
+	return true;
+}
+
+bool S3_IsDeadlineExpired()
+{
+	ref pchar = GetMainCharacter();
+	int deadlineYear;
+	int deadlineMonth;
+	int deadlineDay;
+	string status;
+
+	if (!CheckAttribute(pchar, "quest_S3_status"))
+	{
+		return false;
+	}
+
+	status = pchar.quest_S3_status;
+	if (!S3_IsQuestStartedStatus(status))
+	{
+		return false;
+	}
+
+	if (!S3_HasDeadline())
+	{
+		return false;
+	}
+
+	deadlineYear = sti(pchar.quest_S3_deadline_year);
+	deadlineMonth = sti(pchar.quest_S3_deadline_month);
+	deadlineDay = sti(pchar.quest_S3_deadline_day);
+
+	if (GetDataYear() > deadlineYear) return true;
+	if (GetDataYear() < deadlineYear) return false;
+	if (GetDataMonth() > deadlineMonth) return true;
+	if (GetDataMonth() < deadlineMonth) return false;
+	if (GetDataDay() > deadlineDay) return true;
 
 	return false;
 }
@@ -164,6 +252,7 @@ void S3_ClearRuntimeQuestEvents()
 	pchar.quest.quest_S3_target_dead.over = "yes";
 	pchar.quest.quest_S3_commanditaire_dead.over = "yes";
 	pchar.quest.quest_S3_witness_talk.over = "yes";
+	pchar.quest.quest_S3_deadline_expired.over = "yes";
 }
 
 void S3_ClearInformants()
@@ -179,11 +268,17 @@ void S3_ClearInformants()
 
 void S3_PrepareCommanditaireCharacter()
 {
+	ref pchar;
 	ref ch;
 
+	pchar = GetMainCharacter();
 	ch = characterFromID(S3_GetCommanditaireId());
-	ch.name = "Marius";
-	ch.lastname = "Leroux";
+	if (!CheckAttribute(pchar, "quest_S3_commanditaire_firstname") || !CheckAttribute(pchar, "quest_S3_commanditaire_lastname"))
+	{
+		S3_SetGeneratedCommanditaireIdentity();
+	}
+	ch.name = pchar.quest_S3_commanditaire_firstname;
+	ch.lastname = pchar.quest_S3_commanditaire_lastname;
 	ch.model = "capitan1";
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
@@ -207,10 +302,19 @@ void S3_PrepareTargetCharacter()
 	ch.Dialog.Filename = "PJ Quest S3 target_dialog.c";
 	ch.Dialog.CurrentNode = "First time";
 
+	if (!CheckAttribute(pchar, "quest_S3_target_name"))
+	{
+		S3_SetGeneratedTargetData();
+	}
+
 	if (CheckAttribute(pchar, "quest_S3_target_gender") && pchar.quest_S3_target_gender == "female")
 	{
-		ch.name = "Jeanne";
-		ch.lastname = "Mercier";
+		if (!CheckAttribute(pchar, "quest_S3_target_firstname") || !CheckAttribute(pchar, "quest_S3_target_lastname"))
+		{
+			S3_SetGeneratedTargetFemaleIdentity();
+		}
+		ch.name = pchar.quest_S3_target_firstname;
+		ch.lastname = pchar.quest_S3_target_lastname;
 		ch.model = "towngirl4";
 		ch.sex = "woman";
 		ch.sound_type = "female_citizen";
@@ -221,8 +325,12 @@ void S3_PrepareTargetCharacter()
 	}
 	else
 	{
-		ch.name = "Jean-Baptiste";
-		ch.lastname = "Lemoine";
+		if (!CheckAttribute(pchar, "quest_S3_target_firstname") || !CheckAttribute(pchar, "quest_S3_target_lastname"))
+		{
+			S3_SetGeneratedTargetMaleIdentity();
+		}
+		ch.name = pchar.quest_S3_target_firstname;
+		ch.lastname = pchar.quest_S3_target_lastname;
 		ch.model = "man1";
 		ch.sex = "man";
 		ch.sound_type = "male_citizen";
@@ -241,11 +349,17 @@ void S3_PrepareTargetCharacter()
 
 void S3_PrepareWitnessCharacter()
 {
+	ref pchar;
 	ref ch;
 
+	pchar = GetMainCharacter();
 	ch = characterFromID(S3_GetWitnessId());
-	ch.name = "Bastien";
-	ch.lastname = "Ravel";
+	if (!CheckAttribute(pchar, "quest_S3_witness_firstname") || !CheckAttribute(pchar, "quest_S3_witness_lastname"))
+	{
+		S3_SetGeneratedWitnessIdentity();
+	}
+	ch.name = pchar.quest_S3_witness_firstname;
+	ch.lastname = pchar.quest_S3_witness_lastname;
 	ch.model = "bocman";
 	ch.sex = "man";
 	ch.sound_type = "male_citizen";
@@ -308,6 +422,9 @@ void S3_ResetRuntime()
 	DeleteAttribute(pchar, "quest_S3_target_lastname");
 	DeleteAttribute(pchar, "quest_S3_target_gender");
 	DeleteAttribute(pchar, "quest_S3_target_truth");
+	DeleteAttribute(pchar, "quest_S3_deadline_day");
+	DeleteAttribute(pchar, "quest_S3_deadline_month");
+	DeleteAttribute(pchar, "quest_S3_deadline_year");
 	DeleteAttribute(pchar, "quest_S3_reward_gold");
 	DeleteAttribute(pchar, "quest_S3_city_reward_gold");
 	DeleteAttribute(pchar, "quest_S3_target_killed");
@@ -335,6 +452,27 @@ void S3_SetRunCity(string cityKey)
 	pchar.quest_S3_commanditaire_id = S3_GetCommanditaireId();
 	pchar.quest_S3_target_id = S3_GetTargetId();
 	pchar.quest_S3_witness_id = S3_GetWitnessId();
+}
+
+void S3_StartDeadlineTimer()
+{
+	ref pchar = GetMainCharacter();
+
+	pchar.quest_S3_deadline_day = GetAddingDataDay(0, 0, 2);
+	pchar.quest_S3_deadline_month = GetAddingDataMonth(0, 0, 2);
+	pchar.quest_S3_deadline_year = GetAddingDataYear(0, 0, 2);
+
+	pchar.quest.quest_S3_deadline_expired.win_condition.l1 = "Timer";
+	pchar.quest.quest_S3_deadline_expired.win_condition.l1.date.day = sti(pchar.quest_S3_deadline_day);
+	pchar.quest.quest_S3_deadline_expired.win_condition.l1.date.month = sti(pchar.quest_S3_deadline_month);
+	pchar.quest.quest_S3_deadline_expired.win_condition.l1.date.year = sti(pchar.quest_S3_deadline_year);
+	pchar.quest.quest_S3_deadline_expired.win_condition = "quest_S3_deadline_expired";
+}
+
+void S3_ExpireAcceptedQuest()
+{
+	S3_CloseQuestHeaders();
+	S3_ResetRuntime();
 }
 
 void S3_SetGeneratedCommanditaireIdentity()
@@ -492,8 +630,8 @@ void S3_SetGeneratedTargetMaleIdentity()
 			pchar.quest_S3_target_lastname = "Larcin";
 		break;
 		case 4:
-			pchar.quest_S3_target_firstname = "Victor";
-			pchar.quest_S3_target_lastname = "Larcin";
+			pchar.quest_S3_target_firstname = "Vidocq";
+			pchar.quest_S3_target_lastname = "Pasquier";
 		break;
 		case 5:
 			pchar.quest_S3_target_firstname = "Hector";
@@ -869,13 +1007,11 @@ void S3_SetGeneratedTargetData()
 
 	if (rand(5) == 0)
 	{
-		pchar.quest_S3_target_gender = "female";
-		pchar.quest_S3_target_name = "Jeanne Mercier";
+		S3_SetGeneratedTargetFemaleIdentity();
 	}
 	else
 	{
-		pchar.quest_S3_target_gender = "male";
-		pchar.quest_S3_target_name = "Jean-Baptiste Lemoine";
+		S3_SetGeneratedTargetMaleIdentity();
 	}
 
 	if (rand(1) == 0)
@@ -981,6 +1117,12 @@ void S3_ProcessLocationEnter()
 	locationId = pchar.location;
 	S3_HideAllNpcs();
 
+	if (S3_IsDeadlineExpired())
+	{
+		S3_ExpireAcceptedQuest();
+		return;
+	}
+
 	if (!S3_IsEligibleLocation(locationId))
 	{
 		return;
@@ -1001,6 +1143,9 @@ void S3_ProcessLocationEnter()
 		pchar.quest_S3_status = "spawned";
 		pchar.quest_S3_run_id = S3_GetRunId() + 1;
 		S3_SetRunCity(cityKey);
+		S3_SetGeneratedCommanditaireIdentity();
+		S3_SetGeneratedTargetData();
+		S3_SetGeneratedWitnessIdentity();
 		S3_PrepareCommanditaireCharacter();
 		S3_PrepareTargetCharacter();
 		S3_PrepareWitnessCharacter();
@@ -1071,6 +1216,7 @@ bool QuestComplete_S3(string sQuestName)
 			S3_PrepareCommanditaireCharacter();
 			S3_PrepareTargetCharacter();
 			S3_PrepareWitnessCharacter();
+			S3_StartDeadlineTimer();
 			pchar.quest_S3_reward_gold = 500 + (100 * makeint(pchar.rank));
 			pchar.quest_S3_city_reward_gold = 250 + (50 * makeint(pchar.rank));
 			pchar.quest_S3_status = "investigation";
@@ -1095,6 +1241,11 @@ bool QuestComplete_S3(string sQuestName)
 		case "quest_S3_offer_refuse":
 			pchar.quest_S3_status = "closed";
 			S3_ResetRuntime();
+			return true;
+		break;
+
+		case "quest_S3_deadline_expired":
+			S3_ExpireAcceptedQuest();
 			return true;
 		break;
 
