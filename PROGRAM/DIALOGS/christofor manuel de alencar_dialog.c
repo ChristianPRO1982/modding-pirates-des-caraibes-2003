@@ -98,11 +98,11 @@ void ProcessDialogEvent()
 		case "S3_governor_start":
 			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
 			{
-				d.Text = "Je pese mes mots, capitaine. L'administration entend bien des plaintes, et toutes ne meritent pas la corde. Mais au sujet de " + pchar.quest_S3_target_name + ", plusieurs signaux concordent. Si vous cherchez mon jugement, cette personne n'est pas blanche comme neige.";
+				dialog.text = "Je pese mes mots, capitaine. L'administration entend bien des plaintes, et toutes ne meritent pas la corde. Mais au sujet de " + pchar.quest_S3_target_name + ", plusieurs signaux concordent. Si vous cherchez mon jugement, cette personne n'est pas blanche comme neige.";
 			}
 			else
 			{
-				d.Text = "Je pese mes mots, capitaine. Rien, dans les rapports ni dans les plaintes serieuses, ne me permet d'accabler " + pchar.quest_S3_target_name + ". Je vous conseille la prudence avant de verser le sang.";
+				dialog.text = "Je pese mes mots, capitaine. Rien, dans les rapports ni dans les plaintes serieuses, ne me permet d'accabler " + pchar.quest_S3_target_name + ". Je vous conseille la prudence avant de verser le sang.";
 			}
 			link.l1 = "Votre avis m'eclaire.";
 			link.l1.go = "S3_governor_done";
@@ -115,7 +115,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "S3_governor_repeat":
-			d.Text = "Je vous ai deja livre l'appreciation que je pouvais formuler. Je n'ai rien a y retrancher.";
+			dialog.text = "Je vous ai deja livre l'appreciation que je pouvais formuler. Je n'ai rien a y retrancher.";
 			link.l1 = "Tres bien.";
 			link.l1.go = "exit";
 		break;

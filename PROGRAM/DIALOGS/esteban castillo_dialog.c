@@ -205,11 +205,11 @@ void ProcessDialogEvent()
 		case "S3_shipyard_start":
 			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
 			{
-				d.Text = "Sur les quais, on reconnait les hommes nets et ceux qui cherchent toujours a embarquer avant l'aube. " + pchar.quest_S3_target_name + " a laisse derriere soi assez de signes pour faire froncer bien des sourcils.";
+				dialog.text = "Sur les quais, on reconnait les hommes nets et ceux qui cherchent toujours a embarquer avant l'aube. " + pchar.quest_S3_target_name + " a laisse derriere soi assez de signes pour faire froncer bien des sourcils.";
 			}
 			else
 			{
-				d.Text = "Je vois passer les gens du port toute la journee. " + pchar.quest_S3_target_name + " n'a pas la demarche d'un coupe-jarret traque ni les habitudes d'un vrai malfaiteur. Je dirais qu'on charge cette personne un peu vite.";
+				dialog.text = "Je vois passer les gens du port toute la journee. " + pchar.quest_S3_target_name + " n'a pas la demarche d'un coupe-jarret traque ni les habitudes d'un vrai malfaiteur. Je dirais qu'on charge cette personne un peu vite.";
 			}
 			link.l1 = "C'est note.";
 			link.l1.go = "S3_shipyard_done";
@@ -222,7 +222,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "S3_shipyard_repeat":
-			d.Text = "Je vous ai deja livre mon sentiment. Les quais n'ont rien ajoute depuis.";
+			dialog.text = "Je vous ai deja livre mon sentiment. Les quais n'ont rien ajoute depuis.";
 			link.l1 = "Je comprends.";
 			link.l1.go = "exit";
 		break;

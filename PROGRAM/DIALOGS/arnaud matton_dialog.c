@@ -1080,11 +1080,11 @@ void ProcessDialogEvent()
 		case "S3_merchant_start":
 			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
 			{
-				d.Text = "Un marchand apprend vite a reconnaitre les clients qui paient trop tard, mentent trop vite et changent trop souvent d'histoire. " + pchar.quest_S3_target_name + " m'inspire ce genre de mefiance. Je ne ferais pas credit a cette personne.";
+				dialog.text = "Un marchand apprend vite a reconnaitre les clients qui paient trop tard, mentent trop vite et changent trop souvent d'histoire. " + pchar.quest_S3_target_name + " m'inspire ce genre de mefiance. Je ne ferais pas credit a cette personne.";
 			}
 			else
 			{
-				d.Text = "Je juge les gens a leurs comptes, a leurs promesses et a la facon dont ils traitent ceux qui dependent d'eux. Jusqu'ici, je n'ai rien vu chez " + pchar.quest_S3_target_name + " qui merite un chatiment de sang.";
+				dialog.text = "Je juge les gens a leurs comptes, a leurs promesses et a la facon dont ils traitent ceux qui dependent d'eux. Jusqu'ici, je n'ai rien vu chez " + pchar.quest_S3_target_name + " qui merite un chatiment de sang.";
 			}
 			link.l1 = "Votre franchise m'est utile.";
 			link.l1.go = "S3_merchant_done";
@@ -1097,7 +1097,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "S3_merchant_repeat":
-			d.Text = "Je vous ai deja dit ce que j'avais observe. Je n'ai rien a y ajouter pour le moment.";
+			dialog.text = "Je vous ai deja dit ce que j'avais observe. Je n'ai rien a y ajouter pour le moment.";
 			link.l1 = "Tres bien.";
 			link.l1.go = "exit";
 		break;

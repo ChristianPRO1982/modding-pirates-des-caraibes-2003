@@ -194,11 +194,11 @@ void ProcessDialogEvent()
 		case "S3_priest_start":
 			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
 			{
-				d.Text = "Si vous me demandez mon jugement en conscience, je ne vous mentirai pas. " + pchar.quest_S3_target_name + " porte une faute grave dans son ame. Cette personne n'est pas innocente.";
+				dialog.text = "Si vous me demandez mon jugement en conscience, je ne vous mentirai pas. " + pchar.quest_S3_target_name + " porte une faute grave dans son ame. Cette personne n'est pas innocente.";
 			}
 			else
 			{
-				d.Text = "Si vous me demandez mon jugement en conscience, je ne vous mentirai pas. Je ne vois pas dans l'ame de " + pchar.quest_S3_target_name + " la noirceur dont on l'accuse. A mes yeux, cette personne est innocente.";
+				dialog.text = "Si vous me demandez mon jugement en conscience, je ne vous mentirai pas. Je ne vois pas dans l'ame de " + pchar.quest_S3_target_name + " la noirceur dont on l'accuse. A mes yeux, cette personne est innocente.";
 			}
 			link.l1 = "Cela me suffit.";
 			link.l1.go = "S3_priest_done";
@@ -211,7 +211,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "S3_priest_repeat":
-			d.Text = "Je vous ai deja dit ce que je pouvais en conscience. La suite vous appartient.";
+			dialog.text = "Je vous ai deja dit ce que je pouvais en conscience. La suite vous appartient.";
 			link.l1 = "Je comprends.";
 			link.l1.go = "exit";
 		break;

@@ -879,11 +879,11 @@ void ProcessDialogEvent()
 		case "S3_tavern_start":
 			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
 			{
-				d.Text = "Dans une taverne, on entend tout. Et sur " + pchar.quest_S3_target_name + ", ce ne sont pas des histoires de saint. Plusieurs langues disent que cette personne traine dans de sales affaires. A votre place, je prendrais l'avertissement au serieux.";
+				dialog.text = "Dans une taverne, on entend tout. Et sur " + pchar.quest_S3_target_name + ", ce ne sont pas des histoires de saint. Plusieurs langues disent que cette personne traine dans de sales affaires. A votre place, je prendrais l'avertissement au serieux.";
 			}
 			else
 			{
-				d.Text = "Dans une taverne, on entend tout. Et sur " + pchar.quest_S3_target_name + ", je n'ai recueilli que des querelles ordinaires et des langues trop promptes. Rien qui sente le vrai scelerat.";
+				dialog.text = "Dans une taverne, on entend tout. Et sur " + pchar.quest_S3_target_name + ", je n'ai recueilli que des querelles ordinaires et des langues trop promptes. Rien qui sente le vrai scelerat.";
 			}
 			link.l1 = "C'est exactement ce qu'il me fallait.";
 			link.l1.go = "S3_tavern_done";
@@ -896,7 +896,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "S3_tavern_repeat":
-			d.Text = "Je vous ai deja servi tout ce que mes clients savaient. Revenez quand la ville aura de nouvelles rumeurs.";
+			dialog.text = "Je vous ai deja servi tout ce que mes clients savaient. Revenez quand la ville aura de nouvelles rumeurs.";
 			link.l1 = "Entendu.";
 			link.l1.go = "exit";
 		break;
