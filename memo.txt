@@ -6,3 +6,13 @@ En particulier lis la documentation dans .\docs\
 Plus particulièrement on va travailler sur la quête décrite dans docs\quests\quest_s3_1_Par_l_Article_du_Sabre_technique.md et ses documents liés décrits dedans
 Fais moi un plan pour implémenter cette quête.
 Attention : On va travailler pas à pas. Codex n'a le droit que de modifier un seul fichier à la fois.
+
+
+
+pour ouvrir la plage de Khael Roa :
+[ligne 3003 (line 3003)](/home/utilisateur/Documents/projects/perso/modding-pirates-des-caraibes-2003/PROGRAM/QUESTS/quests_reaction.c:3003) Island_SetReloadEnableLocal("KhaelRoa", "reload_1", true);
+[ligne 3004 (line 3004)](/home/utilisateur/Documents/projects/perso/modding-pirates-des-caraibes-2003/PROGRAM/QUESTS/quests_reaction.c:3004) Island_SetReloadEnableGlobal("KhaelRoa", false);
+
+[ligne 3016 (line 3016)](/home/utilisateur/Documents/projects/perso/modding-pirates-des-caraibes-2003/PROGRAM/QUESTS/quests_reaction.c:3016) Island_SetReloadEnableLocal("KhaelRoa", "reload_1", true);
+[ligne 3017 (line 3017)](/home/utilisateur/Documents/projects/perso/modding-pirates-des-caraibes-2003/PROGRAM/QUESTS/quests_reaction.c:3017) Island_SetReloadEnableGlobal("KhaelRoa", true);
+[ligne 3018 (line 3018)](/home/utilisateur/Documents/projects/perso/modding-pirates-des-caraibes-2003/PROGRAM/QUESTS/quests_reaction.c:3018) Island_SetGotoEnableLocal("KhaelRoa", "reload_1", true);
