@@ -40,6 +40,8 @@
 #define B11_NPC_DOUWESEN_ENGLISH "PJ_B1_1_EnglishContact_Douwesen"
 #define B11_NPC_DOUWESEN_DUTCH "PJ_B1_1_DutchContact_Douwesen"
 
+#define B11_DIALOG_FILE "Robert Christopher Silehard PJ_dialog.c"
+
 #define B11_ITEM_FEET "PJ_B1_1_STATUE_FEET"
 #define B11_ITEM_BODY "PJ_B1_1_STATUE_BODY"
 #define B11_ITEM_ARMS "PJ_B1_1_STATUE_ARMS"
@@ -187,6 +189,21 @@ void B11_SetNpcGuardian(string npcId)
 	LAi_SetGuardianType(characterFromID(npcId));
 }
 
+void B11_AssignDialog(string npcId, string nodeName)
+{
+	ref chref;
+
+	if (!B11_HasNpc(npcId))
+	{
+		return;
+	}
+
+	chref = characterFromID(npcId);
+	chref.Dialog.Filename = B11_DIALOG_FILE;
+	chref.Dialog.CurrentNode = nodeName;
+	chref.Dialog.TempNode = nodeName;
+}
+
 void B11_DespawnAllSceneNpcs()
 {
 	B11_HideNpc(B11_NPC_MUELLE_ENGLISH);
@@ -206,11 +223,20 @@ void B11_SpawnMuelleScene()
 
 	B11_PlaceNpc(B11_NPC_MUELLE_GUARD, B11_LOCATION_MUELLE, "goto");
 	B11_SetNpcGuardian(B11_NPC_MUELLE_GUARD);
+	B11_AssignDialog(B11_NPC_MUELLE_GUARD, "B1_1_muelle_guard");
 
 	if (B11_GetMuelleState() != B11_MUELLE_STATE_WAIT)
 	{
 		B11_PlaceNpc(B11_NPC_MUELLE_ENGLISH, B11_LOCATION_MUELLE, "goto");
 		B11_SetNpcCitizen(B11_NPC_MUELLE_ENGLISH);
+		if (B11_GetMuelleState() == B11_MUELLE_STATE_SHIP_OFFER)
+		{
+			B11_AssignDialog(B11_NPC_MUELLE_ENGLISH, "B1_1_muelle_contact_ship");
+		}
+		else
+		{
+			B11_AssignDialog(B11_NPC_MUELLE_ENGLISH, "B1_1_muelle_contact");
+		}
 	}
 }
 
@@ -223,11 +249,20 @@ void B11_SpawnConceicaoScene()
 
 	B11_PlaceNpc(B11_NPC_CONCEICAO_GUARD, B11_LOCATION_CONCEICAO, "goto");
 	B11_SetNpcGuardian(B11_NPC_CONCEICAO_GUARD);
+	B11_AssignDialog(B11_NPC_CONCEICAO_GUARD, "B1_1_conceicao_guard");
 
 	if (B11_GetConceicaoState() != B11_CONCEICAO_STATE_WAIT)
 	{
 		B11_PlaceNpc(B11_NPC_CONCEICAO_ENGLISH, B11_LOCATION_CONCEICAO, "goto");
 		B11_SetNpcCitizen(B11_NPC_CONCEICAO_ENGLISH);
+		if (B11_GetConceicaoState() == B11_CONCEICAO_STATE_SHIP_OFFER)
+		{
+			B11_AssignDialog(B11_NPC_CONCEICAO_ENGLISH, "B1_1_conceicao_contact_ship");
+		}
+		else
+		{
+			B11_AssignDialog(B11_NPC_CONCEICAO_ENGLISH, "B1_1_conceicao_contact");
+		}
 	}
 }
 
@@ -240,8 +275,10 @@ void B11_SpawnDouwesenScene()
 
 	B11_PlaceNpc(B11_NPC_DOUWESEN_ENGLISH, B11_LOCATION_DOUWESEN, "goto");
 	B11_SetNpcCitizen(B11_NPC_DOUWESEN_ENGLISH);
+	B11_AssignDialog(B11_NPC_DOUWESEN_ENGLISH, "B1_1_douwesen_english");
 	B11_PlaceNpc(B11_NPC_DOUWESEN_DUTCH, B11_LOCATION_DOUWESEN, "goto");
 	B11_SetNpcCitizen(B11_NPC_DOUWESEN_DUTCH);
+	B11_AssignDialog(B11_NPC_DOUWESEN_DUTCH, "B1_1_douwesen_dutch");
 }
 
 void B11_DisarmMuelleTimer()
