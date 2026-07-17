@@ -26,10 +26,10 @@ La colonne "Joueur" correspond aux personnages pouvant être nommé officier en se
 |     Quête | Joueur | Anglo-hollandais | Hispano-portugais | France |
 | --------- | ------ | ---------------- | ----------------- | ------ |
 | **B1.1**  | - | *Silehard* ; 1 x **civil hollandais** | 1 x **civil espagnol** ; 1 x **civil portugais** | - |
-| **B1.2a** | - | gouverneur *Silehard* ; 3 x **gardes hollandais** | gouverneur *portugais* |  |
-| **B1.2b** | - | gouverneur *Silehard* |  |  |
-| **B1.3**  | 2 bretteurs, un cannonier, un charpentier |  |  |  |
-| **B1.3a** | - |  |  |  |
+| **B1.2a** | - | gouverneur *Silehard* ; 3 x **gardes hollandais** | gouverneur *portugais* | Espion Français |
+| **B1.2b** | - | gouverneur *Silehard* ; *barmen* ; 3 x *gardes hollandais* | gouverneur *portugais* ; *barmen* | Espion Français |
+| **B1.3**  | 2 bretteurs, un cannonier, un charpentier ; un navigateur |  |  |  |
+| **B1.3a** | **neuveu du gouverneur** | **prisonnier à Greenford** ; **gardes retenant la fille dans un bateau** |  | *gouverneur* ; **fille du gouverneur** |
 | **B1.4a** | - |  |  |  |
 | **B1.4b** | - |  |  |  |
 | **B1.4c** | - |  |  |  |
