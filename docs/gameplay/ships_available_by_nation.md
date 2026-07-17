@@ -96,7 +96,7 @@ Ce tableau rassemble toutes les entrées qui ne possèdent pas de suffixe `_FRANCE
 ### Remarques sur les modèles spéciaux
 
 - Le **Black Pearl** et le **Fearless** ont presque les mêmes caractéristiques générales, mais le Black Pearl possède **100 000 PV**, contre 15 000 pour le Fearless.
-- La `Frigate_sat` est plus rapide et plus résistante qu?une frégate française normale.
+- La `Frigate_sat` est plus rapide et plus résistante qu'une frégate française normale.
 - Le `Manowar_gub` ressemble à un Man?o?war national légèrement modifié.
-- `SHIP_FORT` est techniquement enregistré dans `ShipsTypes`, mais ce n?est pas un navire ordinaire.
+- `SHIP_FORT` est techniquement enregistré dans `ShipsTypes`, mais ce n'est pas un navire ordinaire.
 - `Boat` et `Tartane1` ne sont pas véritablement des navires exceptionnels scénarisés : ce sont plutôt des **embarcations génériques communes à toutes les nations**.

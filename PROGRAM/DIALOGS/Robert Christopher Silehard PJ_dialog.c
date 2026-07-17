@@ -93,6 +93,42 @@ void ProcessDialogEvent()
 						}
 					}
 				}
+				if (CheckAttribute(pchar, "quest_PJ_sidequests_unlocked") && sti(pchar.quest_PJ_sidequests_unlocked) == true)
+				{
+					if (!CheckAttribute(pchar, "quest_b1_1_status") || pchar.quest_b1_1_status == "" || pchar.quest_b1_1_status == "not_started")
+					{
+						link.l20 = "Vous disiez avoir besoin d'un capitaine discret. De quoi s'agit-il ?";
+						link.l20.go = "B1_1_start_1";
+					}
+					else
+					{
+						if (pchar.quest_b1_1_status == "intro_collect")
+						{
+							link.l20 = "Rappelez-moi ce que vous attendez de moi pour votre affaire inca.";
+							link.l20.go = "B1_1_intro_reminder";
+						}
+						if (pchar.quest_b1_1_status == "intro_ready_report")
+						{
+							link.l20 = "J'ai reuni les seize objets incas que vous vouliez.";
+							link.l20.go = "B1_1_intro_turnin_1";
+						}
+						if (pchar.quest_b1_1_status == "muelle_pending" || pchar.quest_b1_1_status == "conceicao_pending" || pchar.quest_b1_1_status == "douwesen_pending" || pchar.quest_b1_1_status == "jungle_clue_pending" || pchar.quest_b1_1_status == "dig_ready")
+						{
+							link.l20 = "Ou en sommes-nous de votre affaire inca ?";
+							link.l20.go = "B1_1_stage2_reminder";
+						}
+						if (pchar.quest_b1_1_status == "final_ready")
+						{
+							link.l20 = "J'ai reconstitue la statue complete.";
+							link.l20.go = "B1_1_final_turnin_1";
+						}
+						if (pchar.quest_b1_1_status == "completed" || pchar.quest_b1_1_status == "closed")
+						{
+							link.l20 = "Votre affaire inca est reglee.";
+							link.l20.go = "B1_1_completed_repeat";
+						}
+					}
+				}
 				Link.l99 = DLG_TEXT[19];
 				Link.l99.go = "No quest";
 				if(CheckQuestAttribute("Story_1stTaskComplete", "1"))
@@ -974,6 +1010,105 @@ void ProcessDialogEvent()
 		case "S3_governor_repeat":
 			d.Text = "Je vous ai deja livre l'appreciation que je pouvais formuler. Je n'ai rien a y retrancher.";
 			link.l1 = "Tres bien, Excellence.";
+			link.l1.go = "exit";
+		break;
+
+		case "B1_1_start_1":
+			d.Text = "J'ai besoin d'un capitaine capable, discret, et moins sot que la moyenne. Quelques objets incas circulent encore dans l'archipel, et je souhaite les reunir.";
+			link.l1 = "Voila une demande bien erudite pour un gouverneur.";
+			link.l1.go = "B1_1_start_2";
+			link.l2 = "Je ne suis pas votre antiquaire. Une autre fois, peut-etre.";
+			link.l2.go = "exit";
+		break;
+
+		case "B1_1_start_2":
+			d.Text = "Un homme d'Etat doit aussi savoir s'interesser a ce qui survivra a son temps. Pour commencer, rapportez-moi un exemplaire de chacun des objets indiens courants, du premier au seizieme.";
+			link.l1 = "Un seul exemplaire de chaque objet, de indian1 a indian16. J'ai compris.";
+			link.l1.go = "B1_1_start_accept";
+		break;
+
+		case "B1_1_start_accept":
+			QuestComplete_B1_1("PJ_B1_1_START");
+			d.Text = "Exactement. Revenez quand la serie sera complete. Si vous reussissez, vous verrez que je paie aussi serieusement que je collectionne.";
+			link.l1 = "Je m'en charge.";
+			link.l1.go = "exit";
+			Diag.TempNode = "First time";
+		break;
+
+		case "B1_1_intro_reminder":
+			d.Text = "Je veux un exemplaire de chacun des seize objets indiens courants. Un seul de chaque me suffit. Revenez me voir quand la serie complete sera en votre possession.";
+			link.l1 = "Tres bien.";
+			link.l1.go = "exit";
+		break;
+
+		case "B1_1_intro_turnin_1":
+			d.Text = "Excellent. Ces pieces etaient plus importantes que leur apparence ne le laissait croire.";
+			link.l1 = "Vous semblez y tenir beaucoup pour une simple collection.";
+			link.l1.go = "B1_1_intro_turnin_2";
+		break;
+
+		case "B1_1_intro_turnin_2":
+			d.Text = "Disons qu'elles appartenaient autrefois a une tradition fort ancienne. Une secte inca, ou quelque chose d'approchant. Les Fils de l'Ombre d'Inty.";
+			link.l1 = "Vous en parlez comme si vous les connaissiez mieux qu'un amateur.";
+			link.l1.go = "B1_1_intro_turnin_3";
+		break;
+
+		case "B1_1_intro_turnin_3":
+			QuestComplete_B1_1("PJ_B1_1_INTRO_REPORT_COMPLETE");
+			d.Text = "Seulement par des papiers, des fragments et quelques rumeurs. Prenez votre recompense. Votre premier contact vous attend sur la Cote eloignee d'Isla Muelle. Souvenez-vous d'une seule chose: ne parlez qu'aux Anglais.";
+			link.l1 = "Je retiendrai surtout la derniere consigne.";
+			link.l1.go = "exit";
+			Diag.TempNode = "First time";
+		break;
+
+		case "B1_1_stage2_reminder":
+			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "muelle_pending")
+			{
+				d.Text = "La Cote eloignee d'Isla Muelle. Votre homme y est anglais, et lui seul doit vous interesser.";
+			}
+			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "conceicao_pending")
+			{
+				d.Text = "Havre radieux, a Conceicao. Meme principe: cherchez l'Anglais et ne vous egarez pas aupres du Portugais.";
+			}
+			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "douwesen_pending")
+			{
+				d.Text = "A Douwesen, la plage aux palmiers vous attend. Cette fois, les Hollandais ne devraient pas compliquer les choses autant que les Iberiques.";
+			}
+			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "jungle_clue_pending")
+			{
+				d.Text = "Le dernier morceau a quitte le circuit de mes contacts. Cherchez dans la jungle de Douwesen un signe ancien qui devrait vous guider.";
+			}
+			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "dig_ready")
+			{
+				d.Text = "Vous avez l'indice. Il ne vous reste qu'a fouiller l'endroit indique dans la jungle de Douwesen pour recuperer la tete.";
+			}
+			link.l1 = "Je poursuis.";
+			link.l1.go = "exit";
+		break;
+
+		case "B1_1_final_turnin_1":
+			d.Text = "Enfin... oui, enfin. Vous ignorez a quel point cette statue est remarquable.";
+			link.l1 = "Vous la connaissez donc mieux que vous ne le disiez.";
+			link.l1.go = "B1_1_final_turnin_2";
+		break;
+
+		case "B1_1_final_turnin_2":
+			d.Text = "Mieux ? Non. Disons que j'en ai lu davantage que la plupart des hommes de gouvernement. L'erudition prend parfois des formes que les marins jugent theatrales.";
+			link.l1 = "Vous paraissiez pourtant presque emu.";
+			link.l1.go = "B1_1_final_turnin_3";
+		break;
+
+		case "B1_1_final_turnin_3":
+			QuestComplete_B1_1("PJ_B1_1_FINAL_REPORT_COMPLETE");
+			d.Text = "N'y voyez rien de plus. Vous m'avez bien servi, capitaine. Je saurai me souvenir de votre efficacite. Des affaires plus importantes pourraient bientot requerir un homme de votre trempe.";
+			link.l1 = "Je suppose que ce ne sera pas votre derniere demande.";
+			link.l1.go = "exit";
+			Diag.TempNode = "First time";
+		break;
+
+		case "B1_1_completed_repeat":
+			d.Text = "Notre affaire inca est close pour l'heure. Si j'ai besoin de vous de nouveau, vous en serez informe.";
+			link.l1 = "Je saurai attendre.";
 			link.l1.go = "exit";
 		break;
 	}

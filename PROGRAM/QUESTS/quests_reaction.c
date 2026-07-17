@@ -516,6 +516,7 @@ void QuestComplete(string sQuestName)
 	if (QuestComplete_S1(sQuestName)) return;
 	if (QuestComplete_S2(sQuestName)) return;
 	if (QuestComplete_S3(sQuestName)) return;
+	if (QuestComplete_B1_1(sQuestName)) return;
 	switch(sQuestName)
 	{
 		case "begining":
@@ -12492,6 +12493,7 @@ void QuestComplete(string sQuestName)
 		case "PJ_end_MQ":
 			Log_SetStringToLog(GlobalStringConvert("PJ_END_MQ_1"));
 			DoQuestReloadToLocation("redmond_residence", "goto", "goto3", "blaze_from_prison_to_residence_complete");
+			// la ligne si dessous uniquement pour la quête G1
 			characters[GetCharacterIndex("Robert Christopher Silehard")].dialog.filename = "Robert Christopher Silehard PJ_dialog.c";
 			Log_SetStringToLog(GlobalStringConvert("PJ_END_MQ_2"));
 		break;
