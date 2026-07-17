@@ -1,4 +1,4 @@
-#include "DIALOGS\Robert Christopher Silehard PJ_dialog.h"
+//nclude "DIALOGS\Robert Christopher Silehard PJ_dialog.h"
 
 bool B11_IsSilehard(ref NPChar)
 {
