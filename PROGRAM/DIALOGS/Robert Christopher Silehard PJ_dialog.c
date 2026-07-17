@@ -1106,6 +1106,131 @@ void ProcessDialogEvent()
 			Diag.TempNode = "First time";
 		break;
 
+		case "B1_1_muelle_guard":
+			if (CheckAttribute(pchar, "quest_b1_1_muelle_state") && pchar.quest_b1_1_muelle_state == "wait")
+			{
+				d.Text = "Je vous ai deja dit qu'il n'y avait rien pour vous ici, capitaine. La plage est calme, et je tiens a ce qu'elle le reste.";
+				link.l1 = "Je vois que j'ai assez attire l'attention pour aujourd'hui.";
+				link.l1.go = "exit";
+			}
+			else
+			{
+				d.Text = "Vous semblez chercher quelqu'un, capitaine. Cette plage n'accueille pas souvent d'etrangers de votre genre.";
+				link.l1 = "Je me renseignais, rien de plus.";
+				link.l1.go = "B1_1_muelle_guard_2";
+			}
+		break;
+
+		case "B1_1_muelle_guard_2":
+			QuestComplete_B1_1("PJ_B1_1_MUELLE_SPAIN_FIRST");
+			d.Text = "Alors renseignez-vous ailleurs. Les rencontres ici sont deja assez etranges sans que vous y ajoutiez votre curiosite.";
+			link.l1 = "Message recu.";
+			link.l1.go = "exit";
+		break;
+
+		case "B1_1_muelle_contact":
+			QuestComplete_B1_1("PJ_B1_1_MUELLE_CONTACT_SHIP");
+			Diag.CurrentNode = "B1_1_muelle_contact_ship";
+			Diag.TempNode = "B1_1_muelle_contact_ship";
+			d.Text = "Pas ici. Certainement pas sous les yeux de cet Espagnol. Si vous venez bien de Redmond, nous parlerons comme des hommes prudents.";
+			link.l1 = "Je croyais pourtant que vous etiez entre amis.";
+			link.l1.go = "B1_1_muelle_contact_2";
+		break;
+
+		case "B1_1_muelle_contact_2":
+			d.Text = "Naturellement. Une affaire de relations diplomatiques. Mais certaines relations gagnent a rester tres discretes.";
+			link.l1 = "Je reviendrai donc quand vous jugerez le sable plus sur.";
+			link.l1.go = "exit";
+		break;
+
+		case "B1_1_muelle_contact_ship":
+			QuestComplete_B1_1("PJ_B1_1_MUELLE_PIECE_OBTAINED");
+			d.Text = "Mieux. Voici ce que vous etes venu chercher: les pieds seulement. Le reste a pris d'autres chemins, et je ne suis paye ni pour poser des questions ni pour garder une statue entiere.";
+			link.l1 = "Tout cela pour un vieux morceau de pierre ?";
+			link.l1.go = "B1_1_muelle_contact_ship_2";
+		break;
+
+		case "B1_1_muelle_contact_ship_2":
+			d.Text = "On m'a appris a ne pas discuter ce que mon superieur juge precieux. Portez cela a Conceicao. A Havre radieux, cherchez encore un Anglais, surtout pas le Portugais.";
+			link.l1 = "Je commence a comprendre votre manie.";
+			link.l1.go = "exit";
+		break;
+
+		case "B1_1_conceicao_guard":
+			if (CheckAttribute(pchar, "quest_b1_1_conceicao_state") && pchar.quest_b1_1_conceicao_state == "wait")
+			{
+				d.Text = "Vous regardez encore beaucoup autour de vous, capitaine. Si vous attendiez quelqu'un, il a surement prefere remettre cela a plus tard.";
+				link.l1 = "Vous avez peut-etre raison.";
+				link.l1.go = "exit";
+			}
+			else
+			{
+				d.Text = "Vous regardez beaucoup autour de vous, capitaine. Vous attendez quelqu'un ?";
+				link.l1 = "A vrai dire, je cherchais surtout un peu de calme.";
+				link.l1.go = "B1_1_conceicao_guard_2";
+			}
+		break;
+
+		case "B1_1_conceicao_guard_2":
+			QuestComplete_B1_1("PJ_B1_1_CONCEICAO_PORTUGAL_FIRST");
+			d.Text = "Alors vous avez choisi une bien mauvaise plage. Ici, le calme a tendance a changer de proprietaire quand les etrangers posent trop de questions.";
+			link.l1 = "Je vais vous laisser votre tranquillite.";
+			link.l1.go = "exit";
+		break;
+
+		case "B1_1_conceicao_contact":
+			QuestComplete_B1_1("PJ_B1_1_CONCEICAO_CONTACT_SHIP");
+			Diag.CurrentNode = "B1_1_conceicao_contact_ship";
+			Diag.TempNode = "B1_1_conceicao_contact_ship";
+			d.Text = "Ne me dites pas un mot ici. Le Portugais croit servir un echange de courtoisie entre gens civilises, et je prefererais ne pas troubler cette illusion.";
+			link.l1 = "Et ce n'est pas le cas ?";
+			link.l1.go = "B1_1_conceicao_contact_2";
+		break;
+
+		case "B1_1_conceicao_contact_2":
+			d.Text = "Disons que la courtoisie change parfois de forme selon les besoins de la Couronne. Revenez me voir sans attirer davantage d'oreilles.";
+			link.l1 = "Je saurai etre plus discret.";
+			link.l1.go = "exit";
+		break;
+
+		case "B1_1_conceicao_contact_ship":
+			QuestComplete_B1_1("PJ_B1_1_CONCEICAO_PIECE_OBTAINED");
+			d.Text = "Bien. Prenez ceci. Le corps de la statue. J'en suis volontiers delivre, car cette pierre attire trop d'interets pour une simple antiquite.";
+			link.l1 = "Vous avez tous le meme talent pour parler beaucoup sans rien expliquer.";
+			link.l1.go = "B1_1_conceicao_contact_ship_2";
+		break;
+
+		case "B1_1_conceicao_contact_ship_2":
+			d.Text = "C'est ce qui nous garde en vie. Les bras vous attendent a Douwesen, a la plage aux palmiers. Cette fois, les Hollandais seront moins nerveux que nous.";
+			link.l1 = "Alors cap sur Douwesen.";
+			link.l1.go = "exit";
+		break;
+
+		case "B1_1_douwesen_dutch":
+			d.Text = "Ah. Vous etes celui de Redmond. Oui, je vois tres bien. Ici, nous faisons moins semblant qu'a Isla Muelle ou Conceicao.";
+			link.l1 = "Pour une fois, quelqu'un parle clairement.";
+			link.l1.go = "B1_1_douwesen_dutch_2";
+		break;
+
+		case "B1_1_douwesen_dutch_2":
+			d.Text = "N'allez pas vous emballer. L'Anglais vous attend et tient toujours a ses petites precautions. Inutile de jouer au plus malin, allez donc le voir directement.";
+			link.l1 = "J'y vais.";
+			link.l1.go = "exit";
+		break;
+
+		case "B1_1_douwesen_english":
+			QuestComplete_B1_1("PJ_B1_1_DOUWESEN_ARMS_OBTAINED");
+			d.Text = "Voici les bras. Pour la tete, c'est une autre histoire. Elle n'est plus entre les mains du reseau.";
+			link.l1 = "Ne me dites pas qu'elle a disparu.";
+			link.l1.go = "B1_1_douwesen_english_2";
+		break;
+
+		case "B1_1_douwesen_english_2":
+			d.Text = "Pas disparue. Cachee, ou enterree. Un signe ancien dans la jungle de Douwesen devrait vous mener au bon endroit. A partir d'ici, vous n'aurez plus besoin de nous.";
+			link.l1 = "C'est bien ce qui m'inquiete le plus.";
+			link.l1.go = "exit";
+		break;
+
 		case "B1_1_completed_repeat":
 			d.Text = "Notre affaire inca est close pour l'heure. Si j'ai besoin de vous de nouveau, vous en serez informe.";
 			link.l1 = "Je saurai attendre.";
