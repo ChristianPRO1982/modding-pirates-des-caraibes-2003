@@ -31,3 +31,9 @@ La colonne "Joueur" correspond aux personnages pouvant être nommé officier en se
 | **B1.4b** |  |  |  |  |
 | **B1.4c** |  |  |  |  |
 | **B1.4d** |  |  |  |  |
+
+## Nouveau dialogue de Silehard
+
+A partir de la fin de la quête principale, le dialogue de Silehard est modifié pour simplifier la maintenance de fichier. L'original est lourd et donc remplacé par un nouveau d'autant que c'est un personnage central :
+* PROGRAM\DIALOGS\Robert Christopher Silehard PJ_dialog.c
+* PROGRAM\DIALOGS\French\Robert Christopher Silehard PJ_dialog.h

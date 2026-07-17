@@ -120,7 +120,7 @@ void CreateCharacters()
 
 
 	//PJ pour créer des quête
-	ch.quest.PNJ_Trop_Fort = false;
+	ch.quest.PNJ_Trop_Fort = true;
 
 	//QUESTS PJ
 	//S1 : chasseur de tresor
