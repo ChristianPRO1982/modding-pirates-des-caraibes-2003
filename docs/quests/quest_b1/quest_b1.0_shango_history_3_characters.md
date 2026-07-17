@@ -20,17 +20,20 @@ Ce documents traites seulement des personnages liés aux quêtes. Cela permet de s
 
 La colonne "Joueur" correspond aux personnages pouvant être nommé officier en second du joueur
 
+>* en *italique* les personnages déjà existant
+>* en **gras** les personnages à créer et apparaissant la première dans cette quête
+
 |     Quête | Joueur | Anglo-hollandais | Hispano-portugais | France |
 | --------- | ------ | ---------------- | ----------------- | ------ |
-| **B1.1**  |  |  |  |  |
-| **B1.2a** |  |  |  |  |
-| **B1.2b** |  |  |  |  |
+| **B1.1**  | - | *Silehard* ; 1 x **civil hollandais** | 1 x **civil espagnol** ; 1 x **civil portugais** | - |
+| **B1.2a** | - | gouverneur *Silehard* ; 3 x **gardes hollandais** | gouverneur *portugais* |  |
+| **B1.2b** | - | gouverneur *Silehard* |  |  |
 | **B1.3**  | 2 bretteurs, un cannonier, un charpentier |  |  |  |
-| **B1.3a** |  |  |  |  |
-| **B1.4a** |  |  |  |  |
-| **B1.4b** |  |  |  |  |
-| **B1.4c** |  |  |  |  |
-| **B1.4d** |  |  |  |  |
+| **B1.3a** | - |  |  |  |
+| **B1.4a** | - |  |  |  |
+| **B1.4b** | - |  |  |  |
+| **B1.4c** | - |  |  |  |
+| **B1.4d** | - |  |  |  |
 
 ## Nouveau dialogue de Silehard
 
