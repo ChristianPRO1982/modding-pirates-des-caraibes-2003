@@ -67,18 +67,21 @@ La campagne `B1.3` doit etre pensee comme une boucle:
 
 ## Mission Families
 
+la première moitier, les anglais font des coups bas alors que les espagnols sont plus pour des missions de guerre franche. La deuxième moitier, les anglais muscle le jeu car ils perdent du terrain et les espagnols essais des coups fourbes. Effet miroir.
+Dans le récit : "Les espagnols gagnent les premières batailles pendant que les anglais s'organise et essai de déstabiliser l'adversaire. Silehard n'est pas un maître de guerre et préfère mener sa barque. Puis les espagnols montrent quelques signes de faiblesse et les anglais en profite pour muscler leurs attaques directes. Les espagnols répliquent par des sabotages.
+
 Les dix missions n'ont pas encore toutes leur nom final, mais elles doivent rester dans ces familles:
 
-1. renseignement / espionnage;
-2. sabotage;
-3. escorte;
-4. diplomatie sous contrainte;
-5. action navale limitee;
-6. transport ou liaison sensible;
-7. operation de prisonnier / extraction;
-8. faux drapeau ou manipulation;
-9. mission de pression politique;
-10. operation de cloture de campagne.
+1. pour les anglo-hollandais : sabotage;
+2. pour les hispano-portugais : couler un navire de poudre;
+3. pour les hispano-portugais : couler un navire de nouvelles armes puissantes;
+4. pour les anglo-hollandais : escorte d'un navire à bon port;
+5. pour les hispano-portugais : action navale limitee, destruction d'une flotille légère de transport de troupe;
+6. pour les anglo-hollandais : arraisonner un bateau enemi pour connaitre les plans de bataille;
+7. pour les anglo-hollandais : couler le navire d'un amiral;
+8. pour les anglo-hollandais : détruire une flotille de guerre;
+9. pour les hispano-portugais : sabotage;
+10. pour les hispano-portugais : prendre part à une bataille ouverte où les deux camps sont à forces égales.
 
 ## State Machine
 
