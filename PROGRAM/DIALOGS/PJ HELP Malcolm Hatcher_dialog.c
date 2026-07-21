@@ -1,4 +1,4 @@
-//nclude "DIALOGS\PJ PNJ Trop Fort copy.h"
+//nclude "DIALOGS\PJ HELP Malcolm Hatcher_dialog.h"
 void ProcessDialogEvent()
 {
 	ref NPChar, PChar, d;
