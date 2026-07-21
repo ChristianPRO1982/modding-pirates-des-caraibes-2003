@@ -24,12 +24,12 @@ Ce documents traites seulement des gains des quêtes. Il permet d'avoir une cohér
 |     Quête |  Or  |  XP  | Points de vie | Capacités | Epée | Pistolet |
 | --------- | ---- | ---- | ------------- | --------- | ---- | -------- |
 | **B1.1**  | 3000 po pour les premiers objets ; 8000 po pour la statue | 3000 x nj ; 8000 x nj | - | - | - | - |
-| **B1.2a** | 0 | 1000 x nj | - | - | - | - |
+| **B1.2a** | 0 | 2500 x nj | - | - | - | - |
 | **B1.2b** | 5000 | 5000 x nj | 70 par magie | - | - | - |
-| **B1.3**  | 10000 po x nj répartie en 10 mission et bonus de x1 à x1.94 | 10000 x nj par mission | 90 par magie | - | Top épée selon la fin | Top pistolet selon la fin |
+| **B1.3**  | 10000 po x nj répartie en 10 mission et bonus de x1 à x1.94 | 10000 x nj par mission | 70/90 par magie | - | Top épée selon la fin | Top pistolet selon la fin |
 | **B1.3a** | 5000 po | 50000 | - | Bateau spécial | Epée spéciale | - |
 | **B1.4a** | 0 po | 15000 | - | - | - | - |
-| **B1.4b** | 25000 po | 100000 | 130 par magie en début de quête | - | - | - |
-| **B1.4c** | 100000 po | 200000 | 100 par loyauté en début de quête | - | - | - |
-| **B1.4d** | 11000 po | 300000 | 110 par foi en début de quête | Déguisement en début de quête | - | - |
+| **B1.4b** | 150000 po | 100000 | 100/130 par magie en début de quête | - | - | - |
+| **B1.4c** | 150000 po | 200000 | 100 par loyauté en début de quête | - | - | - |
+| **B1.4d** | 200000 po | 300000 | 110 par foi en début de quête | Déguisement en début de quête | - | - |
 

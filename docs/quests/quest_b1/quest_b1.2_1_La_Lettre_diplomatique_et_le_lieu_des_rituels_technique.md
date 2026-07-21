@@ -20,12 +20,13 @@ Ce document fait autorite pour la logique technique cible de `B1.2`.
 
 ## Documents
 
-`B1.2` est decoupe en quatre documents:
+`B1.2` repose sur quatre documents coeur, completes par une annexe de dialogues pour `B1.2a`:
 
 - `docs/quests/quest_b1/quest_b1.2_1_La_Lettre_diplomatique_et_le_lieu_des_rituels_technique.md`
 - `docs/quests/quest_b1/quest_b1.2_2_La_Lettre_diplomatique_et_le_lieu_des_rituels_pilotage.md`
 - `docs/quests/quest_b1/quest_b1.2_3_La_Lettre_diplomatique_et_le_lieu_des_rituels_questbook.md`
 - `docs/quests/quest_b1/quest_b1.2_4_La_Lettre_diplomatique_et_le_lieu_des_rituels_dialogues.md`
+- `docs/quests/quest_b1/quest_b1.2_4_La_Lettre_diplomatique_et_le_lieu_des_rituels_dialogues_b1_2a.md`
 
 ## Scope
 

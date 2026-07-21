@@ -38,10 +38,18 @@ Chaque sous-quête est découpée, quand elle est documentée complètement, en quatr
 
 ## B1.2 - La Lettre diplomatique et le lieu des rituels
 
+Le bloc `B1.2` est maintenant documente en deux couches pour les dialogues:
+
+- `quest_b1.2_4_..._dialogues.md` pour la vue d'ensemble de `B1.2b`;
+- `quest_b1.2_4_..._dialogues_b1_2a.md` pour l'annexe detaillee de `B1.2a`.
+
+Liste des fichiers:
+
 - `docs/quests/quest_b1/quest_b1.2_1_La_Lettre_diplomatique_et_le_lieu_des_rituels_technique.md`
 - `docs/quests/quest_b1/quest_b1.2_2_La_Lettre_diplomatique_et_le_lieu_des_rituels_pilotage.md`
 - `docs/quests/quest_b1/quest_b1.2_3_La_Lettre_diplomatique_et_le_lieu_des_rituels_questbook.md`
 - `docs/quests/quest_b1/quest_b1.2_4_La_Lettre_diplomatique_et_le_lieu_des_rituels_dialogues.md`
+- `docs/quests/quest_b1/quest_b1.2_4_La_Lettre_diplomatique_et_le_lieu_des_rituels_dialogues_b1_2a.md`
 
 ## B1.3 - La Valse des Félons et Tourne-Casaques
 

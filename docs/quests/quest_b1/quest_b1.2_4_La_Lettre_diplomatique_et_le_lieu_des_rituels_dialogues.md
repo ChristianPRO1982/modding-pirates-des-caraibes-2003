@@ -1,39 +1,24 @@
-# B1.2 - La Lettre diplomatique et le lieu des rituels - Dialogues
+# B1.2b - La Lettre derobee - Dialogues
 
 ## Role du fichier
 
-Ce document rassemble les scenes dialoguables majeures de `B1.2a` et `B1.2b`.
+Ce document rassemble les scenes dialoguables majeures de `B1.2b`.
 
-Il sert de reserve de ton, d'intention et de structure, pas encore de script final exhaustif.
+Il sert de reserve de ton, d'intention et de structure pour la seconde moitie de `B1.2`, pas encore de script final exhaustif.
 
-## 1. Gouverneur portugais
+Le detail scene par scene de `B1.2a` est deplace dans l'annexe:
 
-Fonctions:
+- `docs/quests/quest_b1/quest_b1.2_4_La_Lettre_diplomatique_et_le_lieu_des_rituels_dialogues_b1_2a.md`
 
-- remettre la lettre et le cadeau;
-- donner un ton diplomatique serieux;
-- faire sentir que le rapprochement Portugal-Angleterre reste fragile mais possible.
+Ce fichier ne doit donc plus dupliquer:
 
-Sous-texte:
+- l'introduction politique chez Silehard;
+- la remise de la lettre de cachet et du cadeau diplomatique;
+- la scene de vol des faux soldats anglais;
+- le rapport prioritaire au gouverneur portugais;
+- la premiere grande colere de Silehard en cloture de `B1.2a`.
 
-- l'affaire est politique, pas mystique;
-- le joueur n'a pas encore conscience d'entrer dans une manoeuvre plus large.
-
-## 2. Faux soldats anglais
-
-Fonctions:
-
-- prendre les objets sans combat;
-- sembler au premier regard legitimes;
-- laisser des indices de langue et de comportement.
-
-Elements a garder:
-
-- assurance excessive;
-- vocabulaire anglais imparfait;
-- tournures qui choquent ensuite les temoins de Douwesen.
-
-## 3. Espion francais
+## 1. Espion francais
 
 Fonctions:
 
@@ -48,37 +33,13 @@ Ton:
 - plus informe qu'il ne veut l'admettre;
 - jamais bavard gratuitement.
 
-## 4. Temoins de Douwesen
+Point de passage recommande:
 
-Fonctions:
+- il reprend le fil apres le vol deja subi;
+- il confirme seulement qu'une main etrangere observe l'affaire;
+- il guide vers la suite sans tout expliquer.
 
-- confirmer l'origine hollandaise des faux soldats;
-- faire de l'enquete une vraie phase de jeu;
-- varier les registres de temoignage.
-
-Suggestions de profils:
-
-- un tavernier qui reconnait un juron;
-- un marchand qui reconnait une formule de negoce;
-- un soldat ou habitant qui reconnait une facon de donner un ordre.
-
-## 5. Rapport au gouverneur
-
-Le choix doit paraitre important, mais ne doit pas ouvrir deux quetes differentes.
-
-### Rapport portugais
-
-- reconnaissance du service rendu;
-- inquietude diplomatique;
-- memoire de fidelite hispano-portugaise.
-
-### Rapport anglais
-
-- deni de Silehard;
-- ambiguite intacte;
-- memoire de fidelite anglo-hollandaise.
-
-## 6. Cabane et note
+## 2. Cabane et note
 
 Fonctions:
 
@@ -86,7 +47,13 @@ Fonctions:
 - introduire le vocabulaire du lieu des rituels;
 - eviter toute revelation trop nette.
 
-## 7. Soldats anglais de la Gorge du Diable
+Contraintes:
+
+- la note ne doit pas resoudre l'affaire;
+- elle doit seulement orienter vers une infrastructure ou un point de transfert;
+- le lieu des rituels doit paraitre plus logistique que mystique a ce stade.
+
+## 3. Soldats anglais de la Gorge du Diable
 
 Fonctions:
 
@@ -94,7 +61,13 @@ Fonctions:
 - guider le joueur sans exposition longue;
 - faire comprendre que les Anglais savent plus qu'ils n'avouent.
 
-## 8. Hollandais dissidents
+Sous-texte:
+
+- ils executent des ordres compartimentes;
+- ils connaissent une route et une destination, pas toute l'affaire;
+- ils servent de relais propre entre la phase d'enquete et la phase navale.
+
+## 4. Hollandais dissidents
 
 Fonctions:
 
@@ -115,7 +88,7 @@ Ce qu'ils ne doivent pas dire trop clairement:
 - la preuve definitive contre Silehard;
 - la destination finale des objets.
 
-## 9. Colere finale de Silehard
+## 5. Colere finale de Silehard
 
 Fonctions:
 
@@ -129,3 +102,9 @@ Sous-texte possible:
 - il est furieux de la mort des dissidents;
 - il est furieux de la perte de controle;
 - le joueur ne peut pas savoir lequel domine.
+
+Effet recherche:
+
+- clore `B1.2b` sur une victoire militaire sterile;
+- montrer que l'affaire diplomatique est perdue;
+- preparer le delai avant la guerre ouverte de `B1.3`.
