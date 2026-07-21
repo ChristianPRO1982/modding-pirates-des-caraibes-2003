@@ -40,10 +40,10 @@ La colonne "Joueur" correspond aux personnages pouvant être nommé officier en se
 | **B1.3a** - étape 9 : pour les hispano-portugais : sabotage | 1x **bretteur** |  |  | - |
 | **B1.3a** -étape 10 : pour les hispano-portugais : prendre part à une bataille ouverte où les deux camps sont à forces égales. | - | 4x **capitaines + bateaux portugais imprenables** ; 2x **capitaines + bateaux espagnols imprenables** | 4x **capitaines + bateaux portugais imprenables** ; 2x **capitaines + bateaux espagnols imprenables** | - |
 | **B1.3a** | **neuveu du gouverneur** | **prisonnier à Greenford** ; 4x **gardes retenant la fille dans un bateau** | - | *gouverneur de Falaise de Fleurs* ; **fille du gouverneur** |
-| **B1.4a** | - |  |  |  |
-| **B1.4b** | - |  |  |  |
-| **B1.4c** | - |  |  |  |
-| **B1.4d** | - |  |  |  |
+| **B1.4a** | - | *Silehard* ; *gouverneur de Dowesen* ; 1x **capitaine hollandais** | *gouverneur de Isla Muelle* ; *gouverneur de Concecia* ; 1x **capitaine portugais** | *gouvereur de Falaise de Fleurs* |
+| **B1.4b** | - | *Silehard* ; 8x **prêtres de Shango fanatisés** ; 4x **capitaine et son bateau de guerre** | *gouverneur d'Isla Muelle* ; 4x **prêtes convertis Inty** ; 4x **partisans Inty** ; 4x **capitaine et son bateau de guerre** | - |
+| **B1.4c** | - | *Silehard*, 1x **sosie de Silehard** ; 8x **prêtres de Shango fanatisés** ; 4x **capitaine et son bateau de guerre** | *gouverneur d'Isla Muelle* ; 4x **prêtes convertis Inty** ; 4x **partisans Inty** ; 4x **capitaine et son bateau de guerre** | - |
+| **B1.4d** | *Danielle Greene* ; *Malcolm* | *Silehard*, 1x *sosie de Silehard* ; *gouverneur de Dowesen* ; 8x **prêtres de Shango fanatisés** ; 4x **capitaine et son bateau de guerre** | *gouverneur d'Isla Muelle* ; *gouverneur de Conceicao* ; 4x **prêtes convertis Inty** ; 4x **partisans Inty** ; 4x **capitaine et son bateau de guerre** | *gouvereur de Falaise de Fleurs* ; **autorité ecclésiastique française** |
 
 ## Nouveau dialogue de Silehard
 
