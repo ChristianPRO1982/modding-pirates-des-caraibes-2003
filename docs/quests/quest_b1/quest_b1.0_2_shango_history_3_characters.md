@@ -29,32 +29,21 @@ La colonne "Joueur" correspond aux personnages pouvant être nommé officier en se
 | **B1.2a** | - | *Silehard* ; 3x **gardes hollandais** | *gouverneur portugais* | **Espion Français** |
 | **B1.2b** | - | *Silehard* ; *barmen* ; 3x *gardes hollandais* | *gouverneur portugais* ; *barmen* | *Espion Français* |
 | **B1.3** - personnages communs | 1x **pirate sur le port** | *Silehard* / *gouverneur de Dowesen* | *gouverneur de Isla Muelle* / *gouverneur de Concecia* | *gouvereur de Falaise de Fleurs* |
-| **B1.3a** - étape 1 | 1x **bretteur** | - | 4x **gardes espagnoles** | - |
-| **B1.3a** - étape 2 | - | 1x **capitaine + bateau hollandais imprenable** | - | - |
-| **B1.3a** - étape 3 | 1x **cannonier** | 1x **capitaine + bateau anglais imprenable** | - | - |
-| **B1.3a** - étape 4 | 1x **capitaine + bateau hollandais imprenable** | - | - | - |
-| **B1.3a** - étape 5 | 1x **charpentier** ; 1x **navigateur** |  |  | - |
-| **B1.3a** - étape 6 | - | - | 1x **capitaine + bateau espagnol** | - |
-| **B1.3a** - étape 7 | - | - | 1x **capitaines + bateaux portugais imprenables** | - |
-| **B1.3a** - étape 8 | - | - | 2x **capitaines + bateaux portugais imprenables** ; 2x **capitaines + bateaux espagnols imprenables** | - |
-| **B1.3a** - étape 9 | 1x **bretteur** |  |  | - |
-| **B1.3a** -étape 10 | - | 4x **capitaines + bateaux portugais imprenables** ; 2x **capitaines + bateaux espagnols imprenables** | 4x **capitaines + bateaux portugais imprenables** ; 2x **capitaines + bateaux espagnols imprenables** | - |
+| **B1.3a** - étape 1 : pour les anglo-hollandais : sabotage | 1x **bretteur** | - | 4x **gardes espagnoles** | - |
+| **B1.3a** - étape 2 : pour les hispano-portugais : couler un navire de poudre | - | 1x **capitaine + bateau hollandais imprenable** | - | - |
+| **B1.3a** - étape 3: pour les hispano-portugais : couler un navire de nouvelles armes puissantes | 1x **cannonier** | 1x **capitaine + bateau anglais imprenable** | - | - |
+| **B1.3a** - étape 4 : pour les anglo-hollandais : escorte d'un navire à bon port | 1x **capitaine + bateau hollandais imprenable** | - | - | - |
+| **B1.3a** - étape 5 : pour les hispano-portugais : action navale limitee, destruction d'une flotille légère de transport de troupe | 1x **charpentier** ; 1x **navigateur** |  |  | - |
+| **B1.3a** - étape 6 : pour les anglo-hollandais : arraisonner un bateau enemi pour connaitre les plans de bataille | - | - | 1x **capitaine + bateau espagnol** | - |
+| **B1.3a** - étape 7 : pour les anglo-hollandais : couler le navire d'un amiral | - | - | 1x **capitaines + bateaux portugais imprenables** | - |
+| **B1.3a** - étape 8 : pour les anglo-hollandais : détruire une flotille de guerre | - | - | 2x **capitaines + bateaux portugais imprenables** ; 2x **capitaines + bateaux espagnols imprenables** | - |
+| **B1.3a** - étape 9 : pour les hispano-portugais : sabotage | 1x **bretteur** |  |  | - |
+| **B1.3a** -étape 10 : pour les hispano-portugais : prendre part à une bataille ouverte où les deux camps sont à forces égales. | - | 4x **capitaines + bateaux portugais imprenables** ; 2x **capitaines + bateaux espagnols imprenables** | 4x **capitaines + bateaux portugais imprenables** ; 2x **capitaines + bateaux espagnols imprenables** | - |
 | **B1.3a** | **neuveu du gouverneur** | **prisonnier à Greenford** ; 4x **gardes retenant la fille dans un bateau** | - | *gouverneur de Falaise de Fleurs* ; **fille du gouverneur** |
 | **B1.4a** | - |  |  |  |
 | **B1.4b** | - |  |  |  |
 | **B1.4c** | - |  |  |  |
 | **B1.4d** | - |  |  |  |
-
-1. pour les anglo-hollandais : sabotage;
-2. pour les hispano-portugais : couler un navire de poudre;
-3. pour les hispano-portugais : couler un navire de nouvelles armes puissantes;
-4. pour les anglo-hollandais : escorte d'un navire à bon port;
-5. pour les hispano-portugais : action navale limitee, destruction d'une flotille légère de transport de troupe;
-6. pour les anglo-hollandais : arraisonner un bateau enemi pour connaitre les plans de bataille;
-7. pour les anglo-hollandais : couler le navire d'un amiral;
-8. pour les anglo-hollandais : détruire une flotille de guerre;
-9. pour les hispano-portugais : sabotage;
-10. pour les hispano-portugais : prendre part à une bataille ouverte où les deux camps sont à forces égales.
 
 ## Nouveau dialogue de Silehard
 
