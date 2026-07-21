@@ -6,6 +6,18 @@ Une couche commune existe permettant de gérer les aspects transverses des quêtes
 
 ## Variables commune
 
+Ces variables doivent être porter par pchar avec le nom technique de la quête "b1", exemple : pchar.quest.b1_subquest
+
+### sous-quête
+
+Il faut une variable pour expliquer à quel sous-quête, le joueur est en cours d'action. Exemple : "B1.2b".
+
+Il n'y a qu'une seule sous-quête en même temps.
+
+### étape
+
+Il faut une variable expliquant où l'on se n'est dans la sous-quête. Ceci permet de gérer les dialogues futurs.
+
 ## Personnages communs
 
 Il y a plein de personnage commun mais les quêtes les gèrent très bien individuellement. Ici nous traiterons uniquement des personnages en lien avec B1 mais n'intervenant pas dans aucune des sous-quêtes.
