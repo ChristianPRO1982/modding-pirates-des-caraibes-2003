@@ -1,4 +1,4 @@
-string DLG_TEXT[17] = {
+string DLG_TEXT[28] = {
 "Ah, capitaine ! Te voilà enfin. J'allais croire que la mer t'avait gardé pour elle toute seule. Viens donc boire un coup, qu'on parle de nos vieilles affaires.",
 "Hé, l'ami ! Par tous les tonneaux de rhum des Caraïbes, ça fait plaisir de revoir ta trogne. Assieds-toi, j'ai deux ou trois souvenirs qui grattent encore la gorge.",
 "Tiens donc, voilà mon vieux compagnon de traversée ! Approche, capitaine. Les hommes polis serrent les mains, nous autres on vide les verres et on raconte les tempêtes.",
@@ -16,4 +16,16 @@ string DLG_TEXT[17] = {
 "Ce sont généralement de beaux jeunes hommes, ils restent plantés là des heures.",
 "En sortie de ville le soir.",
 "Merci, mon bon Malcolm. Fidèle au poste, comme toujours.",
+"J'ai une affaire pour Silehard. Tu as un conseil ?",
+"Commence par reunir les seize objets indiens courants. Un seul exemplaire de chaque, puis retourne a Redmond quand la serie sera complete.",
+"Tu as deja tout ce qu'il voulait. Ne traine pas : retourne voir Silehard a Redmond avant que cette affaire refroidisse.",
+"A Isla Muelle, file a la Cote eloignee et parle a l'Anglais. Pas a l'Espagnol. Si tu te trompes, tu perdras du temps pour rien.",
+"A Conceicao, meme methode : cherche l'Anglais a Havre radieux et garde-toi du Portugais. Silehard ne paie pas pour les erreurs evitables.",
+"Pour Douwesen, va a la plage aux palmiers. Les Hollandais sont du decor, mais ton homme reste l'Anglais du reseau.",
+"Le morceau suivant n'est plus sur un homme, mais dans la jungle de Douwesen. Cherche un signe ancien, puis suis ce qu'il t'indique.",
+"Tu as l'indice. Il ne reste qu'a fouiller l'endroit marque dans la jungle de Douwesen pour recuperer la tete.",
+"Si la statue est complete, inutile de trainer dans les buissons : retourne voir Silehard avec la piece entiere.",
+"Je n'ai rien de plus pour cette affaire. Garde les yeux ouverts et la langue courte.",
+"Je vois. Ca suffit pour l'instant.",
+
 };

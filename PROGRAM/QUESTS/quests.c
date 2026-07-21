@@ -9,6 +9,7 @@
 #include "quests\quests_reaction_s1.c"
 #include "quests\quests_reaction_s2.c"
 #include "quests\quests_reaction_s3.c"
+#include "quests\quests_reaction_b1.c"
 #include "quests\quests_reaction_b1.1.c"
 
 #event_handler("LocationWaitNihgtEnd","WaitDatePostEventControl");

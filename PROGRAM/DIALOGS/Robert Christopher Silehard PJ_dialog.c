@@ -75,6 +75,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "quest lines":
+			B11_SyncTransverseState();
 			d.Text = DLG_TEXT[7];
 			Link.l99 = DLG_TEXT[9];
 			Link.l99.go = "exit";
@@ -85,10 +86,22 @@ void ProcessDialogEvent()
 				break;
 			}
 
-			if (!CheckAttribute(pchar, "quest_b1_1_status") || pchar.quest_b1_1_status == "" || pchar.quest_b1_1_status == "not_started")
+			if (B1_IsAnotherSubquestActive(B11_TRANS_SUBQUEST))
+			{
+				break;
+			}
+
+			if (B11_CanStartQuest())
 			{
 				Link.l1 = DLG_TEXT[10];
 				Link.l1.go = "B1_1_start_1";
+				break;
+			}
+
+			if (B11_IsCompleted() || B11_IsTransverseCompleted())
+			{
+				Link.l1 = DLG_TEXT[15];
+				Link.l1.go = "B1_1_completed_repeat";
 				break;
 			}
 
@@ -111,11 +124,6 @@ void ProcessDialogEvent()
 			{
 				Link.l1 = DLG_TEXT[14];
 				Link.l1.go = "B1_1_final_turnin_1";
-			}
-			if (pchar.quest_b1_1_status == "completed" || pchar.quest_b1_1_status == "closed")
-			{
-				Link.l1 = DLG_TEXT[15];
-				Link.l1.go = "B1_1_completed_repeat";
 			}
 		break;
 
@@ -167,23 +175,24 @@ void ProcessDialogEvent()
 		break;
 
 		case "B1_1_stage2_reminder":
+			B11_SyncTransverseState();
 			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "muelle_pending")
 			{
 				d.Text = DLG_TEXT[31];
 			}
-			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "conceicao_pending")
+			else if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "conceicao_pending")
 			{
 				d.Text = DLG_TEXT[32];
 			}
-			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "douwesen_pending")
+			else if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "douwesen_pending")
 			{
 				d.Text = DLG_TEXT[33];
 			}
-			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "jungle_clue_pending")
+			else if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "jungle_clue_pending")
 			{
 				d.Text = DLG_TEXT[34];
 			}
-			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "dig_ready")
+			else if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "dig_ready")
 			{
 				d.Text = DLG_TEXT[35];
 			}

@@ -39,10 +39,61 @@ void ProcessDialogEvent()
 				case 1: d.Text = DLG_TEXT[1]; break;
 				case 2: d.Text = DLG_TEXT[2]; break;
 			}
+			B11_SyncTransverseState();
 			Link.l1 = DLG_TEXT[3];
 			Link.l1.go = "rumor_step_1";
+			if (B11_IsTransverseActive())
+			{
+				Link.l3 = DLG_TEXT[17];
+				Link.l3.go = "B1_1_help";
+			}
 			Link.l2 = DLG_TEXT[4];
 			Link.l2.go = "exit";
+		break;
+
+		case "B1_1_help":
+			dialog.snd = "voice\QCSI\QCSI001";
+			B11_SyncTransverseState();
+			switch (B1_GetStep())
+			{
+				case "intro_collect":
+					d.Text = DLG_TEXT[18];
+				break;
+
+				case "intro_ready_report":
+					d.Text = DLG_TEXT[19];
+				break;
+
+				case "muelle_pending":
+					d.Text = DLG_TEXT[20];
+				break;
+
+				case "conceicao_pending":
+					d.Text = DLG_TEXT[21];
+				break;
+
+				case "douwesen_pending":
+					d.Text = DLG_TEXT[22];
+				break;
+
+				case "jungle_clue_pending":
+					d.Text = DLG_TEXT[23];
+				break;
+
+				case "dig_ready":
+					d.Text = DLG_TEXT[24];
+				break;
+
+				case "final_ready":
+					d.Text = DLG_TEXT[25];
+				break;
+
+				default:
+					d.Text = DLG_TEXT[26];
+				break;
+			}
+			Link.l1 = DLG_TEXT[27];
+			Link.l1.go = "exit";
 		break;
 
 		case "rumor_step_1":

@@ -206,6 +206,8 @@ Noms indicatifs a stabiliser pendant l'implementation:
 | Flag | Role |
 |---|---|
 | `pchar.quest_b1_status` | Etat global de l'arc `B1` |
+| `pchar.quest.b1_subquest` | Sous-quete `B1` actuellement active, ou derniere sous-quete `B1` terminee |
+| `pchar.quest.b1_step` | Etape transverse de la sous-quete `B1`, en reprenant les statuts techniques (`intro_collect`, `muelle_pending`, etc.) puis `completed` en fin de quete |
 | `pchar.quest_b1_1_status` | Etat global de la sous-quete `B1.1` |
 | `pchar.quest_b1_1_intro_reward_paid` | Premiere recompense deja versee |
 | `pchar.quest_b1_1_final_reward_paid` | Recompense finale deja versee |

@@ -1,6 +1,7 @@
 // B1.1 - Les Fils de l'Ombre d'Inty
 
 #define B11_HEADER "PJ_B1_1"
+#define B11_TRANS_SUBQUEST "B1.1"
 
 #define B11_STATUS_NOT_STARTED "not_started"
 #define B11_STATUS_INTRO_COLLECT "intro_collect"
@@ -70,17 +71,52 @@
 string B11_GetStatus()
 {
 	ref pchar = GetMainCharacter();
-	if (!CheckAttribute(pchar, "quest_b1_1_status"))
+	if (!CheckAttribute(pchar, "quest_b1_1_status") || pchar.quest_b1_1_status == "")
 	{
 		return B11_STATUS_NOT_STARTED;
 	}
 	return pchar.quest_b1_1_status;
 }
 
+string B11_GetPublishedStep(string status)
+{
+	if (status == B11_STATUS_NOT_STARTED || status == "")
+	{
+		return B1_STEP_NONE;
+	}
+	if (status == B11_STATUS_COMPLETED || status == B11_STATUS_CLOSED)
+	{
+		return B1_STEP_COMPLETED;
+	}
+	return status;
+}
+
+bool B11_CanPublishToTransverseState()
+{
+	return !B1_IsAnotherSubquestActive(B11_TRANS_SUBQUEST);
+}
+
+void B11_PublishTransverseState(string status)
+{
+	string step = B11_GetPublishedStep(status);
+
+	if (step == B1_STEP_NONE)
+	{
+		return;
+	}
+	if (!B11_CanPublishToTransverseState())
+	{
+		return;
+	}
+
+	B1_SetState(B11_TRANS_SUBQUEST, step);
+}
+
 void B11_SetStatus(string status)
 {
 	ref pchar = GetMainCharacter();
 	pchar.quest_b1_1_status = status;
+	B11_PublishTransverseState(status);
 }
 
 string B11_GetMuelleState()
@@ -141,6 +177,38 @@ bool B11_IsCompleted()
 {
 	string status = B11_GetStatus();
 	return status == B11_STATUS_COMPLETED || status == B11_STATUS_CLOSED;
+}
+
+bool B11_IsTransverseActive()
+{
+	return B1_IsSubquestActive(B11_TRANS_SUBQUEST);
+}
+
+bool B11_IsTransverseCompleted()
+{
+	return B1_IsSubquestCompleted(B11_TRANS_SUBQUEST);
+}
+
+void B11_SyncTransverseState()
+{
+	B11_PublishTransverseState(B11_GetStatus());
+}
+
+bool B11_CanStartQuest()
+{
+	if (B11_IsStarted() || B11_IsCompleted())
+	{
+		return false;
+	}
+	if (B1_IsAnotherSubquestActive(B11_TRANS_SUBQUEST))
+	{
+		return false;
+	}
+	if (B11_IsTransverseCompleted())
+	{
+		return false;
+	}
+	return true;
 }
 
 int B11_GetNpcIndex(string npcId)
@@ -487,6 +555,11 @@ void B11_StartQuest()
 {
 	ref pchar = GetMainCharacter();
 
+	if (!B11_CanStartQuest())
+	{
+		return;
+	}
+
 	B11_DisarmAllQuestConditions();
 	B11_DespawnAllSceneNpcs();
 	B11_ResetRuntime();
@@ -617,12 +690,18 @@ void B1_1_UpdateQuestTracker()
 	ref pchar = GetMainCharacter();
 	string status = B11_GetStatus();
 
+	B11_SyncTransverseState();
+
 	if (B11_IsCompleted())
 	{
 		return;
 	}
 
 	if (!B11_IsStarted())
+	{
+		return;
+	}
+	if (!B11_IsTransverseActive())
 	{
 		return;
 	}
@@ -634,6 +713,14 @@ void B1_1_UpdateQuestTracker()
 void B1_1_EnforceState()
 {
 	string status = B11_GetStatus();
+
+	B11_SyncTransverseState();
+
+	if (B1_IsAnotherSubquestActive(B11_TRANS_SUBQUEST))
+	{
+		B11_DespawnAllSceneNpcs();
+		return;
+	}
 
 	if (status == B11_STATUS_NOT_STARTED || status == B11_STATUS_COMPLETED || status == B11_STATUS_CLOSED)
 	{
@@ -656,6 +743,14 @@ void B1_1_ProcessLocationEnter()
 {
 	ref pchar = GetMainCharacter();
 	string status = B11_GetStatus();
+
+	B11_SyncTransverseState();
+
+	if (B1_IsAnotherSubquestActive(B11_TRANS_SUBQUEST))
+	{
+		B11_DespawnAllSceneNpcs();
+		return;
+	}
 
 	if (!B11_IsStarted() || B11_IsCompleted())
 	{
@@ -699,6 +794,14 @@ void B1_1_ProcessLocationEnter()
 bool QuestComplete_B1_1(string sQuestName)
 {
 	ref pchar = GetMainCharacter();
+
+	B11_SyncTransverseState();
+
+	if (sQuestName != B11_EVENT_CLEANUP && B1_IsAnotherSubquestActive(B11_TRANS_SUBQUEST))
+	{
+		B11_DespawnAllSceneNpcs();
+		return true;
+	}
 
 	switch (sQuestName)
 	{
