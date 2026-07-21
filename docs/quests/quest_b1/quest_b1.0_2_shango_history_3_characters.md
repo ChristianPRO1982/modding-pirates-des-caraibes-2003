@@ -27,7 +27,7 @@ La colonne "Joueur" correspond aux personnages pouvant être nommé officier en se
 | --------- | -------------- | ---------------- | ----------------- | ------ |
 | **B1.1**  | - | *Silehard* ; 1x **civil hollandais** | 1x **civil espagnol** ; 1x **civil portugais** | - |
 | **B1.2a** | - | *Silehard* ; 3x **gardes hollandais** | *gouverneur portugais* | **Espion Français** |
-| **B1.2b** | - | *Silehard* ; *barmen* ; 3x *gardes hollandais* | *gouverneur portugais* ; *barmen* | *Espion Français* |
+| **B1.2b** | - | *Silehard* ; *barmen* ; 5x *gardes hollandais* ; 2x **capitaine et leur bateau imprenable** | *gouverneur portugais* ; *barmen* | *Espion Français* |
 | **B1.3** - personnages communs | 1x **pirate sur le port** | *Silehard* / *gouverneur de Dowesen* | *gouverneur de Isla Muelle* / *gouverneur de Concecia* | *gouvereur de Falaise de Fleurs* |
 | **B1.3a** - étape 1 : pour les anglo-hollandais : sabotage | 1x **bretteur** | - | 4x **gardes espagnoles** | - |
 | **B1.3a** - étape 2 : pour les hispano-portugais : couler un navire de poudre | - | 1x **capitaine + bateau hollandais imprenable** | - | - |

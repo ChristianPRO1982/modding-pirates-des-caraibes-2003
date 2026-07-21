@@ -13,31 +13,31 @@ Regle principale:
 
 - `B1.2` suit directement `B1.1`.
 - `B1.2a` est une enquete politique.
-- `B1.2b` ajoute un assaut naval puis terrestre.
-- le choix du gouverneur rapporte seulement une fidelite differree;
-- la guerre demarre quatorze jours apres `B1.2b`;
-- `Redmond_Shore_01` est un bon ancrage pour `Gorge du Diable`.
-
-## Decisions encore ouvertes
-
-- ancrage exact de la scene nocturne de Redmond;
-- lieu exact des cabanes de `B1.2a`;
-- choix des temoins a Douwesen;
-- emplacement technique du lieu des rituels a Isla Muelle;
-- si la note des voleurs existe comme vrai item ou simple information de quete.
+- `B1.2b` ajoute une enquete urbaine, puis un assaut naval, puis une confrontation terrestre.
+- `B1.2a` se ferme et `B1.2b` s'ouvre sur le meme trigger chez Silehard.
+- `Malcolm` peut donner une aide de triche pendant `B1.2b`.
+- l'enquete `B1.2b` passe par `Douwesen`, puis `Falaise de Fleur`, puis un retour a Silehard.
+- `Silehard`, et non des soldats anglais, donne la localisation finale du rite.
+- le debarquement narratif est `Cote eloignee`.
+- le lieu des rituels est une grotte.
+- la flotte defensive est composee de `1 fregate` et `1 corvette`.
+- le choix du gouverneur rapporte seulement une fidelite differree.
+- la guerre demarre quatorze jours apres `B1.2b`.
 
 ## Ordre recommande
 
 ### Etape 1 - Journal `B1.2`
 
-Ajouter les textes `PJ_B1_2A` et `PJ_B1_2B`.
+Ajouter ou mettre a jour les textes `PJ_B1_2A` et `PJ_B1_2B`.
 
 ### Etape 2 - Entrees dialogue
 
 Brancher:
 
 - gouverneur portugais;
-- Silehard `B1.2b`;
+- Silehard `B1.2a` et `B1.2b`;
+- Malcolm `B1.2b`;
+- gouverneur francais;
 - espion francais.
 
 ### Etape 3 - Flags globaux
@@ -51,62 +51,56 @@ Implementer:
 - condition de nuit;
 - faux soldats;
 - retrait des objets;
-- apparition de l'espion.
+- memorisation du choix de rapport.
 
-### Etape 5 - Enquete a Douwesen
+### Etape 5 - Cloture `B1.2a` et ouverture `B1.2b`
+
+Fermer `B1.2a` au dernier dialogue de colere chez Silehard et ouvrir `B1.2b` sur le meme trigger.
+
+### Etape 6 - Malcolm et enquete a Douwesen
 
 Implementer:
 
+- aide de Malcolm;
 - trois temoignages minimum;
-- confirmation hollandaise;
-- ouverture du choix de rapport.
+- usage des expressions hollandaises;
+- renvoi vers le Francais.
 
-### Etape 6 - Rapport et bonus differe
-
-Memoriser:
-
-- `portugal` ou `england`;
-- sans brancher encore l'effet final de `B1.3`.
-
-### Etape 7 - Cabane et note
+### Etape 7 - Gouverneur francais et espion
 
 Faire:
 
-- recherche;
-- fouille;
-- sortie;
-- rendez-vous a Falaise de Fleur.
+- presentation au gouverneur;
+- renvoi vers l'espion dans la meme piece;
+- briefing du Francais;
+- retour chez Silehard.
 
-### Etape 8 - Fin `B1.2a`
-
-Fermer proprement `B1.2a` et ouvrir `B1.2b`.
-
-### Etape 9 - Relance par Silehard
+### Etape 8 - Localisation finale par Silehard
 
 Implementer:
 
-- ordre de poursuite;
-- envoi a `Gorge du Diable`;
-- soldats anglais.
+- localisation `Cote eloignee`;
+- annonce du rite en grotte;
+- preparation du deplacement a `Isla Muelle`.
 
-### Etape 10 - Phase navale
+### Etape 9 - Phase navale
 
 Faire apparaitre:
 
-- flotte ennemie;
+- `1 fregate` et `1 corvette`;
 - condition de destruction totale;
 - debarquement ensuite seulement.
 
-### Etape 11 - Phase terrestre
+### Etape 10 - Phase terrestre
 
 Implementer:
 
-- progression;
-- site rituel;
-- dialogue des dissidents;
+- progression vers la grotte;
+- interruption du rite;
+- dialogue du `chef des pretres`;
 - combat obligatoire.
 
-### Etape 12 - Echec de recuperation
+### Etape 11 - Echec de recuperation
 
 Verrouiller:
 
@@ -114,7 +108,7 @@ Verrouiller:
 - aucun objet retrouve;
 - aucun indice supplementaire.
 
-### Etape 13 - Retour final et timer de guerre
+### Etape 12 - Retour final et timer de guerre
 
 Fermer `B1.2b`, lancer le timer de quatorze jours et preparer `B1.3`.
 
@@ -123,13 +117,14 @@ Fermer `B1.2b`, lancer le timer de quatorze jours et preparer `B1.3`.
 ```c
 Log_SetStringToLog("PJ B1.2a: mission accepted");
 Log_SetStringToLog("PJ B1.2a: fake soldiers stole items");
-Log_SetStringToLog("PJ B1.2a: douwesen inquiry complete");
 Log_SetStringToLog("PJ B1.2a: report target memorized");
-Log_SetStringToLog("PJ B1.2a: ritual note found");
 Log_SetStringToLog("PJ B1.2b: mission accepted");
-Log_SetStringToLog("PJ B1.2b: devil throat soldiers reached");
+Log_SetStringToLog("PJ B1.2b: malcolm hint given");
+Log_SetStringToLog("PJ B1.2b: douwesen inquiry complete");
+Log_SetStringToLog("PJ B1.2b: french spy briefed");
+Log_SetStringToLog("PJ B1.2b: isla muelle location confirmed");
 Log_SetStringToLog("PJ B1.2b: fleet destroyed");
-Log_SetStringToLog("PJ B1.2b: dissidents dead");
+Log_SetStringToLog("PJ B1.2b: priests dead");
 Log_SetStringToLog("PJ B1.2b: war timer started");
 ```
 
@@ -137,7 +132,8 @@ Log_SetStringToLog("PJ B1.2b: war timer started");
 
 `B1.2` est stable quand les cas suivants sont verifies:
 
-1. rapport portugais puis fin normale;
-2. rapport anglais puis fin normale;
-3. flotte detruite puis site vide d'indices;
-4. timer de quatorze jours qui ouvre bien `B1.3`.
+1. rapport portugais puis transition normale vers `B1.2b`;
+2. rapport anglais puis transition normale vers `B1.2b`;
+3. Malcolm puis `Douwesen` puis espion francais puis retour Silehard;
+4. flotte detruite puis grotte vide d'indices;
+5. timer de quatorze jours qui ouvre bien `B1.3`.

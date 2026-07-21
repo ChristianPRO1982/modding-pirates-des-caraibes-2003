@@ -27,3 +27,16 @@ Il y a plein de personnage commun mais les quêtes les gèrent très bien individue
 Ce bras droit du joueur n'intervient jamais. On le croise à terre dans les ports et permet de données au joueur des informations sur les quêtes customs. Particulièrement, si une des sous-quêtes B1 est en cours, alors il va donner des informations sur ce que le joueur doit faire.
 
 > Les informations de B1 sont de plus en plus précises et divulgache ce que le joueur doit faire
+
+Pendant `B1.2b`, Malcolm sert explicitement de PNJ de "triche".
+
+Regle retenue:
+
+- si `B1.2b` est ouverte et que la piste du Francais n'a pas encore ete identifiee, Malcolm donne une instruction courte, directe et spoilante;
+- son aide reste active entre l'ouverture de `B1.2b` et la validation de l'enquete a `Douwesen`.
+
+Replique de reference:
+
+```text
+Capt'aine, des expressions comme celles entendus, ca se trouve dans les rues des villes. Va parler aux habitants de chaque ville de ces maudites iles et reprenons la mer au plus vite.
+```

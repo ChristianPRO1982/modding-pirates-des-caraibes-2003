@@ -34,37 +34,19 @@ Le gouverneur portugais m'a confie une lettre de cachet et un cadeau diplomatiqu
 Des soldats portant l'uniforme anglais ont exige la lettre et le cadeau en affirmant agir sur ordre. Leur accent et certaines de leurs expressions m'ont paru etranges.
 
 #TEXT    3
-Les soldats sont partis avec la lettre et le cadeau. Je dois comprendre qui ils etaient reellement.
+Les soldats sont partis avec la lettre et le cadeau. Je dois decider a qui rapporter l'affaire en premier.
 
 #TEXT    4
-Un vieillard francais affirme avoir observe toute la scene. Il se presente comme un espion et me conseille d'interroger les habitants de Douwesen.
+J'ai informe le gouverneur portugais. Il est furieux et m'ordonne de prevenir Silehard au plus vite, puis de retrouver les objets.
 
 #TEXT    5
-Je dois interroger les habitants de Douwesen au sujet des expressions employees par les pretendus soldats anglais.
+J'ai informe le gouverneur anglais. Il nie toute implication et me demande de reprendre la piste sans delai.
 
 #TEXT    6
-Les temoignages concordent. Les voleurs etaient presque certainement hollandais, malgre leurs uniformes anglais.
+Silehard est entre dans une grande colere. Il veut une enquete discrete et rapide.
 
 #TEXT    7
-J'ai informe le gouverneur portugais. Il me demande de retrouver la lettre et le cadeau avant qu'il ne soit trop tard.
-
-#TEXT    8
-J'ai informe le gouverneur anglais. Il nie avoir envoye ces soldats et me demande de retrouver la lettre et le cadeau.
-
-#TEXT    9
-Je dois fouiller les cabanes situees dans la jungle. Les voleurs ont peut-etre utilise l'une d'elles comme refuge.
-
-#TEXT    10
-La cabane a ete abandonnee. La lettre et le cadeau ne s'y trouvent pas.
-
-#TEXT    11
-J'ai trouve une note sous une table. Elle indique que les objets devaient etre transferes vers un endroit appele le lieu des rituels.
-
-#TEXT    12
-L'espion francais m'a retrouve a la sortie de la cabane. Il refuse de parler ici et me donne rendez-vous dans les rues de Falaise de Fleur.
-
-#TEXT    13
-L'espion francais pense que le vol cache une affaire plus importante. Les Hollandais semblent lies a un reseau clandestin, mais le lieu des rituels reste introuvable.
+Le meme mouvement clot cette affaire diplomatique et ouvre l'enquete suivante. Je dois retrouver la piste des voleurs.
 ```
 
 ## Texte recommande - `PJ_B1_2B`
@@ -75,45 +57,45 @@ L'espion francais pense que le vol cache une affaire plus importante. Les Hollan
 La Lettre derobee
 
 #TEXT    1
-Le gouverneur anglais veut que je poursuive l'enquete sur la lettre et le cadeau diplomatique.
+Silehard veut que je poursuive l'enquete sur la lettre et le cadeau diplomatique, discretement et rapidement.
 
 #TEXT    2
-Le gouverneur refuse de me donner directement la localisation du lieu des rituels. Il m'envoie rencontrer des soldats anglais sur la plage de la Gorge du Diable.
+Malcolm me conseille de questionner les habitants des villes. Selon lui, les expressions entendues dans la bouche des faux soldats trahiront peut-etre leur pays.
 
 #TEXT    3
-Les soldats anglais affirment que le lieu des rituels se trouve a Isla Muelle. Je dois atteindre la Cote eloignee, puis m'enfoncer dans les terres. Des navires protegent la plage.
+Les habitants de Douwesen reconnaissent des tournures hollandaises. Ils ont aussi vu un Francais mal habille poser des questions sur ces pretendus soldats anglais.
 
 #TEXT    4
-Des navires ennemis protegent l'acces a la Cote eloignee. Je dois les detruire avant de pouvoir debarquer.
+Le gouverneur francais etait deja au courant de cette piste. Il m'a renvoye vers son espion, dans la meme piece.
 
 #TEXT    5
-Les navires ennemis ont ete detruits. La Cote eloignee est maintenant accessible.
+Je ne l'ai pas reconnu sans ses haillons. L'espion dit que les Hollandais ont pris la mer vers une ile separee a Isla Muelle et qu'un rite dangereux doit s'y tenir bientot.
 
 #TEXT    6
-J'ai atteint le lieu des rituels. Des Hollandais m'y attendaient.
+Silehard en sait plus que l'espion sur la destination finale. Le rite doit se tenir dans une grotte accessible depuis la Cote eloignee de Isla Muelle.
 
 #TEXT    7
-Les Hollandais ont reconnu avoir vole les objets pour leur propre profit. Ils ont voulu doubler ceux qui les employaient et tirer de l'or de cette affaire.
+Une fregate et une corvette protegent l'acces a la baie. Je dois les detruire avant de pouvoir debarquer.
 
 #TEXT    8
-Tous les Hollandais sont morts. Aucun survivant ne peut me dire ce qu'ils ont fait de la lettre et du cadeau.
+Les navires ennemis ont ete detruits. La Cote eloignee est maintenant accessible.
 
 #TEXT    9
-Ni la lettre de cachet ni le cadeau diplomatique ne se trouvent sur le site.
+J'ai atteint la grotte du rite. Les faux soldats anglais y sont devenus des pretres de Shango, menes par un chef des pretres.
 
 #TEXT    10
-Je n'ai trouve aucun indice permettant de poursuivre. Les objets ont disparu et tous les temoins directs sont morts. Je dois retourner voir le gouverneur anglais.
+Les pretres se sont expliques, puis tous sont morts l'epee a la main. Aucun n'a revele ou se trouvent la lettre de cachet et le cadeau.
 
 #TEXT    11
-Le gouverneur anglais est furieux. Les Hollandais ont ete elimines, mais la lettre et le cadeau restent introuvables. Il est maintenant trop tard pour sauver l'accord diplomatique.
+Silehard affirme que les morts correspondent aux dissidents qu'il cherchait a faire tomber. Selon lui, la perte des objets diplomatiques ne devrait plus empecher ses manoeuvres.
 
 #TEXT    12
-L'affaire se termine sans la lettre, sans le cadeau et sans preuve. L'occasion diplomatique est perdue.
+Silehard est confiant dans son plan. Il faut se tenir pres. Mais j'ai quelques semaines de libre, alors je n'ai qu'a faire ce que je fais de mieux, naviguer, marchander et attaquer des bateaux isoles.
 ```
 
 ## Correspondance rapide
 
 | Header | Point cle |
 |---|---|
-| `PJ_B1_2A` | vol, enquete hollandaise, cabane, note, espion francais |
-| `PJ_B1_2B` | relance anglaise, assaut, dissidents, echec final, attente de guerre |
+| `PJ_B1_2A` | remise, vol, rapport, colere de Silehard, transition |
+| `PJ_B1_2B` | Malcolm, Douwesen, espion francais, Isla Muelle, grotte, pretres, attente de guerre |

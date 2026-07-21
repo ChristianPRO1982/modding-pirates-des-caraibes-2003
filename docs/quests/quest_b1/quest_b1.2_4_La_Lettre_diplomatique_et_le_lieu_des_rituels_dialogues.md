@@ -8,7 +8,11 @@ Il sert de reserve de ton, d'intention et de structure pour la seconde moitie de
 
 Le detail scene par scene de `B1.2a` est deplace dans l'annexe:
 
-- `docs/quests/quest_b1/quest_b1.2_4_La_Lettre_diplomatique_et_le_lieu_des_rituels_dialogues_b1_2a.md`
+- `docs/quests/quest_b1/quest_b1.2_5_La_Lettre_diplomatique_et_le_lieu_des_rituels_dialogues_b1_2a.md`
+
+Le detail scene par scene de `B1.2b` doit maintenant etre porte par:
+
+- `docs/quests/quest_b1/quest_b1.2_6_La_Lettre_diplomatique_et_le_lieu_des_rituels_dialogues_b1_2b.md`
 
 Ce fichier ne doit donc plus dupliquer:
 
@@ -18,93 +22,122 @@ Ce fichier ne doit donc plus dupliquer:
 - le rapport prioritaire au gouverneur portugais;
 - la premiere grande colere de Silehard en cloture de `B1.2a`.
 
-## 1. Espion francais
+## 1. Relance par Silehard et Malcolm
 
 Fonctions:
 
-- faire avancer l'enquete;
-- rester utile sans devenir omniscient;
-- montrer une France observatrice et encore neutre.
-
-Ton:
-
-- vieux;
-- sec;
-- plus informe qu'il ne veut l'admettre;
-- jamais bavard gratuitement.
-
-Point de passage recommande:
-
-- il reprend le fil apres le vol deja subi;
-- il confirme seulement qu'une main etrangere observe l'affaire;
-- il guide vers la suite sans tout expliquer.
-
-## 2. Cabane et note
-
-Fonctions:
-
-- faire passer l'affaire d'un simple vol a un reseau structure;
-- introduire le vocabulaire du lieu des rituels;
-- eviter toute revelation trop nette.
-
-Contraintes:
-
-- la note ne doit pas resoudre l'affaire;
-- elle doit seulement orienter vers une infrastructure ou un point de transfert;
-- le lieu des rituels doit paraitre plus logistique que mystique a ce stade.
-
-## 3. Soldats anglais de la Gorge du Diable
-
-Fonctions:
-
-- montrer un reseau discret que Silehard connait;
-- guider le joueur sans exposition longue;
-- faire comprendre que les Anglais savent plus qu'ils n'avouent.
+- ouvrir `B1.2b` sans temps mort;
+- montrer que Silehard veut une enquete rapide, discrete et methodique;
+- permettre a Malcolm de servir de filet de securite narratif.
 
 Sous-texte:
 
-- ils executent des ordres compartimentes;
-- ils connaissent une route et une destination, pas toute l'affaire;
-- ils servent de relais propre entre la phase d'enquete et la phase navale.
+- Silehard reprend la main apres sa colere de `B1.2a`;
+- Malcolm est volontairement plus explicite et plus spoilant que les autres PNJ.
 
-## 4. Hollandais dissidents
+## 2. Temoins de Douwesen
 
 Fonctions:
 
-- reconnaitre le vol;
-- reveler le mobile d'or;
-- distinguer les dissidents de la structure plus vaste.
+- confirmer l'origine hollandaise des faux soldats;
+- faire passer l'enquete par la langue et les expressions;
+- renvoyer vers le Francais mal habille, sans autre indice exploitable.
+
+Contraintes:
+
+- une des trois expressions hollandaises doit ressortir nettement;
+- le joueur peut demander le sens de l'expression avant de revenir aux faux soldats;
+- aucun temoin ne doit connaitre `Isla Muelle` ni la grotte.
+
+## 3. Gouverneur francais et espion francais
+
+Fonctions:
+
+- faire du Francais la vraie cle de transition entre `Douwesen` et `Isla Muelle`;
+- montrer que le gouverneur francais est informe, mais delegue a son espion;
+- jouer sur le contraste entre le Francais en haillons plus tot et bien habille ici.
+
+Ce que l'espion peut dire:
+
+- les Hollandais ont pris la mer;
+- ils visaient une ile separee a `Isla Muelle`;
+- un rite dangereux doit s'y tenir;
+- Shango est une secte dangereuse.
+
+Ce qu'il ne doit pas dire:
+
+- le nom precis de la plage;
+- la localisation exacte de la grotte;
+- ce qu'il est advenu des objets.
+
+## 4. Retour a Silehard
+
+Fonctions:
+
+- faire de Silehard la source de la localisation finale;
+- remplacer l'ancienne mediation par soldats anglais;
+- lancer clairement le joueur vers `Cote eloignee`.
+
+Ton:
+
+- plus maitrise que pendant `B1.2a`;
+- precis;
+- sur de son information;
+- toujours ambigu sur ses sources.
+
+## 5. Phase navale et grotte du rite
+
+Fonctions:
+
+- verrouiller l'entree militaire de la seconde moitie de `B1.2b`;
+- faire monter la pression avant la confrontation terrestre;
+- transformer les faux soldats en pretres de Shango.
+
+Elements a garder:
+
+- `1 fregate` et `1 corvette` comme defense minimale;
+- `Cote eloignee` comme nom de debarquement;
+- une grotte comme site rituel;
+- un `chef des pretres`.
+
+## 6. Pretres hollandais dissidents
+
+Fonctions:
+
+- reconnaitre le vol et le basculement rituel;
+- distinguer les dissidents du reste de la structure;
+- mourir sans reveler ou sont les objets.
 
 Ce qu'ils peuvent dire:
 
-- ils connaissaient l'operation;
-- ils ont voulu doubler leurs employeurs;
-- ils pensaient s'enrichir;
-- ils ont perdu le controle ensuite.
+- ils ont vole les objets;
+- ils ont suivi une logique dissidente;
+- le rite devait marquer une bascule;
+- ils ne rendront rien.
 
 Ce qu'ils ne doivent pas dire trop clairement:
 
-- une cartographie complete de Shango;
-- la preuve definitive contre Silehard;
-- la destination finale des objets.
+- la destination finale de la lettre et du cadeau;
+- l'organisation complete de Shango;
+- une preuve definitive contre Silehard.
 
-## 5. Colere finale de Silehard
+## 7. Retour final chez Silehard
 
 Fonctions:
 
 - conserver son ambiguite;
-- faire sentir qu'il est touche plus profondement qu'il ne devrait;
-- conclure sur un echec politique majeur.
+- montrer une colere plus froide et plus controlee que dans `B1.2a`;
+- conclure sur un echec tactique mais une reprise de main politique.
 
 Sous-texte possible:
 
-- il est furieux de la perte des objets;
-- il est furieux de la mort des dissidents;
-- il est furieux de la perte de controle;
-- le joueur ne peut pas savoir lequel domine.
+- il fait le compte des morts;
+- il savait deja qu'il existait des dissidents;
+- il affirme que la perte des objets n'est plus centrale;
+- il demande d'attendre "quelques semaines", jamais plus precisement.
 
 Effet recherche:
 
-- clore `B1.2b` sur une victoire militaire sterile;
-- montrer que l'affaire diplomatique est perdue;
+- clore `B1.2b` sur une victoire militaire sterile mais politiquement utile a Silehard;
+- montrer que la manoeuvre de guerre continue en secret;
 - preparer le delai avant la guerre ouverte de `B1.3`.
