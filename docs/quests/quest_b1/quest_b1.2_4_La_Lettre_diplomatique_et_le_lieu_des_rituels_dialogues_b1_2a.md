@@ -59,11 +59,14 @@ Le but ici n'est pas d'ecrire un script final exhaustif, mais de verrouiller sce
 **Silehard:**
 "Une lettre de cachet est partie d'Europe. Elle doit achever ici un accord dont depend l'equilibre de toute la region."
 
+**Joueur:**
+"Vous peignez la un horizon bien sombre, Excellence."
+
 **Silehard:**
 "Quand les couronnes envoient leurs flottes, ce ne sont pas seulement leurs ennemis qui disparaissent. Les contrebandiers, les corsaires libres, les honnÃªtes pirates, tous sont balayes."
 
 **Silehard:**
-"Certains hommes pensent qu'il reste encore une marge d'action. Je partage leur jugement."
+"Certains hommes pensent qu'il reste encore une marge d'action. Je suis a leur service et je partage leur jugement."
 
 **Silehard:**
 "Je ne te demande pas d'aimer la politique. Je te demande de voir ce qu'elle fera de toi si tu la laisses faire sans toi."
@@ -71,10 +74,12 @@ Le but ici n'est pas d'ecrire un script final exhaustif, mais de verrouiller sce
 **Silehard:**
 "Rends-toi a Conceicao. Le gouverneur portugais te remettra la lettre de cachet et un cadeau diplomatique. Tu reviendras ensuite sans detour."
 
+**Silehard:**
+"Il faut que l'on se debarrasse de cet accord nauseabond et à nous les bananes-chocolats !"
+
 **Reponses du joueur possibles:**
-- "Vous me parlez d'equilibre, mais j'entends surtout parler de guerre."
-- "Si cela peut eviter que les Caraibes deviennent une caserne flottante, j'ecoute."
-- "Je veux bien transporter ces objets. Je ne promets rien de plus."
+- "Je suis votre homme, et je mets mon sabre et mon bateau a cette noble cause."
+- "L'or est mon seul ami, le reste je vous le laisse. Vous aurez cette lettre et ce coffre."
 
 ## 2. Gouverneur portugais - Confirmation et remise des objets
 
@@ -117,6 +122,9 @@ Le but ici n'est pas d'ecrire un script final exhaustif, mais de verrouiller sce
 **Gouverneur portugais:**
 "Tu les remettras en main propre, et sans halte inutile. Cette affaire a deja trop attendu."
 
+**Joueur:**
+"Je comprends. Je ne trainerai pas."
+
 **Gouverneur portugais:**
 "Il se murmure aussi qu'au milieu de ces tractations, certaines sectes malfaisantes cherchent a jeter les iles dans le feu."
 
@@ -125,8 +133,7 @@ Le but ici n'est pas d'ecrire un script final exhaustif, mais de verrouiller sce
 
 **Reponses du joueur possibles:**
 - "Je porterai ces objets a Redmond."
-- "Vous parlez de sectes comme d'une armee invisible."
-- "Je ferai vite. Mais si quelqu'un tente de m'arreter, il faudra qu'il soit convaincant."
+- "Vous parlez de sectes comme d'une armee invisible. Vous me faites peur. Je tacherais de me garder à distance."
 
 ## 3. Faux soldats anglais - Vol nocturne sur le quai
 
@@ -164,7 +171,7 @@ Le but ici n'est pas d'ecrire un script final exhaustif, mais de verrouiller sce
 "He toi. Pas un geste."
 
 **Chef soldat:**
-"Tu portes une lettre scellee, signee de la main de Jacinto Arcibaldo Barreto, gouverneur de Conceicao, et a destination de Sir Robert Christopher Silehard. Tu vois ou je veux en venir."
+"Tu portes une lettre scellee, signee de la main du roi d'Angleterre et de Jacinto Arcibaldo Barreto, gouverneur de Conceicao, et a destination de Sir Robert Christopher Silehard. Tu vois ou je veux en venir."
 
 **Chef soldat:**
 "Remets la lettre. Et le coffre scelle."
@@ -277,8 +284,11 @@ Ces expressions doivent sembler legerement deplacees ou traduites de travers, sa
 **Gouverneur portugais:**
 "Pour moins que cela, je te ferais pendre avant la maree du matin."
 
+**Joueur:**
+"Je peux encore les retrouver, si vous m'en laissez le temps."
+
 **Gouverneur portugais:**
-"Non... pas encore. Si ces objets circulent toujours, il reste une chance."
+"Mmm ! La pendaison peu encore attendre. Si ces objets circulent toujours, il reste une chance."
 
 **Gouverneur portugais:**
 "Va trouver Silehard. Tout de suite. Il doit etre informe sans delai."
@@ -289,7 +299,6 @@ Ces expressions doivent sembler legerement deplacees ou traduites de travers, sa
 **Reponses du joueur possibles:**
 - "J'ai ete trompe, pas vendu."
 - "Je vais prevenir Silehard et reprendre la piste."
-- "Donnez-moi une chance de reparer cela."
 
 ## 5. Rapport a Silehard - Colere, lapsus et relance de l'enquete
 
@@ -332,10 +341,13 @@ Ces expressions doivent sembler legerement deplacees ou traduites de travers, sa
 ### Propositions de repliques
 
 **Silehard:**
-"Voles ? A quelques encablures de Redmond ?"
+"Voles ? Ici, sous mon nez ?"
 
 **Silehard:**
 "Tu comprends au moins ce que cela signifie ? Cette lettre de cachet et ce cadeau n'etaient pas de simples marques de courtoisie."
+
+**Joueur:**
+"Ils m'attendaient. Ce n'etait ni un hasard, ni un simple vol."
 
 **Silehard, si le joueur a d'abord vu le gouverneur portugais:**
 "Et tu as cru bon d'aller d'abord trouver Barreto ? Apres tout ce que je t'avais expose sur ce qui menace deja les pirates de ces eaux ?"
@@ -360,7 +372,6 @@ Ces expressions doivent sembler legerement deplacees ou traduites de travers, sa
 
 **Reponses du joueur possibles:**
 - "Je retrouverai ceux qui ont pris les objets."
-- "Je ferai vite. Et cette fois, je reviendrai avec autre chose que des excuses."
 - "Je vous aiderai, mais je ne me battrai pas pour des ambitions que vous refusez de nommer."
 
 ## Sortie de quete
