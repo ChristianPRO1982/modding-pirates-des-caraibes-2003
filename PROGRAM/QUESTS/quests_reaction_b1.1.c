@@ -824,6 +824,10 @@ bool QuestComplete_B1_1(string sQuestName)
 			{
 				return true;
 			}
+			if (!B11_HasAllIntroItems())
+			{
+				return true;
+			}
 			B11_AdvanceToMuelle();
 			return true;
 		break;

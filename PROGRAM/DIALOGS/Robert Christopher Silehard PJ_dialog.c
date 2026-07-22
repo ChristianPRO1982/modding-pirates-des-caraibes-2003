@@ -105,8 +105,16 @@ void ProcessDialogEvent()
 			}
 			if (pchar.quest_b1_1_status == "intro_ready_report")
 			{
-				Link.l1 = DLG_TEXT[12];
-				Link.l1.go = "B1_1_intro_turnin_1";
+				if (B11_HasAllIntroItems())
+				{
+					Link.l1 = DLG_TEXT[12];
+					Link.l1.go = "B1_1_intro_turnin_1";
+				}
+				else
+				{
+					Link.l1 = DLG_TEXT[11];
+					Link.l1.go = "B1_1_intro_reminder";
+				}
 			}
 			if (pchar.quest_b1_1_status == "muelle_pending" || pchar.quest_b1_1_status == "conceicao_pending" || pchar.quest_b1_1_status == "douwesen_pending" || pchar.quest_b1_1_status == "jungle_clue_pending" || pchar.quest_b1_1_status == "dig_ready")
 			{
@@ -168,18 +176,39 @@ void ProcessDialogEvent()
 		break;
 
 		case "B1_1_intro_turnin_1":
+			if (!B11_HasAllIntroItems())
+			{
+				d.Text = DLG_TEXT[23];
+				Link.l1 = DLG_TEXT[24];
+				Link.l1.go = "exit";
+				break;
+			}
 			d.Text = DLG_TEXT[25];
 			Link.l1 = DLG_TEXT[26];
 			Link.l1.go = "B1_1_intro_turnin_2";
 		break;
 
 		case "B1_1_intro_turnin_2":
+			if (!B11_HasAllIntroItems())
+			{
+				d.Text = DLG_TEXT[23];
+				Link.l1 = DLG_TEXT[24];
+				Link.l1.go = "exit";
+				break;
+			}
 			d.Text = DLG_TEXT[27];
 			Link.l1 = DLG_TEXT[28];
 			Link.l1.go = "B1_1_intro_turnin_3";
 		break;
 
 		case "B1_1_intro_turnin_3":
+			if (!B11_HasAllIntroItems())
+			{
+				d.Text = DLG_TEXT[23];
+				Link.l1 = DLG_TEXT[24];
+				Link.l1.go = "exit";
+				break;
+			}
 			QuestComplete_B1_1("PJ_B1_1_INTRO_REPORT_COMPLETE");
 			d.Text = DLG_TEXT[29];
 			Link.l1 = DLG_TEXT[30];

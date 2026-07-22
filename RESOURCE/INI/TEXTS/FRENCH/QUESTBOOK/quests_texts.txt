@@ -1017,40 +1017,36 @@ Silehard m'a confié une affaire d'antiquités incas qui paraissait d'abord assez 
 #TEXT	2
 Cette première collecte n'était qu'un prélude. Silehard m'a parlé d'une ancienne secte liée à une statue inca dispersée entre plusieurs contacts anglais, et il exige désormais plus de discrétion.
 #TEXT	3
-Les fragments de la statue m'ont mené de Isla Muelle à Conceicao puis à Douwesen. Le dernier morceau ne relevait plus du réseau de Silehard, mais d'un ancien indice dans la jungle.
+Les fragments de la statue m'ont mené d'Isla Muelle à Conceicao puis à Douwesen. Le dernier morceau ne relevait plus du réseau de Silehard, mais d'un ancien indice dans la jungle.
 #TEXT	4
 J'ai remis la statue complète à Silehard. Son intérêt pour cette affaire dépasse celui d'un simple collectionneur, et je doute que tout cela s'arrête ici.
 #QUEST	PJ_B1_1
 Les Fils de l'Ombre d'Inty
 #TEXT	1
-Le gouverneur anglais de Redmond m'a demande de lui rapporter plusieurs objets incas. Il pretend vouloir les reunir pour une exposition ou pour enrichir sa collection.
+Le gouverneur anglais de Redmond m'a demandé de lui rapporter plusieurs objets incas. Il prétend vouloir les réunir pour une exposition ou pour enrichir sa collection.
 #TEXT	2
-Je dois maintenant rassembler les objets incas demandes par le gouverneur anglais.
+Je dois maintenant rassembler les objets incas demandés par le gouverneur anglais.
 #TEXT	3
-J'ai reuni les objets demandes. Il ne me reste plus qu'a retourner a Redmond pour les remettre au gouverneur.
+J'ai réuni les objets demandés. Il ne me reste plus qu'à retourner à Redmond pour les remettre au gouverneur.
 #TEXT	4
-Le gouverneur m'a parle d'une ancienne secte nommee les Fils de l'Ombre d'Inty. Il pretend qu'une statue leur appartenait autrefois et que ses differentes parties sont encore dispersees entre plusieurs contacts.
-
-Je dois me rendre sur la Cote eloignee d'Isla Muelle et ne parler qu'aux Anglais.
+Le gouverneur m'a parlé d'une ancienne secte nommée les Fils de l'Ombre d'Inty. Il prétend qu'une statue leur appartenait autrefois et que ses différentes parties sont encore dispersées entre plusieurs contacts. Je dois me rendre sur la Côte éloignée d'Isla Muelle et ne parler qu'aux Anglais.
 #TEXT	5
-J'ai parle au soldat espagnol avant de m'adresser au contact anglais. L'Anglais a aussitot disparu. Je devrai revenir plus tard.
+J'ai parlé au soldat espagnol avant de m'adresser au contact anglais. L'Anglais a aussitôt disparu. Je devrai revenir plus tard.
 #TEXT	6
-Le contact anglais d'Isla Muelle refuse de parler devant le soldat espagnol. Il m'a demande de poursuivre la conversation sur son navire.
+Le contact anglais d'Isla Muelle refuse de parler devant le soldat espagnol. Il m'a demandé de poursuivre la conversation sur son navire.
 #TEXT	7
-J'ai obtenu les pieds de la statue. Le prochain contact m'attendrait au Havre radieux, a Conceicao, en compagnie d'un Portugais.
+J'ai obtenu les pieds de la statue. Le prochain contact m'attendrait au Havre radieux, à Conceicao, en compagnie d'un Portugais.
 #TEXT	8
-J'ai parle au Portugais avant de m'adresser au contact anglais. L'Anglais a disparu, comme a Isla Muelle. Je devrai revenir demain.
+J'ai parlé au Portugais avant de m'adresser au contact anglais. L'Anglais a disparu, comme à Isla Muelle. Je devrai revenir demain.
 #TEXT	9
 Le contact anglais de Conceicao refuse lui aussi de parler sur la plage. Il m'attend sur son navire.
 #TEXT	10
-J'ai obtenu le corps de la statue. Les bras se trouveraient sur la Plage aux palmiers de Douwesen, chez un autre contact anglais accompagne cette fois d'un Hollandais.
+J'ai obtenu le corps de la statue. Les bras se trouveraient sur la Plage aux palmiers de Douwesen, chez un autre contact anglais accompagné cette fois d'un Hollandais.
 #TEXT	11
-J'ai obtenu les bras de la statue. Le dernier morceau, la tete, n'est plus conserve par le reseau. Elle aurait ete enterree dans la jungle et un ancien indice autochtone permettrait de retrouver l'endroit exact.
+J'ai obtenu les bras de la statue. Le dernier morceau, la tête, n'est plus conservé par le réseau. Elle aurait été enterrée dans la jungle et un ancien indice autochtone permettrait de retrouver l'endroit exact.
 #TEXT	12
-J'ai trouve dans la jungle un ancien signe qui semble indiquer un endroit ou creuser.
+J'ai trouvé dans la jungle un ancien signe qui semble indiquer un endroit où creuser.
 #TEXT	13
-J'ai retrouve la tete de la statue. Toutes les pieces sont maintenant reunies. Je dois retourner a Redmond pour remettre la statue au gouverneur anglais.
+J'ai retrouvé la tête de la statue. Toutes les pièces sont maintenant réunies. Je dois retourner à Redmond pour remettre la statue au gouverneur anglais.
 #TEXT	14
-J'ai remis la statue au gouverneur anglais. Son enthousiasme et ses connaissances m'ont paru excessifs pour un simple amateur d'antiquites. Il pretend pourtant que cette statue rejoindra une grande exposition en Europe.
-
-Le gouverneur estime que je l'ai bien servi et il pourrait me confier des missions plus importantes a l'avenir.
+J'ai remis la statue au gouverneur anglais. Son enthousiasme et ses connaissances m'ont paru excessifs pour un simple amateur d'antiquités. Il prétend pourtant que cette statue rejoindra une grande exposition en Europe. Le gouverneur estime que je l'ai bien servi et il pourrait me confier des missions plus importantes à l'avenir.
