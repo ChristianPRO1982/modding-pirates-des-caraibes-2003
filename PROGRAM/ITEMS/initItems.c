@@ -244,6 +244,56 @@ void InitItems()
 //	itm.shown = 0;
 	itm.price = 0;
 	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "PJ_B1_1_STATUE_FEET";
+	itm.name = "itmname_incas_collection";
+	itm.describe = "itmdescr_incas_collection";
+	itm.model = "stat1";
+	itm.picIndex = 15;
+	itm.picTexture = "ITEMS_1";
+	itm.price = 0;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "PJ_B1_1_STATUE_BODY";
+	itm.name = "itmname_incas_collection";
+	itm.describe = "itmdescr_incas_collection";
+	itm.model = "stat2";
+	itm.picIndex = 15;
+	itm.picTexture = "ITEMS_1";
+	itm.price = 0;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "PJ_B1_1_STATUE_ARMS";
+	itm.name = "itmname_incas_collection";
+	itm.describe = "itmdescr_incas_collection";
+	itm.model = "stat3";
+	itm.picIndex = 15;
+	itm.picTexture = "ITEMS_1";
+	itm.price = 0;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "PJ_B1_1_STATUE_HEAD";
+	itm.name = "itmname_incas_idol";
+	itm.describe = "itmdescr_incas_idol";
+	itm.model = "stat1";
+	itm.picIndex = 4;
+	itm.picTexture = "ITEMS_4";
+	itm.price = 0;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "PJ_B1_1_STATUE_FULL";
+	itm.name = "itmname_incas_idol";
+	itm.describe = "itmdescr_incas_idol";
+	itm.model = "stat1";
+	itm.picIndex = 4;
+	itm.picTexture = "ITEMS_4";
+	itm.price = 0;
+	n++;
 /*	makeref(itm,Items[n]);
 	itm.id = STATUE1;
 	itm.name = "itmname_statue1";

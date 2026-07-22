@@ -565,6 +565,7 @@ void B11_StartQuest()
 	B11_ResetRuntime();
 	B11_SetArcRunning();
 	B11_SetStatus(B11_STATUS_INTRO_COLLECT);
+	B1_AddJournalRecord("1");
 	DeleteQuestHeader(B11_HEADER);
 	SetQuestHeader(B11_HEADER);
 	AddQuestRecord(B11_HEADER, "1");
@@ -593,6 +594,7 @@ void B11_AdvanceToMuelle()
 	B11_PayIntroReward();
 	B11_SetStatus(B11_STATUS_MUELLE_PENDING);
 	B11_SetMuelleState(B11_MUELLE_STATE_PENDING);
+	B1_AddJournalRecord("2");
 	AddQuestRecord(B11_HEADER, "4");
 }
 
@@ -643,6 +645,7 @@ void B11_AdvanceToDigReady()
 void B11_AdvanceToFinalReady()
 {
 	B11_SetStatus(B11_STATUS_FINAL_READY);
+	B1_AddJournalRecord("3");
 	AddQuestRecord(B11_HEADER, "13");
 }
 
@@ -657,6 +660,7 @@ void B11_FinalizeQuest()
 	B11_PayFinalReward();
 	B11_SetArcCompleted();
 	B11_SetStatus(B11_STATUS_COMPLETED);
+	B1_AddJournalRecord("4");
 	AddQuestRecord(B11_HEADER, "14");
 	CloseQuestHeader(B11_HEADER);
 	DoQuestCheckDelay(B11_EVENT_CLEANUP, 0.0);

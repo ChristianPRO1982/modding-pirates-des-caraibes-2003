@@ -111,7 +111,26 @@ void ProcessDialogEvent()
 			if (pchar.quest_b1_1_status == "muelle_pending" || pchar.quest_b1_1_status == "conceicao_pending" || pchar.quest_b1_1_status == "douwesen_pending" || pchar.quest_b1_1_status == "jungle_clue_pending" || pchar.quest_b1_1_status == "dig_ready")
 			{
 				Link.l1 = DLG_TEXT[13];
-				Link.l1.go = "B1_1_stage2_reminder";
+				if (pchar.quest_b1_1_status == "muelle_pending")
+				{
+					Link.l1.go = "B1_1_muelle_reminder";
+				}
+				if (pchar.quest_b1_1_status == "conceicao_pending")
+				{
+					Link.l1.go = "B1_1_conceicao_reminder";
+				}
+				if (pchar.quest_b1_1_status == "douwesen_pending")
+				{
+					Link.l1.go = "B1_1_douwesen_reminder";
+				}
+				if (pchar.quest_b1_1_status == "jungle_clue_pending")
+				{
+					Link.l1.go = "B1_1_jungle_reminder";
+				}
+				if (pchar.quest_b1_1_status == "dig_ready")
+				{
+					Link.l1.go = "B1_1_dig_reminder";
+				}
 			}
 			if (pchar.quest_b1_1_status == "final_ready")
 			{
@@ -169,52 +188,63 @@ void ProcessDialogEvent()
 
 		case "B1_1_stage2_reminder":
 			B11_SyncTransverseState();
-			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "muelle_pending")
-			{
-				d.Text = DLG_TEXT[31];
-			}
-			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "conceicao_pending")
-			{
-				d.Text = DLG_TEXT[32];
-			}
-			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "douwesen_pending")
-			{
-				d.Text = DLG_TEXT[33];
-			}
-			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "jungle_clue_pending")
-			{
-				d.Text = DLG_TEXT[34];
-			}
-			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "dig_ready")
-			{
-				d.Text = DLG_TEXT[35];
-			}
-			Link.l1 = DLG_TEXT[36];
+			d.Text = DLG_TEXT[83];
+			Link.l1 = DLG_TEXT[84];
+			Link.l1.go = "exit";
+		break;
+
+		case "B1_1_muelle_reminder":
+			d.Text = DLG_TEXT[83];
+			Link.l1 = DLG_TEXT[84];
+			Link.l1.go = "exit";
+		break;
+
+		case "B1_1_conceicao_reminder":
+			d.Text = DLG_TEXT[85];
+			Link.l1 = DLG_TEXT[86];
+			Link.l1.go = "exit";
+		break;
+
+		case "B1_1_douwesen_reminder":
+			d.Text = DLG_TEXT[87];
+			Link.l1 = DLG_TEXT[88];
+			Link.l1.go = "exit";
+		break;
+
+		case "B1_1_jungle_reminder":
+			d.Text = DLG_TEXT[89];
+			Link.l1 = DLG_TEXT[90];
+			Link.l1.go = "exit";
+		break;
+
+		case "B1_1_dig_reminder":
+			d.Text = DLG_TEXT[91];
+			Link.l1 = DLG_TEXT[92];
 			Link.l1.go = "exit";
 		break;
 
 		case "B1_1_final_turnin_1":
-			d.Text = DLG_TEXT[37];
-			Link.l1 = DLG_TEXT[38];
+			d.Text = DLG_TEXT[31];
+			Link.l1 = DLG_TEXT[32];
 			Link.l1.go = "B1_1_final_turnin_2";
 		break;
 
 		case "B1_1_final_turnin_2":
-			d.Text = DLG_TEXT[39];
-			Link.l1 = DLG_TEXT[40];
+			d.Text = DLG_TEXT[33];
+			Link.l1 = DLG_TEXT[34];
 			Link.l1.go = "B1_1_final_turnin_3";
 		break;
 
 		case "B1_1_final_turnin_3":
 			QuestComplete_B1_1("PJ_B1_1_FINAL_REPORT_COMPLETE");
-			d.Text = DLG_TEXT[41];
-			Link.l1 = DLG_TEXT[42];
+			d.Text = DLG_TEXT[35];
+			Link.l1 = DLG_TEXT[36];
 			Link.l1.go = "exit";
 		break;
 
 		case "B1_1_completed_repeat":
-			d.Text = DLG_TEXT[43];
-			Link.l1 = DLG_TEXT[44];
+			d.Text = DLG_TEXT[37];
+			Link.l1 = DLG_TEXT[38];
 			Link.l1.go = "exit";
 		break;
 

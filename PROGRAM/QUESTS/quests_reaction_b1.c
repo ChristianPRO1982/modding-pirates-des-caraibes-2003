@@ -1,8 +1,23 @@
 // B1 - Shared transverse state
 
+#define B1_HEADER "PJ_B1"
 #define B1_SUBQUEST_NONE "none"
 #define B1_STEP_NONE "none"
 #define B1_STEP_COMPLETED "completed"
+
+void B1_EnsureJournalOpen()
+{
+	if (!CheckActiveQuest(B1_HEADER))
+	{
+		SetQuestHeader(B1_HEADER);
+	}
+}
+
+void B1_AddJournalRecord(string textId)
+{
+	B1_EnsureJournalOpen();
+	AddQuestRecord(B1_HEADER, textId);
+}
 
 string B1_GetSubquest()
 {
