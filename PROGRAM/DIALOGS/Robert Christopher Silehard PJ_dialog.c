@@ -303,9 +303,6 @@ void ProcessDialogEvent()
 		break;
 
 		case "B1_1_muelle_contact":
-			QuestComplete_B1_1("PJ_B1_1_MUELLE_CONTACT_SHIP");
-			Diag.CurrentNode = "B1_1_muelle_contact_ship";
-			Diag.TempNode = "B1_1_muelle_contact_ship";
 			d.Text = DLG_TEXT[51];
 			Link.l1 = DLG_TEXT[52];
 			Link.l1.go = "B1_1_muelle_contact_2";
@@ -314,11 +311,17 @@ void ProcessDialogEvent()
 		case "B1_1_muelle_contact_2":
 			d.Text = DLG_TEXT[53];
 			Link.l1 = DLG_TEXT[54];
-			Link.l1.go = "exit";
+			Link.l1.go = "B1_1_muelle_contact_exit";
+		break;
+
+		case "B1_1_muelle_contact_exit":
+			Diag.CurrentNode = "B1_1_muelle_contact";
+			Diag.TempNode = "B1_1_muelle_contact";
+			DialogExit();
+			AddDialogExitQuest("PJ_B1_1_MUELLE_CONTACT_SHIP");
 		break;
 
 		case "B1_1_muelle_contact_ship":
-			QuestComplete_B1_1("PJ_B1_1_MUELLE_PIECE_OBTAINED");
 			d.Text = DLG_TEXT[55];
 			Link.l1 = DLG_TEXT[56];
 			Link.l1.go = "B1_1_muelle_contact_ship_2";
@@ -327,7 +330,14 @@ void ProcessDialogEvent()
 		case "B1_1_muelle_contact_ship_2":
 			d.Text = DLG_TEXT[57];
 			Link.l1 = DLG_TEXT[58];
-			Link.l1.go = "exit";
+			Link.l1.go = "B1_1_muelle_contact_ship_exit";
+		break;
+
+		case "B1_1_muelle_contact_ship_exit":
+			Diag.CurrentNode = "B1_1_muelle_contact_ship";
+			Diag.TempNode = "B1_1_muelle_contact_ship";
+			DialogExit();
+			AddDialogExitQuest("PJ_B1_1_MUELLE_PIECE_OBTAINED");
 		break;
 
 		// Conceicao
@@ -354,9 +364,6 @@ void ProcessDialogEvent()
 		break;
 
 		case "B1_1_conceicao_contact":
-			QuestComplete_B1_1("PJ_B1_1_CONCEICAO_CONTACT_SHIP");
-			Diag.CurrentNode = "B1_1_conceicao_contact_ship";
-			Diag.TempNode = "B1_1_conceicao_contact_ship";
 			d.Text = DLG_TEXT[65];
 			Link.l1 = DLG_TEXT[66];
 			Link.l1.go = "B1_1_conceicao_contact_2";
@@ -365,11 +372,17 @@ void ProcessDialogEvent()
 		case "B1_1_conceicao_contact_2":
 			d.Text = DLG_TEXT[67];
 			Link.l1 = DLG_TEXT[68];
-			Link.l1.go = "exit";
+			Link.l1.go = "B1_1_conceicao_contact_exit";
+		break;
+
+		case "B1_1_conceicao_contact_exit":
+			Diag.CurrentNode = "B1_1_conceicao_contact";
+			Diag.TempNode = "B1_1_conceicao_contact";
+			DialogExit();
+			AddDialogExitQuest("PJ_B1_1_CONCEICAO_CONTACT_SHIP");
 		break;
 
 		case "B1_1_conceicao_contact_ship":
-			QuestComplete_B1_1("PJ_B1_1_CONCEICAO_PIECE_OBTAINED");
 			d.Text = DLG_TEXT[69];
 			Link.l1 = DLG_TEXT[70];
 			Link.l1.go = "B1_1_conceicao_contact_ship_2";
@@ -378,7 +391,14 @@ void ProcessDialogEvent()
 		case "B1_1_conceicao_contact_ship_2":
 			d.Text = DLG_TEXT[71];
 			Link.l1 = DLG_TEXT[72];
-			Link.l1.go = "exit";
+			Link.l1.go = "B1_1_conceicao_contact_ship_exit";
+		break;
+
+		case "B1_1_conceicao_contact_ship_exit":
+			Diag.CurrentNode = "B1_1_conceicao_contact_ship";
+			Diag.TempNode = "B1_1_conceicao_contact_ship";
+			DialogExit();
+			AddDialogExitQuest("PJ_B1_1_CONCEICAO_PIECE_OBTAINED");
 		break;
 
 		// Douwesen

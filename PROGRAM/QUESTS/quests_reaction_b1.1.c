@@ -33,6 +33,10 @@
 #define B11_LOCATION_CONCEICAO "Conceicao_shore_01"
 #define B11_LOCATION_DOUWESEN "Douwesen_shore_01"
 #define B11_LOCATION_JUNGLE "Douwesen_Jungle_03"
+#define B11_LOCATION_SHIP_DECK "Ship_deck"
+
+#define B11_SHIP_SCENE_MUELLE "muelle"
+#define B11_SHIP_SCENE_CONCEICAO "conceicao"
 
 #define B11_NPC_MUELLE_ENGLISH "PJ_B1_1_EnglishContact_Muelle"
 #define B11_NPC_MUELLE_GUARD "PJ_B1_1_SpanishGuard_Muelle"
@@ -65,6 +69,8 @@
 #define B11_EVENT_DIG_COMPLETED "PJ_B1_1_DIG_COMPLETED"
 #define B11_EVENT_HEAD_OBTAINED "PJ_B1_1_HEAD_OBTAINED"
 #define B11_EVENT_ASSEMBLE_FULL_STATUE "PJ_B1_1_ASSEMBLE_FULL_STATUE"
+#define B11_EVENT_SHIP_ENTER "PJ_B1_1_SHIP_ENTER"
+#define B11_EVENT_SHIP_RETURN "PJ_B1_1_SHIP_RETURN"
 #define B11_EVENT_FINAL_REPORT_COMPLETE "PJ_B1_1_FINAL_REPORT_COMPLETE"
 #define B11_EVENT_CLEANUP "PJ_B1_1_CLEANUP"
 
@@ -239,6 +245,15 @@ void B11_PlaceNpc(string npcId, string location, string group)
 	PlaceCharacter(characterFromID(npcId), group, location);
 }
 
+void B11_PlaceNpcAtLocator(string npcId, string location, string locator)
+{
+	if (!B11_HasNpc(npcId))
+	{
+		return;
+	}
+	ChangeCharacterAddress(characterFromID(npcId), location, locator);
+}
+
 void B11_SetNpcCitizen(string npcId)
 {
 	if (!B11_HasNpc(npcId))
@@ -272,6 +287,103 @@ void B11_AssignDialog(string npcId, string nodeName)
 	chref.Dialog.TempNode = nodeName;
 }
 
+string B11_GetShipScene()
+{
+	ref pchar = GetMainCharacter();
+	if (!CheckAttribute(pchar, "quest_b1_1_ship_scene"))
+	{
+		return "";
+	}
+	return pchar.quest_b1_1_ship_scene;
+}
+
+bool B11_HasShipScene()
+{
+	return B11_GetShipScene() != "";
+}
+
+void B11_ClearShipSceneRuntime()
+{
+	ref pchar = GetMainCharacter();
+
+	DeleteAttribute(pchar, "quest_b1_1_ship_scene");
+	DeleteAttribute(pchar, "quest_b1_1_ship_return_location");
+	DeleteAttribute(pchar, "quest_b1_1_ship_return_group");
+	DeleteAttribute(pchar, "quest_b1_1_ship_return_locator");
+}
+
+void B11_SetShipScene(string sceneId, string returnLocation)
+{
+	ref pchar = GetMainCharacter();
+
+	pchar.quest_b1_1_ship_scene = sceneId;
+	pchar.quest_b1_1_ship_return_location = returnLocation;
+	pchar.quest_b1_1_ship_return_group = "reload";
+	pchar.quest_b1_1_ship_return_locator = "reload1";
+}
+
+void B11_BeginShipScene(string sceneId, string returnLocation)
+{
+	B11_SetShipScene(sceneId, returnLocation);
+	B11_HideNpc(B11_NPC_MUELLE_ENGLISH);
+	B11_HideNpc(B11_NPC_MUELLE_GUARD);
+	B11_HideNpc(B11_NPC_CONCEICAO_ENGLISH);
+	B11_HideNpc(B11_NPC_CONCEICAO_GUARD);
+	DoQuestReloadToLocation(B11_LOCATION_SHIP_DECK, "reload", "locator2", B11_EVENT_SHIP_ENTER);
+}
+
+void B11_SpawnShipScene()
+{
+	string shipScene = B11_GetShipScene();
+
+	if (shipScene == B11_SHIP_SCENE_MUELLE)
+	{
+		if (B11_GetStatus() != B11_STATUS_MUELLE_PENDING || B11_GetMuelleState() != B11_MUELLE_STATE_SHIP_OFFER)
+		{
+			return;
+		}
+		B11_HideNpc(B11_NPC_CONCEICAO_ENGLISH);
+		B11_PlaceNpcAtLocator(B11_NPC_MUELLE_ENGLISH, B11_LOCATION_SHIP_DECK, "goto2");
+		B11_SetNpcCitizen(B11_NPC_MUELLE_ENGLISH);
+		B11_AssignDialog(B11_NPC_MUELLE_ENGLISH, "B1_1_muelle_contact_ship");
+		return;
+	}
+
+	if (shipScene == B11_SHIP_SCENE_CONCEICAO)
+	{
+		if (B11_GetStatus() != B11_STATUS_CONCEICAO_PENDING || B11_GetConceicaoState() != B11_CONCEICAO_STATE_SHIP_OFFER)
+		{
+			return;
+		}
+		B11_HideNpc(B11_NPC_MUELLE_ENGLISH);
+		B11_PlaceNpcAtLocator(B11_NPC_CONCEICAO_ENGLISH, B11_LOCATION_SHIP_DECK, "goto2");
+		B11_SetNpcCitizen(B11_NPC_CONCEICAO_ENGLISH);
+		B11_AssignDialog(B11_NPC_CONCEICAO_ENGLISH, "B1_1_conceicao_contact_ship");
+	}
+}
+
+void B11_ReturnFromShipScene()
+{
+	ref pchar = GetMainCharacter();
+	string returnLocation;
+	string returnGroup;
+	string returnLocator;
+
+	if (!B11_HasShipScene())
+	{
+		return;
+	}
+
+	returnLocation = pchar.quest_b1_1_ship_return_location;
+	returnGroup = pchar.quest_b1_1_ship_return_group;
+	returnLocator = pchar.quest_b1_1_ship_return_locator;
+
+	B11_HideNpc(B11_NPC_MUELLE_ENGLISH);
+	B11_HideNpc(B11_NPC_CONCEICAO_ENGLISH);
+
+	DoQuestReloadToLocation(returnLocation, returnGroup, returnLocator, B11_EVENT_SHIP_RETURN);
+}
+
 void B11_DespawnAllSceneNpcs()
 {
 	B11_HideNpc(B11_NPC_MUELLE_ENGLISH);
@@ -284,7 +396,9 @@ void B11_DespawnAllSceneNpcs()
 
 void B11_SpawnMuelleScene()
 {
-	if (B11_GetMuelleState() == B11_MUELLE_STATE_DONE)
+	string muelleState = B11_GetMuelleState();
+
+	if (muelleState == B11_MUELLE_STATE_DONE || muelleState == B11_MUELLE_STATE_SHIP_OFFER)
 	{
 		return;
 	}
@@ -293,24 +407,19 @@ void B11_SpawnMuelleScene()
 	B11_SetNpcGuardian(B11_NPC_MUELLE_GUARD);
 	B11_AssignDialog(B11_NPC_MUELLE_GUARD, "B1_1_muelle_guard");
 
-	if (B11_GetMuelleState() != B11_MUELLE_STATE_WAIT)
+	if (muelleState != B11_MUELLE_STATE_WAIT)
 	{
 		B11_PlaceNpc(B11_NPC_MUELLE_ENGLISH, B11_LOCATION_MUELLE, "goto");
 		B11_SetNpcCitizen(B11_NPC_MUELLE_ENGLISH);
-		if (B11_GetMuelleState() == B11_MUELLE_STATE_SHIP_OFFER)
-		{
-			B11_AssignDialog(B11_NPC_MUELLE_ENGLISH, "B1_1_muelle_contact_ship");
-		}
-		else
-		{
-			B11_AssignDialog(B11_NPC_MUELLE_ENGLISH, "B1_1_muelle_contact");
-		}
+		B11_AssignDialog(B11_NPC_MUELLE_ENGLISH, "B1_1_muelle_contact");
 	}
 }
 
 void B11_SpawnConceicaoScene()
 {
-	if (B11_GetConceicaoState() == B11_CONCEICAO_STATE_DONE)
+	string conceicaoState = B11_GetConceicaoState();
+
+	if (conceicaoState == B11_CONCEICAO_STATE_DONE || conceicaoState == B11_CONCEICAO_STATE_SHIP_OFFER)
 	{
 		return;
 	}
@@ -319,18 +428,11 @@ void B11_SpawnConceicaoScene()
 	B11_SetNpcGuardian(B11_NPC_CONCEICAO_GUARD);
 	B11_AssignDialog(B11_NPC_CONCEICAO_GUARD, "B1_1_conceicao_guard");
 
-	if (B11_GetConceicaoState() != B11_CONCEICAO_STATE_WAIT)
+	if (conceicaoState != B11_CONCEICAO_STATE_WAIT)
 	{
 		B11_PlaceNpc(B11_NPC_CONCEICAO_ENGLISH, B11_LOCATION_CONCEICAO, "goto");
 		B11_SetNpcCitizen(B11_NPC_CONCEICAO_ENGLISH);
-		if (B11_GetConceicaoState() == B11_CONCEICAO_STATE_SHIP_OFFER)
-		{
-			B11_AssignDialog(B11_NPC_CONCEICAO_ENGLISH, "B1_1_conceicao_contact_ship");
-		}
-		else
-		{
-			B11_AssignDialog(B11_NPC_CONCEICAO_ENGLISH, "B1_1_conceicao_contact");
-		}
+		B11_AssignDialog(B11_NPC_CONCEICAO_ENGLISH, "B1_1_conceicao_contact");
 	}
 }
 
@@ -548,6 +650,7 @@ void B11_ResetRuntime()
 	DeleteAttribute(pchar, "quest_b1_1_muelle_state");
 	DeleteAttribute(pchar, "quest_b1_1_conceicao_state");
 	DeleteAttribute(pchar, "quest_b1_1_douwesen_state");
+	B11_ClearShipSceneRuntime();
 	DeleteAttribute(pchar, "quest_b1_2a_available");
 }
 
@@ -771,6 +874,11 @@ void B1_1_ProcessLocationEnter()
 		case B11_LOCATION_MUELLE:
 			if (status == B11_STATUS_MUELLE_PENDING)
 			{
+				if (B11_GetMuelleState() == B11_MUELLE_STATE_SHIP_OFFER && !B11_HasShipScene())
+				{
+					B11_BeginShipScene(B11_SHIP_SCENE_MUELLE, B11_LOCATION_MUELLE);
+					return;
+				}
 				B11_SpawnMuelleScene();
 			}
 		break;
@@ -778,6 +886,11 @@ void B1_1_ProcessLocationEnter()
 		case B11_LOCATION_CONCEICAO:
 			if (status == B11_STATUS_CONCEICAO_PENDING)
 			{
+				if (B11_GetConceicaoState() == B11_CONCEICAO_STATE_SHIP_OFFER && !B11_HasShipScene())
+				{
+					B11_BeginShipScene(B11_SHIP_SCENE_CONCEICAO, B11_LOCATION_CONCEICAO);
+					return;
+				}
 				B11_SpawnConceicaoScene();
 			}
 		break;
@@ -791,6 +904,10 @@ void B1_1_ProcessLocationEnter()
 
 		case B11_LOCATION_JUNGLE:
 			B11_RunJungleAutoStep();
+		break;
+
+		case B11_LOCATION_SHIP_DECK:
+			B11_SpawnShipScene();
 		break;
 	}
 }
@@ -864,12 +981,13 @@ bool QuestComplete_B1_1(string sQuestName)
 			{
 				return true;
 			}
-			if (B11_GetMuelleState() == B11_MUELLE_STATE_DONE)
+			if (B11_GetMuelleState() == B11_MUELLE_STATE_DONE || B11_GetMuelleState() == B11_MUELLE_STATE_WAIT)
 			{
 				return true;
 			}
 			B11_SetMuelleState(B11_MUELLE_STATE_SHIP_OFFER);
 			AddQuestRecord(B11_HEADER, "6");
+			B11_BeginShipScene(B11_SHIP_SCENE_MUELLE, B11_LOCATION_MUELLE);
 			return true;
 		break;
 
@@ -885,6 +1003,7 @@ bool QuestComplete_B1_1(string sQuestName)
 			B11_DisarmMuelleTimer();
 			B11_GrantPieceIfMissing(B11_ITEM_FEET, "quest_b1_1_piece_feet");
 			B11_AdvanceToConceicao();
+			B11_ReturnFromShipScene();
 			return true;
 		break;
 
@@ -920,12 +1039,13 @@ bool QuestComplete_B1_1(string sQuestName)
 			{
 				return true;
 			}
-			if (B11_GetConceicaoState() == B11_CONCEICAO_STATE_DONE)
+			if (B11_GetConceicaoState() == B11_CONCEICAO_STATE_DONE || B11_GetConceicaoState() == B11_CONCEICAO_STATE_WAIT)
 			{
 				return true;
 			}
 			B11_SetConceicaoState(B11_CONCEICAO_STATE_SHIP_OFFER);
 			AddQuestRecord(B11_HEADER, "9");
+			B11_BeginShipScene(B11_SHIP_SCENE_CONCEICAO, B11_LOCATION_CONCEICAO);
 			return true;
 		break;
 
@@ -941,6 +1061,7 @@ bool QuestComplete_B1_1(string sQuestName)
 			B11_DisarmConceicaoTimer();
 			B11_GrantPieceIfMissing(B11_ITEM_BODY, "quest_b1_1_piece_body");
 			B11_AdvanceToDouwesen();
+			B11_ReturnFromShipScene();
 			return true;
 		break;
 
@@ -1019,8 +1140,20 @@ bool QuestComplete_B1_1(string sQuestName)
 			return true;
 		break;
 
+		case B11_EVENT_SHIP_ENTER:
+			B11_SpawnShipScene();
+			return true;
+		break;
+
+		case B11_EVENT_SHIP_RETURN:
+			B11_ClearShipSceneRuntime();
+			B11_DespawnAllSceneNpcs();
+			return true;
+		break;
+
 		case B11_EVENT_CLEANUP:
 			B11_DisarmAllQuestConditions();
+			B11_ClearShipSceneRuntime();
 			B11_DespawnAllSceneNpcs();
 			B11_SetStatus(B11_STATUS_CLOSED);
 			return true;
