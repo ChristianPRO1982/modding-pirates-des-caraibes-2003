@@ -59,6 +59,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "meeting":
+			// la ligne si dessous uniquement pour le développement de la quête G1
+			Island_SetReloadEnableLocal("IslaMuelle", "reload_2", true);
 			d.Text = DLG_TEXT[5];
 			Link.l1 = DLG_TEXT[6];
 			Link.l1.go = "quest lines";
