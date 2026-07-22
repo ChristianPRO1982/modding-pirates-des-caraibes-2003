@@ -50,28 +50,21 @@ void ProcessDialogEvent()
 				break;
 			}
 
-			if (NPChar.quest.meeting == "0")
-			{
-				d.Text = DLG_TEXT[0];
-				Link.l1 = DLG_TEXT[1] + PChar.name + " " + PChar.lastname + DLG_TEXT[2] + PChar.ship.name + DLG_TEXT[3];
-				Link.l1.go = "meeting";
-				NPC_meeting = "1";
-			}
-			else
-			{
-				d.Text = DLG_TEXT[5];
-				Link.l1 = DLG_TEXT[6];
-				Link.l1.go = "quest lines";
-				Link.l2 = DLG_TEXT[9];
-				Link.l2.go = "exit";
-			}
+			d.Text = DLG_TEXT[0] + PChar.name + " " + PChar.lastname + DLG_TEXT[1] + PChar.ship.name + DLG_TEXT[2] + DLG_TEXT[3];
+			Link.l1 = DLG_TEXT[4];
+			Link.l1.go = "meeting";
+			NPC_meeting = "1";
+
 			Diag.TempNode = "First time";
 		break;
 
 		case "meeting":
-			d.Text = DLG_TEXT[4];
+			d.Text = DLG_TEXT[5];
 			Link.l1 = DLG_TEXT[6];
 			Link.l1.go = "quest lines";
+			Link.l2 = DLG_TEXT[9];
+			Link.l2.go = "exit";
+			Diag.TempNode = "meeting";
 		break;
 
 		case "quest lines":
@@ -180,19 +173,19 @@ void ProcessDialogEvent()
 			{
 				d.Text = DLG_TEXT[31];
 			}
-			else if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "conceicao_pending")
+			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "conceicao_pending")
 			{
 				d.Text = DLG_TEXT[32];
 			}
-			else if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "douwesen_pending")
+			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "douwesen_pending")
 			{
 				d.Text = DLG_TEXT[33];
 			}
-			else if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "jungle_clue_pending")
+			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "jungle_clue_pending")
 			{
 				d.Text = DLG_TEXT[34];
 			}
-			else if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "dig_ready")
+			if (CheckAttribute(pchar, "quest_b1_1_status") && pchar.quest_b1_1_status == "dig_ready")
 			{
 				d.Text = DLG_TEXT[35];
 			}
