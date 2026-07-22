@@ -79,6 +79,7 @@ void RefreshAllStrings()
 {
 	int priceSum;
 	string itmName = GetItemsID(nCurScrollNum);
+	bool sellBlocked = IsTradeSellBlocked(itmName);
 	aref refitm;
 	int itmIdx = Items_FindItem(itmName,&refitm);
 	ref mchref = GetMainCharacter();
@@ -129,7 +130,7 @@ void RefreshAllStrings()
 		SendMessage(&GameInterface,"lsl",MSG_INTERFACE_MSG_TO_NODE,"CONTEXTHELP", 0);
 
 		SetSelectable("BUY_BUTTON",GetCharacterItem(refTrader,itmName)>0);
-		SetSelectable("SELL_BUTTON",GetCharacterItem(refMyCh,itmName)>0);
+		SetSelectable("SELL_BUTTON",!sellBlocked && GetCharacterItem(refMyCh,itmName)>0);
 	}
 	else
 	{
@@ -142,6 +143,46 @@ bool ItemUsedByCharacter(int itmIdx)
 {
 	if(itmIdx<0 || itmIdx>=ITEMS_QUANTITY) return false;
 	return IsEquipCharacterByItem(GetMainCharacter(),Items[itmIdx].id);
+}
+
+bool IsB11IntroProtectedItem(string itmName)
+{
+	ref pchar = GetMainCharacter();
+	if (!CheckAttribute(pchar, "quest_b1_1_status"))
+	{
+		return false;
+	}
+
+	string status = pchar.quest_b1_1_status;
+	if (status != "intro_collect" && status != "intro_ready_report")
+	{
+		return false;
+	}
+
+	for (int i = 1; i <= 16; i++)
+	{
+		if (itmName == "indian" + i)
+		{
+			return true;
+		}
+	}
+
+	return false;
+}
+
+bool IsTradeSellBlocked(string itmName)
+{
+	if (itmName == "")
+	{
+		return false;
+	}
+
+	if (IsQuestUsedItem(itmName))
+	{
+		return true;
+	}
+
+	return IsB11IntroProtectedItem(itmName);
 }
 
 int GetTradeItemPrice(int itmIdx, int tradeType)
@@ -479,6 +520,7 @@ void DoTradeOperation()
 
 	if(showType==SHOW_SELL)
 	{
+		if(IsTradeSellBlocked(itmName)) return;
 		TakeNItems(refTrader,itmName,nTradeQuantity);
 		TakeNItems(refMyCh,itmName,-nTradeQuantity);
 		AddMoneyToCharacter(mchref,nTradeQuantity*sellPrice);
@@ -519,6 +561,12 @@ void AddTradeQuantity(int incrVal)
 	string itmName = GetItemsID(nCurScrollNum);
 	if(showType==SHOW_SELL)
 	{
+		if(IsTradeSellBlocked(itmName))
+		{
+			nTradeQuantity = 0;
+			RefreshAllStrings();
+			return;
+		}
 		int realQ = GetCharacterItem(refMyCh,itmName);
 		if( realQ>0 && IsEquipCharacterByItem(refMyCh,itmName) ) {realQ--;}
 		if(realQ<nTradeQuantity)
@@ -585,8 +633,14 @@ void SetStartTradeQuantity()
 {
 	if( showType == SHOW_SELL )
 	{
-		nTradeQuantity = GetCharacterItem(refMyCh,GetItemsID(nCurScrollNum));
-		if( nTradeQuantity>0 && IsEquipCharacterByItem(refMyCh, GetItemsID(nCurScrollNum)) ) {
+		string itmName = GetItemsID(nCurScrollNum);
+		if(IsTradeSellBlocked(itmName))
+		{
+			nTradeQuantity = 0;
+			return;
+		}
+		nTradeQuantity = GetCharacterItem(refMyCh,itmName);
+		if( nTradeQuantity>0 && IsEquipCharacterByItem(refMyCh, itmName) ) {
 			nTradeQuantity--;
 		}
 		return;
@@ -599,7 +653,7 @@ void SetStartTradeQuantity()
 string GetItemStatus(string itemName, bool bIsForMy)
 {
 	if(bIsForMy) {
-		if( GetCharacterItem(refMyCh,itemName)>0 ) {return "sell";}
+		if( GetCharacterItem(refMyCh,itemName)>0 && !IsTradeSellBlocked(itemName) ) {return "sell";}
 		return "";
 	}
 

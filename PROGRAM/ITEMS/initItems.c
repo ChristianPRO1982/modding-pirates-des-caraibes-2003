@@ -252,6 +252,7 @@ void InitItems()
 	itm.model = "stat1";
 	itm.picIndex = 15;
 	itm.picTexture = "ITEMS_1";
+	itm.shown = 1;
 	itm.price = 0;
 	n++;
 
@@ -262,6 +263,7 @@ void InitItems()
 	itm.model = "stat2";
 	itm.picIndex = 15;
 	itm.picTexture = "ITEMS_1";
+	itm.shown = 1;
 	itm.price = 0;
 	n++;
 
@@ -272,6 +274,7 @@ void InitItems()
 	itm.model = "stat3";
 	itm.picIndex = 15;
 	itm.picTexture = "ITEMS_1";
+	itm.shown = 1;
 	itm.price = 0;
 	n++;
 
@@ -282,6 +285,7 @@ void InitItems()
 	itm.model = "stat1";
 	itm.picIndex = 4;
 	itm.picTexture = "ITEMS_4";
+	itm.shown = 1;
 	itm.price = 0;
 	n++;
 
@@ -292,6 +296,7 @@ void InitItems()
 	itm.model = "stat1";
 	itm.picIndex = 4;
 	itm.picTexture = "ITEMS_4";
+	itm.shown = 1;
 	itm.price = 0;
 	n++;
 /*	makeref(itm,Items[n]);
