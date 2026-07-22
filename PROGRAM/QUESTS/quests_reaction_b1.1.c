@@ -33,7 +33,10 @@
 #define B11_LOCATION_CONCEICAO "Conceicao_shore_01"
 #define B11_LOCATION_DOUWESEN "Douwesen_shore_01"
 #define B11_LOCATION_JUNGLE "Douwesen_Jungle_03"
-#define B11_LOCATION_SHIP_DECK "Ship_deck"
+#define B11_LOCATION_SHIP_DECK "Tutorial_Deck"
+#define B11_RETURN_GROUP_SHORE "reload"
+#define B11_RETURN_LOCATOR_MUELLE "boat"
+#define B11_RETURN_LOCATOR_CONCEICAO "boat"
 
 #define B11_SHIP_SCENE_MUELLE "muelle"
 #define B11_SHIP_SCENE_CONCEICAO "conceicao"
@@ -44,6 +47,7 @@
 #define B11_NPC_CONCEICAO_GUARD "PJ_B1_1_PortugueseGuard_Conceicao"
 #define B11_NPC_DOUWESEN_ENGLISH "PJ_B1_1_EnglishContact_Douwesen"
 #define B11_NPC_DOUWESEN_DUTCH "PJ_B1_1_DutchContact_Douwesen"
+#define B11_NPC_MALCOLM_HATCHER "Malcolm Hatcher"
 
 #define B11_DIALOG_FILE "Robert Christopher Silehard PJ_dialog.c"
 
@@ -312,29 +316,64 @@ void B11_ClearShipSceneRuntime()
 	DeleteAttribute(pchar, "quest_b1_1_ship_return_locator");
 }
 
-void B11_SetShipScene(string sceneId, string returnLocation)
+void B11_SetShipScene(string sceneId, string returnLocation, string returnGroup, string returnLocator)
 {
 	ref pchar = GetMainCharacter();
 
 	pchar.quest_b1_1_ship_scene = sceneId;
 	pchar.quest_b1_1_ship_return_location = returnLocation;
-	pchar.quest_b1_1_ship_return_group = "reload";
-	pchar.quest_b1_1_ship_return_locator = "reload1";
+	pchar.quest_b1_1_ship_return_group = returnGroup;
+	pchar.quest_b1_1_ship_return_locator = returnLocator;
 }
 
-void B11_BeginShipScene(string sceneId, string returnLocation)
+void B11_BeginShipScene(string sceneId, string returnLocation, string returnGroup, string returnLocator)
 {
-	B11_SetShipScene(sceneId, returnLocation);
+	B11_SetShipScene(sceneId, returnLocation, returnGroup, returnLocator);
 	B11_HideNpc(B11_NPC_MUELLE_ENGLISH);
 	B11_HideNpc(B11_NPC_MUELLE_GUARD);
 	B11_HideNpc(B11_NPC_CONCEICAO_ENGLISH);
 	B11_HideNpc(B11_NPC_CONCEICAO_GUARD);
-	DoQuestReloadToLocation(B11_LOCATION_SHIP_DECK, "reload", "locator2", B11_EVENT_SHIP_ENTER);
+	B11_HideNpc(B11_NPC_MALCOLM_HATCHER);
+	DoQuestReloadToLocation(B11_LOCATION_SHIP_DECK, "reload", "reload1", B11_EVENT_SHIP_ENTER);
+}
+
+void B11_BeginShipSceneFromNpc(string sceneId, string returnLocation, string npcId)
+{
+	string returnGroup;
+	string returnLocator;
+	ref chref;
+
+	returnGroup = B11_RETURN_GROUP_SHORE;
+	returnLocator = B11_RETURN_LOCATOR_MUELLE;
+	if (returnLocation == B11_LOCATION_CONCEICAO)
+	{
+		returnLocator = B11_RETURN_LOCATOR_CONCEICAO;
+	}
+
+	if (B11_HasNpc(npcId))
+	{
+		chref = characterFromID(npcId);
+		if (CheckAttribute(chref, "location") && chref.location == returnLocation)
+		{
+			if (CheckAttribute(chref, "location.group") && chref.location.group != "")
+			{
+				returnGroup = chref.location.group;
+			}
+			if (CheckAttribute(chref, "location.locator") && chref.location.locator != "")
+			{
+				returnLocator = chref.location.locator;
+			}
+		}
+	}
+
+	B11_BeginShipScene(sceneId, returnLocation, returnGroup, returnLocator);
 }
 
 void B11_SpawnShipScene()
 {
 	string shipScene = B11_GetShipScene();
+
+	B11_HideNpc(B11_NPC_MALCOLM_HATCHER);
 
 	if (shipScene == B11_SHIP_SCENE_MUELLE)
 	{
@@ -876,7 +915,7 @@ void B1_1_ProcessLocationEnter()
 			{
 				if (B11_GetMuelleState() == B11_MUELLE_STATE_SHIP_OFFER && !B11_HasShipScene())
 				{
-					B11_BeginShipScene(B11_SHIP_SCENE_MUELLE, B11_LOCATION_MUELLE);
+					B11_BeginShipSceneFromNpc(B11_SHIP_SCENE_MUELLE, B11_LOCATION_MUELLE, B11_NPC_MUELLE_ENGLISH);
 					return;
 				}
 				B11_SpawnMuelleScene();
@@ -888,7 +927,7 @@ void B1_1_ProcessLocationEnter()
 			{
 				if (B11_GetConceicaoState() == B11_CONCEICAO_STATE_SHIP_OFFER && !B11_HasShipScene())
 				{
-					B11_BeginShipScene(B11_SHIP_SCENE_CONCEICAO, B11_LOCATION_CONCEICAO);
+					B11_BeginShipSceneFromNpc(B11_SHIP_SCENE_CONCEICAO, B11_LOCATION_CONCEICAO, B11_NPC_CONCEICAO_ENGLISH);
 					return;
 				}
 				B11_SpawnConceicaoScene();
@@ -987,7 +1026,7 @@ bool QuestComplete_B1_1(string sQuestName)
 			}
 			B11_SetMuelleState(B11_MUELLE_STATE_SHIP_OFFER);
 			AddQuestRecord(B11_HEADER, "6");
-			B11_BeginShipScene(B11_SHIP_SCENE_MUELLE, B11_LOCATION_MUELLE);
+			B11_BeginShipSceneFromNpc(B11_SHIP_SCENE_MUELLE, B11_LOCATION_MUELLE, B11_NPC_MUELLE_ENGLISH);
 			return true;
 		break;
 
@@ -1045,7 +1084,7 @@ bool QuestComplete_B1_1(string sQuestName)
 			}
 			B11_SetConceicaoState(B11_CONCEICAO_STATE_SHIP_OFFER);
 			AddQuestRecord(B11_HEADER, "9");
-			B11_BeginShipScene(B11_SHIP_SCENE_CONCEICAO, B11_LOCATION_CONCEICAO);
+			B11_BeginShipSceneFromNpc(B11_SHIP_SCENE_CONCEICAO, B11_LOCATION_CONCEICAO, B11_NPC_CONCEICAO_ENGLISH);
 			return true;
 		break;
 
@@ -1146,6 +1185,7 @@ bool QuestComplete_B1_1(string sQuestName)
 		break;
 
 		case B11_EVENT_SHIP_RETURN:
+			LAi_SetPlayerType(pchar);
 			B11_ClearShipSceneRuntime();
 			B11_DespawnAllSceneNpcs();
 			return true;
