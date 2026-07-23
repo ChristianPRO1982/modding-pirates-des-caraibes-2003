@@ -205,6 +205,20 @@ void CreateCharacters()
 	GiveItem2Character(ch, "PJ_B1_1_STATUE_BODY");
 	GiveItem2Character(ch, "PJ_B1_1_STATUE_ARMS");
 	GiveItem2Character(ch, "PJ_B1_1_STATUE_HEAD");
+	GiveItem2Character(ch, "Chest");
+	GiveItem2Character(ch, "coins");
+	GiveItem2Character(ch, "gov_letter");
+	GiveItem2Character(ch, "legend_piece");
+	GiveItem2Character(ch, "legend_notes");
+	GiveItem2Character(ch, "legend_copy");
+	GiveItem2Character(ch, "rheims_journal");
+	GiveItem2Character(ch, "domingues_fucked");
+	GiveItem2Character(ch, "rheims_letter");
+	GiveItem2Character(ch, "pornushka");
+	GiveItem2Character(ch, "animists_amulet");
+	GiveItem2Character(ch, "letter_to_domingues");
+	GiveItem2Character(ch, "letter_to_bernard");
+	GiveItem2Character(ch, "letter_prison");
 
 	// QUESTS BEGINNINGS
 
