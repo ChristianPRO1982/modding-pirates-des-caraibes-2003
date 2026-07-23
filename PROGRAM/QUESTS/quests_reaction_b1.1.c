@@ -50,6 +50,12 @@
 #define B11_NPC_MALCOLM_HATCHER "Malcolm Hatcher"
 
 #define B11_DIALOG_FILE "Robert Christopher Silehard PJ_dialog.c"
+#define B11_DIALOG_FILE_MUELLE_ENGLISH "PJ Quest B1_1 EnglishContact_Muelle_dialog.c"
+#define B11_DIALOG_FILE_MUELLE_GUARD "PJ Quest B1_1 SpanishGuard_Muelle_dialog.c"
+#define B11_DIALOG_FILE_CONCEICAO_ENGLISH "PJ Quest B1_1 EnglishContact_Conceicao_dialog.c"
+#define B11_DIALOG_FILE_CONCEICAO_GUARD "PJ Quest B1_1 PortugueseGuard_Conceicao_dialog.c"
+#define B11_DIALOG_FILE_DOUWESEN_ENGLISH "PJ Quest B1_1 EnglishContact_Douwesen_dialog.c"
+#define B11_DIALOG_FILE_DOUWESEN_DUTCH "PJ Quest B1_1 DutchContact_Douwesen_dialog.c"
 
 #define B11_ITEM_FEET "PJ_B1_1_STATUE_FEET"
 #define B11_ITEM_BODY "PJ_B1_1_STATUE_BODY"
@@ -279,6 +285,7 @@ void B11_SetNpcGuardian(string npcId)
 void B11_AssignDialog(string npcId, string nodeName)
 {
 	ref chref;
+	string dialogFile;
 
 	if (!B11_HasNpc(npcId))
 	{
@@ -286,7 +293,32 @@ void B11_AssignDialog(string npcId, string nodeName)
 	}
 
 	chref = characterFromID(npcId);
-	chref.Dialog.Filename = B11_DIALOG_FILE;
+	dialogFile = B11_DIALOG_FILE;
+	if (npcId == B11_NPC_MUELLE_ENGLISH)
+	{
+		dialogFile = B11_DIALOG_FILE_MUELLE_ENGLISH;
+	}
+	if (npcId == B11_NPC_MUELLE_GUARD)
+	{
+		dialogFile = B11_DIALOG_FILE_MUELLE_GUARD;
+	}
+	if (npcId == B11_NPC_CONCEICAO_ENGLISH)
+	{
+		dialogFile = B11_DIALOG_FILE_CONCEICAO_ENGLISH;
+	}
+	if (npcId == B11_NPC_CONCEICAO_GUARD)
+	{
+		dialogFile = B11_DIALOG_FILE_CONCEICAO_GUARD;
+	}
+	if (npcId == B11_NPC_DOUWESEN_ENGLISH)
+	{
+		dialogFile = B11_DIALOG_FILE_DOUWESEN_ENGLISH;
+	}
+	if (npcId == B11_NPC_DOUWESEN_DUTCH)
+	{
+		dialogFile = B11_DIALOG_FILE_DOUWESEN_DUTCH;
+	}
+	chref.Dialog.Filename = dialogFile;
 	chref.Dialog.CurrentNode = nodeName;
 	chref.Dialog.TempNode = nodeName;
 }

@@ -1,4 +1,4 @@
-//nclude "DIALOGS\PJ Quest B1_1 EnglishContact_Douwesen_dialog.h"
+#include "DIALOGS\PJ Quest B1_1 EnglishContact_Douwesen_dialog.h"
 
 void ProcessDialogEvent()
 {
@@ -17,6 +17,11 @@ void ProcessDialogEvent()
 	switch(Dialog.CurrentNode)
 	{
 		case "First time":
+			Diag.CurrentNode = "B1_1_douwesen_english";
+			Dialog.CurrentNode = "B1_1_douwesen_english";
+		break;
+
+		case "B1_1_douwesen_english":
 			Dialog.defAni = "dialog_stay1";
 			Dialog.defCam = "1";
 			Dialog.defSnd = "dialogs\0\017";
@@ -27,10 +32,16 @@ void ProcessDialogEvent()
 			Dialog.cam = "1";
 			Dialog.snd = "dialogs\0\009";
 
+			QuestComplete_B1_1("PJ_B1_1_DOUWESEN_ARMS_OBTAINED");
 			d.Text = DLG_TEXT[0];
 			Link.l1 = DLG_TEXT[1];
+			Link.l1.go = "B1_1_douwesen_english_2";
+		break;
+
+		case "B1_1_douwesen_english_2":
+			d.Text = DLG_TEXT[2];
+			Link.l1 = DLG_TEXT[3];
 			Link.l1.go = "exit";
-			Diag.TempNode = "First time";
 		break;
 
 		case "exit":
