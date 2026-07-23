@@ -58,7 +58,7 @@ int CreateTempQuestCharacters(int n)
 	ch.location = "none";
 	ch.location.group = "";
 	ch.location.locator = "";
-		ch.Dialog.Filename = "Redmond Soldier_dialog.c";
+		ch.Dialog.Filename = "PJ Quest B1_1 EnglishContact_Muelle_dialog.c";
 	ch.greeting = "Gr_Redmond Soldier";
 	ch.nation = ENGLAND;
 		ch.rank = 12;
@@ -95,7 +95,7 @@ int CreateTempQuestCharacters(int n)
 	ch.location = "none";
 	ch.location.group = "";
 	ch.location.locator = "";
-		ch.Dialog.Filename = "Isla Muelle soldier_dialog.c";
+		ch.Dialog.Filename = "PJ Quest B1_1 SpanishGuard_Muelle_dialog.c";
 	ch.greeting = "Gr_isla muelle soldier";
 	ch.nation = SPAIN;
 		ch.rank = 12;
@@ -131,7 +131,7 @@ int CreateTempQuestCharacters(int n)
 	ch.location = "none";
 	ch.location.group = "";
 	ch.location.locator = "";
-		ch.Dialog.Filename = "Redmond Soldier_dialog.c";
+		ch.Dialog.Filename = "PJ Quest B1_1 EnglishContact_Conceicao_dialog.c";
 	ch.greeting = "Gr_Redmond Soldier";
 	ch.nation = ENGLAND;
 		ch.rank = 12;
@@ -168,7 +168,7 @@ int CreateTempQuestCharacters(int n)
 	ch.location = "none";
 	ch.location.group = "";
 	ch.location.locator = "";
-		ch.Dialog.Filename = "Conceicao Soldier_dialog.c";
+		ch.Dialog.Filename = "PJ Quest B1_1 PortugueseGuard_Conceicao_dialog.c";
 	ch.greeting = "Gr_Conceicao Soldier";
 	ch.nation = PORTUGAL;
 		ch.rank = 12;
@@ -204,7 +204,7 @@ int CreateTempQuestCharacters(int n)
 	ch.location = "none";
 	ch.location.group = "";
 	ch.location.locator = "";
-		ch.Dialog.Filename = "Redmond Soldier_dialog.c";
+		ch.Dialog.Filename = "PJ Quest B1_1 EnglishContact_Douwesen_dialog.c";
 	ch.greeting = "Gr_Redmond Soldier";
 	ch.nation = ENGLAND;
 		ch.rank = 12;
@@ -241,7 +241,7 @@ int CreateTempQuestCharacters(int n)
 	ch.location = "none";
 	ch.location.group = "";
 	ch.location.locator = "";
-		ch.Dialog.Filename = "Douwesen Soldier_Dialog.c";
+		ch.Dialog.Filename = "PJ Quest B1_1 DutchContact_Douwesen_dialog.c";
 	ch.greeting = "Gr_Douwesen Soldier";
 	ch.nation = HOLLAND;
 		ch.rank = 12;
