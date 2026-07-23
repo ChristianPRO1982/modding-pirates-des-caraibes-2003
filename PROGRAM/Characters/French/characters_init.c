@@ -199,6 +199,12 @@ void CreateCharacters()
 	// GiveItem2Character(ch, "indian14");
 	// GiveItem2Character(ch, "indian15");
 	// GiveItem2Character(ch, "indian16");
+	GiveItem2Character(ch, "idol");
+	GiveItem2Character(ch, "icollection");
+	GiveItem2Character(ch, "PJ_B1_1_STATUE_FEET");
+	GiveItem2Character(ch, "PJ_B1_1_STATUE_BODY");
+	GiveItem2Character(ch, "PJ_B1_1_STATUE_ARMS");
+	GiveItem2Character(ch, "PJ_B1_1_STATUE_HEAD");
 
 	// QUESTS BEGINNINGS
 
