@@ -1,4 +1,4 @@
-//nclude "DIALOGS\Robert Christopher Silehard PJ_dialog.h"
+#include "DIALOGS\Robert Christopher Silehard PJ_dialog.h"
 
 bool B11_IsSilehard(ref NPChar)
 {
@@ -43,8 +43,8 @@ void ProcessDialogEvent()
 
 			if (!B11_IsSilehard(NPChar))
 			{
-				d.Text = DLG_TEXT[81];
-				Link.l1 = DLG_TEXT[82];
+				d.Text = DLG_TEXT[45];
+				Link.l1 = DLG_TEXT[46];
 				Link.l1.go = "exit";
 				Diag.TempNode = "First time";
 				break;
@@ -219,38 +219,38 @@ void ProcessDialogEvent()
 
 		case "B1_1_stage2_reminder":
 			B11_SyncTransverseState();
-			d.Text = DLG_TEXT[83];
-			Link.l1 = DLG_TEXT[84];
+			d.Text = DLG_TEXT[47];
+			Link.l1 = DLG_TEXT[48];
 			Link.l1.go = "exit";
 		break;
 
 		case "B1_1_muelle_reminder":
-			d.Text = DLG_TEXT[83];
-			Link.l1 = DLG_TEXT[84];
+			d.Text = DLG_TEXT[47];
+			Link.l1 = DLG_TEXT[48];
 			Link.l1.go = "exit";
 		break;
 
 		case "B1_1_conceicao_reminder":
-			d.Text = DLG_TEXT[85];
-			Link.l1 = DLG_TEXT[86];
+			d.Text = DLG_TEXT[49];
+			Link.l1 = DLG_TEXT[50];
 			Link.l1.go = "exit";
 		break;
 
 		case "B1_1_douwesen_reminder":
-			d.Text = DLG_TEXT[87];
-			Link.l1 = DLG_TEXT[88];
+			d.Text = DLG_TEXT[51];
+			Link.l1 = DLG_TEXT[52];
 			Link.l1.go = "exit";
 		break;
 
 		case "B1_1_jungle_reminder":
-			d.Text = DLG_TEXT[89];
-			Link.l1 = DLG_TEXT[90];
+			d.Text = DLG_TEXT[53];
+			Link.l1 = DLG_TEXT[54];
 			Link.l1.go = "exit";
 		break;
 
 		case "B1_1_dig_reminder":
-			d.Text = DLG_TEXT[91];
-			Link.l1 = DLG_TEXT[92];
+			d.Text = DLG_TEXT[55];
+			Link.l1 = DLG_TEXT[56];
 			Link.l1.go = "exit";
 		break;
 
