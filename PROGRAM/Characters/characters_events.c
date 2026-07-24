@@ -179,7 +179,7 @@ void chrCharacterKeys()
 	// pour connaitre les coordonnées du PJ X,Y,Z
 	if(GetCharacterPos(PChar, &locx, &locy, &locz))
 	{
-		Log_SetStringToLog("PJ XYZ: " + FloatToString(locx, 2) + ", " + FloatToString(locy, 2) + ", " + FloatToString(locz, 2));
+		// Log_SetStringToLog("PJ XYZ: " + FloatToString(locx, 2) + ", " + FloatToString(locy, 2) + ", " + FloatToString(locz, 2));
 	}
 	// FIN ajout PJ
 	//Skip if interface active
