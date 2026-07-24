@@ -1017,8 +1017,10 @@ Silehard m'a confié une affaire d'antiquités incas qui paraissait d'abord assez 
 #TEXT	2
 Cette première collecte n'était qu'un prélude. Silehard m'a parlé d'une ancienne secte liée à une statue inca dispersée entre plusieurs contacts anglais, et il exige désormais plus de discrétion.
 #TEXT	3
-Les fragments de la statue m'ont mené d'Isla Muelle à Conceicao puis à Douwesen. Le dernier morceau ne relevait plus du réseau de Silehard, mais d'un ancien indice dans la jungle.
+Les fragments de la statue m'ont mené d'Isla Muelle à Conceicao puis à Douwesen. Mais l'embuscade tendue autour de la tête prouve qu'il y a quelque chose de louche derrière tout cela, et l'organisation de Shango est peut-être plus trouble encore qu'elle ne le paraissait.
 #TEXT	4
+Pendant le retour vers Redmond, j'ai enfin pu reconstituer la statue complète. Il ne me reste plus qu'à la remettre à Silehard pour voir ce qu'il attendait réellement de moi.
+#TEXT	5
 J'ai remis la statue complète à Silehard. Son intérêt pour cette affaire dépasse celui d'un simple collectionneur, et je doute que tout cela s'arrête ici.
 #QUEST	PJ_B1_1
 Les Fils de l'Ombre d'Inty

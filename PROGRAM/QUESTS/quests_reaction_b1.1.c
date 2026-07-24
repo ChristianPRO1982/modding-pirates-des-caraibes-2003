@@ -889,7 +889,7 @@ void B11_AdvanceToFinalReady()
 
 	pchar.quest_b1_1_redmond_rebuilt = "1";
 	B11_SetStatus(B11_STATUS_FINAL_READY);
-	B1_AddJournalRecord("3");
+	B1_AddJournalRecord("4");
 	AddQuestRecord(B11_HEADER, "15");
 }
 
@@ -904,7 +904,7 @@ void B11_FinalizeQuest()
 	B11_PayFinalReward();
 	B11_SetArcCompleted();
 	B11_SetStatus(B11_STATUS_COMPLETED);
-	B1_AddJournalRecord("4");
+	B1_AddJournalRecord("5");
 	AddQuestRecord(B11_HEADER, "14");
 	CloseQuestHeader(B11_HEADER);
 	DoQuestCheckDelay(B11_EVENT_CLEANUP, 0.0);
@@ -1349,6 +1349,7 @@ bool QuestComplete_B1_1(string sQuestName)
 			B11_HideNpc(B11_NPC_INTY_WARRIOR1);
 			B11_HideNpc(B11_NPC_INTY_WARRIOR2);
 			B11_HideNpc(B11_NPC_INTY_WARRIOR3);
+			B1_AddJournalRecord("3");
 			AddQuestRecord(B11_HEADER, "13");
 			return true;
 		break;
