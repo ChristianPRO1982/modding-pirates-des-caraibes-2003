@@ -6,7 +6,6 @@ void HELP_ProcessLocationEnter()
 	string homelocation;
 	homelocation = pchar.location;
 	
-	PlaceCharacter(characterFromID("PJ_B1_1_EnglishContact_Muelle"), "goto", homelocation); //à supprimer
 	switch (pchar.location)
 	{
 		case "Conceicao_port": PlaceCharacter(characterFromID("PJ HELP Malcolm Hatcher"), "goto", homelocation); break;
