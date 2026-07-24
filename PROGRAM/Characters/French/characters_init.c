@@ -204,11 +204,11 @@ void CreateCharacters()
 	// GiveItem2Character(ch, "indian16");
 	// GiveItem2Character(ch, "idol");
 	// GiveItem2Character(ch, "icollection");
-	GiveItem2Character(ch, "PJ_B1_1_STATUE_FEET");
-	GiveItem2Character(ch, "PJ_B1_1_STATUE_BODY");
-	GiveItem2Character(ch, "PJ_B1_1_STATUE_ARMS");
-	GiveItem2Character(ch, "PJ_B1_1_STATUE_HEAD");
-	GiveItem2Character(ch, "PJ_B1_1_STATUE_FULL");
+	// GiveItem2Character(ch, "PJ_B1_1_STATUE_FEET");
+	// GiveItem2Character(ch, "PJ_B1_1_STATUE_BODY");
+	// GiveItem2Character(ch, "PJ_B1_1_STATUE_ARMS");
+	// GiveItem2Character(ch, "PJ_B1_1_STATUE_HEAD");
+	// GiveItem2Character(ch, "PJ_B1_1_STATUE_FULL");
 	// GiveItem2Character(ch, "Chest");// coffre
 	// GiveItem2Character(ch, "coins");// pièce maudite
 	// GiveItem2Character(ch, "gov_letter");// lettre cachetée ouverte

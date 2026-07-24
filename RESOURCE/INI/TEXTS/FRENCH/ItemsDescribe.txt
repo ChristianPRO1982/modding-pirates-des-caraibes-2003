@@ -45,6 +45,36 @@ itmdescr_incas_collection
 Une collection de trésors incas.
 }
 
+PJ_B1_1_itmname_statue_feet	{Statue mystique inca}
+PJ_B1_1_itmdescr_statue_feet
+{
+Les pieds de la statue inca.
+}
+
+PJ_B1_1_itmname_statue_body	{Statue mystique inca}
+PJ_B1_1_itmdescr_statue_body
+{
+Le corps de la statue inca.
+}
+
+PJ_B1_1_itmname_statue_arms	{Statue mystique inca}
+PJ_B1_1_itmdescr_statue_arms
+{
+Les bras de la statue inca.
+}
+
+PJ_B1_1_itmname_statue_head	{Statue mystique inca}
+PJ_B1_1_itmdescr_statue_head
+{
+La tête de la statue inca.
+}
+
+PJ_B1_1_itmname_statue_full	{Statue mystique inca}
+PJ_B1_1_itmdescr_statue_full
+{
+La statue inca complète, reconstituée à partir de ses fragments.
+}
+
 itmname_piece_of_legend	{Tablette}
 itmdescr_piece_of_legend
 {

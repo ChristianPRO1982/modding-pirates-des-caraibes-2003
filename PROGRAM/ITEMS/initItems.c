@@ -247,8 +247,8 @@ void InitItems()
 
 	makeref(itm,Items[n]);
 	itm.id = "PJ_B1_1_STATUE_FEET";
-	itm.name = "itmname_incas_collection";
-	itm.describe = "itmdescr_incas_collection";
+	itm.name = "PJ_B1_1_itmname_statue_feet";
+	itm.describe = "PJ_B1_1_itmdescr_statue_feet";
 	itm.model = "";
 	itm.picIndex = 5;
 	itm.picTexture = "ITEMS_4";
@@ -258,8 +258,8 @@ void InitItems()
 
 	makeref(itm,Items[n]);
 	itm.id = "PJ_B1_1_STATUE_BODY";
-	itm.name = "itmname_incas_collection";
-	itm.describe = "itmdescr_incas_collection";
+	itm.name = "PJ_B1_1_itmname_statue_body";
+	itm.describe = "PJ_B1_1_itmdescr_statue_body";
 	itm.model = "";
 	itm.picIndex = 5;
 	itm.picTexture = "ITEMS_4";
@@ -269,8 +269,8 @@ void InitItems()
 
 	makeref(itm,Items[n]);
 	itm.id = "PJ_B1_1_STATUE_ARMS";
-	itm.name = "itmname_incas_collection";
-	itm.describe = "itmdescr_incas_collection";
+	itm.name = "PJ_B1_1_itmname_statue_arms";
+	itm.describe = "PJ_B1_1_itmdescr_statue_arms";
 	itm.model = "";
 	itm.picIndex = 5;
 	itm.picTexture = "ITEMS_4";
@@ -280,8 +280,8 @@ void InitItems()
 
 	makeref(itm,Items[n]);
 	itm.id = "PJ_B1_1_STATUE_HEAD";
-	itm.name = "itmname_incas_collection";
-	itm.describe = "courouloucoucou paloma";
+	itm.name = "PJ_B1_1_itmname_statue_head";
+	itm.describe = "PJ_B1_1_itmdescr_statue_head";
 	itm.model = "";
 	itm.picIndex = 5;
 	itm.picTexture = "ITEMS_4";
@@ -291,8 +291,8 @@ void InitItems()
 
 	makeref(itm,Items[n]);
 	itm.id = "PJ_B1_1_STATUE_FULL";
-	itm.name = "itmname_incas_idol";
-	itm.describe = "itmdescr_incas_idol";
+	itm.name = "PJ_B1_1_itmname_statue_full";
+	itm.describe = "PJ_B1_1_itmdescr_statue_full";
 	itm.model = "stat1";
 	itm.picIndex = 4;
 	itm.picTexture = "ITEMS_4";

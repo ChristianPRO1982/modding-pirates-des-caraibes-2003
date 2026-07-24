@@ -1,30 +1,30 @@
 # Ajouter un item
 
-Ce document décrit la démarche à suivre pour créer un item dans le jeu à partir de l'organisation actuellement visible dans `PROGRAM`.
+Ce document dï¿½crit la dï¿½marche ï¿½ suivre pour crï¿½er un item dans le jeu ï¿½ partir de l'organisation actuellement visible dans `PROGRAM`.
 
 ## Vue d'ensemble
 
-Dans ce code, "créer un item" peut vouloir dire trois choses différentes :
+Dans ce code, "crï¿½er un item" peut vouloir dire trois choses diffï¿½rentes :
 
-1. déclarer l'item dans la base statique `Items[]` ;
+1. dï¿½clarer l'item dans la base statique `Items[]` ;
 2. lui donner un comportement particulier si c'est un objet utilisable ;
-3. le faire apparaître en jeu, soit dans l'inventaire d'un personnage, soit posé dans une location.
+3. le faire apparaï¿½tre en jeu, soit dans l'inventaire d'un personnage, soit posï¿½ dans une location.
 
 Le point important est le suivant :
 
-- la définition de l'item est dans `PROGRAM/ITEMS/initItems.c`
+- la dï¿½finition de l'item est dans `PROGRAM/ITEMS/initItems.c`
 - sa recherche par identifiant est faite par `Items_FindItem(...)`
-- l'ajout à l'inventaire passe généralement par `GiveItem2Character(...)`
+- l'ajout ï¿½ l'inventaire passe gï¿½nï¿½ralement par `GiveItem2Character(...)`
 
-## 1. Déclarer l'item dans `PROGRAM/ITEMS/initItems.c`
+## 1. Dï¿½clarer l'item dans `PROGRAM/ITEMS/initItems.c`
 
-Le registre principal des items est initialisé dans `InitItems()` dans `PROGRAM/ITEMS/initItems.c`.
+Le registre principal des items est initialisï¿½ dans `InitItems()` dans `PROGRAM/ITEMS/initItems.c`.
 
-Le tableau `Items[]` est dimensionné par :
+Le tableau `Items[]` est dimensionnï¿½ par :
 
 - `ITEMS_QUANTITY` dans `PROGRAM/ITEMS/items.h`
 
-Chaque item est décrit par un bloc du type :
+Chaque item est dï¿½crit par un bloc du type :
 
 ```c
 makeref(itm,Items[n]);
@@ -43,52 +43,52 @@ n++;
 - `itm.id`
   identifiant technique unique de l'item
 - `itm.name`
-  clé de texte utilisée pour le nom affiché
+  clï¿½ de texte utilisï¿½e pour le nom affichï¿½
 - `itm.describe`
-  clé de texte utilisée pour la description affichée
+  clï¿½ de texte utilisï¿½e pour la description affichï¿½e
 - `itm.model`
-  modèle 3D utilisé si l'objet doit exister physiquement dans une location
+  modï¿½le 3D utilisï¿½ si l'objet doit exister physiquement dans une location
 - `itm.picIndex`
-  index de l'icône dans l'atlas UI
+  index de l'icï¿½ne dans l'atlas UI
 - `itm.picTexture`
-  atlas d'icônes utilisé dans l'inventaire et les interfaces
+  atlas d'icï¿½nes utilisï¿½ dans l'inventaire et les interfaces
 - `itm.price`
   prix de l'item
 
 ### Champs optionnels utiles
 
 - `itm.groupID`
-  groupe d'équipement, utilisé notamment pour les armes, pistolets et longues-vues
+  groupe d'ï¿½quipement, utilisï¿½ notamment pour les armes, pistolets et longues-vues
 - `itm.folder`
-  dossier de chargement des modèles si ce n'est pas le dossier par défaut `items`
+  dossier de chargement des modï¿½les si ce n'est pas le dossier par dï¿½faut `items`
 - `itm.startLocation`
-  location où l'objet est physiquement posé au départ
+  location oï¿½ l'objet est physiquement posï¿½ au dï¿½part
 - `itm.startLocator`
-  locator précis où l'objet apparaît dans la location
+  locator prï¿½cis oï¿½ l'objet apparaï¿½t dans la location
 - `itm.useLocation`
-  location où l'objet peut être utilisé
+  location oï¿½ l'objet peut ï¿½tre utilisï¿½
 - `itm.useLocator`
-  locator précis d'utilisation
+  locator prï¿½cis d'utilisation
 - `itm.shown`
-  drapeau de visibilité pour les objets posés dans le monde
+  drapeau de visibilitï¿½ pour les objets posï¿½s dans le monde
 
-## 2. Comprendre la résolution d'un item
+## 2. Comprendre la rï¿½solution d'un item
 
 Le moteur retrouve un item par son identifiant via `Items_FindItem(...)` dans `PROGRAM/ITEMS/itemLogic.c`.
 
-La résolution est directe :
+La rï¿½solution est directe :
 
 - le code parcourt `Items[]`
 - il compare `curItem.id == itemID`
 - il retourne l'index ou `-1` si l'item n'existe pas
 
-Conséquence pratique :
+Consï¿½quence pratique :
 
-- l'id doit être strictement unique ;
-- toute faute de casse ou de frappe dans un `GiveItem2Character(...)` échoue ;
+- l'id doit ï¿½tre strictement unique ;
+- toute faute de casse ou de frappe dans un `GiveItem2Character(...)` ï¿½choue ;
 - si l'id n'existe pas, `TakeNItems(...)` trace un warning `not implemented`.
 
-## 3. Donner l'item à un personnage
+## 3. Donner l'item ï¿½ un personnage
 
 L'API d'usage normal est dans `PROGRAM/Characters/CharacterUtilite.c` :
 
@@ -96,7 +96,7 @@ L'API d'usage normal est dans `PROGRAM/Characters/CharacterUtilite.c` :
 GiveItem2Character(ch, "my_item");
 ```
 
-Cette fonction appelle en réalité :
+Cette fonction appelle en rï¿½alitï¿½ :
 
 ```c
 TakeNItems(_refCharacter, itemName, 1);
@@ -108,7 +108,7 @@ Pour retirer un item :
 TakeItemFromCharacter(ch, "my_item");
 ```
 
-Pour vérifier sa présence :
+Pour vï¿½rifier sa prï¿½sence :
 
 ```c
 CheckCharacterItem(ch, "my_item");
@@ -116,8 +116,8 @@ CheckCharacterItem(ch, "my_item");
 
 ### Usages typiques
 
-- donner un objet de quête au joueur dans `PROGRAM/QUESTS/quests_reaction.c`
-- équiper un PNJ dans un fichier de `PROGRAM/Characters/.../init/*.c`
+- donner un objet de quï¿½te au joueur dans `PROGRAM/QUESTS/quests_reaction.c`
+- ï¿½quiper un PNJ dans un fichier de `PROGRAM/Characters/.../init/*.c`
 - donner une arme ou un pistolet pendant l'initialisation d'un personnage
 
 ## 4. Poser un item dans une location
@@ -128,7 +128,7 @@ La logique est dans `PROGRAM/ITEMS/itemLogic.c`.
 
 ### Apparition physique
 
-Un item peut être posé dans une location si on renseigne :
+Un item peut ï¿½tre posï¿½ dans une location si on renseigne :
 
 - `startLocation`
 - `startLocator`
@@ -150,7 +150,7 @@ Quand le joueur interagit avec le locator, `Item_OnPickItem()` :
 
 ### Usage d'un item sur un locator
 
-Si l'item doit être utilisé dans le décor, il faut aussi définir :
+Si l'item doit ï¿½tre utilisï¿½ dans le dï¿½cor, il faut aussi dï¿½finir :
 
 - `useLocation`
 - `useLocator`
@@ -159,34 +159,34 @@ Alors `Item_OnUseItem()` :
 
 - place visuellement l'objet sur le locator ;
 - retire l'objet de l'inventaire ;
-- déclenche `CompleteQuestName("OnUse_"+Items[activeItem].id);`
+- dï¿½clenche `CompleteQuestName("OnUse_"+Items[activeItem].id);`
 
-Ce point est important : un item "utilisable dans le monde" peut servir de déclencheur de quête via le nom `OnUse_<item_id>`.
+Ce point est important : un item "utilisable dans le monde" peut servir de dï¿½clencheur de quï¿½te via le nom `OnUse_<item_id>`.
 
-## 5. Créer un item consommable ou à effet
+## 5. Crï¿½er un item consommable ou ï¿½ effet
 
-Les effets d'usage standard sont gérés dans `PROGRAM/ITEMS/items_utilite.c`.
+Les effets d'usage standard sont gï¿½rï¿½s dans `PROGRAM/ITEMS/items_utilite.c`.
 
-Exemples déjà supportés :
+Exemples dï¿½jï¿½ supportï¿½s :
 
 - potion de soin via `potion.health`
 - antidote via `potion.antidote`
-- son à jouer via `potion.sound`
+- son ï¿½ jouer via `potion.sound`
 
 La fonction `DoCharacterUsedItem(...)` :
 
 - retire l'item ;
-- applique son effet si les attributs attendus sont présents.
+- applique son effet si les attributs attendus sont prï¿½sents.
 
-Donc pour créer un consommable simple, il faut :
+Donc pour crï¿½er un consommable simple, il faut :
 
-1. déclarer l'item dans `initItems.c`
+1. dï¿½clarer l'item dans `initItems.c`
 2. lui ajouter les attributs attendus, par exemple `itm.potion.health = 30.0;`
-3. vérifier qu'il entre bien dans les flux d'usage déjà existants
+3. vï¿½rifier qu'il entre bien dans les flux d'usage dï¿½jï¿½ existants
 
-Si l'effet désiré n'existe pas encore, il faut étendre `DoCharacterUsedItem(...)`.
+Si l'effet dï¿½sirï¿½ n'existe pas encore, il faut ï¿½tendre `DoCharacterUsedItem(...)`.
 
-## 6. Gérer l'inventaire et l'interface
+## 6. Gï¿½rer l'inventaire et l'interface
 
 Les interfaces ouvrent le fichier de langue `ItemsDescribe.txt` pour afficher le nom et la description des items.
 
@@ -197,7 +197,7 @@ Le code le montre notamment dans :
 - `PROGRAM/INTERFACE/itemstrade.c`
 - `PROGRAM/ITEMS/itemLogic.c`
 
-Les atlas d'icônes sont référencés par `picTexture`, par exemple :
+Les atlas d'icï¿½nes sont rï¿½fï¿½rencï¿½s par `picTexture`, par exemple :
 
 - `ITEMS_1`
 - `ITEMS_2`
@@ -206,14 +206,14 @@ Les atlas d'icônes sont référencés par `picTexture`, par exemple :
 - `ITEMS_5`
 - `ITEMS_6`
 
-### Point critique : où ajouter l'image de l'item
+### Point critique : oï¿½ ajouter l'image de l'item
 
-Il faut distinguer deux images différentes :
+Il faut distinguer deux images diffï¿½rentes :
 
-- l'icône d'inventaire ;
-- le visuel 3D de l'objet posé dans le monde.
+- l'icï¿½ne d'inventaire ;
+- le visuel 3D de l'objet posï¿½ dans le monde.
 
-#### Icône d'inventaire
+#### Icï¿½ne d'inventaire
 
 Pour l'inventaire, le code ne pointe pas vers un fichier image par item, mais vers un atlas via :
 
@@ -227,32 +227,74 @@ itm.picIndex = 4;
 itm.picTexture = "ITEMS_4";
 ```
 
-Cela veut dire qu'en pratique l'image doit être ajoutée dans l'atlas correspondant à `ITEMS_1` à `ITEMS_6`, pas comme un fichier isolé déclaré directement dans l'item.
+### Point critique : `itm.name` et `itm.describe` sont des cles techniques
+
+Les champs :
+
+- `itm.name`
+- `itm.describe`
+
+ne contiennent pas directement le texte affiche au joueur. Ils pointent vers des identifiants techniques qui doivent exister dans :
+
+- `RESOURCE/INI/TEXTS/FRENCH/ItemsDescribe.txt`
+
+Exemple :
+
+```c
+makeref(itm,Items[n]);
+itm.id = "PJ_B1_1_STATUE_ARMS";
+itm.name = "PJ_B1_1_itmname_statue_arms";
+itm.describe = "PJ_B1_1_itmdescr_statue_arms";
+```
+
+et dans `ItemsDescribe.txt` :
+
+```txt
+PJ_B1_1_itmname_statue_arms	{Bras de statue mystique inca}
+PJ_B1_1_itmdescr_statue_arms
+{
+Les bras de la statue inca.
+}
+```
+
+Convention recommandee :
+
+- utiliser un prefixe stable lie a la quete ou au systeme, par exemple `PJ_B1_1_`
+- garder la forme `...itmname...` pour le nom et `...itmdescr...` pour la description
+- pour des objets de quete suivis individuellement dans l'inventaire, preferer des cles dediees a des cles generiques partagees
+
+Consequence pratique :
+
+- si la cle n'existe pas dans `ItemsDescribe.txt`, les interfaces ne peuvent pas afficher correctement le nom ou la description ;
+- reutiliser une cle generique n'est correct que pour des objets reellement interchangeables, pas pour des fragments de quete que le joueur doit distinguer un par un.
+
+
+Cela veut dire qu'en pratique l'image doit ï¿½tre ajoutï¿½e dans l'atlas correspondant ï¿½ `ITEMS_1` ï¿½ `ITEMS_6`, pas comme un fichier isolï¿½ dï¿½clarï¿½ directement dans l'item.
 
 Ce que le code permet d'affirmer :
 
 - l'interface lit `picTexture` ;
-- les autres textures UI du projet sont très souvent référencées en `.tga` ;
-- il est donc très probable que les atlas d'items réels soient eux aussi des textures du même type.
+- les autres textures UI du projet sont trï¿½s souvent rï¿½fï¿½rencï¿½es en `.tga` ;
+- il est donc trï¿½s probable que les atlas d'items rï¿½els soient eux aussi des textures du mï¿½me type.
 
-Ce que je ne peux pas confirmer depuis ce dépôt :
+Ce que je ne peux pas confirmer depuis ce dï¿½pï¿½t :
 
-- l'emplacement exact des fichiers physiques `ITEMS_1` à `ITEMS_6` ;
-- leur résolution ;
-- leur découpage précis ;
+- l'emplacement exact des fichiers physiques `ITEMS_1` ï¿½ `ITEMS_6` ;
+- leur rï¿½solution ;
+- leur dï¿½coupage prï¿½cis ;
 - s'il existe une convention additionnelle `.tx` ou autre dans les assets absents de cette copie.
 
 Conclusion prudente :
 
-- si tu ajoutes une nouvelle icône, il faut très probablement modifier un atlas d'items existant côté ressources ;
-- le format le plus vraisemblable est `.tga`, mais ce dépôt ne permet pas de le prouver directement pour les atlas `ITEMS_*`.
+- si tu ajoutes une nouvelle icï¿½ne, il faut trï¿½s probablement modifier un atlas d'items existant cï¿½tï¿½ ressources ;
+- le format le plus vraisemblable est `.tga`, mais ce dï¿½pï¿½t ne permet pas de le prouver directement pour les atlas `ITEMS_*`.
 
-#### Modèle visible dans le monde
+#### Modï¿½le visible dans le monde
 
-Si l'objet doit apparaître physiquement dans une location, ce n'est pas une simple image d'interface. Le code charge un modèle via :
+Si l'objet doit apparaï¿½tre physiquement dans une location, ce n'est pas une simple image d'interface. Le code charge un modï¿½le via :
 
 - `itm.model`
-- éventuellement `itm.folder`
+- ï¿½ventuellement `itm.folder`
 
 Le chargement est fait dans `PROGRAM/ITEMS/itemLogic.c` :
 
@@ -265,36 +307,36 @@ SendMessage(&_itemModel, "ls", MSG_MODEL_LOAD_GEO, itemFolder + "\\" + _item.mod
 Cela montre que :
 
 - l'objet monde doit exister dans un dossier d'assets de type `items\...` ;
-- il faut un modèle géométrique compatible avec `MSG_MODEL_LOAD_GEO` ;
-- ce n'est pas le même asset que l'icône d'inventaire.
+- il faut un modï¿½le gï¿½omï¿½trique compatible avec `MSG_MODEL_LOAD_GEO` ;
+- ce n'est pas le mï¿½me asset que l'icï¿½ne d'inventaire.
 
-Point de limite important dans ce dépôt :
+Point de limite important dans ce dï¿½pï¿½t :
 
-- le code référence bien `ItemsDescribe.txt`
-- mais les fichiers de langue et certains assets UI ne sont pas présents ici
+- le code rï¿½fï¿½rence bien `ItemsDescribe.txt`
+- mais les fichiers de langue et certains assets UI ne sont pas prï¿½sents ici
 
-Il faut donc éviter d'inventer leur contenu depuis cette seule copie du dépôt.
+Il faut donc ï¿½viter d'inventer leur contenu depuis cette seule copie du dï¿½pï¿½t.
 
-## 7. Définir un alias dans `PROGRAM/ITEMS/items.h`
+## 7. Dï¿½finir un alias dans `PROGRAM/ITEMS/items.h`
 
-Si l'item doit être utilisé souvent dans les scripts, il peut être utile d'ajouter une constante dans `PROGRAM/ITEMS/items.h`, par exemple :
+Si l'item doit ï¿½tre utilisï¿½ souvent dans les scripts, il peut ï¿½tre utile d'ajouter une constante dans `PROGRAM/ITEMS/items.h`, par exemple :
 
 ```c
 #define MY_SPECIAL_ITEM "my_item"
 ```
 
-Cela permet d'éviter la répétition de chaînes littérales dans les quêtes.
+Cela permet d'ï¿½viter la rï¿½pï¿½tition de chaï¿½nes littï¿½rales dans les quï¿½tes.
 
-Le dépôt montre déjà ce pattern pour plusieurs objets de quête, par exemple :
+Le dï¿½pï¿½t montre dï¿½jï¿½ ce pattern pour plusieurs objets de quï¿½te, par exemple :
 
 - `INCAS_IDOL`
 - `INCAS_COLLECTION`
 - `RHEIMS_JOURNAL`
 - `COMPRAMAT_TO_DOMIGUES`
 
-## 8. Procédure conseillée
+## 8. Procï¿½dure conseillï¿½e
 
-### Cas simple : item d'inventaire sans comportement spécial
+### Cas simple : item d'inventaire sans comportement spï¿½cial
 
 1. ajouter un bloc dans `PROGRAM/ITEMS/initItems.c`
 2. choisir un `id` unique
@@ -302,41 +344,41 @@ Le dépôt montre déjà ce pattern pour plusieurs objets de quête, par exemple :
 4. ajouter si besoin une constante dans `PROGRAM/ITEMS/items.h`
 5. donner l'objet via `GiveItem2Character(...)`
 
-### Cas intermédiaire : objet posé dans le monde
+### Cas intermï¿½diaire : objet posï¿½ dans le monde
 
-1. créer l'item dans `initItems.c`
+1. crï¿½er l'item dans `initItems.c`
 2. renseigner `model`
-3. définir `startLocation`, `startLocator`, `shown`
-4. tester son affichage à l'entrée dans la location
-5. vérifier que le ramassage ajoute bien l'objet à l'inventaire
+3. dï¿½finir `startLocation`, `startLocator`, `shown`
+4. tester son affichage ï¿½ l'entrï¿½e dans la location
+5. vï¿½rifier que le ramassage ajoute bien l'objet ï¿½ l'inventaire
 
-### Cas avancé : objet utilisable dans le décor
+### Cas avancï¿½ : objet utilisable dans le dï¿½cor
 
-1. créer l'item dans `initItems.c`
-2. définir `useLocation` et `useLocator`
-3. vérifier que le locator d'usage existe dans la location
-4. brancher une quête ou une logique sur `OnUse_<item_id>` si nécessaire
+1. crï¿½er l'item dans `initItems.c`
+2. dï¿½finir `useLocation` et `useLocator`
+3. vï¿½rifier que le locator d'usage existe dans la location
+4. brancher une quï¿½te ou une logique sur `OnUse_<item_id>` si nï¿½cessaire
 
-### Cas avancé : objet consommable
+### Cas avancï¿½ : objet consommable
 
-1. créer l'item dans `initItems.c`
+1. crï¿½er l'item dans `initItems.c`
 2. lui ajouter les attributs attendus par `items_utilite.c`
-3. compléter `DoCharacterUsedItem(...)` si l'effet n'existe pas encore
+3. complï¿½ter `DoCharacterUsedItem(...)` si l'effet n'existe pas encore
 
 ## 9. Checklist de validation
 
 - l'id de l'item est unique ;
 - `Items_FindItem(...)` le retrouve ;
-- les clés `itmname_*` et `itmdescr_*` existent bien côté ressources réelles du jeu ;
-- l'icône `picTexture` / `picIndex` pointe vers quelque chose de valide ;
-- le `model` existe si l'objet doit être visible dans une location ;
+- les clï¿½s `itmname_*` et `itmdescr_*` existent bien cï¿½tï¿½ ressources rï¿½elles du jeu ;
+- l'icï¿½ne `picTexture` / `picIndex` pointe vers quelque chose de valide ;
+- le `model` existe si l'objet doit ï¿½tre visible dans une location ;
 - `GiveItem2Character(...)` fonctionne sans warning ;
-- le comportement d'usage est cohérent avec `items_utilite.c` ou la quête associée ;
-- l'item apparaît bien dans l'inventaire et dans l'interface.
+- le comportement d'usage est cohï¿½rent avec `items_utilite.c` ou la quï¿½te associï¿½e ;
+- l'item apparaï¿½t bien dans l'inventaire et dans l'interface.
 
-## 10. Fichiers concernés en pratique
+## 10. Fichiers concernï¿½s en pratique
 
-Dans le cas général, la création d'un item touche au minimum :
+Dans le cas gï¿½nï¿½ral, la crï¿½ation d'un item touche au minimum :
 
 - `PROGRAM/ITEMS/initItems.c`
 
@@ -346,17 +388,17 @@ Souvent aussi :
 - `PROGRAM/ITEMS/items_utilite.c`
 - `PROGRAM/QUESTS/quests_reaction.c`
 - `PROGRAM/Characters/...`
-- des fichiers de ressources texte et d'icônes hors de `PROGRAM`
+- des fichiers de ressources texte et d'icï¿½nes hors de `PROGRAM`
 
-## 11. Résumé opérationnel
+## 11. Rï¿½sumï¿½ opï¿½rationnel
 
-La vraie "création" d'un item se fait d'abord dans `PROGRAM/ITEMS/initItems.c`.
+La vraie "crï¿½ation" d'un item se fait d'abord dans `PROGRAM/ITEMS/initItems.c`.
 
 Ensuite :
 
-- pour le donner à quelqu'un, on utilise `GiveItem2Character(...)`
+- pour le donner ï¿½ quelqu'un, on utilise `GiveItem2Character(...)`
 - pour le retirer, `TakeItemFromCharacter(...)`
 - pour le poser dans le monde, on utilise `startLocation` / `startLocator`
-- pour lui donner un effet, on passe par `items_utilite.c` ou par une quête
+- pour lui donner un effet, on passe par `items_utilite.c` ou par une quï¿½te
 
-Autrement dit, créer un item n'est pas une seule feature isolée : c'est une combinaison entre définition statique, logique d'usage, et point d'apparition.
+Autrement dit, crï¿½er un item n'est pas une seule feature isolï¿½e : c'est une combinaison entre dï¿½finition statique, logique d'usage, et point d'apparition.
