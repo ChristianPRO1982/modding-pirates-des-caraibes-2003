@@ -202,26 +202,28 @@ void CreateCharacters()
 	// GiveItem2Character(ch, "indian14");
 	// GiveItem2Character(ch, "indian15");
 	// GiveItem2Character(ch, "indian16");
-	GiveItem2Character(ch, "idol");
-	GiveItem2Character(ch, "icollection");
+	// GiveItem2Character(ch, "idol");
+	// GiveItem2Character(ch, "icollection");
 	GiveItem2Character(ch, "PJ_B1_1_STATUE_FEET");
 	GiveItem2Character(ch, "PJ_B1_1_STATUE_BODY");
 	GiveItem2Character(ch, "PJ_B1_1_STATUE_ARMS");
 	GiveItem2Character(ch, "PJ_B1_1_STATUE_HEAD");
-	GiveItem2Character(ch, "Chest");
-	GiveItem2Character(ch, "coins");
-	GiveItem2Character(ch, "gov_letter");
-	GiveItem2Character(ch, "legend_piece");
-	GiveItem2Character(ch, "legend_notes");
-	GiveItem2Character(ch, "legend_copy");
-	GiveItem2Character(ch, "rheims_journal");
-	GiveItem2Character(ch, "domingues_fucked");
-	GiveItem2Character(ch, "rheims_letter");
-	GiveItem2Character(ch, "pornushka");
-	GiveItem2Character(ch, "animists_amulet");
-	GiveItem2Character(ch, "letter_to_domingues");
-	GiveItem2Character(ch, "letter_to_bernard");
-	GiveItem2Character(ch, "letter_prison");
+	GiveItem2Character(ch, "PJ_B1_1_STATUE_FULL");
+	// GiveItem2Character(ch, "Chest");// coffre
+	// GiveItem2Character(ch, "coins");// pièce maudite
+	// GiveItem2Character(ch, "gov_letter");// lettre cachetée ouverte
+	// GiveItem2Character(ch, "legend_piece");// tablette d'argile inca cassée
+	// GiveItem2Character(ch, "legend_notes");// traduction de la tablette d'argile inca
+	// GiveItem2Character(ch, "legend_copy");// copy de la traduction de la tablette d'argile inca
+	// GiveItem2Character(ch, "rheims_journal");// livre avec verrou
+	// GiveItem2Character(ch, "domingues_fucked");// 3 feuilles avec une plume
+	// GiveItem2Character(ch, "rheims_letter");// enveloppe cachetée 1
+	// GiveItem2Character(ch, "pornushka");// enveloppe ouverte sur une lettre
+	// GiveItem2Character(ch, "animists_amulet");
+	// GiveItem2Character(ch, "letter_to_domingues");// enveloppe cachetée 2
+	// GiveItem2Character(ch, "letter_to_bernard");// enveloppe cachetée 2
+	// GiveItem2Character(ch, "letter_prison");// enveloppe cachetée 1
+	// GiveItem2Character(ch, "STATUE1");// statue inca en pierre
 
 	// QUESTS BEGINNINGS
 

@@ -1,0 +1,598 @@
+new_string	{
+
+}
+
+Potion parameters{Bouteille}
+health value{pv}
+weapon blade parameters{Arme : dég. min/max #ddmg_min#/#ddmg_max#, estoc #dpiercing#%, parade #dblock#%.}
+weapon gun parameters{Arme : dég. min/max #ddmg_min#/#ddmg_max#, temps recharg. #dchargespeed#sec, précision #daccuracy#%.}
+
+youve_got {Tu as trouvé}
+
+itmname_gold	{De l'or}
+itmdescr_gold
+{
+De l'or. Le plus cher désir d'un pirate.
+}
+
+itmname_chest	{Coffre de McDorey}
+itmdescr_chest
+{
+Un petit coffre qu'Oweyn McDorey t'a demandé de remettre à Charles Windem, à Redmond.
+}
+
+itmname_coins	{Pièces maudites}
+itmdescr_coins
+{
+De grandes pièces d'or frappées d'un crâne. Elles ne te plaisent guère.
+}
+
+itmname_gov_letter	{Lettre du gouverneur}
+itmdescr_gov_letter
+{
+Une lettre du gouverneur Silehard qu'il t'a confiée afin de la remettre à Isenbrandt Jurcksen, à Quebradas Costillas.
+}
+
+itmname_incas_idol	{Idole d'or}
+itmdescr_incas_idol
+{
+Une idole en or de Hurukacelitipochtli, le dieu inca de la mort.
+}
+
+itmname_incas_collection	{Collection de trésors incas}
+itmdescr_incas_collection
+{
+Une collection de trésors incas.
+}
+
+itmname_piece_of_legend	{Tablette}
+itmdescr_piece_of_legend
+{
+Une tablette d'argile recouverte de caractères incas anciens.
+}
+
+itmname_notes_of_legend	{Texte de la légende}
+itmdescr_notes_of_legend
+{
+Le texte de l'ancienne légende inca reproduit sur du papier.
+}
+
+itmname_copyes_of_legend	{Copie du texte de la légende}
+itmdescr_copyes_of_legend
+{
+Une copie du texte de l'ancienne légende inca.
+}
+
+itmname_rheims_journal	{Journal de Rheims}
+itmdescr_rheims_journal
+{
+Le journal du capitaine Rheims.
+}
+
+itmname_compramat_to_domigues	{Documents compromettants}
+itmdescr_compramat_to_domigues
+{
+Des documents compromettants discréditant le padre Domingues.
+}
+
+itmname_rheims_letter	{Lettre de Rheims}
+itmdescr_rheims_letter
+{
+Une lettre du capitaine Rheims au gouverneur de Redmond, Robert Christopher Silehard.
+}
+
+itmname_love_letters_of_priest	{Lettres d'amour du prêtre}
+itmdescr_love_letters_of_priest
+{
+Des lettres d'amour du père Jerald à une certaine personne de sexe féminin.
+}
+
+itmname_animists_amulet	{Amulette animiste}
+itmdescr_animists_amulet
+{
+Une amulette animiste d'apparence sinistre ressemblant à une étoile à cinq branches.
+}
+
+itmname_letter_to_domingues	{Lettre au padre Domingues}
+itmdescr_letter_to_domingues
+{
+Une lettre du père Bernard au padre Domingues.
+}
+
+itmname_letter_to_bernard	{Lettre au père Bernard}
+itmdescr_letter_to_bernard
+{
+Une lettre du padre Domingues au père Bernard.
+}
+
+itmname_prison_letter	{Lettre du père Bernard}
+itmdescr_prison_letter
+{
+Une lettre du père Bernard permettant de libérer un détenu de la prison de Greenford.
+}
+
+itmname_statue1	{Statue}
+itmdescr_statue1
+{
+Une statuette en pierre.
+}
+
+itmname_statue2	{Statue}
+itmdescr_statue2
+{
+Une statuette en pierre.
+}
+
+itmname_statue3	{Statue}
+itmdescr_statue3
+{
+Une statuette en pierre.
+}
+
+itmname_massoni_papers	{Documents de Valentin Massoni}
+itmdescr_massoni_papers
+{
+Ces documents indiquent que la barque de ravitaillement se trouve actuellement à Falaise de Fleur, en attente d'un vaisseau de convoyage.
+}
+
+itmname_story_gramota	{Documents}
+itmdescr_story_gramota
+{
+
+}
+
+
+
+
+
+itmname_blade1	{Sabre}
+itmdescr_blade1
+{
+Un sabre de fabrication médiocre. On trouve des lames de ce type dans tout l'archipel. De peu de valeur à la vente comme au combat.
+}
+
+itmname_blade2	{Rapière}
+itmdescr_blade2
+{
+Cela tient plus de la broche de cuisine que de la rapière. Peut-être efficace contre un cochon. Un cochon endormi...
+}
+
+itmname_blade3	{Badelaire}
+itmdescr_blade3
+{
+Outil préféré des bouchers français. Peu efficace au combat, ce lourd sabre est en revanche parfait pour découper la viande.
+}
+
+itmname_blade4	{Sabre d'abordage}
+itmdescr_blade4
+{
+Le meilleur ami du pirate. Ce sabre court et lourd est parfait pour combattre sur un pont encombré.
+}
+
+itmname_blade5	{Dague}
+itmdescr_blade5
+{
+Une dague d'apparence sinistre. Très élégante quand elle dépasse du dos de quelqu'un.
+}
+
+itmname_blade6	{Schiavone}
+itmdescr_blade6
+{
+Une lame aussi élégante que meurtrière employée par les mercenaires italiens.
+}
+
+itmname_blade7	{Yatagan}
+itmdescr_blade7
+{
+Peu d'objets coupent mieux qu'un yatagan : il peut trancher une baleine en deux. Si l'on parvient à s'en approcher discrètement.
+}
+
+itmname_blade8	{Épée de chevalier de Malte}
+itmdescr_blade8
+{
+Une épée employée par les chevaliers de l'ordre de Malte. Aussi droite et austère que ces chevaliers.
+}
+
+itmname_blade9	{Silver Leaf}
+itmdescr_blade9
+{
+Une rapière à la décoration très ouvragée. Une arme aussi belle que dangereuse.
+}
+
+itmname_blade10	{Piranha}
+itmdescr_blade10
+{
+Une épée courte en bon acier qui semble assoiffée de sang. Inadaptée à la défense, mais sa morsure compense largement cet inconvénient.
+}
+
+itmname_blade11	{Highlander}
+itmdescr_blade11
+{
+Cette épée large écossaise convient bien aux hommes de fort tempérament. Un peu lourde, elle est redoutable dans une main ferme.
+}
+
+
+itmname_blade12	{Langue de dragon}
+itmdescr_blade12
+{
+Un sabre large venu des forges de Damas. Léger et tranchant malgré sa taille impressionnante, il taille aussi bien la soie que les clous.
+}
+
+itmname_blade13	{Aiguille}
+itmdescr_blade13
+{
+La capacité de cette rapière à percer les parades et les armures est exceptionnelle. Il est presque impossible de se défendre contre ses attaques rapides comme l'éclair.
+}
+
+itmname_blade14	{Conquistador}
+itmdescr_blade14
+{
+La légende veut que cette épée ait appartenu à Cortes lui-même. Que ce soit vrai ou non, Cortes n'aurait pas rougi d'employer une aussi bonne lame.
+}
+
+itmname_blade15	{Brazo del Colon}
+itmdescr_blade15
+{
+Si la poignée de cette épée est relativement récente, la lame semble dater de plus d'un siècle mais demeure extrêmement tranchante.
+}
+
+itmname_blade16	{Tizona}
+itmdescr_blade16
+{
+Les épées de ce type sont très appréciées des Espagnols. Celle-ci porte la marque de l'un des meilleurs forgerons de Tolède.
+}
+
+itmname_blade17	{Flamigera}
+itmdescr_blade17
+{
+Curieux mélange de rapière et de flamberge, cette lame rassemble les meilleures qualités de ses parents : elle s'enfonce profondément et frappe vite, ce qui en fait une arme incroyablement polyvalente.
+}
+
+itmname_blade18	{Sabre de Nicolas Sharp}
+itmdescr_blade18
+{
+Nicolas Sharp, le pirate le plus horrible, dépravé et assoiffé de sang qui ait écumé les sept mers, est monté à l'abordage et a pillé des villes cette épée à la main. C'est un excellent sabre, au fait.
+}
+
+itmname_blade19	{Vagrant}
+itmdescr_blade19
+{
+Une rapière simple mais efficace, probablement d'origine allemande.
+}
+
+itmname_blade20	{Squall}
+itmdescr_blade20
+{
+Avec sa lame affûtée à un point inimaginable, ce sabre peu commun peut trancher à peu près tout ce qui se trouve sur son chemin.
+}
+
+itmname_blade21	{Falchion}
+itmdescr_blade21
+{
+Une épée lourde parfaite pour découper les ennemis en fines tranches.
+}
+
+itmname_blade22	{Fierté du corsaire}
+itmdescr_blade22
+{
+Les épées comme celle-ci étaient remises aux corsaires de Sa Majesté pour leurs bons et loyaux services au profit de l'Angleterre. Cette lame convient aussi bien aux duels courtois qu'aux abordages violents.
+}
+
+itmname_blade23	{Pourfendeuse de moulin}
+itmdescr_blade23
+{
+Une rapière usée dont les nombreuses entailles de la lame contiennent des morceaux de bois pourri.
+}
+
+
+
+
+
+itmname_pistol1	{Pistolet court}
+itmdescr_pistol1
+{
+Un petit pistolet bon marché. Il n'est dangereux qu'à courte portée.
+}
+
+itmname_pistol2	{Pistolet long}
+itmdescr_pistol2
+{
+Un pistolet courant doté d'un long canon. De portée et de puissance décentes, il se recharge lentement et manque de précision.
+}
+
+itmname_pistol3	{Pistolet à mitraille}
+itmdescr_pistol3
+{
+Un véritable canon de poing. Sa puissance d'arrêt est redoutable, mais il manque de portée et de précision.
+}
+
+itmname_pistol4	{Patte de canard}
+itmdescr_pistol4
+{
+Quatre pistolets en un. Son rechargement réclame du temps, mais le jeu en vaut la chandelle. La capacité Tireur professionnel est nécessaire pour manier ce pistolet.
+}
+
+itmname_pistol5	{Pistolet Scrapper}
+itmdescr_pistol5
+{
+Ce pistolet est une véritable œuvre d'art. Sa bonne puissance d'arrêt, son rechargement rapide et ses excellentes portée et précision en font un argument de poids lors de tout affrontement.
+}
+
+itmname_pistol6	{Pistolet à deux canons}
+itmdescr_pistol6
+{
+Un excellent pistolet doté de deux canons. Pour les cas où une balle ne suffit pas. La capacité Tireur est requise pour manier ce pistolet.
+}
+
+
+
+
+
+itmname_spyglass1	{Longue-vue bon marché}
+itmdescr_spyglass1
+{
+Une longue-vue simple aux lentilles rayées. Cette cochonnerie n'a pas sa place dans la poche d'un capitaine qui se respecte.
+Ne permet de distinguer que le nom d'un navire, son type et sa vitesse.
+}
+
+itmname_spyglass2	{Longue-vue ordinaire}
+itmdescr_spyglass2
+{
+Une longue-vue ordinaire. Elle possède des lentilles de qualité décente, mais certainement pas ce qui se fait de mieux.
+Ne permet de distinguer que le nom d'un navire, son type, sa vitesse, le nombre de ses canons et les dégâts qu'il a subis.
+}
+
+itmname_spyglass3	{Longue-vue de qualité}
+itmdescr_spyglass3
+{
+Une longue-vue coûteuse dotée d'excellentes lentilles. Elle permet de voir le sourire qu'arbore le maître d'équipage ennemi à un mille.
+Permet de distinguer le nom d'un navire, son type, sa vitesse, le nombre de ses canons, les dégâts qu'il a subis et la taille de son équipage.
+}
+
+itmname_spyglass4	{Longue-vue d'exception}
+itmdescr_spyglass4
+{
+Une longue-vue fabriquée par un maître de l'optique à partir de lentilles en pur cristal de roche. Il est difficile de trouver mieux.
+Permet de distinguer le nom d'un navire, son type, sa vitesse, les dégâts qu'il a subis, la taille de son équipage, le nombre et même la charge de ses canons.
+}
+
+
+
+
+
+itmname_potion1	{Petite potion de soins}
+itmdescr_potion1
+{
+Un mélange d'herbes médicinales soignant les blessures légères.
+}
+
+itmname_potion2	{Élixir de soins}
+itmdescr_potion2
+{
+Une puissante concoction rassemblant plus d'une centaine d'herbes rares et capable de soigner même les plus horribles blessures.
+}
+
+
+
+
+
+itmname_jewelry1	{Saphir}
+itmdescr_jewelry1
+{
+Une pierre bleue et transparente. Parfaitement taillée.
+}
+
+itmname_jewelry2	{Diamant}
+itmdescr_jewelry2
+{
+Une pierre d'une qualité exquise. On dit qu'on peut voir son avenir dans les éclats que jette ce joyau.
+}
+
+itmname_jewelry3	{Rubis}
+itmdescr_jewelry3
+{
+Une pierre précieuse de la couleur du sang. Elle irait parfaitement sur ton épée et te rendrait la main plus ferme.
+}
+
+itmname_jewelry4	{Émeraude}
+itmdescr_jewelry4
+{
+Même le pire gredin rêvera, en voyant cette pierre, à la belle aux yeux verts qu'il a laissée au loin.
+}
+
+itmname_jewelry5	{Pépite d'or}
+itmdescr_jewelry5
+{
+Une pépite d'or pur. Elle fait s'entre-tuer les hommes et se pâmer les femmes.
+}
+
+itmname_jewelry6	{Bague d'argent ornée d'un saphir}
+itmdescr_jewelry6
+{
+Association idéale de luxe et de style.
+}
+
+itmname_jewelry7	{Bague en or avec émeraude}
+itmdescr_jewelry7
+{
+Bien sûr, elle est voyante, mais aurais-tu peur de passer pour un noble?
+}
+
+itmname_jewelry8	{Bague en bronze}
+itmdescr_jewelry8
+{
+Ta bague porte-bonheur.
+}
+
+itmname_jewelry9	{Croix en bronze}
+itmdescr_jewelry9
+{
+Un symbole de foi. Peut-être cette petite croix te sauvera-t-elle la vie dans la fureur des combats?
+}
+
+itmname_jewelry10	{Bague en or ornée de saphirs}
+itmdescr_jewelry10
+{
+Un joyau de luxe réservé aux mains les plus dignes.
+}
+
+itmname_jewelry11	{Grosse perle}
+itmdescr_jewelry11
+{
+Un cadeau de la mer. Elle peut avoir plus de 100 ans.
+}
+
+itmname_jewelry12	{Petite perle}
+itmdescr_jewelry12
+{
+Une perle de petite taille, mais jolie.
+}
+
+itmname_jewelry13	{Broche en argent}
+itmdescr_jewelry13
+{
+Un cadeau convenant à toute femme : elle se souviendra de toi toute sa vie.
+}
+
+itmname_jewelry14	{Broche en or}
+itmdescr_jewelry14
+{
+Un joyau superbe à ne pas remettre à la première venue. C'est un cadeau de reine... à ne conserver qu'un moment.
+}
+
+itmname_jewelry15	{Pendentif en émeraude}
+itmdescr_jewelry15
+{
+Toute femme serait plus que ravie de posséder ce superbe bijou.
+}
+
+itmname_jewelry16	{Collier de pierres précieuses}
+itmdescr_jewelry16
+{
+Ce n'est peut-être pas le joyau le plus cher, mais les dames l'adorent.
+}
+
+
+
+
+
+itmname_indian1	{Idole d'Irgantachul}
+itmdescr_indian1
+{
+Figurine de dieu inca.
+}
+
+itmname_indian2	{Figurine d'animal curieux}
+itmdescr_indian2
+{
+Personne ne sait exactement ce qu'elle représente. C'est peut-être un jouet pour les enfants incas.
+}
+
+itmname_indian3	{Petite mosaïque}
+itmdescr_indian3
+{
+Une œuvre d'art incroyablement belle. Le secret de la fabrication de tels objets a disparu depuis bien longtemps.
+}
+
+itmname_indian4	{Jarre de terre cuite}
+itmdescr_indian4
+{
+Une superbe jarre ornée de dessins.
+}
+
+itmname_indian5	{Masque de Markuchankatu}
+itmdescr_indian5
+{
+Un masque de dieu inca en or.
+}
+
+itmname_indian6	{Figurine d'Akumalartu}
+itmdescr_indian6
+{
+Une figurine du dieu inca de la guerre.
+}
+
+itmname_indian7	{Idole de Pikachuatl}
+itmdescr_indian7
+{
+Cette idole représente la déesse inca de la terre, de la fertilité et de la chance.
+}
+
+itmname_indian8	{Crachoir royal}
+itmdescr_indian8
+{
+Un objet rituel de la cour de l'empereur inca.
+}
+
+itmname_indian9	{Idole de Bakachukta}
+itmdescr_indian9
+{
+Il s'agit d'une figurine de dieu inca. Mais c'est aussi une coupe. Un objet bien pratique.
+}
+
+itmname_indian10	{Idole d'Yxtoikchatlu}
+itmdescr_indian10
+{
+Une superbe figurine en or incrustée de pierres précieuses représentant un dieu inca.
+}
+
+itmname_indian11	{Figurine de dent de sagesse}
+itmdescr_indian11
+{
+Le dieu inca de la sagesse. Il semble heureux.
+}
+
+itmname_indian12	{Idole de Morchachtulak}
+itmdescr_indian12
+{
+Une idole inca en or de grande taille. Il a fallu beaucoup d'or pour la fabriquer.
+}
+
+itmname_indian13	{Jarre à fumée ancienne}
+itmdescr_indian13
+{
+Une jarre à fumée inca traditionnelle.
+}
+
+itmname_indian14	{Idole d'Ichtyloxtumba}
+itmdescr_indian14
+{
+Une idole inca en or de style très inhabituel.
+}
+
+itmname_indian15	{Baignoire rituelle en terre}
+itmdescr_indian15
+{
+Une baignoire rituelle : ustensile de cérémonie inca.
+}
+itmname_indian16	{Pot peint original}
+itmdescr_indian16
+{
+Pot peint de couleurs vives, dans le style inca traditionnel.
+}
+
+
+itmname_potion3		{Antidote}
+itmdescr_potion3
+{
+Ce mélange guérit du poison.
+}
+
+
+itmname_potion4		{Mixture}
+itmdescr_potion4
+{
+Cette mixture guérit du poison et restaure un peu de santé.
+}
+
+itmname_100gp	{100 pièces d'or}
+
+itmname_250gp	{250 pièces d'or}
+
+itmname_500gp	{500 pièces d'or}
+
+itmname_CursedCoin	{Pièces maudites}
+itmdescr_CursedCoin
+{
+De grandes pièces d'or frappées d'un crâne. Elles ne te plaisent guère.
+}
