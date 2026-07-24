@@ -48,6 +48,10 @@
 #define B11_NPC_CONCEICAO_GUARD "PJ_B1_1_PortugueseGuard_Conceicao"
 #define B11_NPC_DOUWESEN_ENGLISH "PJ_B1_1_EnglishContact_Douwesen"
 #define B11_NPC_DOUWESEN_DUTCH "PJ_B1_1_DutchContact_Douwesen"
+#define B11_NPC_INTY_CHIEF "PJ_B1_1_IntyChief"
+#define B11_NPC_INTY_WARRIOR1 "PJ_B1_1_IntyWarrior1"
+#define B11_NPC_INTY_WARRIOR2 "PJ_B1_1_IntyWarrior2"
+#define B11_NPC_INTY_WARRIOR3 "PJ_B1_1_IntyWarrior3"
 #define B11_NPC_MALCOLM_HATCHER "Malcolm Hatcher"
 
 #define B11_DIALOG_FILE "Robert Christopher Silehard PJ_dialog.c"
@@ -57,6 +61,7 @@
 #define B11_DIALOG_FILE_CONCEICAO_GUARD "PJ Quest B1_1 PortugueseGuard_Conceicao_dialog.c"
 #define B11_DIALOG_FILE_DOUWESEN_ENGLISH "PJ Quest B1_1 EnglishContact_Douwesen_dialog.c"
 #define B11_DIALOG_FILE_DOUWESEN_DUTCH "PJ Quest B1_1 DutchContact_Douwesen_dialog.c"
+#define B11_DIALOG_FILE_INTY_CHIEF "PJ Quest B1_1 IntyChief_dialog.c"
 
 #define B11_ITEM_FEET "PJ_B1_1_STATUE_FEET"
 #define B11_ITEM_BODY "PJ_B1_1_STATUE_BODY"
@@ -78,12 +83,17 @@
 #define B11_EVENT_DOUWESEN_ARMS_OBTAINED "PJ_B1_1_DOUWESEN_ARMS_OBTAINED"
 #define B11_EVENT_JUNGLE_HINT_FOUND "PJ_B1_1_JUNGLE_HINT_FOUND"
 #define B11_EVENT_DIG_COMPLETED "PJ_B1_1_DIG_COMPLETED"
+#define B11_EVENT_INTY_AMBUSH_START "PJ_B1_1_INTY_AMBUSH_START"
+#define B11_EVENT_INTY_DIALOG_COMPLETE "PJ_B1_1_INTY_DIALOG_COMPLETE"
+#define B11_EVENT_INTY_FIGHT_COMPLETE "PJ_B1_1_INTY_FIGHT_COMPLETE"
 #define B11_EVENT_HEAD_OBTAINED "PJ_B1_1_HEAD_OBTAINED"
 #define B11_EVENT_ASSEMBLE_FULL_STATUE "PJ_B1_1_ASSEMBLE_FULL_STATUE"
 #define B11_EVENT_SHIP_ENTER "PJ_B1_1_SHIP_ENTER"
 #define B11_EVENT_SHIP_RETURN "PJ_B1_1_SHIP_RETURN"
 #define B11_EVENT_FINAL_REPORT_COMPLETE "PJ_B1_1_FINAL_REPORT_COMPLETE"
 #define B11_EVENT_CLEANUP "PJ_B1_1_CLEANUP"
+
+#define B11_INTY_GROUP "B11_INTY_GROUP"
 
 string B11_GetStatus()
 {
@@ -297,6 +307,21 @@ void B11_SetDialogNode(string npcId, string nodeName)
 	chref.Dialog.TempNode = nodeName;
 }
 
+bool B11_IsRedmondLandLocation(string locationId)
+{
+	if (locationId == "REDMOND_PORT") { return true; }
+	if (locationId == "Redmond_Town_01") { return true; }
+	if (locationId == "Redmond_town_03") { return true; }
+	if (locationId == "Redmond_town_04") { return true; }
+	if (locationId == "Redmond_town_exit_1") { return true; }
+	if (locationId == "Redmond_town_exit_2") { return true; }
+	if (locationId == "Redmond_Shore_01") { return true; }
+	if (locationId == "Redmond_shore_02") { return true; }
+	if (locationId == "Redmond_jungle_01") { return true; }
+	if (locationId == B11_LOCATION_REDMOND) { return true; }
+	return false;
+}
+
 string B11_GetShipScene()
 {
 	ref pchar = GetMainCharacter();
@@ -437,6 +462,71 @@ void B11_DespawnAllSceneNpcs()
 	B11_HideNpc(B11_NPC_CONCEICAO_GUARD);
 	B11_HideNpc(B11_NPC_DOUWESEN_ENGLISH);
 	B11_HideNpc(B11_NPC_DOUWESEN_DUTCH);
+	B11_HideNpc(B11_NPC_INTY_CHIEF);
+	B11_HideNpc(B11_NPC_INTY_WARRIOR1);
+	B11_HideNpc(B11_NPC_INTY_WARRIOR2);
+	B11_HideNpc(B11_NPC_INTY_WARRIOR3);
+}
+
+void B11_PrepareIntyActor(string npcId, string nodeName)
+{
+	if (!B11_HasNpc(npcId))
+	{
+		return;
+	}
+
+	B11_PlaceNpc(npcId, B11_LOCATION_DIG_JUNGLE, "goto");
+	B11_SetNpcCitizen(npcId);
+	B11_SetDialogNode(npcId, nodeName);
+	LAi_SetActorType(characterFromID(npcId));
+}
+
+void B11_SpawnIntyAmbush()
+{
+	B11_PrepareIntyActor(B11_NPC_INTY_CHIEF, "B1_1_inty_chief");
+	B11_PrepareIntyActor(B11_NPC_INTY_WARRIOR1, "First time");
+	B11_PrepareIntyActor(B11_NPC_INTY_WARRIOR2, "First time");
+	B11_PrepareIntyActor(B11_NPC_INTY_WARRIOR3, "First time");
+}
+
+void B11_StartIntyDialog()
+{
+	ref pchar = GetMainCharacter();
+
+	if (!B11_HasNpc(B11_NPC_INTY_CHIEF))
+	{
+		return;
+	}
+
+	LAi_LockFightMode(pchar, true);
+	LAi_ActorDialog(characterFromID(B11_NPC_INTY_CHIEF), pchar, "", 10.0, 1.0);
+}
+
+void B11_StartIntyFight()
+{
+	if (B11_HasNpc(B11_NPC_INTY_CHIEF))
+	{
+		LAi_SetWarriorType(characterFromID(B11_NPC_INTY_CHIEF));
+		LAi_group_MoveCharacter(characterFromID(B11_NPC_INTY_CHIEF), B11_INTY_GROUP);
+	}
+	if (B11_HasNpc(B11_NPC_INTY_WARRIOR1))
+	{
+		LAi_SetWarriorType(characterFromID(B11_NPC_INTY_WARRIOR1));
+		LAi_group_MoveCharacter(characterFromID(B11_NPC_INTY_WARRIOR1), B11_INTY_GROUP);
+	}
+	if (B11_HasNpc(B11_NPC_INTY_WARRIOR2))
+	{
+		LAi_SetWarriorType(characterFromID(B11_NPC_INTY_WARRIOR2));
+		LAi_group_MoveCharacter(characterFromID(B11_NPC_INTY_WARRIOR2), B11_INTY_GROUP);
+	}
+	if (B11_HasNpc(B11_NPC_INTY_WARRIOR3))
+	{
+		LAi_SetWarriorType(characterFromID(B11_NPC_INTY_WARRIOR3));
+		LAi_group_MoveCharacter(characterFromID(B11_NPC_INTY_WARRIOR3), B11_INTY_GROUP);
+	}
+
+	LAi_group_SetCheck(B11_INTY_GROUP, B11_EVENT_INTY_FIGHT_COMPLETE);
+	LAi_group_FightGroups(B11_INTY_GROUP, LAI_GROUP_PLAYER, false);
 }
 
 void B11_SpawnMuelleScene()
@@ -689,6 +779,10 @@ void B11_ResetRuntime()
 	DeleteAttribute(pchar, "quest_b1_1_hint_found");
 	DeleteAttribute(pchar, "quest_b1_1_dig_done");
 	DeleteAttribute(pchar, "quest_b1_1_no_treasure_text");
+	DeleteAttribute(pchar, "quest_b1_1_inty_ambush_started");
+	DeleteAttribute(pchar, "quest_b1_1_inty_dialog_done");
+	DeleteAttribute(pchar, "quest_b1_1_inty_fight_done");
+	DeleteAttribute(pchar, "quest_b1_1_redmond_rebuilt");
 	DeleteAttribute(pchar, "quest_b1_1_piece_feet");
 	DeleteAttribute(pchar, "quest_b1_1_piece_body");
 	DeleteAttribute(pchar, "quest_b1_1_piece_arms");
@@ -786,9 +880,17 @@ void B11_AdvanceToDigReady()
 
 void B11_AdvanceToFinalReady()
 {
+	ref pchar = GetMainCharacter();
+
+	if (CheckAttribute(pchar, "quest_b1_1_redmond_rebuilt"))
+	{
+		return;
+	}
+
+	pchar.quest_b1_1_redmond_rebuilt = "1";
 	B11_SetStatus(B11_STATUS_FINAL_READY);
 	B1_AddJournalRecord("3");
-	AddQuestRecord(B11_HEADER, "13");
+	AddQuestRecord(B11_HEADER, "15");
 }
 
 void B11_FinalizeQuest()
@@ -812,6 +914,30 @@ void B11_FinalizeQuest()
 void B11_RunJungleAutoStep()
 {
 	return;
+}
+
+void B11_TryRebuildStatueAtRedmond()
+{
+	ref pchar = GetMainCharacter();
+
+	if (!B11_IsRedmondLandLocation(pchar.location))
+	{
+		return;
+	}
+	if (!CheckAttribute(pchar, "quest_b1_1_inty_fight_done"))
+	{
+		return;
+	}
+	if (CheckAttribute(pchar, "quest_b1_1_redmond_rebuilt"))
+	{
+		return;
+	}
+	if (!B11_HasAllPieces())
+	{
+		return;
+	}
+
+	DoQuestCheckDelay(B11_EVENT_ASSEMBLE_FULL_STATUE, 0.0);
 }
 
 void B1_1_ProcessAction()
@@ -935,6 +1061,8 @@ void B1_1_ProcessLocationEnter()
 	{
 		return;
 	}
+
+	B11_TryRebuildStatueAtRedmond();
 
 	if (status == B11_STATUS_INTRO_COLLECT)
 	{
@@ -1175,26 +1303,86 @@ bool QuestComplete_B1_1(string sQuestName)
 			return true;
 		break;
 
+		case B11_EVENT_INTY_AMBUSH_START:
+			if (B11_GetStatus() != B11_STATUS_DIG_READY)
+			{
+				return true;
+			}
+			if (CheckAttribute(pchar, "quest_b1_1_inty_ambush_started"))
+			{
+				return true;
+			}
+			pchar.quest_b1_1_inty_ambush_started = "1";
+			B11_SpawnIntyAmbush();
+			B11_StartIntyDialog();
+			return true;
+		break;
+
+		case B11_EVENT_INTY_DIALOG_COMPLETE:
+			if (!CheckAttribute(pchar, "quest_b1_1_inty_ambush_started"))
+			{
+				return true;
+			}
+			if (CheckAttribute(pchar, "quest_b1_1_inty_dialog_done"))
+			{
+				return true;
+			}
+			pchar.quest_b1_1_inty_dialog_done = "1";
+			LAi_SetPlayerType(pchar);
+			LAi_LockFightMode(pchar, false);
+			B11_StartIntyFight();
+			return true;
+		break;
+
+		case B11_EVENT_INTY_FIGHT_COMPLETE:
+			if (!CheckAttribute(pchar, "quest_b1_1_inty_ambush_started"))
+			{
+				return true;
+			}
+			if (CheckAttribute(pchar, "quest_b1_1_inty_fight_done"))
+			{
+				return true;
+			}
+			pchar.quest_b1_1_inty_fight_done = "1";
+			LAi_LockFightMode(pchar, false);
+			B11_HideNpc(B11_NPC_INTY_CHIEF);
+			B11_HideNpc(B11_NPC_INTY_WARRIOR1);
+			B11_HideNpc(B11_NPC_INTY_WARRIOR2);
+			B11_HideNpc(B11_NPC_INTY_WARRIOR3);
+			AddQuestRecord(B11_HEADER, "13");
+			return true;
+		break;
+
 		case B11_EVENT_HEAD_OBTAINED:
 			if (B11_GetStatus() != B11_STATUS_DIG_READY)
 			{
 				return true;
 			}
 			B11_GrantPieceIfMissing(B11_ITEM_HEAD, "quest_b1_1_piece_head");
-			if (B11_HasAllPieces())
-			{
-				DoQuestCheckDelay(B11_EVENT_ASSEMBLE_FULL_STATUE, 0.0);
-			}
+			DoQuestCheckDelay(B11_EVENT_INTY_AMBUSH_START, 0.0);
 			return true;
 		break;
 
 		case B11_EVENT_ASSEMBLE_FULL_STATUE:
+			if (B11_GetStatus() != B11_STATUS_DIG_READY)
+			{
+				return true;
+			}
+			if (!CheckAttribute(pchar, "quest_b1_1_inty_fight_done"))
+			{
+				return true;
+			}
+			if (CheckAttribute(pchar, "quest_b1_1_redmond_rebuilt"))
+			{
+				return true;
+			}
 			if (!B11_HasAllPieces())
 			{
 				return true;
 			}
 			B11_RemoveAllPieces();
 			GiveItem2Character(pchar, B11_ITEM_FULL);
+			Log_SetStringToLog("Ca y est ! J'ai remonte cette foutue statue.");
 			B11_AdvanceToFinalReady();
 			return true;
 		break;
@@ -1227,6 +1415,7 @@ bool QuestComplete_B1_1(string sQuestName)
 		case B11_EVENT_CLEANUP:
 			B11_DisarmAllQuestConditions();
 			B11_ClearShipSceneRuntime();
+			LAi_LockFightMode(pchar, false);
 			B11_DespawnAllSceneNpcs();
 			B11_SetStatus(B11_STATUS_CLOSED);
 			return true;

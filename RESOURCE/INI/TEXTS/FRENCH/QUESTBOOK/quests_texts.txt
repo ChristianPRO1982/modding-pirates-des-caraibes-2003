@@ -1047,6 +1047,8 @@ J'ai obtenu les bras de la statue. Le dernier morceau, la tête, n'est plus conse
 #TEXT	12
 J'ai trouvé dans la jungle un ancien signe qui semble indiquer un endroit où creuser.
 #TEXT	13
-J'ai retrouvé la tête de la statue. Toutes les pièces sont maintenant réunies. Je dois retourner à Redmond pour remettre la statue au gouverneur anglais.
+J'ai retrouvé la tête de la statue. Je possède maintenant les quatre morceaux et je dois rentrer à Redmond pour reconstituer l'ensemble avant de revoir le gouverneur anglais.
+#TEXT	15
+Pendant le retour vers Redmond, j'ai enfin reconstitué cette foutue statue. Elle est maintenant complète et prête à être remise au gouverneur anglais.
 #TEXT	14
 J'ai remis la statue au gouverneur anglais. Son enthousiasme et ses connaissances m'ont paru excessifs pour un simple amateur d'antiquités. Il prétend pourtant que cette statue rejoindra une grande exposition en Europe. Le gouverneur estime que je l'ai bien servi et il pourrait me confier des missions plus importantes à l'avenir.

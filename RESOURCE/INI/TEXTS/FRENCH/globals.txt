@@ -4,8 +4,8 @@ PJ_S1_no_treasure_here_1 {Il faut encore creuser...}
 PJ_S1_no_treasure_here_2 {Il n'y a pas de trésor ici...}
 PJ_S1_failed {Hé ! Mon gars, tu es allé trop loin ! Le trésor n'est pas par là.}
 
-PJ_G1_no_treasure_here_1 {Mille tonnerres, ça fait des heures que je creuse ! Si cette maudite statue n?est pas là-dessous, j?enterre Silehard avec les tous les incas qui ont fait cette maudite statue !}
-PJ_G1_no_treasure_here_2 {Par la barbe de Barbe-Noire ! Encore un coup de pelle dans le vide et je fais sauter toute cette fichue île !}
+PJ_G1_no_treasure_here_1 {Mille tonnerres, ça fait des heures que je creuse !}
+PJ_G1_no_treasure_here_2 {Par la barbe de Barbe-Noire ! Encore un coup de pelle dans le vide !}
 
 PJ_END_MQ_1 {>>>PJ_END_MQ_1<<<}
 PJ_END_MQ_2 {FIN DU DÉBUT DE LA QUÊTE PRINCIPALE.....}
