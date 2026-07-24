@@ -170,8 +170,18 @@ void chrCharacterKeys()
 {
 	string controlName = GetEventData();
 	ref PChar = GetMainCharacter();
+	float locx;
+	float locy;
+	float locz;
 	if(pchar.quest_S1_Unearthing == true && controlName == "BiFastCommand") QuestsCheck();
 	if(controlName != "ChrAction") return;
+	// ajout PJ
+	// pour connaitre les coordonnées du PJ X,Y,Z
+	if(GetCharacterPos(PChar, &locx, &locy, &locz))
+	{
+		Log_SetStringToLog("PJ XYZ: " + FloatToString(locx, 2) + ", " + FloatToString(locy, 2) + ", " + FloatToString(locz, 2));
+	}
+	// FIN ajout PJ
 	//Skip if interface active
 	if(sti(InterfaceStates.Launched)==true) return;
 	//Skip is disable reload
