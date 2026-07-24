@@ -33,6 +33,7 @@
 #define B11_LOCATION_CONCEICAO "Conceicao_shore_01"
 #define B11_LOCATION_DOUWESEN "Douwesen_shore_01"
 #define B11_LOCATION_JUNGLE "Douwesen_Jungle_03"
+#define B11_LOCATION_DIG_JUNGLE "Douwesen_Jungle_01"
 #define B11_LOCATION_SHIP_DECK "Tutorial_Deck"
 #define B11_RETURN_GROUP_SHORE "reload"
 #define B11_RETURN_LOCATOR_MUELLE "boat"
@@ -687,6 +688,7 @@ void B11_ResetRuntime()
 	DeleteAttribute(pchar, "quest_b1_1_final_reward_paid");
 	DeleteAttribute(pchar, "quest_b1_1_hint_found");
 	DeleteAttribute(pchar, "quest_b1_1_dig_done");
+	DeleteAttribute(pchar, "quest_b1_1_no_treasure_text");
 	DeleteAttribute(pchar, "quest_b1_1_piece_feet");
 	DeleteAttribute(pchar, "quest_b1_1_piece_body");
 	DeleteAttribute(pchar, "quest_b1_1_piece_arms");
@@ -772,21 +774,14 @@ void B11_AdvanceToJungle()
 	B11_SetDouwesenState(B11_DOUWESEN_STATE_DONE);
 	B11_HideNpc(B11_NPC_DOUWESEN_ENGLISH);
 	B11_HideNpc(B11_NPC_DOUWESEN_DUTCH);
-	B11_SetStatus(B11_STATUS_JUNGLE_CLUE_PENDING);
+	B11_SetStatus(B11_STATUS_DIG_READY);
 	AddQuestRecord(B11_HEADER, "11");
 	Log_SetStringToLog("PJ B1.1: douwesen clue obtained");
 }
 
 void B11_AdvanceToDigReady()
 {
-	ref pchar = GetMainCharacter();
-	if (CheckAttribute(pchar, "quest_b1_1_hint_found"))
-	{
-		return;
-	}
-	pchar.quest_b1_1_hint_found = "1";
 	B11_SetStatus(B11_STATUS_DIG_READY);
-	AddQuestRecord(B11_HEADER, "12");
 }
 
 void B11_AdvanceToFinalReady()
@@ -816,24 +811,57 @@ void B11_FinalizeQuest()
 
 void B11_RunJungleAutoStep()
 {
+	return;
+}
+
+void B1_1_ProcessAction()
+{
 	ref pchar = GetMainCharacter();
 	string status = B11_GetStatus();
+	float locx;
+	float locy;
+	float locz;
 
-	if (pchar.location != B11_LOCATION_JUNGLE)
+	if (pchar.location != B11_LOCATION_DIG_JUNGLE)
 	{
 		return;
 	}
 
-	if (status == B11_STATUS_JUNGLE_CLUE_PENDING && !CheckAttribute(pchar, "quest_b1_1_hint_found"))
+	if (status == B11_STATUS_JUNGLE_CLUE_PENDING)
 	{
-		DoQuestCheckDelay(B11_EVENT_JUNGLE_HINT_FOUND, 0.0);
+		B11_AdvanceToDigReady();
+		status = B11_GetStatus();
+	}
+
+	if (status != B11_STATUS_DIG_READY)
+	{
+		return;
+	}
+	if (CheckAttribute(pchar, "quest_b1_1_dig_done"))
+	{
+		return;
+	}
+	if (!GetCharacterPos(pchar, &locx, &locy, &locz))
+	{
 		return;
 	}
 
-	if (status == B11_STATUS_DIG_READY && !CheckAttribute(pchar, "quest_b1_1_dig_done"))
+	if (locx < -6.0 || locx > 1.0 || locy < -5.0 || locy > 5.0 || locz < -22.0 || locz > -18.0)
 	{
-		DoQuestCheckDelay(B11_EVENT_DIG_COMPLETED, 0.0);
+		if (!CheckAttribute(pchar, "quest_b1_1_no_treasure_text") || sti(pchar.quest_b1_1_no_treasure_text) != 1)
+		{
+			pchar.quest_b1_1_no_treasure_text = 1;
+			Log_SetStringToLog(GlobalStringConvert("PJ_G1_no_treasure_here_1"));
+		}
+		else
+		{
+			pchar.quest_b1_1_no_treasure_text = 2;
+			Log_SetStringToLog(GlobalStringConvert("PJ_G1_no_treasure_here_2"));
+		}
+		return;
 	}
+
+	DoQuestCheckDelay(B11_EVENT_DIG_COMPLETED, 0.0);
 }
 
 void B1_1_UpdateQuestTracker()

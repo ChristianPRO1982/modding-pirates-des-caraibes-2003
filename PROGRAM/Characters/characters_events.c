@@ -184,6 +184,7 @@ void chrCharacterKeys()
 	// FIN ajout PJ
 	//Skip if interface active
 	if(sti(InterfaceStates.Launched)==true) return;
+	B1_1_ProcessAction();
 	//Skip is disable reload
 	bool noReload = false;
 	if(chrIsNowEnableReload() != true) noReload = true;
