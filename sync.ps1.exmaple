@@ -1,0 +1,21 @@
+# Synchronize mod folders into the game install under Program Files.
+# The script self-elevates if not running as Administrator.
+
+# --- Self-elevate ---
+$principal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
+if (-not $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Start-Process -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
+    exit
+}
+
+# --- Paths ---
+$repoRoot = "C:\modding-pirates-des-caraibes-2003"
+$gameRoot = "C:\Program Files (x86)\Bethesda Softworks\Pirates of the Caribbean"
+
+# Ensure target directories exist
+New-Item -ItemType Directory -Force -Path "$gameRoot\PROGRAM" | Out-Null
+New-Item -ItemType Directory -Force -Path "$gameRoot\RESOURCE\INI\TEXTS\FRENCH" | Out-Null
+
+# --- Copy only changes (fast) ---
+robocopy "$repoRoot\PROGRAM" "$gameRoot\PROGRAM" /E /XO /FFT /R:1 /W:1 /NFL /NDL /NP
+robocopy "$repoRoot\RESOURCE\INI\TEXTS\FRENCH" "$gameRoot\RESOURCE\INI\TEXTS\FRENCH" /E /XO /FFT /R:1 /W:1 /NFL /NDL /NP
