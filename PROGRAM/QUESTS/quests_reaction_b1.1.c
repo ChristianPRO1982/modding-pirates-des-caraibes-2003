@@ -1121,7 +1121,7 @@ bool QuestComplete_B1_1(string sQuestName)
 	if (sQuestName != B11_EVENT_CLEANUP && B1_IsAnotherSubquestActive(B11_TRANS_SUBQUEST))
 	{
 		B11_DespawnAllSceneNpcs();
-		return true;
+		return false;
 	}
 
 	switch (sQuestName)

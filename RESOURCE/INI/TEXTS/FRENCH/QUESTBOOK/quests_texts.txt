@@ -1022,6 +1022,8 @@ Les fragments de la statue m'ont mené d'Isla Muelle à Conceicao puis à Douwesen.
 Pendant le retour vers Redmond, j'ai enfin pu reconstituer la statue complète. Il ne me reste plus qu'à la remettre à Silehard pour voir ce qu'il attendait réellement de moi.
 #TEXT	5
 J'ai remis la statue complète à Silehard. Son intérêt pour cette affaire dépasse celui d'un simple collectionneur, et je doute que tout cela s'arrête ici.
+#TEXT	6
+Silehard m'a fait entrer dans une affaire plus politique encore. Je dois gagner Conceicao pour y recuperer, aupres du gouverneur portugais, une lettre de cachet anglaise et un cadeau diplomatique.
 #QUEST	PJ_B1_1
 Les Fils de l'Ombre d'Inty
 #TEXT	1
@@ -1054,3 +1056,8 @@ J'ai retrouvé la tête de la statue. Je possède maintenant les quatre morceaux et
 Pendant le retour vers Redmond, j'ai enfin reconstitué cette foutue statue. Elle est maintenant complète et prête à être remise au gouverneur anglais.
 #TEXT	14
 J'ai remis la statue au gouverneur anglais. Son enthousiasme et ses connaissances m'ont paru excessifs pour un simple amateur d'antiquités. Il prétend pourtant que cette statue rejoindra une grande exposition en Europe. Le gouverneur estime que je l'ai bien servi et il pourrait me confier des missions plus importantes à l'avenir.
+
+#QUEST	PJ_B1_2A
+La Lettre de cachet et le cadeau diplomatique
+#TEXT	1
+Le gouverneur portugais m'a confie une lettre de cachet et un cadeau diplomatique destines au gouverneur anglais de Redmond.

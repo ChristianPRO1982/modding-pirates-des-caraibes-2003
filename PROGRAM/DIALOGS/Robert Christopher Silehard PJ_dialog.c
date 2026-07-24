@@ -71,6 +71,7 @@ void ProcessDialogEvent()
 
 		case "quest lines":
 			B11_SyncTransverseState();
+			B12A_SyncTransverseState();
 			d.Text = DLG_TEXT[7];
 			Link.l99 = DLG_TEXT[9];
 			Link.l99.go = "exit";
@@ -81,8 +82,31 @@ void ProcessDialogEvent()
 				break;
 			}
 
-			if (B1_IsAnotherSubquestActive(B11_TRANS_SUBQUEST))
+			if (B12A_IsStarted() && !B12A_IsCompleted())
 			{
+				if (B12A_GetStatus() == B12A_STATUS_OFFER)
+				{
+					Link.l1 = DLG_TEXT[66];
+					Link.l1.go = "B1_2A_offer_reminder";
+					break;
+				}
+				if (B12A_GetStatus() == B12A_STATUS_DELIVERY)
+				{
+					Link.l1 = DLG_TEXT[68];
+					Link.l1.go = "B1_2A_delivery_reminder";
+					break;
+				}
+			}
+
+			if (B1_IsAnotherSubquestActive(B11_TRANS_SUBQUEST) && !B1_IsSubquestActive(B12A_TRANS_SUBQUEST))
+			{
+				break;
+			}
+
+			if (B12A_CanStartQuest())
+			{
+				Link.l1 = DLG_TEXT[57];
+				Link.l1.go = "B1_2A_start_1";
 				break;
 			}
 
@@ -168,6 +192,43 @@ void ProcessDialogEvent()
 			QuestComplete_B1_1("PJ_B1_1_START");
 			d.Text = DLG_TEXT[21];
 			Link.l1 = DLG_TEXT[22];
+			Link.l1.go = "exit";
+		break;
+
+		case "B1_2A_start_1":
+			d.Text = DLG_TEXT[58];
+			Link.l1 = DLG_TEXT[59];
+			Link.l1.go = "B1_2A_start_2";
+		break;
+
+		case "B1_2A_start_2":
+			d.Text = DLG_TEXT[60];
+			Link.l1 = DLG_TEXT[61];
+			Link.l1.go = "B1_2A_start_3";
+		break;
+
+		case "B1_2A_start_3":
+			d.Text = DLG_TEXT[62];
+			Link.l1 = DLG_TEXT[63];
+			Link.l1.go = "B1_2A_start_accept";
+		break;
+
+		case "B1_2A_start_accept":
+			QuestComplete_B1_2A("PJ_B1_2A_START");
+			d.Text = DLG_TEXT[64];
+			Link.l1 = DLG_TEXT[65];
+			Link.l1.go = "exit";
+		break;
+
+		case "B1_2A_offer_reminder":
+			d.Text = DLG_TEXT[66];
+			Link.l1 = DLG_TEXT[67];
+			Link.l1.go = "exit";
+		break;
+
+		case "B1_2A_delivery_reminder":
+			d.Text = DLG_TEXT[68];
+			Link.l1 = DLG_TEXT[69];
 			Link.l1.go = "exit";
 		break;
 

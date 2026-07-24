@@ -11,6 +11,7 @@
 #include "quests\quests_reaction_s3.c"
 #include "quests\quests_reaction_b1.c"
 #include "quests\quests_reaction_b1.1.c"
+#include "quests\quests_reaction_b1.2a.c"
 
 #event_handler("LocationWaitNihgtEnd","WaitDatePostEventControl");
 #event_handler("evntQuestCameraRestore","QuestCameraRestore");
@@ -52,6 +53,7 @@ void QuestTracker_EnforceImmutableQuestStates()
 	// les quetes futures pourront y reimposer des etats qui doivent rester immuables
 	// pendant leur execution (relations, reloads, flags globaux, etc.).
 	B1_1_EnforceState();
+	B1_2A_EnforceState();
 }
 
 void QuestTracker_UpdateCurrentQuestState()
@@ -71,6 +73,7 @@ void QuestTracker_UpdateCurrentQuestState()
 	}
 
 	B1_1_UpdateQuestTracker();
+	B1_2A_UpdateQuestTracker();
 }
 void QuestsCheck_forLocEnter()
 {
@@ -96,6 +99,7 @@ void QuestsCheck_forLocEnter()
 	S2_ProcessLocationEnter();
 	S3_ProcessLocationEnter();
 	B1_1_ProcessLocationEnter();
+	B1_2A_ProcessLocationEnter();
 	QuestTracker_UpdateCurrentQuestState();
 }
 

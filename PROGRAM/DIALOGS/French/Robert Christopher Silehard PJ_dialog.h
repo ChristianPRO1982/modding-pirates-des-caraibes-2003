@@ -1,4 +1,4 @@
-string DLG_TEXT[57] = {
+string DLG_TEXT[70] = {
 	"Aaah. Capitaine ",
 	" servant sur le fameux ",
 	". ",
@@ -55,5 +55,18 @@ string DLG_TEXT[57] = {
 	"La tête n'est plus entre les mains de mes contacts. Cherchez dans la jungle de Douwesen un signe ancien ; il doit vous mener à l'endroit.",
 	"Je vais fouiller la jungle jusqu'à trouver cette marque.",
 	"Alors vous avez trouvé l'indice. Ne perdez plus de temps : fouillez l'endroit qu'il désigne et rapportez-moi la tête.",
-	"Je vais terminer cela."
+	"Je vais terminer cela.",
+	"Vous disiez avoir peut-etre d'autres affaires pour moi.",
+	"Justement. Ce qui vient ne concerne plus des antiquites, mais l'equilibre meme de ces iles.",
+	"Vous piquez ma curiosite. Parlez.",
+	"L'Europe resserre ses calculs. L'Espagne avance, la France observe, et l'Angleterre comme le Portugal craignent d'etre etouffes s'ils ne resserrent pas leurs rangs. Une lettre de cachet venue de tres haut doit passer par Conceicao avant de revenir dans le bon circuit.",
+	"Et vous voulez m'en meler.",
+	"Je veux que vous alliez a Conceicao. Jacinto Arcibaldo Barreto vous remettra la lettre de cachet et un cadeau diplomatique. Prenez-les, puis repartez sans halte inutile.",
+	"Je m'en charge.",
+	"Bien. Allez a Conceicao et voyez Barreto. Le reste attendra.",
+	"Je pars immediatement.",
+	"Vous avez deja vos instructions. Allez a Conceicao et voyez Barreto.",
+	"Je prends la route.",
+	"Vous avez ce que Barreto devait vous remettre. Maintenant, retournez a Redmond sans attirer l'attention.",
+	"Je poursuis."
 };
