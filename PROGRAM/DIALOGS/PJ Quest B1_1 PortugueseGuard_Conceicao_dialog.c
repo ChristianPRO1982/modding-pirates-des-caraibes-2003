@@ -1,4 +1,4 @@
-#include "DIALOGS\PJ Quest B1_1 PortugueseGuard_Conceicao_dialog.h"
+//nclude "DIALOGS\PJ Quest B1_1 PortugueseGuard_Conceicao_dialog.h"
 
 void ProcessDialogEvent()
 {

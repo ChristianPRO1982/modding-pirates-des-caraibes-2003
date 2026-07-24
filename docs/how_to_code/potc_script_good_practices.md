@@ -107,6 +107,12 @@ Le `.h` porte `DLG_TEXT[]`.
 
 Ne jamais modifier seulement un cote si l'autre doit rester coherent.
 
+Regle critique pour les fichiers de dialogue PotC:
+
+- dans les fichiers `PROGRAM/DIALOGS/*.c`, la premiere ligne d'un dialogue de type quete ne doit pas commencer par `#include`,
+- elle doit commencer par `//nclude`,
+- utiliser `#include` en tete de ces dialogues peut provoquer un bug de chargement en jeu.
+
 ### IA de lieu
 Les scenes de quete vivent beaucoup a travers `LAi_*`:
 

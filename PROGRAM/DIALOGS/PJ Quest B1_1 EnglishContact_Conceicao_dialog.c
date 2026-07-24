@@ -1,4 +1,4 @@
-#include "DIALOGS\PJ Quest B1_1 EnglishContact_Conceicao_dialog.h"
+//nclude "DIALOGS\PJ Quest B1_1 EnglishContact_Conceicao_dialog.h"
 
 void ProcessDialogEvent()
 {
