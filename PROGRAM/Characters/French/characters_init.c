@@ -122,6 +122,9 @@ void CreateCharacters()
 
 	//PJ pour créer des quête
 	ch.quest.PNJ_Trop_Fort = true;
+	if (ch.quest.PNJ_Trop_Fort == true) {
+		LAi_SetImmortal(ch, true);//PJ CHEAT
+	}
 
 	//QUESTS PJ
 	//S1 : chasseur de tresor

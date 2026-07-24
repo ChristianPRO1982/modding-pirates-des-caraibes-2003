@@ -10,36 +10,41 @@ bool wdmDisableRelease = true;
 void wdmEvent_EncounterCreate()
 {
 	// ajout PJ
-	// pour bloquer les rencontres et tempêtes : MODE DEBUG TEST
-	/*
-	float dltTime = GetEventData();
-	float playerShipX = GetEventData();
-	float playerShipZ = GetEventData();
-	float playerShipAY = GetEventData();
-	//Save player ship position
-	worldMap.playerShipX = playerShipX;
-	worldMap.playerShipZ = playerShipZ;
-	worldMap.playerShipAY = playerShipAY;
-	if(wdmCurrentIsland !=	WDM_NONE_ISLAND)
-	{
-		wdmLoginToSea.island = worldMap.islands.(wdmCurrentIsland).name;
-		float ix = MakeFloat(worldMap.islands.(wdmCurrentIsland).position.rx);
-		float iz = MakeFloat(worldMap.islands.(wdmCurrentIsland).position.rz);
-		worldMap.playerShipDispX = (playerShipX - ix);
-		worldMap.playerShipDispZ = (playerShipZ - iz);
-	}else{
-		worldMap.playerShipDispX = 0.0;
-		worldMap.playerShipDispZ = 0.0;
+	// pour bloquer les rencontres et tempêtes : MODE DEBUG TEST avec la variable PChar.quest.PNJ_Trop_Fort
+	ref PChar;
+	PChar = GetMainCharacter();
+
+	if (PChar.quest.PNJ_Trop_Fort == false) {
+		float dltTime = GetEventData();
+		float playerShipX = GetEventData();
+		float playerShipZ = GetEventData();
+		float playerShipAY = GetEventData();
+		//Save player ship position
+		worldMap.playerShipX = playerShipX;
+		worldMap.playerShipZ = playerShipZ;
+		worldMap.playerShipAY = playerShipAY;
+		if(wdmCurrentIsland !=	WDM_NONE_ISLAND)
+		{
+			wdmLoginToSea.island = worldMap.islands.(wdmCurrentIsland).name;
+			float ix = MakeFloat(worldMap.islands.(wdmCurrentIsland).position.rx);
+			float iz = MakeFloat(worldMap.islands.(wdmCurrentIsland).position.rz);
+			worldMap.playerShipDispX = (playerShipX - ix);
+			worldMap.playerShipDispZ = (playerShipZ - iz);
+		}else{
+			worldMap.playerShipDispX = 0.0;
+			worldMap.playerShipDispZ = 0.0;
+		}
+		//Skip encounters
+		if(CheckAttribute(worldMap, "noenc") != 0)
+		{
+			if(worldMap.noenc == "true") return;
+		}
+		//Generate encounters
+		wdmStormGen(dltTime, playerShipX, playerShipZ, playerShipAY);
+		wdmShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);
+		wdmQuestShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);
 	}
-	//Skip encounters
-	if(CheckAttribute(worldMap, "noenc") != 0)
-	{
-		if(worldMap.noenc == "true") return;
-	}
-	//Generate encounters
-	wdmStormGen(dltTime, playerShipX, playerShipZ, playerShipAY);
-	wdmShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);
-	wdmQuestShipEncounter(dltTime, playerShipX, playerShipZ, playerShipAY);//fin ajout PJ*/
+	//fin ajout PJ
 }
 
 void wdmEvent_InsideIsland()

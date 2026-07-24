@@ -78,13 +78,15 @@ void QuestsCheck_forLocEnter()
 	ref pchar = GetMainCharacter();
 	QuestTracker_UpdateCurrentQuestState();
 	QuestTracker_EnforceImmutableQuestStates();
-	//PJ connaitre a chaque reload des informations (ex : position = pchar.location)
-	Log_SetStringToLog("PJ 1:"+pchar.location);
-	// Log_SetStringToLog("PJ 2:"+pchar.location.locator);
-	// Log_SetStringToLog("PJ 3:"+pchar.location.locator_group);//location.group
-	// Log_SetStringToLog("PJ hour:"+ makeint(GetHour()));
-	// Log_SetStringToLog("PJ blade:"+pchar.equip.blade);
-	// Log_SetStringToLog("PJ gun:"+pchar.equip.gun);
+	if (PChar.quest.PNJ_Trop_Fort == true) {
+		//PJ connaitre a chaque reload des informations (ex : position = pchar.location)
+		Log_SetStringToLog("PJ 1:"+pchar.location);
+		// Log_SetStringToLog("PJ 2:"+pchar.location.locator);
+		// Log_SetStringToLog("PJ 3:"+pchar.location.locator_group);//location.group
+		// Log_SetStringToLog("PJ hour:"+ makeint(GetHour()));
+		// Log_SetStringToLog("PJ blade:"+pchar.equip.blade);
+		// Log_SetStringToLog("PJ gun:"+pchar.equip.gun);
+	}
 	// fin ajout PJ
 
 	QC_DoUnloadLocation();
