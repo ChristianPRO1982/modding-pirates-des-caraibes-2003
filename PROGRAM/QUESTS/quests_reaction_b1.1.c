@@ -740,7 +740,7 @@ void B11_PayIntroReward()
 	{
 		return;
 	}
-	AddMoneyToCharacter(pchar, 3000);
+	AddMoneyToCharacter(pchar, 5000);
 	AddPartyExp(pchar, 3000 * makeint(pchar.rank));
 	pchar.quest_b1_1_intro_reward_paid = "1";
 }
@@ -752,8 +752,8 @@ void B11_PayFinalReward()
 	{
 		return;
 	}
-	AddMoneyToCharacter(pchar, 8000);
-	AddPartyExp(pchar, 8000 * makeint(pchar.rank));
+	AddMoneyToCharacter(pchar, 10000);
+	AddPartyExp(pchar, 5000 * makeint(pchar.rank));
 	pchar.quest_b1_1_final_reward_paid = "1";
 }
 
