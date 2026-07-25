@@ -121,7 +121,7 @@ Malgre les branches, le dernier bloc narratif doit converger autant que possible
 Fichiers cibles probables:
 
 - `PROGRAM/QUESTS/quests_reaction.c`
-- `PROGRAM/DIALOGS/Robert Christopher Silehard PJ_dialog.c`
+- `PROGRAM/DIALOGS/PJ Quest B1 Robert Christopher Silehard_dialog.c`
 - dialogues de Danielle Greene;
 - dialogues des gouverneurs francais / espagnols / portugais;
 - dialogues des autorites religieuses;

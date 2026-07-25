@@ -7,7 +7,7 @@ Ce document rassemble les scenes de dialogue utiles a `B1.1`.
 Il ne remplace pas la spec technique.
 Il sert de reserve de scenes jouables pour:
 
-- `Robert Christopher Silehard PJ_dialog.c/.h`;
+- `PJ Quest B1 Robert Christopher Silehard_dialog.c/.h`;
 - les contacts anglais de `B1.1`;
 - les gardes iberiques de `B1.1`;
 - le contact hollandais de `B1.1`.

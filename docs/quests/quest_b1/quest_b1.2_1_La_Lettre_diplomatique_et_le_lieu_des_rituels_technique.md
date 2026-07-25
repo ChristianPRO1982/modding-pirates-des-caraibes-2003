@@ -45,7 +45,7 @@ Contraintes:
 Conditions cibles:
 
 - `B1.1` terminee;
-- Silehard deja sur `Robert Christopher Silehard PJ_dialog.c`;
+- Silehard deja sur `PJ Quest B1 Robert Christopher Silehard_dialog.c`;
 - `B1.2a` disponible apres la fermeture propre de `B1.1`;
 - `B1.2b` ouverte par le meme trigger qui ferme `B1.2a`;
 - `B1.3` disponible automatiquement quatorze jours apres la fin de `B1.2b`.
@@ -174,8 +174,8 @@ Cette branche:
 
 Fichiers cibles probables:
 
-- `PROGRAM/DIALOGS/Robert Christopher Silehard PJ_dialog.c`
-- `PROGRAM/DIALOGS/French/Robert Christopher Silehard PJ_dialog.h`
+- `PROGRAM/DIALOGS/PJ Quest B1 Robert Christopher Silehard_dialog.c`
+- `PROGRAM/DIALOGS/French/PJ Quest B1 Robert Christopher Silehard_dialog.h`
 - `PROGRAM/QUESTS/quests_reaction.c`
 - `PROGRAM/Characters/French/init/TempQuestCharacters.c`
 - `RESOURCE/INI/TEXTS/FRENCH/QUESTBOOK/quests_texts.txt`

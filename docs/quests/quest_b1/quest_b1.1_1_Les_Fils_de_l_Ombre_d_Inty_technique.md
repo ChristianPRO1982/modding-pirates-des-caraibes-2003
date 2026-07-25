@@ -45,8 +45,8 @@ Le point d'entree de `B1.1` doit partir du Silehard de fin de quete principale, 
 Ancrages verifies dans le repo:
 
 - `PROGRAM/Characters/French/init/Redmond.c` charge `Robert Christopher Silehard` avec `Robert Christopher Silehard_dialog.c` par defaut;
-- `PROGRAM/QUESTS/quests_reaction.c`, evenement `PJ_end_MQ`, remplace ce dialogue par `Robert Christopher Silehard PJ_dialog.c`;
-- `B1` doit donc s'appuyer sur `PROGRAM/DIALOGS/Robert Christopher Silehard PJ_dialog.c` et `PROGRAM/DIALOGS/French/Robert Christopher Silehard PJ_dialog.h`;
+- `PROGRAM/QUESTS/quests_reaction.c`, evenement `PJ_end_MQ`, remplace ce dialogue par `PJ Quest B1 Robert Christopher Silehard_dialog.c`;
+- `B1` doit donc s'appuyer sur `PROGRAM/DIALOGS/PJ Quest B1 Robert Christopher Silehard_dialog.c` et `PROGRAM/DIALOGS/French/PJ Quest B1 Robert Christopher Silehard_dialog.h`;
 - `B1.1` commence apres la fin de la quete principale, dans la fenetre ou Silehard reste gouverneur exploitable politiquement.
 
 ## Ancrages historiques a reutiliser avec prudence
@@ -55,7 +55,7 @@ Le depot contient deja une vieille quete inca du jeu de base:
 
 - header de journal `blaze_to_incas_collection`;
 - texte de journal dans `RESOURCE/INI/TEXTS/FRENCH/QUESTBOOK/quests_texts.txt`;
-- noeuds `incas_collection_complete_node` dans `Robert Christopher Silehard_dialog.c` et `Robert Christopher Silehard PJ_dialog.c`;
+- noeuds `incas_collection_complete_node` dans `Robert Christopher Silehard_dialog.c` et `PJ Quest B1 Robert Christopher Silehard_dialog.c`;
 - item `icollection` dans `PROGRAM/ITEMS/initItems.c`;
 - anciens fragments `STATUE1`, `STATUE2`, `STATUE3` commentes dans `PROGRAM/ITEMS/initItems.c`.
 
@@ -82,14 +82,14 @@ Conditions cibles:
 
 - quete principale terminee;
 - evenement `PJ_end_MQ` deja passe;
-- Silehard deja bascule sur `Robert Christopher Silehard PJ_dialog.c`;
+- Silehard deja bascule sur `PJ Quest B1 Robert Christopher Silehard_dialog.c`;
 - `B1.1` non commencee;
 - `B1.2a` non disponible tant que `B1.1` n'est pas terminee.
 
 Point d'entree joueur:
 
 - parler a Silehard dans `Redmond_Residence`;
-- branche de dialogue dediee `B1.1` dans le fichier `Robert Christopher Silehard PJ_dialog.c`.
+- branche de dialogue dediee `B1.1` dans le fichier `PJ Quest B1 Robert Christopher Silehard_dialog.c`.
 
 ## Core Loop
 
@@ -241,8 +241,8 @@ Motif:
 
 Fichiers cibles les plus probables:
 
-- `PROGRAM/DIALOGS/Robert Christopher Silehard PJ_dialog.c`
-- `PROGRAM/DIALOGS/French/Robert Christopher Silehard PJ_dialog.h`
+- `PROGRAM/DIALOGS/PJ Quest B1 Robert Christopher Silehard_dialog.c`
+- `PROGRAM/DIALOGS/French/PJ Quest B1 Robert Christopher Silehard_dialog.h`
 - `PROGRAM/QUESTS/quests_reaction.c`
 - `PROGRAM/Characters/French/init/TempQuestCharacters.c`
 - `RESOURCE/INI/TEXTS/FRENCH/QUESTBOOK/quests_texts.txt`
@@ -257,7 +257,7 @@ Fichiers possibles selon l'implementation retenue:
 
 Strategie recommandee:
 
-- garder Silehard dans `Robert Christopher Silehard PJ_dialog.c`;
+- garder Silehard dans `PJ Quest B1 Robert Christopher Silehard_dialog.c`;
 - utiliser un dialogue partage pour les contacts anglais de `B1.1`;
 - utiliser un dialogue partage pour les gardes iberiques de `B1.1`;
 - utiliser un dialogue partage pour le contact hollandais de `B1.1`.

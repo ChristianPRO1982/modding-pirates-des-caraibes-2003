@@ -23,7 +23,7 @@ Regle principale:
 ## Decisions fermees
 
 - `B1.1` commence apres la fin de la quete principale.
-- Silehard doit etre pilote via `Robert Christopher Silehard PJ_dialog.c`.
+- Silehard doit etre pilote via `PJ Quest B1 Robert Christopher Silehard_dialog.c`.
 - `B1.1` remplace la vieille fonction narrative de la quete inca vanilla au lieu de la recopier.
 - Le journal doit utiliser un nouveau header dedie, distinct de `blaze_to_incas_collection`.
 - `Conceicao_shore_01` est le meilleur candidat courant pour `Havre radieux`.
@@ -56,7 +56,7 @@ Test attendu:
 
 But:
 
-- ajouter uniquement la branche de depart de `B1.1` dans `Robert Christopher Silehard PJ_dialog.c/.h`.
+- ajouter uniquement la branche de depart de `B1.1` dans `PJ Quest B1 Robert Christopher Silehard_dialog.c/.h`.
 
 Test attendu:
 

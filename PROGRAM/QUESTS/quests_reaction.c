@@ -12495,7 +12495,7 @@ void QuestComplete(string sQuestName)
 			Log_SetStringToLog(GlobalStringConvert("PJ_END_MQ_1"));
 			DoQuestReloadToLocation("redmond_residence", "goto", "goto3", "blaze_from_prison_to_residence_complete");
 			// la ligne si dessous uniquement pour le développement de la quête G1
-			characters[GetCharacterIndex("Robert Christopher Silehard")].dialog.filename = "Robert Christopher Silehard PJ_dialog.c";
+			characters[GetCharacterIndex("Robert Christopher Silehard")].dialog.filename = "PJ Quest B1 Robert Christopher Silehard_dialog.c";
 			
 			Log_SetStringToLog(GlobalStringConvert("PJ_END_MQ_2"));
 		break;

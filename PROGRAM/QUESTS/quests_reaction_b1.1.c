@@ -54,7 +54,7 @@
 #define B11_NPC_INTY_WARRIOR3 "PJ_B1_1_IntyWarrior3"
 #define B11_NPC_MALCOLM_HATCHER "Malcolm Hatcher"
 
-#define B11_DIALOG_FILE "Robert Christopher Silehard PJ_dialog.c"
+#define B11_DIALOG_FILE "PJ Quest B1 Robert Christopher Silehard_dialog.c"
 #define B11_DIALOG_FILE_MUELLE_ENGLISH "PJ Quest B1_1 EnglishContact_Muelle_dialog.c"
 #define B11_DIALOG_FILE_MUELLE_GUARD "PJ Quest B1_1 SpanishGuard_Muelle_dialog.c"
 #define B11_DIALOG_FILE_CONCEICAO_ENGLISH "PJ Quest B1_1 EnglishContact_Conceicao_dialog.c"

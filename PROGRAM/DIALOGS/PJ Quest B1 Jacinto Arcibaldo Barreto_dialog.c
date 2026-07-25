@@ -1,4 +1,4 @@
-//nclude "DIALOGS\Jacinto Arcibaldo Barreto PJ_dialog.h"
+//nclude "DIALOGS\PJ Quest B1 Jacinto Arcibaldo Barreto_dialog.h"
 // object Dialog; declared in dialog.c
 // ref NPChar; declared in dialog.c
 
