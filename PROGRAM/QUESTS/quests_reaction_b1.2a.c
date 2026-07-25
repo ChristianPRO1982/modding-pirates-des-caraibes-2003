@@ -12,7 +12,6 @@
 #define B12A_EVENT_START "PJ_B1_2A_START"
 #define B12A_EVENT_PORTUGAL_HANDOFF "PJ_B1_2A_PORTUGAL_HANDOFF"
 
-#define B12A_DIALOG_FILE_BARRETO_DEFAULT "Jacinto Arcibaldo Barreto_dialog.c"
 #define B12A_DIALOG_FILE_BARRETO_PJ "PJ Quest B1 Jacinto Arcibaldo Barreto_dialog.c"
 
 string B12A_GetStatus()
