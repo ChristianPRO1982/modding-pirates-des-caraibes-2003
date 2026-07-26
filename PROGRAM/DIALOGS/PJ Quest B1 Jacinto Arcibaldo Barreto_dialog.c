@@ -71,10 +71,20 @@ void ProcessDialogEvent()
 					link.l30 = DLG_TEXT[29];
 					link.l30.go = "B1_2A_offer_1";
 				}
-				if (B12A_GetStatus() == B12A_STATUS_DELIVERY)
+				if (B12A_GetStatus() == B12A_STATUS_DELIVERY || B12A_GetStatus() == B12A_STATUS_REDMOND_NIGHT)
 				{
 					link.l31 = DLG_TEXT[35];
 					link.l31.go = "B1_2A_repeat";
+				}
+				if ((B12A_GetStatus() == B12A_STATUS_STOLEN || B12A_GetStatus() == B12A_STATUS_REPORT_CHOICE) && B12A_GetReportTarget() != "portugal")
+				{
+					link.l32 = "On m'a vole la lettre de cachet et le cadeau avant Redmond.";
+					link.l32.go = "B1_2A_report_stolen_1";
+				}
+				if ((B12A_GetStatus() == B12A_STATUS_STOLEN || B12A_GetStatus() == B12A_STATUS_REPORT_CHOICE) && B12A_GetReportTarget() == "portugal")
+				{
+					link.l33 = "Je vous ai deja rapporte ce vol.";
+					link.l33.go = "B1_2A_report_repeat";
 				}
 			}
 
@@ -147,6 +157,31 @@ void ProcessDialogEvent()
 		case "B1_2A_repeat":
 			dialog.text = DLG_TEXT[35];
 			link.l1 = DLG_TEXT[36];
+			link.l1.go = "exit";
+		break;
+
+		case "B1_2A_report_stolen_1":
+			dialog.text = "Quoi ? Des objets diplomatiques subtilises si pres de Redmond ? C'est une humiliation pour tous ceux qui ont fait circuler cet accord.";
+			link.l1 = "Les hommes portaient l'uniforme anglais, mais pas la langue qui allait avec.";
+			link.l1.go = "B1_2A_report_stolen_2";
+		break;
+
+		case "B1_2A_report_stolen_2":
+			dialog.text = "Alors prevenez Silehard sans delai. Lui seul peut mesurer le choc politique de cette perte. Et si vous avez encore un peu d'honneur, retrouvez-moi ces voleurs.";
+			link.l1 = "Je repars aussitot pour Redmond.";
+			link.l1.go = "B1_2A_report_stolen_3";
+		break;
+
+		case "B1_2A_report_stolen_3":
+			QuestComplete_B1_2A("PJ_B1_2A_REPORT_PORTUGAL");
+			dialog.text = "Ne trainez plus. Chaque heure rend cette lettre plus dangereuse hors de nos mains.";
+			link.l1 = "Je vous ferai tenir la suite.";
+			link.l1.go = "exit";
+		break;
+
+		case "B1_2A_report_repeat":
+			dialog.text = "Je vous ai deja ordonne de prevenir Silehard et de reprendre la piste. Je n'ai rien a ajouter.";
+			link.l1 = "Tres bien.";
 			link.l1.go = "exit";
 		break;
 
