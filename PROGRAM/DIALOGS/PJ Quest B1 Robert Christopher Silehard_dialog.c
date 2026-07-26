@@ -90,10 +90,16 @@ void ProcessDialogEvent()
 					Link.l1.go = "B1_2A_offer_reminder";
 					break;
 				}
-				if (B12A_GetStatus() == B12A_STATUS_DELIVERY)
+				if (B12A_GetStatus() == B12A_STATUS_DELIVERY || B12A_GetStatus() == B12A_STATUS_REDMOND_NIGHT)
 				{
 					Link.l1 = DLG_TEXT[68];
 					Link.l1.go = "B1_2A_delivery_reminder";
+					break;
+				}
+				if (B12A_GetStatus() == B12A_STATUS_STOLEN || B12A_GetStatus() == B12A_STATUS_REPORT_CHOICE)
+				{
+					Link.l1 = "Les objets diplomatiques m'ont ete voles avant mon retour.";
+					Link.l1.go = "B1_2A_stolen_1";
 					break;
 				}
 			}
@@ -229,6 +235,36 @@ void ProcessDialogEvent()
 		case "B1_2A_delivery_reminder":
 			d.Text = DLG_TEXT[68];
 			Link.l1 = DLG_TEXT[69];
+			Link.l1.go = "exit";
+		break;
+
+		case "B1_2A_stolen_1":
+			if (B12A_GetReportTarget() == "portugal")
+			{
+				d.Text = "Et vous avez donc cru bon d'aller d'abord trouver Barreto. Apres tout ce que je vous avais explique sur ce qui menace deja ces mers.";
+			}
+			else
+			{
+				d.Text = "Voles ? Ici, sous mon nez ? Cette lettre de cachet et ce cadeau n'etaient pas de simples marques de courtoisie.";
+			}
+			Link.l1 = "Ils m'attendaient. Ce n'etait ni un hasard, ni un simple vol. De faux soldats anglais.";
+			Link.l1.go = "B1_2A_stolen_2";
+		break;
+
+		case "B1_2A_stolen_2":
+			d.Text = "Alors ils savaient ce qu'ils prenaient. Nous sommes tres decus... Je suis tres decu par cette issue.";
+			Link.l1 = "Leur parler trahissait autre chose. Des tournures etranges. Presque hollandaises.";
+			Link.l1.go = "B1_2A_stolen_3";
+		break;
+
+		case "B1_2A_stolen_3":
+			if (B12A_GetReportTarget() == "")
+			{
+				QuestComplete_B1_2A("PJ_B1_2A_REPORT_ENGLAND");
+			}
+			QuestComplete_B1_2A("PJ_B1_2A_SILEHARD_TRANSITION");
+			d.Text = "Bien. Vous allez reprendre leur piste. Vite. Proprement. Sans bruit. Je veux une enquete efficace, rapide et discrete. Retrouvons d'abord leur pays, puis leur port.";
+			Link.l1 = "Je vais leur trouver un accent, puis un refuge.";
 			Link.l1.go = "exit";
 		break;
 
