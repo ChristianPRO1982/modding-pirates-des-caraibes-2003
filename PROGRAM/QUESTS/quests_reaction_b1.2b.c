@@ -39,6 +39,142 @@ bool B12B_HasFleetDestroyed()
 	return CheckAttribute(pchar, "quest_b1_2b_fleet_destroyed") && sti(pchar.quest_b1_2b_fleet_destroyed) == true;
 }
 
+bool B12B_IsRitualUnlockedStatus(string status)
+{
+	switch (status)
+	{
+		case B12B_STATUS_RITUAL_CAVE:
+			return true;
+		break;
+
+		case B12B_STATUS_PRIESTS_DEAD:
+			return true;
+		break;
+
+		case B12B_STATUS_COMPLETED:
+			return true;
+		break;
+
+		case B12B_STATUS_CLOSED:
+			return true;
+		break;
+	}
+
+	return false;
+}
+
+bool B12B_IsWitnessInquiryStatus(string status)
+{
+	switch (status)
+	{
+		case B12B_STATUS_DOUWESEN_INQUIRY:
+			return true;
+		break;
+
+		case B12B_STATUS_FRENCH_GOVERNOR:
+			return true;
+		break;
+	}
+
+	return false;
+}
+
+bool B12B_IsSpyCleanStatus(string status)
+{
+	switch (status)
+	{
+		case B12B_STATUS_FRENCH_SPY:
+			return true;
+		break;
+
+		case B12B_STATUS_RETURN_SILEHARD:
+			return true;
+		break;
+
+		case B12B_STATUS_NAVAL_ASSAULT:
+			return true;
+		break;
+
+		case B12B_STATUS_RITUAL_CAVE:
+			return true;
+		break;
+
+		case B12B_STATUS_PRIESTS_DEAD:
+			return true;
+		break;
+	}
+
+	return false;
+}
+
+bool B12B_IsRecognizedEvent(string sQuestName)
+{
+	switch (sQuestName)
+	{
+		case B12B_EVENT_MALCOLM_HINT:
+			return true;
+		break;
+
+		case B12B_EVENT_WITNESS1:
+			return true;
+		break;
+
+		case B12B_EVENT_WITNESS2:
+			return true;
+		break;
+
+		case B12B_EVENT_WITNESS3:
+			return true;
+		break;
+
+		case B12B_EVENT_FRENCH_GOVERNOR:
+			return true;
+		break;
+
+		case B12B_EVENT_FRENCH_SPY:
+			return true;
+		break;
+
+		case B12B_EVENT_SILEHARD_DESTINATION:
+			return true;
+		break;
+
+		case B12B_EVENT_NAVAL_SCENE:
+			return true;
+		break;
+
+		case B12B_EVENT_NAVAL_FIGHT:
+			return true;
+		break;
+
+		case B12B_EVENT_NAVAL_DONE:
+			return true;
+		break;
+
+		case B12B_EVENT_RITUAL_SCENE:
+			return true;
+		break;
+
+		case B12B_EVENT_PRIEST_FIGHT:
+			return true;
+		break;
+
+		case B12B_EVENT_PRIESTS_DONE:
+			return true;
+		break;
+
+		case B12B_EVENT_FINAL_REPORT:
+			return true;
+		break;
+
+		case B12B_EVENT_WAR_TIMER_READY:
+			return true;
+		break;
+	}
+
+	return false;
+}
+
 void B12B_SetReloadEnabled(string locationId, string reloadId, bool enabled)
 {
 	int locIdx = FindLocation(locationId);
@@ -56,7 +192,7 @@ void B12B_ApplyTravelLocks()
 	string status = B12B_GetStatus();
 	bool shoreEnabled = B12B_HasFleetDestroyed();
 	bool caveEnabled = B12B_HasFleetDestroyed();
-	bool ritualEnabled = status == B12B_STATUS_RITUAL_CAVE || status == B12B_STATUS_PRIESTS_DEAD || status == B12B_STATUS_COMPLETED || status == B12B_STATUS_CLOSED;
+	bool ritualEnabled = B12B_IsRitualUnlockedStatus(status);
 
 	if (!B12B_IsStarted())
 	{
@@ -198,7 +334,11 @@ string B12B_GetStatus()
 {
 	ref pchar = GetMainCharacter();
 
-	if (!CheckAttribute(pchar, "quest_b1_2b_status") || pchar.quest_b1_2b_status == "")
+	if (!CheckAttribute(pchar, "quest_b1_2b_status"))
+	{
+		return B12B_STATUS_NOT_STARTED;
+	}
+	if (pchar.quest_b1_2b_status == "")
 	{
 		return B12B_STATUS_NOT_STARTED;
 	}
@@ -207,14 +347,26 @@ string B12B_GetStatus()
 
 string B12B_GetPublishedStep(string status)
 {
-	if (status == B12B_STATUS_NOT_STARTED || status == "")
+	if (status == "")
 	{
 		return B1_STEP_NONE;
 	}
-	if (status == B12B_STATUS_COMPLETED || status == B12B_STATUS_CLOSED)
+
+	switch (status)
 	{
-		return B1_STEP_COMPLETED;
+		case B12B_STATUS_NOT_STARTED:
+			return B1_STEP_NONE;
+		break;
+
+		case B12B_STATUS_COMPLETED:
+			return B1_STEP_COMPLETED;
+		break;
+
+		case B12B_STATUS_CLOSED:
+			return B1_STEP_COMPLETED;
+		break;
 	}
+
 	return status;
 }
 
@@ -250,13 +402,37 @@ void B12B_SetStatus(string status)
 bool B12B_IsStarted()
 {
 	string status = B12B_GetStatus();
-	return status != B12B_STATUS_NOT_STARTED && status != B12B_STATUS_CLOSED;
+
+	switch (status)
+	{
+		case B12B_STATUS_NOT_STARTED:
+			return false;
+		break;
+
+		case B12B_STATUS_CLOSED:
+			return false;
+		break;
+	}
+
+	return true;
 }
 
 bool B12B_IsCompleted()
 {
 	string status = B12B_GetStatus();
-	return status == B12B_STATUS_COMPLETED || status == B12B_STATUS_CLOSED;
+
+	switch (status)
+	{
+		case B12B_STATUS_COMPLETED:
+			return true;
+		break;
+
+		case B12B_STATUS_CLOSED:
+			return true;
+		break;
+	}
+
+	return false;
 }
 
 bool B12B_IsTransverseActive()
@@ -369,7 +545,9 @@ void B12B_SetSpyClean()
 
 void B12B_SpawnDouwesenWitnesses()
 {
-	if (B12B_GetStatus() != B12B_STATUS_DOUWESEN_INQUIRY && B12B_GetStatus() != B12B_STATUS_FRENCH_GOVERNOR)
+	string status = B12B_GetStatus();
+
+	if (!B12B_IsWitnessInquiryStatus(status))
 	{
 		B11_HideNpc(B12_NPC_WITNESS1);
 		B11_HideNpc(B12_NPC_WITNESS2);
@@ -480,7 +658,11 @@ void B12B_SilehardDestination()
 
 void B12B_StartNavalScene()
 {
-	if (B12B_GetStatus() != B12B_STATUS_NAVAL_ASSAULT || B12B_HasFleetDestroyed())
+	if (B12B_GetStatus() != B12B_STATUS_NAVAL_ASSAULT)
+	{
+		return;
+	}
+	if (B12B_HasFleetDestroyed())
 	{
 		return;
 	}
@@ -664,6 +846,8 @@ void B1_2B_UpdateQuestTracker()
 
 void B1_2B_EnforceState()
 {
+	string status = B12B_GetStatus();
+
 	B12B_SyncTransverseState();
 
 	if (!B12B_IsStarted() || B12B_IsCompleted())
@@ -673,27 +857,22 @@ void B1_2B_EnforceState()
 
 	B12B_ApplyTravelLocks();
 
-	switch (B12B_GetStatus())
+	if (B12B_IsWitnessInquiryStatus(status))
 	{
-		case B12B_STATUS_DOUWESEN_INQUIRY:
-		case B12B_STATUS_FRENCH_GOVERNOR:
-			B12B_SpawnDouwesenWitnesses();
-			B12B_SetSpyRagged();
-		break;
-
-		case B12B_STATUS_FRENCH_SPY:
-		case B12B_STATUS_RETURN_SILEHARD:
-		case B12B_STATUS_NAVAL_ASSAULT:
-		case B12B_STATUS_RITUAL_CAVE:
-		case B12B_STATUS_PRIESTS_DEAD:
-			B12B_SpawnDouwesenWitnesses();
-			B12B_SetSpyClean();
-		break;
+		B12B_SpawnDouwesenWitnesses();
+		B12B_SetSpyRagged();
 	}
-
-	if (B12B_GetStatus() == B12B_STATUS_NAVAL_ASSAULT && !B12B_HasFleetDestroyed())
+	if (B12B_IsSpyCleanStatus(status))
 	{
-		B12B_PrepareNavalDefense();
+		B12B_SpawnDouwesenWitnesses();
+		B12B_SetSpyClean();
+	}
+	if (status == B12B_STATUS_NAVAL_ASSAULT)
+	{
+		if (!B12B_HasFleetDestroyed())
+		{
+			B12B_PrepareNavalDefense();
+		}
 	}
 }
 
@@ -704,7 +883,7 @@ void B1_2B_ProcessLocationEnter()
 
 	B12B_SyncTransverseState();
 
-	if (status == B12B_STATUS_DOUWESEN_INQUIRY || status == B12B_STATUS_FRENCH_GOVERNOR)
+	if (B12B_IsWitnessInquiryStatus(status))
 	{
 		B12B_SpawnDouwesenWitnesses();
 		B12B_SetSpyRagged();
@@ -726,9 +905,12 @@ void B1_2B_ProcessLocationEnter()
 			Log_SetStringToLog("Le rite est encore protege par la baie. Reprenez la mer.");
 		}
 	}
-	if (status == B12B_STATUS_RITUAL_CAVE && pchar.location == "Muelle_ANIMISTS")
+	if (status == B12B_STATUS_RITUAL_CAVE)
 	{
-		QuestComplete_B1_2B(B12B_EVENT_RITUAL_SCENE);
+		if (pchar.location == "Muelle_ANIMISTS")
+		{
+			QuestComplete_B1_2B(B12B_EVENT_RITUAL_SCENE);
+		}
 	}
 }
 
@@ -736,24 +918,7 @@ bool QuestComplete_B1_2B(string sQuestName)
 {
 	B12B_SyncTransverseState();
 
-	if (
-		sQuestName != B12B_EVENT_MALCOLM_HINT &&
-		sQuestName != B12B_EVENT_WITNESS1 &&
-		sQuestName != B12B_EVENT_WITNESS2 &&
-		sQuestName != B12B_EVENT_WITNESS3 &&
-		sQuestName != B12B_EVENT_FRENCH_GOVERNOR &&
-		sQuestName != B12B_EVENT_FRENCH_SPY &&
-		sQuestName != B12B_EVENT_SILEHARD_DESTINATION &&
-		sQuestName != B12B_EVENT_NAVAL_SCENE &&
-		sQuestName != B12B_EVENT_NAVAL_FIGHT &&
-		sQuestName != B12B_EVENT_NAVAL_DONE &&
-		sQuestName != B12B_EVENT_RITUAL_SCENE &&
-		sQuestName != B12B_EVENT_PRIEST_FIGHT &&
-		sQuestName != B12B_EVENT_PRIESTS_DONE &&
-		sQuestName != B12B_EVENT_FINAL_REPORT &&
-		sQuestName != B12B_EVENT_WAR_TIMER_READY &&
-		B1_IsAnotherSubquestActive(B12B_TRANS_SUBQUEST)
-	)
+	if (!B12B_IsRecognizedEvent(sQuestName) && B1_IsAnotherSubquestActive(B12B_TRANS_SUBQUEST))
 	{
 		return false;
 	}

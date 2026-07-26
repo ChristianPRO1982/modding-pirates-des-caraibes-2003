@@ -12,6 +12,7 @@
 #include "quests\quests_reaction_b1.c"
 #include "quests\quests_reaction_b1.1.c"
 #include "quests\quests_reaction_b1.2a.c"
+#include "quests\quests_reaction_b1.2b.c"
 
 #event_handler("LocationWaitNihgtEnd","WaitDatePostEventControl");
 #event_handler("evntQuestCameraRestore","QuestCameraRestore");
@@ -54,6 +55,7 @@ void QuestTracker_EnforceImmutableQuestStates()
 	// pendant leur execution (relations, reloads, flags globaux, etc.).
 	B1_1_EnforceState();
 	B1_2A_EnforceState();
+	B1_2B_EnforceState();
 }
 
 void QuestTracker_UpdateCurrentQuestState()
@@ -74,6 +76,7 @@ void QuestTracker_UpdateCurrentQuestState()
 
 	B1_1_UpdateQuestTracker();
 	B1_2A_UpdateQuestTracker();
+	B1_2B_UpdateQuestTracker();
 }
 void QuestsCheck_forLocEnter()
 {
@@ -100,6 +103,7 @@ void QuestsCheck_forLocEnter()
 	S3_ProcessLocationEnter();
 	B1_1_ProcessLocationEnter();
 	B1_2A_ProcessLocationEnter();
+	B1_2B_ProcessLocationEnter();
 	QuestTracker_UpdateCurrentQuestState();
 }
 
@@ -1085,6 +1089,7 @@ void CompleteQuestName(string sQuestName)
 	else
 	{
 		QuestComplete(sQuestName);
+		QuestComplete_B1_2B(sQuestName);
 		BothQuestComplete(sQuestName);
 	}
 }
