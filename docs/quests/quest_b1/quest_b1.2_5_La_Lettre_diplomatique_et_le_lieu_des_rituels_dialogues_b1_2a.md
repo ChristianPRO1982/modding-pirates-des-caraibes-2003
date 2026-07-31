@@ -30,7 +30,7 @@ Le but ici n'est pas d'ecrire un script final exhaustif, mais de verrouiller sce
 - maitrise;
 - grave;
 - paternaliste quand il parle du joueur;
-- plus ideologique qu'ouvertement menaÃƒÂ§ant.
+- plus ideologique qu'ouvertement menaçant.
 
 ### Sous-texte
 
@@ -63,7 +63,7 @@ Le but ici n'est pas d'ecrire un script final exhaustif, mais de verrouiller sce
 "Vous peignez la un horizon bien sombre, Excellence."
 
 **Silehard:**
-"Quand les couronnes envoient leurs flottes, ce ne sont pas seulement leurs ennemis qui disparaissent. Les contrebandiers, les corsaires libres, les honnÃƒÂªtes pirates, tous sont balayes."
+"Quand les couronnes envoient leurs flottes, ce ne sont pas seulement leurs ennemis qui disparaissent. Les contrebandiers, les corsaires libres, les honnêtes pirates, tous sont balayes."
 
 **Silehard:**
 "Certains hommes pensent qu'il reste encore une marge d'action. Je suis a leur service et je partage leur jugement."
@@ -75,7 +75,7 @@ Le but ici n'est pas d'ecrire un script final exhaustif, mais de verrouiller sce
 "Rends-toi a Conceicao. Le gouverneur portugais te remettra la lettre de cachet et un cadeau diplomatique. Tu reviendras ensuite sans detour."
 
 **Silehard:**
-"Il faut que l'on se debarrasse de cet accord nauseabond et Ã  nous les bananes-chocolats !"
+"Il faut que l'on se debarrasse de cet accord nauseabond et à nous les bananes-chocolats !"
 
 **Reponses du joueur possibles:**
 - "Je suis votre homme, et je mets mon sabre et mon bateau a cette noble cause."
@@ -133,7 +133,7 @@ Le but ici n'est pas d'ecrire un script final exhaustif, mais de verrouiller sce
 
 **Reponses du joueur possibles:**
 - "Je porterai ces objets a Redmond."
-- "Vous parlez de sectes comme d'une armee invisible. Vous me faites peur. Je tacherais de me garder Ã  distance."
+- "Vous parlez de sectes comme d'une armee invisible. Vous me faites peur. Je tacherais de me garder à distance."
 
 ## 3. Faux soldats anglais - Vol nocturne sur le quai
 
