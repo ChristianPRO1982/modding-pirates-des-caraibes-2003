@@ -191,6 +191,26 @@ void InitItems()
 	n++;
 
 	makeref(itm,Items[n]);
+	itm.id = "PJ_B1_2A_diplomatic_letter";
+	itm.name = "PJ_B1_2A_itmname_diplomatic_letter";
+	itm.describe = "PJ_B1_2A_itmdescr_diplomatic_letter";
+	itm.model = "";
+	itm.picIndex = 10;
+	itm.picTexture = "ITEMS_4";
+	itm.price = 0;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "PJ_B1_2A_diplomatic_chest";
+	itm.name = "PJ_B1_2A_itmname_diplomatic_chest";
+	itm.describe = "PJ_B1_2A_itmdescr_diplomatic_chest";
+	itm.model = "";
+	itm.picIndex = 1;
+	itm.picTexture = "ITEMS_4";
+	itm.price = 0;
+	n++;
+
+	makeref(itm,Items[n]);
 	itm.id = "pornushka";
 	itm.name = "itmname_love_letters_of_priest";
 	itm.describe = "itmdescr_love_letters_of_priest";

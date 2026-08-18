@@ -3,6 +3,9 @@
 #define B12A_HEADER "PJ_B1_2A"
 #define B12A_TRANS_SUBQUEST "B1.2a"
 
+#define B12A_ITEM_LETTER "PJ_B1_2A_diplomatic_letter"
+#define B12A_ITEM_GIFT "PJ_B1_2A_diplomatic_chest"
+
 #define B12_NPC_GUARD1 "PJ_B1_2_DutchFakeEnglishGuard1"
 #define B12_NPC_GUARD2 "PJ_B1_2_DutchFakeEnglishGuard2"
 #define B12_NPC_GUARD3 "PJ_B1_2_DutchFakeEnglishGuard3"
@@ -246,6 +249,20 @@ void B12_HideCoreB12Npcs()
 	B11_HideNpc(B12_NPC_CAPTAIN2);
 }
 
+void B12A_RemoveDiplomaticItems()
+{
+	ref pchar = GetMainCharacter();
+
+	if (CheckCharacterItem(pchar, B12A_ITEM_LETTER))
+	{
+		TakeItemFromCharacter(pchar, B12A_ITEM_LETTER);
+	}
+	if (CheckCharacterItem(pchar, B12A_ITEM_GIFT))
+	{
+		TakeItemFromCharacter(pchar, B12A_ITEM_GIFT);
+	}
+}
+
 void B12A_ResetRuntime()
 {
 	ref pchar = GetMainCharacter();
@@ -255,6 +272,7 @@ void B12A_ResetRuntime()
 	DeleteAttribute(pchar, "quest_b1_2a_report_target");
 	DeleteAttribute(pchar, "quest_b1_2a_theft_scene_started");
 	DeleteAttribute(pchar, "quest_b1_2a_theft_scene_done");
+	B12A_RemoveDiplomaticItems();
 	B12_HideCoreB12Npcs();
 	B11_HideNpc(B12_NPC_SPY);
 }
@@ -286,6 +304,15 @@ void B12A_ReceivePortugalPackage()
 	if (B12A_GetStatus() != B12A_STATUS_OFFER)
 	{
 		return;
+	}
+
+	if (!CheckCharacterItem(pchar, B12A_ITEM_LETTER))
+	{
+		GiveItem2Character(pchar, B12A_ITEM_LETTER);
+	}
+	if (!CheckCharacterItem(pchar, B12A_ITEM_GIFT))
+	{
+		GiveItem2Character(pchar, B12A_ITEM_GIFT);
 	}
 
 	pchar.quest_b1_2a_letter_received = "yes";
@@ -364,6 +391,7 @@ void B12A_CompleteTheftScene()
 {
 	ref pchar = GetMainCharacter();
 
+	B12A_RemoveDiplomaticItems();
 	DeleteAttribute(pchar, "quest_b1_2a_letter_received");
 	DeleteAttribute(pchar, "quest_b1_2a_gift_received");
 	pchar.quest_b1_2b_letter_missing = "yes";

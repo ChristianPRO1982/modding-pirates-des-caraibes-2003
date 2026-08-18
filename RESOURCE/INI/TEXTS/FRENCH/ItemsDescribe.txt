@@ -111,6 +111,18 @@ itmdescr_rheims_letter
 Une lettre du capitaine Rheims au gouverneur de Redmond, Robert Christopher Silehard.
 }
 
+PJ_B1_2A_itmname_diplomatic_letter	{Lettre de cachet diplomatique}
+PJ_B1_2A_itmdescr_diplomatic_letter
+{
+Une lettre de cachet confiée par le gouverneur de Conceicao et destinée au gouverneur de Redmond.
+}
+
+PJ_B1_2A_itmname_diplomatic_chest	{Cadeau diplomatique}
+PJ_B1_2A_itmdescr_diplomatic_chest
+{
+Un coffre diplomatique remis à Conceicao pour accompagner la lettre de cachet jusqu'à Redmond.
+}
+
 itmname_love_letters_of_priest	{Lettres d'amour du prêtre}
 itmdescr_love_letters_of_priest
 {

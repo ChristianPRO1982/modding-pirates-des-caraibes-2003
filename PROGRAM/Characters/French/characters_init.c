@@ -157,6 +157,8 @@ void CreateCharacters()
 	ch.quest_S2_Oxbay_done = false;
 	ch.quest_S2_Oxbay_success = false;
 	ch.quest_S2_final_done = false;
+
+	// pour le développement de quête
 	// GiveItem2Character(ch, "blade1");
 	// GiveItem2Character(ch, "blade2");
 	// GiveItem2Character(ch, "blade3");
@@ -176,32 +178,32 @@ void CreateCharacters()
 	// GiveItem2Character(ch, "blade17");
 	// GiveItem2Character(ch, "blade18");
 	// GiveItem2Character(ch, "blade19");
-	GiveItem2Character(ch, "blade20");
-	GiveItem2Character(ch, "blade21");
-	GiveItem2Character(ch, "blade22");
-	GiveItem2Character(ch, "blade23");
-	GiveItem2Character(ch, "pistol1");
-	GiveItem2Character(ch, "pistol2");
-	GiveItem2Character(ch, "pistol3");
-	GiveItem2Character(ch, "pistol4");
-	GiveItem2Character(ch, "pistol5");
-	GiveItem2Character(ch, "pistol6");
-	GiveItem2Character(ch, "indian1");
-	GiveItem2Character(ch, "indian2");
-	GiveItem2Character(ch, "indian3");
-	GiveItem2Character(ch, "indian4");
-	GiveItem2Character(ch, "indian5");
-	GiveItem2Character(ch, "indian6");
-	GiveItem2Character(ch, "indian7");
-	GiveItem2Character(ch, "indian8");
-	GiveItem2Character(ch, "indian9");
-	GiveItem2Character(ch, "indian10");
-	GiveItem2Character(ch, "indian11");
-	GiveItem2Character(ch, "indian12");
-	GiveItem2Character(ch, "indian13");
-	GiveItem2Character(ch, "indian14");
-	GiveItem2Character(ch, "indian15");
-	GiveItem2Character(ch, "indian16");
+	// GiveItem2Character(ch, "blade20");
+	// GiveItem2Character(ch, "blade21");
+	// GiveItem2Character(ch, "blade22");
+	// GiveItem2Character(ch, "blade23");
+	// GiveItem2Character(ch, "pistol1");
+	// GiveItem2Character(ch, "pistol2");
+	// GiveItem2Character(ch, "pistol3");
+	// GiveItem2Character(ch, "pistol4");
+	// GiveItem2Character(ch, "pistol5");
+	// GiveItem2Character(ch, "pistol6");
+	// GiveItem2Character(ch, "indian1");
+	// GiveItem2Character(ch, "indian2");
+	// GiveItem2Character(ch, "indian3");
+	// GiveItem2Character(ch, "indian4");
+	// GiveItem2Character(ch, "indian5");
+	// GiveItem2Character(ch, "indian6");
+	// GiveItem2Character(ch, "indian7");
+	// GiveItem2Character(ch, "indian8");
+	// GiveItem2Character(ch, "indian9");
+	// GiveItem2Character(ch, "indian10");
+	// GiveItem2Character(ch, "indian11");
+	// GiveItem2Character(ch, "indian12");
+	// GiveItem2Character(ch, "indian13");
+	// GiveItem2Character(ch, "indian14");
+	// GiveItem2Character(ch, "indian15");
+	// GiveItem2Character(ch, "indian16");
 	// GiveItem2Character(ch, "idol");
 	// GiveItem2Character(ch, "icollection");
 	// GiveItem2Character(ch, "PJ_B1_1_STATUE_FEET");
@@ -214,7 +216,7 @@ void CreateCharacters()
 	// GiveItem2Character(ch, "gov_letter");// lettre cachetée ouverte
 	// GiveItem2Character(ch, "legend_piece");// tablette d'argile inca cassée
 	// GiveItem2Character(ch, "legend_notes");// traduction de la tablette d'argile inca
-	// GiveItem2Character(ch, "legend_copy");// copy de la traduction de la tablette d'argile inca
+	// GiveItem2Character(ch, "legend_copy");// copie de la traduction de la tablette d'argile inca
 	// GiveItem2Character(ch, "rheims_journal");// livre avec verrou
 	// GiveItem2Character(ch, "domingues_fucked");// 3 feuilles avec une plume
 	// GiveItem2Character(ch, "rheims_letter");// enveloppe cachetée 1
@@ -224,6 +226,8 @@ void CreateCharacters()
 	// GiveItem2Character(ch, "letter_to_bernard");// enveloppe cachetée 2
 	// GiveItem2Character(ch, "letter_prison");// enveloppe cachetée 1
 	// GiveItem2Character(ch, "STATUE1");// statue inca en pierre
+	// GiveItem2Character(ch, "PJ_B1_2A_diplomatic_letter");// statue inca en pierre
+	// GiveItem2Character(ch, "PJ_B1_2A_diplomatic_chest");// statue inca en pierre
 
 	// QUESTS BEGINNINGS
 
