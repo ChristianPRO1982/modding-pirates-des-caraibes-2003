@@ -12496,6 +12496,10 @@ void QuestComplete(string sQuestName)
 			DoQuestReloadToLocation("redmond_residence", "goto", "goto3", "blaze_from_prison_to_residence_complete");
 			// la ligne si dessous uniquement pour le développement de la quête G1
 			characters[GetCharacterIndex("Robert Christopher Silehard")].dialog.filename = "PJ Quest B1 Robert Christopher Silehard_dialog.c";
+			// les lignes ci-dessous uniquement pour le développement de la quête B1.2a
+			// elles simulent une B1.1 déjà terminée pour proposer directement B1.2 chez Silehard
+			PChar.quest_b1_status = "b1_1_completed";
+			PChar.quest_b1_2a_available = "yes";
 			
 			Log_SetStringToLog(GlobalStringConvert("PJ_END_MQ_2"));
 		break;
