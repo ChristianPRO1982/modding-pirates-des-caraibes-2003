@@ -224,6 +224,34 @@ void B12A_SetBarretoDialog(string dialogFile)
 	chref.Dialog.TempNode = "First time";
 }
 
+void B12A_ClearRedmondArrivalHooks()
+{
+	ref pchar = GetMainCharacter();
+
+	DeleteAttribute(pchar, "quest.PJ_B1_2A_REDMOND_PORT_HOOK");
+	DeleteAttribute(pchar, "quest.PJ_B1_2A_REDMOND_SHORE1_HOOK");
+	DeleteAttribute(pchar, "quest.PJ_B1_2A_REDMOND_SHORE2_HOOK");
+}
+
+void B12A_ArmRedmondArrivalHooks()
+{
+	ref pchar = GetMainCharacter();
+
+	B12A_ClearRedmondArrivalHooks();
+
+	pchar.quest.PJ_B1_2A_REDMOND_PORT_HOOK.win_condition.l1 = "location";
+	pchar.quest.PJ_B1_2A_REDMOND_PORT_HOOK.win_condition.l1.location = "REDMOND_PORT";
+	pchar.quest.PJ_B1_2A_REDMOND_PORT_HOOK.win_condition = B12A_EVENT_REDMOND_ARRIVAL;
+
+	pchar.quest.PJ_B1_2A_REDMOND_SHORE1_HOOK.win_condition.l1 = "location";
+	pchar.quest.PJ_B1_2A_REDMOND_SHORE1_HOOK.win_condition.l1.location = "Redmond_Shore_01";
+	pchar.quest.PJ_B1_2A_REDMOND_SHORE1_HOOK.win_condition = B12A_EVENT_REDMOND_ARRIVAL;
+
+	pchar.quest.PJ_B1_2A_REDMOND_SHORE2_HOOK.win_condition.l1 = "location";
+	pchar.quest.PJ_B1_2A_REDMOND_SHORE2_HOOK.win_condition.l1.location = "Redmond_shore_02";
+	pchar.quest.PJ_B1_2A_REDMOND_SHORE2_HOOK.win_condition = B12A_EVENT_REDMOND_ARRIVAL;
+}
+
 void B12_HideCoreB12Npcs()
 {
 	B11_HideNpc(B12_NPC_GUARD1);
@@ -256,6 +284,7 @@ void B12A_ResetRuntime()
 {
 	ref pchar = GetMainCharacter();
 
+	B12A_ClearRedmondArrivalHooks();
 	DeleteAttribute(pchar, "quest_b1_2a_letter_received");
 	DeleteAttribute(pchar, "quest_b1_2a_gift_received");
 	DeleteAttribute(pchar, "quest_b1_2a_report_target");
@@ -308,29 +337,14 @@ void B12A_ReceivePortugalPackage()
 	pchar.quest_b1_2a_letter_received = "yes";
 	pchar.quest_b1_2a_gift_received = "yes";
 	B12A_SetStatus(B12A_STATUS_DELIVERY);
+	B12A_ArmRedmondArrivalHooks();
 	AddQuestRecord(B12A_HEADER, "1");
 	Log_SetStringToLog("PJ B1.2a: portugal handoff complete");
 }
 
 void B12A_ApplyRedmondArrivalTrigger()
 {
-	ref pchar = GetMainCharacter();
-
-	if (B12A_GetStatus() != B12A_STATUS_DELIVERY)
-	{
-		return;
-	}
-	if (!B12A_IsRedmondLandLocation(pchar.location))
-	{
-		return;
-	}
-	if (CheckAttribute(pchar, "quest_b1_2a_redmond_arrival_done"))
-	{
-		return;
-	}
-
-	pchar.quest_b1_2a_redmond_arrival_done = "yes";
-	DoQuestCheckDelay(B12A_EVENT_REDMOND_ARRIVAL, 0.0);
+	return;
 }
 
 void B12A_RunRedmondArrivalTrigger()
@@ -346,21 +360,27 @@ void B12A_RunRedmondArrivalTrigger()
 	{
 		return;
 	}
-	hour = makeint(GetHour());
-	if (hour >= 4 && hour < 22)
+	if (CheckAttribute(pchar, "quest_b1_2a_redmond_arrival_done"))
 	{
-		SetCurrentTime(22, 0);
+		return;
 	}
 
+	B12A_ClearRedmondArrivalHooks();
+	pchar.quest_b1_2a_redmond_arrival_done = "yes";
+
+	Log_SetStringToLog("Des soldats vous barrent la route.");
+	B12A_SpawnTheftGuards();
 	pchar.quest_b1_2a_theft_scene_started = "yes";
 	B12A_SetStatus(B12A_STATUS_REDMOND_NIGHT);
-	B12A_StartTheftScene();
+	DoQuestCheckDelay(B12A_EVENT_THEFT_SCENE, 0.2);
 }
 
 void B12A_SpawnTheftGuards()
 {
 	ref pchar = GetMainCharacter();
 	string locationId = "REDMOND_PORT";
+	float locx, locy, locz;
+	string homelocator;
 
 	if (CheckAttribute(pchar, "location") && pchar.location != "")
 	{
@@ -381,11 +401,41 @@ void B12A_SpawnTheftGuards()
 	B12_SetDialogNode(B12_NPC_GUARD4, "B1_2A_guard");
 	B12_SetDialogNode(B12_NPC_GUARD_CHIEF, "B1_2A_theft");
 
-	B11_PlaceNpc(B12_NPC_GUARD1, locationId, "goto");
-	B11_PlaceNpc(B12_NPC_GUARD2, locationId, "goto");
-	B11_PlaceNpc(B12_NPC_GUARD3, locationId, "goto");
-	B11_PlaceNpc(B12_NPC_GUARD4, locationId, "goto");
-	B11_PlaceNpc(B12_NPC_GUARD_CHIEF, locationId, "goto");
+	if (GetCharacterPos(GetMainCharacter(), &locx, &locy, &locz))
+	{
+		homelocator = LAi_FindNearestFreeLocator("goto", locx, locy, locz);
+		if (homelocator == "") { homelocator = LAi_FindFarLocator("goto", locx, locy, locz); }
+		if (homelocator != "") { B11_PlaceNpcAtLocator(B12_NPC_GUARD1, locationId, homelocator); }
+		else { B11_PlaceNpc(B12_NPC_GUARD1, locationId, "goto"); }
+
+		homelocator = LAi_FindNearestFreeLocator("goto", locx, locy, locz);
+		if (homelocator == "") { homelocator = LAi_FindFarLocator("goto", locx, locy, locz); }
+		if (homelocator != "") { B11_PlaceNpcAtLocator(B12_NPC_GUARD2, locationId, homelocator); }
+		else { B11_PlaceNpc(B12_NPC_GUARD2, locationId, "goto"); }
+
+		homelocator = LAi_FindNearestFreeLocator("goto", locx, locy, locz);
+		if (homelocator == "") { homelocator = LAi_FindFarLocator("goto", locx, locy, locz); }
+		if (homelocator != "") { B11_PlaceNpcAtLocator(B12_NPC_GUARD3, locationId, homelocator); }
+		else { B11_PlaceNpc(B12_NPC_GUARD3, locationId, "goto"); }
+
+		homelocator = LAi_FindNearestFreeLocator("goto", locx, locy, locz);
+		if (homelocator == "") { homelocator = LAi_FindFarLocator("goto", locx, locy, locz); }
+		if (homelocator != "") { B11_PlaceNpcAtLocator(B12_NPC_GUARD4, locationId, homelocator); }
+		else { B11_PlaceNpc(B12_NPC_GUARD4, locationId, "goto"); }
+
+		homelocator = LAi_FindNearestFreeLocator("goto", locx, locy, locz);
+		if (homelocator == "") { homelocator = LAi_FindFarLocator("goto", locx, locy, locz); }
+		if (homelocator != "") { B11_PlaceNpcAtLocator(B12_NPC_GUARD_CHIEF, locationId, homelocator); }
+		else { B11_PlaceNpc(B12_NPC_GUARD_CHIEF, locationId, "goto"); }
+	}
+	else
+	{
+		B11_PlaceNpc(B12_NPC_GUARD1, locationId, "goto");
+		B11_PlaceNpc(B12_NPC_GUARD2, locationId, "goto");
+		B11_PlaceNpc(B12_NPC_GUARD3, locationId, "goto");
+		B11_PlaceNpc(B12_NPC_GUARD4, locationId, "goto");
+		B11_PlaceNpc(B12_NPC_GUARD_CHIEF, locationId, "goto");
+	}
 
 	B11_SetNpcGuardian(B12_NPC_GUARD1);
 	B11_SetNpcGuardian(B12_NPC_GUARD2);
