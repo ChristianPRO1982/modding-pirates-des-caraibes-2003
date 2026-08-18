@@ -455,8 +455,8 @@ void B12A_StartTheftScene()
 
 	B12A_SpawnTheftGuards();
 	LAi_LockFightMode(pchar, true);
-	LAi_SetActorType(characterFromID(B12_NPC_GUARD_CHIEF));
-	LAi_ActorDialogNow(characterFromID(B12_NPC_GUARD_CHIEF), pchar, "", -1);
+	// LAi_SetActorType(characterFromID(B12_NPC_GUARD_CHIEF));
+	// LAi_ActorDialogNow(characterFromID(B12_NPC_GUARD_CHIEF), pchar, "", -1);
 }
 
 void B12A_CompleteTheftScene()
