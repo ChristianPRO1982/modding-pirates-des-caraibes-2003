@@ -66,25 +66,51 @@ void ProcessDialogEvent()
 
 			if (B12A_IsStarted() && !B12A_IsCompleted())
 			{
-				if (B12A_GetStatus() == B12A_STATUS_OFFER)
+				string b12aStatus;
+				b12aStatus = B12A_GetStatus();
+
+				if (b12aStatus == B12A_STATUS_OFFER)
 				{
 					link.l30 = DLG_TEXT[29];
 					link.l30.go = "B1_2A_offer_1";
 				}
-				if (B12A_GetStatus() == B12A_STATUS_DELIVERY || B12A_GetStatus() == B12A_STATUS_REDMOND_NIGHT)
+				switch (b12aStatus)
 				{
-					link.l31 = DLG_TEXT[35];
-					link.l31.go = "B1_2A_repeat";
-				}
-				if ((B12A_GetStatus() == B12A_STATUS_STOLEN || B12A_GetStatus() == B12A_STATUS_REPORT_CHOICE) && B12A_GetReportTarget() != "portugal")
-				{
-					link.l32 = "On m'a vole la lettre de cachet et le cadeau avant Redmond.";
-					link.l32.go = "B1_2A_report_stolen_1";
-				}
-				if ((B12A_GetStatus() == B12A_STATUS_STOLEN || B12A_GetStatus() == B12A_STATUS_REPORT_CHOICE) && B12A_GetReportTarget() == "portugal")
-				{
-					link.l33 = "Je vous ai deja rapporte ce vol.";
-					link.l33.go = "B1_2A_report_repeat";
+					case B12A_STATUS_DELIVERY:
+						link.l31 = DLG_TEXT[35];
+						link.l31.go = "B1_2A_repeat";
+					break;
+
+					case B12A_STATUS_REDMOND_NIGHT:
+						link.l31 = DLG_TEXT[35];
+						link.l31.go = "B1_2A_repeat";
+					break;
+
+					case B12A_STATUS_STOLEN:
+						if (B12A_GetReportTarget() != "portugal")
+						{
+							link.l32 = DLG_TEXT[37];
+							link.l32.go = "B1_2A_report_stolen_1";
+						}
+						if (B12A_GetReportTarget() == "portugal")
+						{
+							link.l33 = DLG_TEXT[38];
+							link.l33.go = "B1_2A_report_repeat";
+						}
+					break;
+
+					case B12A_STATUS_REPORT_CHOICE:
+						if (B12A_GetReportTarget() != "portugal")
+						{
+							link.l32 = DLG_TEXT[37];
+							link.l32.go = "B1_2A_report_stolen_1";
+						}
+						if (B12A_GetReportTarget() == "portugal")
+						{
+							link.l33 = DLG_TEXT[38];
+							link.l33.go = "B1_2A_report_repeat";
+						}
+					break;
 				}
 			}
 
@@ -94,39 +120,42 @@ void ProcessDialogEvent()
 				link.l1.go = "garri";
 			}
 
-			if (CheckAttribute(pchar, "quest_S3_city") && pchar.quest_S3_city == "Conceicao")
+			if (CheckAttribute(pchar, "quest_S3_city"))
 			{
-				if (CheckAttribute(pchar, "quest_S3_status"))
+				if (pchar.quest_S3_city == "Conceicao")
 				{
-					bool s3_dialogue = false;
-
-					switch (pchar.quest_S3_status)
+					if (CheckAttribute(pchar, "quest_S3_status"))
 					{
-						case "accepted":
-							s3_dialogue = true;
-						break;
-						case "investigation":
-							s3_dialogue = true;
-						break;
-						case "candidate_target_kill":
-							s3_dialogue = true;
-						break;
-						case "candidate_target_release":
-							s3_dialogue = true;
-						break;
-					}
+						bool s3_dialogue = false;
 
-					if (s3_dialogue)
-					{
-						if (!CheckAttribute(pchar, "quest_S3_informant_governor"))
+						switch (pchar.quest_S3_status)
 						{
-							link.l20 = "J'aurais besoin de votre jugement sur une personne de cette ville.";
-							link.l20.go = "S3_governor_start";
+							case "accepted":
+								s3_dialogue = true;
+							break;
+							case "investigation":
+								s3_dialogue = true;
+							break;
+							case "candidate_target_kill":
+								s3_dialogue = true;
+							break;
+							case "candidate_target_release":
+								s3_dialogue = true;
+							break;
 						}
-						else
+
+						if (s3_dialogue)
 						{
-							link.l21 = "Vous m'avez deja donne votre jugement sur cette affaire.";
-							link.l21.go = "S3_governor_repeat";
+							if (!CheckAttribute(pchar, "quest_S3_informant_governor"))
+							{
+								link.l20 = DLG_TEXT[47];
+								link.l20.go = "S3_governor_start";
+							}
+							else
+							{
+								link.l21 = DLG_TEXT[48];
+								link.l21.go = "S3_governor_repeat";
+							}
 						}
 					}
 				}
@@ -161,27 +190,27 @@ void ProcessDialogEvent()
 		break;
 
 		case "B1_2A_report_stolen_1":
-			dialog.text = "Quoi ? Des objets diplomatiques subtilises si pres de Redmond ? C'est une humiliation pour tous ceux qui ont fait circuler cet accord.";
-			link.l1 = "Les hommes portaient l'uniforme anglais, mais pas la langue qui allait avec.";
+			dialog.text = DLG_TEXT[39];
+			link.l1 = DLG_TEXT[40];
 			link.l1.go = "B1_2A_report_stolen_2";
 		break;
 
 		case "B1_2A_report_stolen_2":
-			dialog.text = "Alors prevenez Silehard sans delai. Lui seul peut mesurer le choc politique de cette perte. Et si vous avez encore un peu d'honneur, retrouvez-moi ces voleurs.";
-			link.l1 = "Je repars aussitot pour Redmond.";
+			dialog.text = DLG_TEXT[41];
+			link.l1 = DLG_TEXT[42];
 			link.l1.go = "B1_2A_report_stolen_3";
 		break;
 
 		case "B1_2A_report_stolen_3":
 			QuestComplete_B1_2A("PJ_B1_2A_REPORT_PORTUGAL");
-			dialog.text = "Ne trainez plus. Chaque heure rend cette lettre plus dangereuse hors de nos mains.";
-			link.l1 = "Je vous ferai tenir la suite.";
+			dialog.text = DLG_TEXT[43];
+			link.l1 = DLG_TEXT[44];
 			link.l1.go = "exit";
 		break;
 
 		case "B1_2A_report_repeat":
-			dialog.text = "Je vous ai deja ordonne de prevenir Silehard et de reprendre la piste. Je n'ai rien a ajouter.";
-			link.l1 = "Tres bien.";
+			dialog.text = DLG_TEXT[45];
+			link.l1 = DLG_TEXT[46];
 			link.l1.go = "exit";
 		break;
 
@@ -224,11 +253,6 @@ void ProcessDialogEvent()
 			ChangeCharacterReputation(pchar, 1);
 		break;
 
-		case "Exit":
-			DialogExit();
-			NextDiag.CurrentNode = NextDiag.TempNode;
-		break;
-
 		case "j_day":
 			dialog.text = Pchar.name + " " + Pchar.lastname + DLG_TEXT[25];
 			link.l1 = DLG_TEXT[26];
@@ -248,15 +272,22 @@ void ProcessDialogEvent()
 		break;
 
 		case "S3_governor_start":
-			if (CheckAttribute(pchar, "quest_S3_target_truth") && pchar.quest_S3_target_truth == "guilty")
+			if (CheckAttribute(pchar, "quest_S3_target_truth"))
 			{
-				dialog.text = "Je pese mes mots, capitaine. L'administration entend bien des plaintes, et toutes ne meritent pas la corde. Mais au sujet de " + pchar.quest_S3_target_name + ", plusieurs signaux concordent. Si vous cherchez mon jugement, cette personne n'est pas blanche comme neige.";
+				if (pchar.quest_S3_target_truth == "guilty")
+				{
+					dialog.text = DLG_TEXT[49] + pchar.quest_S3_target_name + DLG_TEXT[50];
+				}
+				else
+				{
+					dialog.text = DLG_TEXT[51] + pchar.quest_S3_target_name + DLG_TEXT[52];
+				}
 			}
 			else
 			{
-				dialog.text = "Je pese mes mots, capitaine. Rien, dans les rapports ni dans les plaintes serieuses, ne me permet d'accabler " + pchar.quest_S3_target_name + ". Je vous conseille la prudence avant de verser le sang.";
+				dialog.text = DLG_TEXT[51] + pchar.quest_S3_target_name + DLG_TEXT[52];
 			}
-			link.l1 = "Votre avis m'eclaire.";
+			link.l1 = DLG_TEXT[53];
 			link.l1.go = "S3_governor_done";
 		break;
 
@@ -267,9 +298,14 @@ void ProcessDialogEvent()
 		break;
 
 		case "S3_governor_repeat":
-			dialog.text = "Je vous ai deja livre l'appreciation que je pouvais formuler. Je n'ai rien a y retrancher.";
-			link.l1 = "Tres bien.";
+			dialog.text = DLG_TEXT[54];
+			link.l1 = DLG_TEXT[55];
 			link.l1.go = "exit";
+		break;
+
+		case "exit":
+			DialogExit();
+			NextDiag.CurrentNode = NextDiag.TempNode;
 		break;
 	}
 }
