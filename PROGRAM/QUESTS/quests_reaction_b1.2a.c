@@ -38,6 +38,7 @@
 
 #define B12A_EVENT_START "PJ_B1_2A_START"
 #define B12A_EVENT_PORTUGAL_HANDOFF "PJ_B1_2A_PORTUGAL_HANDOFF"
+#define B12A_EVENT_REDMOND_ARRIVAL "PJ_B1_2A_REDMOND_ARRIVAL"
 #define B12A_EVENT_THEFT_SCENE "PJ_B1_2A_THEFT_SCENE"
 #define B12A_EVENT_THEFT_COMPLETE "PJ_B1_2A_THEFT_COMPLETE"
 #define B12A_EVENT_REPORT_PORTUGAL "PJ_B1_2A_REPORT_PORTUGAL"
@@ -314,7 +315,6 @@ void B12A_ReceivePortugalPackage()
 void B12A_ApplyRedmondArrivalTrigger()
 {
 	ref pchar = GetMainCharacter();
-	int hour;
 
 	if (B12A_GetStatus() != B12A_STATUS_DELIVERY)
 	{
@@ -330,14 +330,31 @@ void B12A_ApplyRedmondArrivalTrigger()
 	}
 
 	pchar.quest_b1_2a_redmond_arrival_done = "yes";
+	DoQuestCheckDelay(B12A_EVENT_REDMOND_ARRIVAL, 0.0);
+}
 
+void B12A_RunRedmondArrivalTrigger()
+{
+	ref pchar = GetMainCharacter();
+	int hour;
+
+	if (B12A_GetStatus() != B12A_STATUS_DELIVERY)
+	{
+		return;
+	}
+	if (!B12A_IsRedmondLandLocation(pchar.location))
+	{
+		return;
+	}
 	hour = makeint(GetHour());
 	if (hour >= 4 && hour < 22)
 	{
 		SetCurrentTime(22, 0);
 	}
 
-	B12A_SpawnTheftGuards();
+	pchar.quest_b1_2a_theft_scene_started = "yes";
+	B12A_SetStatus(B12A_STATUS_REDMOND_NIGHT);
+	B12A_StartTheftScene();
 }
 
 void B12A_SpawnTheftGuards()
@@ -389,7 +406,7 @@ void B12A_StartTheftScene()
 	B12A_SpawnTheftGuards();
 	LAi_LockFightMode(pchar, true);
 	LAi_SetActorType(characterFromID(B12_NPC_GUARD_CHIEF));
-	LAi_ActorDialog(characterFromID(B12_NPC_GUARD_CHIEF), pchar, "", 12.0, 1.0);
+	LAi_ActorDialogNow(characterFromID(B12_NPC_GUARD_CHIEF), pchar, "", -1);
 }
 
 void B12A_CompleteTheftScene()
@@ -493,6 +510,7 @@ bool QuestComplete_B1_2A(string sQuestName)
 	if (
 		sQuestName != B12A_EVENT_START &&
 		sQuestName != B12A_EVENT_PORTUGAL_HANDOFF &&
+		sQuestName != B12A_EVENT_REDMOND_ARRIVAL &&
 		sQuestName != B12A_EVENT_THEFT_SCENE &&
 		sQuestName != B12A_EVENT_THEFT_COMPLETE &&
 		sQuestName != B12A_EVENT_REPORT_PORTUGAL &&
@@ -513,6 +531,11 @@ bool QuestComplete_B1_2A(string sQuestName)
 
 		case B12A_EVENT_PORTUGAL_HANDOFF:
 			B12A_ReceivePortugalPackage();
+			return true;
+		break;
+
+		case B12A_EVENT_REDMOND_ARRIVAL:
+			B12A_RunRedmondArrivalTrigger();
 			return true;
 		break;
 
