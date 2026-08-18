@@ -38,6 +38,7 @@
 
 #define B12A_EVENT_START "PJ_B1_2A_START"
 #define B12A_EVENT_PORTUGAL_HANDOFF "PJ_B1_2A_PORTUGAL_HANDOFF"
+#define B12A_EVENT_MAP_ENTER "PJ_B1_2A_MAP_ENTER"
 #define B12A_EVENT_THEFT_SCENE "PJ_B1_2A_THEFT_SCENE"
 #define B12A_EVENT_THEFT_COMPLETE "PJ_B1_2A_THEFT_COMPLETE"
 #define B12A_EVENT_REPORT_PORTUGAL "PJ_B1_2A_REPORT_PORTUGAL"
@@ -235,6 +236,21 @@ void B12A_SetBarretoDialog(string dialogFile)
 	chref.Dialog.TempNode = "First time";
 }
 
+void B12A_ClearSeaDepartureTrigger()
+{
+	ref pchar = GetMainCharacter();
+	DeleteAttribute(pchar, "quest.PJ_B1_2A_MAP_ENTER");
+}
+
+void B12A_ArmSeaDepartureTrigger()
+{
+	ref pchar = GetMainCharacter();
+
+	B12A_ClearSeaDepartureTrigger();
+	pchar.quest.PJ_B1_2A_MAP_ENTER.win_condition.l1 = "MapEnter";
+	pchar.quest.PJ_B1_2A_MAP_ENTER.win_condition = B12A_EVENT_MAP_ENTER;
+}
+
 void B12_HideCoreB12Npcs()
 {
 	B11_HideNpc(B12_NPC_GUARD1);
@@ -267,11 +283,13 @@ void B12A_ResetRuntime()
 {
 	ref pchar = GetMainCharacter();
 
+	B12A_ClearSeaDepartureTrigger();
 	DeleteAttribute(pchar, "quest_b1_2a_letter_received");
 	DeleteAttribute(pchar, "quest_b1_2a_gift_received");
 	DeleteAttribute(pchar, "quest_b1_2a_report_target");
 	DeleteAttribute(pchar, "quest_b1_2a_theft_scene_started");
 	DeleteAttribute(pchar, "quest_b1_2a_theft_scene_done");
+	DeleteAttribute(pchar, "quest_b1_2a_redmond_teleport_done");
 	B12A_RemoveDiplomaticItems();
 	B12_HideCoreB12Npcs();
 	B11_HideNpc(B12_NPC_SPY);
@@ -318,8 +336,36 @@ void B12A_ReceivePortugalPackage()
 	pchar.quest_b1_2a_letter_received = "yes";
 	pchar.quest_b1_2a_gift_received = "yes";
 	B12A_SetStatus(B12A_STATUS_DELIVERY);
+	B12A_ArmSeaDepartureTrigger();
 	AddQuestRecord(B12A_HEADER, "1");
 	Log_SetStringToLog("PJ B1.2a: portugal handoff complete");
+}
+
+void B12A_TeleportToRedmondPort()
+{
+	ref pchar = GetMainCharacter();
+	int hour;
+
+	if (B12A_GetStatus() != B12A_STATUS_DELIVERY)
+	{
+		return;
+	}
+	if (CheckAttribute(pchar, "quest_b1_2a_redmond_teleport_done"))
+	{
+		return;
+	}
+
+	B12A_ClearSeaDepartureTrigger();
+	pchar.quest_b1_2a_redmond_teleport_done = "yes";
+
+	hour = makeint(GetHour());
+	if (hour >= 4 && hour < 22)
+	{
+		SetCurrentTime(22, 0);
+	}
+
+	SetCharacterShipLocation(pchar, "Redmond_port");
+	DoReloadFromWorldMapToLocation("REDMOND_PORT", "reload", "reload1");
 }
 
 void B12A_SpawnTheftGuards()
@@ -360,6 +406,10 @@ void B12A_BeginTheftTravel()
 		return;
 	}
 	if (!B12A_IsRedmondLandLocation(pchar.location))
+	{
+		return;
+	}
+	if (CheckAttribute(pchar, "quest_b1_2a_redmond_teleport_done"))
 	{
 		return;
 	}
@@ -488,6 +538,7 @@ bool QuestComplete_B1_2A(string sQuestName)
 	if (
 		sQuestName != B12A_EVENT_START &&
 		sQuestName != B12A_EVENT_PORTUGAL_HANDOFF &&
+		sQuestName != B12A_EVENT_MAP_ENTER &&
 		sQuestName != B12A_EVENT_THEFT_SCENE &&
 		sQuestName != B12A_EVENT_THEFT_COMPLETE &&
 		sQuestName != B12A_EVENT_REPORT_PORTUGAL &&
@@ -508,6 +559,11 @@ bool QuestComplete_B1_2A(string sQuestName)
 
 		case B12A_EVENT_PORTUGAL_HANDOFF:
 			B12A_ReceivePortugalPackage();
+			return true;
+		break;
+
+		case B12A_EVENT_MAP_ENTER:
+			B12A_TeleportToRedmondPort();
 			return true;
 		break;
 
