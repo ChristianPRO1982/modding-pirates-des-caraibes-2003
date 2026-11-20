@@ -40,6 +40,7 @@
 #define B12A_EVENT_PORTUGAL_HANDOFF "PJ_B1_2A_PORTUGAL_HANDOFF"
 #define B12A_EVENT_REDMOND_ARRIVAL "PJ_B1_2A_REDMOND_ARRIVAL"
 #define B12A_EVENT_THEFT_SCENE "PJ_B1_2A_THEFT_SCENE"
+#define B12A_EVENT_CHIEF_REACHED_PLAYER "PJ_B1_2A_CHIEF_REACHED_PLAYER"
 #define B12A_EVENT_THEFT_COMPLETE "PJ_B1_2A_THEFT_COMPLETE"
 #define B12A_EVENT_REPORT_PORTUGAL "PJ_B1_2A_REPORT_PORTUGAL"
 #define B12A_EVENT_REPORT_ENGLAND "PJ_B1_2A_REPORT_ENGLAND"
@@ -350,7 +351,6 @@ void B12A_ApplyRedmondArrivalTrigger()
 void B12A_RunRedmondArrivalTrigger()
 {
 	ref pchar = GetMainCharacter();
-	int hour;
 
 	if (B12A_GetStatus() != B12A_STATUS_DELIVERY)
 	{
@@ -372,7 +372,7 @@ void B12A_RunRedmondArrivalTrigger()
 	B12A_SpawnTheftGuards();
 	pchar.quest_b1_2a_theft_scene_started = "yes";
 	B12A_SetStatus(B12A_STATUS_REDMOND_NIGHT);
-	DoQuestCheckDelay(B12A_EVENT_THEFT_SCENE, 0.2);
+	B12A_BeginTheftApproach();
 }
 
 void B12A_SpawnTheftGuards()
@@ -441,7 +441,6 @@ void B12A_SpawnTheftGuards()
 	B11_SetNpcGuardian(B12_NPC_GUARD2);
 	B11_SetNpcGuardian(B12_NPC_GUARD3);
 	B11_SetNpcGuardian(B12_NPC_GUARD4);
-	B11_SetNpcGuardian(B12_NPC_GUARD_CHIEF);
 }
 
 void B12A_BeginTheftTravel()
@@ -449,14 +448,36 @@ void B12A_BeginTheftTravel()
 	return;
 }
 
+void B12A_BeginTheftApproach()
+{
+	ref pchar = GetMainCharacter();
+
+	LAi_LockFightMode(pchar, true);
+	LAi_SetActorType(pchar);
+
+	LAi_SetActorTypeNoGroup(characterFromID(B12_NPC_GUARD1));
+	LAi_ActorFollow(characterFromID(B12_NPC_GUARD1), pchar, "", 12.0);
+
+	LAi_SetActorTypeNoGroup(characterFromID(B12_NPC_GUARD2));
+	LAi_ActorFollow(characterFromID(B12_NPC_GUARD2), pchar, "", 12.0);
+
+	LAi_SetActorTypeNoGroup(characterFromID(B12_NPC_GUARD3));
+	LAi_ActorFollow(characterFromID(B12_NPC_GUARD3), pchar, "", 12.0);
+
+	LAi_SetActorTypeNoGroup(characterFromID(B12_NPC_GUARD4));
+	LAi_ActorFollow(characterFromID(B12_NPC_GUARD4), pchar, "", 12.0);
+
+	LAi_SetActorTypeNoGroup(characterFromID(B12_NPC_GUARD_CHIEF));
+	LAi_ActorFollow(characterFromID(B12_NPC_GUARD_CHIEF), pchar, B12A_EVENT_CHIEF_REACHED_PLAYER, 12.0);
+}
+
 void B12A_StartTheftScene()
 {
 	ref pchar = GetMainCharacter();
 
-	B12A_SpawnTheftGuards();
-	LAi_LockFightMode(pchar, true);
-	// LAi_SetActorType(characterFromID(B12_NPC_GUARD_CHIEF));
-	// LAi_ActorDialogNow(characterFromID(B12_NPC_GUARD_CHIEF), pchar, "", -1);
+	LAi_type_actor_Reset(pchar);
+	LAi_ActorWaitDialog(pchar, characterFromID(B12_NPC_GUARD_CHIEF));
+	LAi_ActorDialog(characterFromID(B12_NPC_GUARD_CHIEF), pchar, "pchar_back_to_player", 3.0, 0);
 }
 
 void B12A_CompleteTheftScene()
@@ -562,6 +583,7 @@ bool QuestComplete_B1_2A(string sQuestName)
 		sQuestName != B12A_EVENT_PORTUGAL_HANDOFF &&
 		sQuestName != B12A_EVENT_REDMOND_ARRIVAL &&
 		sQuestName != B12A_EVENT_THEFT_SCENE &&
+		sQuestName != B12A_EVENT_CHIEF_REACHED_PLAYER &&
 		sQuestName != B12A_EVENT_THEFT_COMPLETE &&
 		sQuestName != B12A_EVENT_REPORT_PORTUGAL &&
 		sQuestName != B12A_EVENT_REPORT_ENGLAND &&
@@ -590,6 +612,11 @@ bool QuestComplete_B1_2A(string sQuestName)
 		break;
 
 		case B12A_EVENT_THEFT_SCENE:
+			B12A_StartTheftScene();
+			return true;
+		break;
+
+		case B12A_EVENT_CHIEF_REACHED_PLAYER:
 			B12A_StartTheftScene();
 			return true;
 		break;
